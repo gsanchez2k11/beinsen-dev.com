@@ -236,7 +236,7 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                         <ScrollReveal delay={0.3}>
                             <div className="flex flex-col sm:flex-row items-center gap-10 mt-4 justify-center">
                                 <div className="p-[2.5px] rounded-2xl bg-gradient-to-r from-[#FF6600] to-[#FF9900] shadow-2xl shadow-[#FF6600]/30 transform hover:scale-105 transition-transform duration-300">
-                                    <ContactSpecialistButton productName={name || ""} size="lg" className="w-full sm:w-auto text-xl h-16 px-12 rounded-2xl bg-background hover:bg-transparent hover:text-white transition-all border-none" />
+                                    <ContactSpecialistButton productName={name || ""} size="lg" className="w-full sm:w-auto text-xl h-16 px-12 rounded-2xl bg-background text-foreground hover:bg-transparent hover:text-white transition-all border-none" />
                                 </div>
                                 
                                 <div className="flex flex-col items-center sm:items-start text-foreground">
@@ -255,7 +255,18 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                     </div>
 
                     <ScrollReveal delay={0.4} className="relative z-10 w-full max-w-[85rem] mx-auto mt-20 h-[50vh] lg:h-[75vh] perspective-[2500px]">
-                        <TiltImage src={plancha.image} alt={name || ""} />
+                        {plancha.heroVideo ? (
+                            <video
+                                src={plancha.heroVideo}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="pointer-events-none h-full w-full rounded-3xl border border-border/50 bg-card object-contain"
+                            />
+                        ) : (
+                            <TiltImage src={plancha.image} alt={name || ""} />
+                        )}
                     </ScrollReveal>
                 </div>
 
@@ -282,7 +293,7 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                                     {d.engineeringDesc}
                                 </p>
                             </div>
-                            <ProductHotspots imageSrc={plancha.image} hotspots={plancha.hotspots} />
+                            <ProductHotspots imageSrc={plancha.hotspotImage || plancha.image} hotspots={plancha.hotspots} />
                         </ScrollReveal>
                     )}
 
@@ -311,9 +322,12 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                                     <h3 className="text-4xl font-black mb-6 tracking-tight">{d.maintenanceTitle}</h3>
                                     <p className="text-xl text-muted-foreground font-light mb-8">{d.maintenanceDesc}</p>
                                 </div>
-                                <div className="space-y-4">
+                                <div className="space-y-4 max-h-[28rem] overflow-y-auto pr-2">
                                     {maintenanceTips.map((tip, i) => (
-                                        <div key={i} className="flex gap-4 p-5 bg-background/50 backdrop-blur-sm border border-border/40 rounded-2xl shadow-sm hover:border-[#FF6600]/30 transition-colors">
+                                        <div
+                                            key={i}
+                                            className="flex gap-4 p-5 bg-background/50 backdrop-blur-sm border border-border/40 rounded-2xl shadow-sm hover:border-[#FF6600]/30 transition-colors"
+                                        >
                                             <div className="w-6 h-6 rounded-full bg-[#FF6600]/20 flex items-center justify-center shrink-0 mt-1">
                                                 <div className="w-2 h-2 rounded-full bg-[#FF6600]" />
                                             </div>

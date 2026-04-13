@@ -25,6 +25,14 @@ const OPENING_TYPES_LABELS = {
     it: ["Qualsiasi", "Manuale", "Pneumatica", "Automatica"]
 };
 
+const PLANCHAS_PRIORITY_ORDER = [
+    "planchas-transfer-para-tazas-y-platos-descatalogadas", // Barein
+    "plancha-para-tazas", // Andra
+    "maine-plancha-para-tazas",
+    "aruba-plancha-para-tazas",
+    "sore-plancha-profesional-tazas"
+];
+
 export default function PlanchasCatalog() {
     const { locale } = useLanguage();
     const [activeType, setActiveType] = useState<"all" | "planchas" | "accessories" | "consumables">("all");
@@ -83,7 +91,16 @@ export default function PlanchasCatalog() {
 
     const allItems = useMemo(() => {
         // Map everything to a common item format for the list
-        const machines = planchasData.map(p => ({ ...p, _type: 'planchas' }));
+        const machines = planchasData
+            .map(p => ({ ...p, _type: 'planchas' }))
+            .sort((a, b) => {
+                const ia = PLANCHAS_PRIORITY_ORDER.indexOf(a.id);
+                const ib = PLANCHAS_PRIORITY_ORDER.indexOf(b.id);
+                if (ia === -1 && ib === -1) return 0;
+                if (ia === -1) return 1;
+                if (ib === -1) return -1;
+                return ia - ib;
+            });
         const accs = allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } }));
         const cons = allConsumablesData.map(c => ({ ...c, _type: 'consumables', category: { es: 'Consumible', en: 'Consumable' }, openingType: { es: 'Químico/Material', en: 'Chemical/Material' } }));
         
@@ -250,7 +267,7 @@ export default function PlanchasCatalog() {
                                 item={item as any} 
                                 locale={locale} 
                                 index={index} 
-                                isFeatureCard={index === 0 && filteredItems.length > 2}
+                                isFeatureCard={false}
                             />
                         ))}
                     </AnimatePresence>

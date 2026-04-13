@@ -36,6 +36,7 @@ export interface Plancha {
   name: Localized<string>;
   description: Localized<string>;
   image: string;
+  heroVideo?: string;
   size: Localized<string> | string;
   price: number | string;
   category: Localized<string> | string;
@@ -50,12 +51,13 @@ export interface Plancha {
   technicalSpecs?: TechnicalSpec[];
   benefits?: Benefit[];
   hotspots?: Hotspot[];
+  hotspotImage?: string;
   downloads?: { label: Localized<string> | string; url: string }[];
   storySegments?: { title: Localized<string> | string; description: Localized<string> | string; image: string }[];
   maintenanceTips?: Localized<string[]>;
   distributors?: { name: string; url: string; logo?: string }[];
 }
-export const planchasData: Plancha[] = [
+const rawPlanchasData: Plancha[] = [
   {
     "id": "plancha-transfer-zapatillas-chinela",
     "name": {
@@ -92,15 +94,66 @@ export const planchasData: Plancha[] = [
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
-      { "label": { "es": "Capacidad", "en": "Capacity" }, "value": "2 pares simultáneos / 2 pairs simultaneously" },
-      { "label": { "es": "Sistema", "en": "System" }, "value": "Giratorio / Rotating" },
-      { "label": { "es": "Temp. Máxima", "en": "Max Temp" }, "value": "225 ºC" }
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Giratoria" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático y manual" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "40 mm" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-04" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "38 x 38 cm" },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800 W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225 ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220 V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "43 kg" },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "69 x 53 x 55 cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" }
     ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después para dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately; the heating plate is still too hot.",
+        "If you turn off the compressor, the hot plate may close and press against the lower plate, which could burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    },
     "benefits": [
       {
         "title": { "es": "Alta Especialización", "en": "High Specialization" },
         "description": { "es": "Platos diseñados específicamente para la ergonomía del calzado.", "en": "Plates designed specifically for footwear ergonomics." },
         "icon": "Settings"
+      },
+      {
+        "title": { "es": "Simple pero Efectiva", "en": "Simple but Effective" },
+        "description": { "es": "En la plancha transfer Beinsen Chinela todo está pensado con el mismo fin: zapatillas. Un plato especial con diseño ergonómico en una plancha giratoria para que tengas todo el espacio necesario para trabajar.", "en": "Everything in the Beinsen Chinela transfer press is designed with one goal: sneakers. A special ergonomic plate on a rotating press gives you all the workspace you need." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Flujo de Trabajo Más Ágil", "en": "Faster Workflow" },
+        "description": { "es": "El sistema giratorio permite pasar rápidamente al siguiente planchado, mejorando tiempos de producción sin perder control.", "en": "The rotating system lets you move quickly to the next press, improving production times without losing control." },
+        "icon": "Clock"
+      },
+      {
+        "title": { "es": "Espacio Óptimo de Trabajo", "en": "Optimized Workspace" },
+        "description": { "es": "Diseñada para trabajar con comodidad y precisión en calzado, incluso en tiradas continuas.", "en": "Designed to work comfortably and precisely on footwear, even during continuous runs." },
+        "icon": "Ruler"
       }
     ]
   },
@@ -147,11 +200,19 @@ export const planchasData: Plancha[] = [
       "https://beinsen.com/wp-content/uploads/2025/03/beinsen-sore.jpg"
     ],
     "technicalSpecs": [
-      { "label": { "es": "Capacidad", "en": "Capacity" }, "value": "5 tazas simultáneas / 5 mugs simultaneously" },
-      { "label": { "es": "Potencia", "en": "Power" }, "value": "1500W" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V / 110V" },
-      { "label": { "es": "Rango Tiempo", "en": "Time Range" }, "value": "0 - 999 s" },
-      { "label": { "es": "Temp. Máxima", "en": "Max Temp" }, "value": "225 ºC" }
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Para Tazas" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Manual" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-06" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-480 seg." },
+      { "label": { "es": "Número de resistencias", "en": "Number of Heating Elements" }, "value": "5" },
+      { "label": { "es": "Tazas admitidas", "en": "Supported Mug Sizes" }, "value": "entre 11 y 15oz." },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "5 x 300 W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225 ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220 V" },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "47 kg" },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "93 x 49 x 39 cm" }
     ],
     "benefits": [
       {
@@ -182,7 +243,15 @@ export const planchasData: Plancha[] = [
       "es": [
         "Limpiar las resistencias después de cada jornada",
         "Revisar el estado de los cables térmicos mensualmente",
-        "Evitar el contacto directo de las placas sin taza"
+        "Evitar el contacto directo de las placas sin taza",
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después para dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
       ],
       "en": [
         "Clean elements after each working day",
@@ -201,7 +270,7 @@ export const planchasData: Plancha[] = [
       "it": "Dorian pressa termica per piatti"
     },
     "description": {
-      "es": "Para solicitar más información puedes contactar con nosotros en el horario de atención al cliente. Consulta cuál es el servicio técnico mas cercano a tu domicilio.",
+      "es": "Con la plancha para platos se pueden realizar todos los métodos comunes de transferencia en caliente (flock, flex, sublimación, etc.). Funciona con una resistencia de 155 mm intercambiable, de acero sólido resistente a los arañazos, con temperatura, tiempo ajustable y alarma.",
       "en": "To request more information, you can contact us during our customer service hours. Check which is the nearest technical service to your address.",
       "pt": "Para mais informações, contacte-nos durante o horário de atendimento ao cliente.",
       "it": "Per richiedere maggiori informazioni, puoi contattarci durante l'orario di assistenza clienti."
@@ -225,29 +294,68 @@ export const planchasData: Plancha[] = [
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
-      { "label": { "es": "Aplicación", "en": "Application" }, "value": "Platos / Plates" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V / 110V" },
-      { "label": { "es": "Controlador", "en": "Controller" }, "value": "Digital" }
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-04" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "15 kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "55 x 46 x 26 cm" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220 V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "300 W" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Fija" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "Ø155 mm" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Manual" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Automático" },
+      { "label": { "es": "Modelo", "en": "Model" }, "value": "Dorian" }
     ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    },
     "benefits": [
       {
         "title": { "es": "Precisión en Cerámica", "en": "Ceramic Precision" },
         "description": { "es": "Presión uniforme para evitar roturas en soportes rígidos.", "en": "Uniform pressure to avoid breakage on rigid supports." },
         "icon": "Zap"
+      },
+      {
+        "title": { "es": "Versátil y Robusta", "en": "Versatile and Robust" },
+        "description": { "es": "Fácil de montar y desmontar, con controlador digital GY-04 para ajustar tiempo y temperatura con precisión. Su estructura de acero sólido y acabado naranja Beinsen aportan durabilidad y estilo.", "en": "Easy to assemble and disassemble, with GY-04 digital controller for precise time and temperature settings. Solid steel structure and Beinsen orange finish provide durability and style." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Personalización Integral de Platos", "en": "Full Plate Customization" },
+        "description": { "es": "Permite personalizar tanto el fondo como los bordes de platos cerámicos, ideal para frases, imágenes y diseños creativos en vajilla.", "en": "Lets you personalize both the center and edges of ceramic plates, ideal for phrases, images, and creative tableware designs." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Sublimación Hasta 15,2 cm", "en": "Sublimation Up to 15.2 cm" },
+        "description": { "es": "Perfecta para sublimar platos de hasta 15,2 cm, logrando acabados profesionales con resultados consistentes.", "en": "Perfect for sublimating plates up to 15.2 cm, delivering professional and consistent results." },
+        "icon": "Target"
       }
     ]
   },
   {
     "id": "plancha-termica-para-tazas-4-en-1-alina",
-    "slug": "plancha-termica-para-tazas-4-en-1-alina",
+    "slug": "plancha-para-tazas-6-en-1",
     "name": {
-      "es": "Alina prensa térmica para tazas 4 en 1",
+      "es": "Plancha térmica Barahona para tazas 6 en 1",
       "en": "Alina 4-in-1 mug heat press",
       "pt": "Alina prensa térmica para canecas 4 em 1",
       "it": "Alina pressa termica per tazze 4 in 1"
     },
     "description": {
-      "es": "Versatilidad en la palma de tu mano. Con la prensa Alina podrás personalizar tazas de diferentes tamaños gracias a sus resistencias intercambiables.",
+      "es": "Imagina poder crear tus propias tazas personalizadas con resultados profesionales, ¿no sería genial? Con la plancha térmica Barahona, eso es posible. Esta plancha es perfecta para aquellos que buscan una solución eficiente y práctica para personalizar tazas.",
       "en": "Versatility in the palm of your hand. With the Alina press you can customize mugs of different sizes thanks to its interchangeable elements.",
       "pt": "Versatilidade na palma da sua mão. Com a prensa Alina poderá personalizar canecas de diferentes tamanhos.",
       "it": "Versatilità nel palmo della tua mano. Con la pressa Alina potrai personalizzare tazze di diverse dimensioni."
@@ -271,17 +379,68 @@ export const planchasData: Plancha[] = [
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
-      { "label": { "es": "Versatilidad", "en": "Versatility" }, "value": "4 en 1 / 4-in-1" },
-      { "label": { "es": "Resistencias", "en": "Elements" }, "value": "Intercambiables / Interchangeable" },
-      { "label": { "es": "Controlador", "en": "Controller" }, "value": "Digital GY-04" }
+      { "label": { "es": "Modelo", "en": "Model" }, "value": "Barahona" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Para tazas" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Manual" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Cambiable" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "1.5oz / 2.5oz / 6oz-10oz / 12oz / 17oz / 11oz-15oz" },
+      { "label": { "es": "Máximo volumen imprimible", "en": "Maximum Printable Volume" }, "value": "1.5oz / 2.5oz / 6oz-10oz / 12oz / 17oz / 11oz-15oz" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220 V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "130 W / 260 W" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "13 kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "60 x 42 x 30 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-04" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
     ],
     "benefits": [
       {
-        "title": { "es": "Máxima Versatilidad", "en": "Maximum Versatility" },
-        "description": { "es": "Personaliza desde tazas pequeñas hasta botellas con una sola máquina.", "en": "Personalize everything from small mugs to bottles with a single machine." },
+        "title": { "es": "No habrá taza, termo o botella que se te resista", "en": "No mug, tumbler, or bottle can resist it" },
+        "description": { "es": "Con sus 6 resistencias intercambiables, podrás personalizar cualquier tipo de taza con facilidad. Ya no tendrás que preocuparte por tamaños diferentes al estándar.", "en": "With 6 interchangeable heating elements, you can customize almost any mug format with ease, including non-standard sizes." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Sencilla pero eficaz", "en": "Simple but effective" },
+        "description": { "es": "Su diseño ergonómico y fácil de usar te permitirá cambiar las resistencias a mano fácilmente, sin necesidad de herramientas adicionales.", "en": "Its ergonomic, user-friendly design lets you change elements by hand without extra tools." },
         "icon": "Settings"
+      },
+      {
+        "title": { "es": "Barahona será tu amiga fiel a la hora de sublimar", "en": "Barahona is your trusted sublimation ally" },
+        "description": { "es": "Es la solución perfecta para los amantes de la personalización de tazas. No pierdas más tiempo con soluciones obsoletas y descubre todo lo que esta herramienta puede ofrecerte.", "en": "It is the perfect solution for mug customization lovers. Stop wasting time with outdated solutions and unlock everything this tool can offer." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Versatilidad total", "en": "Total versatility" },
+        "description": { "es": "El diseño de la plancha facilita sublimar tazas, botellas y termos de distintos tamaños: 1.5oz, 2.5oz, 6oz-10oz, 12oz, 17oz y 11oz-15oz.", "en": "Designed to sublimate mugs, bottles, and tumblers in multiple sizes: 1.5oz, 2.5oz, 6oz-10oz, 12oz, 17oz, and 11oz-15oz." },
+        "icon": "Ruler"
+      },
+      {
+        "title": { "es": "Presión perfecta", "en": "Perfect pressure" },
+        "description": { "es": "Gracias a sus 4 perillas de ajuste de presión podrás regular la presión en cada momento para lograr impresiones de alta calidad.", "en": "Its 4 pressure adjustment knobs help you fine-tune pressure at any moment for high-quality prints." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Controlador digital de alta calidad", "en": "High-quality digital controller" },
+        "description": { "es": "Gracias al mango de soporte, podrás presionar fácilmente hacia abajo la máquina de prensado en caliente para tazas y mantener una buena presión de contacto.", "en": "The support handle makes it easy to press down the mug heat press while maintaining strong contact pressure." },
+        "icon": "Cpu"
       }
-    ]
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "horno-para-sublimacion",
@@ -315,11 +474,57 @@ export const planchasData: Plancha[] = [
     },
     "accessories": [],
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" }
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de apertura", "en": "Opening Type" }, "value": "Manual" },
+      { "label": { "es": "Transferencia", "en": "Transfer" }, "value": "Presión de vacio" },
+      { "label": { "es": "Filtro de aire", "en": "Air Filter" }, "value": "Sí" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "Sí" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Área de trabajo", "en": "Working Area" }, "value": "300 x 420 x 110 cm" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "280 ºC" },
+      { "label": { "es": "Precisión de la temperatura", "en": "Temperature Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120 V / 220 V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "2800 W" },
+      { "label": { "es": "Peso Bruto", "en": "Gross Weight" }, "value": "25 kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "590 x 470 x 320 mm" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Kit completo para empezar", "en": "Complete starter kit" },
+        "description": { "es": "Incluye 2 abrazaderas de 11oz, 1 abrazadera de 15oz, 1 lámina de silicona para platos y guantes de algodón para trabajar con seguridad.", "en": "Includes 2 clamps for 11oz, 1 clamp for 15oz, 1 silicone sheet for plates, and cotton gloves for safer handling." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Impresión tridimensional", "en": "Three-dimensional printing" },
+        "description": { "es": "Diseñado para sublimación 3D con resultados uniformes en piezas de distintas formas.", "en": "Built for 3D sublimation with uniform results across differently shaped items." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Control digital preciso", "en": "Precise digital control" },
+        "description": { "es": "Controlador digital con ajuste de tiempo y temperatura, además de alarma automática para mayor control en cada ciclo.", "en": "Digital controller with time and temperature adjustment, plus automatic alarm for better cycle control." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Estructura sólida y eficiente", "en": "Solid and efficient structure" },
+        "description": { "es": "Estructura robusta, filtro de aire y bajo consumo de energía para un uso más estable y eficiente.", "en": "Robust structure, air filter, and low energy consumption for more stable and efficient operation." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Diseño práctico y profesional", "en": "Practical professional design" },
+        "description": { "es": "Acabado en color negro, fácil de montar y desmontar para adaptarse a tu ritmo de trabajo.", "en": "Black finish and easy assembly/disassembly to match your workflow." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Compatible con más moldes", "en": "Compatible with more molds" },
+        "description": { "es": "Podrás adquirir diferentes moldes para tazas, jarras, platos y más aplicaciones de personalización.", "en": "You can add different molds for mugs, jugs, plates, and more personalization applications." },
+        "icon": "Zap"
+      }
+    ]
   },
   {
     "id": "plancha-para-tazas",
-    "slug": "plancha-para-tazas",
+    "slug": "andra-prensa-automatica-tazas",
     "name": {
       "es": "Andra prensa automática para tazas",
       "en": "Andra automatic mug press",
@@ -333,6 +538,8 @@ export const planchasData: Plancha[] = [
       "it": "Personalizzare le tazze non è mai stato così simple come con la pressa automatica Beinsen Andra."
     },
     "image": "https://beinsen.com/wp-content/uploads/2022/04/28.jpg",
+    "heroVideo": "https://beinsen.com/wp-content/uploads/2025/04/andra.webm",
+    "hotspotImage": "https://beinsen.com/wp-content/uploads/2024/01/description_barein.png",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
@@ -351,17 +558,61 @@ export const planchasData: Plancha[] = [
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
-      { "label": { "es": "Operación", "en": "Operation" }, "value": "Automática / Automatic" },
-      { "label": { "es": "Sistema", "en": "System" }, "value": "Auto-wrapping / Envoltura automática" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" }
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tazas" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-05N" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de\nresistencias", "en": "Number of Heating Elements" }, "value": "1" },
+      { "label": { "es": "Tazas compatibles", "en": "Compatible Mug Sizes" }, "value": "11 oz y 15 oz" },
+      { "label": { "es": "Resistencias intercambiables", "en": "Interchangeable Elements" }, "value": "✓" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "260 W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "230 ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220 V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "5 kg" },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "6.5 kg" },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "38 x 27 x 25 cm" }
     ],
     "benefits": [
       {
         "title": { "es": "Producción sin Esfuerzo", "en": "Effortless Production" },
         "description": { "es": "El sistema automático garantiza una presión perfecta sin intervención manual.", "en": "The automatic system ensures perfect pressure without manual intervention." },
         "icon": "Zap"
+      },
+      {
+        "title": { "es": "Despreocúpate", "en": "Worry-free personalization" },
+        "description": { "es": "Tú, que conoces mejor que nadie la presión del día a día, mereces que personalizar tus tazas sea algo divertido. Tú sólo pon el tiempo y la temperatura y despreocúpate durante unos segundos aunque sea.", "en": "Set the time and temperature, then let the press handle the cycle so mug personalization feels easier and more enjoyable." },
+        "icon": "Clock"
+      },
+      {
+        "title": { "es": "Más fuerte que nunca", "en": "Stronger than ever" },
+        "description": { "es": "Esta nueva generación de Beinsen Andra incorpora mejoras en componentes clave como el motor, la resistencia y el botón de reset para ofrecer mayor fiabilidad.", "en": "This new Beinsen Andra generation improves key components such as the motor, heating element, and reset button for greater reliability." },
+        "icon": "ShieldCheck"
       }
-    ]
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately; the heating plate is too hot.",
+        "If you turn off the compressor, the hot plate may close and press down onto the lower plate, which could burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "plancha-neumatica-doble-estacion-caen",
@@ -399,17 +650,75 @@ export const planchasData: Plancha[] = [
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
-      { "label": { "es": "Estaciones", "en": "Stations" }, "value": "Doble Estación / Double Station" },
-      { "label": { "es": "Posicionamiento", "en": "Positioning" }, "value": "Láser Cruz / Cross Laser" },
-      { "label": { "es": "Cierre", "en": "Closure" }, "value": "Neumático / Pneumatic" }
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática, estación de trabajo" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "50mm." },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-06" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "2" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "40x50cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "295Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "395Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "115x112x160cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "Mesa con 4 ruedas universales y altura ajustable a 3 niveles" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "2, en una estructura sobre la estación" },
+      { "label": { "es": "Seguridad", "en": "Safety" }, "value": "Cubierta anti quemaduras" }
     ],
     "benefits": [
       {
-        "title": { "es": "Productividad Duplicada", "en": "Double Productivity" },
-        "description": { "es": "Prepara una prenda mientras la otra se plancha para un flujo de trabajo continuo.", "en": "Prepare one garment while the other is pressing for a continuous workflow." },
+        "title": { "es": "Más velocidad, más eficiencia", "en": "More speed, more efficiency" },
+        "description": { "es": "Gracias a su doble estación y mecanismo de lanzadera, puedes trabajar en dos artículos al mismo tiempo, duplicando la producción. Su funcionamiento neumático distribuye la presión de manera uniforme y asegura resultados impecables en cada prensado.", "en": "Thanks to its double station and shuttle mechanism, you can work on two items at once, doubling output with uniform pneumatic pressure on every press." },
         "icon": "Zap"
+      },
+      {
+        "title": { "es": "Precisión digital y posicionamiento perfecto", "en": "Digital precision and perfect positioning" },
+        "description": { "es": "Incorpora un dispositivo de posicionamiento por infrarrojos para alinear cada diseño al milímetro y un sistema digital para controlar tiempo y temperatura con total precisión.", "en": "Includes infrared positioning for millimeter-perfect alignment and a digital system to control time and temperature with high precision." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Detalles que marcan diferencias", "en": "Details that make the difference" },
+        "description": { "es": "Cuenta con dos bandejas laterales para organizar mejor el flujo de trabajo y un display digital GY-06 fácil e intuitivo. Además, el control de presión neumática en el frontal te ayuda a trabajar sin distracciones.", "en": "It features two side trays for better workflow, an intuitive GY-06 digital display, and front pneumatic pressure control for distraction-free operation." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Construcción robusta", "en": "Robust construction" },
+        "description": { "es": "La Beinsen Caén está construida con materiales de alta calidad para uso intensivo e incluye soporte con ruedas para una estación de trabajo estable y práctica.", "en": "Beinsen Caén is built with high-quality materials for intensive use and includes a wheeled stand for a stable, practical workstation." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Ajuste al milímetro", "en": "Millimeter adjustment" },
+        "description": { "es": "Ajusta la cruz láser con máxima precisión y reduce errores de colocación para evitar impresiones fuera de lugar.", "en": "Fine-tune the cross laser with high precision and reduce placement errors to avoid off-position prints." },
+        "icon": "Ruler"
       }
-    ]
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar que se enfríe.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately; the heating plate is still too hot.",
+        "If you turn off the compressor, the hot plate may close and press against the lower plate, which could burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "obrei-plancha-gorras-apertura-automatica",
@@ -447,29 +756,70 @@ export const planchasData: Plancha[] = [
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
     "technicalSpecs": [
-      { "label": { "es": "Cierre", "en": "Closure" }, "value": "Automático / Automatic" },
-      { "label": { "es": "Aplicación", "en": "Application" }, "value": "Gorras / Caps" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" }
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Obrei" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Semiautomática" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Automático" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Cambiable" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "15 x 15 cm y 10 x 20 cm (gorra)" },
+      { "label": { "es": "Máximo grosor imprimible", "en": "Maximum Printable Thickness" }, "value": "20 mm" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120 / 220 V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "500 W / 1000 W" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "25 kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "70 x 60 x 35 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-06" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
     ],
     "benefits": [
       {
-        "title": { "es": "Apertura Inteligente", "en": "Smart Opening" },
-        "description": { "es": "Ahorra tiempo y evita sobrecalentamientos con la apertura automática al finalizar el ciclo.", "en": "Save time and avoid overheating with the automatic opening at the end of the cycle." },
+        "title": { "es": "Sublima gorras y artículos pequeños", "en": "Sublimate caps and small items" },
+        "description": { "es": "Gracias a su formato 2 en 1 podrás intercambiar platos y trabajar tanto gorras como artículos pequeños con su plato plano de 15 x 15.", "en": "Its 2-in-1 format lets you swap plates to sublimate both caps and small items using the 15 x 15 flat plate." },
         "icon": "Zap"
+      },
+      {
+        "title": { "es": "Preparada para todos", "en": "Ready for every workshop" },
+        "description": { "es": "La termofijadora Obrei está pensada para talleres con poco espacio, permitiendo sublimar distintos productos sin sacrificar comodidad.", "en": "Obrei is designed for compact workshops, letting you sublimate multiple product types without sacrificing comfort." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Versátil en múltiples técnicas", "en": "Versatile across transfer methods" },
+        "description": { "es": "Nada se te va a resistir: permite realizar métodos comunes de transferencia en caliente (flock, flex, sublimación), además de apoyar trabajos de pedrería, vinilo y transfer.", "en": "Handle common heat transfer methods (flock, flex, sublimation) and support rhinestone, vinyl, and transfer applications." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Control total con apertura automática", "en": "Total control with automatic opening" },
+        "description": { "es": "Su apertura y cierre automático te permite trabajar en otro plato mientras se sublima una pieza. Incluye alarma al finalizar el prensado para mantener la cadena de producción sin pausas.", "en": "Automatic opening and closing lets you work on another plate while one item is pressing. An end-cycle alarm keeps production flowing without pauses." },
+        "icon": "Clock"
       }
-    ]
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "planchas-transfer-con-apertura-neumatica",
-    "slug": "planchas-transfer-con-apertura-neumatica",
+    "slug": "doha-plancha-transfer-gran-formato",
     "name": {
-      "es": "Planchas transfer con apertura neumática",
+      "es": "Doha Plancha transfer de gran formato",
       "en": "Pneumatic opening heat presses",
       "pt": "Prensas térmicas de abertura pneumática",
       "it": "Presse termiche ad apertura pneumatica"
     },
     "description": {
-      "es": "Máquinas industriales de sublimación con cierre y apertura neumática para alta producción.",
+      "es": "Personaliza a lo grande con la plancha transfer de gran formato Beinsen Doha. Gracias al plato de 80x50cm podrás llevar doónde no lo hace el resto y ofrecer a tus clientes personalizaciones más espectaculares, y sin renunciar a la precisión, comodidad y robustez de una plancha sandwich tradicional.",
       "en": "Industrial sublimation machines with pneumatic closure and opening for high production.",
       "pt": "Máquinas industriais pneumáticas de alta produção.",
       "it": "Macchine industriali pneumatiche ad alta produzione."
@@ -493,29 +843,81 @@ export const planchasData: Plancha[] = [
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
-      { "label": { "es": "Sistema", "en": "System" }, "value": "Neumático / Pneumatic" },
-      { "label": { "es": "Aplicación", "en": "Application" }, "value": "Producción Industrial / Industrial Production" },
-      { "label": { "es": "Cierre", "en": "Closure" }, "value": "Automático" }
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Cierre manual y apertura automática" },
+      { "label": { "es": "Ángulo de apertura", "en": "Opening Angle" }, "value": "25 grados" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "8mm." },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "✓" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "80x50cm." },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "3.600W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "110Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "163Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "105x97x95cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" }
     ],
     "benefits": [
       {
-        "title": { "es": "Poder Neumático", "en": "Pneumatic Power" },
-        "description": { "es": "Presión constante y uniforme para los trabajos más exigentes de sublimación.", "en": "Constant and uniform pressure for the most demanding sublimation jobs." },
-        "icon": "Wind"
+        "title": { "es": "Electromagnética y preparada para producir", "en": "Electromagnetic and production-ready" },
+        "description": { "es": "La Doha integra cierre electromagnético, controlador digital y bandeja extraíble para una operación fluida, precisa y cómoda en trabajos continuos.", "en": "Doha combines electromagnetic closure, digital control, and a pull-out tray for smooth, precise, and comfortable continuous production." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Plato de 80 x 50 cm", "en": "80 x 50 cm platen" },
+        "description": { "es": "Su plato de 80 x 50 cm te permite trabajar piezas de mayor tamaño en una sola planchada con acabado profesional.", "en": "Its 80 x 50 cm platen lets you handle larger pieces in a single press with professional finish." },
+        "icon": "Ruler"
+      },
+      {
+        "title": { "es": "Amplía tus límites", "en": "Expand your limits" },
+        "description": { "es": "Incluye en tu catálogo camisetas XXL, sudaderas, bolsas, banderas o paneles textiles de una sola planchada, con resultados limpios y consistentes.", "en": "Add XXL shirts, hoodies, bags, flags, or textile panels to your catalog in one press with clean, consistent results." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Confort al máximo", "en": "Maximum comfort" },
+        "description": { "es": "La bandeja extraíble, el cierre electromagnético y la empuñadura ergonómica están pensados para que planchar sea más cómodo durante toda la jornada.", "en": "The pull-out tray, electromagnetic closure, and ergonomic handle are designed to keep pressing comfortable throughout the day." },
+        "icon": "Zap"
       }
-    ]
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately; the heating plate is still too hot.",
+        "If you turn off the compressor, the hot plate may close and press against the lower plate, which could burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "planchas-termica-para-gorras",
-    "slug": "planchas-termica-para-gorras",
+    "slug": "plancha-plana-para-sublimar",
     "name": {
-      "es": "Planchas transfer para gorras",
-      "en": "Cap heat presses",
-      "pt": "Prensas térmicas para bonés",
-      "it": "Presse termiche per cappelli"
+      "es": "Plancha térmica Riad",
+      "en": "Riad heat press",
+      "pt": "Prensa térmica Riad",
+      "it": "Pressa termica Riad"
     },
     "description": {
-      "es": "Herramientas esenciales para personalizar tus gorras con diseños únicos. Modelos diseñados para adaptarse a la curvatura de la gorra.",
+      "es": "¡Marca tu estilo con la plancha térmica Riad de Beinsen! Sumérgete en un mundo de personalización y dale vida a tus creaciones con la compañera perfecta para el éxito. En Beinsen, nos enorgullece ofrecerte más que una simple plancha, nos esforzamos por brindarte una experiencia excepcional respaldada por nuestros valores y la calidad insuperable de nuestros productos.",
       "en": "Essential tools for personalizing your caps with unique designs. Models designed to fit the cap's curvature.",
       "pt": "Ferramentas essenciais para personalizar os seus bonés.",
       "it": "Strumenti essenziali per personalizzare i tuoi cappelli."
@@ -537,19 +939,93 @@ export const planchasData: Plancha[] = [
     },
     "accessories": [],
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" }
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Riad" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo sandwich" },
+      { "label": { "es": "Ángulo de apertura", "en": "Opening Angle" }, "value": "45º" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Manual" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Cambiable" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "15 x 20 cm" },
+      { "label": { "es": "Máximo grosor imprimible", "en": "Maximum Printable Thickness" }, "value": "10 mm" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120 / 220V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "300W / 500W" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "40,5 Kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "28 x 26 x 34 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-04" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Con Riad, la versatilidad está a tu alcance", "en": "Versatility within reach" },
+        "description": { "es": "Su plato de 15 x 20 cm te permite realizar trabajos pequeños con facilidad y precisión. Además, puedes añadir un toque personal a gorras gracias a su resistencia de 12 x 15 cm especialmente diseñada para ello.", "en": "Its 15 x 20 cm plate helps you handle small jobs with ease and precision, and you can also personalize caps with its dedicated 12 x 15 cm heating element." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Preparada para todos", "en": "Ready for everyone" },
+        "description": { "es": "Ya sea que estés comenzando en el mundo de la personalización o que busques ampliar tus habilidades, Riad te brinda la solución perfecta para sublimar llaveros, placas, colgantes y más.", "en": "Whether you are just starting or expanding your skills, Riad gives you the perfect solution to sublimate keychains, plates, pendants, and more." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "La herramienta ideal", "en": "The ideal tool" },
+        "description": { "es": "Descubre la calidad y el rendimiento excepcionales de la plancha térmica Beinsen Riad. Da rienda suelta a tu creatividad y confía en Riad para dar vida a tus ideas de personalización.", "en": "Discover the exceptional quality and performance of the Beinsen Riad heat press. Unleash your creativity and bring your personalization ideas to life." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Modo eco y precalentamiento", "en": "Eco mode and preheating" },
+        "description": { "es": "Integra funciones de modo eco y precalentamiento para optimizar tiempos de trabajo y mejorar la eficiencia en cada jornada.", "en": "Includes eco mode and preheating functions to optimize workflow times and improve daily efficiency." },
+        "icon": "Leaf"
+      },
+      {
+        "title": { "es": "Pantalla digital y programable", "en": "Digital and programmable display" },
+        "description": { "es": "La pantalla digital facilita la configuración y su sistema programable te permite repetir ajustes con comodidad en producciones continuas.", "en": "Its digital display simplifies setup, and the programmable system helps you repeat settings in continuous production." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Resistencia duradera", "en": "Durable heating element" },
+        "description": { "es": "La resistencia está pensada para ofrecer estabilidad térmica y larga vida útil, manteniendo resultados consistentes en cada planchado.", "en": "The heating element is designed for thermal stability and long lifespan, keeping results consistent in every press." },
+        "icon": "Gauge"
+      },
+      {
+        "title": { "es": "Kit para gorras", "en": "Cap kit included" },
+        "description": { "es": "Los accesorios para gorras son fácilmente intercambiables y además incluye un clip de sujeción para gorras, mejorando estabilidad y acabado.", "en": "Cap accessories are easy to swap and include a cap holding clip, improving stability and finish quality." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Diseño deslizante y controlador digital", "en": "Sliding design with digital control" },
+        "description": { "es": "Riad es una plancha pequeña pensada para quienes disponen de poco espacio. Con su controlador GY-04 podrás manipular la plancha sin grandes complicaciones.", "en": "Riad is a compact press designed for limited spaces. With its GY-04 controller, operation is simple and practical." },
+        "icon": "MoveHorizontal"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "planchas-transfer-multifuncion-para-sublimacion",
     "slug": "planchas-transfer-multifuncion-para-sublimacion",
     "name": {
-      "es": "Planchas transfer multifunción",
+      "es": "Plancha térmica Jamaica",
       "en": "Multi-function heat presses",
       "pt": "Prensas térmicas multifunções",
       "it": "Presse termiche multifunzione"
     },
     "description": {
-      "es": "La solución versátil para tu taller. Personaliza tazas, gorras, platos y textiles con una sola máquina.",
+      "es": "Descubre la plancha térmica Jamaica de Beinsen, una herramienta de personalización versátil y de alta calidad. Con sus accesorios intercambiables y su amplia superficie de trabajo, podrás sublimar una amplia gama de objetos y dar rienda suelta a tu creatividad.",
       "en": "The versatile solution for your workshop. Personalize mugs, caps, plates, and textiles with a single machine.",
       "pt": "A solução versátil para a sua oficina.",
       "it": "La soluzione versatile per il tuo laboratorio."
@@ -571,7 +1047,85 @@ export const planchasData: Plancha[] = [
     },
     "accessories": [],
     "category": { "es": "Multifunción", "en": "Multi-function", "pt": "Multifunções", "it": "Multifunzione" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" }
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Jamaica" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo giratoria" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Manual" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Cambiable" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "40 x 50cm" },
+      { "label": { "es": "Máximo grosor imprimible", "en": "Maximum Printable Thickness" }, "value": "70mm" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120/220V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1800W" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "54 Kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "89 x 543 x 61 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-04" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Explora nuevas posibilidades de personalización", "en": "Explore new personalization possibilities" },
+        "description": { "es": "La plancha térmica Jamaica 8 en 1 de Beinsen te brinda la oportunidad de expandir tus horizontes en la personalización. Con resistencias especializadas para platos, gorras y tazas, podrás personalizar una variedad de objetos, desde textiles hasta artículos de vajilla.", "en": "The Beinsen Jamaica 8-in-1 heat press helps you expand your personalization options with specialized elements for plates, caps, and mugs." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Sistema de calentamiento rápido", "en": "Fast heating system" },
+        "description": { "es": "Cuenta con un sistema de calentamiento rápido que te permite iniciar tus proyectos de personalización en poco tiempo, ahorrando tiempo y aumentando la eficiencia.", "en": "Its fast heating system lets you start personalization projects quickly, saving time and increasing efficiency." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Calidad y rendimiento excepcionales", "en": "Exceptional quality and performance" },
+        "description": { "es": "La plancha térmica Jamaica destaca por su calidad y rendimiento superiores. Con una superficie de trabajo de 40 cm x 50 cm en su plato base, garantiza resultados profesionales en cada aplicación.", "en": "Jamaica stands out for superior quality and performance. Its 40 x 50 cm base plate delivers professional results in every application." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Modo eco y precalentamiento", "en": "Eco mode and preheating" },
+        "description": { "es": "Incluye modo eco y función de precalentamiento para optimizar el consumo y agilizar el flujo de trabajo.", "en": "Includes eco mode and preheating to optimize energy usage and speed up workflow." },
+        "icon": "Leaf"
+      },
+      {
+        "title": { "es": "Pantalla digital y programable", "en": "Digital and programmable control" },
+        "description": { "es": "Su pantalla digital y sistema programable facilitan una configuración precisa y repetible en trabajos continuos.", "en": "Its digital display and programmable system provide precise, repeatable setup for continuous jobs." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Resistencia duradera", "en": "Durable heating element" },
+        "description": { "es": "Diseñada para una larga vida útil y estabilidad térmica en producciones exigentes.", "en": "Designed for long service life and thermal stability in demanding production runs." },
+        "icon": "Gauge"
+      },
+      {
+        "title": { "es": "Resistencias para gorras (9 x 15.5 cm)", "en": "Cap elements (9 x 15.5 cm)" },
+        "description": { "es": "Personaliza gorras con facilidad y precisión utilizando las resistencias para crear diseños únicos y originales.", "en": "Personalize caps with ease and precision using dedicated elements for unique designs." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Resistencias para platos (12.6 cm y 15.2 cm)", "en": "Plate elements (12.6 cm and 15.2 cm)" },
+        "description": { "es": "Transforma platos comunes en piezas de arte para que cada comida sea un momento memorable.", "en": "Transform regular plates into art pieces so every meal becomes memorable." },
+        "icon": "Disc"
+      },
+      {
+        "title": { "es": "Resistencias para vasos (6 oz, 9 oz, 12 oz y 15 oz)", "en": "Mug elements (6 oz, 9 oz, 12 oz, and 15 oz)" },
+        "description": { "es": "Agrega un toque personal a tus bebidas para que cada sorbo sea especial y único.", "en": "Add a personal touch to your drinkware so every sip feels special and unique." },
+        "icon": "CupSoda"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "esparta-prensa-termica-neumatica",
@@ -583,7 +1137,7 @@ export const planchasData: Plancha[] = [
       "it": "Esparta pressa termica pneumatica"
     },
     "description": {
-      "es": "Nuevo nivel de confort sin perder eficiencia. Control táctil avanzado y memoria para tus mejores ajustes.",
+      "es": "Con tu nueva prensa térmica neumática Beinsen Esparta no podrás parar de personalizar. Porque este nuevo modelo incorpora un montón de novedades que la hacen más cómoda, más sencilla, más precisa e incluso más bonita. Podrás tener en tus manos el modelo más cómodo y avanzado que hemos lanzado hasta la fecha. Y todo esto aumentando aún más tu producción para hacerla también más rentable.",
       "en": "New level of comfort without losing efficiency. Advanced touch control and memory for your best settings.",
       "pt": "Novo nível de conforto sem perder eficiência.",
       "it": "Nuovo livello di comfort senza perdere efficienza."
@@ -616,26 +1170,65 @@ export const planchasData: Plancha[] = [
       "https://beinsen.com/wp-content/uploads/2025/02/esparta-002-1.jpg"
     ],
     "technicalSpecs": [
-      { "label": { "es": "Tamaño Placa", "en": "Plate Size" }, "value": "40 x 50 cm" },
-      { "label": { "es": "Sistema", "en": "System" }, "value": "Pneumatic / Neumático" },
-      { "label": { "es": "Potencia", "en": "Power" }, "value": "2.5 KW" },
-      { "label": { "es": "Controlador", "en": "Controller" }, "value": "Tactile / Táctil" },
-      { "label": { "es": "Presión Máx.", "en": "Max Pressure" }, "value": "6 bar" }
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "40mm." },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-13" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✓" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "3" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "40x50cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "90Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "125Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "115×86.5x58cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" },
+      { "label": { "es": "Seguridad", "en": "Safety" }, "value": "Cubierta anti quemaduras" }
     ],
     "benefits": [
       {
-        "title": { "es": "Confort Neumático", "en": "Pneumatic Comfort" },
-        "description": { "es": "Olvídate del esfuerzo físico. El sistema neumático garantiza presión constante sin fatiga.", "en": "Forget physical effort. The pneumatic system ensures constant pressure without fatigue." },
+        "title": { "es": "Neumática", "en": "Pneumatic" },
+        "description": { "es": "El sistema neumático aporta presión uniforme y constante para personalizaciones más precisas y cómodas en tiradas continuas.", "en": "The pneumatic system provides uniform, constant pressure for more precise and comfortable continuous personalization." },
         "icon": "Wind"
       },
       {
-        "title": { "es": "Interfaz Táctil", "en": "Touch Interface" },
-        "description": { "es": "Control total con un toque. Configura tiempos y temperaturas con precisión milimétrica.", "en": "Total control with a touch. Configure times and temperatures with millimeter precision." },
+        "title": { "es": "Bandeja extraíble", "en": "Pull-out tray" },
+        "description": { "es": "Facilita la colocación de prendas y mejora el flujo de trabajo para una operación más rápida y segura.", "en": "Makes garment placement easier and improves workflow for faster, safer operation." },
+        "icon": "PanelBottom"
+      },
+      {
+        "title": { "es": "Pantalla táctil", "en": "Touch display" },
+        "description": { "es": "Todo controlado: configura temperatura y temporizadores de forma intuitiva con su nuevo controlador digital.", "en": "Keep everything under control by setting temperature and timers intuitively with the new digital controller." },
         "icon": "MousePointer2"
       },
       {
-        "title": { "es": "Productividad Ágil", "en": "Agile Productivity" },
-        "description": { "es": "Ideal para producciones medias-altas donde la repetibilidad es clave.", "en": "Ideal for mid-high productions where repeatability is key." },
+        "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
+        "description": { "es": "Incluye sistema de intercambio rápido del plato inferior para adaptarse al ritmo de tu producción y reducir tiempos de inactividad.", "en": "Includes a quick-change lower plate system to match production needs and reduce downtime." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" },
+        "description": { "es": "Incorpora una cubierta de seguridad anti quemaduras para un trabajo más protegido durante jornadas intensivas.", "en": "Includes an anti-burn safety cover for safer operation during intensive workdays." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Comodidad ante todo", "en": "Comfort first" },
+        "description": { "es": "Desde la experiencia adquirida con nuestro anterior modelo, hemos avanzado hasta lograr un nuevo nivel de confort sin perder un ápice de eficiencia.", "en": "Based on experience from the previous model, this version reaches a new comfort level without sacrificing efficiency." },
+        "icon": "Sofa"
+      },
+      {
+        "title": { "es": "Controlador digital GY-08", "en": "GY-08 digital controller" },
+        "description": { "es": "El nuevo controlador digital te lo pone fácil: configura temperatura y tiempos para tener todo bajo control.", "en": "The new digital controller makes it easy to configure temperature and timing and keep everything under control." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Que el ritmo no pare", "en": "Keep the pace going" },
+        "description": { "es": "Tu Beinsen Esparta incorpora intercambio rápido del plato inferior para cambiar tan rápido como lo exija tu producción, mejorando productividad, confort y resultados.", "en": "Your Beinsen Esparta includes quick-change lower plate support so you can switch as fast as production demands, improving productivity and comfort." },
         "icon": "Zap"
       }
     ],
@@ -648,33 +1241,43 @@ export const planchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "Lubricar el cilindro neumático trimestralmente",
-        "Drenar el filtro del compresor semanalmente",
-        "Limpiar la pantalla táctil solo con paño seco"
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Lubricate the pneumatic cylinder quarterly",
-        "Drain the compressor filter weekly",
-        "Clean the touch screen only with a dry cloth"
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
       ]
     }
   },
   {
     "id": "planchas-transfer-para-tazas-y-platos-descatalogadas",
-    "slug": "planchas-transfer-para-tazas-y-platos-descatalogadas",
+    "slug": "plancha-termica-barein",
     "name": {
-      "es": "Planchas descatalogadas para tazas y platos",
+      "es": "Plancha térmica Barein",
       "en": "Discontinued mug and plate presses",
       "pt": "Prensas descontinuadas para canecas e pratos",
       "it": "Presse fuori produzione per tazze e piatti"
     },
     "description": {
-      "es": "Consulta nuestros modelos anteriores de prensas para tazas y platos.",
+      "es": "¡Personaliza tus tazas con la plancha térmica Barein! Con resistencias intercambiables para tazas de 6-9oz y controlador digital preciso, obtén resultados increíbles en solo 5 minutos.",
       "en": "Check our previous mug and plate press models.",
       "pt": "Consulte os nossos modelos anteriores.",
       "it": "Consulta i nostri modelli precedenti."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2022/04/28.jpg",
+    "image": "https://beinsen.com/wp-content/uploads/2022/03/IMG_0383-1024x768-removebg-preview.png",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
@@ -691,7 +1294,330 @@ export const planchasData: Plancha[] = [
     },
     "accessories": [],
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" }
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "gallery": [
+      "https://beinsen.com/wp-content/uploads/2022/03/IMG_0383-1024x768-removebg-preview.png",
+      "https://beinsen.com/wp-content/uploads/2022/04/28.jpg",
+      "https://beinsen.com/wp-content/uploads/2022/04/repbeires11a.jpg",
+      "https://beinsen.com/wp-content/uploads/2022/03/IMG_0383-1024x768-removebg-preview.png"
+    ],
+    "hotspotImage": "https://beinsen.com/wp-content/uploads/2024/01/description_barein.png",
+    "videoUrl": "https://www.youtube.com/embed/r1fMuXcRomk",
+    "technicalSpecs": [
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Barein" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo para tazas" },
+      { "label": { "es": "Compresor", "en": "Compressor" }, "value": "No incluido" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Manual" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Cambiable" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "11oz" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "300W" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "13 Kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "30 x 31 x 26 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-04" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "¿Quieres personalizar tus tazas de forma fácil y rápida?", "en": "Customize mugs quickly and easily" },
+        "description": { "es": "La plancha térmica Barein es la herramienta que necesitas. Con su resistencia intercambiable para tazas de 11oz y controlador digital GY-10, podrás ajustar la temperatura y el tiempo de forma precisa para cada trabajo.", "en": "Barein is the tool you need. With its interchangeable 11oz mug element and GY-10 digital controller, you can set temperature and time precisely for each job." },
+        "icon": "CupSoda"
+      },
+      {
+        "title": { "es": "Haz tu vida más sencilla", "en": "Make life easier" },
+        "description": { "es": "Podrás cambiar la resistencia a mano sin necesidad de herramientas adicionales, y su estructura soldada de acero sólido garantiza una larga durabilidad.", "en": "You can swap the heating element by hand without extra tools, and its welded solid steel structure ensures long durability." },
+        "icon": "Wrench"
+      },
+      {
+        "title": { "es": "Todo al alcance de tu mano", "en": "Everything at your fingertips" },
+        "description": { "es": "Podrás realizar todos los métodos comunes de transferencia en caliente, como flock, flex y sublimación. Solo necesitarás esperar 5 minutos para que esté lista y empezar a trabajar.", "en": "You can perform common heat transfer methods such as flock, flex, and sublimation. Wait 5 minutes and start working." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Modo eco y precalentamiento", "en": "Eco mode and preheating" },
+        "description": { "es": "Incluye modo eco y función de precalentamiento para optimizar el uso energético y agilizar cada ciclo de trabajo.", "en": "Includes eco mode and preheating to optimize energy use and speed up each production cycle." },
+        "icon": "Leaf"
+      },
+      {
+        "title": { "es": "Pantalla digital y programable", "en": "Digital and programmable display" },
+        "description": { "es": "Su pantalla digital y programación facilitan ajustar parámetros y repetir configuraciones de forma cómoda.", "en": "Its digital display and programmable controls make parameter setup and repeat jobs easier." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Resistencia duradera", "en": "Durable heating element" },
+        "description": { "es": "Diseñada para mantener rendimiento constante durante jornadas largas de producción.", "en": "Built to maintain consistent performance through long production sessions." },
+        "icon": "Gauge"
+      },
+      {
+        "title": { "es": "Alarma sonora", "en": "Sound alarm" },
+        "description": { "es": "Olvídate de abrir tarde la plancha: la alarma sonora te avisa al finalizar el ciclo.", "en": "Forget delayed openings: the sound alarm notifies you at the end of each cycle." },
+        "icon": "Bell"
+      },
+      {
+        "title": { "es": "Bajo consumo de energía", "en": "Low energy consumption" },
+        "description": { "es": "Su diseño simple y eficiente evita consumos energéticos excesivos.", "en": "Its simple, efficient design avoids excessive energy consumption." },
+        "icon": "BatteryCharging"
+      },
+      {
+        "title": { "es": "Estructura sólida", "en": "Solid structure" },
+        "description": { "es": "Desde la base hasta el mango, está pensada para resistir largas horas de trabajo en cadena sin desgastes prematuros.", "en": "From base to handle, it is designed to withstand long production runs without premature wear." },
+        "icon": "ShieldCheck"
+      }
+    ],
+    "hotspots": [
+      {
+        "x": 36.8,
+        "y": 36.5,
+        "title": { "es": "Ajuste de presión", "en": "Pressure adjustment" },
+        "description": { "es": "Perilla para ajustar la presión de trabajo según el tipo de taza y transfer.", "en": "Knob used to adjust working pressure based on mug type and transfer." }
+      },
+      {
+        "x": 44.5,
+        "y": 21.9,
+        "title": { "es": "Asa", "en": "Handle" },
+        "description": { "es": "Empuñadura principal para apertura y cierre manual de la plancha.", "en": "Main grip used for manual opening and closing of the press." }
+      },
+      {
+        "x": 81.2,
+        "y": 62.7,
+        "title": { "es": "Botón ON / OFF", "en": "ON / OFF button" },
+        "description": { "es": "Interruptor principal de encendido y apagado del equipo.", "en": "Main power switch for turning the machine on and off." }
+      },
+      {
+        "x": 34.2,
+        "y": 58.2,
+        "title": { "es": "Resistencia", "en": "Heating element" },
+        "description": { "es": "Zona calefactora para transferencia térmica sobre tazas.", "en": "Heating zone used for thermal transfer on mugs." }
+      },
+      {
+        "x": 57.3,
+        "y": 60.2,
+        "title": { "es": "Pantalla digital", "en": "Digital display" },
+        "description": { "es": "Pantalla para configurar tiempo y temperatura de trabajo.", "en": "Display used to configure working time and temperature." }
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "maine-plancha-para-tazas",
+    "slug": "maine-plancha-para-tazas",
+    "name": {
+      "es": "Maine",
+      "en": "Maine",
+      "pt": "Maine",
+      "it": "Maine"
+    },
+    "description": {
+      "es": "Imagina poder crear tus propias tazas personalizadas con resultados profesionales, ¿no sería genial? Con la plancha térmica Maine, eso es posible. Esta plancha es perfecta para aquellos que buscan una solución eficiente y práctica para personalizar tazas.",
+      "en": "Mug heat press focused on agile personalization and consistent results.",
+      "pt": "Prensa térmica para canecas focada em personalização ágil e resultados consistentes.",
+      "it": "Pressa termica per tazze orientata a personalizzazione agile e risultati consistenti."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2025/09/maine-featured-768x768.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Compacta y fácil de configurar",
+        "Control preciso de tiempo y temperatura",
+        "Ideal para producción de tazas personalizada"
+      ],
+      "en": [
+        "Compact and easy to set up",
+        "Precise time and temperature control",
+        "Ideal for personalized mug production"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Para tazas" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Manual" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "NTTH-2000" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Resistencias incluidas", "en": "Included Elements" }, "value": "6 (chupito, taza mini, 6-10oz, 11-15oz, 12oz cónica, 17oz cónica)" },
+      { "label": { "es": "Resistencias opcionales", "en": "Optional Elements" }, "value": "Resistencia de 20-30oz para tumblers y botellas" },
+      { "label": { "es": "Resistencias intercambiables", "en": "Interchangeable Elements" }, "value": "✓" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "130W-260W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "220 ℃ (437 ℉)" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "14Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "16,6Kg." },
+      { "label": { "es": "Tamaño de la máquina", "en": "Machine Size" }, "value": "43x41x32cm" },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "59x52x36cm." },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" },
+      { "label": { "es": "Seguridad", "en": "Safety" }, "value": "Cubierta anti quemaduras" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Control manual", "en": "Manual control" },
+        "description": { "es": "Gestiona cada ciclo de personalización con precisión y control total en una operación manual confiable.", "en": "Manage each personalization cycle with precision and full control through reliable manual operation." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Doble controlador", "en": "Dual controller" },
+        "description": { "es": "La plancha transfer Beinsen Maine incorpora un doble controlador digital para que tengas el mayor control a la hora de personalizar. Gracias a este sistema puedes multiplicar por 2 la producción o utilizar solo la parte que necesites, ahorrando tiempo y dinero.", "en": "Beinsen Maine includes dual digital control so you can maximize precision. This system lets you double production or run only the side you need to save time and cost." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Resistencias intercambiables", "en": "Interchangeable elements" },
+        "description": { "es": "Cambia resistencias de forma rápida para adaptarte a distintos formatos de taza y vaso según tus pedidos.", "en": "Swap elements quickly to adapt to different mug and cup formats based on your orders." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Un universo de posibilidades", "en": "A universe of possibilities" },
+        "description": { "es": "Sus 6 resistencias incluidas te permitirán personalizar todo tipo de tazas y vasos, desde pequeños vasos de chupito hasta tazas grandes. Y con la resistencia opcional de 20 a 30oz podrás añadir termos y botellas a tu portfolio.", "en": "Its 6 included elements let you customize all kinds of mugs and cups, from shot glasses to larger mugs. With the optional 20-30oz element, you can also add tumblers and bottles to your portfolio." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Nada escapa a tu control", "en": "Nothing escapes your control" },
+        "description": { "es": "Configura temperatura y tiempo con total precisión para mantener resultados consistentes y profesionales en cada lote.", "en": "Set temperature and time with full precision to keep consistent, professional results in every batch." },
+        "icon": "Target"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "aruba-plancha-para-tazas",
+    "slug": "aruba-plancha-para-tazas",
+    "name": {
+      "es": "Aruba",
+      "en": "Aruba",
+      "pt": "Aruba",
+      "it": "Aruba"
+    },
+    "description": {
+      "es": "La plancha térmica para la personalización de tazas puede ser un trabajo laborioso y limitado en cantidad si se usa el método manual. Pero con la plancha térmica Aruba, todo eso se convierte en cosa del pasado. ¡Personaliza dos tazas a la vez de diferentes formas y capacidades!",
+      "en": "Mug heat press designed for workshops needing speed and stability.",
+      "pt": "Prensa térmica para canecas pensada para oficinas que exigem velocidade e estabilidade.",
+      "it": "Pressa termica per tazze pensata per laboratori che richiedono velocità e stabilità."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2022/03/IMG_0535-1024x768-removebg-preview.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Construcción robusta para uso continuo",
+        "Ajuste rápido de parámetros",
+        "Resultados uniformes en cada ciclo"
+      ],
+      "en": [
+        "Robust build for continuous use",
+        "Fast parameter adjustment",
+        "Uniform results in every cycle"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Modelo", "en": "Model" }, "value": "Aruba" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo manual" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Manual" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Cambiable" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "6 a 10 oz, 11oz a 15oz, 12oz y 17oz" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "300W x 2" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "13 Kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "55 x 51 x 27 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-04" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "No dudes, y sublima", "en": "Do not hesitate, sublimate" },
+        "description": { "es": "Cuenta con resistencias para tazas cilíndricas de 6 a 10 oz y 11 a 15 oz, y cónicas de 12 oz y 17 oz. Además, podrás utilizar métodos comunes de transferencia en caliente como flock, flex y sublimación.", "en": "It includes elements for 6-10 oz and 11-15 oz cylindrical mugs, plus 12 oz and 17 oz conical mugs, and supports common transfer methods like flock, flex, and sublimation." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "La cantidad es importante", "en": "Quantity matters" },
+        "description": { "es": "Con 2 estaciones de trabajo independientes, podrás ajustar la plancha al tamaño y forma de cada taza y sublimar una taza y un termo a la vez sin preocupaciones.", "en": "With 2 independent workstations, you can adjust to each size and shape and sublimate a mug and a tumbler at the same time." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "La calidad es imprescindible", "en": "Quality is essential" },
+        "description": { "es": "No solo aumentará la cantidad de tazas personalizadas que puedas hacer, también elevará la calidad de tus diseños sublimados gracias a sus altos estándares de construcción.", "en": "It not only increases output but also improves sublimation quality thanks to high construction standards." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Resistencia duradera y programable", "en": "Durable and programmable heating" },
+        "description": { "es": "Integra resistencia duradera, pantalla digital y funciones programables para mantener estabilidad y repetibilidad durante toda la producción.", "en": "It combines durable heating, digital display, and programmable functions for stable, repeatable production." },
+        "icon": "Gauge"
+      },
+      {
+        "title": { "es": "Controlador digital avanzado", "en": "Advanced digital controller" },
+        "description": { "es": "Podrás ajustar la temperatura y el tiempo de manera precisa para que nada salga mal en el proceso de sublimación.", "en": "You can adjust temperature and time precisely to keep sublimation workflows under control." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Presión precisa", "en": "Precise pressure" },
+        "description": { "es": "Incluye 4 perillas para ajustar presión y generar un cierre compacto en cada trabajo, preservando la calidad final.", "en": "It includes 4 pressure knobs to create a compact closure in every job and preserve final quality." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Fácil de usar", "en": "Easy to use" },
+        "description": { "es": "Es fácil de operar incluso para quienes no tienen experiencia previa en personalización de tazas.", "en": "It is easy to operate even for users without previous mug personalization experience." },
+        "icon": "Settings"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "planchas-transfer-sandwich-descatalogadas",
@@ -725,75 +1651,87 @@ export const planchasData: Plancha[] = [
     },
     "accessories": [],
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" }
-  },
-  {
-    "id": "planchas-transfer-neumaticas-descatalogadas",
-    "slug": "planchas-transfer-neumaticas-descatalogadas",
-    "name": {
-      "es": "Planchas neumáticas descatalogadas",
-      "en": "Discontinued pneumatic presses",
-      "pt": "Prensas pneumáticas descontinuadas",
-      "it": "Presse pneumatiche fuori produzione"
-    },
-    "description": {
-      "es": "Máquinas industriales de sublimación con apertura neumática de catálogos anteriores.",
-      "en": "Industrial sublimation machines with pneumatic opening from previous catalogs.",
-      "pt": "Máquinas industriais pneumáticas descontinuadas.",
-      "it": "Macchine industriali pneumatiche fuori produzione."
-    },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Luanda-Sin-Fondo-5.png",
-    "price": "Consultar PVP",
-    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
-    "features": {
+    "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "32mm." },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-06" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "2" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "40x50cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "97Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "160Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "120x97x74cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "2, uno a cada lado la unidad principal" },
+      { "label": { "es": "Seguridad", "en": "Safety" }, "value": "-" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Neumática", "en": "Pneumatic" },
+        "description": { "es": "Aporta una presión constante y uniforme para personalizaciones precisas en series continuas.", "en": "Delivers constant, even pressure for precise personalization in continuous runs." },
+        "icon": "Wind"
+      },
+      {
+        "title": { "es": "Doble plato", "en": "Double plate" },
+        "description": { "es": "Su doble plato de gran tamaño multiplica el ritmo de producción sin perder precisión.", "en": "Its large double-plate setup multiplies production pace without sacrificing precision." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Controlador digital", "en": "Digital controller" },
+        "description": { "es": "Controla tiempos y temperatura de forma fácil e intuitiva con su display GY-06.", "en": "Control timing and temperature easily and intuitively with its GY-06 display." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Guías láser", "en": "Laser guides" },
+        "description": { "es": "Ajusta la cruz láser al milímetro para reducir errores y evitar impresiones fuera de lugar.", "en": "Set the laser crosshair with millimeter precision to reduce errors and off-position prints." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Tan compacta como versátil", "en": "Compact yet versatile" },
+        "description": { "es": "Prensa neumática de sobremesa preparada para camisetas, artículos deportivos, paneles fotográficos, pancartas, cojines y mucho más.", "en": "Desktop pneumatic press ready for T-shirts, sportswear, photo panels, banners, cushions, and more." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Tan suave como delicada", "en": "Smooth and delicate" },
+        "description": { "es": "La presión vertical combinada con la silicona de los platos garantiza estampaciones uniformes y cuidadas.", "en": "Vertical pressure combined with silicone platens ensures uniform and gentle transfers." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Detalles que importan", "en": "Details that matter" },
+        "description": { "es": "Visor de presión, botón de emergencia, ventilador, filtro de aire y reguladores de velocidad para un dominio absoluto de la producción.", "en": "Pressure viewer, emergency button, fan, air filter, and speed regulators give full production control." },
+        "icon": "Settings"
+      }
+    ],
+    "maintenanceTips": {
       "es": [
-        "Sistema neumático de alto rendimiento",
-        "Alta precisión en la transferencia",
-        "Eficiencia de producción industrial"
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "High-performance pneumatic system",
-        "High transfer precision",
-        "Industrial production efficiency"
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
       ]
-    },
-    "accessories": [],
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" }
-  },
-  {
-    "id": "planchas-transfer-de-pequeno-formato",
-    "slug": "planchas-transfer-de-pequeno-formato",
-    "name": {
-      "es": "Planchas de pequeño formato",
-      "en": "Small format presses",
-      "pt": "Prensas de pequeno formato",
-      "it": "Presse di piccolo formato"
-    },
-    "description": {
-      "es": "Precisión y versatilidad en tamaño reducido. Ideales para etiquetas, parches y prendas infantiles.",
-      "en": "Precision and versatility in reduced size. Ideal for labels, patches, and children's clothing.",
-      "pt": "Precisão e versatilidade em tamanho reduzido.",
-      "it": "Precisione e versatilità in dimensioni ridotte."
-    },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
-    "price": "Consultar PVP",
-    "size": { "es": "Pequeño", "en": "Small", "pt": "Pequeno", "it": "Piccolo" },
-    "features": {
-      "es": [
-        "Tamaño compacto menos de 38x38 cm",
-        "Menor consumo energético",
-        "Excelente portabilidad"
-      ],
-      "en": [
-        "Compact size under 38x38 cm",
-        "Lower energy consumption",
-        "Excellent portability"
-      ]
-    },
-    "accessories": [],
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" }
+    }
   },
   {
     "id": "pocola-plancha-transfer-manual-pequena",
@@ -805,7 +1743,7 @@ export const planchasData: Plancha[] = [
       "it": "Pocola pressa manuale piccola"
     },
     "description": {
-      "es": "Sencilla, compacta y económica. Plato de 15 x 20 cm ideal para llaveros y fundas.",
+      "es": "La plancha transfer compacta Beinsen Pocola con plato de 15 x 20 cm está diseñada especialmente para trabajos de sublimación en formato pequeño. Perfecta para personalizar artículos como bodies, camisetas infantiles, parches o detalles en prendas, combina tamaño reducido con alto rendimiento.",
       "en": "Simple, compact, and economical. 15 x 20 cm plate ideal for keychains and cases.",
       "pt": "Simples, compacta e económica.",
       "it": "Semplice, compatta ed economica."
@@ -827,7 +1765,78 @@ export const planchasData: Plancha[] = [
     },
     "accessories": [],
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" }
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Manual" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-04" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "15x20cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "500W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "16,15Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "18Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "58x45x48cm" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Ligera", "en": "Lightweight" },
+        "description": { "es": "Diseñada para ofrecer una experiencia de uso ágil y cómoda en tareas de personalización de pequeño formato.", "en": "Designed to provide an agile and comfortable experience for small-format personalization tasks." },
+        "icon": "Feather"
+      },
+      {
+        "title": { "es": "Controlador digital", "en": "Digital controller" },
+        "description": { "es": "Controla tiempo y temperatura de forma sencilla con su display GY-04 para trabajar con precisión en cada planchado.", "en": "Easily control time and temperature through its GY-04 display for precise results on every press." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
+        "description": { "es": "Su sistema de platos intercambiables amplía tus posibilidades para personalizar diferentes tipos de artículos con una sola máquina.", "en": "Its interchangeable plate system expands your options to customize different items with a single machine." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Contigo al fin del mundo", "en": "Built to go the distance" },
+        "description": { "es": "Nos hemos desprendido de lo supérfluo para conseguir una herramienta sencilla, compacta y económica pero capaz de dar grandes resultados. El versátil plato plano de 15 x 20 cm te permite utilizarla para bodys, llaveros, fundas para móvil y casi todo lo que se te ocurra.", "en": "We removed the unnecessary to deliver a simple, compact, and affordable tool that still offers great results. Its versatile 15 x 20 cm flat plate lets you personalize bodysuits, keychains, phone cases, and almost anything you can imagine." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Precisa y robusta", "en": "Precise and robust" },
+        "description": { "es": "La nueva prensa térmica Beinsen Pocola te lo pone fácil durante todo el proceso de personalización. Comienza regulando la presión necesaria con su nuevo mando regulador mejorado, utiliza el controlador digital para seleccionar tiempo y temperatura y al acabar separa la placa calefactora de manera sencilla y elegante con el resorte de gas.", "en": "The new Beinsen Pocola simplifies your full personalization process. Start by setting pressure with its improved regulator, use the digital controller to select time and temperature, and finish by separating the heating plate smoothly with the gas spring." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Amplía tus horizontes", "en": "Expand your horizons" },
+        "description": { "es": "Y si todo lo anterior no es suficiente para ti, solo tienes que añadir a tu Beinsen Pocola el kit para gorras. Es facilísimo de quitar y poner y te permite personalizar estos artículos tan demandados.", "en": "And if all of the above is not enough, just add the cap kit to your Beinsen Pocola. It is very easy to install and remove, and lets you personalize these highly demanded items." },
+        "icon": "Target"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "gante-plancha-manual-gorras",
@@ -839,7 +1848,7 @@ export const planchasData: Plancha[] = [
       "it": "Gante pressa manuale per cappelli"
     },
     "description": {
-      "es": "La herramienta perfecta para iniciarte en la personalización de gorras. Incluye soporte para sujeción.",
+      "es": "La plancha transfer compacta Beinsen Gante con plato para gorras está diseñada especialmente para la iniciación en el mercado de las gorras personalizadas, o para pequeñas producciones o eventos ocasionales.",
       "en": "The perfect tool to get started in cap personalization. Includes attachment support.",
       "pt": "A ferramenta perfeita para começar a personalizar bonés.",
       "it": "Lo strumento perfetto per iniziare la personalizzazione dei cappelli."
@@ -863,17 +1872,76 @@ export const planchasData: Plancha[] = [
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
-      { "label": { "es": "Aplicación", "en": "Application" }, "value": "Gorras y Sombreros / Caps & Hats" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Manual" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-04" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "Plato para gorras" },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✓" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "300W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
       { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
-      { "label": { "es": "Operación", "en": "Operation" }, "value": "Manual" }
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "16,15Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "18Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "58x45x48cm" }
     ],
     "benefits": [
       {
-        "title": { "es": "Ideal para Iniciarse", "en": "Ideal for Beginners" },
-        "description": { "es": "Sencilla, robusta y con resultados profesionales desde el primer día.", "en": "Simple, robust, and with professional results from day one." },
+        "title": { "es": "Ligera", "en": "Lightweight" },
+        "description": { "es": "Su diseño ligero facilita el trabajo diario y el transporte en producciones pequeñas o eventos.", "en": "Its lightweight design makes daily operation and transport easier for small productions or events." },
+        "icon": "Feather"
+      },
+      {
+        "title": { "es": "Controlador digital", "en": "Digital controller" },
+        "description": { "es": "Configura tiempo y temperatura de forma sencilla con su controlador digital GY-04.", "en": "Set time and temperature easily with its GY-04 digital controller." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
+        "description": { "es": "Gracias a sus platos intercambiables podrás adaptar la plancha a distintas aplicaciones según tus necesidades.", "en": "Its interchangeable plates let you adapt the press to different applications as needed." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Contigo al fin del mundo", "en": "Built to go the distance" },
+        "description": { "es": "Nos hemos desprendido de lo supérfluo para conseguir una herramienta sencilla, compacta y económica pero capaz de dar grandes resultados. El plato especial para gorras, junto con el soporte para sujetarlas, te ofrece la herramienta perfecta para iniciarte en esto.", "en": "We removed everything unnecessary to create a simple, compact, and affordable tool that still delivers great results. The special cap plate, together with the cap holder, gives you the perfect setup to get started." },
         "icon": "Zap"
+      },
+      {
+        "title": { "es": "Precisa y robusta", "en": "Precise and robust" },
+        "description": { "es": "La nueva prensa térmica Beinsen Gante te lo pone fácil durante todo el proceso de personalización. Comienza regulando la presión necesaria con su nuevo mando regulador mejorado, utiliza el controlador digital para seleccionar tiempo y temperatura y al acabar separa la placa calefactora de manera sencilla y elegante con el resorte de gas.", "en": "The new Beinsen Gante makes the full personalization process easier. Start by adjusting pressure with its improved regulator, use the digital controller to set time and temperature, and finish by separating the heating plate smoothly with the gas spring." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Amplía tus horizontes", "en": "Expand your horizons" },
+        "description": { "es": "Y si todo lo anterior no es suficiente para ti, solo tienes que añadir a tu Beinsen Gante el kit plano de 15 x 20. Es facilísimo de quitar y poner y su versatilidad te abrirá un nuevo mundo de posibilidades.", "en": "And if all of the above is not enough, simply add the 15 x 20 flat kit to your Beinsen Gante. It is very easy to install and remove, and its versatility opens a new world of possibilities." },
+        "icon": "Target"
       }
-    ]
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "mesa-universal-con-ruedas-para-plancha-transfer",
@@ -996,13 +2064,25 @@ export const planchasData: Plancha[] = [
       { "x": 80, "y": 60, "title": { "es": "Motorización Silenciosa", "en": "Silent Motorization" }, "description": { "es": "Sistema electromecánico que evita el ruido y mantenimiento de los compresores de aire.", "en": "Electromechanical system that avoids the noise and maintenance of air compressors." } }
     ],
     "technicalSpecs": [
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V - 240V" },
-      { "label": { "es": "Potencia", "en": "Power" }, "value": "3.5 KW" },
-      { "label": { "es": "Temperatura Máxima", "en": "Max Temperature" }, "value": "225 ºC / 437 ºF" },
-      { "label": { "es": "Tamaño Placa", "en": "Plate Size" }, "value": "40 x 50 cm" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "1100 x 850 x 800 mm" },
-      { "label": { "es": "Peso Neto", "en": "Net Weight" }, "value": "145 Kg" },
-      { "label": { "es": "Presión Máxima", "en": "Max Pressure" }, "value": "800 Kg / cm²" }
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática, estación de trabajo" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático, manual" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "32mm." },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-13" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✓" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "3" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "2" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "40x50cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "180Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "301Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "102x115x150cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "Mesa con 4 ruedas universales" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "2, uno a cada lado la unidad principal" },
+      { "label": { "es": "Seguridad", "en": "Safety" }, "value": "Cierre de seguridad, sensor detector de manos integrado" }
     ],
     "downloads": [
       { "label": { "es": "Manual de Usuario", "en": "User Manual" }, "url": "/downloads/trinidad-manual.pdf" },
@@ -1078,9 +2158,9 @@ export const planchasData: Plancha[] = [
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
     "technicalSpecs": [
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220 V" },
       { "label": { "es": "Potencia", "en": "Power" }, "value": "3.2 KW" },
-      { "label": { "es": "Peso Neto", "en": "Net Weight" }, "value": "95 Kg" }
+      { "label": { "es": "Peso Neto", "en": "Net Weight" }, "value": "95 kg" }
     ],
     "benefits": [
       {
@@ -1089,6 +2169,1098 @@ export const planchasData: Plancha[] = [
         "icon": "Zap"
       }
     ]
+  },
+  {
+    "id": "belice-plancha-termica-textil",
+    "slug": "belice-plancha-termica-textil",
+    "name": {
+      "es": "Belice",
+      "en": "Belice",
+      "pt": "Belice",
+      "it": "Belice"
+    },
+    "description": {
+      "es": "Adéntrate en el mundo de la personalización con nuestra plancha transfer manual Beinsen Belice. Encuentra la belleza de la simplicidad y la satisfacción de las cosas que hacen exactamente lo que tienen que hacer. Cortita y al pie, para todos los públicos y todos los bolsillos. Y en versión de 38×38 y de 40x50cm.",
+      "en": "Belice textile heat press designed for daily jobs with consistent results and simple operation.",
+      "pt": "Prensa térmica têxtil Belice desenhada para trabalhos diários com resultados consistentes.",
+      "it": "Pressa termica tessile Belice progettata per lavori quotidiani con risultati costanti."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Formato textil versátil",
+        "Control preciso de tiempo y temperatura",
+        "Ideal para producción diaria"
+      ],
+      "en": [
+        "Versatile textile format",
+        "Precise time and temperature control",
+        "Ideal for daily production"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Manual" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "20mm." },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-06" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "38×38 o 40x50cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "43Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "49Kg." },
+      { "label": { "es": "Tamaño de la máquina", "en": "Machine Size" }, "value": "71x40x50cm" },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "94x57x57cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Plancha sin parar", "en": "Press without stopping" },
+        "description": { "es": "La simplicidad no significa fragilidad sino todo lo contrario. Con tu nueva plancha transfer Beinsen Belice no querrás dejar de planchar todo lo que se ponga a tu alcance, y gracias a su construcción robusta, además, no tendrás que hacerlo.", "en": "Simplicity does not mean fragility. With your new Beinsen Belice transfer press, robust construction supports continuous pressing jobs." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Esas pequeñas cosas", "en": "Those little details" },
+        "description": { "es": "Tu plancha es una compañera de trabajo de vital importancia para ti. Precisamente por eso necesitas que sea una herramienta cómoda que te permita centrarte en el resto de aspectos de la personalización.", "en": "Your press is a key work companion, so it is designed to be comfortable and let you focus on the rest of the personalization workflow." },
+        "icon": "Settings"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "barbados-plancha-termica-textil",
+    "slug": "barbados-plancha-termica-textil",
+    "name": {
+      "es": "Barbados",
+      "en": "Barbados",
+      "pt": "Barbados",
+      "it": "Barbados"
+    },
+    "description": {
+      "es": "La plancha transfer para camisetas Beinsen Barbados es la amiga que nunca falla. Desarrollada desde la experiencia y con el objetivo de ofrecer un producto robusto, duradero, fiable y equilibrado, esta prensa térmica disponible con platos de 38×38 y de 40x50cm. extraibles e intercambiables te permite hacer de todo y para todos los públicos.",
+      "en": "Barbados textile heat press aimed at workshops seeking stability and performance.",
+      "pt": "Prensa térmica têxtil Barbados para oficinas que procuram estabilidade e desempenho.",
+      "it": "Pressa termica tessile Barbados pensata per laboratori che cercano stabilità e rendimento."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2025/02/barbadiss-1.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Construcción robusta",
+        "Uso continuo en textil",
+        "Resultados uniformes"
+      ],
+      "en": [
+        "Robust construction",
+        "Continuous textile use",
+        "Uniform results"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Apertura automática y cierre manual" },
+      { "label": { "es": "Ángulo de apertura", "en": "Opening Angle" }, "value": "45º" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-06" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "38×38 o 40x50cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✓" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "27,40Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "43,40Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "92x52x51cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Electromagnética", "en": "Electromagnetic" },
+        "description": { "es": "Su sistema electromagnético simplifica la apertura al terminar el ciclo y mejora la experiencia de uso en producción continua.", "en": "Its electromagnetic system simplifies opening at cycle end and improves continuous production workflow." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Contador de presión", "en": "Pressure counter" },
+        "description": { "es": "Aplica presión con mayor precisión gracias al contador manual para repetir configuraciones con seguridad.", "en": "Apply pressure more precisely with the manual counter to repeat settings reliably." },
+        "icon": "Gauge"
+      },
+      {
+        "title": { "es": "Bandeja extraíble", "en": "Pull-out tray" },
+        "description": { "es": "Desliza la bandeja inferior hacia ti y gana espacio para colocar prendas en segundos con mayor comodidad.", "en": "Slide the lower tray toward you to gain space and place garments in seconds more comfortably." },
+        "icon": "PanelBottom"
+      },
+      {
+        "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
+        "description": { "es": "Incluye sistema de intercambio rápido para el plato inferior, reduciendo tiempos muertos y mejorando productividad.", "en": "Includes a quick-change lower plate system that reduces downtime and boosts productivity." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Controlador digital", "en": "Digital controller" },
+        "description": { "es": "Controla tiempo y temperatura de forma precisa con el controlador digital para mantener resultados consistentes.", "en": "Control time and temperature precisely with the digital controller for consistent outcomes." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Pensada para perdurar", "en": "Built to last" },
+        "description": { "es": "Sus materiales de alta calidad y duración te garantizan un rendimiento superior durante años.", "en": "High-quality, long-lasting materials ensure superior performance for years." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Comodidad ante todo", "en": "Comfort first" },
+        "description": { "es": "Fiabilidad y comodidad van de la mano en tu Beinsen Barbados para que te centres en personalizar sin complicaciones.", "en": "Reliability and comfort go hand in hand so you can focus on personalization without friction." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Que el ritmo no pare", "en": "Keep the pace going" },
+        "description": { "es": "Trabaja más, mejor y más cómodo gracias a su diseño orientado a una producción textil ágil.", "en": "Work more, better, and more comfortably with a design focused on agile textile production." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Dale una vuelta", "en": "Give it a turn" },
+        "description": { "es": "Ajusta presión de forma rápida y abre fácilmente al finalizar gracias al electroimán incorporado.", "en": "Adjust pressure quickly and open effortlessly at cycle end thanks to the built-in electromagnet." },
+        "icon": "RotateCw"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components."
+      ]
+    }
+  },
+  {
+    "id": "alaska-plancha-termica-textil",
+    "slug": "alaska-plancha-termica-textil",
+    "name": {
+      "es": "Alaska",
+      "en": "Alaska",
+      "pt": "Alaska",
+      "it": "Alaska"
+    },
+    "description": {
+      "es": "Olvídate de palancas, olvídate de girar roscas, olvídate de hacer raros escorzos para colocar una prenda, y olvídate también de que tu prensa térmica ocupe un espacio innecesario, tu nueva plancha transfer Beinsen Alaska está pensada para ofrecerte versatilidad de la manera más cómoda. Y ahora disponible en tamaño 38×38 y 40x50cm.",
+      "en": "Alaska textile heat press ready for custom production with agile workflow.",
+      "pt": "Prensa térmica têxtil Alaska pronta para produção personalizada com fluxo ágil.",
+      "it": "Pressa termica tessile Alaska pronta per produzioni personalizzate con flusso agile."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Diseño compacto y funcional",
+        "Configuración rápida",
+        "Adaptada a múltiples prendas"
+      ],
+      "en": [
+        "Compact and functional design",
+        "Fast setup",
+        "Adapted to multiple garments"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático con energía eléctrica" },
+      { "label": { "es": "Presión", "en": "Pressure" }, "value": "Automática" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-13" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✓" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "3" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "38×38 o 40x50cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "230ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "39Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "46Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "75x52x50cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Eléctrica", "en": "Electric" },
+        "description": { "es": "Disfruta de funcionamiento automático eléctrico con una experiencia de uso cómoda y sin complicaciones.", "en": "Enjoy electric automatic operation with a smoother and more convenient user experience." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Resistencia avanzada", "en": "Advanced heating element" },
+        "description": { "es": "Incorpora una resistencia más avanzada, gruesa y pesada que mejora el reparto de presión y calor para una personalización más precisa.", "en": "Includes a thicker, more advanced heating element that improves pressure and heat distribution for more precise results." },
+        "icon": "Gauge"
+      },
+      {
+        "title": { "es": "Pantalla táctil", "en": "Touch display" },
+        "description": { "es": "El nuevo controlador táctil simplifica la configuración y el control de cada trabajo.", "en": "The new touch controller simplifies setup and job control." },
+        "icon": "MousePointer2"
+      },
+      {
+        "title": { "es": "Bandeja deslizable", "en": "Sliding tray" },
+        "description": { "es": "Aprovecha la bandeja inferior deslizante para colocar prendas con mayor espacio de maniobra y total comodidad.", "en": "Use the sliding lower tray for easier garment placement and greater maneuvering space." },
+        "icon": "PanelBottom"
+      },
+      {
+        "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" },
+        "description": { "es": "Incluye protección para trabajar con más seguridad durante jornadas intensivas.", "en": "Includes protective coverage for safer operation during intensive workflows." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Calor uniforme", "en": "Uniform heat" },
+        "description": { "es": "La innovación en placa calefactora y alfombrilla de última generación mejora eficiencia, economía y consistencia del resultado.", "en": "The upgraded heat plate and latest-generation pad improve efficiency, economy, and consistency." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Cómoda y compacta", "en": "Comfortable and compact" },
+        "description": { "es": "Coloca prendas con facilidad, pulsa los botones laterales y deja que la Alaska haga su trabajo como una neumática pero sin compresor.", "en": "Place garments easily, press the side buttons, and let Alaska work like a pneumatic unit but without a compressor." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "El poder de tu dedo", "en": "Control at your fingertips" },
+        "description": { "es": "Guarda hasta 3 ajustes de tiempo y temperatura y configura el nivel de presión directamente desde la pantalla.", "en": "Save up to 3 time/temperature presets and configure pressure level directly from the display." },
+        "icon": "Cpu"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "malvinas-plancha-termica-textil",
+    "slug": "malvinas-plancha-termica-textil",
+    "name": {
+      "es": "Malvinas",
+      "en": "Malvinas",
+      "pt": "Malvinas",
+      "it": "Malvinas"
+    },
+    "description": {
+      "es": "Descubre la evolución natural de las prensas térmicas con nuestra nueva plancha transfer profesional Beinsen Malvinas. Su diseño plagado de novedades hará el proceso de planchado más ágil, preciso y seguro para que tú te puedas preocupar de lo realmente importante.",
+      "en": "Malvinas textile heat press focused on pressing precision and reliable operation.",
+      "pt": "Prensa térmica têxtil Malvinas focada na precisão e fiabilidade de uso.",
+      "it": "Pressa termica tessile Malvinas focalizzata su precisione di pressatura e affidabilità."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Presión estable",
+        "Control intuitivo",
+        "Pensada para trabajos exigentes"
+      ],
+      "en": [
+        "Stable pressure",
+        "Intuitive control",
+        "Designed for demanding jobs"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático y manual" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "20mm." },
+      { "label": { "es": "Presión", "en": "Pressure" }, "value": "Manual" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-13" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✓" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "3" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "40x50 cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "61,4Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "78Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "94x57x57cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" },
+      { "label": { "es": "Seguridad", "en": "Safety" }, "value": "Cubierta anti quemaduras" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Electromagnética", "en": "Electromagnetic" },
+        "description": { "es": "Su sistema electromagnético mejora la ergonomía de apertura y cierre para un flujo de trabajo más eficiente.", "en": "Its electromagnetic system improves opening and closing ergonomics for a more efficient workflow." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Modo manual/auto", "en": "Manual/auto mode" },
+        "description": { "es": "Alterna entre modo automático y manual para adaptarte a distintos tipos de producción y acabados.", "en": "Switch between automatic and manual modes to adapt to different production needs and finishes." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Pantalla táctil", "en": "Touch display" },
+        "description": { "es": "El controlador táctil GY-13 permite ajustar y supervisar todos los parámetros con rapidez y precisión.", "en": "The GY-13 touch controller lets you adjust and monitor all parameters quickly and precisely." },
+        "icon": "MousePointer2"
+      },
+      {
+        "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
+        "description": { "es": "Incluye sistema de intercambio rápido del plato inferior para minimizar tiempos de inactividad y aumentar productividad.", "en": "Includes quick lower plate exchange to reduce downtime and increase productivity." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" },
+        "description": { "es": "Aporta seguridad extra durante la operación para trabajar con más confianza en jornadas largas.", "en": "Adds extra safety during operation so you can work with more confidence in long shifts." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Calor uniforme", "en": "Uniform heat" },
+        "description": { "es": "La nueva resistencia, más avanzada, gruesa y pesada, mejora de forma notable el reparto de presión y calor.", "en": "The newer, thicker, heavier heating element significantly improves pressure and heat distribution." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Confort al máximo", "en": "Maximum comfort" },
+        "description": { "es": "Empuñadura auxiliar, plato extraíble/intercambiable y electroimán desconectable se combinan para un manejo más cómodo.", "en": "Auxiliary handle, removable/interchangeable plate, and disconnectable electromagnet combine for more comfortable use." },
+        "icon": "Sofa"
+      },
+      {
+        "title": { "es": "Todo controlado", "en": "Everything under control" },
+        "description": { "es": "Controla 9 niveles de presión y guarda hasta 3 memorias de tiempo y temperatura. Todo al alcance de tu dedo índice.", "en": "Control 9 pressure levels and save up to 3 time/temperature memories, all at your fingertips." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Que el ritmo no pare", "en": "Keep the pace going" },
+        "description": { "es": "Su diseño agiliza cambios de plato, reduce tiempos muertos y te permite trabajar más y mejor.", "en": "Its design speeds plate changes, reduces downtime, and helps you work faster and better." },
+        "icon": "Gauge"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "guyana-plancha-termica-textil",
+    "slug": "guyana-plancha-termica-textil",
+    "name": {
+      "es": "Guyana",
+      "en": "Guyana",
+      "pt": "Guyana",
+      "it": "Guyana"
+    },
+    "description": {
+      "es": "Reinventa tu forma de trabajar con la plancha transfer de doble plato Beinsen Guyana. Tan robusta y fiable como el modelo Barbados pero con el doble de diversión.",
+      "en": "Guyana textile heat press focused on productivity and consistency in production runs.",
+      "pt": "Prensa térmica têxtil Guyana com foco em produtividade e consistência.",
+      "it": "Pressa termica tessile Guyana con focus su produttività e costanza."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Operación sencilla",
+        "Alto rendimiento diario",
+        "Resultados repetibles"
+      ],
+      "en": [
+        "Simple operation",
+        "High daily output",
+        "Repeatable results"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático y manual" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-06" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "2" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "40x50cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "151 Kg." },
+      { "label": { "es": "Embalaje (cuerpo de la máquina)", "en": "Packaging (Machine Body)" }, "value": "92x65x67 cm." },
+      { "label": { "es": "Embalaje (Placa base)", "en": "Packaging (Base Plate)" }, "value": "110x62x25 cm." }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Electromagnética", "en": "Electromagnetic" },
+        "description": { "es": "Integra sistema electromagnético para facilitar la operación y mantener ritmo de trabajo constante.", "en": "Includes an electromagnetic system to simplify operation and maintain consistent workflow pace." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Modo manual/auto", "en": "Manual/auto mode" },
+        "description": { "es": "Permite alternar entre funcionamiento manual y automático según el tipo de producción.", "en": "Lets you switch between manual and automatic operation depending on production needs." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Controlador digital", "en": "Digital controller" },
+        "description": { "es": "Controla tiempo y temperatura con precisión para repetir resultados de forma fiable.", "en": "Control time and temperature precisely for reliable repeatable results." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
+        "description": { "es": "El sistema de intercambio rápido para el plato inferior reduce tiempos de inactividad y agiliza cambios de trabajo.", "en": "The quick lower plate exchange system reduces downtime and speeds up job changes." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Doble plato", "en": "Double plate" },
+        "description": { "es": "Su configuración de doble plato te permite mejorar flujo de trabajo y productividad en series continuas.", "en": "Its double-plate setup improves workflow and productivity in continuous runs." },
+        "icon": "Copy"
+      },
+      {
+        "title": { "es": "Pensada para perdurar", "en": "Built to last" },
+        "description": { "es": "Sus materiales de alta calidad y duración te garantizan un rendimiento superior durante años.", "en": "High-quality long-lasting materials ensure superior performance for years." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Comodidad ante todo", "en": "Comfort first" },
+        "description": { "es": "Desliza la bandeja inferior hacia ti y coloca prendas en segundos con más espacio y comodidad.", "en": "Slide the lower tray toward you and place garments in seconds with more room and comfort." },
+        "icon": "PanelBottom"
+      },
+      {
+        "title": { "es": "Que el ritmo no pare", "en": "Keep the pace going" },
+        "description": { "es": "Su diseño innovador agiliza el proceso, reduce el tiempo de inactividad y mejora la productividad para trabajar más y mejor.", "en": "Its innovative design speeds up work, reduces downtime, and improves productivity so you can work more and better." },
+        "icon": "Gauge"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "kenia-plancha-termica-textil",
+    "slug": "kenia-plancha-termica-textil",
+    "name": {
+      "es": "Kenia",
+      "en": "Kenia",
+      "pt": "Kenia",
+      "it": "Kenia"
+    },
+    "description": {
+      "es": "¡Descubre la calidad y versatilidad de la plancha térmica Kenia de Beinsen para crear sus lanyards!",
+      "en": "Kenia textile heat press developed for professional personalization with comfortable handling.",
+      "pt": "Prensa térmica têxtil Kenia desenvolvida para personalização profissional.",
+      "it": "Pressa termica tessile Kenia sviluppata per personalizzazione professionale."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Enfoque profesional",
+        "Manejo cómodo",
+        "Buen equilibrio entre calidad y productividad"
+      ],
+      "en": [
+        "Professional focus",
+        "Comfortable handling",
+        "Strong quality-productivity balance"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Kenia" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo sandwich (semiautomática)" },
+      { "label": { "es": "Ángulo de apertura", "en": "Opening Angle" }, "value": "25º" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Automático" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Fija" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "100 x 25 cm" },
+      { "label": { "es": "Máximo grosor imprimible", "en": "Maximum Printable Thickness" }, "value": "20mm" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "4850W" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "90 Kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "210 x 80 x 84 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-06" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Una máquina para sublimar polivalente", "en": "A versatile sublimation machine" },
+        "description": { "es": "Con nuestra plancha térmica Kenia, diseñada especialmente para la sublimación de objetos de formas y dimensiones variadas, obtendrás resultados profesionales y duraderos.", "en": "With our Kenia heat press, specially designed for objects with varied shapes and dimensions, you get durable professional results." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Una plancha con un diseño único", "en": "A press with unique design" },
+        "description": { "es": "Con una base especial de 100 x 25 cm, la plancha Kenia te permite trabajar llaveros, placas, cintas, pulseras, bandas, corbatas y más productos.", "en": "With a special 100 x 25 cm base, Kenia lets you work on keychains, plates, ribbons, bracelets, bands, ties, and more." },
+        "icon": "Ruler"
+      },
+      {
+        "title": { "es": "Rodillo para lanyards", "en": "Lanyard roller" },
+        "description": { "es": "Hemos desarrollado un rodillo especializado para cintas que facilita la elaboración de lanyards de forma casi automática, más rápida y uniforme.", "en": "We developed a specialized ribbon roller for near-automatic lanyard production, faster and more uniform." },
+        "icon": "RotateCw"
+      },
+      {
+        "title": { "es": "Modo eco y precalentamiento", "en": "Eco mode and preheating" },
+        "description": { "es": "Incluye modo eco y precalentamiento para optimizar tiempos y consumo en la producción diaria.", "en": "Includes eco mode and preheating to optimize production time and energy usage." },
+        "icon": "Leaf"
+      },
+      {
+        "title": { "es": "Pantalla digital y programable", "en": "Digital and programmable display" },
+        "description": { "es": "La pantalla digital y el sistema programable facilitan el ajuste de parámetros para repetir trabajos con precisión.", "en": "Digital display and programmable controls simplify parameter setup for precise repeat jobs." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Resistencia duradera", "en": "Durable heating element" },
+        "description": { "es": "Su resistencia avanzada está diseñada para un rendimiento estable durante jornadas intensivas.", "en": "Its advanced heating element is designed for stable performance in intensive workflows." },
+        "icon": "Gauge"
+      },
+      {
+        "title": { "es": "Cierre manual y magnético", "en": "Manual and magnetic closure" },
+        "description": { "es": "Cierra la plancha y deja que se abra automáticamente gracias a su cierre magnético, reduciendo errores y mejorando comodidad.", "en": "Close the press and let it open automatically with magnetic closure for fewer mistakes and better comfort." },
+        "icon": "Magnet"
+      },
+      {
+        "title": { "es": "Sistema de amortiguación", "en": "Damping system" },
+        "description": { "es": "Sus dos fuertes amortiguadores ayudan a distribuir calor y presión de forma uniforme en todo el área de trabajo.", "en": "Its two strong dampers help distribute heat and pressure uniformly across the working area." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Plato inferior de calidad", "en": "High-quality lower plate" },
+        "description": { "es": "El plato inferior está cubierto con una almohadilla de silicona de alta calidad para un contacto fiable y constante.", "en": "The lower plate is covered with high-quality silicone padding for reliable, consistent contact." },
+        "icon": "ShieldCheck"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "tobago-estacion-planchado-continuo",
+    "slug": "tobago-estacion-planchado-continuo",
+    "name": {
+      "es": "Tobago",
+      "en": "Tobago",
+      "pt": "Tobago",
+      "it": "Tobago"
+    },
+    "description": {
+      "es": "La nueva estación de planchado contínuo Beinsen Tobago es toda una revolución en la personalización de camisetas. Cómo si de un eficiente ayudante se tratara, sólo tienes que alimentarlo de camisetas y ver como se apilan en la salida.",
+      "en": "The new Beinsen Tobago continuous pressing station is a revolution in T-shirt personalization. Just feed garments and watch them stack on output.",
+      "pt": "A nova estação de prensagem contínua Beinsen Tobago é uma revolução na personalização de camisetas.",
+      "it": "La nuova stazione di pressatura continua Beinsen Tobago è una rivoluzione nella personalizzazione delle magliette."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Doha-Sin-Fondo-1.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Industrial", "en": "Industrial", "pt": "Industrial", "it": "Industriale" },
+    "features": {
+      "es": [
+        "Sistema de planchado continuo para alto rendimiento",
+        "Control total de velocidad, presión y temperatura",
+        "Diseño móvil con mueble de 4 ruedas"
+      ],
+      "en": [
+        "Continuous pressing system for high throughput",
+        "Full speed, pressure, and temperature control",
+        "Mobile design with 4-wheel cabinet"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
+    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Calandra" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "Control digital móvil REX-C400" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "7.000W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "200ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "249Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "407Kg." },
+      { "label": { "es": "Tamaño de la máquina", "en": "Machine Size" }, "value": "236x110x140cm." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "183x119x163cm." },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "Mueble con 4 ruedas universales" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✓" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Electromagnética", "en": "Electromagnetic" },
+        "description": { "es": "Integra soluciones electromagnéticas para una operación continua más estable y segura.", "en": "Integrates electromagnetic solutions for more stable and safe continuous operation." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Modo manual/auto", "en": "Manual/auto mode" },
+        "description": { "es": "Alterna entre modos manual y automático para adaptar el ritmo de producción a cada necesidad.", "en": "Switch between manual and automatic modes to adapt production pace to each need." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Controlador digital", "en": "Digital controller" },
+        "description": { "es": "Controla temperaturas, velocidades y presiones de forma directa desde su controlador digital.", "en": "Control temperature, speed, and pressure directly from its digital controller." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
+        "description": { "es": "El sistema modular facilita adaptar la estación a diferentes formatos de trabajo.", "en": "Its modular system makes adapting the station to different job formats easier." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" },
+        "description": { "es": "Aumenta la seguridad del operario en jornadas largas de producción continua.", "en": "Improves operator safety in long continuous production sessions." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "La fusión perfecta entre una prensa térmica y una calandra", "en": "The perfect fusion of heat press and calender" },
+        "description": { "es": "Descubre la personalización coral gracias al sistema de planchado contínuo. Configura las temperaturas, ajusta la velocidad de desplazamiento y la presión y coge carrerilla. Di adiós a los periodos de inactividad.", "en": "Discover continuous-flow personalization with a pressing system that lets you set temperature, travel speed, and pressure while reducing downtime." },
+        "icon": "Gauge"
+      },
+      {
+        "title": { "es": "Calor por todas partes", "en": "Heat everywhere" },
+        "description": { "es": "Su sistema de resistencias dual con calefactor superior e inferior y ajuste independiente garantiza una distribución uniforme del calor para DTF y HTV.", "en": "Its dual upper/lower heater system with independent adjustment ensures even heat distribution for DTF and HTV." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Se adapta a ti", "en": "Adapts to you" },
+        "description": { "es": "Ajusta inclinación de bandeja, altura de rodillos, velocidad, presiones y temperaturas. Mueve y gira el controlador hasta 90º y desplaza la estación con su mueble con ruedas.", "en": "Adjust tray angle, roller height, speed, pressure, and temperature; move and rotate the controller up to 90º and reposition the station with its wheeled cabinet." },
+        "icon": "Move"
+      }
+    ]
+  },
+  {
+    "id": "normandia-i-plancha-termica-textil",
+    "slug": "normandia-i-plancha-termica-textil",
+    "name": {
+      "es": "Normandía I",
+      "en": "Normandia I",
+      "pt": "Normandia I",
+      "it": "Normandia I"
+    },
+    "description": {
+      "es": "¿Necesitas multiplicar tu producción sin perder un ápice de precisión? Entonces la prensa neumático doble Beinsen Normandia I es tu mejor opción. Su sistema de apertura y cierre neumáticos, su doble plato de gran tamaño y tu destreza formarán un tridente capaz de superar cualquier reto.",
+      "en": "Need to multiply production without losing precision? Beinsen Normandia I double pneumatic press is your best option.",
+      "pt": "Precisa multiplicar a produção sem perder precisão? A prensa pneumática dupla Beinsen Normandia I é a melhor opção.",
+      "it": "Hai bisogno di aumentare la produzione senza perdere precisione? La pressa pneumatica doppia Beinsen Normandia I è la scelta migliore."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Formato textil versátil",
+        "Control estable de tiempo y temperatura",
+        "Pensada para producción continua"
+      ],
+      "en": [
+        "Versatile textile format",
+        "Stable time and temperature control",
+        "Designed for continuous production"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "32mm." },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-06" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "2" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "40x50cm." },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "97Kg." },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "160Kg." },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "120x97x74cm" },
+      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "2, uno a cada lado la unidad principal" },
+      { "label": { "es": "Seguridad", "en": "Safety" }, "value": "-" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Neumática", "en": "Pneumatic" },
+        "description": { "es": "Aporta una presión constante y uniforme para personalizaciones precisas en series continuas.", "en": "Delivers constant, even pressure for precise personalization in continuous runs." },
+        "icon": "Wind"
+      },
+      {
+        "title": { "es": "Doble plato", "en": "Double plate" },
+        "description": { "es": "Su doble plato de gran tamaño multiplica el ritmo de producción sin perder precisión.", "en": "Its large double-plate setup multiplies production pace without sacrificing precision." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Controlador digital", "en": "Digital controller" },
+        "description": { "es": "Controla tiempos y temperatura de forma fácil e intuitiva con su display GY-06.", "en": "Control timing and temperature easily and intuitively with its GY-06 display." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Guías láser", "en": "Laser guides" },
+        "description": { "es": "Ajusta la cruz del láser al milímetro y evita impresiones fuera de lugar.", "en": "Set the laser crosshair with millimeter precision and avoid off-position prints." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Tan compacta como versátil", "en": "Compact yet versatile" },
+        "description": { "es": "Prensa neumática de sobremesa para camisetas, artículos deportivos, paneles fotográficos, pancartas, cojines, alfombrillas y puzzles.", "en": "Desktop pneumatic press for T-shirts, sportswear, photo panels, banners, cushions, mousepads, and puzzles." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Tan suave como delicada", "en": "Smooth and delicate" },
+        "description": { "es": "La presión vertical y la silicona de los platos consiguen estampaciones uniformes y cuidadas.", "en": "Vertical pressure and silicone platens provide uniform and well-cared transfers." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Detalles que importan", "en": "Details that matter" },
+        "description": { "es": "Incluye visor de presión, botón de emergencia, ventilador, filtro de aire y reguladores de velocidad para control total.", "en": "Includes pressure viewer, emergency button, fan, air filter, and speed regulators for full control." },
+        "icon": "Settings"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "normandia-iii-plancha-termica-textil",
+    "slug": "normandia-iii-plancha-termica-textil",
+    "name": {
+      "es": "Normandía III",
+      "en": "Normandia III",
+      "pt": "Normandia III",
+      "it": "Normandia III"
+    },
+    "description": {
+      "es": "Si eres un profesional de la sublimación, entonces sabes lo importante que es tener una plancha térmica de alta calidad que pueda sublimar una gran cantidad de productos y que se fácil de usar. Ahí es donde entra nuestra plancha Normandia III, la herramienta perfecta para tus necesidades de sublimación.",
+      "en": "Normandia III textile heat press built for advanced personalization in demanding production runs.",
+      "pt": "Prensa térmica têxtil Normandia III criada para personalização avançada em produção exigente.",
+      "it": "Pressa termica tessile Normandia III pensata per personalizzazione avanzata in produzioni impegnative."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Enfoque en productividad textil",
+        "Control preciso para trabajos continuos",
+        "Construcción robusta para uso profesional"
+      ],
+      "en": [
+        "Textile productivity focus",
+        "Precise control for continuous jobs",
+        "Robust build for professional use"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
+    "technicalSpecs": [
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Normandia III" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo neumática" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Automático" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Automático" },
+      { "label": { "es": "Tipo de base", "en": "Base Type" }, "value": "Desplazable" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "80 x 110cm" },
+      { "label": { "es": "Máximo grosor imprimible", "en": "Maximum Printable Thickness" }, "value": "65mm" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "5100W" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "370 Kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "137 x 121 x 120 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-06" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "El tamaño sí importa", "en": "Size does matter" },
+        "description": { "es": "Con su superficie de trabajo de 80 x 110 cm y potencia de 5100W, podrás sublimar desde prendas y toallas hasta bolsas, carcasas y productos de gran formato.", "en": "With its 80 x 110 cm work area and 5100W power, you can sublimate garments, towels, bags, cases, and large-format items." },
+        "icon": "Ruler"
+      },
+      {
+        "title": { "es": "Imagina y la Normandia III lo sublima", "en": "Imagine it, Normandia III sublimates it" },
+        "description": { "es": "Incluye regulador de presión para resultados consistentes, dos botones de seguridad y capacidad para sublimar objetos de hasta 65 mm de grosor.", "en": "It includes pressure regulation for consistent results, two safety buttons, and support for items up to 65 mm thick." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Donde otros fallan, Normandia III lo logra", "en": "Where others fail, Normandia III succeeds" },
+        "description": { "es": "Desde prendas de vestir hasta tableros de aluminio, no hay nada que se le resista a esta plancha térmica de uso profesional.", "en": "From garments to aluminum boards, this professional heat press handles what others cannot." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Modo eco y precalentamiento", "en": "Eco mode and preheating" },
+        "description": { "es": "Optimiza tiempos de trabajo y consumo energético con sus funciones de modo eco y precalentamiento.", "en": "Optimize workflow timing and energy usage with eco mode and preheating functions." },
+        "icon": "Leaf"
+      },
+      {
+        "title": { "es": "Pantalla digital y programable", "en": "Digital and programmable display" },
+        "description": { "es": "La pantalla digital y su configuración programable te ayudan a repetir parámetros con precisión y mantener calidad constante.", "en": "The digital display and programmable settings help repeat parameters accurately and maintain consistent quality." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Resistencia duradera", "en": "Durable heating element" },
+        "description": { "es": "Su resistencia está diseñada para soportar jornadas intensivas con estabilidad térmica y alto rendimiento.", "en": "Its heating element is built for intensive schedules with thermal stability and high output." },
+        "icon": "Gauge"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "normandia-ii-plancha-termica-textil",
+    "slug": "normandia-ii-plancha-termica-textil",
+    "name": {
+      "es": "Normandía II",
+      "en": "Normandia II",
+      "pt": "Normandia II",
+      "it": "Normandia II"
+    },
+    "description": {
+      "es": "Si eres un profesional de la sublimación, sabes lo crucial que es contar con una plancha neumática profesional de calidad superior, que pueda sublimar una amplia gama de productos de manera sencilla. Ahí es donde entra en juego nuestra plancha Normadia II, la herramienta perfecta para todas tus necesidades de sublimación.",
+      "en": "Normandia II textile heat press designed for stable personalization and consistent results.",
+      "pt": "Prensa térmica têxtil Normandia II pensada para personalização estável e resultados consistentes.",
+      "it": "Pressa termica tessile Normandia II pensata per personalizzazione stabile e risultati costanti."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Operación textil equilibrada",
+        "Control fiable de parámetros",
+        "Apta para producción diaria"
+      ],
+      "en": [
+        "Balanced textile operation",
+        "Reliable parameter control",
+        "Suitable for daily production"
+      ]
+    },
+    "accessories": [],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
+    "technicalSpecs": [
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Normandia II" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo neumática" },
+      { "label": { "es": "Compresor", "en": "Compressor" }, "value": "No incluido" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Automático" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Automático" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Fija" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "80 x 100cm" },
+      { "label": { "es": "Máximo grosor imprimible", "en": "Maximum Printable Thickness" }, "value": "65mm" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "5100W" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "480 Kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "137 x 121 x 120 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-06" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Tamaño sin limitaciones", "en": "Size without limits" },
+        "description": { "es": "Con su generosa superficie de trabajo de 80 x 100 cm podrás sublimar desde camisetas y prendas deportivas hasta toallas, bolsas y carcasas sin dificultad.", "en": "Its generous 80 x 100 cm working area lets you sublimate everything from garments to towels, bags, and cases without difficulty." },
+        "icon": "Ruler"
+      },
+      {
+        "title": { "es": "Imagínalo y la Normandia II lo sublimará", "en": "Imagine it, Normandia II sublimates it" },
+        "description": { "es": "Incluye regulador de presión y dos botones laterales de seguridad para una sublimación precisa y segura, incluso en objetos de hasta 65 mm de grosor.", "en": "Includes pressure regulation and two lateral safety buttons for precise, safe sublimation, even on items up to 65 mm thick." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Donde otros fracasan, la Normandia II triunfa", "en": "Where others fail, Normandia II succeeds" },
+        "description": { "es": "Desde prendas de vestir hasta tableros de aluminio, esta plancha está preparada para una amplia gama de aplicaciones con uso profesional.", "en": "From garments to aluminum boards, this press is built for a broad range of professional applications." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Modo eco y precalentamiento", "en": "Eco mode and preheating" },
+        "description": { "es": "Optimiza tiempos y consumo en trabajos continuos gracias al modo eco y la función de precalentamiento.", "en": "Optimize timing and consumption in continuous jobs with eco mode and preheating." },
+        "icon": "Leaf"
+      },
+      {
+        "title": { "es": "Pantalla digital y programable", "en": "Digital and programmable display" },
+        "description": { "es": "La pantalla digital y su programación te permiten repetir parámetros de trabajo con precisión.", "en": "Its digital display and programmable controls let you repeat job settings accurately." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Resistencia duradera", "en": "Durable heating element" },
+        "description": { "es": "Su resistencia está diseñada para mantener estabilidad térmica y rendimiento en jornadas exigentes.", "en": "Its heating element is designed for thermal stability and performance in demanding sessions." },
+        "icon": "Gauge"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   },
   {
     "id": "estambul-prensa-termica-para-espinilleras",
@@ -1100,7 +3272,7 @@ export const planchasData: Plancha[] = [
       "it": "Estambul pressa per parastinchi"
     },
     "description": {
-      "es": "Especializada en espinilleras, incluye 3 platos intercambiables.",
+      "es": "Con tu nueva prensa térmica para espinilleras Beinsen Estambul podrás sublimar sobre este material tan específico y especial. Tu nueva compañera incluye 3 platos base con sistema de intercambio rápido para que sea cual sea el tamaño de la espinillera puedas personalizarla.",
       "en": "Specialized in shin guards, includes 3 interchangeable plates.",
       "pt": "Especializada para caneleiras com 3 pratos.",
       "it": "Specializzata in parastinchi con 3 piatti."
@@ -1122,9 +3294,172 @@ export const planchasData: Plancha[] = [
     },
     "accessories": [],
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" }
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Giratoria" },
+      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Manual" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "–" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-04" },
+      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
+      { "label": { "es": "Memorias", "en": "Memories" }, "value": "–" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "205*171*218 mm/114*132*179 mm/97*115*115 mm" },
+      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✓" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "900W" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "21Kg" },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "25Kg" },
+      { "label": { "es": "Tamaño de la máquina", "en": "Machine Size" }, "value": "36×31,4×37,2 cm" },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "52x52x52cm" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Compacta", "en": "Compact" },
+        "description": { "es": "Llévala a todas partes y mantén un flujo de trabajo ágil en cualquier espacio de personalización.", "en": "Take it anywhere and keep an agile workflow in any personalization space." },
+        "icon": "Move"
+      },
+      {
+        "title": { "es": "Robusta", "en": "Robust" },
+        "description": { "es": "Fuerte y duradera para soportar jornadas continuas de producción con resultados fiables.", "en": "Strong and durable for continuous production sessions with reliable results." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Sencilla", "en": "Simple" },
+        "description": { "es": "Fácil de usar incluso en tus primeras personalizaciones de espinilleras.", "en": "Easy to use even in your first shin-guard personalization jobs." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "Versátil", "en": "Versatile" },
+        "description": { "es": "Incluye 3 platos para adaptarse a distintos tamaños de espinilleras.", "en": "Includes 3 plates to adapt to different shin-guard sizes." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Fácil de usar", "en": "Easy to use" },
+        "description": { "es": "La placa calefactora y los platos permiten una colocación cómoda y una transferencia del diseño profesional.", "en": "Its heating plate and platens allow comfortable placement and professional design transfer." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "No habrá espinillera que se resista", "en": "No shin guard can resist it" },
+        "description": { "es": "Puede con todo tipo de espinilleras gracias a sus 3 platos de diferentes tamaños (205*171*218 mm/114*132*179 mm/97*115*115 mm).", "en": "Handles all shin-guard types thanks to 3 platen sizes (205*171*218 mm/114*132*179 mm/97*115*115 mm)." },
+        "icon": "Target"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
+        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
+        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Verificación y ajuste de la presión.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Do not turn off the compressor immediately, the heating plate is too hot.",
+        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
+        "Keep the compressor running for a few minutes to let it cool down.",
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Pressure verification and adjustment.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
   }
 ];
+
+const DEFAULT_DISTRIBUTORS = [
+  { name: "Beinsen Direct", url: "https://beinsen.com", logo: "https://beinsen.com/wp-content/uploads/2023/02/logo-beinsen-1.png" }
+];
+
+function uniqueStrings(values: string[]): string[] {
+  return Array.from(new Set(values.filter(Boolean)));
+}
+
+function enrichPlancha(plancha: Plancha): Plancha {
+  const esName = plancha.name.es || plancha.name.en || "Beinsen";
+  const enName = plancha.name.en || plancha.name.es || "Beinsen";
+
+  const featureEs = plancha.features.es || [];
+  const featureEn = plancha.features.en || featureEs;
+
+  const defaultBenefits: Benefit[] = featureEs.slice(0, 3).map((feature, index) => ({
+    title: {
+      es: `Beneficio ${index + 1}`,
+      en: `Benefit ${index + 1}`
+    },
+    description: {
+      es: feature,
+      en: featureEn[index] || feature
+    },
+    icon: "Zap"
+  }));
+
+  const defaultTechnicalSpecs: TechnicalSpec[] = [
+    { label: { es: "Categoría", en: "Category" }, value: plancha.category },
+    { label: { es: "Sistema", en: "System" }, value: plancha.openingType || { es: "Manual", en: "Manual" } },
+    { label: { es: "Formato", en: "Format" }, value: plancha.size }
+  ];
+
+  const defaultStorySegments = [
+    {
+      title: { es: "Rendimiento profesional", en: "Professional performance" },
+      description: {
+        es: `${esName} ha sido diseñada para ofrecer resultados consistentes y alta productividad.`,
+        en: `${enName} is designed to deliver consistent results and high productivity.`
+      },
+      image: plancha.image
+    }
+  ];
+
+  const defaultMaintenanceTips = {
+    es: [
+      "Limpia la superficie del plato después de cada jornada de trabajo.",
+      "Verifica periódicamente presión, temperatura y estado del cableado."
+    ],
+    en: [
+      "Clean the platen surface after each working day.",
+      "Periodically verify pressure, temperature and wiring condition."
+    ]
+  };
+
+  const defaultHotspots: Hotspot[] = [
+    {
+      x: 50,
+      y: 50,
+      title: { es: "Zona de trabajo", en: "Work area" },
+      description: {
+        es: "Componente principal optimizado para transferencias uniformes y seguras.",
+        en: "Main component optimized for uniform and safe transfers."
+      }
+    }
+  ];
+
+  const defaultDownloads = [
+    {
+      label: { es: "Ficha Técnica", en: "Technical Sheet" },
+      url: `/downloads/${plancha.slug}.pdf`
+    }
+  ];
+
+  return {
+    ...plancha,
+    gallery: uniqueStrings([plancha.image, ...(plancha.gallery || [])]),
+    technicalSpecs: plancha.technicalSpecs && plancha.technicalSpecs.length > 0 ? plancha.technicalSpecs : defaultTechnicalSpecs,
+    benefits: plancha.benefits && plancha.benefits.length > 0 ? plancha.benefits : defaultBenefits,
+    hotspots: plancha.hotspots && plancha.hotspots.length > 0 ? plancha.hotspots : defaultHotspots,
+    hotspotImage: plancha.hotspotImage || plancha.image,
+    downloads: plancha.downloads && plancha.downloads.length > 0 ? plancha.downloads : defaultDownloads,
+    storySegments: plancha.storySegments && plancha.storySegments.length > 0 ? plancha.storySegments : defaultStorySegments,
+    maintenanceTips: plancha.maintenanceTips || defaultMaintenanceTips,
+    distributors: plancha.distributors && plancha.distributors.length > 0 ? plancha.distributors : DEFAULT_DISTRIBUTORS
+  };
+}
+
+export const planchasData: Plancha[] = rawPlanchasData.map(enrichPlancha);
 export const allAccessoriesData: Accessory[] = [
   {
     id: "mesa-trinidad",
