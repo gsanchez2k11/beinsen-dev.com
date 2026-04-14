@@ -10,13 +10,15 @@ interface ContactSpecialistButtonProps {
     className?: string;
     variant?: "default" | "outline" | "secondary" | "ghost" | "link";
     size?: "default" | "sm" | "lg" | "icon";
+    panelPosition?: "above" | "below";
 }
 
 export function ContactSpecialistButton({
     productName,
     className = "",
     variant = "default",
-    size = "lg"
+    size = "lg",
+    panelPosition = "above"
 }: ContactSpecialistButtonProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -75,11 +77,11 @@ export function ContactSpecialistButton({
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.96, y: 10 }}
+                        initial={{ opacity: 0, scale: 0.96, y: panelPosition === "above" ? 10 : -10 }}
                         animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.96, y: 10 }}
+                        exit={{ opacity: 0, scale: 0.96, y: panelPosition === "above" ? 10 : -10 }}
                         transition={{ type: "spring", duration: 0.35 }}
-                        className="absolute bottom-[calc(100%+12px)] left-1/2 z-[120] w-[min(92vw,28rem)] -translate-x-1/2 rounded-3xl border border-border bg-card p-6 shadow-2xl overflow-hidden"
+                        className={`absolute left-1/2 z-[120] w-[min(92vw,28rem)] -translate-x-1/2 rounded-3xl border border-border bg-card p-6 shadow-2xl overflow-hidden ${panelPosition === "above" ? "bottom-[calc(100%+12px)]" : "top-[calc(100%+12px)]"}`}
                     >
                         <div className="absolute top-0 right-0 w-24 h-24 bg-[#FF6600]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
 

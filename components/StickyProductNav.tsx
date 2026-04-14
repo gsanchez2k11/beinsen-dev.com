@@ -68,7 +68,7 @@ export function StickyProductNav({ productName, price }: StickyProductNavProps) 
                                 )}
                             </span>
                             <div className="scale-90 md:scale-100 origin-right">
-                                <ContactSpecialistButton productName={localizedName || ""} />
+                                <ContactSpecialistButton productName={localizedName || ""} panelPosition="below" />
                             </div>
                         </div>
                     </div>

@@ -922,7 +922,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "Ferramentas essenciais para personalizar os seus bonés.",
       "it": "Strumenti essenziali per personalizzare i tuoi cappelli."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2023/02/screenshotAtUploadCC_1574853026382-removebg-preview.png",
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Riad-Sin-Fondo-1024x1024.png",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {

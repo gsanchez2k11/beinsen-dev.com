@@ -257,7 +257,7 @@ export default function Home() {
                                         fill 
                                         className="object-cover opacity-50 group-hover:scale-110 group-hover:opacity-80 transition-all duration-1000 grayscale group-hover:grayscale-0"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
                                     
                                     <div className="relative z-10">
                                         <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white mb-6 group-hover:bg-[#FF6600] group-hover:border-[#FF6600] transition-all duration-500">
