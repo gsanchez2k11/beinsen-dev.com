@@ -1,5 +1,6 @@
 "use client";
 
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +16,7 @@ interface CatalogProductCardProps {
     onClick?: () => void;
 }
 
-export function CatalogProductCard({ item, locale, index, isFeatureCard, onClick }: CatalogProductCardProps) {
+export const CatalogProductCard = memo(function CatalogProductCard({ item, locale, index, isFeatureCard, onClick }: CatalogProductCardProps) {
     const name = getLocalized(item.name, locale);
     const desc = getLocalized(item.description, locale);
     const category = getLocalized(item.category, locale);
@@ -32,11 +33,10 @@ export function CatalogProductCard({ item, locale, index, isFeatureCard, onClick
 
     return (
         <motion.div
-            layout
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
+            exit={{ opacity: 0, scale: 0.98 }}
+            transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.3), ease: "easeOut" }}
             className={`group h-full ${isFeatureCard ? 'md:col-span-2' : ''}`}
             onClick={onClick}
         >
@@ -132,4 +132,5 @@ export function CatalogProductCard({ item, locale, index, isFeatureCard, onClick
             </Link>
         </motion.div>
     );
-}
+});
+
