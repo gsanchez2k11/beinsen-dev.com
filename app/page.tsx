@@ -226,7 +226,7 @@ export default function Home() {
                         {[
                             { 
                                 title: d.categories.machines, 
-                                link: "/planchas", 
+                                link: "/planchas?type=planchas", 
                                 img: "https://images.unsplash.com/photo-1590249257692-a162df94afff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                                 icon: Settings,
                                 tag: "High Production"
