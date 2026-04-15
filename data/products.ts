@@ -9,8 +9,16 @@ export interface CompatibleItem {
   description?: Localized<string> | string;
 }
 
-export interface Accessory extends CompatibleItem { }
-export interface Consumable extends CompatibleItem { }
+export interface Accessory extends CompatibleItem {
+  slug?: string;
+  technicalSpecs?: TechnicalSpec[];
+  gallery?: string[];
+}
+export interface Consumable extends CompatibleItem {
+  slug?: string;
+  technicalSpecs?: TechnicalSpec[];
+  gallery?: string[];
+}
 
 export interface TechnicalSpec {
   label: Localized<string> | string;
