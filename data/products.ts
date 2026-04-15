@@ -3735,8 +3735,14 @@ function enrichPlancha(plancha: Plancha): Plancha {
   };
 }
 
-export const planchasData: Plancha[] = rawPlanchasData.map(enrichPlancha);
-export const allAccessoriesData: Accessory[] = [
+const getSortName = (item: any) => {
+  const name = typeof item.name === 'object' ? (item.name.es || item.name.en || "") : (item.name || "");
+  return name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+};
+
+export const planchasData: Plancha[] = rawPlanchasData.map(enrichPlancha).sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
+
+const rawAccessoriesData: Accessory[] = [
   {
     id: "mesa-trinidad",
     slug: "mesa-industrial-pro",
@@ -5296,8 +5302,10 @@ export const allAccessoriesData: Accessory[] = [
     ]
   }
 ];
+export const allAccessoriesData: Accessory[] = [...rawAccessoriesData].sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
 
-export const allConsumablesData: Consumable[] = [
+
+const rawConsumablesData: Consumable[] = [
   {
     id: "teflon-40x50",
     slug: "lamina-teflon-40x50",
@@ -5323,3 +5331,5 @@ export const allConsumablesData: Consumable[] = [
     description: { es: "Elimina residuos del plato calentador.", en: "Removes residues from the heating plate." }
   }
 ];
+export const allConsumablesData: Consumable[] = [...rawConsumablesData].sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
+
