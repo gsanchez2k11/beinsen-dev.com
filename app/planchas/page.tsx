@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { planchasData, allAccessoriesData, allConsumablesData, Locale } from "@/data/products";
 import { ArrowUpRight, Maximize2, Tag, Zap, Search, Settings2, X, Package, Filter, SlidersHorizontal, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
+import { useSearchParams, useRouter } from "next/navigation";
 
 const CATEGORIES = ["Todas", "Textil", "Tazas y Botellas", "Gorras", "Especializadas", "Multifunción"];
 const OPENING_TYPES = ["Cualquiera", "Manual", "Neumática", "Automática"];
@@ -33,16 +34,36 @@ const PLANCHAS_PRIORITY_ORDER = [
     "sore-plancha-profesional-tazas"
 ];
 
-export default function PlanchasCatalog() {
+function PlanchasCatalogContent() {
+    const router = useRouter();
     const { locale } = useLanguage();
+    const searchParams = useSearchParams();
     const [activeType, setActiveType] = useState<"all" | "planchas" | "accessories" | "consumables">("all");
     const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
     const [activeOpeningIndex, setActiveOpeningIndex] = useState(0);
     const [searchQuery, setSearchQuery] = useState("");
     const [isFilterOpen, setIsFilterOpen] = useState(false);
 
+    // Sync state with URL params
+    useEffect(() => {
+        const type = searchParams.get("type");
+        if (type && ["planchas", "accessories", "consumables"].includes(type)) {
+            setActiveType(type as any);
+        } else if (!type) {
+            setActiveType("all");
+        }
+    }, [searchParams]);
+
     const categoryLabels = CATEGORIES_LABELS[locale] || CATEGORIES_LABELS.es;
     const openingLabels = OPENING_TYPES_LABELS[locale] || OPENING_TYPES_LABELS.es;
+
+    const handleTypeChange = (type: string) => {
+        if (type === "all") {
+            router.push("/planchas", { scroll: false });
+        } else {
+            router.push(`/planchas?type=${type}`, { scroll: false });
+        }
+    };
 
     const d = {
         es: {
@@ -91,16 +112,7 @@ export default function PlanchasCatalog() {
 
     const allItems = useMemo(() => {
         // Map everything to a common item format for the list
-        const machines = planchasData
-            .map(p => ({ ...p, _type: 'planchas' }))
-            .sort((a, b) => {
-                const ia = PLANCHAS_PRIORITY_ORDER.indexOf(a.id);
-                const ib = PLANCHAS_PRIORITY_ORDER.indexOf(b.id);
-                if (ia === -1 && ib === -1) return 0;
-                if (ia === -1) return 1;
-                if (ib === -1) return -1;
-                return ia - ib;
-            });
+        const machines = planchasData.map(p => ({ ...p, _type: 'planchas' }));
         const accs = allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } }));
         const cons = allConsumablesData.map(c => ({ ...c, _type: 'consumables', category: { es: 'Consumible', en: 'Consumable' }, openingType: { es: 'Químico/Material', en: 'Chemical/Material' } }));
         
@@ -108,7 +120,7 @@ export default function PlanchasCatalog() {
     }, []);
 
     const filteredItems = useMemo(() => {
-        return allItems.filter((item: any) => {
+        const filtered = allItems.filter((item: any) => {
             const itemTypeMatches = activeType === "all" || item._type === activeType;
             
             const itemCat = typeof item.category === 'object' ? getLocalized(item.category, 'es') : item.category;
@@ -120,6 +132,13 @@ export default function PlanchasCatalog() {
             const matchesSearch = itemName.toLowerCase().includes(searchQuery.toLowerCase());
 
             return itemTypeMatches && matchesCategory && matchesOpening && matchesSearch;
+        });
+
+        // Alphabetical sort by localized name
+        return filtered.sort((a: any, b: any) => {
+            const nameA = typeof a.name === 'object' ? (getLocalized(a.name, locale) || "") : (a.name as string);
+            const nameB = typeof b.name === 'object' ? (getLocalized(b.name, locale) || "") : (b.name as string);
+            return nameA.localeCompare(nameB, locale === 'es' ? 'es' : 'en');
         });
     }, [activeType, activeCategoryIndex, activeOpeningIndex, searchQuery, locale, allItems]);
 
@@ -164,7 +183,7 @@ export default function PlanchasCatalog() {
                         ].map((t) => (
                             <button
                                 key={t.id}
-                                onClick={() => setActiveType(t.id as any)}
+                                onClick={() => handleTypeChange(t.id)}
                                 className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all whitespace-nowrap ${
                                     activeType === t.id 
                                         ? "bg-background text-[#FF6600] shadow-sm transform scale-105" 
@@ -257,7 +276,6 @@ export default function PlanchasCatalog() {
                 </div>
 
                 <motion.div 
-                    layout
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
                 >
                     <AnimatePresence mode="popLayout">
@@ -299,5 +317,17 @@ export default function PlanchasCatalog() {
                 )}
             </main>
         </div>
+    );
+}
+
+export default function PlanchasCatalog() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen bg-background flex items-center justify-center">
+                <div className="w-8 h-8 border-4 border-[#FF6600] border-t-transparent rounded-full animate-spin" />
+            </div>
+        }>
+            <PlanchasCatalogContent />
+        </Suspense>
     );
 }

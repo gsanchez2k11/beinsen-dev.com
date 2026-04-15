@@ -226,15 +226,15 @@ export default function Home() {
                         {[
                             { 
                                 title: d.categories.machines, 
-                                link: "/planchas", 
-                                img: "https://images.unsplash.com/photo-1590249257692-a162df94afff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                                link: "/planchas?type=planchas", 
+                                img: "/img/transfer.png",
                                 icon: Settings,
                                 tag: "High Production"
                             },
                             { 
                                 title: d.categories.accs, 
                                 link: "/planchas?type=accessories", 
-                                img: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                                img: "/img/accesorios.png",
                                 icon: Box,
                                 tag: "Pro Hardware"
                             },

@@ -468,8 +468,12 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {activeItems.map((item) => (
-                                    <div key={item.id} className="group p-6 rounded-[2.5rem] bg-card border border-border/50 hover:border-[#FF6600] hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all flex flex-col gap-6">
+                                {activeItems.map((item: any) => (
+                                    <Link 
+                                        key={item.id} 
+                                        href={item.slug ? `/planchas/${item.slug}` : "#"}
+                                        className="group p-6 rounded-[2.5rem] bg-card border border-border/50 hover:border-[#FF6600] hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all flex flex-col gap-6"
+                                    >
                                         <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden bg-muted">
                                             {item.image ? (
                                                 <Image 
@@ -503,12 +507,12 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                                                 <span className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-black opacity-60">
                                                     {activeTab === "accessories" ? d.certified : d.essential}
                                                 </span>
-                                                <button className="w-10 h-10 rounded-full bg-muted group-hover:bg-[#FF6600] group-hover:text-white flex items-center justify-center transition-colors">
+                                                <div className="w-10 h-10 rounded-full bg-muted group-hover:bg-[#FF6600] group-hover:text-white flex items-center justify-center transition-colors">
                                                     <ShoppingCart size={18} />
-                                                </button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))}
                             </div>
                         </ScrollReveal>

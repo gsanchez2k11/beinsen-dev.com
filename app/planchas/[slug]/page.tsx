@@ -1,18 +1,22 @@
-import { planchasData, allAccessoriesData } from "@/data/products";
+import { planchasData, allAccessoriesData, allConsumablesData } from "@/data/products";
 import { notFound } from "next/navigation";
 import { ProductDetailView } from "@/components/ProductDetailView";
 import { getLocalized } from "@/lib/i18n";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
-    return planchasData.map((plancha) => ({
-        slug: plancha.slug,
-    }));
+    const allItems = [...planchasData, ...allAccessoriesData, ...allConsumablesData];
+    return allItems
+        .filter(item => 'slug' in item && item.slug)
+        .map((item: any) => ({
+            slug: item.slug,
+        }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const resolvedParams = await params;
-    const plancha = planchasData.find((p) => p.slug === resolvedParams.slug);
+    const allItems = [...planchasData, ...allAccessoriesData, ...allConsumablesData];
+    const plancha = allItems.find((p: any) => p.slug === resolvedParams.slug);
 
     if (!plancha) {
         return {
@@ -44,7 +48,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function PlanchaDetail({ params }: { params: Promise<{ slug: string }> }) {
     const resolvedParams = await params;
-    const plancha = planchasData.find((p) => p.slug === resolvedParams.slug);
+    const allItems = [...planchasData, ...allAccessoriesData, ...allConsumablesData];
+    const plancha = allItems.find((p: any) => p.slug === resolvedParams.slug);
 
     if (!plancha) {
         notFound();
