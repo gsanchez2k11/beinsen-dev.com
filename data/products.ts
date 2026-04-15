@@ -9,25 +9,25 @@ export interface CompatibleItem {
   description?: Localized<string> | string;
 }
 
-export interface Accessory extends CompatibleItem {}
-export interface Consumable extends CompatibleItem {}
+export interface Accessory extends CompatibleItem { }
+export interface Consumable extends CompatibleItem { }
 
-export interface TechnicalSpec { 
-  label: Localized<string> | string; 
-  value: Localized<string> | string; 
+export interface TechnicalSpec {
+  label: Localized<string> | string;
+  value: Localized<string> | string;
 }
 
-export interface Benefit { 
-  title: Localized<string> | string; 
-  description: Localized<string> | string; 
-  icon: string; 
+export interface Benefit {
+  title: Localized<string> | string;
+  description: Localized<string> | string;
+  icon: string;
 }
 
-export interface Hotspot { 
-  x: number; 
-  y: number; 
-  title: Localized<string> | string; 
-  description: Localized<string> | string; 
+export interface Hotspot {
+  x: number;
+  y: number;
+  title: Localized<string> | string;
+  description: Localized<string> | string;
 }
 
 export interface Plancha {
@@ -90,7 +90,16 @@ const rawPlanchasData: Plancha[] = [
         "A special plate with ergonomic design on a rotating press for ample workspace"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -189,10 +198,14 @@ const rawPlanchasData: Plancha[] = [
         "Your Beinsen Sore professional press is not just for 5 mugs simultaneously, it's much more"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
     "consumables": [
-      { "id": "limpiador-plauto" },
-      { "id": "neopreno-base" }
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
     ],
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
@@ -290,7 +303,16 @@ const rawPlanchasData: Plancha[] = [
         "Ideal for professional plate personalization"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -375,7 +397,16 @@ const rawPlanchasData: Plancha[] = [
         "Precise digital controller for time and temperature"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -472,7 +503,16 @@ const rawPlanchasData: Plancha[] = [
         "You can use it to sublimate small objects like keychains, plates, pendants, glass etc"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -554,7 +594,15 @@ const rawPlanchasData: Plancha[] = [
         "You can easily change the pressure to customize both 11 and 15 oz mugs"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -646,7 +694,16 @@ const rawPlanchasData: Plancha[] = [
         "Precision digital control for time and temperature"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
@@ -752,7 +809,16 @@ const rawPlanchasData: Plancha[] = [
         "Interchangeable plate for different cap sizes"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
     "technicalSpecs": [
@@ -839,7 +905,16 @@ const rawPlanchasData: Plancha[] = [
         "Ideal for industrial production environments"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
@@ -937,7 +1012,16 @@ const rawPlanchasData: Plancha[] = [
         "Professional and durable results"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -1045,7 +1129,16 @@ const rawPlanchasData: Plancha[] = [
         "Easy configuration and use"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Multifunción", "en": "Multi-function", "pt": "Multifunções", "it": "Multifunzione" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -1159,10 +1252,14 @@ const rawPlanchasData: Plancha[] = [
         "Optimized design for garment placement"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
     "consumables": [
       { "id": "teflon-40x50" },
-      { "id": "neopreno-base" }
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
     ],
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
@@ -1292,7 +1389,16 @@ const rawPlanchasData: Plancha[] = [
         "Classic personalization guides"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "gallery": [
@@ -1444,7 +1550,16 @@ const rawPlanchasData: Plancha[] = [
         "Ideal for personalized mug production"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -1548,7 +1663,16 @@ const rawPlanchasData: Plancha[] = [
         "Uniform results in every cycle"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -1649,7 +1773,16 @@ const rawPlanchasData: Plancha[] = [
         "Manual pressure and temperature regulation"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
@@ -1763,7 +1896,16 @@ const rawPlanchasData: Plancha[] = [
         "Gas spring for elegant opening"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -1853,7 +1995,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "A ferramenta perfeita para começar a personalizar bonés.",
       "it": "Lo strumento perfetto per iniziare la personalizzazione dei cappelli."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2025/03/Diseno-sin-titulo-13.png",
+    "image": "https://beinsen.com/wp-content/uploads/2025/03/riad.png",
     "price": "Consultar PVP",
     "size": { "es": "Pequeño", "en": "Small", "pt": "Pequeno", "it": "Piccolo" },
     "features": {
@@ -1868,7 +2010,16 @@ const rawPlanchasData: Plancha[] = [
         "Assisted opening system"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -1973,7 +2124,16 @@ const rawPlanchasData: Plancha[] = [
         "Wheels with brakes for safe mobility"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -2120,8 +2280,8 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "distributors": [
-        { "name": "Beinsen Direct", "url": "https://beinsen.com", "logo": "https://beinsen.com/wp-content/uploads/2023/02/logo-beinsen-1.png" },
-        { "name": "Amazon Business", "url": "https://amazon.es", "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" }
+      { "name": "Beinsen Direct", "url": "https://beinsen.com", "logo": "https://beinsen.com/wp-content/uploads/2023/02/logo-beinsen-1.png" },
+      { "name": "Amazon Business", "url": "https://amazon.es", "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" }
     ]
   },
   {
@@ -2154,7 +2314,16 @@ const rawPlanchasData: Plancha[] = [
         "High energy efficiency"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
     "technicalSpecs": [
@@ -2200,7 +2369,16 @@ const rawPlanchasData: Plancha[] = [
         "Ideal for daily production"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -2289,7 +2467,16 @@ const rawPlanchasData: Plancha[] = [
         "Uniform results"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -2389,7 +2576,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Alaska pronta para produção personalizada com fluxo ágil.",
       "it": "Pressa termica tessile Alaska pronta per produzioni personalizzate con flusso agile."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "image": "https://beinsen.com/wp-content/uploads/2025/04/alaska-featured-final.png",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
@@ -2404,7 +2591,16 @@ const rawPlanchasData: Plancha[] = [
         "Adapted to multiple garments"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
     "technicalSpecs": [
@@ -2507,7 +2703,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Malvinas focada na precisão e fiabilidade de uso.",
       "it": "Pressa termica tessile Malvinas focalizzata su precisione di pressatura e affidabilità."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "image": "https://beinsen.com/wp-content/uploads/2025/04/malvinas-principal.jpg",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
@@ -2522,7 +2718,16 @@ const rawPlanchasData: Plancha[] = [
         "Designed for demanding jobs"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
     "technicalSpecs": [
@@ -2632,7 +2837,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Guyana com foco em produtividade e consistência.",
       "it": "Pressa termica tessile Guyana con focus su produttività e costanza."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "image": "https://beinsen.com/wp-content/uploads/2019/11/frontal-768x768.jpg",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
@@ -2647,7 +2852,16 @@ const rawPlanchasData: Plancha[] = [
         "Repeatable results"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
     "technicalSpecs": [
@@ -2747,7 +2961,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Kenia desenvolvida para personalização profissional.",
       "it": "Pressa termica tessile Kenia sviluppata per personalizzazione professionale."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Kenia-2-1024x1024.png",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
@@ -2762,7 +2976,16 @@ const rawPlanchasData: Plancha[] = [
         "Strong quality-productivity balance"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -2860,7 +3083,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "A nova estação de prensagem contínua Beinsen Tobago é uma revolução na personalização de camisetas.",
       "it": "La nuova stazione di pressatura continua Beinsen Tobago è una rivoluzione nella personalizzazione delle magliette."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Doha-Sin-Fondo-1.png",
+    "image": "https://beinsen.com/wp-content/uploads/2024/11/tobago2-768x768.webp",
     "price": "Consultar PVP",
     "size": { "es": "Industrial", "en": "Industrial", "pt": "Industrial", "it": "Industriale" },
     "features": {
@@ -2875,7 +3098,16 @@ const rawPlanchasData: Plancha[] = [
         "Mobile design with 4-wheel cabinet"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
     "technicalSpecs": [
@@ -2952,7 +3184,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "Precisa multiplicar a produção sem perder precisão? A prensa pneumática dupla Beinsen Normandia I é a melhor opção.",
       "it": "Hai bisogno di aumentare la produzione senza perdere precisione? La pressa pneumatica doppia Beinsen Normandia I è la scelta migliore."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "image": "https://beinsen.com/wp-content/uploads/2025/02/IMG_9570-e1738773692422-768x518.png",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
@@ -2967,7 +3199,16 @@ const rawPlanchasData: Plancha[] = [
         "Designed for continuous production"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
@@ -3066,7 +3307,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Normandia III criada para personalização avançada em produção exigente.",
       "it": "Pressa termica tessile Normandia III pensata per personalizzazione avanzata in produzioni impegnative."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "image": "https://beinsen.com/wp-content/uploads/2024/01/Normandia_2_3_-rigth.png",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
@@ -3081,7 +3322,16 @@ const rawPlanchasData: Plancha[] = [
         "Robust build for professional use"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
@@ -3171,7 +3421,7 @@ const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Normandia II pensada para personalização estável e resultados consistentes.",
       "it": "Pressa termica tessile Normandia II pensata per personalizzazione stabile e risultati costanti."
     },
-    "image": "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
+    "image": "https://beinsen.com/wp-content/uploads/2024/01/Normandia_2_3_head.png",
     "price": "Consultar PVP",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
@@ -3186,7 +3436,16 @@ const rawPlanchasData: Plancha[] = [
         "Suitable for daily production"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
@@ -3292,7 +3551,16 @@ const rawPlanchasData: Plancha[] = [
         "Easy quick-change system"
       ]
     },
-    "accessories": [],
+    "accessories": [
+      { "id": "mesa-trinidad" },
+      { "id": "laser-posicionamiento" }
+    ],
+    "consumables": [
+      { "id": "teflon-40x50" },
+      { "id": "neopreno-base" },
+      { "id": "limpiador-plato" }
+    ],
+
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -3463,6 +3731,7 @@ export const planchasData: Plancha[] = rawPlanchasData.map(enrichPlancha);
 export const allAccessoriesData: Accessory[] = [
   {
     id: "mesa-trinidad",
+    slug: "mesa-industrial-pro",
     name: { es: "Mesa Industrial Pro", en: "Pro Industrial Table" },
     price: 450,
     image: "https://beinsen.com/wp-content/uploads/2025/04/mesa_universal_para_planchas_tra.jpg",
@@ -3470,16 +3739,1560 @@ export const allAccessoriesData: Accessory[] = [
   },
   {
     id: "laser-posicionamiento",
+    slug: "laser-posicionamiento",
     name: { es: "Láser de Posicionamiento Extra", en: "Extra Positioning Laser" },
     price: 120,
     image: "https://beinsen.com/wp-content/uploads/2025/07/Sin-titulo-1000-x-1000-px-1.png",
     description: { es: "Diodo láser de alta visibilidad para repuesto.", en: "High-visibility laser diode for replacement." }
+  },
+  {
+    id: "plato-resistencia-combo-38x38",
+    slug: "plato-resistencia-combo-38x38",
+    name: {
+      es: "Plato y resistencia para planchas combo Beinsen 38x38",
+      en: "Plate and heating element for Beinsen combo 38x38 heat press",
+      pt: "Prato e resistência para prensas combo Beinsen 38x38",
+      it: "Piastra e resistenza per presse combo Beinsen 38x38"
+    },
+    price: "Consultar PVP",
+    image: "",
+    description: {
+      es: "Plato y resistencia de repuesto específicos para las planchas combo Beinsen de 38x38 cm. Garantizan un rendimiento óptimo y una distribución uniforme del calor.",
+      en: "Replacement plate and heating element specifically for Beinsen combo 38x38 cm heat presses. Ensures optimal performance and uniform heat distribution.",
+      pt: "Prato e resistência de substituição específicos para as prensas combo Beinsen de 38x38 cm.",
+      it: "Piastra e resistenza di ricambio specifiche per le presse combo Beinsen da 38x38 cm."
+    }
+  },
+  {
+    id: "almohadilla-silicona-38x38",
+    slug: "almohadilla-silicona-38x38",
+    name: {
+      es: "Almohadilla de silicona de 38x38",
+      en: "38x38 silicone pad",
+      pt: "Almofada de silicone de 38x38",
+      it: "Cuscinetto in silicone 38x38"
+    },
+    price: "Consultar PVP",
+    image: "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-61-fucn8ygl._ac_uf894_1000_ql80_.webp",
+    description: {
+      es: "Almohadilla de silicona de 38x38 cm diseñada para proteger las prendas y garantizar una presión uniforme durante el transfer. Resistente al calor hasta 220ºC con espesor de 10mm.",
+      en: "38x38 cm silicone pad designed to protect garments and ensure uniform pressure during transfer. Heat resistant up to 220ºC with 10mm thickness.",
+      pt: "Almofada de silicone de 38x38 cm para proteger as peças e garantir pressão uniforme durante a transferência. Resistente ao calor até 220ºC com 10mm de espessura.",
+      it: "Cuscinetto in silicone 38x38 cm per proteggere i capi e garantire una pressione uniforme durante il trasferimento. Resistente al calore fino a 220ºC con spessore di 10mm."
+    },
+    technicalSpecs: [
+      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Silicona de grado industrial / Industrial grade silicone" },
+      { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "38 x 38 cm" },
+      { label: { es: "Espesor", en: "Thickness", pt: "Espessura", it: "Spessore" }, value: "10 mm" },
+      { label: { es: "Temperatura máxima", en: "Maximum Temperature", pt: "Temperatura máxima", it: "Temperatura massima" }, value: "220ºC" },
+      { label: { es: "P/N", en: "P/N", pt: "P/N", it: "P/N" }, value: "PLAACCA38" }
+    ],
+    gallery: [
+      "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/a/l/almohadilla_38x38.webp",
+      "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-61-fucn8ygl._ac_uf894_1000_ql80_.webp",
+      "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/7/1/71kmkhpeqol._ac_sl1500_-removebg-preview_2.webp"
+    ]
+  },
+  {
+    id: "almohadilla-silicona-40x50-plato-base",
+    slug: "almohadilla-silicona-40x50-plato-base",
+    name: {
+      es: "Almohadilla de silicona de 40x50 cm para plato base",
+      en: "40x50 cm silicone pad for base plate",
+      pt: "Almofada de silicone de 40x50 cm para prato base",
+      it: "Cuscinetto in silicone 40x50 cm per piastra base"
+    },
+    price: "Consultar PVP",
+    image: "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/7/1/71kmkhpeqol._ac_sl1500_-removebg-preview.webp",
+    description: {
+      es: "Almohadilla de silicona de 40x50 cm especialmente diseñada para el plato base de las planchas Beinsen. Resistente al calor hasta 220ºC y con un espesor de 10mm, asegura una impresión uniforme y perfecta en cualquier prensa de calor.",
+      en: "40x50 cm silicone pad specially designed for the base plate of Beinsen heat presses. Heat resistant up to 220ºC with 10mm thickness, ensures uniform and perfect printing on any heat press.",
+      pt: "Almofada de silicone de 40x50 cm especialmente concebida para o prato base das prensas Beinsen. Resistente ao calor até 220ºC com 10mm de espessura, garante impressão uniforme e perfeita em qualquer prensa térmica.",
+      it: "Cuscinetto in silicone 40x50 cm appositamente progettato per la piastra base delle presse Beinsen. Resistente al calore fino a 220ºC con spessore di 10mm, garantisce una stampa uniforme e perfetta su qualsiasi pressa termica."
+    },
+    technicalSpecs: [
+      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Silicona de grado industrial / Industrial grade silicone" },
+      { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "40 x 50 cm" },
+      { label: { es: "Espesor", en: "Thickness", pt: "Espessura", it: "Spessore" }, value: "10 mm" },
+      { label: { es: "Temperatura máxima", en: "Maximum Temperature", pt: "Temperatura máxima", it: "Temperatura massima" }, value: "220ºC" },
+      { label: { es: "P/N", en: "P/N", pt: "P/N", it: "P/N" }, value: "PLAACCA50" }
+    ]
+  },
+  {
+    "id": "lamina-teflon-38x38",
+    "slug": "lamina-teflon-38x38",
+    "name": {
+      "es": "Lámina de teflón de 38x38 cm",
+      "en": "38x38 cm Teflon sheet",
+      "pt": "Folha de teflon de 38x38 cm",
+      "it": "Foglio di teflon 38x38 cm"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/p/t/ptfe-teflon-sheets-933-p-removebg-preview.webp",
+    "description": {
+      "es": "Lámina de teflón para proteger las planchas térmicas. Esta delgada lámina de material aislante influye más de lo que imaginamos tanto en los resultados como en la calidad de los productos sublimados y en la vida útil de las planchas térmicas.",
+      "en": "Teflon sheet to protect heat plates. This thin insulating material has more impact than we imagine on results, quality of sublimated products and lifespan of heat plates.",
+      "pt": "Folha de teflon para proteger as planchas térmicas. Esta fina lâmina de material isolante influencia mais do que imaginamos nos resultados, na qualidade dos produtos sublimados e na vida útil das planchas térmicas.",
+      "it": "Foglio di teflon per proteggere le piastre termiche. Questo sottile materiale isolante ha più impatto di quanto immaginiamo sui risultati, sulla qualità dei prodotti sublimati e sulla durata delle piastre termiche."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Lámina de teflón PTFE / PTFE Teflon sheet" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)" },
+      { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Proteger planchas y prendas / Protect plates and garments" },
+      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BTEFL155" }
+    ]
+  },
+  {
+    "id": "lamina-teflon-40x50",
+    "slug": "lamina-teflon-40x50",
+    "name": {
+      "es": "Lámina de teflón de 40x50 cm",
+      "en": "40x50 cm Teflon sheet",
+      "pt": "Folha de teflon de 40x50 cm",
+      "it": "Foglio di teflon 40x50 cm"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-laminad_de_teflon.webp",
+    "description": {
+      "es": "Lámina de teflón para proteger las planchas térmicas. Esta delgada lámina de material aislante influye más de lo que imaginamos tanto en los resultados como en la calidad de los productos sublimados y en la vida útil de las planchas térmicas.",
+      "en": "Teflon sheet to protect heat plates. This thin insulating material has more impact than we imagine on results, quality of sublimated products and lifespan of heat plates.",
+      "pt": "Folha de teflon para proteger as planchas térmicas. Esta fina lâmina de material isolante influencia mais do que imaginamos nos resultados, na qualidade dos produtos sublimados e na vida útil das planchas térmicas.",
+      "it": "Foglio di teflon per proteggere le piastre termiche. Questo sottile materiale isolante ha più impatto di quanto immaginiamo sui risultati, sulla qualità dei prodotti sublimati e sulla durata delle piastre termiche."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Lámina de teflón PTFE / PTFE Teflon sheet" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)" },
+      { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Proteger planchas y prendas / Protect plates and garments" },
+      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BTEFL156" }
+    ]
+  },
+  {
+    "id": "resistencia-tazas-11oz-b",
+    "slug": "resistencia-tazas-11oz-b",
+    "name": {
+      "es": "Resistencia cilíndrica para tazas de 11oz tipo B",
+      "en": "Cylindrical heating element for 11oz mugs type B",
+      "pt": "Resistência cilíndrica para canecas de 11oz tipo B",
+      "it": "Resistenza cilindrica per tazze da 11oz tipo B"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Resistencia de repuesto para tazas estándar de 11oz, conector tipo B.",
+      "en": "Replacement heating element for standard 11oz mugs, type B connector.",
+      "pt": "Resistência de substituição para canecas padrão de 11oz, conector tipo B.",
+      "it": "Resistenza di ricambio per tazze standard da 11oz, connettore tipo B."
+    }
+  },
+  {
+    "id": "resistencia-tazas-6-10oz",
+    "slug": "resistencia-tazas-6-10oz",
+    "name": {
+      "es": "Resistencia cilíndrica para tazas de 6-10oz",
+      "en": "Cylindrical heating element for 6-10oz mugs",
+      "pt": "Resistência cilíndrica para canecas de 6-10oz",
+      "it": "Resistenza cilindrica per tazze da 6-10oz"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Resistencia para tazas de pequeño diámetro y botes.",
+      "en": "Heating element for small diameter mugs and bottles.",
+      "pt": "Resistência para canecas de pequeno diâmetro e garrafas.",
+      "it": "Resistenza per tazze di piccolo diametro e bottiglie."
+    }
+  },
+  {
+    "id": "resistencia-tazas-11oz-a",
+    "slug": "resistencia-tazas-11oz-a",
+    "name": {
+      "es": "Resistencia cilíndrica para tazas de 11oz tipo A",
+      "en": "Cylindrical heating element for 11oz mugs type A",
+      "pt": "Resistência cilíndrica para canecas de 11oz tipo A",
+      "it": "Resistenza cilindrica per tazze da 11oz tipo A"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Resistencia de repuesto para tazas estándar de 11oz, conector tipo A.",
+      "en": "Replacement heating element for standard 11oz mugs, type A connector.",
+      "pt": "Resistência de substituição para canecas padrão de 11oz, conector tipo A.",
+      "it": "Resistenza di ricambio per tazze standard da 11oz, connettore tipo A."
+    }
+  },
+  {
+    "id": "resistencia-tazas-conicas-17oz",
+    "slug": "resistencia-tazas-conicas-17oz",
+    "name": {
+      "es": "Resistencia para tazas Cónicas de 17oz",
+      "en": "17oz Conical mug heating element",
+      "pt": "Resistência para canecas cónicas de 17oz",
+      "it": "Resistenza per tazze coniche da 17oz"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Específica para tazas cónicas grandes de estilo latte.",
+      "en": "Specific for large latte-style conical mugs.",
+      "pt": "Específica para canecas cónicas grandes estilo latte.",
+      "it": "Specifica per tazze coniche grandi stile latte."
+    }
+  },
+  {
+    "id": "resistencia-doble-taza-11-15oz",
+    "slug": "resistencia-doble-taza-11-15oz",
+    "name": {
+      "es": "Resistencia cilíndrica para 2 tazas de 11oz-15oz",
+      "en": "Cylindrical heating element for 2 mugs 11oz-15oz",
+      "pt": "Resistência cilíndrica para 2 canecas de 11oz-15oz",
+      "it": "Resistenza cilindrica per 2 tazze 11oz-15oz"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Permite la producción simultánea de dos tazas de gran tamaño.",
+      "en": "Allows simultaneous production of two large mugs.",
+      "pt": "Permite a produção simultânea de duas canecas grandes.",
+      "it": "Consente la produzione simultanea di due tazze di grandi dimensioni."
+    }
+  },
+  {
+    "id": "plato-gorras-beinsen-riad",
+    "slug": "plato-gorras-beinsen-riad",
+    "name": {
+      "es": "Plato para gorras para Beinsen Riad",
+      "en": "Cap plate for Beinsen Riad",
+      "pt": "Prato para bonés para Beinsen Riad",
+      "it": "Piastra per cappellini per Beinsen Riad"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Accesorio de plato inferior para la personalización de gorras.",
+      "en": "Lower plate accessory for cap customization.",
+      "pt": "Acessório de prato inferior para personalização de bonés.",
+      "it": "Accessorio piastra inferiore per la personalizzazione dei cappellini."
+    }
+  },
+  {
+    "id": "resistencia-15x20-beinsen-riad",
+    "slug": "resistencia-15x20-beinsen-riad",
+    "name": {
+      "es": "Resistencia de 15x20cm para plancha Beinsen Riad",
+      "en": "15x20cm heating element for Beinsen Riad press",
+      "pt": "Resistência de 15x20cm para prensa Beinsen Riad",
+      "it": "Resistenza 15x20cm per pressa Beinsen Riad"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Plato de calor de formato pequeño para etiquetas o logos.",
+      "en": "Small format heat plate for labels or logos.",
+      "pt": "Prato de calor de formato pequeno para etiquetas ou logótipos.",
+      "it": "Piastra riscaldante di piccolo formato per etichette o loghi."
+    }
+  },
+  {
+    "id": "resistencia-gorras-beinsen-riad",
+    "slug": "resistencia-gorras-beinsen-riad",
+    "name": {
+      "es": "Resistencia para gorras para Beinsen Riad",
+      "en": "Cap heating element for Beinsen Riad",
+      "pt": "Resistência para bonés para Beinsen Riad",
+      "it": "Resistenza per cappellini per Beinsen Riad"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Resistencia superior curva para el modelo Riad.",
+      "en": "Curved upper heating element for the Riad model.",
+      "pt": "Resistência superior curva para o modelo Riad.",
+      "it": "Resistenza superiore curva per il modello Riad."
+    }
+  },
+  {
+    "id": "plato-gorras-beinsen-obrei",
+    "slug": "plato-gorras-beinsen-obrei",
+    "name": {
+      "es": "Plato para gorras para Beinsen Obrei",
+      "en": "Cap plate for Beinsen Obrei",
+      "pt": "Prato para bonés para Beinsen Obrei",
+      "it": "Piastra per cappellini per Beinsen Obrei"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Accesorio compatible con el sistema Obrei.",
+      "en": "Accessory compatible with the Obrei system.",
+      "pt": "Acessório compatível com o sistema Obrei.",
+      "it": "Accessorio compatibile con il sistema Obrei."
+    }
+  },
+  {
+    "id": "resistencia-gorras-combo-beinsen",
+    "slug": "resistencia-gorras-combo-beinsen",
+    "name": {
+      "es": "Resistencia para gorras para plancha combo Beinsen",
+      "en": "Cap heating element for Beinsen combo press",
+      "pt": "Resistência para bonés para prensa combo Beinsen",
+      "it": "Resistenza per cappellini per pressa combo Beinsen"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Resistencia universal para modelos combo de Beinsen.",
+      "en": "Universal heating element for Beinsen combo models.",
+      "pt": "Resistência universal para modelos combo Beinsen.",
+      "it": "Resistenza universale per modelli combo Beinsen."
+    }
+  },
+  {
+    "id": "resistencia-gorras-beinsen-obrei",
+    "slug": "resistencia-gorras-beinsen-obrei",
+    "name": {
+      "es": "Resistencia para gorras para plancha Beinsen Obrei",
+      "en": "Cap heating element for Beinsen Obrei press",
+      "pt": "Resistência para bonés para prensa Beinsen Obrei",
+      "it": "Resistenza per cappellini per pressa Beinsen Obrei"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Repuesto de calor superior para gorras en modelo Obrei.",
+      "en": "Upper heat replacement for caps on Obrei model.",
+      "pt": "Substituição de calor superior para bonés no modelo Obrei.",
+      "it": "Ricambio riscaldante superiore per cappellini su modello Obrei."
+    }
+  },
+  {
+    "id": "resistencia-15x15-beinsen-obrei",
+    "slug": "resistencia-15x15-beinsen-obrei",
+    "name": {
+      "es": "Resistencia de 15x15cm para plancha Beinsen Obrei",
+      "en": "15x15cm heating element for Beinsen Obrei press",
+      "pt": "Resistência de 15x15cm para prensa Beinsen Obrei",
+      "it": "Resistenza 15x15cm per pressa Beinsen Obrei"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Plato de calor cuadrado para pequeñas transferencias.",
+      "en": "Square heat plate for small transfers.",
+      "pt": "Prato de calor quadrado para pequenas transferências.",
+      "it": "Piastra riscaldante quadrata per piccoli trasferimenti."
+    }
+  },
+  {
+    "id": "plato-15x20-beinsen-riad",
+    "slug": "plato-15x20-beinsen-riad",
+    "name": {
+      "es": "Plato de 15x20cm para Beinsen Riad",
+      "en": "15x20cm plate for Beinsen Riad",
+      "pt": "Prato de 15x20cm para Beinsen Riad",
+      "it": "Piastra 15x20cm per Beinsen Riad"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Plato inferior de soporte para el modelo Riad.",
+      "en": "Lower support plate for the Riad model.",
+      "pt": "Prato inferior de suporte para o modelo Riad.",
+      "it": "Piastra inferiore di supporto per il modello Riad."
+    }
+  },
+  {
+    "id": "plato-base-15x15-beinsen-obrei",
+    "slug": "plato-base-15x15-beinsen-obrei",
+    "name": {
+      "es": "Plato base de 15x15cm para plancha Beinsen Obrei",
+      "en": "15x15cm base plate for Beinsen Obrei press",
+      "pt": "Prato base de 15x15cm para prensa Beinsen Obrei",
+      "it": "Piastra base 15x15cm per pressa Beinsen Obrei"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Soporte inferior cuadrado de 15x15 cm.",
+      "en": "15x15 cm square lower support.",
+      "pt": "Suporte inferior quadrado de 15x15 cm.",
+      "it": "Supporto inferiore quadrato 15x15 cm."
+    }
+  },
+  {
+    "id": "plato-intercambiable-18x18-barbados",
+    "slug": "plato-intercambiable-18x18-barbados",
+    "name": {
+      "es": "Plato intercambiable de 18x18cm para Beinsen Barbados",
+      "en": "18x18cm interchangeable plate for Beinsen Barbados",
+      "pt": "Prato intercambiável de 18x18cm para Beinsen Barbados",
+      "it": "Piastra intercambiabile 18x18cm per Beinsen Barbados"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Accesorio para cambio rápido en prensa Barbados.",
+      "en": "Quick change accessory for Barbados press.",
+      "pt": "Acessório de troca rápida para prensa Barbados.",
+      "it": "Accessorio per cambio rapido su pressa Barbados."
+    }
+  },
+  {
+    "id": "plato-intercambiable-redondo-24-barbados",
+    "slug": "plato-intercambiable-redondo-24-barbados",
+    "name": {
+      "es": "Plato intercambiable redondo de 24cm para Beinsen Barbados",
+      "en": "24cm round interchangeable plate for Beinsen Barbados",
+      "pt": "Prato intercambiável redondo de 24cm para Beinsen Barbados",
+      "it": "Piastra intercambiabile tonda 24cm per Beinsen Barbados"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Plato circular ideal para platos o logos redondos.",
+      "en": "Circular plate ideal for plates or round logos.",
+      "pt": "Prato circular ideal para pratos ou logótipos redondos.",
+      "it": "Piastra circolare ideale per piatti o loghi tondi."
+    }
+  },
+  {
+    "id": "plato-intercambiable-zapatillas-barbados",
+    "slug": "plato-intercambiable-zapatillas-barbados",
+    "name": {
+      "es": "Plato intercambiable para zapatillas para Barbados",
+      "en": "Interchangeable shoe plate for Barbados",
+      "pt": "Prato intercambiável para sapatilhas para Barbados",
+      "it": "Piastra intercambiabile per scarpe per Barbados"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Diseño especial para facilitar el marcado de calzado.",
+      "en": "Special design to facilitate footwear marking.",
+      "pt": "Design especial para facilitar a marcação de calçado.",
+      "it": "Design speciale per facilitare la marcatura delle calzature."
+    }
+  },
+  {
+    "id": "plato-intercambiable-18x38-barbados",
+    "slug": "plato-intercambiable-18x38-barbados",
+    "name": {
+      "es": "Plato intercambiable de 18x38cm para Beinsen Barbados",
+      "en": "18x38cm interchangeable plate for Beinsen Barbados",
+      "pt": "Prato intercambiável de 18x38cm para Beinsen Barbados",
+      "it": "Piastra intercambiabile 18x38cm per Beinsen Barbados"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Formato alargado para mangas o perneras.",
+      "en": "Elongated format for sleeves or pant legs.",
+      "pt": "Formato alongado para mangas ou pernas de calças.",
+      "it": "Formato allungato per maniche o gambe dei pantaloni."
+    }
+  },
+  {
+    "id": "plato-intercambiable-18x45-barbados",
+    "slug": "plato-intercambiable-18x45-barbados",
+    "name": {
+      "es": "Plato intercambiable de 18x45cm para Beinsen Barbados",
+      "en": "18x45cm interchangeable plate for Beinsen Barbados",
+      "pt": "Prato intercambiável de 18x45cm para Beinsen Barbados",
+      "it": "Piastra intercambiabile 18x45cm per Beinsen Barbados"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Soporte extra largo para prendas de gran longitud.",
+      "en": "Extra long support for long garments.",
+      "pt": "Suporte extra longo para roupas compridas.",
+      "it": "Supporto extra lungo per indumenti lunghi."
+    }
+  },
+  {
+    "id": "plato-intercambiable-30x35-barbados",
+    "slug": "plato-intercambiable-30x35-barbados",
+    "name": {
+      "es": "Plato intercambiable de 30x35cm para Beinsen Barbados",
+      "en": "30x35cm interchangeable plate for Beinsen Barbados",
+      "pt": "Prato intercambiável de 30x35cm para Beinsen Barbados",
+      "it": "Piastra intercambiabile 30x35cm per Beinsen Barbados"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Formato intermedio para camisetas infantiles o sudaderas.",
+      "en": "Intermediate format for children's t-shirts or hoodies.",
+      "pt": "Formato intermédio para t-shirts infantis ou moletons.",
+      "it": "Formato intermedio per t-shirt da bambino o felpe."
+    }
+  },
+  {
+    "id": "placa-polimero-platos-horno",
+    "slug": "placa-polimero-platos-horno",
+    "name": {
+      "es": "Placa de polímero para platos de 6 a 10\" para horno",
+      "en": "Polymer plate for 6 to 10\" plates for oven",
+      "pt": "Placa de polímero para pratos de 6 a 10\" para forno",
+      "it": "Piastra in polimero per piatti da 6 a 10\" per forno"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Accesorio para sublimación de platos en hornos 3D.",
+      "en": "Accessory for plate sublimation in 3D ovens.",
+      "pt": "Acessório para sublimação de pratos em fornos 3D.",
+      "it": "Accessorio per la sublimazione di piatti in forni 3D."
+    }
+  },
+  {
+    "id": "molde-3d-silicona-platos",
+    "slug": "molde-3d-silicona-platos",
+    "name": {
+      "es": "Moldes 3D de silicona para platos en horno 3D",
+      "en": "3D silicone molds for plates in 3D oven",
+      "pt": "Moldes 3D de silicone para pratos em forno 3D",
+      "it": "Stampi 3D in silicone per piatti in forno 3D"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-molplato3d.webp",
+    "description": {
+      "es": "Moldes 3D de silicona para platos en horno 3D. Estos moldes son el accesorio que se utiliza para personalizar platos en el horno de sublimación. Mediante su utilización, podrás conseguir y garantizar que el papel de sublimación se quede firmemente sujeto, y a su vez, conseguir una impresión perfecta especialmente en los bordes con el molde cuadrado universal.",
+      "en": "3D silicone molds for plates in 3D oven. These molds are the accessory used to customize plates in the sublimation oven. By using them, you can ensure that the sublimation paper stays firmly attached and achieve a perfect print, especially at the edges with the universal square mold.",
+      "pt": "Moldes 3D de silicone para pratos em forno 3D. Esses moldes são o acessório usado para personalizar pratos no forno de sublimação. Ao usá-los, você pode garantir que o papel de sublimação fique firmemente preso e obter uma impressão perfeita, especialmente nas bordas com o molde quadrado universal.",
+      "it": "Stampi 3D in silicone per piatti in forno 3D. Questi stampi sono l'accessorio utilizzato per personalizzare i piatti nel forno di sublimazione. Utilizzandoli, puoi garantire che la carta di sublimazione rimanga saldamente fissata e ottenere una stampa perfetta, specialmente ai bordi con lo stampo quadrato universale."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Molde redondo", "en": "Round mold", "pt": "Molde redondo", "it": "Stampo rotondo" }, "value": "Hasta 21 cm de diámetro / Up to 21 cm diameter" },
+      { "label": { "es": "Molde cuadrado", "en": "Square mold", "pt": "Molde quadrado", "it": "Stampo quadrato" }, "value": "Universal para todos los tamaños de platos / Universal for all plate sizes" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Gran resistencia, tubo de enganche para vacío, fijación firmemente sujeta" },
+      { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "200ºC" },
+      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "molplato3d" }
+    ]
+  },
+  {
+    "id": "molde-3d-silicona-tazas-conicas-jarras",
+    "slug": "molde-3d-silicona-tazas-conicas-jarras",
+    "name": {
+      "es": "Molde 3D de silicona para tazas cónicas y jarras de cerveza",
+      "en": "3D silicone mold for conical mugs and beer steins",
+      "pt": "Molde 3D de silicone para canecas cónicas e canecas de cerveja",
+      "it": "Stampo 3D in silicone per tazze coniche e boccali di birra"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/3/1/31bgfw2l1dl._ac_.jpg",
+    "description": {
+      "es": "Molde 3D de silicona para tazas cónicas y jarras de cerveza de 12 y 17oz para Horno 3D. Este accesorio se utiliza para personalizar tazas cónicas y jarras de cerveza en el horno de sublimación, garantizando que el papel de sublimación se quede firmemente sujeto para una impresión perfecta. También se puede utilizar para cualquier otro tipo de tazas, incluyendo asas y partes inferiores.",
+      "en": "3D silicone mold for conical mugs and beer steins 12 and 17oz for 3D oven. This accessory is used to personalize conical mugs and beer steins in the sublimation oven, ensuring that the sublimation paper stays firmly attached for perfect printing. Can also be used for any other type of mugs, including handles and bottoms.",
+      "pt": "Molde 3D de silicone para canecas cónicas e canecas de cerveja de 12 e 17oz para Forno 3D. Este acessório é usado para personalizar canecas cónicas e canecas de cerveja no forno de sublimação, garantindo que o papel de sublimação fique firmemente preso para impressão perfeita. Também pode ser usado para qualquer outro tipo de caneca, incluindo alças e fundos.",
+      "it": "Stampo 3D in silicone per tazze coniche e boccali di birra 12 e 17oz per forno 3D. Questo accessorio viene utilizzato per personalizzare tazze coniche e boccali di birra nel forno di sublimazione, garantendo che la carta di sublimazione rimanga saldamente fissata per una stampa perfetta. Può essere utilizzato anche per qualsiasi altro tipo di tazza, inclusi manici e fondi."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "Tazas cónicas y jarras 12-17oz" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "145 x 110 x 175 mm" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento" },
+      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Personalización de tazas, asas, interiores y exteriores" },
+      { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "200ºC" },
+      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLTAZCO" }
+    ]
+  },
+  {
+    "id": "molde-3d-silicona-tazas-rectas",
+    "slug": "molde-3d-silicona-tazas-rectas",
+    "name": {
+      "es": "Molde 3D de silicona para tazas rectas",
+      "en": "3D silicone mold for straight mugs",
+      "pt": "Molde 3D de silicone para canecas retas",
+      "it": "Stampo 3D in silicone per tazze dritte"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/d/i/dise_o_sin_t_tulo_12__3.webp",
+    "description": {
+      "es": "Molde 3D de silicona para tazas rectas personalizables en Horno 3D. Este accesorio se utiliza para personalizar tazas rectas en el horno de sublimación, garantizando que el papel de sublimación se quede firmemente sujeto para una impresión perfecta. También se puede utilizar para cualquier otro tipo de tazas, incluyendo asas e interiores.",
+      "en": "3D silicone mold for straight mugs customizable in 3D oven. This accessory is used to personalize straight mugs in the sublimation oven, ensuring that the sublimation paper stays firmly attached for perfect printing. Can also be used for any other type of mugs, including handles and interiors.",
+      "pt": "Molde 3D de silicone para canecas retas personalizáveis em Forno 3D. Este acessório é usado para personalizar canecas retas no forno de sublimação, garantindo que o papel de sublimação fique firmemente preso para impressão perfeita. Também pode ser usado para qualquer outro tipo de caneca, incluindo alças e interiores.",
+      "it": "Stampo 3D in silicone per tazze dritte personalizzabili in forno 3D. Questo accessorio viene utilizzato per personalizzare tazze dritte nel forno di sublimazione, garantendo che la carta di sublimazione rimanga saldamente fissata per una stampa perfetta. Può essere utilizzato anche per qualsiasi altro tipo di tazza, inclusi manici e interni."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "17,8 cm" },
+      { "label": { "es": "Diámetro superior", "en": "Top diameter", "pt": "Diâmetro superior", "it": "Diametro superiore" }, "value": "11 cm" },
+      { "label": { "es": "Diámetro inferior", "en": "Bottom diameter", "pt": "Diâmetro inferior", "it": "Diametro inferiore" }, "value": "9 cm" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento" },
+      { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "220ºC" },
+      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLTAZRE" }
+    ]
+  },
+  {
+    "id": "molde-silicona-3-tazas-11oz",
+    "slug": "molde-silicona-3-tazas-11oz",
+    "name": {
+      "es": "Molde de silicona para 3 tazas de 11oz MJ-LH11",
+      "en": "Silicone mold for 3 mugs 11oz MJ-LH11",
+      "pt": "Molde de silicone para 3 canecas de 11oz MJ-LH11",
+      "it": "Stampo in silicone per 3 tazze da 11oz MJ-LH11"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/m/u/multipurpose-mug-clamp.front_.webp",
+    "description": {
+      "es": "Abrazadera multiusos que le permite sublimar hasta 3 tazas de 11oz a la vez, especialmente diseñada para optimizar el flujo de trabajo al transferir diseños a tazas mediante un horno 3D. Gracias a su fabricación con materiales de silicona ecológicos y su facilidad de uso, este producto permite obtener un producto final más preciso y mejorado. Proporciona un contacto más estrecho entre la taza y el papel de transferencia de sublimación al vacío, lo que garantiza un efecto de impresión impresionante.",
+      "en": "Multipurpose clamp that allows you to sublimate up to 3 mugs of 11oz at once, specially designed to optimize workflow when transferring designs to mugs using a 3D oven. Thanks to its manufacture with ecological silicone materials and ease of use, this product allows you to obtain a more precise and improved final product. Provides closer contact between the mug and the sublimation transfer paper under vacuum, guaranteeing an impressive printing effect.",
+      "pt": "Grampo multiuso que permite sublimar até 3 canecas de 11oz de uma só vez, especialmente projetado para otimizar o fluxo de trabalho ao transferir designs para canecas usando um forno 3D. Graças à sua fabricação com materiais de silicone ecológicos e facilidade de uso, este produto permite obter um produto final mais preciso e melhorado. Proporciona contato mais próximo entre a caneca e o papel de transferência de sublimação sob vácuo, garantindo um efeito de impressão impressionante.",
+      "it": "Morsetto multipurpose che consente di sublimare fino a 3 tazze da 11oz contemporaneamente, appositamente progettato per ottimizzare il flusso di lavoro nel trasferimento di design su tazze utilizzando un forno 3D. Grazie alla sua realizzazione con materiali in silicone ecologico e facilità d'uso, questo prodotto consente di ottenere un prodotto finale più preciso e migliorato. Fornisce un contatto più stretto tra la tazza e la carta per il trasferimento di sublimazione sottovuoto, garantendo un effetto di stampa impressionante."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "Hasta 3 tazas de 11oz / Up to 3 mugs 11oz" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona ecológica de alta calidad / High quality ecological silicone" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Botellas 200/300/400ml, tazas 11oz, huchas 11oz" },
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Resistente a altas temperaturas, respetuoso con el medio ambiente, fácil de usar" },
+      { "label": { "es": "Uso recomendado", "en": "Recommended use", "pt": "Uso recomendado", "it": "Uso consigliato" }, "value": "Evite usar objetos afilados. Asegúrese de fijar firmemente el papel de sublimación antes de usar." },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLTAZNR" }
+    ]
+  },
+  {
+    "id": "molde-3d-silicona-3-botellas-aluminio",
+    "slug": "molde-3d-silicona-3-botellas-aluminio",
+    "name": {
+      "es": "Molde 3D de silicona para 3 botellas de aluminio",
+      "en": "3D silicone mold for 3 aluminum bottles",
+      "pt": "Molde 3D de silicone para 3 garrafas de alumínio",
+      "it": "Stampo 3D in silicone per 3 bottiglie di alluminio"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-molvotal.webp",
+    "description": {
+      "es": "Molde de transferencia térmica con abrazadera multiusos para horno 3D. Permite sublimar hasta 3 botellas de aluminio a la vez, optimizando el flujo de trabajo. Proporciona un contacto más estrecho entre la botella y el papel de transferencia de sublimación al vacío, garantizando un efecto de impresión impresionante.",
+      "en": "Heat transfer mold with multi-purpose clamp for 3D oven. Allows you to sublimate up to 3 aluminum bottles at once, optimizing workflow. Provides closer contact between the bottle and sublimation transfer paper under vacuum, guaranteeing stunning print effects.",
+      "pt": "Molde de transferência térmica com grampo multiusos para forno 3D. Permite sublimar até 3 garrafas de alumínio por vez, otimizando o fluxo de trabalho. Oferece contato mais próximo entre a garrafa e o papel de transferência de sublimação a vácuo, garantindo efeitos de impressão impressionantes.",
+      "it": "Stampo di trasferimento termico con morsa multiuso per forno 3D. Consente di sublimare fino a 3 bottiglie di alluminio contemporaneamente, ottimizzando il flusso di lavoro. Fornisce un contatto più stretto tra la bottiglia e la carta di trasferimento per sublimazione sottovuoto, garantendo effetti di stampa straordinari."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "3 botellas / 3 bottles" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Botellas de aluminio 400/500/600/750ml" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona ecológica / Eco-friendly silicone" },
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Resistente a altas temperaturas, fácil de usar" },
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Abrazadera multiusos / Multi-purpose clamp" },
+      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Horno 3D sublimación de botellas" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLVOTAL" }
+    ]
+  },
+  {
+    "id": "moldes-3d-silicona-platos-horno-3d",
+    "slug": "moldes-3d-silicona-platos-horno-3d",
+    "name": {
+      "es": "Moldes 3D de silicona para platos en horno 3D",
+      "en": "3D silicone molds for plates in 3D oven",
+      "pt": "Moldes 3D de silicone para pratos em forno 3D",
+      "it": "Stampi 3D in silicone per piatti in forno 3D"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Kit de moldes para la producción de platos en serie.",
+      "en": "Mold kit for mass production of plates.",
+      "pt": "Kit de moldes para produção de pratos em massa.",
+      "it": "Kit di stampi per la produzione di piatti in serie."
+    }
+  },
+  {
+    "id": "resistencia-platos-6-1-gen",
+    "slug": "resistencia-platos-6-1-gen",
+    "name": {
+      "es": "Resistencia para platos 6\" - 1ª Generación",
+      "en": "Heating element for 6\" plates - 1st Generation",
+      "pt": "Resistência para pratos 6\" - 1ª Geração",
+      "it": "Resistenza per piatti 6\" - 1ª Generazione"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Resistencia clásica para platos pequeños de 15 cm.",
+      "en": "Classic heating element for small 15 cm plates.",
+      "pt": "Resistência clássica para pratos pequenos de 15 cm.",
+      "it": "Resistenza classica per piatti piccoli da 15 cm."
+    }
+  },
+  {
+    "id": "resistencia-platos-5-dorian",
+    "slug": "resistencia-platos-5-dorian",
+    "name": {
+      "es": "Resistencia para Platos de 5\" Dorian",
+      "en": "5\" plate heating element for Dorian",
+      "pt": "Resistência para pratos de 5\" Dorian",
+      "it": "Resistenza per piatti da 5\" Dorian"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Específica para el modelo de prensa Dorian.",
+      "en": "Specific for the Dorian press model.",
+      "pt": "Específica para o modelo de prensa Dorian.",
+      "it": "Specifica per il modello di pressa Dorian."
+    }
+  },
+  {
+    "id": "rodillo-cintas",
+    "slug": "rodillo-cintas",
+    "name": {
+      "es": "Rodillo para Cintas",
+      "en": "Ribbon roller",
+      "pt": "Rolo para fitas",
+      "it": "Rullo per nastri"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Accesorio para el marcaje continuo de cintas y lanyards.",
+      "en": "Accessory for continuous marking of ribbons and lanyards.",
+      "pt": "Acessório para marcação contínua de fitas e lanyards.",
+      "it": "Accessorio per la marcatura continua di nastri e cordini."
+    }
+  },
+  {
+    "id": "almohadilla-algodon-80x110",
+    "slug": "almohadilla-algodon-80x110",
+    "name": {
+      "es": "Almohadilla de algodón reciclado de 80 x 110cm",
+      "en": "80 x 110cm recycled cotton pad",
+      "pt": "Almofada de algodão reciclado de 80 x 110cm",
+      "it": "Cuscinetto in cotone riciclato 80 x 110 cm"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/a/l/almohadillas-algod_n-reciclado-planchas-d2.webp",
+    "description": {
+      "es": "Alfombrilla de 80x110cm para planchas transfer de gran tamaño. Aseguran una presión uniforme durante el planchado.",
+      "en": "80x110cm pad for large format heat presses. Ensures uniform pressure during pressing.",
+      "pt": "Almofada de 80x110cm para planchas de grande formato. Garante pressão uniforme durante o prensamento.",
+      "it": "Cuscinetto 80x110cm per presse termiche di grande formato. Garantisce pressione uniforme durante la pressatura."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Algodón reciclado / Recycled Cotton / Algodão reciclado / Cotone riciclato" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "80 x 110 cm" },
+      { "label": { "es": "Grosor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "50 mm" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "ACCALR80X1" }
+    ]
+  },
+  {
+    "id": "filtro-hepa-sx8-sz1-tb",
+    "slug": "filtro-hepa-sx8-sz1-tb",
+    "name": {
+      "es": "Filtro Hepa para purificador de humos para SX8 y SZ1 TB",
+      "en": "Hepa filter for smoke purifier SX8 and SZ1 TB",
+      "pt": "Filtro Hepa para purificador de fumos para SX8 e SZ1 TB",
+      "it": "Filtro Hepa per purificatore fumi per SX8 e SZ1 TB"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/f/i/filtro-hepa-purificador-humos-ho_3__1.webp",
+    "description": {
+      "es": "El Filtro HEPA para purificador de humos para hornos DTF InkOne SX8 / SZ1 es un recambio esencial que captura eficazmente micropartículas durante el proceso de curado, garantizando un entorno limpio y seguro en la impresión DTF profesional.",
+      "en": "The HEPA filter for smoke purifier for DTF InkOne SX8 / SZ1 ovens is an essential replacement that effectively captures microparticles during the curing process, ensuring a clean and safe environment in professional DTF printing.",
+      "pt": "O Filtro HEPA para purificador de fumos para fornos DTF InkOne SX8 / SZ1 é um recambio essencial que captura eficazmente micropartículas durante o processo de cura, garantindo um ambiente limpo e seguro na impressão DTF profissional.",
+      "it": "Il Filtro HEPA per purificatore fumi per forni DTF InkOne SX8 / SZ1 è un ricambio essenziale che cattura efficacemente microparticelle durante il processo di polimerizzazione, garantendo un ambiente pulito e sicuro nella stampa DTF professionale."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "HEPA - Tamaño B (posición 2)" },
+      { "label": { "es": "Eficiencia de filtración", "en": "Filtration efficiency", "pt": "Eficiência de filtração", "it": "Efficienza di filtrazione" }, "value": "99,97 % de partículas 0,3 micras" },
+      { "label": { "es": "Mecanismo de filtrado", "en": "Filter mechanism", "pt": "Mecanismo de filtro", "it": "Meccanismo di filtrazione" }, "value": "Impacto, intercepción y difusión" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Fibras ultra finas de vidrio" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1 (tipo TB)" },
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000109P2" }
+    ]
+  },
+  {
+    "id": "filtro-hepa-sx8-sz1-ta",
+    "slug": "filtro-hepa-sx8-sz1-ta",
+    "name": {
+      "es": "Filtro Hepa para purificador de humos para SX8 y SZ1 TA",
+      "en": "Hepa filter for smoke purifier SX8 and SZ1 TA",
+      "pt": "Filtro Hepa para purificador de fumos para SX8 e SZ1 TA",
+      "it": "Filtro Hepa per purificatore fumi per SX8 e SZ1 TA"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/f/i/filtro-hepa-purificador-humos-ho_3_.webp",
+    "description": {
+      "es": "El Filtro HEPA para purificador de humos para hornos DTF InkOne SX8 / SZ1 es un recambio esencial que captura eficazmente micropartículas durante el proceso de curado, garantizando un entorno limpio y seguro en la impresión DTF profesional.",
+      "en": "The HEPA filter for smoke purifier for DTF InkOne SX8 / SZ1 ovens is an essential replacement that effectively captures microparticles during the curing process, ensuring a clean and safe environment in professional DTF printing.",
+      "pt": "O Filtro HEPA para purificador de fumos para fornos DTF InkOne SX8 / SZ1 é um recambio essencial que captura eficazmente micropartículas durante o processo de cura, garantindo um ambiente limpo e seguro na impressão DTF profissional.",
+      "it": "Il Filtro HEPA per purificatore fumi per forni DTF InkOne SX8 / SZ1 è un ricambio essenziale che cattura efficacemente microparticelle durante il processo di polimerizzazione, garantendo un ambiente pulito e sicuro nella stampa DTF professionale."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "HEPA - Tamaño A (posición 1)" },
+      { "label": { "es": "Eficiencia de filtración", "en": "Filtration efficiency", "pt": "Eficiência de filtração", "it": "Efficienza di filtrazione" }, "value": "99,97 % de partículas 0,3 micras" },
+      { "label": { "es": "Mecanismo de filtrado", "en": "Filter mechanism", "pt": "Mecanismo de filtro", "it": "Meccanismo di filtrazione" }, "value": "Impacto, intercepción y difusión" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Fibras ultra finas de vidrio" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1 (tipo TA)" },
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000109" }
+    ]
+  },
+  {
+    "id": "filtro-carbon-sx8-sz1",
+    "slug": "filtro-carbon-sx8-sz1",
+    "name": {
+      "es": "Filtro de Carbón activado para purificador de humos para SX8 y SZ1",
+      "en": "Activated carbon filter for smoke purifier SX8 and SZ1",
+      "pt": "Filtro de carvão ativado para purificador de fumos para SX8 e SZ1",
+      "it": "Filtro a carboni attivi per purificatore fumi per SX8 e SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/f/i/filtro-carbon-activado-purificad_2_.png",
+    "description": {
+      "es": "El Filtro de Carbón activado para purificador de humos para SX8 y SZ1 es un recambio esencial para mantener el aire libre de vapores, olores y residuos químicos durante el curado DTF, asegurando un entorno de trabajo más limpio, seguro y libre de contaminantes.",
+      "en": "The Activated carbon filter for smoke purifier SX8 and SZ1 is an essential replacement to keep air free from vapors, odors and chemical residues during DTF curing, ensuring a cleaner, safer and contaminant-free work environment.",
+      "pt": "O Filtro de carvão ativado para purificador de fumos para SX8 e SZ1 é um recambio essencial para manter o ar livre de vapores, odores e resíduos químicos durante a cura DTF, garantindo um ambiente de trabalho mais limpo, seguro e livre de contaminantes.",
+      "it": "Il Filtro a carboni attivi per purificatore fumi per SX8 e SZ1 è un ricambio essenziale per mantenere l'aria libera da vapori, odori e residui chimici durante la polimerizzazione DTF, garantendo un ambiente di lavoro più pulito, sicuro e privo di contaminanti."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de filtrado", "en": "Filter type", "pt": "Tipo de filtro", "it": "Tipo di filtro" }, "value": "Carbón activado / Activated carbon" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 y SZ1 / InkOne SX8 and SZ1" },
+      { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Elimina vapores, olores y residuos químicos / Removes vapors, odors and chemical residues" },
+      { "label": { "es": "Intervalo de reemplazo", "en": "Replacement interval", "pt": "Intervalo de substituição", "it": "Intervallo di sostituzione" }, "value": "Cada 6 meses (uso continuo) / Every 6 months (continuous use)" },
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin mantenimiento / Easy replacement without maintenance" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000110" }
+    ]
+  },
+  {
+    "id": "cojinete-f6904rs-sx8-sz1",
+    "slug": "cojinete-f6904rs-sx8-sz1",
+    "name": {
+      "es": "Cojinete de borde F6904RS para horno y aplicador DTF InkOne SX8 y SZ1",
+      "en": "F6904RS flange bearing for DTF InkOne SX8 and SZ1 oven",
+      "pt": "Rolamento de flange F6904RS para forno DTF InkOne SX8 e SZ1",
+      "it": "Cuscinetto flangiato F6904RS per forno DTF InkOne SX8 e SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/o/cojinete-borde-f6901rs-horno-apl_3__1.webp",
+    "description": {
+      "es": "El Cojinete de borde F6904RS para horno y aplicador DTF InkOne SX8 y SZ1 es un recambio de alta precisión usado en ejes de guiado y en la cinta transportadora del horno, garantizando estabilidad térmica y movimiento suave del film. Su doble sellado 2RS lo protege del polvo, la humedad y los residuos del curado.",
+      "en": "The F6904RS flange bearing for DTF InkOne SX8 and SZ1 oven is a high-precision replacement used in guide shafts and conveyor belts, ensuring thermal stability and smooth film movement. Its double 2RS seal protects against dust, moisture and curing residues.",
+      "pt": "O Rolamento de flange F6904RS para forno DTF InkOne SX8 e SZ1 é um recambio de alta precisão usado em eixos de guia e na correia transportadora do forno, garantindo estabilidade térmica e movimento suave do filme. Seu duplo selo 2RS protege contra poeira, umidade e resíduos de cura.",
+      "it": "Il Cuscinetto flangiato F6904RS per forno DTF InkOne SX8 e SZ1 è un ricambio di alta precisione utilizzato negli assi di guida e nei nastri trasportatori del forno, garantendo stabilità termica e movimento morbido del film. La sua doppia guarnizione 2RS protegge da polvere, umidità e residui di polimerizzazione."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Diámetro interior", "en": "Inner diameter", "pt": "Diâmetro interno", "it": "Diametro interno" }, "value": "20 mm" },
+      { "label": { "es": "Diámetro exterior", "en": "Outer diameter", "pt": "Diâmetro externo", "it": "Diametro esterno" }, "value": "37 mm" },
+      { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "9 mm" },
+      { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble 2RS / Double 2RS" },
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Rodamiento con brida / Flange bearing" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000164" }
+    ]
+  },
+  {
+    "id": "cojinete-f6901rs-sx8-sz1",
+    "slug": "cojinete-f6901rs-sx8-sz1",
+    "name": {
+      "es": "Cojinete de borde F6901RS para horno y aplicador DTF InkOne SX8 y SZ1",
+      "en": "F6901RS flange bearing for DTF InkOne SX8 and SZ1 oven",
+      "pt": "Rolamento de flange F6901RS para forno DTF InkOne SX8 e SZ1",
+      "it": "Cuscinetto flangiato F6901RS per forno DTF InkOne SX8 e SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/o/cojinete-borde-f6901rs-horno-apl_3_.webp",
+    "description": {
+      "es": "El Cojinete de borde F6901RS para horno y aplicador DTF InkOne SX8 y SZ1 es el recambio técnico diseñado para garantizar un movimiento estable y preciso en los ejes de guiado del film. Su sellado doble RS lo protege del polvo y la humedad, asegurando un rendimiento fiable en entornos DTF exigentes.",
+      "en": "The F6901RS flange bearing for DTF InkOne SX8 and SZ1 oven is the technical replacement designed to ensure stable and precise movement in the film guide shafts. Its double RS seal protects against dust and moisture, ensuring reliable performance in demanding DTF environments.",
+      "pt": "O Rolamento de flange F6901RS para forno DTF InkOne SX8 e SZ1 é a peça de substituição técnica projetada para garantir movimento estável e preciso nos eixos de guia do filme. Seu selo duplo RS protege contra poeira e umidade, garantindo desempenho confiável em ambientes DTF exigentes.",
+      "it": "Il Cuscinetto flangiato F6901RS per forno DTF InkOne SX8 e SZ1 è il ricambio tecnico progettato per garantire un movimento stabile e preciso negli alberi di guida del film. La sua doppia guarnizione RS protegge da polvere e umidità, garantendo prestazioni affidabili in ambienti DTF impegnativi."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Diámetro interior", "en": "Inner diameter", "pt": "Diâmetro interno", "it": "Diametro interno" }, "value": "12 mm" },
+      { "label": { "es": "Diámetro exterior", "en": "Outer diameter", "pt": "Diâmetro externo", "it": "Diametro esterno" }, "value": "24 mm" },
+      { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "6 mm" },
+      { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble RS / Double RS" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000163" }
+    ]
+  },
+  {
+    "id": "fuente-alimentacion-24v-sx8-sz1-b",
+    "slug": "fuente-alimentacion-24v-sx8-sz1-b",
+    "name": {
+      "es": "Fuente de alimentación de 24 V para horno y aplicador DTF InkOne SX8 y SZ1 tipo B",
+      "en": "24V Power supply for DTF InkOne SX8 and SZ1 oven type B",
+      "pt": "Fonte de alimentação de 24V para forno DTF InkOne SX8 e SZ1 tipo B",
+      "it": "Alimentatore 24V per forno DTF InkOne SX8 e SZ1 tipo B"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/f/u/fuente-alimentacion-24v-horno-ap_4__1.webp",
+    "description": {
+      "es": "La Fuente de alimentación de 24 V para horno y aplicador DTF InkOne SX8 y SZ1 es un recambio que proporciona un suministro eléctrico estable, seguro y eficiente para los sistemas de calefacción y control del horno. Diseñada para ofrecer un rendimiento fiable y continuo, protege los componentes internos del equipo y asegura un funcionamiento sin interrupciones.",
+      "en": "The 24V Power supply for DTF InkOne SX8 and SZ1 oven is a replacement that provides stable, safe and efficient electrical power for heating and control systems. Designed to deliver reliable and continuous performance, it protects internal equipment components and ensures uninterrupted operation.",
+      "pt": "A Fonte de alimentação de 24V para forno DTF InkOne SX8 e SZ1 é um recambio que fornece uma alimentação elétrica estável, segura e eficiente para os sistemas de aquecimento e controle do forno. Projetada para fornecer desempenho confiável e contínuo, protege os componentes internos do equipamento e garante operação ininterrupta.",
+      "it": "L'Alimentatore 24V per forno DTF InkOne SX8 e SZ1 è un ricambio che fornisce un'alimentazione elettrica stabile, sicura ed efficiente per i sistemi di riscaldamento e controllo del forno. Progettato per offrire prestazioni affidabili e continue, protegge i componenti interni dell'apparecchiatura e garantisce un funzionamento ininterrotto."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Voltaje de salida", "en": "Output voltage", "pt": "Voltagem de saída", "it": "Tensione di uscita" }, "value": "24 V" },
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "B" },
+      { "label": { "es": "Protección integrada", "en": "Integrated protection", "pt": "Proteção integrada", "it": "Protezione integrata" }, "value": "Sobrecarga, sobrecalentamiento, picos de tensión" },
+      { "label": { "es": "Eficiencia energética", "en": "Energy efficiency", "pt": "Eficiência energética", "it": "Efficienza energetica" }, "value": "Alta / High" },
+      { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Carcasa metálica ventilada / Ventilated metal enclosure" },
+      { "label": { "es": "Certificación", "en": "Certification", "pt": "Certificação", "it": "Certificazione" }, "value": "CE" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000157" }
+    ]
+  },
+  {
+    "id": "fuente-alimentacion-24v-sx8-sz1",
+    "slug": "fuente-alimentacion-24v-sx8-sz1",
+    "name": {
+      "es": "Fuente de alimentación de 24 V para horno y aplicador DTF InkOne SX8 y SZ1",
+      "en": "24V Power supply for DTF InkOne SX8 and SZ1 oven",
+      "pt": "Fonte de alimentação de 24V para forno DTF InkOne SX8 e SZ1",
+      "it": "Alimentatore 24V per forno DTF InkOne SX8 e SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/f/u/fuente-alimentacion-24v-horno-ap_4_.webp",
+    "description": {
+      "es": "La Fuente de alimentación de 24 V para horno y aplicador DTF InkOne SX8 y SZ1 es un recambio que proporciona un suministro eléctrico estable, seguro y eficiente para los sistemas de calefacción y control del horno. Diseñada para ofrecer un rendimiento fiable y continuo, protege los componentes internos del equipo y asegura un funcionamiento sin interrupciones.",
+      "en": "The 24V Power supply for DTF InkOne SX8 and SZ1 oven is a replacement that provides stable, safe and efficient electrical power for heating and control systems. Designed to deliver reliable and continuous performance, it protects internal equipment components and ensures uninterrupted operation.",
+      "pt": "A Fonte de alimentação de 24V para forno DTF InkOne SX8 e SZ1 é um recambio que fornece uma alimentação elétrica estável, segura e eficiente para os sistemas de aquecimento e controle do forno. Projetada para fornecer desempenho confiável e contínuo, protege os componentes internos do equipamento e garante operação ininterrupta.",
+      "it": "L'Alimentatore 24V per forno DTF InkOne SX8 e SZ1 è un ricambio che fornisce un'alimentazione elettrica stabile, sicura ed efficiente per i sistemi di riscaldamento e controllo del forno. Progettato per offrire prestazioni affidabili e continue, protegge i componenti interni dell'apparecchiatura e garantisce un funzionamento ininterrotto."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Voltaje de salida", "en": "Output voltage", "pt": "Voltagem de saída", "it": "Tensione di uscita" }, "value": "24 V" },
+      { "label": { "es": "Protección integrada", "en": "Integrated protection", "pt": "Proteção integrada", "it": "Protezione integrata" }, "value": "Sobrecarga, sobrecalentamiento, picos de tensión" },
+      { "label": { "es": "Eficiencia energética", "en": "Energy efficiency", "pt": "Eficiência energética", "it": "Efficienza energetica" }, "value": "Alta / High" },
+      { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Carcasa metálica ventilada / Ventilated metal enclosure" },
+      { "label": { "es": "Certificación", "en": "Certification", "pt": "Certificação", "it": "Certificazione" }, "value": "CE" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución directa sin adaptaciones" }
+    ]
+  },
+  {
+    "id": "sensor-placa-calefactora-sx8-sz1",
+    "slug": "sensor-placa-calefactora-sx8-sz1",
+    "name": {
+      "es": "Sensor de la placa calefactora delantera para horno y aplicador DTF InkOne SX8 y SZ1",
+      "en": "Front heating plate sensor for DTF InkOne SX8 and SZ1 oven",
+      "pt": "Sensor da placa de aquecimento frontal para forno DTF InkOne SX8 e SZ1",
+      "it": "Sensore piastra riscaldante anteriore per forno DTF InkOne SX8 e SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Control preciso de temperatura para el precalentado.",
+      "en": "Precise temperature control for preheating.",
+      "pt": "Controle preciso de temperatura para o pré-aquecimento.",
+      "it": "Controllo preciso della temperatura per il preriscaldamento."
+    }
+  },
+  {
+    "id": "contactor-ca-220v-sx8-sz1",
+    "slug": "contactor-ca-220v-sx8-sz1",
+    "name": {
+      "es": "Contactor de CA 220 V para horno y aplicador DTF InkOne SX8 y SZ1",
+      "en": "220V AC Contactor for DTF InkOne SX8 and SZ1 oven",
+      "pt": "Contator AC 220V para forno DTF InkOne SX8 e SZ1",
+      "it": "Contattore AC 220V per forno DTF InkOne SX8 e SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/s/e/sensor-temperatura-horno-aplicad_1.webp",
+    "description": {
+      "es": "El Contactor de CA 220 V para horno y aplicador DTF InkOne SX8 y SZ1 es un recambio del sistema eléctrico de estos equipos, responsable de controlar y proteger la alimentación principal, garantizando un funcionamiento estable y seguro durante los procesos de curado DTF.",
+      "en": "The 220V AC Contactor for DTF InkOne SX8 and SZ1 oven is an electrical system replacement responsible for controlling and protecting the main power supply, ensuring stable and safe operation during DTF curing processes.",
+      "pt": "O Contator AC 220V para forno DTF InkOne SX8 e SZ1 é um recambio do sistema elétrico destes equipamentos, responsável por controlar e proteger a alimentação principal, garantindo funcionamento estável e seguro durante os processos de cura DTF.",
+      "it": "Il Contattore AC 220V per forno DTF InkOne SX8 e SZ1 è un ricambio del sistema elettrico di questi apparecchi, responsabile del controllo e della protezione dell'alimentazione principale, garantendo un funzionamento stabile e sicuro durante i processi di polimerizzazione DTF."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Interruptor diferencial / Differential switch" },
+      { "label": { "es": "Tensión nominal", "en": "Rated voltage", "pt": "Tensão nominal", "it": "Tensione nominale" }, "value": "230–400 V" },
+      { "label": { "es": "Frecuencia", "en": "Frequency", "pt": "Frequência", "it": "Frequenza" }, "value": "50 Hz" },
+      { "label": { "es": "Capacidad de corriente", "en": "Current capacity", "pt": "Capacidade de corrente", "it": "Capacità di corrente" }, "value": "40 A" },
+      { "label": { "es": "Tiempo de respuesta", "en": "Response time", "pt": "Tempo de resposta", "it": "Tempo di risposta" }, "value": "≤ 0,1 s" },
+      { "label": { "es": "Norma", "en": "Standard", "pt": "Norma", "it": "Norma" }, "value": "GB/T16917.22" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000149" }
+    ]
+  },
+  {
+    "id": "sensor-temperatura-sz1",
+    "slug": "sensor-temperatura-sz1",
+    "name": {
+      "es": "Sensor de temperatura para horno y aplicador DTF InkOne SZ1",
+      "en": "Temperature sensor for DTF InkOne SZ1 oven",
+      "pt": "Sensor de temperatura para forno DTF InkOne SZ1",
+      "it": "Sensore di temperatura per forno DTF InkOne SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Sonda de alta precisión para el control del túnel de secado.",
+      "en": "High precision probe for drying tunnel control.",
+      "pt": "Sonda de alta precisão para controle do túnel de secagem.",
+      "it": "Sonda ad alta precisione per il controllo del tunnel di essiccazione."
+    }
+  },
+  {
+    "id": "motor-deposito-polvo-sx8",
+    "slug": "motor-deposito-polvo-sx8",
+    "name": {
+      "es": "Motor del depósito del polvo DTF para horno y aplicador DTF InkOne SX8",
+      "en": "DTF powder tank motor for DTF InkOne SX8 oven",
+      "pt": "Motor do tanque de pó DTF para forno DTF InkOne SX8",
+      "it": "Motore serbatoio polvere DTF per forno DTF InkOne SX8"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/m/o/motor-deposito-polvo-dtf-horno-a_3_.webp",
+    "description": {
+      "es": "El Motor del depósito del polvo DTF para horno y aplicador DTF InkOne SX8 es una pieza de recambio del sistema de aplicación de polvo, responsable de regular la velocidad de aplicación del polvo adhesivo antes de que el film pase a la cámara de sacudida. Garantiza una dispensación constante y uniforme del polvo DTF para obtener resultados óptimos en cada impresión.",
+      "en": "The DTF powder tank motor for DTF InkOne SX8 oven is a replacement part of the powder application system, responsible for regulating the speed of adhesive powder application before the film passes to the shake chamber. Ensures constant and uniform DTF powder dispensing for optimal results in every print.",
+      "pt": "O Motor do tanque de pó DTF para forno DTF InkOne SX8 é uma peça de reposição do sistema de aplicação de pó, responsável por regular a velocidade de aplicação do pó adesivo antes do filme passar para a câmara de agitação. Garante dispensação constante e uniforme do pó DTF para resultados ótimos em cada impressão.",
+      "it": "Il Motore serbatoio polvere DTF per forno DTF InkOne SX8 è una parte di ricambio del sistema di applicazione della polvere, responsabile della regolazione della velocità di applicazione della polvere adesiva prima che il film passi nella camera di agitazione. Garantisce un'erogazione costante e uniforme della polvere DTF per risultati ottimali in ogni stampa."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Controla velocidad y flujo del polvo en el depósito de aplicación" },
+      { "label": { "es": "Rendimiento", "en": "Performance", "pt": "Desempenho", "it": "Prestazioni" }, "value": "Dispensación constante y uniforme del polvo DTF" },
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin necesidad de herramientas especiales" },
+      { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Diseño robusto fabricado para soportar uso continuo en producción DTF" },
+      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Sistema de aplicación de polvo adhesivo DTF / DTF adhesive powder application system" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000147" }
+    ]
+  },
+  {
+    "id": "rele-intermedio-24v-sz1",
+    "slug": "rele-intermedio-24v-sz1",
+    "name": {
+      "es": "Relé intermedio de 24V + base para horno y aplicador InkOne SZ1",
+      "en": "24V intermediate relay + base for InkOne SZ1 oven",
+      "pt": "Relé intermediário 24V + base para forno InkOne SZ1",
+      "it": "Relè intermedio 24V + base per forno InkOne SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Componente eléctrico de maniobra para el control del sistema.",
+      "en": "Switching electrical component for system control.",
+      "pt": "Componente elétrico de manobra para controle do sistema.",
+      "it": "Componente elettrico di manovra per il controllo del sistema."
+    }
+  },
+  {
+    "id": "rele-estado-solido-sz1",
+    "slug": "rele-estado-solido-sz1",
+    "name": {
+      "es": "Relé de estado sólido CDSSR-1DA 15DA para horno aplicador DTF InkOne SZ1",
+      "en": "CDSSR-1DA 15DA Solid state relay for DTF InkOne SZ1 oven",
+      "pt": "Relé de estado sólido CDSSR-1DA 15DA para forno DTF InkOne SZ1",
+      "it": "Relè a stato solido CDSSR-1DA 15DA per forno DTF InkOne SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Relé silencioso de alta velocidad para control térmico.",
+      "en": "High speed silent relay for thermal control.",
+      "pt": "Relé silencioso de alta velocidade para controle térmico.",
+      "it": "Relè silenzioso ad alta velocità per controllo termico."
+    }
+  },
+  {
+    "id": "rele-hornos-sx8-sz1",
+    "slug": "rele-hornos-sx8-sz1",
+    "name": {
+      "es": "Relé para hornos DTF InkOne SX8 / SZ1",
+      "en": "Relay for DTF InkOne SX8 / SZ1 ovens",
+      "pt": "Relé para fornos DTF InkOne SX8 / SZ1",
+      "it": "Relè per forni DTF InkOne SX8 / SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Repuesto eléctrico general para la gama InkOne.",
+      "en": "General electrical replacement for the InkOne range.",
+      "pt": "Substituição elétrica geral para a gama InkOne.",
+      "it": "Ricambio elettrico generale per la gamma InkOne."
+    }
+  },
+  {
+    "id": "placa-base-hornos-sx8-sz1",
+    "slug": "placa-base-hornos-sx8-sz1",
+    "name": {
+      "es": "Placa base para hornos DTF InkOne SX8 / SZ1",
+      "en": "Motherboard for DTF InkOne SX8 / SZ1 ovens",
+      "pt": "Placa principal para fornos DTF InkOne SX8 / SZ1",
+      "it": "Scheda madre per forni DTF InkOne SX8 / SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/p/l/placa-base-hornos-dtf-inkone-sx8.png",
+    "description": {
+      "es": "La Placa base para hornos DTF InkOne SX8 / SZ1 es el componente clave que gestiona todos los procesos electrónicos del horno, garantizando un funcionamiento preciso, seguro y coordinado. Asegura el control eficiente del curado, el avance del film y los sistemas de enfriamiento.",
+      "en": "The Motherboard for DTF InkOne SX8 / SZ1 ovens is the key component that manages all electronic processes of the oven, ensuring precise, safe and coordinated operation. Ensures efficient control of curing, film advancement and cooling systems.",
+      "pt": "A Placa principal para fornos DTF InkOne SX8 / SZ1 é o componente-chave que gerencia todos os processos eletrônicos do forno, garantindo operação precisa, segura e coordenada. Garante controle eficiente da cura, avanço do filme e sistemas de resfriamento.",
+      "it": "La Scheda madre per forni DTF InkOne SX8 / SZ1 è il componente chiave che gestisce tutti i processi elettronici del forno, garantendo un funzionamento preciso, sicuro e coordinato. Assicura il controllo efficiente della polimerizzazione, dell'avanzamento del film e dei sistemi di raffreddamento."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Control central del horno que coordina todas las funciones electrónicas" },
+      { "label": { "es": "Gestión del proceso", "en": "Process management", "pt": "Gestão do processo", "it": "Gestione del processo" }, "value": "Supervisa temperatura, avance del film, agitación de polvo y ventiladores de enfriamiento" },
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Estabilidad y precisión, respuesta rápida, diseño optimizado" },
+      { "label": { "es": "Rendimiento", "en": "Performance", "pt": "Desempenho", "it": "Prestazioni" }, "value": "Garantiza funcionamiento sincronizado y sin fallos en condiciones de alta exigencia" },
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla y rápida con conexión directa a sistemas integrados" },
+      { "label": { "es": "Protección", "en": "Protection", "pt": "Proteção", "it": "Protezione" }, "value": "Minimiza riesgo de fallos eléctricos con componentes de alta calidad" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 / SZ1" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000115" }
+    ]
+  },
+  {
+    "id": "pantalla-hornos-sz1",
+    "slug": "pantalla-hornos-sz1",
+    "name": {
+      "es": "Pantalla para hornos DTF InkOne SZ1",
+      "en": "Display for DTF InkOne SZ1 ovens",
+      "pt": "Ecrã para fornos DTF InkOne SZ1",
+      "it": "Display per forni DTF InkOne SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/p/a/pantalla-hornos-dtf-inkone-sx8-s.webp",
+    "description": {
+      "es": "La Pantalla para hornos DTF InkOne SZ1 es un recambio que incluye el panel táctil con la placa de control integrada. Permite gestionar con precisión todos los parámetros del horno: temperatura, velocidad, polvo, succión y más, garantizando una operación controlada y eficiente.",
+      "en": "The Display for DTF InkOne SZ1 ovens is a replacement that includes the touchscreen panel with integrated control board. Allows you to manage precisely all oven parameters: temperature, speed, powder, suction and more, ensuring controlled and efficient operation.",
+      "pt": "A Ecrã para fornos DTF InkOne SZ1 é um recambio que inclui o painel sensível ao toque com placa de controle integrada. Permite gerenciar com precisão todos os parâmetros do forno: temperatura, velocidade, pó, sucção e muito mais, garantindo operação controlada e eficiente.",
+      "it": "Il Display per forni DTF InkOne SZ1 è un ricambio che include il pannello touchscreen con scheda di controllo integrata. Consente di gestire con precisione tutti i parametri del forno: temperatura, velocità, polvere, aspirazione e altro, garantendo un funzionamento controllato ed efficiente."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo de pantalla", "en": "Display type", "pt": "Tipo de ecrã", "it": "Tipo di display" }, "value": "Panel táctil integrado / Integrated touchscreen panel" },
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Panel digital avanzado que unifica visualización y control en una única interfaz" },
+      { "label": { "es": "Parámetros controlables", "en": "Controllable parameters", "pt": "Parâmetros controláveis", "it": "Parametri controllabili" }, "value": "Temperatura, velocidad de cinta, pre-calentamiento, aplicación y agitación de polvo" },
+      { "label": { "es": "Precisión", "en": "Precision", "pt": "Precisão", "it": "Precisione" }, "value": "Alta precisión para ajustes finos y mantener calidad constante" },
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Estructura compacta con conexiones estándar para sustitución rápida y segura" },
+      { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Materiales duraderos preparados para uso intensivo en producción" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000113" }
+    ]
+  },
+  {
+    "id": "lampara-horno-sz1",
+    "slug": "lampara-horno-sz1",
+    "name": {
+      "es": "Lámpara para horno y aplicador DTF InkOne SZ1",
+      "en": "Lamp for DTF InkOne SZ1 oven",
+      "pt": "Lâmpada para forno DTF InkOne SZ1",
+      "it": "Lampada per forno DTF InkOne SZ1"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/l/a/lampara-horno-aplicador-dtf-inko.png",
+    "description": {
+      "es": "La Lámpara para horno y aplicador DTF InkOne SZ1 es un repuesto original diseñado para garantizar un calentamiento uniforme y estable en los procesos de curado del polvo de poliamida. Mantiene el rendimiento óptimo del equipo y asegura una fusión perfecta en cada impresión DTF.",
+      "en": "The Lamp for DTF InkOne SZ1 oven is an original replacement designed to ensure uniform and stable heating in polyamide powder curing processes. Maintains optimal equipment performance and ensures perfect adhesive fusion in each DTF print.",
+      "pt": "A Lâmpada para forno DTF InkOne SZ1 é um recambio original projetado para garantir aquecimento uniforme e estável nos processos de cura do pó de poliamida. Mantém o desempenho ideal do equipamento e garante fusão perfeita do adesivo em cada impressão DTF.",
+      "it": "La Lampada per forno DTF InkOne SZ1 è un ricambio originale progettato per garantire un riscaldamento uniforme e stabile nei processi di polimerizzazione della polvere di poliammide. Mantiene le prestazioni ottimali dell'apparecchiatura e garantisce una fusione perfetta dell'adesivo in ogni stampa DTF."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Calentamiento uniforme y estable / Uniform and stable heating" },
+      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Curado de polvo de poliamida DTF / DTF polyamide powder curing" },
+      { "label": { "es": "Conexión", "en": "Connection", "pt": "Conexão", "it": "Connessione" }, "value": "Cable con conector en ambos extremos / Cable with connectors at both ends" },
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución rápida sin herramientas especiales" },
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Elemento calefactor original / Original heating element" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000128" }
+    ]
+  },
+  {
+    "id": "resistencia-tazas-2-5oz",
+    "slug": "resistencia-tazas-2-5oz",
+    "name": {
+      "es": "Resistencia cilíndrica de 2.5oz para mini tazas",
+      "en": "2.5oz Cylindrical heating element for mini mugs",
+      "pt": "Resistência cilíndrica de 2.5oz para mini canecas",
+      "it": "Resistenza cilindrica da 2.5oz per mini tazze"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Ideal para tazas de café espresso o chupitos rectos.",
+      "en": "Ideal for espresso mugs or straight shot glasses.",
+      "pt": "Ideal para chávenas de café expresso ou copos de shot retos.",
+      "it": "Ideale per tazzine da espresso o bicchierini da shot dritti."
+    }
+  },
+  {
+    "id": "resistencia-chupitos-1-5oz",
+    "slug": "resistencia-chupitos-1-5oz",
+    "name": {
+      "es": "Resistencia cónica de 1.5oz para chupitos",
+      "en": "1.5oz Conical heating element for shot glasses",
+      "pt": "Resistência cónica de 1.5oz para copos de shot",
+      "it": "Resistenza conica da 1.5oz per bicchierini da shot"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Pequeña resistencia específica para vasos de chupito cónicos.",
+      "en": "Small specific heating element for conical shot glasses.",
+      "pt": "Pequena resistência específica para copos de shot cónicos.",
+      "it": "Piccola resistenza specifica per bicchierini da shot conici."
+    }
+  },
+  {
+    "id": "resistencia-cilindrica-20-30oz",
+    "slug": "resistencia-cilindrica-20-30oz",
+    "name": {
+      "es": "Resistencia cilíndrica de 20 a 30 onzas",
+      "en": "20 to 30 oz cylindrical heating element",
+      "pt": "Resistência cilíndrica de 20 a 30 onças",
+      "it": "Resistenza cilindrica da 20 a 30 once"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Especial para termos largos y botellas de gran capacidad.",
+      "en": "Special for long tumblers and large capacity bottles.",
+      "pt": "Especial para copos térmicos longos e garrafas de grande capacidade.",
+      "it": "Speciale per thermos lunghi e bottiglie di grande capacità."
+    }
+  },
+  {
+    "id": "plato-base-18x18-cambio-rapido",
+    "slug": "plato-base-18x18-cambio-rapido",
+    "name": {
+      "es": "Plato base de 18x18cm para intercambio rápido",
+      "en": "18x18cm base plate for quick change",
+      "pt": "Prato base de 18x18cm para troca rápida",
+      "it": "Piastra base 18x18cm per cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Plato inferior compatible con sistemas de liberación rápida.",
+      "en": "Lower plate compatible with quick release systems.",
+      "pt": "Prato inferior compatível com sistemas de liberação rápida.",
+      "it": "Piastra inferiore compatibile con sistemi di sgancio rapido."
+    }
+  },
+  {
+    "id": "plato-base-18x38-cambio-rapido",
+    "slug": "plato-base-18x38-cambio-rapido",
+    "name": {
+      "es": "Plato base de 18x38cm para intercambio rápido",
+      "en": "18x38cm base plate for quick change",
+      "pt": "Prato base de 18x38cm para troca rápida",
+      "it": "Piastra base 18x38cm per cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Diseño para mangas o áreas estrechas con cambio rápido.",
+      "en": "Design for sleeves or narrow areas with quick change.",
+      "pt": "Design para mangas ou áreas estreitas com troca rápida.",
+      "it": "Design per maniche o aree strette con cambio rapido."
+    }
+  },
+  {
+    "id": "plato-base-18x45-cambio-rapido",
+    "slug": "plato-base-18x45-cambio-rapido",
+    "name": {
+      "es": "Plato base de 18x45cm para intercambio rápido",
+      "en": "18x45cm base plate for quick change",
+      "pt": "Prato base de 18x45cm para troca rápida",
+      "it": "Piastra base 18x45cm per cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Soporte largo para intercambio instantáneo sin herramientas.",
+      "en": "Long support for instant exchange without tools.",
+      "pt": "Suporte longo para troca instantânea sem ferramentas.",
+      "it": "Supporto lungo per cambio istantaneo senza attrezzi."
+    }
+  },
+  {
+    "id": "plato-base-30x35-cambio-rapido",
+    "slug": "plato-base-30x35-cambio-rapido",
+    "name": {
+      "es": "Plato base de 30x35cm para intercambio rápido",
+      "en": "30x35cm base plate for quick change",
+      "pt": "Prato base de 30x35cm para troca rápida",
+      "it": "Piastra base 30x35cm per cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Versión de plato base para prendas medianas.",
+      "en": "Base plate version for medium garments.",
+      "pt": "Versão de prato base para roupas médias.",
+      "it": "Versione piastra base per indumenti medi."
+    }
+  },
+  {
+    "id": "plato-base-zapatillas-cambio-rapido",
+    "slug": "plato-base-zapatillas-cambio-rapido",
+    "name": {
+      "es": "Plato base de 18x38cm especial zapatillas para intercambio rápido",
+      "en": "18x38cm special shoe base plate for quick change",
+      "pt": "Prato base de 18x38cm especial sapatilhas para troca rápida",
+      "it": "Piastra base 18x38cm speciale scarpe per cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Forma optimizada para el calzado con sistema de cambio fácil.",
+      "en": "Optimized shape for footwear with easy change system.",
+      "pt": "Forma otimizada para calçado com sistema de troca fácil.",
+      "it": "Forma ottimizzata per le calzature con sistema di cambio facile."
+    }
+  },
+  {
+    "id": "plato-base-redondo-24-cambio-rapido",
+    "slug": "plato-base-redondo-24-cambio-rapido",
+    "name": {
+      "es": "Plato base redondo de 24cm para intercambio rápido",
+      "en": "24cm round base plate for quick change",
+      "pt": "Prato base redondo de 24cm para troca rápida",
+      "it": "Piastra base tonda 24cm per cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Base circular para sistema de acople rápido.",
+      "en": "Circular base for quick coupling system.",
+      "pt": "Base circular para sistema de acoplamento rápido.",
+      "it": "Base circolare per sistema di aggancio rapido."
+    }
+  },
+  {
+    "id": "plato-base-gorras-cambio-rapido",
+    "slug": "plato-base-gorras-cambio-rapido",
+    "name": {
+      "es": "Plato base especial gorras para sistema de cambio rápido",
+      "en": "Special cap base plate for quick change system",
+      "pt": "Prato base especial bonés para sistema de troca rápida",
+      "it": "Piastra base speciale cappellini per sistema di cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Soporte inferior curvo para producción de gorras.",
+      "en": "Curved lower support for cap production.",
+      "pt": "Suporte inferior curvo para produção de bonés.",
+      "it": "Supporto inferiore curvo per la produzione di cappellini."
+    }
+  },
+  {
+    "id": "plato-base-camisetas-cambio-rapido",
+    "slug": "plato-base-camisetas-cambio-rapido",
+    "name": {
+      "es": "Plato base especial camisetas para sistema de cambio rápido",
+      "en": "Special t-shirt base plate for quick change system",
+      "pt": "Prato base especial camisetas para sistema de troca rápida",
+      "it": "Piastra base speciale magliette per sistema di cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Optimizado para el enhebrado de camisetas.",
+      "en": "Optimized for t-shirt threading.",
+      "pt": "Otimizado para enfiar camisetas.",
+      "it": "Ottimizzato per l'infilaggio delle magliette."
+    }
+  },
+  {
+    "id": "plato-base-40x50-2mangas-cambio-rapido",
+    "slug": "plato-base-40x50-2mangas-cambio-rapido",
+    "name": {
+      "es": "Plato base de 40x50cm para 2 mangas para sistema de cambio rápido",
+      "en": "40x50cm base plate for 2 sleeves for quick change system",
+      "pt": "Prato base de 40x50cm para 2 mangas para sistema de troca rápida",
+      "it": "Piastra base 40x50cm per 2 maniche per sistema di cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Doble soporte para aumentar la productividad en mangas.",
+      "en": "Double support to increase productivity in sleeves.",
+      "pt": "Suporte duplo para aumentar a produtividade em mangas.",
+      "it": "Doppio supporto per aumentare la produttività sulle maniche."
+    }
+  },
+  {
+    "id": "plato-base-12x45-mangas-cambio-rapido",
+    "slug": "plato-base-12x45-mangas-cambio-rapido",
+    "name": {
+      "es": "Plato base de 12 x 45cm especial mangas para intercambio rápido",
+      "en": "12 x 45cm special sleeve base plate for quick change",
+      "pt": "Prato base de 12 x 45cm especial mangas para troca rápida",
+      "it": "Piastra base 12 x 45cm speciale maniche per cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Muy estrecho para mangas de prendas pequeñas.",
+      "en": "Very narrow for sleeves of small garments.",
+      "pt": "Muito estreito para mangas de roupas pequenas.",
+      "it": "Molto stretto per maniche di capi piccoli."
+    }
+  },
+  {
+    "id": "plato-base-15x50-pantalones-cambio-rapido",
+    "slug": "plato-base-15x50-pantalones-cambio-rapido",
+    "name": {
+      "es": "Plato base de 15 x 50cm especial pantalones para intercambio rápido",
+      "en": "15 x 50cm special pants base plate for quick change",
+      "pt": "Prato base de 15 x 50cm especial calças para troca rápida",
+      "it": "Piastra base 15 x 50cm speciale pantaloni per cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Formato ideal para perneras de pantalón.",
+      "en": "Ideal format for pant legs.",
+      "pt": "Formato ideal para pernas de calças.",
+      "it": "Formato ideale per le gambe dei pantaloni."
+    }
+  },
+  {
+    "id": "plato-base-15-5x25-5-cambio-rapido",
+    "slug": "plato-base-15-5x25-5-cambio-rapido",
+    "name": {
+      "es": "Plato base de 15,5x25,5cm para sistema de cambio rápido",
+      "en": "15.5x25.5cm base plate for quick change system",
+      "pt": "Prato base de 15,5x25,5cm para sistema de troca rápida",
+      "it": "Piastra base 15,5x25,5cm per sistema di cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Tamaño pequeño-medio para diversas aplicaciones.",
+      "en": "Small-medium size for various applications.",
+      "pt": "Tamanho pequeno-médio para várias aplicações.",
+      "it": "Dimensioni medio-piccole per varie applicazioni."
+    }
+  },
+  {
+    "id": "plato-base-15x25-cambio-rapido",
+    "slug": "plato-base-15x25-cambio-rapido",
+    "name": {
+      "es": "Plato base de 15x25cm para sistema de cambio rápido",
+      "en": "15x25cm base plate for quick change system",
+      "pt": "Prato base de 15x25cm para sistema de troca rápida",
+      "it": "Piastra base 15x25cm per sistema di cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Soporte rectangular pequeño para logos.",
+      "en": "Small rectangular support for logos.",
+      "pt": "Suporte retangular pequeno para logótipos.",
+      "it": "Supporto rettangolare piccolo per loghi."
+    }
+  },
+  {
+    "id": "plato-base-25x30-cambio-rapido",
+    "slug": "plato-base-25x30-cambio-rapido",
+    "name": {
+      "es": "Plato base de 25x30cm para sistema de cambio rápido",
+      "en": "25x30cm base plate for quick change system",
+      "pt": "Prato base de 25x30cm para sistema de troca rápida",
+      "it": "Piastra base 25x30cm per sistema di cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Excelente para prendas de niños y bebés.",
+      "en": "Excellent for children's and baby's garments.",
+      "pt": "Excelente para roupas de crianças e bebés.",
+      "it": "Eccellente per capi da bambino e neonato."
+    }
+  },
+  {
+    "id": "plato-base-15x15-cambio-rapido",
+    "slug": "plato-base-15x15-cambio-rapido",
+    "name": {
+      "es": "Plato base de 15x15cm para sistema de cambio rápido",
+      "en": "15x15cm base plate for quick change system",
+      "pt": "Prato base de 15x15cm para sistema de troca rápida",
+      "it": "Piastra base 15x15cm per sistema di cambio rapido"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "El plato más pequeño para detalles y etiquetas.",
+      "en": "The smallest plate for details and labels.",
+      "pt": "O prato mais pequeno para detalhes e etiquetas.",
+      "it": "La piastra più piccola per dettagli ed etichette."
+    }
+  },
+  {
+    "id": "almohadilla-silicona-80x100",
+    "slug": "almohadilla-silicona-80x100",
+    "name": {
+      "es": "Almohadilla de silicona de 80 x 100cm para plato base",
+      "en": "80 x 100cm silicone pad for base plate",
+      "pt": "Almofada de silicone de 80 x 100cm para prato base",
+      "it": "Cuscinetto in silicone 80 x 100 cm per piastra base"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-61z1xwc-uul._ac_sl1500__1.webp",
+    "description": {
+      "es": "Almohadilla de silicona de 80 x 100cm para plato base. Resistente al calor hasta 220ºC y con un espesor de 10mm, asegura una impresión uniforme y perfecta en cualquier prensa de calor.",
+      "en": "80 x 100cm silicone pad for base plate. Heat resistant up to 220ºC with 10mm thickness, ensures uniform and perfect printing on any heat press.",
+      "pt": "Almofada de silicone de 80 x 100cm para prato base. Resistente ao calor até 220ºC com 10mm de espessura, garante impressão uniforme e perfeita em qualquer prensa térmica.",
+      "it": "Cuscinetto in silicone 80 x 100 cm per piastra base. Resistente al calore fino a 220ºC con spessore di 10mm, garantisce una stampa uniforme e perfetta su qualsiasi pressa termica."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de grado industrial / Industrial grade silicone" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "80 x 100 cm" },
+      { "label": { "es": "Espesor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "10 mm" },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "30050047" }
+    ]
+  },
+  {
+    "id": "plato-38x38-beinsen-chinela",
+    "slug": "plato-38x38-beinsen-chinela",
+    "name": {
+      "es": "Plato de 38x38cm para Beinsen Chinela",
+      "en": "38x38cm plate for Beinsen Chinela",
+      "pt": "Prato de 38x38cm para Beinsen Chinela",
+      "it": "Piastra 38x38cm per Beinsen Chinela"
+    },
+    "price": "Consultar PVP",
+    "image": "",
+    "description": {
+      "es": "Repuesto de plato inferior para el modelo Chinela.",
+      "en": "Lower plate replacement for the Chinela model.",
+      "pt": "Substituição do prato inferior para o modelo Chinela.",
+      "it": "Ricambio piastra inferiore per il modello Chinela."
+    }
+  },
+  {
+    "id": "fusible-termico-3d-16",
+    "slug": "fusible-termico-3d-16",
+    "name": {
+      "es": "Fusible térmico 3D-16",
+      "en": "3D-16 Thermal fuse",
+      "pt": "Fusível térmico 3D-16",
+      "it": "Fusibile termico 3D-16"
+    },
+    "price": "Consultar PVP",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/w/h/white-beinsen-logo2019-150x150-1_1__1_11.jpg",
+    "description": {
+      "es": "Filtro de aire para nuestro horno de sublimación 3D. Esta pieza es fundamental para el horno ya que sin ella no podemos realizar el vacío. Compatible también con la plancha térmica Beinsen para tazas Delia.",
+      "en": "Air filter for our 3D sublimation oven. This part is essential for the oven as we cannot create a vacuum without it. Also compatible with our Beinsen thermal plate for Delia mugs.",
+      "pt": "Filtro de ar para nosso forno de sublimação 3D. Esta peça é essencial para o forno, pois sem ela não podemos realizar o vácuo. Também compatível com nossa placa térmica Beinsen para canecas Delia.",
+      "it": "Filtro dell'aria per il nostro forno di sublimazione 3D. Questo componente è essenziale per il forno poiché senza di esso non possiamo creare il vuoto. Compatibile anche con la nostra piastra termica Beinsen per tazze Delia."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Filtro de aire / Air filter" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 105 x 40 mm" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Metal / Plástico / Metal / Plastic" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Horno 3D, Plancha Delia" },
+      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Filtro de aire para realizar vacío / Air filter for vacuum creation" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BHORN066" }
+    ]
   }
 ];
 
 export const allConsumablesData: Consumable[] = [
   {
     id: "teflon-40x50",
+    slug: "lamina-teflon-40x50",
     name: { es: "Lámina de Teflón 40x50", en: "Teflon Sheet 40x50" },
     price: 15,
     image: "https://beinsen.com/wp-content/uploads/2019/11/grecia6.jpg",
@@ -3487,6 +5300,7 @@ export const allConsumablesData: Consumable[] = [
   },
   {
     id: "neopreno-base",
+    slug: "goma-neopreno-base",
     name: { es: "Goma de Neopreno Base", en: "Neoprene Base Rubber" },
     price: 45,
     image: "https://beinsen.com/wp-content/uploads/2019/11/zapas.jpg",
@@ -3494,9 +5308,5 @@ export const allConsumablesData: Consumable[] = [
   },
   {
     id: "limpiador-plato",
-    name: { es: "Limpiador de Platos EZ-OFF", en: "EZ-OFF Plate Cleaner" },
-    price: 12,
-    image: "https://beinsen.com/wp-content/uploads/2023/11/Belice-Sin-Fondo-5.png",
-    description: { es: "Elimina residuos de tinta y pegamento fácilmente.", en: "Easily removes ink and glue residue." }
-  }
-];
+    slug: "limpiador-platos-ez-off",
+r-plato",
