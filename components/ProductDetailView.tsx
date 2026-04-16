@@ -16,29 +16,17 @@ import { RoiCalculator } from "@/components/RoiCalculator";
 import { InmersiveScroller } from "@/components/InmersiveScroller";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
-import type { Plancha, Accessory, Consumable, CompatibleItem } from "@/data/products";
-import { allAccessoriesData, allConsumablesData } from "@/data/products";
+import type { Plancha, CompatibleItem } from "@/data/products";
 
 interface ProductDetailViewProps {
     plancha: Plancha;
+    fullAccessories?: CompatibleItem[];
+    fullConsumables?: CompatibleItem[];
 }
 
-export function ProductDetailView({ plancha }: ProductDetailViewProps) {
+export function ProductDetailView({ plancha, fullAccessories = [], fullConsumables = [] }: ProductDetailViewProps) {
     const { locale } = useLanguage();
     const [activeTab, setActiveTab] = useState<"accessories" | "consumables">("accessories");
-
-    const getFullItemData = (items: { id: string, price?: number | string }[], source: CompatibleItem[]) => {
-        return items.map(item => {
-            const fullData = source.find(s => s.id === item.id);
-            return {
-                ...fullData,
-                price: item.price || fullData?.price || "Consultar PVP"
-            } as CompatibleItem;
-        });
-    };
-
-    const planchaAccessories = getFullItemData(plancha.accessories || [], allAccessoriesData);
-    const planchaConsumables = getFullItemData(plancha.consumables || [], allConsumablesData);
 
     const name = getLocalized(plancha.name, locale);
     const description = getLocalized(plancha.description, locale);
@@ -188,7 +176,7 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
     };
     const d = dictionary[locale] || dictionary.es;
 
-    const activeItems = activeTab === "accessories" ? planchaAccessories : planchaConsumables;
+    const activeItems = activeTab === "accessories" ? fullAccessories : fullConsumables;
 
     return (
         <div className="bg-background min-h-screen pt-24 pb-24 overflow-x-hidden selection:bg-[#FF6600] selection:text-white">
@@ -440,7 +428,7 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                     )}
 
                     {/* Enhanced Ecosystem (Accessories & Consumables) */}
-                    {(planchaAccessories.length > 0 || planchaConsumables.length > 0) && (
+                    {(fullAccessories.length > 0 || fullConsumables.length > 0) && (
                         <ScrollReveal className="pt-32 border-t border-border">
                             <div className="text-center mb-16">
                                 <h2 className="text-5xl font-black mb-6 tracking-tight">{d.ecosystem}</h2>
@@ -468,8 +456,11 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                {activeItems.map((item) => (
-                                    <div key={item.id} className="group p-6 rounded-[2.5rem] bg-card border border-border/50 hover:border-[#FF6600] hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all flex flex-col gap-6">
+                                 {activeItems.map((item: any) => (
+                                    <div key={item.id} className="group p-6 rounded-[2.5rem] bg-card border border-border/50 hover:border-[#FF6600] hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all flex flex-col gap-6 relative">
+                                        {item.slug && (
+                                            <Link href={`/planchas/${item.slug}`} className="absolute inset-0 z-10" aria-label={getLocalized(item.name, locale)} />
+                                        )}
                                         <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden bg-muted">
                                             {item.image ? (
                                                 <Image 
@@ -486,7 +477,7 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                                         </div>
                                         <div className="flex flex-col flex-1 px-2">
                                             <div className="flex justify-between items-start mb-4">
-                                                <h4 className="font-black text-xl tracking-tight leading-tight">
+                                                <h4 className="font-black text-xl tracking-tight leading-tight group-hover:text-[#FF6600] transition-colors">
                                                     {getLocalized(item.name, locale)}
                                                 </h4>
                                                 <div className="text-right shrink-0">
@@ -503,7 +494,7 @@ export function ProductDetailView({ plancha }: ProductDetailViewProps) {
                                                 <span className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-black opacity-60">
                                                     {activeTab === "accessories" ? d.certified : d.essential}
                                                 </span>
-                                                <button className="w-10 h-10 rounded-full bg-muted group-hover:bg-[#FF6600] group-hover:text-white flex items-center justify-center transition-colors">
+                                                <button className="w-10 h-10 rounded-full bg-muted group-hover:bg-[#FF6600] group-hover:text-white flex items-center justify-center transition-colors relative z-20">
                                                     <ShoppingCart size={18} />
                                                 </button>
                                             </div>
