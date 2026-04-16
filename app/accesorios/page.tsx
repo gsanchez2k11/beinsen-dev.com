@@ -34,15 +34,21 @@ export default function AccessoriesCatalog() {
     }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
 
     const filteredItems = useMemo(() => {
-        return allAccessoriesData.filter(item => {
-            if (!item.name) return false;
-            const nameObj = item.name as any;
-            const nameStr = typeof nameObj === 'string' 
-                ? nameObj 
-                : (nameObj[locale] || nameObj['es'] || '');
-                
-            return nameStr.toLowerCase().includes(searchQuery.toLowerCase());
-        });
+        return allAccessoriesData
+            .filter(item => {
+                if (!item.name) return false;
+                const nameObj = item.name as any;
+                const nameStr = typeof nameObj === 'string' 
+                    ? nameObj 
+                    : (nameObj[locale] || nameObj['es'] || '');
+                    
+                return nameStr.toLowerCase().includes(searchQuery.toLowerCase());
+            })
+            .sort((a, b) => {
+                const nameA = (typeof a.name === 'string' ? a.name : (a.name[locale] || a.name['es'] || '')).toLowerCase();
+                const nameB = (typeof b.name === 'string' ? b.name : (b.name[locale] || b.name['es'] || '')).toLowerCase();
+                return nameA.localeCompare(nameB, locale);
+            });
     }, [searchQuery, locale]);
 
     return (
