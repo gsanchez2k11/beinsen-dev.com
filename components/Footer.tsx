@@ -92,12 +92,12 @@ export function Footer() {
                         <h3 className="font-semibold text-lg">{d.quickLinks}</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/planchas" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                                <Link href="/planchas?type=planchas" className="text-sm text-muted-foreground hover:text-[#FF6600] transition-colors">
                                     {d.planchas}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/accesorios" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                                <Link href="/planchas?type=accessories" className="text-sm text-muted-foreground hover:text-[#FF6600] transition-colors">
                                     {d.accesorios}
                                 </Link>
                             </li>

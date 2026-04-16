@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { Search, X, MonitorPlay, Settings2, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { planchasData, allAccessoriesData, Locale } from "@/data/products";
+import { planchasData, allAccessoriesData, allConsumablesData, Locale } from "@/data/products";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 
@@ -99,7 +99,7 @@ export function GlobalSearch() {
         const lowerQuery = query.toLowerCase();
         const results = [];
 
-        // Search Planchas - Search in all available languages for better coverage
+        // Search Planchas
         const matchedPlanchas = planchasData.filter(
             (p) => {
                 const names = Object.values(p.name).join(" ").toLowerCase();
@@ -111,7 +111,15 @@ export function GlobalSearch() {
         // Search Accessories
         const matchedAccessories = allAccessoriesData.filter(
             (a) => {
-                const names = Object.values(a.name).join(" ").toLowerCase();
+                const names = Object.values(a.name as any).join(" ").toLowerCase();
+                return names.includes(lowerQuery);
+            }
+        );
+
+        // Search Consumables
+        const matchedConsumables = allConsumablesData.filter(
+            (c) => {
+                const names = Object.values(c.name as any).join(" ").toLowerCase();
                 return names.includes(lowerQuery);
             }
         );
@@ -119,27 +127,51 @@ export function GlobalSearch() {
         if (matchedPlanchas.length > 0) {
             results.push({
                 group: d.groupPlanchas,
-                items: matchedPlanchas.map((p) => ({
-                    id: p.id,
-                    name: getLocalized(p.name, locale),
-                    href: `/planchas/${p.slug}`,
-                    icon: <MonitorPlay size={16} className="text-[#FF6600]" />,
-                    price: p.price
-                })),
+                items: matchedPlanchas
+                    .map((p) => ({
+                        id: p.id,
+                        name: getLocalized(p.name, locale),
+                        href: `/planchas/${p.slug}`,
+                        icon: <MonitorPlay size={16} className="text-[#FF6600]" />,
+                        price: p.price
+                    }))
+                    .sort((a, b) => (a.name || "").localeCompare(b.name || "", locale)),
             });
         }
 
         if (matchedAccessories.length > 0) {
             results.push({
                 group: d.groupAcc,
-                items: matchedAccessories.map((a) => ({
-                    id: a.id,
-                    name: getLocalized(a.name, locale),
-                    href: "/accesorios", // Scroll to ID could be added here
-                    icon: <Settings2 size={16} className="text-[#FF6600]" />,
-                    price: a.price
-                })),
+                items: matchedAccessories
+                    .map((a) => ({
+                        id: a.id,
+                        name: getLocalized(a.name as any, locale),
+                        href: a.slug ? `/planchas/${a.slug}` : "/planchas?type=accessories", 
+                        icon: <Settings2 size={16} className="text-[#FF6600]" />,
+                        price: a.price
+                    }))
+                    .sort((a, b) => (a.name || "").localeCompare(b.name || "", locale)),
             });
+        }
+
+        if (matchedConsumables.length > 0) {
+            const consumableItems = matchedConsumables.map((c) => ({
+                id: c.id,
+                name: getLocalized(c.name as any, locale),
+                href: c.slug ? `/planchas/${c.slug}` : "/planchas?type=consumables",
+                icon: <MonitorPlay size={16} className="text-[#FF6600]/80" />,
+                price: c.price
+            }));
+            
+            const accGroup = results.find(r => r.group === d.groupAcc);
+            if (accGroup) {
+                accGroup.items = [...accGroup.items, ...consumableItems].sort((a, b) => (a.name || "").localeCompare(b.name || "", locale));
+            } else {
+                results.push({
+                    group: d.groupAcc,
+                    items: consumableItems.sort((a, b) => (a.name || "").localeCompare(b.name || "", locale)),
+                });
+            }
         }
 
         return results;

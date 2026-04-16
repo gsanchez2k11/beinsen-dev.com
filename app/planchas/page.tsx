@@ -1,13 +1,18 @@
 "use client";
 
+<<<<<<< HEAD
 import { useState, useMemo, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
+=======
+import { useState, useMemo, useEffect, Suspense, useRef } from "react";
+>>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
 import { planchasData, allAccessoriesData, allConsumablesData, Locale } from "@/data/products";
 import { ArrowUpRight, Maximize2, Tag, Zap, Search, Settings2, X, Package, Filter, SlidersHorizontal, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
+import { useSearchParams, useRouter } from "next/navigation";
 
 const CATEGORIES = ["Todas", "Textil", "Tazas y Botellas", "Gorras", "Especializadas", "Multifunción"];
 const OPENING_TYPES = ["Cualquiera", "Manual", "Neumática", "Automática"];
@@ -29,6 +34,14 @@ const OPENING_TYPES_LABELS = {
 
 
 export default function PlanchasCatalog() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-background pt-32 text-center font-black uppercase tracking-[0.3em] opacity-40">Cargando...</div>}>
+            <PlanchasCatalogContent />
+        </Suspense>
+    );
+}
+
+function PlanchasCatalogContent() {
     const { locale } = useLanguage();
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -37,6 +50,7 @@ export default function PlanchasCatalog() {
     const [activeOpeningIndex, setActiveOpeningIndex] = useState(0);
     const [searchQuery, setSearchQuery] = useState("");
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+<<<<<<< HEAD
     const [mounted, setMounted] = useState(false);
     const [isInitialLoad, setIsInitialLoad] = useState(true);
 
@@ -74,6 +88,25 @@ export default function PlanchasCatalog() {
             router.push(`/planchas?type=${activeType}`);
         }
     }, [activeType, isInitialLoad, mounted, router]);
+=======
+    const prevTypeRef = useRef<string | null>(null);
+
+    useEffect(() => {
+        const type = searchParams.get('type');
+        if (type !== prevTypeRef.current) {
+            prevTypeRef.current = type;
+            if (type && ["planchas", "accessories", "consumables"].includes(type)) {
+                setActiveType(type as any);
+            } else {
+                setActiveType('all');
+            }
+            // Reset other filters when changing type via URL
+            setActiveCategoryIndex(0);
+            setActiveOpeningIndex(0);
+            setSearchQuery("");
+        }
+    }, [searchParams]);
+>>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
 
     const categoryLabels = CATEGORIES_LABELS[locale] || CATEGORIES_LABELS.es;
     const openingLabels = OPENING_TYPES_LABELS[locale] || OPENING_TYPES_LABELS.es;
@@ -131,10 +164,20 @@ export default function PlanchasCatalog() {
         const accs = allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } }));
         const cons = allConsumablesData.map(c => ({ ...c, _type: 'consumables', category: { es: 'Consumible', en: 'Consumable' }, openingType: { es: 'Químico/Material', en: 'Chemical/Material' } }));
         
+<<<<<<< HEAD
         return [...machines, ...accs, ...cons].sort((a, b) => {
             const nameA = typeof a.name === 'object' ? (a.name[locale] || a.name.es || a.name.en || "") : (a.name || "");
             const nameB = typeof b.name === 'object' ? (b.name[locale] || b.name.es || b.name.en || "") : (b.name || "");
             return nameA.toLowerCase().localeCompare(nameB.toLowerCase(), locale);
+=======
+        const combined = [...machines, ...accs, ...cons];
+        
+        // Sort alphabetically by localized name
+        return combined.sort((a, b) => {
+            const nameA = (getLocalized(a.name, locale) || "").toLowerCase();
+            const nameB = (getLocalized(b.name, locale) || "").toLowerCase();
+            return nameA.localeCompare(nameB, locale);
+>>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
         });
     }, [locale]);
 
@@ -201,7 +244,18 @@ export default function PlanchasCatalog() {
                         ].map((t) => (
                             <button
                                 key={t.id}
-                                onClick={() => setActiveType(t.id as any)}
+                                onClick={() => {
+                                    setActiveType(t.id as any);
+                                    setActiveCategoryIndex(0);
+                                    setActiveOpeningIndex(0);
+                                    setSearchQuery("");
+                                    
+                                    if (t.id === 'all') {
+                                        router.replace('/planchas', { scroll: false });
+                                    } else {
+                                        router.replace(`/planchas?type=${t.id}`, { scroll: false });
+                                    }
+                                }}
                                 className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all whitespace-nowrap ${
                                     activeType === t.id 
                                         ? "bg-background text-[#FF6600] shadow-sm transform scale-105" 
@@ -293,10 +347,15 @@ export default function PlanchasCatalog() {
                     </h2>
                 </div>
 
+<<<<<<< HEAD
                 <motion.div 
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
                 >
                     <AnimatePresence mode="popLayout">
+=======
+                <div className="grid flex-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                    <AnimatePresence>
+>>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
                         {filteredItems.map((item: any, index: number) => (
                             <CatalogProductCard 
                                 key={item.id} 
@@ -307,7 +366,7 @@ export default function PlanchasCatalog() {
                             />
                         ))}
                     </AnimatePresence>
-                </motion.div>
+                </div>
 
                 {filteredItems.length === 0 && (
                     <motion.div
@@ -326,6 +385,7 @@ export default function PlanchasCatalog() {
                                 setActiveCategoryIndex(0);
                                 setActiveOpeningIndex(0);
                                 setSearchQuery("");
+                                router.replace('/planchas', { scroll: false });
                             }}
                             className="bg-foreground text-background px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform"
                         >
