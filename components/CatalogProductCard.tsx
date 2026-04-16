@@ -4,11 +4,9 @@ import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Tag, Maximize2, Zap, Cpu, Target, ShieldCheck, Box } from "lucide-react";
+import { ArrowUpRight, Tag, Maximize2, Target, Box } from "lucide-react";
 import { getLocalized } from "@/lib/i18n";
-import type { Plancha, Locale } from "@/data/products";
-
-import React from "react";
+import type { Locale } from "@/data/products";
 
 interface CatalogProductCardProps {
     item: any;
@@ -18,11 +16,7 @@ interface CatalogProductCardProps {
     onClick?: () => void;
 }
 
-<<<<<<< HEAD
 export const CatalogProductCard = memo(function CatalogProductCard({ item, locale, index, isFeatureCard, onClick }: CatalogProductCardProps) {
-=======
-export const CatalogProductCard = React.memo(function CatalogProductCard({ item, locale, index, isFeatureCard, onClick }: CatalogProductCardProps) {
->>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
     const name = getLocalized(item.name, locale);
     const desc = getLocalized(item.description, locale);
     const category = getLocalized(item.category, locale);
@@ -39,18 +33,10 @@ export const CatalogProductCard = React.memo(function CatalogProductCard({ item,
 
     return (
         <motion.div
-<<<<<<< HEAD
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.98 }}
             transition={{ duration: 0.3, delay: Math.min(index * 0.02, 0.3), ease: "easeOut" }}
-=======
-            layout="position"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
->>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
             className={`group h-full ${isFeatureCard ? 'md:col-span-2' : ''}`}
             onClick={onClick}
         >
@@ -146,12 +132,7 @@ export const CatalogProductCard = React.memo(function CatalogProductCard({ item,
             </Link>
         </motion.div>
     );
-<<<<<<< HEAD
-});
-
-=======
 }, (prevProps, nextProps) => {
     return prevProps.item.id === nextProps.item.id && 
            prevProps.locale === nextProps.locale;
 });
->>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
