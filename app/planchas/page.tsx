@@ -1,11 +1,7 @@
 "use client";
 
-<<<<<<< HEAD
-import { useState, useMemo, useEffect } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
-=======
 import { useState, useMemo, useEffect, Suspense, useRef } from "react";
->>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
+import { useSearchParams, useRouter } from "next/navigation";
 import { planchasData, allAccessoriesData, allConsumablesData, Locale } from "@/data/products";
 import { ArrowUpRight, Maximize2, Tag, Zap, Search, Settings2, X, Package, Filter, SlidersHorizontal, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -50,19 +46,18 @@ function PlanchasCatalogContent() {
     const [activeOpeningIndex, setActiveOpeningIndex] = useState(0);
     const [searchQuery, setSearchQuery] = useState("");
     const [isFilterOpen, setIsFilterOpen] = useState(false);
-<<<<<<< HEAD
     const [mounted, setMounted] = useState(false);
     const [isInitialLoad, setIsInitialLoad] = useState(true);
+    const prevTypeRef = useRef<string | null>(null);
 
     // Initialize from URL on first mount
     useEffect(() => {
         setMounted(true);
-        if (typeof window !== 'undefined' && window.location.search) {
-            const params = new URLSearchParams(window.location.search);
-            const typeParam = params.get("type");
-            if (typeParam === "planchas" || typeParam === "accessories" || typeParam === "consumables") {
-                setActiveType(typeParam);
-            }
+        const params = new URLSearchParams(window.location.search);
+        const typeParam = params.get("type");
+        if (typeParam && ["planchas", "accessories", "consumables"].includes(typeParam)) {
+            setActiveType(typeParam as any);
+            prevTypeRef.current = typeParam;
         }
         setIsInitialLoad(false);
     }, []);
@@ -70,28 +65,6 @@ function PlanchasCatalogContent() {
     // Also listen to searchParams changes for client-side navigation
     useEffect(() => {
         if (!mounted) return;
-        const typeParam = searchParams?.get("type");
-        if (typeParam && (typeParam === "planchas" || typeParam === "accessories" || typeParam === "consumables")) {
-            setActiveType(typeParam);
-        } else {
-            // If no valid type param, show all
-            setActiveType("all");
-        }
-    }, [searchParams, mounted]);
-
-    // Update URL when activeType changes (but not on initial load)
-    useEffect(() => {
-        if (isInitialLoad || !mounted) return;
-        if (activeType === "all") {
-            router.push("/planchas");
-        } else {
-            router.push(`/planchas?type=${activeType}`);
-        }
-    }, [activeType, isInitialLoad, mounted, router]);
-=======
-    const prevTypeRef = useRef<string | null>(null);
-
-    useEffect(() => {
         const type = searchParams.get('type');
         if (type !== prevTypeRef.current) {
             prevTypeRef.current = type;
@@ -105,8 +78,18 @@ function PlanchasCatalogContent() {
             setActiveOpeningIndex(0);
             setSearchQuery("");
         }
-    }, [searchParams]);
->>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
+    }, [searchParams, mounted]);
+
+    // Update URL when activeType changes (but not on initial load)
+    useEffect(() => {
+        if (isInitialLoad || !mounted) return;
+        if (activeType === "all") {
+            router.push("/planchas");
+        } else {
+            router.push(`/planchas?type=${activeType}`);
+        }
+        prevTypeRef.current = activeType === "all" ? null : activeType;
+    }, [activeType, isInitialLoad, mounted, router]);
 
     const categoryLabels = CATEGORIES_LABELS[locale] || CATEGORIES_LABELS.es;
     const openingLabels = OPENING_TYPES_LABELS[locale] || OPENING_TYPES_LABELS.es;
@@ -164,12 +147,6 @@ function PlanchasCatalogContent() {
         const accs = allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } }));
         const cons = allConsumablesData.map(c => ({ ...c, _type: 'consumables', category: { es: 'Consumible', en: 'Consumable' }, openingType: { es: 'Químico/Material', en: 'Chemical/Material' } }));
         
-<<<<<<< HEAD
-        return [...machines, ...accs, ...cons].sort((a, b) => {
-            const nameA = typeof a.name === 'object' ? (a.name[locale] || a.name.es || a.name.en || "") : (a.name || "");
-            const nameB = typeof b.name === 'object' ? (b.name[locale] || b.name.es || b.name.en || "") : (b.name || "");
-            return nameA.toLowerCase().localeCompare(nameB.toLowerCase(), locale);
-=======
         const combined = [...machines, ...accs, ...cons];
         
         // Sort alphabetically by localized name
@@ -177,7 +154,6 @@ function PlanchasCatalogContent() {
             const nameA = (getLocalized(a.name, locale) || "").toLowerCase();
             const nameB = (getLocalized(b.name, locale) || "").toLowerCase();
             return nameA.localeCompare(nameB, locale);
->>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
         });
     }, [locale]);
 
@@ -347,15 +323,8 @@ function PlanchasCatalogContent() {
                     </h2>
                 </div>
 
-<<<<<<< HEAD
-                <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
-                >
-                    <AnimatePresence mode="popLayout">
-=======
                 <div className="grid flex-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
                     <AnimatePresence>
->>>>>>> 0596359aff6551aa5a2f5544c5903ce417e57bac
                         {filteredItems.map((item: any, index: number) => (
                             <CatalogProductCard 
                                 key={item.id} 
