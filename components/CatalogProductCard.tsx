@@ -7,6 +7,8 @@ import { ArrowUpRight, Tag, Maximize2, Zap, Cpu, Target, ShieldCheck, Box } from
 import { getLocalized } from "@/lib/i18n";
 import type { Plancha, Locale } from "@/data/products";
 
+import React from "react";
+
 interface CatalogProductCardProps {
     item: any;
     locale: Locale;
@@ -15,7 +17,7 @@ interface CatalogProductCardProps {
     onClick?: () => void;
 }
 
-export function CatalogProductCard({ item, locale, index, isFeatureCard, onClick }: CatalogProductCardProps) {
+export const CatalogProductCard = React.memo(function CatalogProductCard({ item, locale, index, isFeatureCard, onClick }: CatalogProductCardProps) {
     const name = getLocalized(item.name, locale);
     const desc = getLocalized(item.description, locale);
     const category = getLocalized(item.category, locale);
@@ -32,11 +34,11 @@ export function CatalogProductCard({ item, locale, index, isFeatureCard, onClick
 
     return (
         <motion.div
-            layout
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            layout="position"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
             className={`group h-full ${isFeatureCard ? 'md:col-span-2' : ''}`}
             onClick={onClick}
         >
@@ -132,4 +134,7 @@ export function CatalogProductCard({ item, locale, index, isFeatureCard, onClick
             </Link>
         </motion.div>
     );
-}
+}, (prevProps, nextProps) => {
+    return prevProps.item.id === nextProps.item.id && 
+           prevProps.locale === nextProps.locale;
+});

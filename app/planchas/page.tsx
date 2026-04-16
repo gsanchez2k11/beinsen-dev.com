@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, Suspense, useRef } from "react";
 import { planchasData, allAccessoriesData, allConsumablesData, Locale } from "@/data/products";
 import { ArrowUpRight, Maximize2, Tag, Zap, Search, Settings2, X, Package, Filter, SlidersHorizontal, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
+import { useSearchParams, useRouter } from "next/navigation";
 
 const CATEGORIES = ["Todas", "Textil", "Tazas y Botellas", "Gorras", "Especializadas", "Multifunción"];
 const OPENING_TYPES = ["Cualquiera", "Manual", "Neumática", "Automática"];
@@ -34,12 +35,39 @@ const PLANCHAS_PRIORITY_ORDER = [
 ];
 
 export default function PlanchasCatalog() {
+    return (
+        <Suspense fallback={<div className="min-h-screen bg-background pt-32 text-center font-black uppercase tracking-[0.3em] opacity-40">Cargando...</div>}>
+            <PlanchasCatalogContent />
+        </Suspense>
+    );
+}
+
+function PlanchasCatalogContent() {
     const { locale } = useLanguage();
+    const searchParams = useSearchParams();
+    const router = useRouter();
     const [activeType, setActiveType] = useState<"all" | "planchas" | "accessories" | "consumables">("all");
     const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
     const [activeOpeningIndex, setActiveOpeningIndex] = useState(0);
     const [searchQuery, setSearchQuery] = useState("");
     const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const prevTypeRef = useRef<string | null>(null);
+
+    useEffect(() => {
+        const type = searchParams.get('type');
+        if (type !== prevTypeRef.current) {
+            prevTypeRef.current = type;
+            if (type && ["planchas", "accessories", "consumables"].includes(type)) {
+                setActiveType(type as any);
+            } else {
+                setActiveType('all');
+            }
+            // Reset other filters when changing type via URL
+            setActiveCategoryIndex(0);
+            setActiveOpeningIndex(0);
+            setSearchQuery("");
+        }
+    }, [searchParams]);
 
     const categoryLabels = CATEGORIES_LABELS[locale] || CATEGORIES_LABELS.es;
     const openingLabels = OPENING_TYPES_LABELS[locale] || OPENING_TYPES_LABELS.es;
@@ -91,21 +119,19 @@ export default function PlanchasCatalog() {
 
     const allItems = useMemo(() => {
         // Map everything to a common item format for the list
-        const machines = planchasData
-            .map(p => ({ ...p, _type: 'planchas' }))
-            .sort((a, b) => {
-                const ia = PLANCHAS_PRIORITY_ORDER.indexOf(a.id);
-                const ib = PLANCHAS_PRIORITY_ORDER.indexOf(b.id);
-                if (ia === -1 && ib === -1) return 0;
-                if (ia === -1) return 1;
-                if (ib === -1) return -1;
-                return ia - ib;
-            });
+        const machines = planchasData.map(p => ({ ...p, _type: 'planchas' }));
         const accs = allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } }));
         const cons = allConsumablesData.map(c => ({ ...c, _type: 'consumables', category: { es: 'Consumible', en: 'Consumable' }, openingType: { es: 'Químico/Material', en: 'Chemical/Material' } }));
         
-        return [...machines, ...accs, ...cons];
-    }, []);
+        const combined = [...machines, ...accs, ...cons];
+        
+        // Sort alphabetically by localized name
+        return combined.sort((a, b) => {
+            const nameA = (getLocalized(a.name, locale) || "").toLowerCase();
+            const nameB = (getLocalized(b.name, locale) || "").toLowerCase();
+            return nameA.localeCompare(nameB, locale);
+        });
+    }, [locale]);
 
     const filteredItems = useMemo(() => {
         return allItems.filter((item: any) => {
@@ -164,7 +190,18 @@ export default function PlanchasCatalog() {
                         ].map((t) => (
                             <button
                                 key={t.id}
-                                onClick={() => setActiveType(t.id as any)}
+                                onClick={() => {
+                                    setActiveType(t.id as any);
+                                    setActiveCategoryIndex(0);
+                                    setActiveOpeningIndex(0);
+                                    setSearchQuery("");
+                                    
+                                    if (t.id === 'all') {
+                                        router.replace('/planchas', { scroll: false });
+                                    } else {
+                                        router.replace(`/planchas?type=${t.id}`, { scroll: false });
+                                    }
+                                }}
                                 className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all whitespace-nowrap ${
                                     activeType === t.id 
                                         ? "bg-background text-[#FF6600] shadow-sm transform scale-105" 
@@ -256,11 +293,8 @@ export default function PlanchasCatalog() {
                     </h2>
                 </div>
 
-                <motion.div 
-                    layout
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10"
-                >
-                    <AnimatePresence mode="popLayout">
+                <div className="grid flex-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                    <AnimatePresence>
                         {filteredItems.map((item: any, index: number) => (
                             <CatalogProductCard 
                                 key={item.id} 
@@ -271,7 +305,7 @@ export default function PlanchasCatalog() {
                             />
                         ))}
                     </AnimatePresence>
-                </motion.div>
+                </div>
 
                 {filteredItems.length === 0 && (
                     <motion.div
@@ -290,6 +324,7 @@ export default function PlanchasCatalog() {
                                 setActiveCategoryIndex(0);
                                 setActiveOpeningIndex(0);
                                 setSearchQuery("");
+                                router.replace('/planchas', { scroll: false });
                             }}
                             className="bg-foreground text-background px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform"
                         >

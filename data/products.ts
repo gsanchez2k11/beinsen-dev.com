@@ -3757,19 +3757,25 @@ export const allAccessoriesData: Accessory[] = [
     id: "plato-resistencia-combo-38x38",
     slug: "plato-resistencia-combo-38x38",
     name: {
-      es: "Plato y resistencia para planchas combo Beinsen 38x38",
+      es: "Plato y resistencia planchas para planchas combo Beinsen 38x38",
       en: "Plate and heating element for Beinsen combo 38x38 heat press",
       pt: "Prato e resistência para prensas combo Beinsen 38x38",
       it: "Piastra e resistenza per presse combo Beinsen 38x38"
     },
     price: "Consultar PVP",
-    image: "",
+    image: "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-resiplana_1.webp",
     description: {
-      es: "Plato y resistencia de repuesto específicos para las planchas combo Beinsen de 38x38 cm. Garantizan un rendimiento óptimo y una distribución uniforme del calor.",
-      en: "Replacement plate and heating element specifically for Beinsen combo 38x38 cm heat presses. Ensures optimal performance and uniform heat distribution.",
-      pt: "Prato e resistência de substituição específicos para as prensas combo Beinsen de 38x38 cm.",
-      it: "Piastra e resistenza di ricambio specifiche per le presse combo Beinsen da 38x38 cm."
-    }
+      es: "Repuesto de plato y resistencia. Plato superior con resistencia incorporada, para todos los modelos combo 38X38 de 1ªGeneración. Este plato es el que aplica el calor sobre el objeto a planchar. Características: Dimensiones plato: 38 cm x 38 cm. Fundición a presión. Calor plano y uniforme. Material de aluminio fino. Fácil montaje.",
+      en: "Replacement plate and heating element. Upper plate with built-in heating element, for all 1st Generation 38X38 combo models. Dimensions: 38x38cm. Die-cast. Flat and uniform heat. Thin aluminum material. Easy assembly.",
+      pt: "Prato e resistência de substituição. Prato superior com resistência incorporada, para todos os modelos combo 38X38 de 1ª Geração. Dimensões: 38x38cm. Fundição sob pressão. Calor plano e uniforme. Material de alumínio fino. Fácil montagem.",
+      it: "Piastra e resistenza di ricambio. Piastra superiore con resistenza incorporata, per tutti i modelli combo 38X38 di 1ª Generazione. Dimensioni: 38x38cm. Pressofusione. Calore piatto e uniforme. Sottile materiale in alluminio. Facile montaggio."
+    },
+    technicalSpecs: [
+      { label: { es: "Compatibilidad", en: "Compatibility", pt: "Compatibilidade", it: "Compatibilità" }, value: "Planchas Combo Beinsen 1ªGen (38x38)" },
+      { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "38 x 38 cm" },
+      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Aluminio fundido" },
+      { label: { es: "P/N", en: "P/N", pt: "P/N", it: "P/N" }, value: "BPLAN159" }
+    ]
   },
   {
     id: "almohadilla-silicona-38x38",
@@ -3888,13 +3894,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza cilindrica per tazze da 11oz tipo B"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/resistencia_11oz_01.webp",
     "description": {
-      "es": "Resistencia de repuesto para tazas estándar de 11oz, conector tipo B.",
-      "en": "Replacement heating element for standard 11oz mugs, type B connector.",
-      "pt": "Resistência de substituição para canecas padrão de 11oz, conector tipo B.",
-      "it": "Resistenza di ricambio per tazze standard da 11oz, connettore tipo B."
-    }
+      "es": "Para planchas de tazas Beinsen , ya sea como repuesto o accesorio, podrás personalizar tazas de 11 onzas con nuestra resistencia. Solo necesitas apretar unos tornillos y enchufar el conector a la plancha, ¡Listo, ya tienes conectada tu resistencia para empezar a funcionar con ella!. Recuerda dejarla unos minutos calentando en el primer uso.",
+      "en": "For Beinsen mug presses, whether as a spare part or accessory, you can personalize 11-ounce mugs with our heating element. Just tighten some screws and plug the connector into the press. Remember to let it heat up for a few minutes on first use.",
+      "pt": "Para prensas de canecas Beinsen, seja como peça de reposição ou acessório, pode personalizar canecas de 11 onças com nossa resistência. Lembre-se de deixá-la aquecer por alguns minutos na primeira utilização.",
+      "it": "Per le presse per tazze Beinsen, come pezzo di ricambio o accessorio, puoi personalizzare tazze da 11 once con la nostra resistenza. Ricordati di lasciarla riscaldare per qualche minuto al primo utilizzo."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "B (Conector hembra flotante / Floating female connector)" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barein, Sicilia, Maine, Clara, Sore, Barahona" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES11B" }
+    ]
   },
   {
     "id": "resistencia-tazas-6-10oz",
@@ -3906,13 +3917,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza cilindrica per tazze da 6-10oz"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/resistencia_11oz_01_1_1.webp",
     "description": {
-      "es": "Resistencia para tazas de pequeño diámetro y botes.",
-      "en": "Heating element for small diameter mugs and bottles.",
-      "pt": "Resistência para canecas de pequeno diâmetro e garrafas.",
-      "it": "Resistenza per tazze di piccolo diametro e bottiglie."
-    }
+      "es": "Para planchas de tazas Beinsen , ya sea como repuesto o accesorio, podrás personalizar tazas de 6 a 10 onzas con nuestra resistencia. Solo necesitas apretar unos tornillos y enchufar el conector a la plancha, ¡Listo, ya tienes conectada tu resistencia para empezar a funcionar con ella!. Recuerda dejarla unos minutos calentando en el primer uso.",
+      "en": "For Beinsen mug presses, whether as a spare part or accessory, you can personalize 6 to 10-ounce mugs with our heating element. Just tighten some screws and plug the connector into the press. Remember to let it heat up for a few minutes on first use.",
+      "pt": "Para prensas de canecas Beinsen, seja como peça de reposição ou acessório, pode personalizar canecas de 6 a 10 onças com nossa resistência. Lembre-se de deixá-la aquecer por alguns minutos na primeira utilização.",
+      "it": "Per le presse per tazze Beinsen, come pezzo di ricambio o accessorio, puoi personalizzare tazze da 6 a 10 once con la nostra resistenza. Ricordati di lasciarla riscaldare per qualche minuto al primo utilizzo."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "6 a 10 onzas" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barahona, Barein, Sore, Maine" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "PLAACCRBE" }
+    ]
   },
   {
     "id": "resistencia-tazas-11oz-a",
@@ -3924,13 +3940,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza cilindrica per tazze da 11oz tipo A"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/resistencia_11oz_01_1.webp",
     "description": {
-      "es": "Resistencia de repuesto para tazas estándar de 11oz, conector tipo A.",
-      "en": "Replacement heating element for standard 11oz mugs, type A connector.",
-      "pt": "Resistência de substituição para canecas padrão de 11oz, conector tipo A.",
-      "it": "Resistenza di ricambio per tazze standard da 11oz, connettore tipo A."
-    }
+      "es": "Para planchas de tazas Beinsen , ya sea como repuesto o accesorio, podrás personalizar tazas de 11 onzas con nuestra resistencia. Solo necesitas apretar unos tornillos y enchufar el conector a la plancha, ¡Listo, ya tienes conectada tu resistencia para empezar a funcionar con ella!. Recuerda dejarla unos minutos calentando en el primer uso.",
+      "en": "For Beinsen mug presses, whether as a spare part or accessory, you can personalize 11-ounce mugs with our heating element. Just tighten some screws and plug the connector into the press. Remember to let it heat up for a few minutes on first use.",
+      "pt": "Para prensas de canecas Beinsen, seja como peça de reposição ou acessório, pode personalizar canecas de 11 onças com nossa resistência. Lembre-se de deixá-la aquecer por alguns minutos na primeira utilização.",
+      "it": "Per le presse per tazze Beinsen, come pezzo di ricambio o accessorio, puoi personalizzare tazze da 11 once con la nostra resistenza. Ricordati di lasciarla riscaldare per qualche minuto al primo utilizzo."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "A (Conector macho / Male connector)" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sore, Andra" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES11A" }
+    ]
   },
   {
     "id": "resistencia-tazas-conicas-17oz",
@@ -3942,13 +3963,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza per tazze coniche da 17oz"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/1/6/16_5cm..webp",
     "description": {
-      "es": "Específica para tazas cónicas grandes de estilo latte.",
-      "en": "Specific for large latte-style conical mugs.",
-      "pt": "Específica para canecas cónicas grandes estilo latte.",
-      "it": "Specifica per tazze coniche grandi stile latte."
-    }
+      "es": "Para planchas de tazas Beinsen , ya sea como repuesto o accesorio, podrás personalizar tazas cónicas de 17 onzas con nuestra resistencia. Solo necesitas apretar unos tornillos y enchufar el conector a la plancha, ¡Listo, ya tienes conectada tu resistencia para empezar a funcionar con ella!. Recuerda dejarla unos minutos calentando en el primer uso.",
+      "en": "For Beinsen mug presses, whether as a spare part or accessory, you can personalize 17-ounce conical mugs with our heating element. Just tighten some screws and plug the connector into the press. Remember to let it heat up for a few minutes on first use.",
+      "pt": "Para prensas de canecas Beinsen, seja como peça de reposição ou acessório, pode personalizar canecas cónicas de 17 onças com nossa resistência. Lembre-se de deixá-la aquecer por alguns minutos na primeira utilização.",
+      "it": "Per le presse per tazze Beinsen, come pezzo di ricambio o accessorio, puoi personalizzare tazze coniche da 17 once con la nostra resistenza. Ricordati di lasciarla riscaldare per qualche minuto al primo utilizzo."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "16.5cm largo / 17oz" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES17C" }
+    ]
   },
   {
     "id": "resistencia-doble-taza-11-15oz",
@@ -3960,13 +3986,19 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza cilindrica per 2 tazze 11oz-15oz"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/3/-/3-4_1_.webp",
     "description": {
-      "es": "Permite la producción simultánea de dos tazas de gran tamaño.",
-      "en": "Allows simultaneous production of two large mugs.",
-      "pt": "Permite a produção simultânea de duas canecas grandes.",
-      "it": "Consente la produzione simultanea di due tazze di grandi dimensioni."
-    }
+      "es": "Amplía tus capacidades de personalización en esta resistencia para tazas para planchas transfer Beinsen. Este modelo está especialmente ideado para sublimar a la vez dos tazas de 11 onzas de capacidad, aunque seguro que le encuentras múltiples utilidades gracias a su tamaño.",
+      "en": "Expand your personalization capabilities with this mug heating element for Beinsen transfer presses. This model is specially designed to sublimate two 11 ounce mugs at the same time, although surely you will find multiple uses thanks to its size.",
+      "pt": "Expanda suas capacidades de personalização nesta resistência para canecas para prensas de transferência Beinsen. Especialmente projetado para sublimar duas canecas de 11 onças ao mesmo tempo.",
+      "it": "Espandi le tue capacità di personalizzazione con questa resistenza per tazze per le presse transfer Beinsen. Appositamente progettato per sublimare due tazze da 11 once contemporaneamente."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "22 cm" },
+      { "label": { "es": "Diámetro", "en": "Diameter", "pt": "Diâmetro", "it": "Diametro" }, "value": "7.5 - 10 cm" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Maine, Barahona" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRSBMHB" }
+    ]
   },
   {
     "id": "plato-gorras-beinsen-riad",
@@ -3978,13 +4010,17 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra per cappellini per Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_1522.webp",
     "description": {
-      "es": "Accesorio de plato inferior para la personalización de gorras.",
-      "en": "Lower plate accessory for cap customization.",
-      "pt": "Acessório de prato inferior para personalização de bonés.",
-      "it": "Accessorio piastra inferiore per la personalizzazione dei cappellini."
-    }
+      "es": "Optimiza tu prensa térmica modelo Beinsen Riad con nuestro plato inferior para gorras. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Riad. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
+      "en": "Optimize your Beinsen Riad heat press with our lower cap plate. Specifically designed for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes. Manufactured with high quality materials, it guarantees uniform heat distribution and precise sublimation results.",
+      "pt": "Otimize a sua prensa térmica modelo Beinsen Riad com nosso prato inferior para bonés. Projetado especificamente para este modelo, nosso prato inferior intercambiável permite adaptar a sua prensa térmica a diferentes tamanhos de produtos. Fabricado com materiais de alta qualidade para garantir distribuição uniforme e resultados precisos.",
+      "it": "Ottimizza la tua pressa termica modello Beinsen Riad con la nostra piastra inferiore per cappellini. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90004029" }
+    ]
   },
   {
     "id": "resistencia-15x20-beinsen-riad",
@@ -3996,13 +4032,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza 15x20cm per pressa Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_1579.webp",
     "description": {
-      "es": "Plato de calor de formato pequeño para etiquetas o logos.",
-      "en": "Small format heat plate for labels or logos.",
-      "pt": "Prato de calor de formato pequeno para etiquetas ou logótipos.",
-      "it": "Piastra riscaldante di piccolo formato per etichette o loghi."
-    }
+      "es": "Resistencia de 15x20cm. para prensa térmica de etiquetas y gorras Beinsen Riad. Permite cambiar el módulo de gorras a un plato plano pequeño ideal para etiquetas o diseños en bolsillos.",
+      "en": "15x20cm heating element for Beinsen Riad label and cap heat press. Allows changing the cap module to a small flat plate ideal for labels or pocket designs.",
+      "pt": "Resistência de 15x20cm. para prensa térmica de etiquetas e bonés Beinsen Riad. Ideal para logotipos e designs em bolsos.",
+      "it": "Resistenza 15x20cm. per pressa termica per etichette e cappellini Beinsen Riad. Ideale per loghi e design su tasche."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Gante" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90005119" }
+    ]
   },
   {
     "id": "resistencia-gorras-beinsen-riad",
@@ -4014,13 +4055,17 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza per cappellini per Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_1848_1_.webp",
     "description": {
-      "es": "Resistencia superior curva para el modelo Riad.",
-      "en": "Curved upper heating element for the Riad model.",
-      "pt": "Resistência superior curva para o modelo Riad.",
-      "it": "Resistenza superiore curva per il modello Riad."
-    }
+      "es": "Resistencia para sublimar gorras para prensa térmica Beinsen Riad.",
+      "en": "Cap sublimation heating element for Beinsen Riad heat press.",
+      "pt": "Resistência para sublimar bonés para prensa térmica Beinsen Riad.",
+      "it": "Resistenza per sublimare cappellini per pressa termica Beinsen Riad."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006134" }
+    ]
   },
   {
     "id": "plato-gorras-beinsen-obrei",
@@ -4032,13 +4077,17 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra per cappellini per Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-20190422112715700.webp.webp",
     "description": {
-      "es": "Accesorio compatible con el sistema Obrei.",
-      "en": "Accessory compatible with the Obrei system.",
-      "pt": "Acessório compatível com o sistema Obrei.",
-      "it": "Accessorio compatibile con il sistema Obrei."
-    }
+      "es": "Optimiza tu prensa térmica modelo Beinsen Obrei con nuestro plato inferior para gorras. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Obrei. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
+      "en": "Optimize your Beinsen Obrei heat press with our lower cap plate. Specifically designed for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes. Manufactured with high quality materials, it guarantees uniform heat distribution and precise sublimation results.",
+      "pt": "Otimize a sua prensa térmica modelo Beinsen Obrei com nosso prato inferior para bonés. Projetado especificamente para este modelo, nosso prato inferior intercambiável permite adaptar a sua prensa térmica a diferentes tamanhos de produtos. Fabricado com materiais de alta qualidade para garantir distribuição uniforme e resultados precisos.",
+      "it": "Ottimizza la tua pressa termica modello Beinsen Obrei con la nostra piastra inferiore per cappellini. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006380" }
+    ]
   },
   {
     "id": "resistencia-gorras-combo-beinsen",
@@ -4050,13 +4099,19 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza per cappellini per pressa combo Beinsen"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/t/r/transparent-jamaica5_1_1.webp",
     "description": {
-      "es": "Resistencia universal para modelos combo de Beinsen.",
-      "en": "Universal heating element for Beinsen combo models.",
-      "pt": "Resistência universal para modelos combo Beinsen.",
-      "it": "Resistenza universale per modelli combo Beinsen."
-    }
+      "es": "Resistencia de calor para gorras para plancha Combo de 1ª generación. Pieza de repuesto de metal. Superficie aproximada de planchado: 120 x 70 mm. Medidas del cable de conexión: 310 mm de largo.",
+      "en": "Cap heating element for 1st generation Combo heat press. Metal replacement part. Approximate ironing surface: 120 x 70 mm. Connection cable measurements: 310 mm long.",
+      "pt": "Resistência de calor para bonés para prensa Combo de 1ª geração. Peça de reposição de metal. Superfície de engomadoria aproximada: 120 x 70 mm. Medidas do cabo de ligação: 310 mm de comprimento.",
+      "it": "Resistenza di calore per cappellini per pressa Combo di 1ª generazione. Pezzo di ricambio in metallo. Superficie di stiratura approssimativa: 120 x 70 mm. Misure cavo di collegamento: 310 mm di lunghezza."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Medidas", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "122x150x100mm" },
+      { "label": { "es": "Potencia", "en": "Power", "pt": "Potência", "it": "Potenza" }, "value": "300 W (220V)" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Jamaica" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "PLAACRGOR" }
+    ]
   },
   {
     "id": "resistencia-gorras-beinsen-obrei",
@@ -4068,13 +4123,19 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza per cappellini per pressa Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/t/r/transparent-jamaica5_1_1_1.webp",
     "description": {
-      "es": "Repuesto de calor superior para gorras en modelo Obrei.",
-      "en": "Upper heat replacement for caps on Obrei model.",
-      "pt": "Substituição de calor superior para bonés no modelo Obrei.",
-      "it": "Ricambio riscaldante superiore per cappellini su modello Obrei."
-    }
+      "es": "Resistencia de calor para gorras para plancha Beinsen Obrei. Pieza de repuesto compuesta de metal. Superficie aproximada de planchado: 120 x 70 mm.",
+      "en": "Cap heating element for Beinsen Obrei heat press. Metal replacement part. Approximate ironing surface: 120 x 70 mm.",
+      "pt": "Resistência de calor para bonés para prensa Beinsen Obrei. Peça de reposição de metal. Superfície de engomadoria aproximada: 120 x 70 mm.",
+      "it": "Resistenza di calore per cappellini per pressa Beinsen Obrei. Pezzo di ricambio in metallo. Superficie di stiratura approssimativa: 120 x 70 mm."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Medidas", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "122x150x100mm" },
+      { "label": { "es": "Potencia", "en": "Power", "pt": "Potência", "it": "Potenza" }, "value": "300 W (220V)" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90005081" }
+    ]
   },
   {
     "id": "resistencia-15x15-beinsen-obrei",
@@ -4086,13 +4147,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza 15x15cm per pressa Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-20190327163426731.webp.webp",
     "description": {
-      "es": "Plato de calor cuadrado para pequeñas transferencias.",
-      "en": "Square heat plate for small transfers.",
-      "pt": "Prato de calor quadrado para pequenas transferências.",
-      "it": "Piastra riscaldante quadrata per piccoli trasferimenti."
-    }
+      "es": "Resistencia de 15x15cm. para prensa térmica Beinsen Obrei.",
+      "en": "15x15cm heating element for Beinsen Obrei heat press.",
+      "pt": "Resistência de 15x15cm. para prensa térmica Beinsen Obrei.",
+      "it": "Resistenza 15x15cm. per pressa termica Beinsen Obrei."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRESPL1" }
+    ]
   },
   {
     "id": "plato-15x20-beinsen-riad",
@@ -4104,13 +4170,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra 15x20cm per Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_1786.webp",
     "description": {
-      "es": "Plato inferior de soporte para el modelo Riad.",
-      "en": "Lower support plate for the Riad model.",
-      "pt": "Prato inferior de suporte para o modelo Riad.",
-      "it": "Piastra inferiore di supporto per il modello Riad."
-    }
+      "es": "Optimiza tu prensa térmica modelo Beinsen Riad con nuestro plato inferior de 15x20cm. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Riad. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
+      "en": "Optimize your Beinsen Riad heat press with our 15x20cm lower plate. Specifically designed for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes.",
+      "pt": "Otimize a sua prensa térmica modelo Beinsen Riad com nosso prato inferior de 15x20cm. Projetado especificamente para este modelo, nosso prato inferior intercambiável permite adaptar a sua prensa térmica a diferentes tamanhos de produtos.",
+      "it": "Ottimizza la tua pressa termica modello Beinsen Riad con la nostra piastra inferiore da 15x20cm. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Gante" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006402" }
+    ]
   },
   {
     "id": "plato-base-15x15-beinsen-obrei",
@@ -4122,13 +4193,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 15x15cm per pressa Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/t/r/transparent-20190327163533864.webp.webp",
     "description": {
-      "es": "Soporte inferior cuadrado de 15x15 cm.",
-      "en": "15x15 cm square lower support.",
-      "pt": "Suporte inferior quadrado de 15x15 cm.",
-      "it": "Supporto inferiore quadrato 15x15 cm."
-    }
+      "es": "Plato base de 15x15 cm. para prensa térmica Beinsen Obrei. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa.",
+      "en": "15x15 cm base plate for Beinsen Obrei heat press. Made of tough, high-quality materials to ensure uniform and precise application.",
+      "pt": "Prato base de 15x15 cm para prensa térmica Beinsen Obrei. Fabricado com materiais resistentes e de alta qualidade para garantir uma aplicação uniforme e precisa.",
+      "it": "Piastra base 15x15 cm per pressa termica Beinsen Obrei. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006379" }
+    ]
   },
   {
     "id": "plato-intercambiable-18x18-barbados",
@@ -4140,13 +4216,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile 18x18cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/1/8/18cm._1.webp",
     "description": {
-      "es": "Accesorio para cambio rápido en prensa Barbados.",
-      "en": "Quick change accessory for Barbados press.",
-      "pt": "Acessório de troca rápida para prensa Barbados.",
-      "it": "Accessorio per cambio rapido su pressa Barbados."
-    }
+      "es": "Plato base intercambiable de 18 x 18 cm para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para logos y pequeños diseños.",
+      "en": "Interchangeable 18 x 18 cm base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for logos and small designs.",
+      "pt": "Prato base intercambiável de 18 x 18 cm para a sua prensa de transferência Beinsen Barbados. Fabricado com materiais resistentes e de alta qualidade para garantir uma aplicação uniforme e precisa. Perfeito para logótipos e designs pequenos.",
+      "it": "Piastra base intercambiabile da 18 x 18 cm per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per loghi e piccoli disegni."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020103" }
+    ]
   },
   {
     "id": "plato-intercambiable-redondo-24-barbados",
@@ -4158,13 +4239,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile tonda 24cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/2/4/24cm._1.webp",
     "description": {
-      "es": "Plato circular ideal para platos o logos redondos.",
-      "en": "Circular plate ideal for plates or round logos.",
-      "pt": "Prato circular ideal para pratos ou logótipos redondos.",
-      "it": "Piastra circolare ideale per piatti o loghi tondi."
-    }
+      "es": "Plato base redondo de 24cm de diámetro para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para platos, cojines y diseños circulares.",
+      "en": "24cm diameter round base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for plates, cushions and circular designs.",
+      "pt": "Prato base redondo de 24cm de diâmetro para a sua prensa de transferência Beinsen Barbados. Fabricado com materiais resistentes e de alta qualidade para garantir uma aplicação uniforme e precisa. Perfeito para pratos, almofadas e designs circulares.",
+      "it": "Piastra base rotonda da 24 cm di diametro per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per piatti, cuscini e disegni circolari."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020104" }
+    ]
   },
   {
     "id": "plato-intercambiable-zapatillas-barbados",
@@ -4176,13 +4262,17 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile per scarpe per Barbados"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/3/6/36cm._1.webp",
     "description": {
-      "es": "Diseño especial para facilitar el marcado de calzado.",
-      "en": "Special design to facilitate footwear marking.",
-      "pt": "Design especial para facilitar a marcação de calçado.",
-      "it": "Design speciale per facilitare la marcatura delle calzature."
-    }
+      "es": "Plato base para zapatillas para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Si te dedicas a la personalización de productos, un plato para zapatillas puede ser una excelente inversión para ampliar tu catálogo y atraer más clientes.",
+      "en": "Shoe base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. If you personalize products, a shoe plate can be an excellent investment to expand your catalog and attract more customers.",
+      "pt": "Prato base para sapatilhas para a sua prensa de transferência Beinsen Barbados. Fabricado com materiais resistentes e de alta qualidade para garantir uma aplicação uniforme e precisa. Se você personaliza produtos, um prato para sapatilhas pode ser uma excelente expansão de catálogo.",
+      "it": "Piastra base per scarpe per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Se personalizzi prodotti, una piastra per scarpe è un eccellente investimento."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020107" }
+    ]
   },
   {
     "id": "plato-intercambiable-18x38-barbados",
@@ -4194,13 +4284,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile 18x38cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/3/8/38cm._2.webp",
     "description": {
-      "es": "Formato alargado para mangas o perneras.",
-      "en": "Elongated format for sleeves or pant legs.",
-      "pt": "Formato alongado para mangas ou pernas de calças.",
-      "it": "Formato allungato per maniche o gambe dei pantaloni."
-    }
+      "es": "Plato base de 18 x 38 cm para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para camisetas infantiles y de tallas pequeñas.",
+      "en": "18 x 38 cm base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for children's and small size t-shirts.",
+      "pt": "Prato base de 18 x 38 cm para a sua prensa de transferência Beinsen Barbados. Fabricado com materiais resistentes e de alta qualidade para garantir aplicação uniforme e precisa. Perfeito para t-shirts infantis e tamanhos pequenos.",
+      "it": "Piastra base da 18 x 38 cm per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per magliette da bambino e taglie piccole."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020100" }
+    ]
   },
   {
     "id": "plato-intercambiable-18x45-barbados",
@@ -4212,13 +4307,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile 18x45cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/4/5/45cm._1.webp",
     "description": {
-      "es": "Soporte extra largo para prendas de gran longitud.",
-      "en": "Extra long support for long garments.",
-      "pt": "Suporte extra longo para roupas compridas.",
-      "it": "Supporto extra lungo per indumenti lunghi."
-    }
+      "es": "Plato base de 18 x 45 cm para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para prendas y textiles estrechos de gran longitud.",
+      "en": "18 x 45 cm base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for narrow and long textiles or garments.",
+      "pt": "Prato base de 18 x 45 cm para a sua prensa de transferência Beinsen Barbados. Fabricado com materiais resistentes e de alta qualidade para garantir aplicação uniforme e precisa. Perfeito para peças de vestuário e têxteis estreitos e longos.",
+      "it": "Piastra base da 18 x 45 cm per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per capi e tessuti stretti e molto lunghi."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020102" }
+    ]
   },
   {
     "id": "plato-intercambiable-30x35-barbados",
@@ -4230,13 +4330,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile 30x35cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/3/5/35cm._1.webp",
     "description": {
-      "es": "Formato intermedio para camisetas infantiles o sudaderas.",
-      "en": "Intermediate format for children's t-shirts or hoodies.",
-      "pt": "Formato intermédio para t-shirts infantis ou moletons.",
-      "it": "Formato intermedio per t-shirt da bambino o felpe."
-    }
+      "es": "Plato base de 30 x 35 cm para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para materiales de tamaño mediano que requieren tensión.",
+      "en": "30 x 35 cm base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for medium-sized materials that require tension.",
+      "pt": "Prato base de 30 x 35 cm para a sua prensa de transferência Beinsen Barbados. Fabricado com materiais resistentes e de alta qualidade para garantir aplicação uniforme e precisa. Perfeito para materiais de tamanho médio que requerem tensão.",
+      "it": "Piastra base da 30 x 35 cm per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per materiali di medie dimensioni che richiedono tensione."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020101" }
+    ]
   },
   {
     "id": "placa-polimero-platos-horno",
@@ -4248,13 +4353,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra in polimero per piatti da 6 a 10\" per forno"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/3/d/3d-10.webp",
     "description": {
-      "es": "Accesorio para sublimación de platos en hornos 3D.",
-      "en": "Accessory for plate sublimation in 3D ovens.",
-      "pt": "Acessório para sublimação de pratos em fornos 3D.",
-      "it": "Accessorio per la sublimazione di piatti in forni 3D."
-    }
+      "es": "Este molde de placa de polímero de sublimación se utiliza en una prensa térmica al vacío 3D para evitar que las placas de polímero se deformen durante el proceso de sublimación. El molde está dividido en varios círculos de diferentes tamaños, lo que le permite ajustar el molde para adaptarse a platos de distintos tamaños.",
+      "en": "This sublimation polymer plate mold is used in a 3D vacuum heat press to prevent polymer plates from deforming during the sublimation process. The mold is divided into several circles of different sizes, allowing you to adjust the mold to fit different plate sizes.",
+      "pt": "Este molde de placa de polímero de sublimação é utilizado em uma prensa térmica a vácuo 3D para evitar que as placas de polímero se deformem durante o processo de sublimação. O molde é dividido em vários círculos de diferentes tamanhos, permitindo ajustar o molde para caber em pratos de diferentes tamanhos.",
+      "it": "Questo stampo per lastra in polimero a sublimazione viene utilizzato in una termopressa sottovuoto 3D per impedire la deformazione delle lastre in polimero durante il processo di sublimazione. Lo stampo è diviso in diversi cerchi di diverse dimensioni, consentendo di regolare lo stampo per adattarsi a piatti di diverse dimensioni."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Platos de 15 cm - 25 cm (6\"-10\") / 15 cm - 25 cm (6\"-10\") plates" },
+      { "label": { "es": "Diámetros internos", "en": "Internal diameters", "pt": "Diâmetros internos", "it": "Diametri interni" }, "value": "13,5 cm, 15,5 cm, 17 cm, 20 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLPLHOR" }
+    ]
   },
   {
     "id": "molde-3d-silicona-platos",
@@ -4393,24 +4503,6 @@ export const allAccessoriesData: Accessory[] = [
     ]
   },
   {
-    "id": "moldes-3d-silicona-platos-horno-3d",
-    "slug": "moldes-3d-silicona-platos-horno-3d",
-    "name": {
-      "es": "Moldes 3D de silicona para platos en horno 3D",
-      "en": "3D silicone molds for plates in 3D oven",
-      "pt": "Moldes 3D de silicone para pratos em forno 3D",
-      "it": "Stampi 3D in silicone per piatti in forno 3D"
-    },
-    "price": "Consultar PVP",
-    "image": "",
-    "description": {
-      "es": "Kit de moldes para la producción de platos en serie.",
-      "en": "Mold kit for mass production of plates.",
-      "pt": "Kit de moldes para produção de pratos em massa.",
-      "it": "Kit di stampi per la produzione di piatti in serie."
-    }
-  },
-  {
     "id": "resistencia-platos-6-1-gen",
     "slug": "resistencia-platos-6-1-gen",
     "name": {
@@ -4420,13 +4512,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza per piatti 6\" - 1ª Generazione"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/t/r/transparent-sin_re.webp",
     "description": {
-      "es": "Resistencia clásica para platos pequeños de 15 cm.",
-      "en": "Classic heating element for small 15 cm plates.",
-      "pt": "Resistência clássica para pratos pequenos de 15 cm.",
-      "it": "Resistenza classica per piatti piccoli da 15 cm."
-    }
+      "es": "Resistencia de calor para planchas de platos. Este plato es el que aplica el calor sobre el objeto a planchar. Resistencia para platos de 6\".",
+      "en": "Heating element for plate presses. This plate applies heat to the object to be pressed. 6\" plate heating element.",
+      "pt": "Resistência de calor para prensas de pratos. Este prato aplica calor ao objeto a ser prensado. Resistência para pratos de 6\".",
+      "it": "Resistenza di calore per presse per piatti. Questa piastra applica calore all'oggetto da pressare. Resistenza per piatti da 6\"."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "6\" (15 cm)" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Plancha Combo de Beinsen 1ª Generación (Dorian)" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BPLAN163" }
+    ]
   },
   {
     "id": "resistencia-platos-5-dorian",
@@ -4438,13 +4535,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza per piatti da 5\" Dorian"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/t/r/transparent-resiplat5.webp",
     "description": {
-      "es": "Específica para el modelo de prensa Dorian.",
-      "en": "Specific for the Dorian press model.",
-      "pt": "Específica para o modelo de prensa Dorian.",
-      "it": "Specifica per il modello di pressa Dorian."
-    }
+      "es": "Resistencia de calor para plancha de Platos Beinsen de 5\"(12.6cm).",
+      "en": "Heat heating element for Beinsen 5\"(12.6cm) Plate press.",
+      "pt": "Resistência de calor para prensa de Pratos Beinsen de 5\"(12.6cm).",
+      "it": "Resistenza di calore per pressa per Piatti Beinsen da 5\"(12.6cm)."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "5\" (12.6 cm)" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Dorian" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES05P" }
+    ]
   },
   {
     "id": "rodillo-cintas",
@@ -4456,13 +4558,17 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Rullo per nastri"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-rodillo-kenia.webp",
     "description": {
-      "es": "Accesorio para el marcaje continuo de cintas y lanyards.",
-      "en": "Accessory for continuous marking of ribbons and lanyards.",
-      "pt": "Acessório para marcação contínua de fitas e lanyards.",
-      "it": "Accessorio per la marcatura continua di nastri e cordini."
-    }
+      "es": "Accesorio para sublimar cintas de manera sencilla. Rodillo donde insertar los rollos de cinta y pasarlas gracias a su manivela. Diseñado exclusivamente para adaptarse a nuestra plancha térmica Kenia de Beinsen. CE aprobado. Fácil montaje y desmontaje.",
+      "en": "Accessory to easily sublimate ribbons. Roller where to insert the ribbon rolls and pass them through thanks to its crank. Exclusively designed to adapt to our Beinsen Kenia heat press. CE approved. Easy assembly and disassembly.",
+      "pt": "Acessório para sublimar fitas de forma simples. Rolo onde inserir os rolos de fita e passá-los graças à sua manivela. Projetado exclusivamente para se adaptar à nossa prensa térmica Kenia da Beinsen. Aprovado CE. Fácil montagem e desmontagem.",
+      "it": "Accessorio per sublimare facilmente i nastri. Rullo in cui inserire i rotoli di nastro e farli scorrere grazie alla sua manovella. Progettato esclusivamente per adattarsi alla nostra pressa termica Kenia di Beinsen. Approvato CE. Facile montaggio e smontaggio."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Kenia" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "ACMPRTKENROD" }
+    ]
   },
   {
     "id": "almohadilla-algodon-80x110",
@@ -4685,13 +4791,20 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Sensore piastra riscaldante anteriore per forno DTF InkOne SX8 e SZ1"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/s/e/sensor-placa-calefactora-delante_3_.webp",
     "description": {
-      "es": "Control preciso de temperatura para el precalentado.",
-      "en": "Precise temperature control for preheating.",
-      "pt": "Controle preciso de temperatura para o pré-aquecimento.",
-      "it": "Controllo preciso della temperatura per il preriscaldamento."
-    }
+      "es": "El Sensor de la placa calefactora delantera para horno y aplicador DTF InkOne SX8 y SZ1 mide con precisión la temperatura del sistema de precalentamiento del film. Este repuesto diseñado para InkOne garantiza un control térmico estable, rendimiento constante y una instalación rápida y segura. Cable térmico protegido con funda aislante y conectores rápidos (quick-plug).",
+      "en": "The Front heating plate sensor for DTF InkOne SX8 and SZ1 oven accurately measures the temperature of the film preheating system. This replacement designed for InkOne ensures stable thermal control, consistent performance and quick, safe installation. Protected thermal cable with insulating sleeve and quick-plug connectors.",
+      "pt": "O Sensor da placa de aquecimento frontal para forno DTF InkOne SX8 e SZ1 mede com precisão a temperatura do sistema de pré-aquecimento do filme. Este recambio projetado para InkOne garante controle térmico estável, desempenho constante e instalação rápida e segura. Cabo térmico protegido com manga isolante e conectores rápidos.",
+      "it": "Il Sensore della piastra riscaldante anteriore per forno DTF InkOne SX8 e SZ1 misura con precisione la temperatura del sistema di preriscaldamento del film. Questo ricambio progettato per InkOne garantisce un controllo termico stabile, prestazioni costanti e un'installazione rapida e sicura. Cavo termico protetto con guaina isolante e connettori rapidi."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Sensor tipo K" },
+      { "label": { "es": "Rango", "en": "Range", "pt": "Gama", "it": "Gamma" }, "value": "0-800 °C" },
+      { "label": { "es": "Sistema de conexión", "en": "Connection system", "pt": "Sistema de conexão", "it": "Sistema di connessione" }, "value": "Quick-plug" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000150" }
+    ]
   },
   {
     "id": "contactor-ca-220v-sx8-sz1",
@@ -4730,13 +4843,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Sensore di temperatura per forno DTF InkOne SZ1"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/s/e/sensor-temperatura-horno-aplicad.webp",
     "description": {
-      "es": "Sonda de alta precisión para el control del túnel de secado.",
-      "en": "High precision probe for drying tunnel control.",
-      "pt": "Sonda de alta precisão para controle do túnel de secagem.",
-      "it": "Sonda ad alta precisione per il controllo del tunnel di essiccazione."
-    }
+      "es": "El Sensor de temperatura para horno y aplicador DTF InkOne SZ1 es el recambio del dispositivo que mide con precisión la temperatura interna del equipo durante el curado de transfers. Función clave para asegurar una fusión homogénea del polvo de poliamida. Conectores rápidos tipo quick-plug y cable térmico protegido con funda aislante resistente al calor.",
+      "en": "The Temperature sensor for DTF InkOne SZ1 oven is the replacement device that accurately measures the internal temperature of the equipment during transfer curing. Key function to ensure uniform fusion of polyamide powder. Quick-plug connectors and thermal cable protected with heat-resistant insulating sleeve.",
+      "pt": "O Sensor de temperatura para forno DTF InkOne SZ1 é o recambio do dispositivo que mede com precisão a temperatura interna do equipamento durante a cura dos transfers. Função chave para garantir a fusão homogênea do pó de poliamida. Conectores rápidos e cabo térmico protegido com manga isolante resistente ao calor.",
+      "it": "Il Sensore di temperatura per forno DTF InkOne SZ1 è il ricambio del dispositivo che misura con precisione la temperatura interna dell'apparecchiatura durante la polimerizzazione dei transfer. Funzione chiave per garantire una fusione omogenea della polvere di poliammide. Connettori rapidi e cavo termico protetto con guaina isolante termoresistente."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Plug-and-play" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000129" }
+    ]
   },
   {
     "id": "motor-deposito-polvo-sx8",
@@ -4775,13 +4893,19 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Relè intermedio 24V + base per forno InkOne SZ1"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/rele-intermedio-24v-base-horno-a_3_.webp",
     "description": {
-      "es": "Componente eléctrico de maniobra para el control del sistema.",
-      "en": "Switching electrical component for system control.",
-      "pt": "Componente elétrico de manobra para controle do sistema.",
-      "it": "Componente elettrico di manovra per il controllo del sistema."
-    }
+      "es": "El Relé intermedio de 24 V + base para horno y aplicador DTF InkOne SZ1 es el recambio del dispositivo que permite, a la señal de control de 24 V, accionar el contactor de potencia de CA, asegurando una conmutación fiable y segura del sistema de secado. Conjunto con socket/soporte para montaje en carril DIN incluido.",
+      "en": "The 24V intermediate relay + base for DTF InkOne SZ1 applicator oven is the replacement device that allows the 24V control signal to actuate the AC power contactor, ensuring reliable and safe switching of the drying system. Set with socket/support for DIN rail mounting included.",
+      "pt": "O Relé intermediário de 24V + base para forno e aplicador DTF InkOne SZ1 é a peça de reposição que permite à sinal de controle de 24V acionar o contator de potência de CA, garantindo uma comutação confiável e segura do sistema de secagem. Conjunto com soquete para montagem em trilho DIN incluído.",
+      "it": "Il Relè intermedio 24V + base per forno e applicatore DTF InkOne SZ1 è il dispositivo di ricambio che consente al segnale di controllo 24V di azionare il contattore di potenza CA, garantendo una commutazione affidabile e sicura del sistema di essiccazione. Set con zoccolo/supporto per montaggio su guida DIN incluso."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tensión de control", "en": "Control voltage", "pt": "Tensão de controle", "it": "Tensione di controllo" }, "value": "Bobina de 24 V DC" },
+      { "label": { "es": "Capacidad de conmutación", "en": "Switching capacity", "pt": "Capacidade de comutação", "it": "Capacità di commutazione" }, "value": "5A a 250V AC o 5A a 28V DC (IEC255)" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000170" }
+    ]
   },
   {
     "id": "rele-estado-solido-sz1",
@@ -4793,13 +4917,20 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Relè a stato solido CDSSR-1DA 15DA per forno DTF InkOne SZ1"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/rele-estado-solido-cdssr-1da-15d_4_.webp",
     "description": {
-      "es": "Relé silencioso de alta velocidad para control térmico.",
-      "en": "High speed silent relay for thermal control.",
-      "pt": "Relé silencioso de alta velocidade para controle térmico.",
-      "it": "Relè silenzioso ad alta velocità per controllo termico."
-    }
+      "es": "El Relé de estado sólido CDSSR-1DA 15DA para horno aplicador DTF InkOne SZ1 es una pieza de recambio esencial para el control de corriente alterna. Este componente garantiza un funcionamiento continuo, estable y silencioso, ideal para equipos que operan en procesos de curado térmico prolongado. Tipo SSR sin partes móviles, ofrece mayor durabilidad. Eficiencia energética y conmutación rápida y segura.",
+      "en": "The CDSSR-1DA 15DA Solid state relay for DTF InkOne SZ1 applicator oven is an essential replacement part for AC control. This component guarantees continuous, stable and silent operation. SSR type with no moving parts, energy efficient and fast switching.",
+      "pt": "O Relé de estado sólido CDSSR-1DA 15DA para forno DTF InkOne SZ1 é uma peça de reposição essencial para o controle CA. Este componente garante um funcionamento contínuo, estável e silencioso. Tipo SSR sem partes móveis, eficiente em energia e comutação rápida.",
+      "it": "Il relè a stato solido CDSSR-1DA 15DA per forno DTF InkOne SZ1 è una parte di ricambio essenziale per il controllo CA. Questo componente garantisce un funzionamento continuo, stabile e silenzioso. Tipo SSR senza parti mobili, alta efficienza e commutazione veloce."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "SSR (Solid State Relay)" },
+      { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "CDSSR-DA-4815" },
+      { "label": { "es": "Entrada / Salida", "en": "Input / Output", "pt": "Entrada / Saída", "it": "Ingresso / Uscita" }, "value": "INPUT 3-32 VDC | OUTPUT 15A 24-480VAC" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000146" }
+    ]
   },
   {
     "id": "rele-hornos-sx8-sz1",
@@ -4811,13 +4942,19 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Relè per forni DTF InkOne SX8 / SZ1"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/r/e/rele-hornos-dtf-inkone-sx8-sz1_2_.webp",
     "description": {
-      "es": "Repuesto eléctrico general para la gama InkOne.",
-      "en": "General electrical replacement for the InkOne range.",
-      "pt": "Substituição elétrica geral para a gama InkOne.",
-      "it": "Ricambio elettrico generale per la gamma InkOne."
-    }
+      "es": "El Relé para hornos DTF InkOne SZ1 es una pieza de recambio esencial para el control de corriente alterna en estos equipos. Se trata de un relé de estado sólido, silencioso, seguro y eficiente, diseñado para garantizar un funcionamiento continuo y sin interrupciones. Aislamiento eléctrico mediante optoacoplador.",
+      "en": "The Relay for DTF InkOne SZ1 ovens is an essential replacement part for alternating current control in these devices. It is a solid state relay, silent, safe and efficient, designed to ensure continuous operation without interruptions. Electrical isolation by optocoupler.",
+      "pt": "O Relé para fornos DTF InkOne SZ1 é uma peça de reposição essencial para controle de corrente alternada nestes equipamentos. É um relé de estado sólido, silencioso, seguro e eficiente, projetado para garantir operação contínua e sem interrupções. Isolamento elétrico via optoacoplador.",
+      "it": "Il Relè per forni DTF InkOne SZ1 è una parte di ricambio essenziale per il controllo della corrente alternata in queste apparecchiature. Si tratta di un relè a stato solido, silenzioso, sicuro ed efficiente, progettato per garantire un funzionamento continuo e senza interruzioni. Isolamento elettrico tramite optoisolatore."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Relé de estado sólido (SSR)" },
+      { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "SSR-40DAH" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000114" }
+    ]
   },
   {
     "id": "placa-base-hornos-sx8-sz1",
@@ -4912,13 +5049,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza cilindrica da 2.5oz per mini tazze"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/resistencia_de_2.5oz.webp",
     "description": {
-      "es": "Ideal para tazas de café espresso o chupitos rectos.",
-      "en": "Ideal for espresso mugs or straight shot glasses.",
-      "pt": "Ideal para chávenas de café expresso ou copos de shot retos.",
-      "it": "Ideale per tazzine da espresso o bicchierini da shot dritti."
-    }
+      "es": "Resistencia de 18 x 8.5 cm compatible con planchas transfer para tazas. Ideal para personalizar tazas pequeñas con resultados precisos y profesionales.",
+      "en": "18 x 8.5 cm heating element compatible with transfer presses for mugs. Ideal for personalizing small mugs with precise and professional results.",
+      "pt": "Resistência de 18 x 8.5 cm compatível com prensas térmicas para canecas. Ideal para personalizar canecas pequenas com resultados precisos e profissionais.",
+      "it": "Resistenza da 18 x 8.5 cm compatibile con presse transfer per tazze. Ideale per personalizzare tazze piccole con risultati precisi e professionali."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 8.5 cm (2.5oz)" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006268" }
+    ]
   },
   {
     "id": "resistencia-chupitos-1-5oz",
@@ -4930,13 +5072,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza conica da 1.5oz per bicchierini da shot"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/resistencia_1.5oz_principal.webp",
     "description": {
-      "es": "Pequeña resistencia específica para vasos de chupito cónicos.",
-      "en": "Small specific heating element for conical shot glasses.",
-      "pt": "Pequena resistência específica para copos de shot cónicos.",
-      "it": "Piccola resistenza specifica per bicchierini da shot conici."
-    }
+      "es": "Resistencia de 12 x 8 cm compatible con planchas transfer para tazas. Ideal para personalizar tazas de café espresso y vasos de chupito de 1.5 oz con resultados precisos y profesionales.",
+      "en": "12 x 8 cm heating element compatible with heat presses for mugs. Ideal for personalizing espresso coffee cups and 1.5 oz shot glasses with precise and professional results.",
+      "pt": "Resistência de 12 x 8 cm compatível com prensas térmicas para canecas. Ideal para personalizar chávenas de café expresso e copos de shot de 1.5 oz com resultados precisos e profissionais.",
+      "it": "Resistenza da 12 x 8 cm compatibile con presse transfer per tazze. Ideale per personalizzare tazzine da caffè espresso e bicchierini da shot da 1.5 oz con risultati precisi e professionali."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 8 cm (1.5oz cónica)" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006264" }
+    ]
   },
   {
     "id": "resistencia-cilindrica-20-30oz",
@@ -4948,13 +5095,19 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Resistenza cilindrica da 20 a 30 once"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/resistencia_20-30oz_1_.webp",
     "description": {
-      "es": "Especial para termos largos y botellas de gran capacidad.",
-      "en": "Special for long tumblers and large capacity bottles.",
-      "pt": "Especial para copos térmicos longos e garrafas de grande capacidade.",
-      "it": "Speciale per thermos lunghi e bottiglie di grande capacità."
-    }
+      "es": "Resistencia cilíndrica de 20 a 30 onzas – Compatible con plancha Maine. Da un salto de calidad en tus diseños cilíndricos con esta resistencia especializada para sublimar botellas, termos u otros recipientes de gran tamaño. Distribución uniforme del calor gracias a su construcción robusta.",
+      "en": "20 to 30 ounce cylindrical heating element - Compatible with Maine press. Take a leap in quality in your cylindrical designs with this specialized heating element for sublimating large bottles, thermoses or other large containers. Uniform heat distribution due to its robust construction.",
+      "pt": "Resistência cilíndrica de 20 a 30 onças – Compatível com prensa Maine. Dê um salto de qualidade em seus designs cilíndricos com esta resistência especializada para sublimar garrafas, copos térmicos ou outros recipientes grandes. Distribuição uniforme do calor graças à sua construção robusta.",
+      "it": "Resistenza cilindrica da 20 a 30 once – Compatibile con la pressa Maine. Fai un salto di qualità nei tuoi disegni cilindrici con questa resistenza specializzata per sublimare bottiglie, thermos o altri grandi contenitori. Distribuzione uniforme del calore grazie alla sua costruzione robusta."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "27 cm" },
+      { "label": { "es": "Diámetro", "en": "Diameter", "pt": "Diâmetro", "it": "Diametro" }, "value": "Ajustable 9,5 - 12 cm" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Maine" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES20" }
+    ]
   },
   {
     "id": "plato-base-18x18-cambio-rapido",
@@ -4966,13 +5119,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 18x18cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/i/m/img_20250709_105209-removebg-preview_1_.webp",
     "description": {
-      "es": "Plato inferior compatible con sistemas de liberación rápida.",
-      "en": "Lower plate compatible with quick release systems.",
-      "pt": "Prato inferior compatível com sistemas de liberação rápida.",
-      "it": "Piastra inferiore compatibile con sistemi di sgancio rapido."
-    }
+      "es": "Plato base de 18 x 18 centímetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de pequeños objetos de manera sencilla.",
+      "en": "18 x 18 cm base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing small objects.",
+      "pt": "Prato base de 18 x 18 cm compatível com o sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Ideal para personalizar objetos pequenos.",
+      "it": "Piastra base 18 x 18 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare oggetti piccoli."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020154" }
+    ]
   },
   {
     "id": "plato-base-18x38-cambio-rapido",
@@ -4984,13 +5142,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 18x38cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/i/m/img_20250709_102718-removebg-preview_1_.webp",
     "description": {
-      "es": "Diseño para mangas o áreas estrechas con cambio rápido.",
-      "en": "Design for sleeves or narrow areas with quick change.",
-      "pt": "Design para mangas ou áreas estreitas com troca rápida.",
-      "it": "Design per maniche o aree strette con cambio rapido."
-    }
+      "es": "Plato base de 18 x 38 centímetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Ideal para la personalización de mangas de manera sencilla.",
+      "en": "18 x 38 cm base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing sleeves easily.",
+      "pt": "Prato base de 18 x 38 cm compatível com o sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Ideal para personalizar mangas.",
+      "it": "Piastra base 18 x 38 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare le maniche."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020155" }
+    ]
   },
   {
     "id": "plato-base-18x45-cambio-rapido",
@@ -5002,13 +5165,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 18x45cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_20250709_094912-removebg-preview_1_.webp",
     "description": {
-      "es": "Soporte largo para intercambio instantáneo sin herramientas.",
-      "en": "Long support for instant exchange without tools.",
-      "pt": "Suporte longo para troca instantânea sem ferramentas.",
-      "it": "Supporto lungo per cambio istantaneo senza attrezzi."
-    }
+      "es": "Plato base de 18 x 45 centímetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de pantalones de manera sencilla.",
+      "en": "18 x 45 cm base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing pants easily.",
+      "pt": "Prato base de 18 x 45 cm compatível com o sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Ideal para personalizar calças de forma simples.",
+      "it": "Piastra base 18 x 45 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare pantaloni in modo semplice."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020152" }
+    ]
   },
   {
     "id": "plato-base-30x35-cambio-rapido",
@@ -5020,13 +5188,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 30x35cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/i/m/img_20250709_091112-removebg-preview_1_.webp",
     "description": {
-      "es": "Versión de plato base para prendas medianas.",
-      "en": "Base plate version for medium garments.",
-      "pt": "Versão de prato base para roupas médias.",
-      "it": "Versione piastra base per indumenti medi."
-    }
+      "es": "Plato base 30 x 35 centimetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de prendas infantiles u objetos de tamaño mediano de manera sencilla.",
+      "en": "30 x 35 cm base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing children's garments or medium-sized objects easily.",
+      "pt": "Prato base de 30 x 35 cm compatível com o sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Ideal para personalizar roupas infantis ou objetos de tamanho médio de forma simples.",
+      "it": "Piastra base 30 x 35 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare indumenti per bambini o oggetti di medie dimensioni in modo semplice."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020151" }
+    ]
   },
   {
     "id": "plato-base-zapatillas-cambio-rapido",
@@ -5038,13 +5211,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 18x38cm speciale scarpe per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/i/m/img_20250709_083659-removebg-preview_1_.webp",
     "description": {
-      "es": "Forma optimizada para el calzado con sistema de cambio fácil.",
-      "en": "Optimized shape for footwear with easy change system.",
-      "pt": "Forma otimizada para calçado com sistema de troca fácil.",
-      "it": "Forma ottimizzata per le calzature con sistema di cambio facile."
-    }
+      "es": "Plato base especial para zapatillas de 18 x 38 centímetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Ideal para la personalización de zapatillas de manera sencilla.",
+      "en": "Special 18 x 38 cm shoe base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing sneakers easily.",
+      "pt": "Prato base especial para sapatilhas de 18 x 38 cm compatível com o sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Ideal para personalizar sapatilhas.",
+      "it": "Piastra base speciale per scarpe da 18 x 38 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare scarpe da ginnastica."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020158" }
+    ]
   },
   {
     "id": "plato-base-redondo-24-cambio-rapido",
@@ -5056,13 +5234,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base tonda 24cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/i/m/img_20250708_174147-removebg-preview_1_.webp",
     "description": {
-      "es": "Base circular para sistema de acople rápido.",
-      "en": "Circular base for quick coupling system.",
-      "pt": "Base circular para sistema de acoplamento rápido.",
-      "it": "Base circolare per sistema di aggancio rapido."
-    }
+      "es": "Plato base redondo de 24 centimetros de diámetro compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de objetos redondo o sin bordes.",
+      "en": "24cm diameter round base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing round or borderless objects.",
+      "pt": "Prato base redondo de 24 centímetros de diâmetro compatível com o sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Ideal para personalizar objetos redondos ou sem bordas.",
+      "it": "Piastra base rotonda da 24 centimetri di diametro compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare oggetti rotondi o senza bordi."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020156" }
+    ]
   },
   {
     "id": "plato-base-gorras-cambio-rapido",
@@ -5074,13 +5257,17 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale cappellini per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/i/m/img_20250708_163906-removebg-preview_1_1_.webp",
     "description": {
-      "es": "Soporte inferior curvo para producción de gorras.",
-      "en": "Curved lower support for cap production.",
-      "pt": "Suporte inferior curvo para produção de bonés.",
-      "it": "Supporto inferiore curvo per la produzione di cappellini."
-    }
+      "es": "Plato base especial para gorras compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de hasta 4 gorras de manera simultánea.",
+      "en": "Special cap base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing up to 4 caps simultaneously.",
+      "pt": "Prato base especial para bonés compatível com o sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Ideal para personalizar até 4 bonés em simultâneo.",
+      "it": "Piastra base speciale per cappellini compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare fino a 4 cappellini contemporaneamente."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020157" }
+    ]
   },
   {
     "id": "plato-base-camisetas-cambio-rapido",
@@ -5092,13 +5279,17 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale magliette per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/i/m/img_20250708_133150-removebg-preview_1_.webp",
     "description": {
-      "es": "Optimizado para el enhebrado de camisetas.",
-      "en": "Optimized for t-shirt threading.",
-      "pt": "Otimizado para enfiar camisetas.",
-      "it": "Ottimizzato per l'infilaggio delle magliette."
-    }
+      "es": "Plato base especial para camisetas compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de camisetas con su etiqueta interior.",
+      "en": "Special t-shirt base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing t-shirts with their inner label.",
+      "pt": "Prato base especial para camisetas compatível com o sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Ideal para personalizar camisetas com a sua etiqueta interna.",
+      "it": "Piastra base speciale per magliette compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare magliette con la loro etichetta interna."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020172" }
+    ]
   },
   {
     "id": "plato-base-40x50-2mangas-cambio-rapido",
@@ -5110,13 +5301,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 40x50cm per 2 maniche per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/i/m/img_20250708_122504-removebg-preview_1_.webp",
     "description": {
-      "es": "Doble soporte para aumentar la productividad en mangas.",
-      "en": "Double support to increase productivity in sleeves.",
-      "pt": "Suporte duplo para aumentar a produtividade em mangas.",
-      "it": "Doppio supporto per aumentare la produttività sulle maniche."
-    }
+      "es": "Plato base de 40 x 50 cm. especial para mangas con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de 2 mangas a la vez.",
+      "en": "40 x 50 cm base plate special for sleeves with quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. This size is ideal for customizing 2 sleeves at once.",
+      "pt": "Prato base de 40 x 50 cm especial para mangas com sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Este tamanho é ideal para a personalização de 2 mangas ao mesmo tempo.",
+      "it": "Piastra base da 40 x 50 cm speciale per maniche con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Questa dimensione è ideale per la personalizzazione di 2 maniche contemporaneamente."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020160" }
+    ]
   },
   {
     "id": "plato-base-12x45-mangas-cambio-rapido",
@@ -5128,13 +5324,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 12 x 45cm speciale maniche per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/c/a/canva_export_-_x33adn7.webp",
     "description": {
-      "es": "Muy estrecho para mangas de prendas pequeñas.",
-      "en": "Very narrow for sleeves of small garments.",
-      "pt": "Muito estreito para mangas de roupas pequenas.",
-      "it": "Molto stretto per maniche di capi piccoli."
-    }
+      "es": "Plato base de 12 x 45 cm. con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de mangas.",
+      "en": "12 x 45 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials to ensure precise and even application. This size is ideal for personalizing sleeves.",
+      "pt": "Prato base de 12 x 45 cm com sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado em materiais resistentes e de alta qualidade para garantir uma aplicação uniforme e precisa. Este tamanho é ideal para personalização de mangas.",
+      "it": "Piastra base 12 x 45 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Questa dimensione è ideale per la personalizzazione delle maniche."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 45 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020171" }
+    ]
   },
   {
     "id": "plato-base-15x50-pantalones-cambio-rapido",
@@ -5146,13 +5347,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 15 x 50cm speciale pantaloni per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/a/canva_export_-_kpjawn7.webp",
     "description": {
-      "es": "Formato ideal para perneras de pantalón.",
-      "en": "Ideal format for pant legs.",
-      "pt": "Formato ideal para pernas de calças.",
-      "it": "Formato ideale per le gambe dei pantaloni."
-    }
+      "es": "Plato base de 15 x 50 cm. con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de pantalones.",
+      "en": "15 x 50 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials to ensure precise and even application. This size is ideal for personalizing pants.",
+      "pt": "Prato base de 15 x 50 cm com sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado em materiais resistentes e de alta qualidade para garantir uma aplicação uniforme e precisa. Este tamanho é ideal para personalização de calças.",
+      "it": "Piastra base 15 x 50 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Questa dimensione è ideale per la personalizzazione dei pantaloni."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 50 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020164" }
+    ]
   },
   {
     "id": "plato-base-15-5x25-5-cambio-rapido",
@@ -5164,13 +5370,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 15,5x25,5cm per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/a/canva_export_-_ivlqna5_1.webp",
     "description": {
-      "es": "Tamaño pequeño-medio para diversas aplicaciones.",
-      "en": "Small-medium size for various applications.",
-      "pt": "Tamanho pequeno-médio para várias aplicações.",
-      "it": "Dimensioni medio-piccole per varie applicazioni."
-    }
+      "es": "Plato base de 15,5 x 25,5 cm. con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para mangas, pantalones, bufandas, bolsos y fundas.",
+      "en": "15.5 x 25.5 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials for precise and even application. Perfect for sleeves, pants, scarves, bags and cases.",
+      "pt": "Prato base de 15,5 x 25,5 cm com sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Perfeito para mangas, calças, lenços, bolsas e capas.",
+      "it": "Piastra base 15,5 x 25,5 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Perfetta per maniche, pantaloni, sciarpe, borse e custodie."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15,5 x 25,5 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020170" }
+    ]
   },
   {
     "id": "plato-base-15x25-cambio-rapido",
@@ -5182,13 +5393,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 15x25cm per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/a/canva_export_-_ivlqna5.webp",
     "description": {
-      "es": "Soporte rectangular pequeño para logos.",
-      "en": "Small rectangular support for logos.",
-      "pt": "Suporte retangular pequeno para logótipos.",
-      "it": "Supporto rettangolare piccolo per loghi."
-    }
+      "es": "Plato base de 15 x 25 cm. con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para mangas, pantalones, bufandas, bolsos y fundas.",
+      "en": "15 x 25 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Perfect for sleeves, pants, scarves, bags and cases.",
+      "pt": "Prato base de 15 x 25 cm com sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Perfeito para mangas, calças, lenços, bolsas e capas.",
+      "it": "Piastra base 15 x 25 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Perfetta per maniche, pantaloni, sciarpe, borse e custodie."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 25 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020163" }
+    ]
   },
   {
     "id": "plato-base-25x30-cambio-rapido",
@@ -5200,13 +5416,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 25x30cm per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/a/canva_export_-_lmlbsyq.webp",
     "description": {
-      "es": "Excelente para prendas de niños y bebés.",
-      "en": "Excellent for children's and baby's garments.",
-      "pt": "Excelente para roupas de crianças e bebés.",
-      "it": "Eccellente per capi da bambino e neonato."
-    }
+      "es": "Plato base de 25 x 30 cm con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para camisetas infantiles, cojines, toallas, manteles, etc.",
+      "en": "25 x 30 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Perfect for children's t-shirts, cushions, towels, tablecloths, etc.",
+      "pt": "Prato base de 25 x 30 cm com sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Perfeito para t-shirts infantis, almofadas, toalhas, toalhas de mesa, etc.",
+      "it": "Piastra base da 25 x 30 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Perfetta per magliette bambino, cuscini, asciugamani, tovaglie, ecc."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 30 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020169" }
+    ]
   },
   {
     "id": "plato-base-15x15-cambio-rapido",
@@ -5218,13 +5439,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra base 15x15cm per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/a/canva_export_-_grambbx.webp",
     "description": {
-      "es": "El plato más pequeño para detalles y etiquetas.",
-      "en": "The smallest plate for details and labels.",
-      "pt": "O prato mais pequeno para detalhes e etiquetas.",
-      "it": "La piastra più piccola per dettagli ed etichette."
-    }
+      "es": "Plato base de 15 x 15 cm con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para parches, logos, posavasos y otros materiales pequeños.",
+      "en": "15 x 15 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Perfect for patches, logos, coasters and other small items.",
+      "pt": "Prato base de 15 x 15 cm com sistema de troca rápida para a sua prensa de transferência Beinsen. Fabricado com materiais resistentes e de alta qualidade. Perfeito para patches, logos, apoios de copos e outros artigos pequenos.",
+      "it": "Piastra base 15 x 15 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Perfetta per patch, loghi, sottobicchieri e altri articoli piccoli."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020162" }
+    ]
   },
   {
     "id": "almohadilla-silicona-80x100",
@@ -5261,13 +5487,18 @@ export const allAccessoriesData: Accessory[] = [
       "it": "Piastra 38x38cm per Beinsen Chinela"
     },
     "price": "Consultar PVP",
-    "image": "",
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-beinsen-logo2019-150x150-1_1__2.webp",
     "description": {
-      "es": "Repuesto de plato inferior para el modelo Chinela.",
-      "en": "Lower plate replacement for the Chinela model.",
-      "pt": "Substituição do prato inferior para o modelo Chinela.",
-      "it": "Ricambio piastra inferiore per il modello Chinela."
-    }
+      "es": "Optimiza tu prensa térmica modelo Beinsen Chinela con nuestro plato inferior de 38x38cm. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Chinela. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
+      "en": "Optimize your Beinsen Chinela heat press with our 38x38cm lower plate. Designed specifically for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes. Made with high quality materials, it guarantees an even heat distribution.",
+      "pt": "Otimize a sua prensa térmica modelo Beinsen Chinela com nosso prato inferior de 38x38cm. Projetado especificamente para este modelo, nosso prato inferior intercambiável permite adaptar a sua prensa térmica a diferentes tamanhos de produtos.",
+      "it": "Ottimizza la tua pressa termica modello Beinsen Chinela con la nostra piastra inferiore da 38x38cm. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Chinela" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "ACC001903" }
+    ]
   },
   {
     "id": "fusible-termico-3d-16",
