@@ -99,13 +99,15 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "mesa-universal-grande" },
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
@@ -207,13 +209,14 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "mesa-universal-grande" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "resistencia-tazas-6-10oz" },
+      { "id": "resistencia-tazas-11oz-b" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" },
+      { "id": "resistencia-cilindrica-tazas-11oz-tipo-a" }
     ],
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
@@ -312,13 +315,12 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "resistencia-platos-6-1-gen" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "resistencia-platos-5-dorian" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
@@ -512,14 +514,10 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "molde-3d-silicona-tazas-conicas-jarras" },
+      { "id": "molde-3d-silicona-platos" }
     ],
-    "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
-    ],
+    "consumables": [],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
@@ -603,13 +601,12 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "resistencia-cilindrica-tazas-11oz-tipo-a" },
+      { "id": "cinta-termica-10mm" }
     ],
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
@@ -703,13 +700,18 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-silicona-40x50-plato-base" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "almohadilla-silicona-38x38" },
+      { "id": "lamina-teflon-40x50" },
+      { "id": "guantes-protectores-algodon" },
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -818,13 +820,15 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "resistencia-gorras-beinsen-obrei" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "plato-gorras-beinsen-obrei" },
+      { "id": "resistencia-15x15-beinsen-obrei" },
+      { "id": "plato-base-15x15-beinsen-obrei" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
@@ -914,13 +918,16 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "mesa-universal-grande" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -1021,13 +1028,15 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "plato-gorras-beinsen-riad" },
+      { "id": "resistencia-15x20-beinsen-riad" },
+      { "id": "resistencia-gorras-beinsen-riad" },
+      { "id": "plato-15x20-beinsen-riad" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
@@ -1138,13 +1147,18 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "mesa-universal-grande" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "plato-resistencia-combo-38x38" },
+      { "id": "resistencia-gorras-combo-beinsen" },
+      { "id": "almohadilla-silicona-40x50-plato-base" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Multifunción", "en": "Multi-function", "pt": "Multifunções", "it": "Multifunzione" },
@@ -1261,13 +1275,33 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "plato-base-18x18-cambio-rapido" },
+      { "id": "plato-base-18x38-cambio-rapido" },
+      { "id": "plato-base-18x45-cambio-rapido" },
+      { "id": "plato-base-30x35-cambio-rapido" },
+      { "id": "plato-base-zapatillas-cambio-rapido" },
+      { "id": "plato-base-redondo-24-cambio-rapido" },
+      { "id": "plato-base-gorras-cambio-rapido" },
+      { "id": "plato-base-camisetas-cambio-rapido" },
+      { "id": "plato-base-40x50-2mangas-cambio-rapido" },
+      { "id": "mesa-universal-grande" },
+      { "id": "plato-base-12x45-mangas-cambio-rapido" },
+      { "id": "plato-base-15x50-pantalones-cambio-rapido" },
+      { "id": "plato-base-15-5x25-5-cambio-rapido" },
+      { "id": "plato-base-15x25-cambio-rapido" },
+      { "id": "plato-base-25x30-cambio-rapido" },
+      { "id": "plato-base-15x15-cambio-rapido" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "guantes-protectores-algodon" },
+      { "id": "almohadilla-silicona-40x50-plato-base" },
+      { "id": "lamina-teflon-40x50" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
@@ -1398,13 +1432,12 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "resistencia-tazas-6-10oz" },
+      { "id": "resistencia-tazas-11oz-b" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
@@ -1559,13 +1592,18 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "resistencia-tazas-2-5oz" },
+      { "id": "resistencia-chupitos-1-5oz" },
+      { "id": "resistencia-cilindrica-20-30oz" },
+      { "id": "resistencia-conica-tazas-12oz" },
+      { "id": "resistencia-tazas-conicas-17oz" },
+      { "id": "resistencia-doble-taza-11-15oz" },
+      { "id": "resistencia-tazas-6-10oz" },
+      { "id": "resistencia-tazas-11oz-b" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
@@ -1672,13 +1710,14 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "resistencia-tazas-6-10oz" },
+      { "id": "resistencia-tazas-11oz-b" },
+      { "id": "resistencia-conica-tazas-12oz" },
+      { "id": "resistencia-conica-tazas-17oz" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
@@ -1905,14 +1944,13 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "plato-gorras-beinsen-riad" },
+      { "id": "resistencia-gorras-beinsen-riad" },
+      { "id": "guantes-protectores-algodon" }
     ],
-    "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
-    ],
+    "consumables": [],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
@@ -2019,13 +2057,13 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "plato-15x20-beinsen-riad" },
+      { "id": "resistencia-15x20-beinsen-riad" },
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
@@ -2188,13 +2226,30 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "plato-base-18x18-cambio-rapido" },
+      { "id": "plato-base-18x38-cambio-rapido" },
+      { "id": "plato-base-18x45-cambio-rapido" },
+      { "id": "plato-base-30x35-cambio-rapido" },
+      { "id": "plato-base-zapatillas-cambio-rapido" },
+      { "id": "plato-base-redondo-24-cambio-rapido" },
+      { "id": "plato-base-gorras-cambio-rapido" },
+      { "id": "plato-base-camisetas-cambio-rapido" },
+      { "id": "plato-base-40x50-2mangas-cambio-rapido" },
+      { "id": "plato-base-12x45-mangas-cambio-rapido" },
+      { "id": "plato-base-15x50-pantalones-cambio-rapido" },
+      { "id": "plato-base-15-5x25-5-cambio-rapido" },
+      { "id": "plato-base-15x25-cambio-rapido" },
+      { "id": "plato-base-25x30-cambio-rapido" },
+      { "id": "plato-base-15x15-cambio-rapido" },
+      { "id": "lamina-teflon-40x50" },
+      { "id": "almohadilla-silicona-40x50-plato-base" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
@@ -2323,14 +2378,18 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "plato-base-15x15-cambio-rapido" },
+      { "id": "plato-base-18x45-cambio-rapido" },
+      { "id": "plato-base-12x45-mangas-cambio-rapido" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "plato-base-camisetas-cambio-rapido" },
+      { "id": "plato-base-40x50-2mangas-cambio-rapido" },
+      { "id": "plato-base-30x35-cambio-rapido" },
+      { "id": "plato-base-15-5x25-5-cambio-rapido" },
+      { "id": "almohadilla-teflon-termorresistente-40x50" }
     ],
-    "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
-    ],
+    "consumables": [],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
@@ -2378,13 +2437,18 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "mesa-universal-grande" },
+      { "id": "guantes-protectores-algodon" },
+      { "id": "lamina-teflon-38x38" },
+      { "id": "almohadilla-silicona-38x38" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -2476,13 +2540,21 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "mesa-universal-grande" },
+      { "id": "plato-intercambiable-18x18-barbados" },
+      { "id": "plato-intercambiable-zapatillas-barbados" },
+      { "id": "plato-intercambiable-18x38-barbados" },
+      { "id": "plato-intercambiable-redondo-24-barbados" },
+      { "id": "plato-intercambiable-30x35-barbados" },
+      { "id": "lamina-teflon-38x38" },
+      { "id": "almohadilla-silicona-38x38" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -2600,13 +2672,18 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "mesa-universal-grande" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
       { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "almohadilla-silicona-40x50" },
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -2727,13 +2804,32 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "plato-base-18x18-cambio-rapido" },
+      { "id": "plato-base-18x38-cambio-rapido" },
+      { "id": "plato-base-18x45-cambio-rapido" },
+      { "id": "plato-base-30x35-cambio-rapido" },
+      { "id": "plato-base-zapatillas-cambio-rapido" },
+      { "id": "plato-base-redondo-24-cambio-rapido" },
+      { "id": "plato-base-gorras-cambio-rapido" },
+      { "id": "plato-base-camisetas-cambio-rapido" },
+      { "id": "plato-base-40x50-2mangas-cambio-rapido" },
+      { "id": "mesa-universal-grande" },
+      { "id": "plato-base-12x45-mangas-cambio-rapido" },
+      { "id": "plato-base-15x50-pantalones-cambio-rapido" },
+      { "id": "plato-base-15-5x25-5-cambio-rapido" },
+      { "id": "plato-base-15x25-cambio-rapido" },
+      { "id": "plato-base-25x30-cambio-rapido" },
+      { "id": "plato-base-15x15-cambio-rapido" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "lamina-teflon-40x50" },
+      { "id": "almohadilla-silicona-40x50-plato-base" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -2861,13 +2957,13 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "mesa-universal-grande" },
+      { "id": "guantes-protectores-algodon" },
+      { "id": "almohadilla-silicona-40x50-plato-base" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -2985,13 +3081,18 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "mesa-universal-grande" },
+      { "id": "guantes-protectores-algodon" },
+      { "id": "lamina-teflon-38x38" },
+      { "id": "almohadilla-silicona-38x38" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -3107,14 +3208,9 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" }
     ],
-    "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
-    ],
+    "consumables": [],
 
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
@@ -3208,13 +3304,17 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "mesa-universal-grande" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "guantes-protectores-algodon" },
+      { "id": "almohadilla-silicona-40x50-plato-base" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -3331,13 +3431,17 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "mesa-universal-grande" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "guantes-protectores-algodon" },
+      { "id": "almohadilla-silicona-80x100" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -3445,13 +3549,17 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-teflon-termorresistente-38x38" },
+      { "id": "almohadilla-teflon-termorresistente-25x25" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "mesa-universal-grande" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "guantes-protectores-algodon" },
+      { "id": "almohadilla-silicona-80x100" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -3560,13 +3668,11 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
+      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
@@ -5531,12 +5637,273 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Filtro de aire para realizar vacío / Air filter for vacuum creation" },
       { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BHORN066" }
     ]
+  },
+  {
+    "id": "almohadilla-teflon-termorresistente-40x50",
+    "slug": "almohadilla-teflon-termorresistente-40x50",
+    "name": {
+      "es": "Almohadilla de teflón termorresistente negra de 40 x 50 cm. tp-20-bk",
+      "en": "Black heat-resistant Teflon pad 40 x 50 cm. tp-20-bk",
+      "pt": "Almofada de teflon termorresistente preta 40 x 50 cm. tp-20-bk",
+      "it": "Cuscinetto in teflon termoresistente nero 40 x 50 cm. tp-20-bk"
+    },
+    "price": 30,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/3/8/38cm._1_.webp",
+    "description": {
+      "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
+      "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
+      "pt": "Ideal para proteger botões, bainhas, fechos, etc. Evita riscos na placa metálica superior da prensa. Antiaderente. Fácil de limpar.",
+      "it": "Ideale per proteggere bottoni, orli, cerniere, ecc. Previene i graffi sulla piastra metallica superiore della pressa. Antiaderente. Facile da pulire."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90950104" },
+      { "label": { "es": "Referencia", "en": "Reference", "pt": "Referência", "it": "Riferimento" }, "value": "TP-20-BK" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
+    ]
+  },
+  {
+    "id": "almohadilla-teflon-termorresistente-38x38",
+    "slug": "almohadilla-teflon-termorresistente-38x38",
+    "name": {
+      "es": "Almohadilla de teflón termorresistente de 38x38 cm.",
+      "en": "Heat-resistant Teflon pad 38x38 cm.",
+      "pt": "Almofada de teflon termorresistente 38x38 cm.",
+      "it": "Cuscinetto in teflon termoresistente 38x38 cm."
+    },
+    "price": 25,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/3/8/38cm._1.webp",
+    "description": {
+      "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
+      "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
+      "pt": "Ideal para proteger botões, bainhas, fechos, etc. Evita riscos na placa metálica superior da prensa. Antiaderente. Fácil de limpar.",
+      "it": "Ideale per proteggere bottoni, orli, cerniere, ecc. Previene i graffi sulla piastra metallica superiore della pressa. Antiaderente. Facile da pulire."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BSNALMTFL38" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
+    ]
+  },
+  {
+    "id": "almohadilla-teflon-termorresistente-25x25",
+    "slug": "almohadilla-teflon-termorresistente-25x25",
+    "name": {
+      "es": "Almohadilla de teflón termorresistente de 25x25 cm.",
+      "en": "Heat-resistant Teflon pad 25x25 cm.",
+      "pt": "Almofada de teflon termorresistente 25x25 cm.",
+      "it": "Cuscinetto in teflon termoresistente 25x25 cm."
+    },
+    "price": 15,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/2/5/25cm..webp",
+    "description": {
+      "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
+      "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
+      "pt": "Ideal para proteger botões, bainhas, fechos, etc. Evita riscos na placa metálica superior da prensa. Antiaderente. Fácil de limpar.",
+      "it": "Ideale per proteggere bottoni, orli, cerniere, ecc. Previene i graffi sulla piastra metallica superiore della pressa. Antiaderente. Facile da pulire."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 25 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BSNALMTFL25" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
+    ]
+  },
+  {
+    "id": "almohadilla-teflon-termorresistente-15x15",
+    "slug": "almohadilla-teflon-termorresistente-15x15",
+    "name": {
+      "es": "Almohadilla de teflón termorresistente de 15x15 cm.",
+      "en": "Heat-resistant Teflon pad 15x15 cm.",
+      "pt": "Almofada de teflon termorresistente 15x15 cm.",
+      "it": "Cuscinetto in teflon termoresistente 15x15 cm."
+    },
+    "price": 10.70,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/1/5/15cm..webp",
+    "description": {
+      "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
+      "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
+      "pt": "Ideal para proteger botões, bainhas, fechos, etc. Evita riscos na placa metálica superior da prensa. Antiaderente. Fácil de limpiar.",
+      "it": "Ideale per proteggere bottoni, orli, cerniere, ecc. Previene i graffi sulla piastra metallica superiore della pressa. Antiaderente. Facile da pulire."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BSNALMTFL15" },
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
+    ]
+  },
+  {
+    "id": "termometro-digital-infrarrojos-it122",
+    "slug": "termometro-digital-infrarrojos-it122",
+    "name": {
+      "es": "Termómetro digital de infrarrojos IT-122",
+      "en": "Digital Infrared Thermometer IT-122",
+      "pt": "Termómetro digital infravermelho IT-122",
+      "it": "Termometro digitale a infrarossi IT-122"
+    },
+    "price": 24.90,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/t/e/termometro-digital-1.webp",
+    "description": {
+      "es": "Termómetro infrarrojo digital portátil sin contacto. Permite medir la temperatura de una habitación o de una taza al momento mientras se presiona el botón de modo de objeto. Ideal para controlar la temperatura con rapidez y precisión desde una distancia de seguridad.",
+      "en": "Portable non-contact digital infrared thermometer. Allows measuring room or object temperature instantly. Ideal for monitoring temperature quickly and accurately from a safety distance.",
+      "pt": "Termômetro infravermelho digital portátil sem contato. Permite medir a temperatura de uma sala ou objeto instantaneamente. Ideal para monitorar a temperatura com rapidez e precisão a uma distância de segurança.",
+      "it": "Termometro digitale a infrarossi portatile senza contatto. Consente di misurare istantaneamente la temperatura di una stanza o di un oggetto. Ideale per monitorare la temperatura in modo rapido e accurato da una distanza di sicurezza."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "IT-122" },
+      { "label": { "es": "Alimentación", "en": "Power", "pt": "Alimentação", "it": "Alimentazione" }, "value": "2 pilas AA (3V) - No incluidas" },
+      { "label": { "es": "Funciones", "en": "Functions", "pt": "Funções", "it": "Funzioni" }, "value": "Medición rápida, Alarma de fiebre, Retroiluminación tricolor" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "S12253" }
+    ]
+  },
+  {
+    "id": "guantes-protectores-algodon",
+    "slug": "guantes-protectores-algodon",
+    "name": {
+      "es": "Guantes protectores de algodón",
+      "en": "Protective cotton gloves",
+      "pt": "Luvas protetoras de algodão",
+      "it": "Guanti protettivi in cotone"
+    },
+    "price": 8.65,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/3/d/3d-gwst.webp",
+    "description": {
+      "es": "Guantes protectores de algodón para trabajar con total seguridad. Permiten manipular sin peligro planchas transfer y soportes impresos. Con textura de nitrilo para mejor adherencia y resistencia térmica hasta 250ºC.",
+      "en": "Protective cotton gloves for working with total safety. They allow handling transfer presses and printed supports without danger. Featuring nitrile texture for better grip and heat resistance up to 250ºC.",
+      "pt": "Luvas protetoras de algodão para trabalhar com total segurança. Permitem manipular prensas de transfer e suportes impressos sem perigo. Com textura de nitrilo para melhor aderência e resistência térmica até 250ºC.",
+      "it": "Guanti protettivi in cotone per lavorare in totale sicurezza. Consentono di maneggiare presse transfer e supporti stampati senza pericoli. Con trama in nitrile per una migliore presa e resistenza termica fino a 250ºC."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Algodón y Nitrilo / Cotton and Nitrile" },
+      { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 250ºC (periodos cortos) / Up to 250ºC (short periods)" },
+      { "label": { "es": "Talla", "en": "Size", "pt": "Tamanho", "it": "Taglia" }, "value": "Única (15 x 27 cm)" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "3DGWST" }
+    ]
+  },
+  {
+    "id": "mesa-universal-grande",
+    "slug": "mesa-universal-grande-ruedas",
+    "name": {
+      "es": "Mesa universal grande con ruedas para plancha térmica",
+      "en": "Large universal table with wheels for heat press",
+      "pt": "Mesa universal grande com rodas para prensa térmica",
+      "it": "Carrello universale grande con ruote per pressa termica"
+    },
+    "price": 265,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/m/e/mesa_universal_para_planchas_transfer.webp",
+    "description": {
+      "es": "Soporte Móvil Universal para planchas transfer Beinsen. Con una superficie de 98x88 cm y una altura de 71 cm, aguanta prensas de todo tipo. Sus cuatro ruedas giratorias con freno permiten moverlo con facilidad. Incluye un estante inferior para organizar herramientas y materiales.",
+      "en": "Universal Mobile Stand for Beinsen transfer presses. With a surface of 98x88 cm and a height of 71 cm, it supports all types of presses. Its four rotating wheels with brakes allow for easy movement. Includes a bottom shelf to organize tools and materials.",
+      "pt": "Suporte Móvel Universal para prensas de transfer Beinsen. Com uma superfície de 98x88 cm e uma altura de 71 cm, suporta todos os tipos de prensas. As suas quatro rodas giratórias com travões permitem uma movimentação fácil. Inclui uma prateleira inferior para organizar ferramentas e materiais.",
+      "it": "Supporto mobile universale per presse transfer Beinsen. Con una superficie di 98x88 cm e un'altezza di 71 cm, supporta tutti i tipi di presse. Le quattro ruote piroettanti con freno ne consentono un facile spostamento. Include un ripiano inferiore per organizzare strumenti e materiali."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Dimensiones Superficie", "en": "Surface Dimensions", "pt": "Dimensões da Superfície", "it": "Dimensioni Superficie" }, "value": "98 x 88 cm" },
+      { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "71 cm" },
+      { "label": { "es": "Peso", "en": "Weight", "pt": "Peso", "it": "Peso" }, "value": "25 kg" },
+      { "label": { "es": "Ruedas", "en": "Wheels", "pt": "Rodas", "it": "Ruote" }, "value": "4 giratorias con freno / 4 rotating with brakes" },
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Estante inferior incluido / Lower shelf included" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEISOPMOV" }
+    ]
+  },
+  {
+    "id": "resistencia-conica-tazas-12oz",
+    "slug": "resistencia-conica-tazas-12oz",
+    "name": {
+      "es": "Resistencia cónica para tazas de 12oz",
+      "en": "Conical heating element for 12oz mugs",
+      "pt": "Resistência cónica para canecas 12oz",
+      "it": "Resistenza conica per tazze da 12oz"
+    },
+    "price": 52,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/t/a/taza_conica_de_12_onzas.webp",
+    "description": {
+      "es": "Diseñada para tazas cónicas de 12 onzas. Fácil instalación mediante tornillos y conector rápido. Ideal como repuesto o accesorio para ampliar las capacidades de tu plancha Beinsen.",
+      "en": "Designed for 12oz conical mugs. Easy installation via screws and quick connector. Ideal as a replacement or accessory to expand the capabilities of your Beinsen press.",
+      "pt": "Projetada para canecas cónicas de 12 onças. Fácil instalação através de parafusos e conector rápido. Ideal como substituição ou acessório para expandir as capacidades da sua prensa Beinsen.",
+      "it": "Progettata per tazze coniche da 12 once. Facile installazione tramite viti e connettore rapido. Ideale come ricambio o accessorio per ampliare le capacità della tua pressa Beinsen."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cónica 12oz / Conical 12oz" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES12C" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Sicilia, Maine" }
+    ]
+  },
+  {
+    "id": "resistencia-conica-tazas-17oz",
+    "slug": "resistencia-para-tazas-conicas-17oz",
+    "name": {
+      "es": "Resistencia para tazas Cónicas de 17oz",
+      "en": "Heating element for 17oz Conical mugs",
+      "pt": "Resistência para canecas Cónicas 17oz",
+      "it": "Resistenza per tazze Coniche da 17oz"
+    },
+    "price": 52,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/1/6/16_5cm..webp",
+    "description": {
+      "es": "Resistencia de alta calidad para tazas cónicas de 17 onzas. Permite una transferencia de calor uniforme. Fácil de montar y desmontar, asegurando una producción eficiente.",
+      "en": "High-quality heating element for 17oz conical mugs. Allows uniform heat transfer. Easy to assemble and disassemble, ensuring efficient production.",
+      "pt": "Resistência de alta qualidade para canecas cónicas de 17 onças. Permite uma transferência de calor uniforme. Fácil de montar e desmontar, garantindo uma produção eficiente.",
+      "it": "Resistenza di alta qualità per tazze coniche da 17 once. Consente un trasferimento di calore uniforme. Facile da montare e smontare, garantendo una produzione efficiente."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cónica 17oz / Conical 17oz" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES17C" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" }
+    ]
   }
 ];
 export const allAccessoriesData: Accessory[] = [...rawAccessoriesData].sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
 
 
 const rawConsumablesData: Consumable[] = [
+  {
+    id: "cinta-termica-10mm",
+    slug: "cinta-termica-sublimacion-10mm",
+    name: {
+      "es": "Cinta térmica adhesiva para sublimación - 10mm x 33m",
+      "en": "Sublimation thermal adhesive tape - 10mm x 33m",
+      "pt": "Fita térmica adesiva para sublimação - 10mm x 33m",
+      "it": "Nastro termico adesivo per sublimazione - 10mm x 33m"
+    },
+    price: 4.15,
+    image: "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/i/cinta-termica-tipo-kapton-de-0-4.webp",
+    description: {
+      "es": "Cinta térmica de alta calidad idónea para aplicar sobre tazas, textiles y cerámica. Resiste altas temperaturas sin derretirse y asegura que el papel de sublimación se mantenga firme sin dejar marcas.",
+      "en": "High-quality thermal tape ideal for mugs, textiles, and ceramics. Withstands high temperatures without melting and ensures sublimation paper stays firm without leaving marks.",
+      "pt": "Fita térmica de alta qualidade ideal para canecas, têxteis e cerâmicas. Resiste a altas temperaturas sem derreter e garante que o papel de sublimação permaneça firme sem deixar marcas.",
+      "it": "Nastro termico di alta qualità ideale per tazze, tessuti e ceramica. Resiste alle alte temperature senza sciogliersi e assicura che la carta sublimatica rimanga salda senza lasciare segni."
+    },
+    technicalSpecs: [
+      { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "10 mm" },
+      { "label": { "es": "Largo", "en": "Length", "pt": "Comprimento", "it": "Lunghezza" }, "value": "33 m" },
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Kapton / Térmica" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "CONSUBCIN10M" }
+    ]
+  },
+  {
+    id: "almohadilla-silicona-40x50",
+    slug: "almohadilla-silicona-40x50",
+    name: {
+      "es": "Almohadilla de silicona de 40 x 50 cm para plato base",
+      "en": "Silicone pad 40 x 50 cm for base plate",
+      "pt": "Almofada de silicone de 40 x 50 cm para prato base",
+      "it": "Tappetino in silicone 40 x 50 cm per piastra base"
+    },
+    price: "Consultar PVP",
+    image: "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-61z1xwc-uul._ac_sl1500_.webp",
+    description: {
+      "es": "Mejora tus impresiones de sublimación con nuestra almohadilla de silicona. Resistente al calor hasta 220ºC y con un espesor de 10mm, asegura una impresión uniforme y perfecta.",
+      "en": "Improve your sublimation prints with our silicone pad. Heat resistant up to 220ºC and 10mm thick, it ensures uniform and perfect printing.",
+      "pt": "Melhore as suas impressões de sublimação com a nossa almofada de silicone. Resistente ao calor até 220ºC e com 10mm de espessura, garante uma impressão uniforme e perfeita.",
+      "it": "Migliora le tue stampe a sublimazione con il nostro tappetino in silicone. Resistente al calore fino a 220ºC e con uno spessore di 10 mm, assicura una stampa uniforme e perfetta."
+    },
+    technicalSpecs: [
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
+      { "label": { "es": "Espesor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "10 mm" },
+      { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 220ºC / Up to 220ºC" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "PLAACCA50" }
+    ]
+  },
   {
     id: "teflon-40x50",
     slug: "lamina-teflon-40x50",
@@ -5560,6 +5927,29 @@ const rawConsumablesData: Consumable[] = [
     price: 12,
     image: "https://beinsen.com/wp-content/uploads/2019/11/limpiador-plato.jpg",
     description: { es: "Elimina residuos del plato calentador.", en: "Removes residues from the heating plate." }
+  },
+  {
+    "id": "resistencia-cilindrica-tazas-11oz-tipo-a",
+    "slug": "resistencia-cilindrica-tazas-11oz-tipo-a",
+    "name": {
+      "es": "Resistencia cilíndrica para tazas de 11oz tipo A",
+      "en": "Cylindrical heating element for 11oz mugs type A",
+      "pt": "Resistência cilíndrica para canecas 11oz tipo A",
+      "it": "Resistenza cilindrica per tazze da 11oz tipo A"
+    },
+    "price": 52,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/resistencia_11oz_01_1.webp",
+    "description": {
+      "es": "Resistencia de repuesto o accesorio para planchas de tazas Beinsen. Permite personalizar tazas de 11 onzas de forma sencilla: solo conectar y empezar a trabajar. Se recomienda precalentar unos minutos en el primer uso.",
+      "en": "Replacement or accessory heating element for Beinsen mug presses. Allows easy personalization of 11oz mugs: just connect and start working. Preheating for a few minutes on first use is recommended.",
+      "pt": "Resistência de substituição ou acessório para prensas de canecas Beinsen. Permite personalizar canecas de 11 onças de forma simples: basta ligar e começar a trabalhar. Recomenda-se pré-aquecer alguns minutos na primeira utilização.",
+      "it": "Resistenza di ricambio o accessoria per presse per tazze Beinsen. Permette di personalizzare tazze da 11 once in modo semplice: basta collegare e iniziare a lavorare. Si consiglia di preriscaldare per alcuni minuti al primo utilizzo."
+    },
+    "technicalSpecs": [
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cilíndrica 11oz / Cylindrical 11oz" },
+      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES11A" },
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Andra, Sore (A)" }
+    ]
   }
 ];
 export const allConsumablesData: Consumable[] = [...rawConsumablesData].sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
