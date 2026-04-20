@@ -469,11 +469,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                                                     fill 
                                                     className="object-cover group-hover:scale-110 transition-transform duration-700" 
                                                 />
-                                            ) : (
-                                                <div className="w-full h-full flex items-center justify-center">
-                                                    <Package className="text-muted-foreground opacity-20" size={64} />
-                                                </div>
-                                            )}
+                                            ) : null}
                                         </div>
                                         <div className="flex flex-col flex-1 px-2">
                                             <div className="flex justify-between items-start mb-4">
