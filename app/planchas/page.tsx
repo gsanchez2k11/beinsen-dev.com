@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
-import { useSearchParams, useRouter } from "next/navigation";
 
 const CATEGORIES = ["Todas", "Textil", "Tazas y Botellas", "Gorras", "Especializadas", "Multifunción"];
 const OPENING_TYPES = ["Cualquiera", "Manual", "Neumática", "Automática"];
