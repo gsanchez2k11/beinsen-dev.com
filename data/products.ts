@@ -700,7 +700,7 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "almohadilla-silicona-40x50-plato-base" },
+      { "id": "almohadilla-silicona-40x50" },
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "almohadilla-silicona-38x38" },
       { "id": "lamina-teflon-40x50" },
@@ -1155,7 +1155,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "plato-resistencia-combo-38x38" },
       { "id": "resistencia-gorras-combo-beinsen" },
-      { "id": "almohadilla-silicona-40x50-plato-base" }
+      { "id": "almohadilla-silicona-40x50" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -1297,7 +1297,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "plato-base-15x15-cambio-rapido" },
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "guantes-protectores-algodon" },
-      { "id": "almohadilla-silicona-40x50-plato-base" },
+      { "id": "almohadilla-silicona-40x50" },
       { "id": "lamina-teflon-40x50" }
     ],
     "consumables": [
@@ -1791,129 +1791,6 @@ const rawPlanchasData: Plancha[] = [
     }
   },
   {
-    "id": "planchas-transfer-sandwich-descatalogadas",
-    "slug": "planchas-transfer-sandwich-descatalogadas",
-    "name": {
-      "es": "Planchas descatalogadas tipo sandwich",
-      "en": "Discontinued sandwich presses",
-      "pt": "Prensas descontinuadas tipo sanduíche",
-      "it": "Presse fuori produzione tipo sandwich"
-    },
-    "description": {
-      "es": "Modelos anteriores con cierre tipo sandwich para una presión uniforme.",
-      "en": "Previous models with sandwich closure for uniform pressure.",
-      "pt": "Modelos anteriores com fecho tipo sanduíche.",
-      "it": "Modelli precedenti con chiusura a sandwich."
-    },
-    "image": "https://beinsen.com/wp-content/uploads/2025/02/barbadiss-1.png",
-    "price": "Consultar PVP",
-    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
-    "features": {
-      "es": [
-        "Cierre tipo sandwich clásico",
-        "Dos placas de calor para mayor estabilidad",
-        "Regulación manual de presión y temperatura"
-      ],
-      "en": [
-        "Classic sandwich closure",
-        "Two heat plates for greater stability",
-        "Manual pressure and temperature regulation"
-      ]
-    },
-    "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
-    ],
-    "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
-    ],
-
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
-    "technicalSpecs": [
-      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática" },
-      { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
-      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "32mm." },
-      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-06" },
-      { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
-      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
-      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
-      { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "2" },
-      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "40x50cm." },
-      { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
-      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
-      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
-      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "97Kg." },
-      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "160Kg." },
-      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "120x97x74cm" },
-      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
-      { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "2, uno a cada lado la unidad principal" },
-      { "label": { "es": "Seguridad", "en": "Safety" }, "value": "-" }
-    ],
-    "benefits": [
-      {
-        "title": { "es": "Neumática", "en": "Pneumatic" },
-        "description": { "es": "Aporta una presión constante y uniforme para personalizaciones precisas en series continuas.", "en": "Delivers constant, even pressure for precise personalization in continuous runs." },
-        "icon": "Wind"
-      },
-      {
-        "title": { "es": "Doble plato", "en": "Double plate" },
-        "description": { "es": "Su doble plato de gran tamaño multiplica el ritmo de producción sin perder precisión.", "en": "Its large double-plate setup multiplies production pace without sacrificing precision." },
-        "icon": "Layers"
-      },
-      {
-        "title": { "es": "Controlador digital", "en": "Digital controller" },
-        "description": { "es": "Controla tiempos y temperatura de forma fácil e intuitiva con su display GY-06.", "en": "Control timing and temperature easily and intuitively with its GY-06 display." },
-        "icon": "Cpu"
-      },
-      {
-        "title": { "es": "Guías láser", "en": "Laser guides" },
-        "description": { "es": "Ajusta la cruz láser al milímetro para reducir errores y evitar impresiones fuera de lugar.", "en": "Set the laser crosshair with millimeter precision to reduce errors and off-position prints." },
-        "icon": "Target"
-      },
-      {
-        "title": { "es": "Tan compacta como versátil", "en": "Compact yet versatile" },
-        "description": { "es": "Prensa neumática de sobremesa preparada para camisetas, artículos deportivos, paneles fotográficos, pancartas, cojines y mucho más.", "en": "Desktop pneumatic press ready for T-shirts, sportswear, photo panels, banners, cushions, and more." },
-        "icon": "Zap"
-      },
-      {
-        "title": { "es": "Tan suave como delicada", "en": "Smooth and delicate" },
-        "description": { "es": "La presión vertical combinada con la silicona de los platos garantiza estampaciones uniformes y cuidadas.", "en": "Vertical pressure combined with silicone platens ensures uniform and gentle transfers." },
-        "icon": "ShieldCheck"
-      },
-      {
-        "title": { "es": "Detalles que importan", "en": "Details that matter" },
-        "description": { "es": "Visor de presión, botón de emergencia, ventilador, filtro de aire y reguladores de velocidad para un dominio absoluto de la producción.", "en": "Pressure viewer, emergency button, fan, air filter, and speed regulators give full production control." },
-        "icon": "Settings"
-      }
-    ],
-    "maintenanceTips": {
-      "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
-        "Limpieza regular de las placas o superficies de sublimación.",
-        "Reemplazo de láminas protectoras o revestimientos.",
-        "Verificación y ajuste de la presión.",
-        "Inspección y limpieza de los componentes internos.",
-        "Verificación y calibración de la temperatura."
-      ],
-      "en": [
-        "Do not turn off the compressor immediately, the heating plate is too hot.",
-        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
-        "Regular cleaning of plates or sublimation surfaces.",
-        "Replacement of protective sheets or coatings.",
-        "Pressure verification and adjustment.",
-        "Inspection and cleaning of internal components.",
-        "Temperature verification and calibration."
-      ]
-    }
-  },
-  {
     "id": "pocola-plancha-transfer-manual-pequena",
     "slug": "pocola-plancha-transfer-manual-pequena",
     "name": {
@@ -2191,7 +2068,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "plato-base-25x30-cambio-rapido" },
       { "id": "plato-base-15x15-cambio-rapido" },
       { "id": "lamina-teflon-40x50" },
-      { "id": "almohadilla-silicona-40x50-plato-base" }
+      { "id": "almohadilla-silicona-40x50" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -2771,7 +2648,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "plato-base-15x15-cambio-rapido" },
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "lamina-teflon-40x50" },
-      { "id": "almohadilla-silicona-40x50-plato-base" }
+      { "id": "almohadilla-silicona-40x50" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -2905,7 +2782,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "mesa-universal-grande" },
       { "id": "guantes-protectores-algodon" },
-      { "id": "almohadilla-silicona-40x50-plato-base" }
+      { "id": "almohadilla-silicona-40x50" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -3255,7 +3132,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "mesa-universal-grande" },
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "guantes-protectores-algodon" },
-      { "id": "almohadilla-silicona-40x50-plato-base" }
+      { "id": "almohadilla-silicona-40x50" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -3861,31 +3738,6 @@ const rawAccessoriesData: Accessory[] = [
       "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/a/l/almohadilla_38x38.webp",
       "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-61-fucn8ygl._ac_uf894_1000_ql80_.webp",
       "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/7/1/71kmkhpeqol._ac_sl1500_-removebg-preview_2.webp"
-    ]
-  },
-  {
-    id: "almohadilla-silicona-40x50-plato-base",
-    slug: "almohadilla-silicona-40x50-plato-base",
-    name: {
-      es: "Almohadilla de silicona de 40x50 cm para plato base",
-      en: "40x50 cm silicone pad for base plate",
-      pt: "Almofada de silicone de 40x50 cm para prato base",
-      it: "Cuscinetto in silicone 40x50 cm per piastra base"
-    },
-    price: "Consultar PVP",
-    image: "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/7/1/71kmkhpeqol._ac_sl1500_-removebg-preview.webp",
-    description: {
-      es: "Almohadilla de silicona de 40x50 cm especialmente diseñada para el plato base de las planchas Beinsen. Resistente al calor hasta 220ºC y con un espesor de 10mm, asegura una impresión uniforme y perfecta en cualquier prensa de calor.",
-      en: "40x50 cm silicone pad specially designed for the base plate of Beinsen heat presses. Heat resistant up to 220ºC with 10mm thickness, ensures uniform and perfect printing on any heat press.",
-      pt: "Almofada de silicone de 40x50 cm especialmente concebida para o prato base das prensas Beinsen. Resistente ao calor até 220ºC com 10mm de espessura, garante impressão uniforme e perfeita em qualquer prensa térmica.",
-      it: "Cuscinetto in silicone 40x50 cm appositamente progettato per la piastra base delle presse Beinsen. Resistente al calore fino a 220ºC con spessore di 10mm, garantisce una stampa uniforme e perfetta su qualsiasi pressa termica."
-    },
-    technicalSpecs: [
-      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Silicona de grado industrial / Industrial grade silicone" },
-      { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "40 x 50 cm" },
-      { label: { es: "Espesor", en: "Thickness", pt: "Espessura", it: "Spessore" }, value: "10 mm" },
-      { label: { es: "Temperatura máxima", en: "Maximum Temperature", pt: "Temperatura máxima", it: "Temperatura massima" }, value: "220ºC" },
-      { label: { es: "P/N", en: "P/N", pt: "P/N", it: "P/N" }, value: "PLAACCA50" }
     ]
   },
   {
