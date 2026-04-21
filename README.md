@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# beinsen-dev.com
 
-## Getting Started
+Aplicación web de Beinsen construida con [Next.js 16](https://nextjs.org) (App Router + Turbopack).
 
-First, run the development server:
+## Desarrollo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev    # arranca en http://localhost:3000
+npm run build  # compila para producción
+npm run start  # sirve el build de producción
+npm run images # regenera el manifiesto de imágenes locales
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Gestión de imágenes de producto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Las imágenes de cada producto se gestionan mediante una **convención basada en carpetas**. No hay que editar `data/products.ts` para añadir o cambiar imágenes.
 
-## Learn More
+### Cómo añadir imágenes a un producto
 
-To learn more about Next.js, take a look at the following resources:
+1. Localiza el `slug` del producto en `data/products.ts` (ej. `sore-plancha-profesional-tazas`).
+2. Crea la carpeta `public/products/<slug>/`.
+3. Coloca las imágenes dentro.
+4. Despliega (`./deploy.sh`) o regenera el manifiesto (`npm run images`) y reinicia.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Ejemplo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+public/products/
+├── sore-plancha-profesional-tazas/
+│   ├── 01-principal.jpg    ← imagen principal (tarjetas, metadata, Open Graph)
+│   ├── 02-detalle.jpg      ← galería
+│   └── 03-lateral.webp     ← galería
+└── trinidad-prensa-termica-automatica/
+    ├── 01-main.png
+    └── 02-closeup.jpg
+```
 
-## Deploy on Vercel
+### Reglas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Nombre de carpeta** = `slug` exacto del producto.
+- **Formatos**: `.jpg`, `.jpeg`, `.png`, `.webp`, `.gif`, `.avif`.
+- **Orden**: alfabético. Usa prefijos `01-`, `02-`, `03-` para controlarlo.
+- **Primera imagen** = principal (tarjeta de catálogo, `<meta>`, Open Graph, Twitter, JSON-LD).
+- **Todas las imágenes** = galería que se muestra en la página de detalle.
+- **Fallback**: si un slug no tiene carpeta local (o está vacía), se usan las URLs externas definidas en `data/products.ts`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Arquitectura
+
+```
+public/products/<slug>/*.jpg
+        │
+        ▼
+scripts/generate-product-images.mjs  ← se ejecuta en prebuild/predev
+        │
+        ▼
+data/product-images.json            ← manifiesto { slug: [rutas] }
+        │
+        ▼
+lib/productImages.ts                ← enrichWithLocalImages(product)
+        │
+        ▼
+- app/planchas/[slug]/page.tsx      ← detalle + metadata
+- components/CatalogProductCard.tsx ← tarjetas del catálogo
+```
+
+### Regenerar el manifiesto
+
+El manifiesto se regenera automáticamente antes de `build` y `dev` gracias a los scripts `prebuild` y `predev` en `package.json`. Para regenerarlo manualmente:
+
+```bash
+npm run images
+```
+
+Esto actualiza `data/product-images.json` escaneando `public/products/`.
+
+---
+
+## Despliegue
+
+El despliegue se hace con el script `deploy.sh`:
+
+```bash
+./deploy.sh
+```
+
+Ejecuta:
+1. `git pull origin main`
+2. `next build` (regenera manifiesto de imágenes como `prebuild`)
+3. `pm2 restart beinsen-as`
+
+---
+
+## Estructura del proyecto
+
+```
+app/                  # App Router (páginas y layouts)
+components/           # Componentes React
+context/              # Contextos (LanguageContext)
+data/
+├── products.ts       # Catálogo completo (planchas, accesorios, consumibles)
+├── product-images.json  # Manifiesto generado — no editar a mano
+└── stories.ts        # Casos de éxito
+lib/
+├── i18n.ts           # Utilidades de localización
+├── productImages.ts  # Helper para imágenes locales
+└── utils.ts
+public/
+└── products/         # Imágenes locales por slug (ver sección arriba)
+scripts/
+└── generate-product-images.mjs  # Generador del manifiesto
+```
