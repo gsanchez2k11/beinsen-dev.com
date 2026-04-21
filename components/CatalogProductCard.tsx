@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Tag, Maximize2, Target, Box } from "lucide-react";
 import { getLocalized } from "@/lib/i18n";
+import { enrichWithLocalImages } from "@/lib/productImages";
 import type { Locale } from "@/data/products";
 
 interface CatalogProductCardProps {
@@ -16,7 +17,8 @@ interface CatalogProductCardProps {
     onClick?: () => void;
 }
 
-export const CatalogProductCard = memo(function CatalogProductCard({ item, locale, index, isFeatureCard, onClick }: CatalogProductCardProps) {
+export const CatalogProductCard = memo(function CatalogProductCard({ item: rawItem, locale, index, isFeatureCard, onClick }: CatalogProductCardProps) {
+    const item = enrichWithLocalImages(rawItem);
     const name = getLocalized(item.name, locale);
     const desc = getLocalized(item.description, locale);
     const category = getLocalized(item.category, locale);
