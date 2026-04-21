@@ -408,7 +408,7 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
-      { "id": "mesa-trinidad" },
+      { "id": "mesa-universal-grande" },
       { "id": "laser-posicionamiento" }
     ],
     "consumables": [
@@ -3670,14 +3670,6 @@ const getSortName = (item: any) => {
 export const planchasData: Plancha[] = rawPlanchasData.map(enrichPlancha).sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
 
 const rawAccessoriesData: Accessory[] = [
-  {
-    id: "mesa-trinidad",
-    slug: "mesa-industrial-pro",
-    name: { es: "Mesa Industrial Pro", en: "Pro Industrial Table" },
-    price: 450,
-    image: "https://beinsen.com/wp-content/uploads/2025/04/mesa_universal_para_planchas_tra.jpg",
-    description: { es: "Soporte reforzado con ruedas de alta carga.", en: "Reinforced support with heavy-duty wheels." }
-  },
   {
     id: "laser-posicionamiento",
     slug: "laser-posicionamiento",
