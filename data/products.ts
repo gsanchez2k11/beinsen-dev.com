@@ -609,7 +609,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
     "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "openingType": { "es": "Eléctrica", "en": "Electric", "pt": "Elétrica", "it": "Elettrica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tazas" },
       { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
@@ -832,7 +832,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
     "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
-    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Obrei" },
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Semiautomática" },
@@ -2141,61 +2141,6 @@ const rawPlanchasData: Plancha[] = [
     }
   },
   {
-    "id": "mesa-universal-con-ruedas-para-plancha-transfer",
-    "slug": "mesa-universal-con-ruedas-para-plancha-transfer",
-    "name": {
-      "es": "Mesa universal con ruedas",
-      "en": "Universal table with wheels",
-      "pt": "Mesa universal com rodas",
-      "it": "Tavolo universale con ruote"
-    },
-    "description": {
-      "es": "Base resistente y funcional para tu prensa térmica. Estabilidad y comodidad para tu taller.",
-      "en": "Stable and functional base for your heat press. Stability and comfort for your workshop.",
-      "pt": "Base resistente e funcional para a sua prensa.",
-      "it": "Base resistente e funzionale per la tua pressa."
-    },
-    "image": "https://beinsen.com/wp-content/uploads/2025/04/mesa_universal_para_planchas_tra.jpg",
-    "price": "Consultar PVP",
-    "size": { "es": "98x88 cm", "en": "98x88 cm", "pt": "98x88 cm", "it": "98x88 cm" },
-    "features": {
-      "es": [
-        "Estructura robusta de alta calidad",
-        "Soporta prensas de doble plato",
-        "Ruedas con freno para movilidad segura"
-      ],
-      "en": [
-        "High-quality robust structure",
-        "Supports double plate presses",
-        "Wheels with brakes for safe mobility"
-      ]
-    },
-    "accessories": [
-      { "id": "mesa-trinidad" },
-      { "id": "laser-posicionamiento" }
-    ],
-    "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
-    ],
-
-    "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
-    "technicalSpecs": [
-      { "label": { "es": "Aplicación", "en": "Application" }, "value": "Espinilleras / Shin Guards" },
-      { "label": { "es": "Platos", "en": "Plates" }, "value": "3 Intercambiables / 3 Interchangeable" },
-      { "label": { "es": "Operación", "en": "Operation" }, "value": "Manual" }
-    ],
-    "benefits": [
-      {
-        "title": { "es": "Especialista Deportiva", "en": "Sports Specialist" },
-        "description": { "es": "La única prensa diseñada específicamente para la anatomía de las espinilleras.", "en": "The only press specifically designed for the anatomy of shin guards." },
-        "icon": "Settings"
-      }
-    ]
-  },
-  {
     "id": "trinidad-prensa-termica-automatica",
     "slug": "trinidad-prensa-termica-automatica",
     "name": {
@@ -2252,7 +2197,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "gallery": [
       "https://beinsen.com/wp-content/uploads/2025/07/Sin-titulo-1000-x-1000-px-1.png",
       "https://beinsen.com/wp-content/uploads/2023/09/2.jpg"
@@ -2392,7 +2337,7 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "openingType": { "es": "Eléctrica", "en": "Electric", "pt": "Elétrica", "it": "Elettrica" },
     "technicalSpecs": [
       { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220 V" },
       { "label": { "es": "Potencia", "en": "Power" }, "value": "3.2 KW" },
@@ -2558,7 +2503,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
       { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Apertura automática y cierre manual" },
@@ -2687,7 +2632,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "openingType": { "es": "Eléctrica", "en": "Electric", "pt": "Elétrica", "it": "Elettrica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
       { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático con energía eléctrica" },
@@ -2833,7 +2778,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
       { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático y manual" },
@@ -2967,7 +2912,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
+    "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
       { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático y manual" },
@@ -3213,7 +3158,6 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [],
 
     "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
-    "openingType": { "es": "Automática", "en": "Automatic", "pt": "Automática", "it": "Automatica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Calandra" },
       { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
