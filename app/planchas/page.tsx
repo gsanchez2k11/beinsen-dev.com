@@ -10,7 +10,7 @@ import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
 
 const CATEGORIES = ["Todas", "Textil", "Tazas y Botellas", "Gorras", "Especializadas", "Multifunción"];
-const OPENING_TYPES = ["Cualquiera", "Manual", "Neumática", "Automática"];
+const OPENING_TYPES = ["Cualquiera", "Manual", "Electromagnética", "Neumática", "Eléctrica"];
 
 const CATEGORIES_LABELS = {
     es: ["Todas", "Textil", "Tazas y Botellas", "Gorras", "Especializadas", "Multifunción"],
@@ -20,10 +20,10 @@ const CATEGORIES_LABELS = {
 };
 
 const OPENING_TYPES_LABELS = {
-    es: ["Cualquiera", "Manual", "Neumática", "Automática"],
-    en: ["Any", "Manual", "Pneumatic", "Automatic"],
-    pt: ["Qualquer", "Manual", "Pneumática", "Automática"],
-    it: ["Qualsiasi", "Manuale", "Pneumatica", "Automatica"]
+    es: ["Cualquiera", "Manual", "Electromagnética", "Neumática", "Eléctrica"],
+    en: ["Any", "Manual", "Electromagnetic", "Pneumatic", "Electric"],
+    pt: ["Qualquer", "Manual", "Eletromagnética", "Pneumática", "Elétrica"],
+    it: ["Qualsiasi", "Manuale", "Elettromagnetica", "Pneumatica", "Elettrica"]
 };
 
 
@@ -44,7 +44,7 @@ function PlanchasCatalogContent() {
     const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
     const [activeOpeningIndex, setActiveOpeningIndex] = useState(0);
     const [searchQuery, setSearchQuery] = useState("");
-    const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [isFilterOpen, setIsFilterOpen] = useState(true);
     const [mounted, setMounted] = useState(false);
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const prevTypeRef = useRef<string | null>(null);
