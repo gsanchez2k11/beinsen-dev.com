@@ -2,6 +2,7 @@ import { planchasData, allAccessoriesData, allConsumablesData } from "@/data/pro
 import { notFound } from "next/navigation";
 import { ProductDetailView } from "@/components/ProductDetailView";
 import { getLocalized } from "@/lib/i18n";
+import { enrichWithLocalImages } from "@/lib/productImages";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -15,13 +16,15 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const resolvedParams = await params;
-    const item = [...planchasData, ...allAccessoriesData, ...allConsumablesData].find((p) => p.slug === resolvedParams.slug);
+    const rawItem = [...planchasData, ...allAccessoriesData, ...allConsumablesData].find((p) => p.slug === resolvedParams.slug);
 
-    if (!item) {
+    if (!rawItem) {
         return {
             title: "Producto no encontrado | Beinsen",
         };
     }
+
+    const item = enrichWithLocalImages(rawItem as any);
 
     // Default to 'es' for metadata on server-side
     const name = getLocalized(item.name as any, 'es');
@@ -47,11 +50,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function PlanchaDetail({ params }: { params: Promise<{ slug: string }> }) {
     const resolvedParams = await params;
-    const item = [...planchasData, ...allAccessoriesData, ...allConsumablesData].find((p) => p.slug === resolvedParams.slug);
+    const rawItem = [...planchasData, ...allAccessoriesData, ...allConsumablesData].find((p) => p.slug === resolvedParams.slug);
 
-    if (!item) {
+    if (!rawItem) {
         notFound();
     }
+
+    const item = enrichWithLocalImages(rawItem as any);
 
     const name = getLocalized(item.name as any, 'es');
     const description = getLocalized(item.description as any, 'es') || "";
@@ -83,8 +88,8 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
         });
     };
 
-    const fullAccessories = getFullItemData((item as any).accessories || [], allAccessoriesData);
-    const fullConsumables = getFullItemData((item as any).consumables || [], allConsumablesData);
+    const fullAccessories = getFullItemData((item as any).accessories || [], allAccessoriesData).map((a: any) => enrichWithLocalImages(a));
+    const fullConsumables = getFullItemData((item as any).consumables || [], allConsumablesData).map((c: any) => enrichWithLocalImages(c));
 
     return (
         <>
