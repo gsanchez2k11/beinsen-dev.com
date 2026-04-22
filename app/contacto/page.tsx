@@ -44,9 +44,9 @@ export default function ContactPage() {
             next: "Siguiente Paso",
             back: "Volver",
             infoTitle: "Sede Central",
-            infoAddress: "Polígono Industrial, Calle Ejemplo 123",
-            infoCity: "Madrid, España",
-            infoPhone: "+34 912 345 678",
+            infoAddress: "Av. Alto de las Atalayas, 18",
+            infoCity: "30110 Cabezo de Torres, Murcia",
+            infoPhone: "+34 968 902 300",
             infoEmail: "info@beinsen.com"
         },
         en: {
@@ -67,9 +67,9 @@ export default function ContactPage() {
             next: "Next Step",
             back: "Back",
             infoTitle: "Headquarters",
-            infoAddress: "Industrial Park, Example St 123",
-            infoCity: "Madrid, Spain",
-            infoPhone: "+34 912 345 678",
+            infoAddress: "Av. Alto de las Atalayas, 18",
+            infoCity: "30110 Cabezo de Torres, Murcia, Spain",
+            infoPhone: "+34 968 902 300",
             infoEmail: "info@beinsen.com"
         }
     }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
@@ -278,7 +278,7 @@ export default function ContactPage() {
                                     <div className="absolute inset-0 animate-ping rounded-full bg-[#FF6600]/40" />
                                     <div className="w-4 h-4 rounded-full bg-[#FF6600] border-4 border-background relative z-10" />
                                     <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap bg-card/90 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10 text-[10px] font-black uppercase tracking-widest shadow-xl">
-                                        Madrid HQ
+                                        Murcia HQ
                                     </div>
                                 </div>
                             </div>

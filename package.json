@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "images": "node scripts/generate-product-images.mjs",
-    "prebuild": "node scripts/generate-product-images.mjs",
-    "predev": "node scripts/generate-product-images.mjs",
+    "downloads": "node scripts/generate-product-downloads.mjs",
+    "manifests": "node scripts/generate-product-images.mjs && node scripts/generate-product-downloads.mjs",
+    "prebuild": "npm run manifests",
+    "predev": "npm run manifests",
     "dev": "node node_modules/next/dist/bin/next dev",
     "build": "node node_modules/next/dist/bin/next build",
     "start": "node node_modules/next/dist/bin/next start",

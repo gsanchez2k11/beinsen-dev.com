@@ -11,6 +11,8 @@ import { CatalogProductCard } from "@/components/CatalogProductCard";
 
 const CATEGORIES = ["Todas", "Textil", "Tazas y Botellas", "Gorras", "Especializadas", "Multifunción"];
 const OPENING_TYPES = ["Cualquiera", "Manual", "Electromagnética", "Neumática", "Eléctrica"];
+const FORMATS = ["Cualquiera", "Compacta", "Estándar", "Industrial", "Estación de trabajo"];
+const PLATE_TYPES = ["Cualquiera", "Intercambiable", "Fijo"];
 
 const CATEGORIES_LABELS = {
     es: ["Todas", "Textil", "Tazas y Botellas", "Gorras", "Especializadas", "Multifunción"],
@@ -24,6 +26,20 @@ const OPENING_TYPES_LABELS = {
     en: ["Any", "Manual", "Electromagnetic", "Pneumatic", "Electric"],
     pt: ["Qualquer", "Manual", "Eletromagnética", "Pneumática", "Elétrica"],
     it: ["Qualsiasi", "Manuale", "Elettromagnetica", "Pneumatica", "Elettrica"]
+};
+
+const FORMATS_LABELS = {
+    es: ["Cualquiera", "Compacta", "Estándar", "Industrial", "Estación de trabajo"],
+    en: ["Any", "Compact", "Standard", "Industrial", "Workstation"],
+    pt: ["Qualquer", "Compacta", "Padrão", "Industrial", "Estação de trabalho"],
+    it: ["Qualsiasi", "Compatta", "Standard", "Industriale", "Postazione di lavoro"]
+};
+
+const PLATE_TYPES_LABELS = {
+    es: ["Cualquiera", "Intercambiable", "Fijo"],
+    en: ["Any", "Interchangeable", "Fixed"],
+    pt: ["Qualquer", "Intercambiável", "Fixo"],
+    it: ["Qualsiasi", "Intercambiabile", "Fisso"]
 };
 
 const PAGE_SIZE = 8;
@@ -74,6 +90,8 @@ function PlanchasCatalogContent() {
     const [activeType, setActiveType] = useState<"all" | "planchas" | "accessories" | "consumables">("all");
     const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
     const [activeOpeningIndex, setActiveOpeningIndex] = useState(0);
+    const [activeFormatIndex, setActiveFormatIndex] = useState(0);
+    const [activePlateIndex, setActivePlateIndex] = useState(0);
     const [searchQuery, setSearchQuery] = useState("");
     const [isFilterOpen, setIsFilterOpen] = useState(true);
     const [mounted, setMounted] = useState(false);
@@ -93,7 +111,7 @@ function PlanchasCatalogContent() {
         setVisibleMachines(PAGE_SIZE);
         setVisibleAccessories(PAGE_SIZE);
         setVisibleConsumables(PAGE_SIZE);
-    }, [activeType, activeCategoryIndex, activeOpeningIndex, searchQuery, selectedMachine]);
+    }, [activeType, activeCategoryIndex, activeOpeningIndex, activeFormatIndex, activePlateIndex, searchQuery, selectedMachine]);
 
     // Initialize from URL on first mount
     useEffect(() => {
@@ -120,6 +138,8 @@ function PlanchasCatalogContent() {
             }
             setActiveCategoryIndex(0);
             setActiveOpeningIndex(0);
+            setActiveFormatIndex(0);
+            setActivePlateIndex(0);
             setSearchQuery("");
             setSelectedMachine("");
         }
@@ -138,6 +158,8 @@ function PlanchasCatalogContent() {
 
     const categoryLabels = CATEGORIES_LABELS[locale] || CATEGORIES_LABELS.es;
     const openingLabels = OPENING_TYPES_LABELS[locale] || OPENING_TYPES_LABELS.es;
+    const formatLabels = FORMATS_LABELS[locale] || FORMATS_LABELS.es;
+    const plateLabels = PLATE_TYPES_LABELS[locale] || PLATE_TYPES_LABELS.es;
 
     const d = {
         es: {
@@ -149,6 +171,8 @@ function PlanchasCatalogContent() {
             filters: "Filtros",
             catLabel: "Especialidad",
             openLabel: "Sistema",
+            formatLabel: "Formato",
+            plateLabel: "Plato",
             clear: "Limpiar",
             results: "items",
             showing: "Mostrando",
@@ -173,6 +197,8 @@ function PlanchasCatalogContent() {
             filters: "Filters",
             catLabel: "Specialty",
             openLabel: "System",
+            formatLabel: "Format",
+            plateLabel: "Plate",
             clear: "Clear",
             results: "items",
             showing: "Showing",
@@ -222,16 +248,35 @@ function PlanchasCatalogContent() {
 
             const matchesCategory = activeCategoryIndex === 0 || itemCat === selectedCategory;
             const matchesOpening = activeOpeningIndex === 0 || itemOpen === selectedOpening;
-            const matchesSearch = !hasSearch || itemName.toLowerCase().includes(lowerSearchQuery);
+            const itemRef = (item.reference || "").toString().toLowerCase();
+            const matchesSearch = !hasSearch || itemName.toLowerCase().includes(lowerSearchQuery) || itemRef.includes(lowerSearchQuery);
 
             return matchesCategory && matchesOpening && matchesSearch;
         });
     };
 
-    const filteredMachines = useMemo(() =>
-        applyCommonFilters(planchasData.map(p => ({ ...p, _type: 'planchas' }))),
-        [activeCategoryIndex, activeOpeningIndex, searchQuery, locale]
-    );
+    const filteredMachines = useMemo(() => {
+        const base = applyCommonFilters(planchasData.map(p => ({ ...p, _type: 'planchas' })));
+        const selectedFormat = FORMATS[activeFormatIndex];
+        const selectedPlate = PLATE_TYPES[activePlateIndex];
+        return base.filter((item: any) => {
+            if (activeFormatIndex !== 0) {
+                const itemSize = typeof item.size === 'object' ? getLocalized(item.size, 'es') : item.size;
+                if (itemSize !== selectedFormat) return false;
+            }
+            if (activePlateIndex !== 0) {
+                const spec = (item.technicalSpecs || []).find((s: any) => {
+                    const label = typeof s.label === 'object' ? s.label.es : s.label;
+                    return label && label.toLowerCase().includes("platos intercambiables");
+                });
+                const value = spec ? (typeof spec.value === 'object' ? spec.value.es : spec.value) : "";
+                const isInterchangeable = value && value.includes("✓");
+                const wantInterchangeable = selectedPlate === "Intercambiable";
+                if (isInterchangeable !== wantInterchangeable) return false;
+            }
+            return true;
+        });
+    }, [activeCategoryIndex, activeOpeningIndex, activeFormatIndex, activePlateIndex, searchQuery, locale]);
 
     const filteredAccessories = useMemo(() => {
         const base = applyCommonFilters(allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } })));
@@ -324,6 +369,8 @@ function PlanchasCatalogContent() {
                                     setActiveType(t.id as any);
                                     setActiveCategoryIndex(0);
                                     setActiveOpeningIndex(0);
+                                    setActiveFormatIndex(0);
+                                    setActivePlateIndex(0);
                                     setSearchQuery("");
                                     setSelectedMachine("");
 
@@ -399,8 +446,8 @@ function PlanchasCatalogContent() {
                                     </div>
                                 </div>
                             ) : (
-                                /* ── Filtros categoría + sistema (máquinas / all) ── */
-                                <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+                                /* ── Filtros máquinas (categoría + sistema + formato + plato) ── */
+                                <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                                     <div className="space-y-4">
                                         <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
                                             <Package size={12} /> {d.catLabel}
@@ -430,6 +477,40 @@ function PlanchasCatalogContent() {
                                                     className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeOpeningIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
                                                 >
                                                     {type}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                            <SlidersHorizontal size={12} /> {d.formatLabel}
+                                        </label>
+                                        <div className="flex flex-wrap gap-2">
+                                            {formatLabels.map((fmt, idx) => (
+                                                <button
+                                                    key={fmt}
+                                                    onClick={() => setActiveFormatIndex(idx)}
+                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeFormatIndex === idx ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                >
+                                                    {fmt}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                            <Tag size={12} /> {d.plateLabel}
+                                        </label>
+                                        <div className="flex flex-wrap gap-2">
+                                            {plateLabels.map((pl, idx) => (
+                                                <button
+                                                    key={pl}
+                                                    onClick={() => setActivePlateIndex(idx)}
+                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activePlateIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                >
+                                                    {pl}
                                                 </button>
                                             ))}
                                         </div>
@@ -466,6 +547,8 @@ function PlanchasCatalogContent() {
                                 setActiveType("all");
                                 setActiveCategoryIndex(0);
                                 setActiveOpeningIndex(0);
+                                setActiveFormatIndex(0);
+                                setActivePlateIndex(0);
                                 setSearchQuery("");
                                 router.replace('/planchas', { scroll: false });
                             }}
