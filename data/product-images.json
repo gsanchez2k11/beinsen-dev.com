@@ -8,6 +8,13 @@
     "/products/alaska-plancha-termica-textil/06.jpg",
     "/products/alaska-plancha-termica-textil/07.jpg"
   ],
+  "alina-plancha-para-tazas": [
+    "/products/alina-plancha-para-tazas/01.png",
+    "/products/alina-plancha-para-tazas/02.png",
+    "/products/alina-plancha-para-tazas/03.png",
+    "/products/alina-plancha-para-tazas/04.png",
+    "/products/alina-plancha-para-tazas/05.png"
+  ],
   "almohadilla-algodon-80x110": [
     "/products/almohadilla-algodon-80x110/01.png",
     "/products/almohadilla-algodon-80x110/02.png",
@@ -91,6 +98,35 @@
     "/products/belice-plancha-termica-textil/07.png",
     "/products/belice-plancha-termica-textil/08.png"
   ],
+  "chicago-plancha-termica-automatica": [
+    "/products/chicago-plancha-termica-automatica/01.png",
+    "/products/chicago-plancha-termica-automatica/02.JPG",
+    "/products/chicago-plancha-termica-automatica/03.JPG",
+    "/products/chicago-plancha-termica-automatica/04.png",
+    "/products/chicago-plancha-termica-automatica/05.JPG",
+    "/products/chicago-plancha-termica-automatica/06.png",
+    "/products/chicago-plancha-termica-automatica/07.JPG",
+    "/products/chicago-plancha-termica-automatica/08.JPG",
+    "/products/chicago-plancha-termica-automatica/09.JPG"
+  ],
+  "cinta-termica-sublimacion-10mm": [
+    "/products/cinta-termica-sublimacion-10mm/01.png"
+  ],
+  "cojinete-f6901rs-sx8-sz1": [
+    "/products/cojinete-f6901rs-sx8-sz1/01.png",
+    "/products/cojinete-f6901rs-sx8-sz1/02.png",
+    "/products/cojinete-f6901rs-sx8-sz1/03.png",
+    "/products/cojinete-f6901rs-sx8-sz1/04.png"
+  ],
+  "cojinete-f6904rs-sx8-sz1": [
+    "/products/cojinete-f6904rs-sx8-sz1/01.png",
+    "/products/cojinete-f6904rs-sx8-sz1/02.png",
+    "/products/cojinete-f6904rs-sx8-sz1/03.png",
+    "/products/cojinete-f6904rs-sx8-sz1/04.png"
+  ],
+  "contactor-ca-220v-sx8-sz1": [
+    "/products/contactor-ca-220v-sx8-sz1/01.png"
+  ],
   "doha-plancha-transfer-gran-formato": [
     "/products/doha-plancha-transfer-gran-formato/01.jpg",
     "/products/doha-plancha-transfer-gran-formato/02.jpg",
@@ -112,8 +148,59 @@
     "/products/esparta-prensa-termica-neumatica/06.jpg",
     "/products/esparta-prensa-termica-neumatica/07.png"
   ],
+  "estambul-prensa-termica-para-espinilleras": [
+    "/products/estambul-prensa-termica-para-espinilleras/01.png",
+    "/products/estambul-prensa-termica-para-espinilleras/02.png",
+    "/products/estambul-prensa-termica-para-espinilleras/03.png",
+    "/products/estambul-prensa-termica-para-espinilleras/04.png",
+    "/products/estambul-prensa-termica-para-espinilleras/05.png",
+    "/products/estambul-prensa-termica-para-espinilleras/06.png"
+  ],
+  "felina-prensa-swing-away-electrica": [
+    "/products/felina-prensa-swing-away-electrica/01.png",
+    "/products/felina-prensa-swing-away-electrica/02.png",
+    "/products/felina-prensa-swing-away-electrica/03.png",
+    "/products/felina-prensa-swing-away-electrica/04.png",
+    "/products/felina-prensa-swing-away-electrica/05.png"
+  ],
+  "filtro-carbon-sx8-sz1": [
+    "/products/filtro-carbon-sx8-sz1/01.png",
+    "/products/filtro-carbon-sx8-sz1/02.png",
+    "/products/filtro-carbon-sx8-sz1/03.png",
+    "/products/filtro-carbon-sx8-sz1/04.png"
+  ],
+  "filtro-hepa-sx8-sz1-ta": [
+    "/products/filtro-hepa-sx8-sz1-ta/01.png",
+    "/products/filtro-hepa-sx8-sz1-ta/02.png",
+    "/products/filtro-hepa-sx8-sz1-ta/03.png",
+    "/products/filtro-hepa-sx8-sz1-ta/04.png"
+  ],
+  "filtro-hepa-sx8-sz1-tb": [
+    "/products/filtro-hepa-sx8-sz1-tb/01.png",
+    "/products/filtro-hepa-sx8-sz1-tb/02.png",
+    "/products/filtro-hepa-sx8-sz1-tb/03.png",
+    "/products/filtro-hepa-sx8-sz1-tb/04.png"
+  ],
+  "fuente-alimentacion-24v-sx8-sz1": [
+    "/products/fuente-alimentacion-24v-sx8-sz1/01.png",
+    "/products/fuente-alimentacion-24v-sx8-sz1/02.png",
+    "/products/fuente-alimentacion-24v-sx8-sz1/03.png",
+    "/products/fuente-alimentacion-24v-sx8-sz1/04.png"
+  ],
+  "fuente-alimentacion-24v-sx8-sz1-b": [
+    "/products/fuente-alimentacion-24v-sx8-sz1-b/01.png",
+    "/products/fuente-alimentacion-24v-sx8-sz1-b/02.png",
+    "/products/fuente-alimentacion-24v-sx8-sz1-b/03.png",
+    "/products/fuente-alimentacion-24v-sx8-sz1-b/04.png"
+  ],
+  "fusible-termico-3d-16": [
+    "/products/fusible-termico-3d-16/01.png"
+  ],
   "gante-plancha-manual-gorras": [
     "/products/gante-plancha-manual-gorras/01.png"
+  ],
+  "guantes-protectores-algodon": [
+    "/products/guantes-protectores-algodon/01.png"
   ],
   "guyana-plancha-termica-textil": [
     "/products/guyana-plancha-termica-textil/01.png",
@@ -129,6 +216,31 @@
     "/products/kenia-plancha-termica-textil/04.png",
     "/products/kenia-plancha-termica-textil/05.png",
     "/products/kenia-plancha-termica-textil/06.png"
+  ],
+  "lamina-teflon-38x38": [
+    "/products/lamina-teflon-38x38/01.png"
+  ],
+  "lamina-teflon-40x50": [
+    "/products/lamina-teflon-40x50/01.png"
+  ],
+  "lampara-horno-sz1": [
+    "/products/lampara-horno-sz1/01.png",
+    "/products/lampara-horno-sz1/02.png",
+    "/products/lampara-horno-sz1/03.png"
+  ],
+  "luanda-plancha-termica-automatica": [
+    "/products/luanda-plancha-termica-automatica/01.png",
+    "/products/luanda-plancha-termica-automatica/02.png",
+    "/products/luanda-plancha-termica-automatica/03.png",
+    "/products/luanda-plancha-termica-automatica/04.png",
+    "/products/luanda-plancha-termica-automatica/05.png",
+    "/products/luanda-plancha-termica-automatica/06.png",
+    "/products/luanda-plancha-termica-automatica/07.png",
+    "/products/luanda-plancha-termica-automatica/08.png",
+    "/products/luanda-plancha-termica-automatica/09.png",
+    "/products/luanda-plancha-termica-automatica/10.png",
+    "/products/luanda-plancha-termica-automatica/11.png",
+    "/products/luanda-plancha-termica-automatica/12.png"
   ],
   "maine-plancha-para-tazas": [
     "/products/maine-plancha-para-tazas/01.png",
@@ -147,6 +259,48 @@
     "/products/malvinas-plancha-termica-textil/06.jpg",
     "/products/malvinas-plancha-termica-textil/07.jpg",
     "/products/malvinas-plancha-termica-textil/08.png"
+  ],
+  "mesa-universal-grande-ruedas": [
+    "/products/mesa-universal-grande-ruedas/01.png",
+    "/products/mesa-universal-grande-ruedas/02.png",
+    "/products/mesa-universal-grande-ruedas/03.png",
+    "/products/mesa-universal-grande-ruedas/04.png",
+    "/products/mesa-universal-grande-ruedas/05.png"
+  ],
+  "miranda-prensa-termica-automatica-electrica": [
+    "/products/miranda-prensa-termica-automatica-electrica/01.png",
+    "/products/miranda-prensa-termica-automatica-electrica/02.png",
+    "/products/miranda-prensa-termica-automatica-electrica/03.png"
+  ],
+  "molde-3d-silicona-3-botellas-aluminio": [
+    "/products/molde-3d-silicona-3-botellas-aluminio/01.png",
+    "/products/molde-3d-silicona-3-botellas-aluminio/02.png",
+    "/products/molde-3d-silicona-3-botellas-aluminio/03.png"
+  ],
+  "molde-3d-silicona-platos": [
+    "/products/molde-3d-silicona-platos/01.png",
+    "/products/molde-3d-silicona-platos/02.png"
+  ],
+  "molde-3d-silicona-tazas-conicas-jarras": [
+    "/products/molde-3d-silicona-tazas-conicas-jarras/01.png",
+    "/products/molde-3d-silicona-tazas-conicas-jarras/02.png",
+    "/products/molde-3d-silicona-tazas-conicas-jarras/03.png",
+    "/products/molde-3d-silicona-tazas-conicas-jarras/04.png"
+  ],
+  "molde-3d-silicona-tazas-rectas": [
+    "/products/molde-3d-silicona-tazas-rectas/01.png"
+  ],
+  "molde-silicona-3-tazas-11oz": [
+    "/products/molde-silicona-3-tazas-11oz/01.png",
+    "/products/molde-silicona-3-tazas-11oz/02.png",
+    "/products/molde-silicona-3-tazas-11oz/03.png",
+    "/products/molde-silicona-3-tazas-11oz/04.png"
+  ],
+  "motor-deposito-polvo-sx8": [
+    "/products/motor-deposito-polvo-sx8/01.png",
+    "/products/motor-deposito-polvo-sx8/02.png",
+    "/products/motor-deposito-polvo-sx8/03.png",
+    "/products/motor-deposito-polvo-sx8/04.png"
   ],
   "normandia-i-plancha-termica-textil": [
     "/products/normandia-i-plancha-termica-textil/01.JPG",
@@ -174,6 +328,20 @@
     "/products/obrei-plancha-gorras-apertura-automatica/11.png",
     "/products/obrei-plancha-gorras-apertura-automatica/12.png",
     "/products/obrei-plancha-gorras-apertura-automatica/13.png"
+  ],
+  "pantalla-hornos-sz1": [
+    "/products/pantalla-hornos-sz1/01.png",
+    "/products/pantalla-hornos-sz1/02.png"
+  ],
+  "placa-base-hornos-sx8-sz1": [
+    "/products/placa-base-hornos-sx8-sz1/01.png",
+    "/products/placa-base-hornos-sx8-sz1/02.png"
+  ],
+  "placa-polimero-platos-horno": [
+    "/products/placa-polimero-platos-horno/01.png",
+    "/products/placa-polimero-platos-horno/02.png",
+    "/products/placa-polimero-platos-horno/03.png",
+    "/products/placa-polimero-platos-horno/04.png"
   ],
   "plancha-neumatica-doble-estacion-caen": [
     "/products/plancha-neumatica-doble-estacion-caen/01.png",
@@ -206,9 +374,260 @@
     "/products/planchas-transfer-multifuncion-para-sublimacion/05.png",
     "/products/planchas-transfer-multifuncion-para-sublimacion/06.png"
   ],
+  "plato-15x20-beinsen-riad": [
+    "/products/plato-15x20-beinsen-riad/01.png"
+  ],
+  "plato-base-12x45-mangas-cambio-rapido": [
+    "/products/plato-base-12x45-mangas-cambio-rapido/01.png",
+    "/products/plato-base-12x45-mangas-cambio-rapido/02.png",
+    "/products/plato-base-12x45-mangas-cambio-rapido/03.png",
+    "/products/plato-base-12x45-mangas-cambio-rapido/04.png",
+    "/products/plato-base-12x45-mangas-cambio-rapido/05.png",
+    "/products/plato-base-12x45-mangas-cambio-rapido/06.png",
+    "/products/plato-base-12x45-mangas-cambio-rapido/07.png"
+  ],
+  "plato-base-15-5x25-5-cambio-rapido": [
+    "/products/plato-base-15-5x25-5-cambio-rapido/01.png",
+    "/products/plato-base-15-5x25-5-cambio-rapido/02.png",
+    "/products/plato-base-15-5x25-5-cambio-rapido/03.png",
+    "/products/plato-base-15-5x25-5-cambio-rapido/04.png"
+  ],
+  "plato-base-15x15-beinsen-obrei": [
+    "/products/plato-base-15x15-beinsen-obrei/01.png"
+  ],
+  "plato-base-15x15-cambio-rapido": [
+    "/products/plato-base-15x15-cambio-rapido/01.png",
+    "/products/plato-base-15x15-cambio-rapido/02.png",
+    "/products/plato-base-15x15-cambio-rapido/03.png",
+    "/products/plato-base-15x15-cambio-rapido/04.png",
+    "/products/plato-base-15x15-cambio-rapido/05.png",
+    "/products/plato-base-15x15-cambio-rapido/06.png"
+  ],
+  "plato-base-15x25-cambio-rapido": [
+    "/products/plato-base-15x25-cambio-rapido/01.png",
+    "/products/plato-base-15x25-cambio-rapido/02.png",
+    "/products/plato-base-15x25-cambio-rapido/03.png",
+    "/products/plato-base-15x25-cambio-rapido/04.png",
+    "/products/plato-base-15x25-cambio-rapido/05.png"
+  ],
+  "plato-base-15x50-pantalones-cambio-rapido": [
+    "/products/plato-base-15x50-pantalones-cambio-rapido/01.png",
+    "/products/plato-base-15x50-pantalones-cambio-rapido/02.png",
+    "/products/plato-base-15x50-pantalones-cambio-rapido/03.png",
+    "/products/plato-base-15x50-pantalones-cambio-rapido/04.png",
+    "/products/plato-base-15x50-pantalones-cambio-rapido/05.png"
+  ],
+  "plato-base-18x18-cambio-rapido": [
+    "/products/plato-base-18x18-cambio-rapido/01.png",
+    "/products/plato-base-18x18-cambio-rapido/02.png",
+    "/products/plato-base-18x18-cambio-rapido/03.png"
+  ],
+  "plato-base-18x38-cambio-rapido": [
+    "/products/plato-base-18x38-cambio-rapido/01.png",
+    "/products/plato-base-18x38-cambio-rapido/02.png",
+    "/products/plato-base-18x38-cambio-rapido/03.png"
+  ],
+  "plato-base-18x45-cambio-rapido": [
+    "/products/plato-base-18x45-cambio-rapido/01.png",
+    "/products/plato-base-18x45-cambio-rapido/02.png",
+    "/products/plato-base-18x45-cambio-rapido/03.png"
+  ],
+  "plato-base-30x35-cambio-rapido": [
+    "/products/plato-base-30x35-cambio-rapido/01.png",
+    "/products/plato-base-30x35-cambio-rapido/02.png",
+    "/products/plato-base-30x35-cambio-rapido/03.png"
+  ],
+  "plato-base-40x50-2mangas-cambio-rapido": [
+    "/products/plato-base-40x50-2mangas-cambio-rapido/01.png",
+    "/products/plato-base-40x50-2mangas-cambio-rapido/02.png",
+    "/products/plato-base-40x50-2mangas-cambio-rapido/03.png",
+    "/products/plato-base-40x50-2mangas-cambio-rapido/04.png",
+    "/products/plato-base-40x50-2mangas-cambio-rapido/05.png"
+  ],
+  "plato-base-camisetas-cambio-rapido": [
+    "/products/plato-base-camisetas-cambio-rapido/01.png",
+    "/products/plato-base-camisetas-cambio-rapido/02.png",
+    "/products/plato-base-camisetas-cambio-rapido/03.png",
+    "/products/plato-base-camisetas-cambio-rapido/04.png"
+  ],
+  "plato-base-gorras-cambio-rapido": [
+    "/products/plato-base-gorras-cambio-rapido/01.png",
+    "/products/plato-base-gorras-cambio-rapido/02.png",
+    "/products/plato-base-gorras-cambio-rapido/03.png",
+    "/products/plato-base-gorras-cambio-rapido/04.png"
+  ],
+  "plato-base-redondo-24-cambio-rapido": [
+    "/products/plato-base-redondo-24-cambio-rapido/01.png",
+    "/products/plato-base-redondo-24-cambio-rapido/02.png",
+    "/products/plato-base-redondo-24-cambio-rapido/03.png"
+  ],
+  "plato-base-zapatillas-cambio-rapido": [
+    "/products/plato-base-zapatillas-cambio-rapido/01.png",
+    "/products/plato-base-zapatillas-cambio-rapido/02.png",
+    "/products/plato-base-zapatillas-cambio-rapido/03.png"
+  ],
+  "plato-gorras-beinsen-obrei": [
+    "/products/plato-gorras-beinsen-obrei/01.png"
+  ],
+  "plato-gorras-beinsen-riad": [
+    "/products/plato-gorras-beinsen-riad/01.png"
+  ],
+  "plato-intercambiable-18x18-barbados": [
+    "/products/plato-intercambiable-18x18-barbados/01.png",
+    "/products/plato-intercambiable-18x18-barbados/02.png",
+    "/products/plato-intercambiable-18x18-barbados/03.png"
+  ],
+  "plato-intercambiable-18x38-barbados": [
+    "/products/plato-intercambiable-18x38-barbados/01.png",
+    "/products/plato-intercambiable-18x38-barbados/02.png",
+    "/products/plato-intercambiable-18x38-barbados/03.png"
+  ],
+  "plato-intercambiable-18x45-barbados": [
+    "/products/plato-intercambiable-18x45-barbados/01.png",
+    "/products/plato-intercambiable-18x45-barbados/02.png",
+    "/products/plato-intercambiable-18x45-barbados/03.png"
+  ],
+  "plato-intercambiable-30x35-barbados": [
+    "/products/plato-intercambiable-30x35-barbados/01.png",
+    "/products/plato-intercambiable-30x35-barbados/02.png",
+    "/products/plato-intercambiable-30x35-barbados/03.png"
+  ],
+  "plato-intercambiable-redondo-24-barbados": [
+    "/products/plato-intercambiable-redondo-24-barbados/01.png",
+    "/products/plato-intercambiable-redondo-24-barbados/02.png",
+    "/products/plato-intercambiable-redondo-24-barbados/03.png"
+  ],
+  "plato-intercambiable-zapatillas-barbados": [
+    "/products/plato-intercambiable-zapatillas-barbados/01.png",
+    "/products/plato-intercambiable-zapatillas-barbados/02.png",
+    "/products/plato-intercambiable-zapatillas-barbados/03.png"
+  ],
+  "plato-resistencia-combo-38x38": [
+    "/products/plato-resistencia-combo-38x38/01.png",
+    "/products/plato-resistencia-combo-38x38/02.png",
+    "/products/plato-resistencia-combo-38x38/03.png"
+  ],
   "pocola-plancha-transfer-manual-pequena": [
     "/products/pocola-plancha-transfer-manual-pequena/01.png",
     "/products/pocola-plancha-transfer-manual-pequena/02.png"
+  ],
+  "rele-estado-solido-sz1": [
+    "/products/rele-estado-solido-sz1/01.png",
+    "/products/rele-estado-solido-sz1/02.png",
+    "/products/rele-estado-solido-sz1/03.png"
+  ],
+  "rele-hornos-sx8-sz1": [
+    "/products/rele-hornos-sx8-sz1/01.png",
+    "/products/rele-hornos-sx8-sz1/02.png",
+    "/products/rele-hornos-sx8-sz1/03.png"
+  ],
+  "rele-intermedio-24v-sz1": [
+    "/products/rele-intermedio-24v-sz1/01.png",
+    "/products/rele-intermedio-24v-sz1/02.png",
+    "/products/rele-intermedio-24v-sz1/03.png"
+  ],
+  "resistencia-15x15-beinsen-obrei": [
+    "/products/resistencia-15x15-beinsen-obrei/01.png"
+  ],
+  "resistencia-15x20-beinsen-riad": [
+    "/products/resistencia-15x20-beinsen-riad/01.png"
+  ],
+  "resistencia-chupitos-1-5oz": [
+    "/products/resistencia-chupitos-1-5oz/01.png",
+    "/products/resistencia-chupitos-1-5oz/02.png",
+    "/products/resistencia-chupitos-1-5oz/03.png",
+    "/products/resistencia-chupitos-1-5oz/04.png"
+  ],
+  "resistencia-cilindrica-20-30oz": [
+    "/products/resistencia-cilindrica-20-30oz/01.png",
+    "/products/resistencia-cilindrica-20-30oz/02.png",
+    "/products/resistencia-cilindrica-20-30oz/03.png",
+    "/products/resistencia-cilindrica-20-30oz/04.png",
+    "/products/resistencia-cilindrica-20-30oz/05.png"
+  ],
+  "resistencia-cilindrica-tazas-11oz-tipo-a": [
+    "/products/resistencia-cilindrica-tazas-11oz-tipo-a/01.png",
+    "/products/resistencia-cilindrica-tazas-11oz-tipo-a/02.png",
+    "/products/resistencia-cilindrica-tazas-11oz-tipo-a/03.png"
+  ],
+  "resistencia-conica-tazas-12oz": [
+    "/products/resistencia-conica-tazas-12oz/01.png",
+    "/products/resistencia-conica-tazas-12oz/02.png",
+    "/products/resistencia-conica-tazas-12oz/03.png"
+  ],
+  "resistencia-doble-taza-11-15oz": [
+    "/products/resistencia-doble-taza-11-15oz/01.png",
+    "/products/resistencia-doble-taza-11-15oz/02.png",
+    "/products/resistencia-doble-taza-11-15oz/03.png",
+    "/products/resistencia-doble-taza-11-15oz/04.png"
+  ],
+  "resistencia-gorras-beinsen-obrei": [
+    "/products/resistencia-gorras-beinsen-obrei/02.png",
+    "/products/resistencia-gorras-beinsen-obrei/03.png"
+  ],
+  "resistencia-gorras-beinsen-riad": [
+    "/products/resistencia-gorras-beinsen-riad/01.png"
+  ],
+  "resistencia-gorras-combo-beinsen": [
+    "/products/resistencia-gorras-combo-beinsen/01.png"
+  ],
+  "resistencia-para-tazas-conicas-17oz": [
+    "/products/resistencia-para-tazas-conicas-17oz/01.png",
+    "/products/resistencia-para-tazas-conicas-17oz/02.png",
+    "/products/resistencia-para-tazas-conicas-17oz/03.png"
+  ],
+  "resistencia-platos-5-dorian": [
+    "/products/resistencia-platos-5-dorian/01.png"
+  ],
+  "resistencia-platos-6-1-gen": [
+    "/products/resistencia-platos-6-1-gen/01.png"
+  ],
+  "resistencia-tazas-11oz-a": [
+    "/products/resistencia-tazas-11oz-a/01.png",
+    "/products/resistencia-tazas-11oz-a/02.png",
+    "/products/resistencia-tazas-11oz-a/03.png"
+  ],
+  "resistencia-tazas-11oz-b": [
+    "/products/resistencia-tazas-11oz-b/01.png",
+    "/products/resistencia-tazas-11oz-b/02.png",
+    "/products/resistencia-tazas-11oz-b/03.png",
+    "/products/resistencia-tazas-11oz-b/04.png"
+  ],
+  "resistencia-tazas-2-5oz": [
+    "/products/resistencia-tazas-2-5oz/01.png",
+    "/products/resistencia-tazas-2-5oz/02.png",
+    "/products/resistencia-tazas-2-5oz/03.png",
+    "/products/resistencia-tazas-2-5oz/04.png",
+    "/products/resistencia-tazas-2-5oz/05.png"
+  ],
+  "resistencia-tazas-6-10oz": [
+    "/products/resistencia-tazas-6-10oz/13cm._2.png",
+    "/products/resistencia-tazas-6-10oz/resistencia_11_oz_002_1_1.png",
+    "/products/resistencia-tazas-6-10oz/resistencia_11oz_01_1_1.png"
+  ],
+  "resistencia-tazas-conicas-17oz": [
+    "/products/resistencia-tazas-conicas-17oz/01.png",
+    "/products/resistencia-tazas-conicas-17oz/02.png",
+    "/products/resistencia-tazas-conicas-17oz/03.png"
+  ],
+  "rodillo-cintas": [
+    "/products/rodillo-cintas/01.png",
+    "/products/rodillo-cintas/02.png",
+    "/products/rodillo-cintas/03.png"
+  ],
+  "sensor-placa-calefactora-sx8-sz1": [
+    "/products/sensor-placa-calefactora-sx8-sz1/01.png",
+    "/products/sensor-placa-calefactora-sx8-sz1/02.png"
+  ],
+  "sensor-temperatura-sz1": [
+    "/products/sensor-temperatura-sz1/01.png"
+  ],
+  "sicilia-plancha-para-tazas": [
+    "/products/sicilia-plancha-para-tazas/01.png",
+    "/products/sicilia-plancha-para-tazas/02.png",
+    "/products/sicilia-plancha-para-tazas/03.JPG",
+    "/products/sicilia-plancha-para-tazas/04.JPG",
+    "/products/sicilia-plancha-para-tazas/05.JPG"
   ],
   "sore-plancha-profesional-tazas": [
     "/products/sore-plancha-profesional-tazas/01.png",
@@ -218,6 +637,11 @@
     "/products/sore-plancha-profesional-tazas/05.JPG",
     "/products/sore-plancha-profesional-tazas/06.JPG",
     "/products/sore-plancha-profesional-tazas/07.jpg"
+  ],
+  "termometro-digital-infrarrojos-it122": [
+    "/products/termometro-digital-infrarrojos-it122/01.png",
+    "/products/termometro-digital-infrarrojos-it122/02.png",
+    "/products/termometro-digital-infrarrojos-it122/03.png"
   ],
   "tobago-estacion-planchado-continuo": [
     "/products/tobago-estacion-planchado-continuo/01.png",
