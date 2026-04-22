@@ -227,21 +227,21 @@ export default function Home() {
                             { 
                                 title: d.categories.machines, 
                                 link: "/planchas?type=planchas", 
-                                img: "https://images.unsplash.com/photo-1590249257692-a162df94afff?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                                img: "/cat-maquinas.png",
                                 icon: Settings,
                                 tag: "High Production"
                             },
-                            { 
-                                title: d.categories.accs, 
-                                link: "/planchas?type=accessories", 
-                                img: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                            {
+                                title: d.categories.accs,
+                                link: "/planchas?type=accessories",
+                                img: "/cat-accesorios.png",
                                 icon: Box,
                                 tag: "Pro Hardware"
                             },
-                            { 
-                                title: d.categories.cons, 
-                                link: "/planchas?type=consumables", 
-                                img: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                            {
+                                title: d.categories.cons,
+                                link: "/planchas?type=consumables",
+                                img: "/cat-consumibles.png",
                                 icon: Package,
                                 tag: "Original Supplies"
                             }
