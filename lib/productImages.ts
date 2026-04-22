@@ -10,11 +10,18 @@ export function getLocalImages(slug?: string): { image?: string; gallery?: strin
   return { image: images[0], gallery: images };
 }
 
-export function enrichWithLocalImages<T extends { slug?: string; image?: string; gallery?: string[] }>(product: T): T {
+export function enrichWithLocalImages<T extends { slug?: string; image?: string; gallery?: string[]; hotspotImage?: string; storySegments?: any[] }>(product: T): T {
   const local = getLocalImages(product.slug);
+  if (!local.gallery || local.gallery.length === 0) return product;
+  const g = local.gallery;
   return {
     ...product,
-    image: local.image || product.image,
-    gallery: local.gallery && local.gallery.length > 0 ? local.gallery : product.gallery,
+    image: g[0],
+    gallery: g,
+    hotspotImage: g[0],
+    storySegments: product.storySegments?.map((seg: any, i: number) => ({
+      ...seg,
+      image: g[i % g.length],
+    })),
   };
 }
