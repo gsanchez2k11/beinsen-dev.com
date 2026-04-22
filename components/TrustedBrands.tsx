@@ -1,21 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Zap, ShieldCheck, Factory, Building2, PackageCheck } from "lucide-react";
+import Image from "next/image";
 
 const BRANDS = [
-    { name: "TextilPro", icon: <Building2 size={24} /> },
-    { name: "PrintMasters", icon: <Factory size={24} /> },
-    { name: "SubliEurope", icon: <Zap size={24} /> },
-    { name: "GlobalMerch", icon: <PackageCheck size={24} /> },
-    { name: "QualityTransfers", icon: <ShieldCheck size={24} /> },
-    // Duplicate for seamless loop
-    { name: "TextilPro", icon: <Building2 size={24} /> },
-    { name: "PrintMasters", icon: <Factory size={24} /> },
-    { name: "SubliEurope", icon: <Zap size={24} /> },
-    { name: "GlobalMerch", icon: <PackageCheck size={24} /> },
-    { name: "QualityTransfers", icon: <ShieldCheck size={24} /> },
+    { name: "Yoimprimo", url: "https://www.yoimprimo.com", logo: "/brands/yoimprimo.jpg" },
+    { name: "Tienda Sublimación", url: "https://tiendasublimacion.com", logo: "/brands/tiendasublimacion.webp" },
+    { name: "Tinta CISS", url: "https://www.tintaciss.net", logo: "/brands/tintaciss.jpg" },
+    { name: "Espiral Digital", url: "https://espiraldigital.es", logo: "/brands/espiraldigital.svg" },
+    { name: "APPhoto", url: "https://www.apphoto.es", logo: "/brands/apphoto.webp" },
 ];
+
+const LOOP = [...BRANDS, ...BRANDS];
 
 export function TrustedBrands() {
     return (
@@ -32,19 +28,27 @@ export function TrustedBrands() {
             <div className="flex w-[200%]">
                 <motion.div
                     animate={{ x: ["0%", "-50%"] }}
-                    transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+                    transition={{ ease: "linear", duration: 30, repeat: Infinity }}
                     className="flex flex-none w-full justify-around items-center"
                 >
-                    {BRANDS.map((brand, i) => (
-                        <div
+                    {LOOP.map((brand, i) => (
+                        <a
                             key={i}
-                            className="flex items-center gap-3 px-8 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+                            href={brand.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={brand.name}
+                            className="flex items-center justify-center px-8 opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
                         >
-                            <div className="text-muted-foreground">{brand.icon}</div>
-                            <span className="text-xl font-black text-foreground/80 tracking-tight">
-                                {brand.name}
-                            </span>
-                        </div>
+                            <Image
+                                src={brand.logo}
+                                alt={brand.name}
+                                width={180}
+                                height={60}
+                                className="h-12 w-auto object-contain"
+                                unoptimized={brand.logo.endsWith(".svg")}
+                            />
+                        </a>
                     ))}
                 </motion.div>
             </div>

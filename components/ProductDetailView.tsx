@@ -23,9 +23,10 @@ interface ProductDetailViewProps {
     plancha: Plancha;
     fullAccessories?: CompatibleItem[];
     fullConsumables?: CompatibleItem[];
+    kind?: "planchas" | "accessories" | "consumables";
 }
 
-export function ProductDetailView({ plancha, fullAccessories = [], fullConsumables = [] }: ProductDetailViewProps) {
+export function ProductDetailView({ plancha, fullAccessories = [], fullConsumables = [], kind = "planchas" }: ProductDetailViewProps) {
     const { locale } = useLanguage();
     const [activeTab, setActiveTab] = useState<"accessories" | "consumables">("accessories");
 
@@ -42,7 +43,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             inicio: "Inicio",
             planchas: "Planchas",
             back: "Volver al catálogo",
-            investment: "Inversión Directa",
+            investment: "PVP",
             checkPrice: "Consultar PVP",
             galleryTitle: "Galería de Detalles",
             engineeringTitle: "Ingeniería al Detalle",
@@ -66,7 +67,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             maintenanceTitle: "Consejos de Mantenimiento",
             maintenanceDesc: "Siga estas pautas para prolongar la vida útil de tu inversión industrial.",
             distributorsTitle: "Dónde Comprar",
-            distributorsDesc: "Adquiere tu máquina a través de nuestros distribuidores autorizados.",
+            distributorsDesc: "Adquiere este producto en nuestra tienda oficial.",
             buyNow: "Comprar ahora",
             visitWeb: "Visitar web",
             certified: "Componente industrial certificado",
@@ -76,7 +77,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             inicio: "Home",
             planchas: "Heat Presses",
             back: "Back to catalog",
-            investment: "Direct Investment",
+            investment: "Retail Price",
             checkPrice: "Check Price",
             galleryTitle: "Detail Gallery",
             engineeringTitle: "Engineering in Detail",
@@ -100,7 +101,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             maintenanceTitle: "Maintenance Tips",
             maintenanceDesc: "Follow these guidelines to prolong the lifespan of your industrial investment.",
             distributorsTitle: "Where to Buy",
-            distributorsDesc: "Acquire your machine through our authorized distributors.",
+            distributorsDesc: "Get this product at our official store.",
             buyNow: "Buy now",
             visitWeb: "Visit website",
             certified: "Certified industrial component",
@@ -110,7 +111,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             inicio: "Início",
             planchas: "Prensas Térmicas",
             back: "Voltar ao catálogo",
-            investment: "Investimento Direto",
+            investment: "PVP",
             checkPrice: "Consultar PVP",
             galleryTitle: "Galeria de Detalhes",
             engineeringTitle: "Engenharia ao Detalhe",
@@ -134,7 +135,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             maintenanceTitle: "Conselhos de Manutenção",
             maintenanceDesc: "Siga estas diretrizes para prolongar a vida útil.",
             distributorsTitle: "Onde Comprar",
-            distributorsDesc: "Adquira a sua máquina através dos nossos distribuidores.",
+            distributorsDesc: "Adquira este produto na nossa loja oficial.",
             buyNow: "Comprar agora",
             visitWeb: "Visitar web",
             certified: "Componente industrial certificado",
@@ -144,7 +145,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             inicio: "Inizio",
             planchas: "Presse a Caldo",
             back: "Torna al catalogo",
-            investment: "Investimento Diretto",
+            investment: "Prezzo al Pubblico",
             checkPrice: "Consultare PVP",
             galleryTitle: "Galleria dei Dettagli",
             engineeringTitle: "Ingegneria nei Dettagli",
@@ -168,7 +169,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             maintenanceTitle: "Consigli di Manutenzione",
             maintenanceDesc: "Segui queste linee guida per prolungare la vita utile.",
             distributorsTitle: "Dove Acquistare",
-            distributorsDesc: "Acquista la tua macchina tramite i nostri distributori autorizzati.",
+            distributorsDesc: "Acquista questo prodotto nel nostro store ufficiale.",
             buyNow: "Acquista ora",
             visitWeb: "Visita il sito",
             certified: "Componente industriale certificato",
@@ -215,6 +216,13 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground tracking-tighter leading-[0.9] mb-8 max-w-6xl mx-auto drop-shadow-sm">
                                 {name}
                             </h1>
+                            {kind !== "planchas" && (plancha as any).reference && (
+                                <div className="mb-6">
+                                    <span className="inline-block text-xs font-mono font-bold tracking-[0.2em] text-muted-foreground bg-muted px-4 py-2 rounded-xl border border-border/40">
+                                        Ref. {(plancha as any).reference}
+                                    </span>
+                                </div>
+                            )}
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.2} className="mb-14">
@@ -231,14 +239,18 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                                 
                                 <div className="flex flex-col items-center sm:items-start text-foreground">
                                     <span className="text-xs text-muted-foreground uppercase tracking-[0.3em] font-black mb-1 opacity-50">{d.investment}</span>
-                                    {plancha.price !== 'Consultar PVP' ? (
-                                        <span className="text-5xl font-black text-foreground flex items-center gap-1 leading-none tracking-tighter">
-                                            {typeof plancha.price === 'number' ? plancha.price.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES') : plancha.price}
-                                            <span className="text-[#FF6600] ml-1">€</span>
-                                        </span>
-                                    ) : (
-                                        <span className="text-2xl font-black text-muted-foreground">{d.checkPrice}</span>
-                                    )}
+                                    {(() => {
+                                        const shown = (plancha as any).pvp ?? plancha.price;
+                                        if (shown === undefined || shown === 'Consultar PVP') {
+                                            return <span className="text-2xl font-black text-muted-foreground">{d.checkPrice}</span>;
+                                        }
+                                        return (
+                                            <span className="text-5xl font-black text-foreground flex items-center gap-1 leading-none tracking-tighter">
+                                                {typeof shown === 'number' ? shown.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES') : shown}
+                                                <span className="text-[#FF6600] ml-1">€</span>
+                                            </span>
+                                        );
+                                    })()}
                                 </div>
                             </div>
                         </ScrollReveal>
@@ -341,41 +353,29 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                         </ScrollReveal>
                     )}
 
-                    {/* Distributors Section */}
-                    {plancha.distributors && plancha.distributors.length > 0 && (
-                         <ScrollReveal className="w-full py-12">
-                            <div className="text-center mb-16">
+                    {/* Where to Buy Section */}
+                    {(plancha as any).tiendaSublimacionUrl && (
+                        <ScrollReveal className="w-full py-12">
+                            <div className="text-center mb-12">
                                 <h3 className="text-4xl font-black mb-4 tracking-tight">{d.distributorsTitle}</h3>
                                 <p className="text-muted-foreground text-lg">{d.distributorsDesc}</p>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                                {plancha.distributors.map((dist, i) => (
-                                    <a 
-                                        key={i} 
-                                        href={dist.url} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer"
-                                        className="group p-8 bg-card border border-border/50 rounded-[2.5rem] hover:border-[#FF6600] transition-all flex flex-col items-center text-center gap-6 hover:shadow-2xl hover:shadow-[#FF6600]/10"
-                                    >
-                                        <div className="relative w-full h-16 opacity-70 group-hover:opacity-100 transition-opacity">
-                                            {dist.logo ? (
-                                                <Image src={dist.logo} alt={dist.name} fill className="object-contain" />
-                                            ) : (
-                                                <div className="w-full h-full flex items-center justify-center">
-                                                    <Globe className="text-muted-foreground" size={40} />
-                                                </div>
-                                            )}
-                                        </div>
-                                        <div>
-                                            <h4 className="text-xl font-bold mb-2">{dist.name}</h4>
-                                            <span className="inline-flex items-center gap-2 text-[#FF6600] font-bold text-sm uppercase tracking-wider group-hover:underline">
-                                                {d.visitWeb} <ExternalLink size={14} />
-                                            </span>
-                                        </div>
-                                    </a>
-                                ))}
+                            <div className="max-w-xl mx-auto">
+                                <a
+                                    href={(plancha as any).tiendaSublimacionUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group p-10 bg-card border border-border/50 rounded-[2.5rem] hover:border-[#FF6600] transition-all flex flex-col items-center text-center gap-8 hover:shadow-2xl hover:shadow-[#FF6600]/10"
+                                >
+                                    <div className="relative w-64 h-16 opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0">
+                                        <Image src="/brands/tiendasublimacion.webp" alt="Tienda Sublimación" fill className="object-contain" />
+                                    </div>
+                                    <span className="inline-flex items-center gap-2 text-[#FF6600] font-bold text-sm uppercase tracking-wider group-hover:underline">
+                                        {d.buyNow} <ExternalLink size={14} />
+                                    </span>
+                                </a>
                             </div>
-                         </ScrollReveal>
+                        </ScrollReveal>
                     )}
 
                     {/* Video / Action Section */}
@@ -487,14 +487,26 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                                         </div>
                                         <div className="flex flex-col flex-1 px-2">
                                             <div className="flex justify-between items-start mb-4">
-                                                <h4 className="font-black text-xl tracking-tight leading-tight group-hover:text-[#FF6600] transition-colors">
-                                                    {getLocalized(item.name, locale)}
-                                                </h4>
+                                                <div className="flex flex-col gap-1.5 min-w-0">
+                                                    <h4 className="font-black text-xl tracking-tight leading-tight group-hover:text-[#FF6600] transition-colors">
+                                                        {getLocalized(item.name, locale)}
+                                                    </h4>
+                                                    {item.reference && (
+                                                        <span className="text-[10px] font-mono font-bold tracking-wider text-muted-foreground/70">
+                                                            Ref. {item.reference}
+                                                        </span>
+                                                    )}
+                                                </div>
                                                 <div className="text-right shrink-0">
-                                                    <span className="text-foreground font-black text-2xl tracking-tighter">
-                                                        {typeof item.price === 'number' ? item.price.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES') : item.price} 
-                                                        <span className="text-[#FF6600] ml-1">{item.price !== 'Consultar PVP' ? '€' : ''}</span>
-                                                    </span>
+                                                    {(() => {
+                                                        const shown = item.pvp ?? item.price;
+                                                        return (
+                                                            <span className="text-foreground font-black text-2xl tracking-tighter">
+                                                                {typeof shown === 'number' ? shown.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES') : shown}
+                                                                <span className="text-[#FF6600] ml-1">{shown !== 'Consultar PVP' ? '€' : ''}</span>
+                                                            </span>
+                                                        );
+                                                    })()}
                                                 </div>
                                             </div>
                                             <p className="text-sm text-muted-foreground italic mb-6 line-clamp-2">
