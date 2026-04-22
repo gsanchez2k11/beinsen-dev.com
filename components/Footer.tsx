@@ -16,8 +16,8 @@ export function Footer() {
             accesorios: "Accesorios y Consumibles",
             support: "Área de Soporte",
             contact: "Contacto",
-            address: "Polígono Industrial, C. Falsa 123",
-            city: "28000 Madrid, España",
+            address: "Av. Alto de las Atalayas, 18",
+            city: "30110 Cabezo de Torres, Murcia",
             rights: "Todos los derechos reservados.",
             privacy: "Privacidad",
             legal: "Aviso Legal",
@@ -30,8 +30,8 @@ export function Footer() {
             accesorios: "Accessories & Consumables",
             support: "Support Area",
             contact: "Contact",
-            address: "Industrial Park, 123 Fake St.",
-            city: "28000 Madrid, Spain",
+            address: "Av. Alto de las Atalayas, 18",
+            city: "30110 Cabezo de Torres, Murcia, Spain",
             rights: "All rights reserved.",
             privacy: "Privacy Policy",
             legal: "Legal Notice",
@@ -44,8 +44,8 @@ export function Footer() {
             accesorios: "Acessórios e Consumíveis",
             support: "Área de Suporte",
             contact: "Contacto",
-            address: "Parque Industrial, R. Fictícia 123",
-            city: "28000 Madrid, Espanha",
+            address: "Av. Alto de las Atalayas, 18",
+            city: "30110 Cabezo de Torres, Múrcia, Espanha",
             rights: "Todos os direitos reservados.",
             privacy: "Privacidade",
             legal: "Aviso Legal",
@@ -58,8 +58,8 @@ export function Footer() {
             accesorios: "Accessori e Consumabili",
             support: "Area Supporto",
             contact: "Contattaci",
-            address: "Zona Industriale, Via Falsa 123",
-            city: "28000 Madrid, Spagna",
+            address: "Av. Alto de las Atalayas, 18",
+            city: "30110 Cabezo de Torres, Murcia, Spagna",
             rights: "Tutti i diritti riservati.",
             privacy: "Privacy",
             legal: "Note Legali",
@@ -125,7 +125,7 @@ export function Footer() {
                             </li>
                             <li className="flex items-center gap-3 text-sm text-muted-foreground">
                                 <Phone size={18} className="text-primary" />
-                                <span>+34 900 000 000</span>
+                                <a href="tel:+34968902300" className="hover:text-primary">+34 968 902 300</a>
                             </li>
                             <li className="flex items-center gap-3 text-sm text-muted-foreground">
                                 <Mail size={18} className="text-primary" />

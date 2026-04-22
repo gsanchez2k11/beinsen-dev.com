@@ -11,7 +11,7 @@ export default function ConditionsPage() {
         <div className="p-8 bg-muted/20 border-2 border-[#FF6600]/20 rounded-3xl mb-12">
           <h2 className="text-2xl font-bold mb-4 text-[#FF6600]">AVISO LEGAL Y CONDICIONES GENERALES</h2>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            En el presente documento de <span className="font-bold">FUTURA TECK DE MURCIA, S.L.U.</span>, constan los términos de uso de los sitios webs de los que es titular, así como la política general de contratación en la que se regula el derecho de desistimiento del cliente, los plazos para el ejercicio del mismo así como la política de devoluciones y gastos de envío.
+            En el presente documento de <span className="font-bold">Futura Teck de Murcia S.L.U.</span>, constan los términos de uso de los sitios webs de los que es titular, así como la política general de contratación en la que se regula el derecho de desistimiento del cliente, los plazos para el ejercicio del mismo así como la política de devoluciones y gastos de envío.
           </p>
         </div>
 
@@ -21,7 +21,7 @@ export default function ConditionsPage() {
             <div className="p-6 bg-card border border-border rounded-2xl shadow-sm">
               <h4 className="font-bold mb-2">Compras por Internet</h4>
               <p className="text-sm text-muted-foreground">
-                En caso de que el cliente opte por los métodos de envío que FUTURA TECK ofrece, el riesgo lo asume la empresa hasta la entrega. Si el cliente opta por un método distinto, el riesgo se transmite desde la recogida.
+                En caso de que el cliente opte por los métodos de envío que Futura Teck ofrece, el riesgo lo asume la empresa hasta la entrega. Si el cliente opta por un método distinto, el riesgo se transmite desde la recogida.
               </p>
             </div>
             <div className="p-6 bg-card border border-border rounded-2xl shadow-sm">
@@ -65,7 +65,7 @@ export default function ConditionsPage() {
         <section className="mb-12 space-y-6">
           <h3 className="text-xl font-bold">PRODUCTO DEFECTUOSO</h3>
           <p className="text-muted-foreground text-sm leading-relaxed">
-            Si el producto es defectuoso, se puede optar entre la reparación gratuita o sustitución. FUTURA TECK devolverá los gastos de envío originales. Sin embargo, los gastos de envío a la empresa para reparación corren por cuenta del CLIENTE.
+            Si el producto es defectuoso, se puede optar entre la reparación gratuita o sustitución. Futura Teck devolverá los gastos de envío originales. Sin embargo, los gastos de envío a la empresa para reparación corren por cuenta del CLIENTE.
           </p>
         </section>
 
