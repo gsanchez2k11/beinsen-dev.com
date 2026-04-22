@@ -14,6 +14,7 @@ import { StickyProductNav } from "@/components/StickyProductNav";
 import { ProductHotspots } from "@/components/ProductHotspots";
 import { RoiCalculator } from "@/components/RoiCalculator";
 import { InmersiveScroller } from "@/components/InmersiveScroller";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import type { Plancha, CompatibleItem } from "@/data/products";
@@ -181,6 +182,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
     return (
         <div className="bg-background min-h-screen pt-24 pb-24 overflow-x-hidden selection:bg-[#FF6600] selection:text-white">
             <StickyProductNav productName={plancha.name} price={plancha.price} />
+            <ScrollToTopButton />
            
             {/* Dynamic Breadcrumbs */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
