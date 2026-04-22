@@ -84,14 +84,16 @@ function PlanchasCatalogContent() {
     const [visibleMachines, setVisibleMachines] = useState(PAGE_SIZE);
     const [visibleAccessories, setVisibleAccessories] = useState(PAGE_SIZE);
     const [visibleConsumables, setVisibleConsumables] = useState(PAGE_SIZE);
-    // Single-type view visible count
+
+    // Compatible machine filter (for accessories & consumables views)
+    const [selectedMachine, setSelectedMachine] = useState("");
 
     // Reset visible counts when filters change
     useEffect(() => {
         setVisibleMachines(PAGE_SIZE);
         setVisibleAccessories(PAGE_SIZE);
         setVisibleConsumables(PAGE_SIZE);
-    }, [activeType, activeCategoryIndex, activeOpeningIndex, searchQuery]);
+    }, [activeType, activeCategoryIndex, activeOpeningIndex, searchQuery, selectedMachine]);
 
     // Initialize from URL on first mount
     useEffect(() => {
@@ -119,6 +121,7 @@ function PlanchasCatalogContent() {
             setActiveCategoryIndex(0);
             setActiveOpeningIndex(0);
             setSearchQuery("");
+            setSelectedMachine("");
         }
     }, [searchParams, mounted]);
 
@@ -158,6 +161,8 @@ function PlanchasCatalogContent() {
             consumables: "Consumibles",
             filterTitle: "Búsqueda Avanzada",
             loadMore: "Ver más",
+            compatibleWith: "Máquina compatible",
+            allMachines: "Todas las máquinas",
         },
         en: {
             title: "Catalog",
@@ -180,8 +185,29 @@ function PlanchasCatalogContent() {
             consumables: "Consumables",
             filterTitle: "Advanced Search",
             loadMore: "Load more",
+            compatibleWith: "Compatible machine",
+            allMachines: "All machines",
         }
     }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
+
+    // Map: model name (first word of localized name) → { accIds, consIds }
+    const machineCompatMap = useMemo(() => {
+        const map = new Map<string, { accIds: Set<string>; consIds: Set<string> }>();
+        planchasData.forEach(p => {
+            const fullName = getLocalized(p.name, locale) || getLocalized(p.name, 'es') || p.id;
+            const modelName = fullName.split(" ")[0]; // "Barein Plancha Térmica" → "Barein"
+            map.set(modelName, {
+                accIds: new Set((p.accessories || []).map((a: any) => a.id)),
+                consIds: new Set((p.consumables || []).map((c: any) => c.id)),
+            });
+        });
+        return map;
+    }, [locale]);
+
+    const machineModelNames = useMemo(() =>
+        Array.from(machineCompatMap.keys()).sort((a, b) => a.localeCompare(b, 'es')),
+        [machineCompatMap]
+    );
 
     const applyCommonFilters = (items: any[]) => {
         const selectedCategory = CATEGORIES[activeCategoryIndex];
@@ -207,15 +233,19 @@ function PlanchasCatalogContent() {
         [activeCategoryIndex, activeOpeningIndex, searchQuery, locale]
     );
 
-    const filteredAccessories = useMemo(() =>
-        applyCommonFilters(allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } }))),
-        [activeCategoryIndex, activeOpeningIndex, searchQuery, locale]
-    );
+    const filteredAccessories = useMemo(() => {
+        const base = applyCommonFilters(allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } })));
+        if (!selectedMachine) return base;
+        const allowed = machineCompatMap.get(selectedMachine)?.accIds;
+        return allowed ? base.filter((a: any) => allowed.has(a.id)) : base;
+    }, [activeCategoryIndex, activeOpeningIndex, searchQuery, locale, selectedMachine, machineCompatMap]);
 
-    const filteredConsumables = useMemo(() =>
-        applyCommonFilters(allConsumablesData.map(c => ({ ...c, _type: 'consumables', category: { es: 'Consumible', en: 'Consumable' }, openingType: { es: 'Químico/Material', en: 'Chemical/Material' } }))),
-        [activeCategoryIndex, activeOpeningIndex, searchQuery, locale]
-    );
+    const filteredConsumables = useMemo(() => {
+        const base = applyCommonFilters(allConsumablesData.map(c => ({ ...c, _type: 'consumables', category: { es: 'Consumible', en: 'Consumable' }, openingType: { es: 'Químico/Material', en: 'Chemical/Material' } })));
+        if (!selectedMachine) return base;
+        const allowed = machineCompatMap.get(selectedMachine)?.consIds;
+        return allowed ? base.filter((c: any) => allowed.has(c.id)) : base;
+    }, [activeCategoryIndex, activeOpeningIndex, searchQuery, locale, selectedMachine, machineCompatMap]);
 
     const totalFiltered = useMemo(() => {
         if (activeType === 'all') return filteredMachines.length + filteredAccessories.length + filteredConsumables.length;
@@ -295,6 +325,7 @@ function PlanchasCatalogContent() {
                                     setActiveCategoryIndex(0);
                                     setActiveOpeningIndex(0);
                                     setSearchQuery("");
+                                    setSelectedMachine("");
 
                                     if (t.id === 'all') {
                                         router.replace('/planchas', { scroll: false });
@@ -343,41 +374,68 @@ function PlanchasCatalogContent() {
                             exit={{ height: 0, opacity: 0 }}
                             className="overflow-hidden bg-muted/30 border-t border-border/20"
                         >
-                            <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-                                <div className="space-y-4">
+                            {(activeType === "accessories" || activeType === "consumables") ? (
+                                /* ── Filtro máquina compatible ── */
+                                <div className="max-w-7xl mx-auto px-4 py-8 space-y-4">
                                     <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
-                                        <Package size={12} /> {d.catLabel}
+                                        <Zap size={12} /> {d.compatibleWith}
                                     </label>
                                     <div className="flex flex-wrap gap-2">
-                                        {categoryLabels.map((cat, idx) => (
+                                        <button
+                                            onClick={() => setSelectedMachine("")}
+                                            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${selectedMachine === "" ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                        >
+                                            {d.allMachines}
+                                        </button>
+                                        {machineModelNames.map(name => (
                                             <button
-                                                key={cat}
-                                                onClick={() => setActiveCategoryIndex(idx)}
-                                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeCategoryIndex === idx ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                key={name}
+                                                onClick={() => setSelectedMachine(selectedMachine === name ? "" : name)}
+                                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${selectedMachine === name ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
                                             >
-                                                {cat}
+                                                {name}
                                             </button>
                                         ))}
                                     </div>
                                 </div>
+                            ) : (
+                                /* ── Filtros categoría + sistema (máquinas / all) ── */
+                                <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+                                    <div className="space-y-4">
+                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                            <Package size={12} /> {d.catLabel}
+                                        </label>
+                                        <div className="flex flex-wrap gap-2">
+                                            {categoryLabels.map((cat, idx) => (
+                                                <button
+                                                    key={cat}
+                                                    onClick={() => setActiveCategoryIndex(idx)}
+                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeCategoryIndex === idx ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                >
+                                                    {cat}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                                <div className="space-y-4">
-                                    <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
-                                        <Zap size={12} /> {d.openLabel}
-                                    </label>
-                                    <div className="flex flex-wrap gap-2">
-                                        {openingLabels.map((type, idx) => (
-                                            <button
-                                                key={type}
-                                                onClick={() => setActiveOpeningIndex(idx)}
-                                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeOpeningIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
-                                            >
-                                                {type}
-                                            </button>
-                                        ))}
+                                    <div className="space-y-4">
+                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                            <Zap size={12} /> {d.openLabel}
+                                        </label>
+                                        <div className="flex flex-wrap gap-2">
+                                            {openingLabels.map((type, idx) => (
+                                                <button
+                                                    key={type}
+                                                    onClick={() => setActiveOpeningIndex(idx)}
+                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeOpeningIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                >
+                                                    {type}
+                                                </button>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            )}
                         </motion.div>
                     )}
                 </AnimatePresence>
