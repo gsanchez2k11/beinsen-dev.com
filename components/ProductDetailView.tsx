@@ -258,6 +258,18 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                     </ScrollReveal>
                 </div>
 
+                {/* Image Gallery (for accessories/consumables without benefits section) */}
+                {plancha.gallery && plancha.gallery.length > 1 && (!plancha.benefits || plancha.benefits.length === 0) && (
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                        <ScrollReveal className="text-center mb-12">
+                            <span className="text-[#FF6600] font-black uppercase tracking-[0.4em] text-sm">{d.galleryTitle}</span>
+                        </ScrollReveal>
+                        <ScrollReveal>
+                            <ProductGallery images={plancha.gallery} productName={name || ""} />
+                        </ScrollReveal>
+                    </div>
+                )}
+
                 {/* 2. Immersive Storytelling (Scroll Sections) */}
                 {plancha.storySegments && plancha.storySegments.length > 0 && (
                     <div className="mt-32">
