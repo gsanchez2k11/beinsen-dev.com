@@ -5,8 +5,11 @@ export interface CompatibleItem {
   id: string;
   name: Localized<string> | string;
   price: number | string;
+  pvp?: number | string;
   image?: string;
   description?: Localized<string> | string;
+  reference?: string;
+  tiendaSublimacionUrl?: string;
 }
 
 export interface Accessory extends CompatibleItem {
@@ -47,6 +50,9 @@ export interface Plancha {
   heroVideo?: string;
   size: Localized<string> | string;
   price: number | string;
+  pvp?: number | string;
+  reference?: string;
+  tiendaSublimacionUrl?: string;
   category: Localized<string> | string;
   openingType?: Localized<string> | string;
   features: Localized<string[]>;
@@ -2087,7 +2093,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "https://beinsen.com/wp-content/uploads/2025/03/Diseno-sin-titulo-13.png",
     "price": "Consultar PVP",
-    "size": { "es": "Pequeño", "en": "Small", "pt": "Pequeno", "it": "Piccolo" },
+    "size": { "es": "Compacta", "en": "Compact", "pt": "Compacta", "it": "Compatta" },
     "features": {
       "es": [
         "Estructura compacta de grandes resultados",
@@ -2200,7 +2206,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "https://beinsen.com/wp-content/uploads/2025/03/riad.png",
     "price": "Consultar PVP",
-    "size": { "es": "Pequeño", "en": "Small", "pt": "Pequeno", "it": "Piccolo" },
+    "size": { "es": "Compacta", "en": "Compact", "pt": "Compacta", "it": "Compatta" },
     "features": {
       "es": [
         "Plato especial para gorras incluido",
@@ -2440,11 +2446,7 @@ const rawPlanchasData: Plancha[] = [
         "Check laser alignment quarterly.",
         "Keep the touch panel away from direct moisture."
       ]
-    },
-    "distributors": [
-      { "name": "Beinsen Direct", "url": "https://beinsen.com", "logo": "https://beinsen.com/wp-content/uploads/2023/02/logo-beinsen-1.png" },
-      { "name": "Amazon Business", "url": "https://amazon.es", "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" }
-    ]
+    }
   },
   {
     "id": "miranda-prensa-termica-automatica-electrica",
@@ -4362,7 +4364,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "https://beinsen.com/wp-content/uploads/2025/07/Diseno-sin-titulo.webp",
     "price": "Consultar PVP",
-    "size": { "es": "Pequeño", "en": "Small", "pt": "Pequeno", "it": "Piccolo" },
+    "size": { "es": "Compacta", "en": "Compact", "pt": "Compacta", "it": "Compatta" },
     "features": {
       "es": [
         "3 platos intercambiables: 205×171×218 mm / 114×132×179 mm / 97×115×115 mm",
@@ -4508,7 +4510,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "https://beinsen.com/wp-content/uploads/2024/01/felina-beinsen.png",
     "price": "Consultar PVP",
-    "size": { "es": "40×50 cm / 40×60 cm", "en": "40×50 cm / 40×60 cm", "pt": "40×50 cm / 40×60 cm", "it": "40×50 cm / 40×60 cm" },
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
       "es": [
         "Apertura giratoria swing-away 180° con base de cambio rápido y deslizamiento",
@@ -4657,10 +4659,6 @@ const rawPlanchasData: Plancha[] = [
   }
 ];
 
-const DEFAULT_DISTRIBUTORS = [
-  { name: "Beinsen Direct", url: "https://beinsen.com", logo: "https://beinsen.com/wp-content/uploads/2023/02/logo-beinsen-1.png" }
-];
-
 function uniqueStrings(values: string[]): string[] {
   return Array.from(new Set(values.filter(Boolean)));
 }
@@ -4741,7 +4739,7 @@ function enrichPlancha(plancha: Plancha): Plancha {
     downloads: plancha.downloads && plancha.downloads.length > 0 ? plancha.downloads : defaultDownloads,
     storySegments: plancha.storySegments && plancha.storySegments.length > 0 ? plancha.storySegments : defaultStorySegments,
     maintenanceTips: plancha.maintenanceTips || defaultMaintenanceTips,
-    distributors: plancha.distributors && plancha.distributors.length > 0 ? plancha.distributors : DEFAULT_DISTRIBUTORS
+    distributors: plancha.distributors
   };
 }
 
@@ -4762,6 +4760,7 @@ const rawAccessoriesData: Accessory[] = [
     description: { es: "Diodo láser de alta visibilidad para repuesto.", en: "High-visibility laser diode for replacement." }
   },
   {
+    "reference": "BPLAN159",
     id: "plato-resistencia-combo-38x38",
     slug: "plato-resistencia-combo-38x38",
     name: {
@@ -4781,11 +4780,11 @@ const rawAccessoriesData: Accessory[] = [
     technicalSpecs: [
       { label: { es: "Compatibilidad", en: "Compatibility", pt: "Compatibilidade", it: "Compatibilità" }, value: "Planchas Combo Beinsen 1ªGen (38x38)" },
       { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "38 x 38 cm" },
-      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Aluminio fundido" },
-      { label: { es: "P/N", en: "P/N", pt: "P/N", it: "P/N" }, value: "BPLAN159" }
+      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Aluminio fundido" }
     ]
   },
   {
+    "reference": "PLAACCA38",
     id: "almohadilla-silicona-38x38",
     slug: "almohadilla-silicona-38x38",
     name: {
@@ -4806,8 +4805,7 @@ const rawAccessoriesData: Accessory[] = [
       { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Silicona de grado industrial / Industrial grade silicone" },
       { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "38 x 38 cm" },
       { label: { es: "Espesor", en: "Thickness", pt: "Espessura", it: "Spessore" }, value: "10 mm" },
-      { label: { es: "Temperatura máxima", en: "Maximum Temperature", pt: "Temperatura máxima", it: "Temperatura massima" }, value: "220ºC" },
-      { label: { es: "P/N", en: "P/N", pt: "P/N", it: "P/N" }, value: "PLAACCA38" }
+      { label: { es: "Temperatura máxima", en: "Maximum Temperature", pt: "Temperatura máxima", it: "Temperatura massima" }, value: "220ºC" }
     ],
     gallery: [
       "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/a/l/almohadilla_38x38.webp",
@@ -4816,6 +4814,7 @@ const rawAccessoriesData: Accessory[] = [
     ]
   },
   {
+    "reference": "BTEFL155",
     "id": "lamina-teflon-38x38",
     "slug": "lamina-teflon-38x38",
     "name": {
@@ -4837,11 +4836,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)" },
       { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Proteger planchas y prendas / Protect plates and garments" },
-      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BTEFL155" }
+      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" }
     ]
   },
   {
+    "reference": "BTEFL156",
     "id": "lamina-teflon-40x50",
     "slug": "lamina-teflon-40x50",
     "name": {
@@ -4863,11 +4862,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)" },
       { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Proteger planchas y prendas / Protect plates and garments" },
-      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BTEFL156" }
+      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" }
     ]
   },
   {
+    "reference": "REPBEIRES11B",
     "id": "resistencia-tazas-11oz-b",
     "slug": "resistencia-tazas-11oz-b",
     "name": {
@@ -4886,11 +4885,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "B (Conector hembra flotante / Floating female connector)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barein, Sicilia, Maine, Clara, Sore, Barahona" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES11B" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barein, Sicilia, Maine, Clara, Sore, Barahona" }
     ]
   },
   {
+    "reference": "PLAACCRBE",
     "id": "resistencia-tazas-6-10oz",
     "slug": "resistencia-tazas-6-10oz",
     "name": {
@@ -4909,11 +4908,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "6 a 10 onzas" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barahona, Barein, Sore, Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "PLAACCRBE" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barahona, Barein, Sore, Maine" }
     ]
   },
   {
+    "reference": "REPBEIRES11A",
     "id": "resistencia-tazas-11oz-a",
     "slug": "resistencia-tazas-11oz-a",
     "name": {
@@ -4932,11 +4931,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "A (Conector macho / Male connector)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sore, Andra" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES11A" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sore, Andra" }
     ]
   },
   {
+    "reference": "REPBEIRES17C",
     "id": "resistencia-tazas-conicas-17oz",
     "slug": "resistencia-tazas-conicas-17oz",
     "name": {
@@ -4955,11 +4954,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "16.5cm largo / 17oz" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES17C" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" }
     ]
   },
   {
+    "reference": "REPBEIRSBMHB",
     "id": "resistencia-doble-taza-11-15oz",
     "slug": "resistencia-doble-taza-11-15oz",
     "name": {
@@ -4979,11 +4978,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "22 cm" },
       { "label": { "es": "Diámetro", "en": "Diameter", "pt": "Diâmetro", "it": "Diametro" }, "value": "7.5 - 10 cm" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Maine, Barahona" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRSBMHB" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Maine, Barahona" }
     ]
   },
   {
+    "reference": "90004029",
     "id": "plato-gorras-beinsen-riad",
     "slug": "plato-gorras-beinsen-riad",
     "name": {
@@ -5001,11 +5000,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Ottimizza la tua pressa termica modello Beinsen Riad con la nostra piastra inferiore per cappellini. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90004029" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" }
     ]
   },
   {
+    "reference": "90005119",
     "id": "resistencia-15x20-beinsen-riad",
     "slug": "resistencia-15x20-beinsen-riad",
     "name": {
@@ -5024,11 +5023,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Gante" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90005119" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" }
     ]
   },
   {
+    "reference": "90006134",
     "id": "resistencia-gorras-beinsen-riad",
     "slug": "resistencia-gorras-beinsen-riad",
     "name": {
@@ -5046,11 +5045,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza per sublimare cappellini per pressa termica Beinsen Riad."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006134" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" }
     ]
   },
   {
+    "reference": "90006380",
     "id": "plato-gorras-beinsen-obrei",
     "slug": "plato-gorras-beinsen-obrei",
     "name": {
@@ -5068,11 +5067,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Ottimizza la tua pressa termica modello Beinsen Obrei con la nostra piastra inferiore per cappellini. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006380" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" }
     ]
   },
   {
+    "reference": "PLAACRGOR",
     "id": "resistencia-gorras-combo-beinsen",
     "slug": "resistencia-gorras-combo-beinsen",
     "name": {
@@ -5092,11 +5091,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Medidas", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "122x150x100mm" },
       { "label": { "es": "Potencia", "en": "Power", "pt": "Potência", "it": "Potenza" }, "value": "300 W (220V)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Jamaica" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "PLAACRGOR" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Jamaica" }
     ]
   },
   {
+    "reference": "90005081",
     "id": "resistencia-gorras-beinsen-obrei",
     "slug": "resistencia-gorras-beinsen-obrei",
     "name": {
@@ -5116,11 +5115,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Medidas", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "122x150x100mm" },
       { "label": { "es": "Potencia", "en": "Power", "pt": "Potência", "it": "Potenza" }, "value": "300 W (220V)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90005081" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" }
     ]
   },
   {
+    "reference": "REPBEIRESPL1",
     "id": "resistencia-15x15-beinsen-obrei",
     "slug": "resistencia-15x15-beinsen-obrei",
     "name": {
@@ -5139,11 +5138,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRESPL1" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" }
     ]
   },
   {
+    "reference": "90006402",
     "id": "plato-15x20-beinsen-riad",
     "slug": "plato-15x20-beinsen-riad",
     "name": {
@@ -5162,11 +5161,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Gante" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006402" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" }
     ]
   },
   {
+    "reference": "90006379",
     "id": "plato-base-15x15-beinsen-obrei",
     "slug": "plato-base-15x15-beinsen-obrei",
     "name": {
@@ -5185,11 +5184,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006379" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" }
     ]
   },
   {
+    "reference": "90020103",
     "id": "plato-intercambiable-18x18-barbados",
     "slug": "plato-intercambiable-18x18-barbados",
     "name": {
@@ -5208,11 +5207,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020103" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" }
     ]
   },
   {
+    "reference": "90020104",
     "id": "plato-intercambiable-redondo-24-barbados",
     "slug": "plato-intercambiable-redondo-24-barbados",
     "name": {
@@ -5231,11 +5230,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020104" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" }
     ]
   },
   {
+    "reference": "90020107",
     "id": "plato-intercambiable-zapatillas-barbados",
     "slug": "plato-intercambiable-zapatillas-barbados",
     "name": {
@@ -5253,11 +5252,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base per scarpe per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Se personalizzi prodotti, una piastra per scarpe è un eccellente investimento."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020107" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" }
     ]
   },
   {
+    "reference": "90020100",
     "id": "plato-intercambiable-18x38-barbados",
     "slug": "plato-intercambiable-18x38-barbados",
     "name": {
@@ -5276,11 +5275,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020100" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" }
     ]
   },
   {
+    "reference": "90020102",
     "id": "plato-intercambiable-18x45-barbados",
     "slug": "plato-intercambiable-18x45-barbados",
     "name": {
@@ -5299,11 +5298,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020102" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" }
     ]
   },
   {
+    "reference": "90020101",
     "id": "plato-intercambiable-30x35-barbados",
     "slug": "plato-intercambiable-30x35-barbados",
     "name": {
@@ -5322,11 +5321,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020101" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" }
     ]
   },
   {
+    "reference": "MOLPLHOR",
     "id": "placa-polimero-platos-horno",
     "slug": "placa-polimero-platos-horno",
     "name": {
@@ -5345,11 +5344,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Platos de 15 cm - 25 cm (6\"-10\") / 15 cm - 25 cm (6\"-10\") plates" },
-      { "label": { "es": "Diámetros internos", "en": "Internal diameters", "pt": "Diâmetros internos", "it": "Diametri interni" }, "value": "13,5 cm, 15,5 cm, 17 cm, 20 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLPLHOR" }
+      { "label": { "es": "Diámetros internos", "en": "Internal diameters", "pt": "Diâmetros internos", "it": "Diametri interni" }, "value": "13,5 cm, 15,5 cm, 17 cm, 20 cm" }
     ]
   },
   {
+    "reference": "molplato3d",
     "id": "molde-3d-silicona-platos",
     "slug": "molde-3d-silicona-platos",
     "name": {
@@ -5372,11 +5371,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Gran resistencia, tubo de enganche para vacío, fijación firmemente sujeta" },
       { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "200ºC" },
-      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "molplato3d" }
+      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" }
     ]
   },
   {
+    "reference": "MOLTAZCO",
     "id": "molde-3d-silicona-tazas-conicas-jarras",
     "slug": "molde-3d-silicona-tazas-conicas-jarras",
     "name": {
@@ -5400,11 +5399,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento" },
       { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Personalización de tazas, asas, interiores y exteriores" },
       { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "200ºC" },
-      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLTAZCO" }
+      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" }
     ]
   },
   {
+    "reference": "MOLTAZRE",
     "id": "molde-3d-silicona-tazas-rectas",
     "slug": "molde-3d-silicona-tazas-rectas",
     "name": {
@@ -5428,11 +5427,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento" },
       { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "220ºC" },
-      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLTAZRE" }
+      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" }
     ]
   },
   {
+    "reference": "MOLTAZNR",
     "id": "molde-silicona-3-tazas-11oz",
     "slug": "molde-silicona-3-tazas-11oz",
     "name": {
@@ -5454,11 +5453,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona ecológica de alta calidad / High quality ecological silicone" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Botellas 200/300/400ml, tazas 11oz, huchas 11oz" },
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Resistente a altas temperaturas, respetuoso con el medio ambiente, fácil de usar" },
-      { "label": { "es": "Uso recomendado", "en": "Recommended use", "pt": "Uso recomendado", "it": "Uso consigliato" }, "value": "Evite usar objetos afilados. Asegúrese de fijar firmemente el papel de sublimación antes de usar." },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLTAZNR" }
+      { "label": { "es": "Uso recomendado", "en": "Recommended use", "pt": "Uso recomendado", "it": "Uso consigliato" }, "value": "Evite usar objetos afilados. Asegúrese de fijar firmemente el papel de sublimación antes de usar." }
     ]
   },
   {
+    "reference": "MOLVOTAL",
     "id": "molde-3d-silicona-3-botellas-aluminio",
     "slug": "molde-3d-silicona-3-botellas-aluminio",
     "name": {
@@ -5481,11 +5480,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona ecológica / Eco-friendly silicone" },
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Resistente a altas temperaturas, fácil de usar" },
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Abrazadera multiusos / Multi-purpose clamp" },
-      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Horno 3D sublimación de botellas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLVOTAL" }
+      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Horno 3D sublimación de botellas" }
     ]
   },
   {
+    "reference": "BPLAN163",
     "id": "resistencia-platos-6-1-gen",
     "slug": "resistencia-platos-6-1-gen",
     "name": {
@@ -5504,11 +5503,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "6\" (15 cm)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Plancha Combo de Beinsen 1ª Generación (Dorian)" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BPLAN163" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Plancha Combo de Beinsen 1ª Generación (Dorian)" }
     ]
   },
   {
+    "reference": "REPBEIRES05P",
     "id": "resistencia-platos-5-dorian",
     "slug": "resistencia-platos-5-dorian",
     "name": {
@@ -5527,11 +5526,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "5\" (12.6 cm)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Dorian" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES05P" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Dorian" }
     ]
   },
   {
+    "reference": "ACMPRTKENROD",
     "id": "rodillo-cintas",
     "slug": "rodillo-cintas",
     "name": {
@@ -5549,11 +5548,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Accessorio per sublimare facilmente i nastri. Rullo in cui inserire i rotoli di nastro e farli scorrere grazie alla sua manovella. Progettato esclusivamente per adattarsi alla nostra pressa termica Kenia di Beinsen. Approvato CE. Facile montaggio e smontaggio."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Kenia" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "ACMPRTKENROD" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Kenia" }
     ]
   },
   {
+    "reference": "ACCALR80X1",
     "id": "almohadilla-algodon-80x110",
     "slug": "almohadilla-algodon-80x110",
     "name": {
@@ -5574,11 +5573,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Algodón reciclado / Recycled Cotton / Algodão reciclado / Cotone riciclato" },
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "80 x 110 cm" },
       { "label": { "es": "Grosor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "50 mm" },
-      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "ACCALR80X1" }
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" }
     ]
   },
   {
+    "reference": "140000109P2",
     "id": "filtro-hepa-sx8-sz1-tb",
     "slug": "filtro-hepa-sx8-sz1-tb",
     "name": {
@@ -5601,11 +5600,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Mecanismo de filtrado", "en": "Filter mechanism", "pt": "Mecanismo de filtro", "it": "Meccanismo di filtrazione" }, "value": "Impacto, intercepción y difusión" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Fibras ultra finas de vidrio" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1 (tipo TB)" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000109P2" }
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" }
     ]
   },
   {
+    "reference": "140000109",
     "id": "filtro-hepa-sx8-sz1-ta",
     "slug": "filtro-hepa-sx8-sz1-ta",
     "name": {
@@ -5628,11 +5627,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Mecanismo de filtrado", "en": "Filter mechanism", "pt": "Mecanismo de filtro", "it": "Meccanismo di filtrazione" }, "value": "Impacto, intercepción y difusión" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Fibras ultra finas de vidrio" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1 (tipo TA)" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000109" }
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" }
     ]
   },
   {
+    "reference": "140000110",
     "id": "filtro-carbon-sx8-sz1",
     "slug": "filtro-carbon-sx8-sz1",
     "name": {
@@ -5654,11 +5653,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 y SZ1 / InkOne SX8 and SZ1" },
       { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Elimina vapores, olores y residuos químicos / Removes vapors, odors and chemical residues" },
       { "label": { "es": "Intervalo de reemplazo", "en": "Replacement interval", "pt": "Intervalo de substituição", "it": "Intervallo di sostituzione" }, "value": "Cada 6 meses (uso continuo) / Every 6 months (continuous use)" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin mantenimiento / Easy replacement without maintenance" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000110" }
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin mantenimiento / Easy replacement without maintenance" }
     ]
   },
   {
+    "reference": "140000164",
     "id": "cojinete-f6904rs-sx8-sz1",
     "slug": "cojinete-f6904rs-sx8-sz1",
     "name": {
@@ -5680,11 +5679,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Diámetro exterior", "en": "Outer diameter", "pt": "Diâmetro externo", "it": "Diametro esterno" }, "value": "37 mm" },
       { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "9 mm" },
       { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble 2RS / Double 2RS" },
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Rodamiento con brida / Flange bearing" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000164" }
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Rodamiento con brida / Flange bearing" }
     ]
   },
   {
+    "reference": "140000163",
     "id": "cojinete-f6901rs-sx8-sz1",
     "slug": "cojinete-f6901rs-sx8-sz1",
     "name": {
@@ -5705,11 +5704,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Diámetro interior", "en": "Inner diameter", "pt": "Diâmetro interno", "it": "Diametro interno" }, "value": "12 mm" },
       { "label": { "es": "Diámetro exterior", "en": "Outer diameter", "pt": "Diâmetro externo", "it": "Diametro esterno" }, "value": "24 mm" },
       { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "6 mm" },
-      { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble RS / Double RS" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000163" }
+      { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble RS / Double RS" }
     ]
   },
   {
+    "reference": "140000157",
     "id": "fuente-alimentacion-24v-sx8-sz1-b",
     "slug": "fuente-alimentacion-24v-sx8-sz1-b",
     "name": {
@@ -5733,8 +5732,7 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Eficiencia energética", "en": "Energy efficiency", "pt": "Eficiência energética", "it": "Efficienza energetica" }, "value": "Alta / High" },
       { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Carcasa metálica ventilada / Ventilated metal enclosure" },
       { "label": { "es": "Certificación", "en": "Certification", "pt": "Certificação", "it": "Certificazione" }, "value": "CE" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000157" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" }
     ]
   },
   {
@@ -5765,6 +5763,7 @@ const rawAccessoriesData: Accessory[] = [
     ]
   },
   {
+    "reference": "140000150",
     "id": "sensor-placa-calefactora-sx8-sz1",
     "slug": "sensor-placa-calefactora-sx8-sz1",
     "name": {
@@ -5785,11 +5784,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Sensor tipo K" },
       { "label": { "es": "Rango", "en": "Range", "pt": "Gama", "it": "Gamma" }, "value": "0-800 °C" },
       { "label": { "es": "Sistema de conexión", "en": "Connection system", "pt": "Sistema de conexão", "it": "Sistema di connessione" }, "value": "Quick-plug" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000150" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" }
     ]
   },
   {
+    "reference": "140000149",
     "id": "contactor-ca-220v-sx8-sz1",
     "slug": "contactor-ca-220v-sx8-sz1",
     "name": {
@@ -5812,11 +5811,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Frecuencia", "en": "Frequency", "pt": "Frequência", "it": "Frequenza" }, "value": "50 Hz" },
       { "label": { "es": "Capacidad de corriente", "en": "Current capacity", "pt": "Capacidade de corrente", "it": "Capacità di corrente" }, "value": "40 A" },
       { "label": { "es": "Tiempo de respuesta", "en": "Response time", "pt": "Tempo de resposta", "it": "Tempo di risposta" }, "value": "≤ 0,1 s" },
-      { "label": { "es": "Norma", "en": "Standard", "pt": "Norma", "it": "Norma" }, "value": "GB/T16917.22" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000149" }
+      { "label": { "es": "Norma", "en": "Standard", "pt": "Norma", "it": "Norma" }, "value": "GB/T16917.22" }
     ]
   },
   {
+    "reference": "140000129",
     "id": "sensor-temperatura-sz1",
     "slug": "sensor-temperatura-sz1",
     "name": {
@@ -5835,11 +5834,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Plug-and-play" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000129" }
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Plug-and-play" }
     ]
   },
   {
+    "reference": "140000147",
     "id": "motor-deposito-polvo-sx8",
     "slug": "motor-deposito-polvo-sx8",
     "name": {
@@ -5862,11 +5861,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin necesidad de herramientas especiales" },
       { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Diseño robusto fabricado para soportar uso continuo en producción DTF" },
       { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Sistema de aplicación de polvo adhesivo DTF / DTF adhesive powder application system" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000147" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8" }
     ]
   },
   {
+    "reference": "140000170",
     "id": "rele-intermedio-24v-sz1",
     "slug": "rele-intermedio-24v-sz1",
     "name": {
@@ -5886,11 +5885,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Tensión de control", "en": "Control voltage", "pt": "Tensão de controle", "it": "Tensione di controllo" }, "value": "Bobina de 24 V DC" },
       { "label": { "es": "Capacidad de conmutación", "en": "Switching capacity", "pt": "Capacidade de comutação", "it": "Capacità di commutazione" }, "value": "5A a 250V AC o 5A a 28V DC (IEC255)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000170" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
     ]
   },
   {
+    "reference": "140000146",
     "id": "rele-estado-solido-sz1",
     "slug": "rele-estado-solido-sz1",
     "name": {
@@ -5911,11 +5910,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "SSR (Solid State Relay)" },
       { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "CDSSR-DA-4815" },
       { "label": { "es": "Entrada / Salida", "en": "Input / Output", "pt": "Entrada / Saída", "it": "Ingresso / Uscita" }, "value": "INPUT 3-32 VDC | OUTPUT 15A 24-480VAC" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000146" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
     ]
   },
   {
+    "reference": "140000114",
     "id": "rele-hornos-sx8-sz1",
     "slug": "rele-hornos-sx8-sz1",
     "name": {
@@ -5935,11 +5934,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Relé de estado sólido (SSR)" },
       { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "SSR-40DAH" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000114" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" }
     ]
   },
   {
+    "reference": "140000115",
     "id": "placa-base-hornos-sx8-sz1",
     "slug": "placa-base-hornos-sx8-sz1",
     "name": {
@@ -5963,11 +5962,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Rendimiento", "en": "Performance", "pt": "Desempenho", "it": "Prestazioni" }, "value": "Garantiza funcionamiento sincronizado y sin fallos en condiciones de alta exigencia" },
       { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla y rápida con conexión directa a sistemas integrados" },
       { "label": { "es": "Protección", "en": "Protection", "pt": "Proteção", "it": "Protezione" }, "value": "Minimiza riesgo de fallos eléctricos con componentes de alta calidad" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 / SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000115" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 / SZ1" }
     ]
   },
   {
+    "reference": "140000113",
     "id": "pantalla-hornos-sz1",
     "slug": "pantalla-hornos-sz1",
     "name": {
@@ -5991,11 +5990,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Precisión", "en": "Precision", "pt": "Precisão", "it": "Precisione" }, "value": "Alta precisión para ajustes finos y mantener calidad constante" },
       { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Estructura compacta con conexiones estándar para sustitución rápida y segura" },
       { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Materiales duraderos preparados para uso intensivo en producción" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000113" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
     ]
   },
   {
+    "reference": "140000128",
     "id": "lampara-horno-sz1",
     "slug": "lampara-horno-sz1",
     "name": {
@@ -6018,11 +6017,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Conexión", "en": "Connection", "pt": "Conexão", "it": "Connessione" }, "value": "Cable con conector en ambos extremos / Cable with connectors at both ends" },
       { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución rápida sin herramientas especiales" },
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Elemento calefactor original / Original heating element" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000128" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
     ]
   },
   {
+    "reference": "90006268",
     "id": "resistencia-tazas-2-5oz",
     "slug": "resistencia-tazas-2-5oz",
     "name": {
@@ -6041,11 +6040,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 8.5 cm (2.5oz)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006268" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" }
     ]
   },
   {
+    "reference": "90006264",
     "id": "resistencia-chupitos-1-5oz",
     "slug": "resistencia-chupitos-1-5oz",
     "name": {
@@ -6064,11 +6063,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 8 cm (1.5oz cónica)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006264" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" }
     ]
   },
   {
+    "reference": "REPBEIRES20",
     "id": "resistencia-cilindrica-20-30oz",
     "slug": "resistencia-cilindrica-20-30oz",
     "name": {
@@ -6088,11 +6087,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "27 cm" },
       { "label": { "es": "Diámetro", "en": "Diameter", "pt": "Diâmetro", "it": "Diametro" }, "value": "Ajustable 9,5 - 12 cm" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES20" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Maine" }
     ]
   },
   {
+    "reference": "90020154",
     "id": "plato-base-18x18-cambio-rapido",
     "slug": "plato-base-18x18-cambio-rapido",
     "name": {
@@ -6111,11 +6110,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020154" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" }
     ]
   },
   {
+    "reference": "90020155",
     "id": "plato-base-18x38-cambio-rapido",
     "slug": "plato-base-18x38-cambio-rapido",
     "name": {
@@ -6134,11 +6133,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020155" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" }
     ]
   },
   {
+    "reference": "90020152",
     "id": "plato-base-18x45-cambio-rapido",
     "slug": "plato-base-18x45-cambio-rapido",
     "name": {
@@ -6157,11 +6156,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020152" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" }
     ]
   },
   {
+    "reference": "90020151",
     "id": "plato-base-30x35-cambio-rapido",
     "slug": "plato-base-30x35-cambio-rapido",
     "name": {
@@ -6180,11 +6179,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020151" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" }
     ]
   },
   {
+    "reference": "90020158",
     "id": "plato-base-zapatillas-cambio-rapido",
     "slug": "plato-base-zapatillas-cambio-rapido",
     "name": {
@@ -6203,11 +6202,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020158" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" }
     ]
   },
   {
+    "reference": "90020156",
     "id": "plato-base-redondo-24-cambio-rapido",
     "slug": "plato-base-redondo-24-cambio-rapido",
     "name": {
@@ -6226,11 +6225,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020156" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" }
     ]
   },
   {
+    "reference": "90020157",
     "id": "plato-base-gorras-cambio-rapido",
     "slug": "plato-base-gorras-cambio-rapido",
     "name": {
@@ -6248,11 +6247,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale per cappellini compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare fino a 4 cappellini contemporaneamente."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020157" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" }
     ]
   },
   {
+    "reference": "90020172",
     "id": "plato-base-camisetas-cambio-rapido",
     "slug": "plato-base-camisetas-cambio-rapido",
     "name": {
@@ -6270,11 +6269,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale per magliette compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare magliette con la loro etichetta interna."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020172" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" }
     ]
   },
   {
+    "reference": "90020160",
     "id": "plato-base-40x50-2mangas-cambio-rapido",
     "slug": "plato-base-40x50-2mangas-cambio-rapido",
     "name": {
@@ -6293,11 +6292,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020160" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" }
     ]
   },
   {
+    "reference": "90020171",
     "id": "plato-base-12x45-mangas-cambio-rapido",
     "slug": "plato-base-12x45-mangas-cambio-rapido",
     "name": {
@@ -6316,11 +6315,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 45 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020171" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 45 cm" }
     ]
   },
   {
+    "reference": "90020164",
     "id": "plato-base-15x50-pantalones-cambio-rapido",
     "slug": "plato-base-15x50-pantalones-cambio-rapido",
     "name": {
@@ -6339,11 +6338,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 50 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020164" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 50 cm" }
     ]
   },
   {
+    "reference": "90020170",
     "id": "plato-base-15-5x25-5-cambio-rapido",
     "slug": "plato-base-15-5x25-5-cambio-rapido",
     "name": {
@@ -6362,11 +6361,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15,5 x 25,5 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020170" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15,5 x 25,5 cm" }
     ]
   },
   {
+    "reference": "90020163",
     "id": "plato-base-15x25-cambio-rapido",
     "slug": "plato-base-15x25-cambio-rapido",
     "name": {
@@ -6385,11 +6384,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 25 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020163" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 25 cm" }
     ]
   },
   {
+    "reference": "90020169",
     "id": "plato-base-25x30-cambio-rapido",
     "slug": "plato-base-25x30-cambio-rapido",
     "name": {
@@ -6408,11 +6407,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 30 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020169" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 30 cm" }
     ]
   },
   {
+    "reference": "90020162",
     "id": "plato-base-15x15-cambio-rapido",
     "slug": "plato-base-15x15-cambio-rapido",
     "name": {
@@ -6431,11 +6430,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020162" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" }
     ]
   },
   {
+    "reference": "30050047",
     "id": "almohadilla-silicona-80x100",
     "slug": "almohadilla-silicona-80x100",
     "name": {
@@ -6456,11 +6455,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de grado industrial / Industrial grade silicone" },
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "80 x 100 cm" },
       { "label": { "es": "Espesor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "10 mm" },
-      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "30050047" }
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" }
     ]
   },
   {
+    "reference": "ACC001903",
     "id": "plato-38x38-beinsen-chinela",
     "slug": "plato-38x38-beinsen-chinela",
     "name": {
@@ -6479,11 +6478,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Chinela" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "ACC001903" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" }
     ]
   },
   {
+    "reference": "BHORN066",
     "id": "fusible-termico-3d-16",
     "slug": "fusible-termico-3d-16",
     "name": {
@@ -6505,11 +6504,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 105 x 40 mm" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Metal / Plástico / Metal / Plastic" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Horno 3D, Plancha Delia" },
-      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Filtro de aire para realizar vacío / Air filter for vacuum creation" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BHORN066" }
+      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Filtro de aire para realizar vacío / Air filter for vacuum creation" }
     ]
   },
   {
+    "reference": "90950104",
     "id": "almohadilla-teflon-termorresistente-40x50",
     "slug": "almohadilla-teflon-termorresistente-40x50",
     "name": {
@@ -6528,12 +6527,12 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90950104" },
       { "label": { "es": "Referencia", "en": "Reference", "pt": "Referência", "it": "Riferimento" }, "value": "TP-20-BK" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
     ]
   },
   {
+    "reference": "BSNALMTFL38",
     "id": "almohadilla-teflon-termorresistente-38x38",
     "slug": "almohadilla-teflon-termorresistente-38x38",
     "name": {
@@ -6552,11 +6551,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BSNALMTFL38" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
     ]
   },
   {
+    "reference": "BSNALMTFL25",
     "id": "almohadilla-teflon-termorresistente-25x25",
     "slug": "almohadilla-teflon-termorresistente-25x25",
     "name": {
@@ -6575,11 +6574,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 25 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BSNALMTFL25" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
     ]
   },
   {
+    "reference": "BSNALMTFL15",
     "id": "almohadilla-teflon-termorresistente-15x15",
     "slug": "almohadilla-teflon-termorresistente-15x15",
     "name": {
@@ -6598,11 +6597,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BSNALMTFL15" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
     ]
   },
   {
+    "reference": "S12253",
     "id": "termometro-digital-infrarrojos-it122",
     "slug": "termometro-digital-infrarrojos-it122",
     "name": {
@@ -6622,11 +6621,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "IT-122" },
       { "label": { "es": "Alimentación", "en": "Power", "pt": "Alimentação", "it": "Alimentazione" }, "value": "2 pilas AA (3V) - No incluidas" },
-      { "label": { "es": "Funciones", "en": "Functions", "pt": "Funções", "it": "Funzioni" }, "value": "Medición rápida, Alarma de fiebre, Retroiluminación tricolor" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "S12253" }
+      { "label": { "es": "Funciones", "en": "Functions", "pt": "Funções", "it": "Funzioni" }, "value": "Medición rápida, Alarma de fiebre, Retroiluminación tricolor" }
     ]
   },
   {
+    "reference": "3DGWST",
     "id": "guantes-protectores-algodon",
     "slug": "guantes-protectores-algodon",
     "name": {
@@ -6646,11 +6645,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Algodón y Nitrilo / Cotton and Nitrile" },
       { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 250ºC (periodos cortos) / Up to 250ºC (short periods)" },
-      { "label": { "es": "Talla", "en": "Size", "pt": "Tamanho", "it": "Taglia" }, "value": "Única (15 x 27 cm)" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "3DGWST" }
+      { "label": { "es": "Talla", "en": "Size", "pt": "Tamanho", "it": "Taglia" }, "value": "Única (15 x 27 cm)" }
     ]
   },
   {
+    "reference": "REPBEISOPMOV",
     "id": "mesa-universal-grande",
     "slug": "mesa-universal-grande-ruedas",
     "name": {
@@ -6672,11 +6671,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "71 cm" },
       { "label": { "es": "Peso", "en": "Weight", "pt": "Peso", "it": "Peso" }, "value": "25 kg" },
       { "label": { "es": "Ruedas", "en": "Wheels", "pt": "Rodas", "it": "Ruote" }, "value": "4 giratorias con freno / 4 rotating with brakes" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Estante inferior incluido / Lower shelf included" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEISOPMOV" }
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Estante inferior incluido / Lower shelf included" }
     ]
   },
   {
+    "reference": "REPBEIRES12C",
     "id": "resistencia-conica-tazas-12oz",
     "slug": "resistencia-conica-tazas-12oz",
     "name": {
@@ -6695,11 +6694,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cónica 12oz / Conical 12oz" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES12C" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Sicilia, Maine" }
     ]
   },
   {
+    "reference": "REPBEIRES17C",
     "id": "resistencia-conica-tazas-17oz",
     "slug": "resistencia-para-tazas-conicas-17oz",
     "name": {
@@ -6718,7 +6717,6 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cónica 17oz / Conical 17oz" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES17C" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" }
     ]
   }
@@ -6728,6 +6726,7 @@ export const allAccessoriesData: Accessory[] = [...rawAccessoriesData].sort((a, 
 
 const rawConsumablesData: Consumable[] = [
   {
+    "reference": "CONSUBCIN10M",
     id: "cinta-termica-10mm",
     slug: "cinta-termica-sublimacion-10mm",
     name: {
@@ -6747,11 +6746,11 @@ const rawConsumablesData: Consumable[] = [
     technicalSpecs: [
       { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "10 mm" },
       { "label": { "es": "Largo", "en": "Length", "pt": "Comprimento", "it": "Lunghezza" }, "value": "33 m" },
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Kapton / Térmica" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "CONSUBCIN10M" }
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Kapton / Térmica" }
     ]
   },
   {
+    "reference": "PLAACCA50",
     id: "almohadilla-silicona-40x50",
     slug: "almohadilla-silicona-40x50",
     name: {
@@ -6771,8 +6770,7 @@ const rawConsumablesData: Consumable[] = [
     technicalSpecs: [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
       { "label": { "es": "Espesor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "10 mm" },
-      { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 220ºC / Up to 220ºC" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "PLAACCA50" }
+      { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 220ºC / Up to 220ºC" }
     ]
   },
   {
@@ -6800,6 +6798,7 @@ const rawConsumablesData: Consumable[] = [
     description: { es: "Elimina residuos del plato calentador.", en: "Removes residues from the heating plate." }
   },
   {
+    "reference": "REPBEIRES11A",
     "id": "resistencia-cilindrica-tazas-11oz-tipo-a",
     "slug": "resistencia-cilindrica-tazas-11oz-tipo-a",
     "name": {
@@ -6818,7 +6817,6 @@ const rawConsumablesData: Consumable[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cilíndrica 11oz / Cylindrical 11oz" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES11A" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Andra, Sore (A)" }
     ]
   }
