@@ -85,14 +85,12 @@ function PlanchasCatalogContent() {
     const [visibleAccessories, setVisibleAccessories] = useState(PAGE_SIZE);
     const [visibleConsumables, setVisibleConsumables] = useState(PAGE_SIZE);
     // Single-type view visible count
-    const [visibleSingle, setVisibleSingle] = useState(PAGE_SIZE);
 
     // Reset visible counts when filters change
     useEffect(() => {
         setVisibleMachines(PAGE_SIZE);
         setVisibleAccessories(PAGE_SIZE);
         setVisibleConsumables(PAGE_SIZE);
-        setVisibleSingle(PAGE_SIZE);
     }, [activeType, activeCategoryIndex, activeOpeningIndex, searchQuery]);
 
     // Initialize from URL on first mount
@@ -456,12 +454,9 @@ function PlanchasCatalogContent() {
                         )}
                     </div>
                 ) : (
-                    /* ── TIPO ESPECÍFICO con paginación ── */
+                    /* ── TIPO ESPECÍFICO: todos los items sin paginación ── */
                     <section>
-                        {renderGrid(singleList.slice(0, visibleSingle))}
-                        {visibleSingle < singleList.length && (
-                            <LoadMoreButton onClick={() => setVisibleSingle(v => v + PAGE_SIZE)} label={d.loadMore} />
-                        )}
+                        {renderGrid(singleList)}
                     </section>
                 )}
             </main>
