@@ -12,10 +12,10 @@ export default function PrivacyPage() {
           <h2 className="text-2xl font-bold mb-6">1.- ¿QUIÉN ES EL RESPONSABLE DEL TRATAMIENTO DE TUS DATOS?</h2>
           <div className="p-6 bg-muted/30 rounded-2xl border border-border/50 space-y-4">
             <p className="text-muted-foreground text-sm leading-relaxed">
-              <span className="text-foreground font-semibold">FUTURA TECK DE MURCIA, S.L.U</span>, con CIF: <span className="text-foreground font-semibold">ESB30507743</span> es el responsable del tratamiento de los mismos. Estos datos serán tratados de conformidad con lo dispuesto en las normativas vigentes sobre protección de datos personales.
+              <span className="text-foreground font-semibold">Futura Teck de Murcia S.L.U.</span>, con CIF: <span className="text-foreground font-semibold">B30507743</span>, domicilio social en Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia) y teléfono <span className="text-foreground font-semibold">+34 968 902 300</span>, es el responsable del tratamiento de los mismos. Estos datos serán tratados de conformidad con lo dispuesto en las normativas vigentes sobre protección de datos personales.
             </p>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Desde FUTURA TECK DE MURCIA, S.L.U nos comprometemos al cumplimiento de la obligación de secreto de los datos de carácter personal y de su deber de guardarlos. Adoptamos las medidas necesarias para evitar su alteración, pérdida, tratamiento o acceso no autorizado.
+              Desde Futura Teck de Murcia S.L.U. nos comprometemos al cumplimiento de la obligación de secreto de los datos de carácter personal y de su deber de guardarlos. Adoptamos las medidas necesarias para evitar su alteración, pérdida, tratamiento o acceso no autorizado.
             </p>
           </div>
         </section>

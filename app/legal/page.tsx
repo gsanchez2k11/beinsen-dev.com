@@ -13,7 +13,7 @@ export default function LegalPage() {
           En cumplimiento de lo dispuesto en el art. 10 de la Ley 34/2002 de 11 de julio de Servicios de la Sociedad de la Información (L.S.S.I.), se da a conocer la siguiente Información General:
         </p>
         <p className="mb-8 p-6 bg-muted/30 rounded-2xl border border-border/50 text-sm italic">
-          Que el dominio <span className="text-foreground font-semibold">www.beinsen.com</span> (a partir de ahora Sitio Web) está registrado a nombre de <span className="text-foreground font-semibold">FUTURA TECK DE MURCIA, S.L.U</span> con domicilio social en Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia); sociedad inscrita en el Registro Mercantil de MURCIA Tomo MU-1135, de la sección Sociedades, Folio 47, Hoja MU-20685, inscripción primera, provista de CIF <span className="text-foreground font-semibold">ESB30507743</span>, a partir de ahora EL TITULAR.
+          Que el dominio <span className="text-foreground font-semibold">www.beinsen.com</span> (a partir de ahora Sitio Web) está registrado a nombre de <span className="text-foreground font-semibold">Futura Teck de Murcia S.L.U.</span> con domicilio social en Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia); sociedad inscrita en el Registro Mercantil de MURCIA Tomo MU-1135, de la sección Sociedades, Folio 47, Hoja MU-20685, inscripción primera, provista de CIF <span className="text-foreground font-semibold">B30507743</span>, teléfono <span className="text-foreground font-semibold">+34 968 902 300</span>, a partir de ahora EL TITULAR.
         </p>
 
         <section className="space-y-6 mb-12">

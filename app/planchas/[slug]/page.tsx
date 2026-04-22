@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ProductDetailView } from "@/components/ProductDetailView";
 import { getLocalized } from "@/lib/i18n";
 import { enrichWithLocalImages } from "@/lib/productImages";
+import { enrichWithLocalDownloads } from "@/lib/productDownloads";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -56,7 +57,12 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
         notFound();
     }
 
-    const item = enrichWithLocalImages(rawItem as any);
+    const kind: "planchas" | "accessories" | "consumables" =
+        planchasData.some(p => p.slug === resolvedParams.slug) ? "planchas"
+        : allAccessoriesData.some(a => a.slug === resolvedParams.slug) ? "accessories"
+        : "consumables";
+
+    const item = enrichWithLocalDownloads(enrichWithLocalImages(rawItem as any));
 
     const name = getLocalized(item.name as any, 'es');
     const description = getLocalized(item.description as any, 'es') || "";
@@ -98,10 +104,11 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             {/* @ts-ignore - Support both Plancha and CompatibleItem */}
-            <ProductDetailView 
-                plancha={item as any} 
-                fullAccessories={fullAccessories} 
-                fullConsumables={fullConsumables} 
+            <ProductDetailView
+                plancha={item as any}
+                fullAccessories={fullAccessories}
+                fullConsumables={fullConsumables}
+                kind={kind}
             />
         </>
     );
