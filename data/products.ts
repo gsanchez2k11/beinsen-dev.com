@@ -103,6 +103,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "almohadilla-teflon-termorresistente-38x38" },
       { "id": "almohadilla-teflon-termorresistente-25x25" },
       { "id": "almohadilla-teflon-termorresistente-15x15" },
+      { "id": "almohadilla-silicona-38x38" },
       { "id": "mesa-universal-grande" },
       { "id": "guantes-protectores-algodon" }
     ],
@@ -529,6 +530,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "resistencia-doble-taza-11-15oz" },
       { "id": "resistencia-conica-tazas-12oz" },
       { "id": "resistencia-para-tazas-conicas-17oz" },
+      { "id": "almohadilla-silicona-40x50" },
       { "id": "mesa-universal-grande" }
     ],
     "consumables": [
@@ -1424,12 +1426,9 @@ const rawPlanchasData: Plancha[] = [
       { "id": "plato-base-25x30-cambio-rapido" },
       { "id": "plato-base-15x15-cambio-rapido" },
       { "id": "termometro-digital-infrarrojos-it122" },
-      { "id": "guantes-protectores-algodon" },
-      { "id": "almohadilla-silicona-40x50" },
-      { "id": "lamina-teflon-40x50" }
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
-      { "id": "cinta-termica-10mm" }
     ],
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
@@ -2347,12 +2346,9 @@ const rawPlanchasData: Plancha[] = [
       { "id": "plato-base-15-5x25-5-cambio-rapido" },
       { "id": "plato-base-15x25-cambio-rapido" },
       { "id": "plato-base-25x30-cambio-rapido" },
-      { "id": "plato-base-15x15-cambio-rapido" },
-      { "id": "lamina-teflon-40x50" },
-      { "id": "almohadilla-silicona-40x50" }
+      { "id": "plato-base-15x15-cambio-rapido" }
     ],
     "consumables": [
-      { "id": "cinta-termica-10mm" }
     ],
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
@@ -2697,8 +2693,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "almohadilla-silicona-40x50" },
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "mesa-universal-grande" },
-      { "id": "guantes-protectores-algodon" },
-      { "id": "lamina-teflon-40x50" }
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -2860,8 +2855,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "almohadilla-silicona-40x50" },
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "mesa-universal-grande" },
-      { "id": "guantes-protectores-algodon" },
-      { "id": "lamina-teflon-40x50" }
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -3029,7 +3023,6 @@ const rawPlanchasData: Plancha[] = [
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "mesa-universal-grande" },
       { "id": "guantes-protectores-algodon" },
-      { "id": "lamina-teflon-40x50" },
       { "id": "almohadilla-silicona-40x50" }
     ],
     "consumables": [
@@ -3166,7 +3159,9 @@ const rawPlanchasData: Plancha[] = [
       { "id": "mesa-universal-grande" },
       { "id": "guantes-protectores-algodon" },
       { "id": "lamina-teflon-38x38" },
-      { "id": "almohadilla-silicona-38x38" }
+      { "id": "almohadilla-silicona-38x38" },
+      { "id": "lamina-teflon-40x50" },
+      { "id": "almohadilla-silicona-40x50" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -3272,7 +3267,9 @@ const rawPlanchasData: Plancha[] = [
       { "id": "plato-intercambiable-redondo-24-barbados" },
       { "id": "plato-intercambiable-30x35-barbados" },
       { "id": "lamina-teflon-38x38" },
-      { "id": "almohadilla-silicona-38x38" }
+      { "id": "almohadilla-silicona-38x38" },
+      { "id": "lamina-teflon-40x50" },
+      { "id": "almohadilla-silicona-40x50" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -3402,9 +3399,6 @@ const rawPlanchasData: Plancha[] = [
       { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
-      { "id": "teflon-40x50" },
-      { "id": "almohadilla-silicona-40x50" },
-      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -3545,12 +3539,9 @@ const rawPlanchasData: Plancha[] = [
       { "id": "plato-base-15x25-cambio-rapido" },
       { "id": "plato-base-25x30-cambio-rapido" },
       { "id": "plato-base-15x15-cambio-rapido" },
-      { "id": "termometro-digital-infrarrojos-it122" },
-      { "id": "lamina-teflon-40x50" },
-      { "id": "almohadilla-silicona-40x50" }
+      { "id": "termometro-digital-infrarrojos-it122" }
     ],
     "consumables": [
-      { "id": "cinta-termica-10mm" }
     ],
 
     "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
@@ -3680,8 +3671,7 @@ const rawPlanchasData: Plancha[] = [
     "accessories": [
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "mesa-universal-grande" },
-      { "id": "guantes-protectores-algodon" },
-      { "id": "almohadilla-silicona-40x50" }
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
@@ -3808,9 +3798,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "almohadilla-teflon-termorresistente-15x15" },
       { "id": "almohadilla-teflon-termorresistente-40x50" },
       { "id": "mesa-universal-grande" },
-      { "id": "guantes-protectores-algodon" },
-      { "id": "lamina-teflon-38x38" },
-      { "id": "almohadilla-silicona-38x38" }
+      { "id": "guantes-protectores-algodon" }
     ],
     "consumables": [
       { "id": "cinta-termica-10mm" }
