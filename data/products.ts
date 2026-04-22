@@ -4502,6 +4502,170 @@ const rawPlanchasData: Plancha[] = [
         "Store interchangeable plates in a dry, clean place when not in use."
       ]
     }
+  },
+  {
+    "id": "felina-prensa-swing-away-electrica",
+    "slug": "felina-prensa-swing-away-electrica",
+    "name": {
+      "es": "Felina Prensa Swing-Away Eléctrica",
+      "en": "Felina Electric Swing-Away Heat Press",
+      "pt": "Felina Prensa Swing-Away Elétrica",
+      "it": "Felina Pressa Swing-Away Elettrica"
+    },
+    "description": {
+      "es": "Felina es una prensa de calor eléctrica de apertura giratoria (swing-away) de nivel profesional con pantalla táctil GY-13. Su sistema de apertura giratoria a 180° maximiza el espacio de trabajo y facilita la carga y descarga de materiales, mientras que sus avanzados sistemas de seguridad —protección anti-pellizco, operación de doble mano y programación en dos etapas— la convierten en una máquina tan potente como segura.",
+      "en": "Felina is a professional electric swing-away heat press with a GY-13 touch screen. Its 180° swing-away opening maximizes workspace and simplifies material loading and unloading, while advanced safety systems — pinch protection, two-hand operation, and two-stage programming — make it as powerful as it is safe.",
+      "pt": "Felina é uma prensa de calor elétrica de abertura giratória (swing-away) de nível profissional com ecrã tátil GY-13. A sua abertura giratória a 180° maximiza o espaço de trabalho e facilita o carregamento e descarregamento de materiais, enquanto os sistemas avançados de segurança a tornam tão potente quanto segura.",
+      "it": "Felina è una pressa termica elettrica swing-away di livello professionale con touch screen GY-13. L'apertura girevole a 180° massimizza lo spazio di lavoro e semplifica il carico e scarico dei materiali, mentre i sistemi avanzati di sicurezza la rendono potente quanto sicura."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2024/01/felina-beinsen.png",
+    "price": "Consultar PVP",
+    "size": { "es": "40×50 cm / 40×60 cm", "en": "40×50 cm / 40×60 cm", "pt": "40×50 cm / 40×60 cm", "it": "40×50 cm / 40×60 cm" },
+    "features": {
+      "es": [
+        "Apertura giratoria swing-away 180° con base de cambio rápido y deslizamiento",
+        "Controlador táctil GY-13 con 3 memorias, contador de producción y ajuste de presión 0-8",
+        "Protección anti-pellizco, operación de doble mano y parada de emergencia"
+      ],
+      "en": [
+        "180° swing-away opening with quick-change sliding base",
+        "GY-13 touch screen controller with 3 memories, production counter and 0-8 pressure adjustment",
+        "Pinch protection, two-hand operation and emergency stop"
+      ],
+      "pt": [
+        "Abertura giratória swing-away 180° com base de mudança rápida e deslizamento",
+        "Controlador tátil GY-13 com 3 memórias, contador de produção e ajuste de pressão 0-8",
+        "Proteção anti-aperto, operação de duas mãos e paragem de emergência"
+      ],
+      "it": [
+        "Apertura girevole swing-away 180° con base a cambio rapido e scorrimento",
+        "Controller touch GY-13 con 3 memorie, contatore di produzione e regolazione pressione 0-8",
+        "Protezione anti-pizzico, operazione a due mani e arresto di emergenza"
+      ]
+    },
+    "accessories": [
+      { "id": "almohadilla-teflon-termorresistente-40x50" },
+      { "id": "almohadilla-silicona-40x50" },
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "mesa-universal-grande" },
+      { "id": "guantes-protectores-algodon" },
+      { "id": "lamina-teflon-40x50" }
+    ],
+    "consumables": [
+      { "id": "cinta-termica-10mm" }
+    ],
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "openingType": { "es": "Swing-Away Eléctrica", "en": "Electric Swing-Away", "pt": "Swing-Away Elétrica", "it": "Swing-Away Elettrica" },
+    "technicalSpecs": [
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Felina" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": { "es": "Eléctrica, swing-away automático", "en": "Electric, automatic swing-away" } },
+      { "label": { "es": "Tamaño de platina", "en": "Platen Size" }, "value": "40×50 cm / 40×60 cm (16\"×20\" / 16\"×24\")" },
+      { "label": { "es": "Apertura de platina inferior", "en": "Lower platen opening" }, "value": { "es": "Cambio rápido y deslizamiento", "en": "Quick-change and sliding" } },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-13 (pantalla táctil)" },
+      { "label": { "es": "Memorias de configuración", "en": "Settings memories" }, "value": "3" },
+      { "label": { "es": "Ajuste de presión", "en": "Pressure adjustment" }, "value": "0-8" },
+      { "label": { "es": "Contador de producción", "en": "Production counter" }, "value": { "es": "Sí (automático)", "en": "Yes (automatic)" } },
+      { "label": { "es": "Grosor máximo imprimible", "en": "Max Printable Thickness" }, "value": "35 mm" },
+      { "label": { "es": "Botón de parada de emergencia", "en": "Emergency stop button" }, "value": { "es": "Sí", "en": "Yes" } },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120V / 220V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.8 kW (120V) / 2 kW (220V)" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 seg." },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225 °C" },
+      { "label": { "es": "Dimensiones de embalaje", "en": "Packaging Dimensions" }, "value": "95×58×82 cm" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "95 kg (40×50) / 99 kg (40×60)" },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "132.5 kg (40×50) / 136.5 kg (40×60)" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Apertura giratoria 180° para mayor comodidad", "en": "180° swing-away opening for greater comfort" },
+        "description": { "es": "La platina superior giratoria de 180° maximiza el espacio de trabajo, lo que permite cargar y descargar materiales con total facilidad y eficiencia, reduciendo la fatiga en jornadas largas.", "en": "The 180° swing-away upper platen maximizes workspace, making it easy to load and unload materials with total efficiency, reducing fatigue during long sessions." },
+        "icon": "RotateCcw"
+      },
+      {
+        "title": { "es": "Protección anti-pellizco inteligente", "en": "Smart pinch protection" },
+        "description": { "es": "Los sensores inteligentes detectan obstrucciones e inmediatamente detienen y levantan la placa de calefacción, protegiendo al operario y al material en todo momento.", "en": "Smart sensors detect obstructions and immediately stop and lift the heating plate, protecting the operator and materials at all times." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Operación de doble mano para mayor seguridad", "en": "Two-hand operation for enhanced safety" },
+        "description": { "es": "El diseño ergonómico exige presiones simultáneas en ambos mandos para activar la prensa, eliminando la posibilidad de activación accidental y garantizando un entorno de trabajo seguro.", "en": "The ergonomic design requires simultaneous pressure on both controls to activate the press, eliminating accidental activation and ensuring a safe working environment." },
+        "icon": "Hand"
+      },
+      {
+        "title": { "es": "Programación de transferencia en dos etapas", "en": "Two-stage transfer programming" },
+        "description": { "es": "Incluye ciclos de precalentamiento y transferencia preprogramados para eliminar la humedad y fijar los diseños a la perfección. También puedes omitir el precalentamiento para agilizar el proceso con materiales secos.", "en": "Includes preprogrammed preheating and transfer cycles to remove moisture and set designs perfectly. You can also skip preheating for faster processing with dry materials." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Ajuste automático de presión por material", "en": "Automatic pressure adjustment by material" },
+        "description": { "es": "El sensor inteligente de presión ajusta automáticamente la fuerza según el grosor del material, asegurando una distribución uniforme del calor para transferencias vibrantes y consistentes.", "en": "The smart pressure sensor automatically adjusts force based on material thickness, ensuring even heat distribution for vibrant and consistent transfers." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Controlador táctil GY-13 avanzado", "en": "Advanced GY-13 touch screen controller" },
+        "description": { "es": "Gestiona todos los parámetros desde el panel táctil GY-13: guarda hasta 3 configuraciones, ajusta la presión de 0 a 8 y controla el contador de producción automático.", "en": "Manage all parameters from the GY-13 touch panel: save up to 3 settings, adjust pressure from 0 to 8, and control the automatic production counter." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Parada de emergencia con reinicio instantáneo", "en": "Emergency stop with instant restart" },
+        "description": { "es": "En caso de emergencia, el sistema detiene y levanta la platina al instante. La función de reinicio con un toque permite reanudar rápidamente el flujo de trabajo sin pérdida de configuración.", "en": "In an emergency, the system stops and lifts the platen instantly. The one-touch restart function lets you quickly resume workflow without losing settings." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "Base de cambio rápido y deslizante", "en": "Quick-change sliding base" },
+        "description": { "es": "La platina inferior con sistema de cambio rápido y deslizamiento facilita la colocación precisa de prendas y materiales, aumentando la eficiencia y reduciendo errores de posicionamiento.", "en": "The lower platen with quick-change and sliding system makes precise garment and material placement easy, boosting efficiency and reducing positioning errors." },
+        "icon": "ArrowRight"
+      }
+    ],
+    "hotspots": [
+      {
+        "x": 45, "y": 15,
+        "title": { "es": "Controlador táctil GY-13", "en": "GY-13 Touch Controller" },
+        "description": { "es": "Panel táctil con 3 memorias, contador de producción y ajuste de presión 0-8. Temporizador 0-999 seg. y temperatura hasta 225°C.", "en": "Touch panel with 3 memories, production counter and 0-8 pressure adjustment. Timer 0-999 sec. and temperature up to 225°C." }
+      },
+      {
+        "x": 80, "y": 30,
+        "title": { "es": "Apertura giratoria 180°", "en": "180° swing-away opening" },
+        "description": { "es": "La platina superior gira 180° para maximizar el espacio de trabajo y facilitar la carga de materiales.", "en": "The upper platen swings 180° to maximize workspace and simplify material loading." }
+      },
+      {
+        "x": 50, "y": 60,
+        "title": { "es": "Placa calefactora 40×50 / 40×60 cm", "en": "40×50 / 40×60 cm heating plate" },
+        "description": { "es": "Distribución de calor uniforme para materiales de hasta 35 mm de grosor. Disponible en dos tamaños.", "en": "Uniform heat distribution for materials up to 35 mm thick. Available in two sizes." }
+      },
+      {
+        "x": 20, "y": 70,
+        "title": { "es": "Base deslizante de cambio rápido", "en": "Quick-change sliding base" },
+        "description": { "es": "Facilita la colocación de materiales con precisión. Sistema de cambio rápido sin herramientas.", "en": "Precise material placement. Quick-change system without tools." }
+      },
+      {
+        "x": 15, "y": 40,
+        "title": { "es": "Botón de parada de emergencia", "en": "Emergency stop button" },
+        "description": { "es": "Detiene el proceso al instante. Reinicio con un toque para reanudar el flujo de trabajo.", "en": "Stops the process instantly. One-touch restart to resume workflow." }
+      }
+    ],
+    "downloads": [
+      { "label": { "es": "Manual de Usuario Felina", "en": "Felina User Manual" }, "url": "/downloads/felina-manual.pdf" },
+      { "label": { "es": "Ficha Técnica Felina", "en": "Felina Technical Sheet" }, "url": "/downloads/felina-ficha-tecnica.pdf" }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de la placa calefactora y la platina inferior tras cada jornada.",
+        "Reemplazo de láminas protectoras o revestimientos cuando presenten desgaste.",
+        "Verificación y calibración de la temperatura con termómetro externo periódicamente.",
+        "Comprobación de los sensores de protección anti-pellizco y del sistema de doble mano.",
+        "Inspección visual del sistema eléctrico y del cableado en busca de daños.",
+        "Verificación del correcto funcionamiento del botón de parada de emergencia."
+      ],
+      "en": [
+        "Regular cleaning of the heating plate and lower platen after each session.",
+        "Replacement of protective sheets or coatings when worn.",
+        "Periodic temperature verification and calibration with external thermometer.",
+        "Check pinch protection sensors and two-hand system functionality.",
+        "Visual inspection of the electrical system and wiring for damage.",
+        "Verify the correct operation of the emergency stop button."
+      ]
+    }
   }
 ];
 
