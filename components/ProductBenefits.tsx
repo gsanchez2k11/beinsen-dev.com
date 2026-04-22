@@ -32,7 +32,7 @@ export function ProductBenefits({ benefits, gallery }: ProductBenefitsProps) {
 
     return (
         <div className="w-full space-y-24 md:space-y-32">
-            {benefits.map((benefit, index) => {
+            {benefits.slice(0, 4).map((benefit, index) => {
                 const Icon = iconMap[benefit.icon] || ShieldCheck;
                 // Alternate layout direction: even = left text, odd = right text
                 const isReversed = index % 2 !== 0;

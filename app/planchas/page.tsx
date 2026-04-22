@@ -2,8 +2,8 @@
 
 import { useState, useMemo, useEffect, Suspense, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { planchasData, allAccessoriesData, allConsumablesData, Locale } from "@/data/products";
-import { ArrowUpRight, Maximize2, Tag, Zap, Search, Settings2, X, Package, Filter, SlidersHorizontal, ChevronDown } from "lucide-react";
+import { planchasData, allAccessoriesData, allConsumablesData } from "@/data/products";
+import { Tag, Zap, Search, Package, Filter, SlidersHorizontal, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
@@ -26,13 +26,44 @@ const OPENING_TYPES_LABELS = {
     it: ["Qualsiasi", "Manuale", "Elettromagnetica", "Pneumatica", "Elettrica"]
 };
 
-
+const PAGE_SIZE = 8;
 
 export default function PlanchasCatalog() {
     return (
         <Suspense fallback={<div className="min-h-screen bg-background pt-32 text-center font-black uppercase tracking-[0.3em] opacity-40">Cargando...</div>}>
             <PlanchasCatalogContent />
         </Suspense>
+    );
+}
+
+function SectionHeader({ icon: Icon, title, count, total }: { icon: any; title: string; count: number; total: number }) {
+    return (
+        <div className="flex items-center gap-4 mb-8">
+            <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-xl bg-[#FF6600]/10 flex items-center justify-center">
+                    <Icon size={16} className="text-[#FF6600]" />
+                </div>
+                <h2 className="text-lg font-black uppercase tracking-[0.3em]">{title}</h2>
+            </div>
+            <div className="h-px flex-1 bg-border/40" />
+            <span className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground/60">
+                {count} / {total}
+            </span>
+        </div>
+    );
+}
+
+function LoadMoreButton({ onClick, label }: { onClick: () => void; label: string }) {
+    return (
+        <div className="flex justify-center mt-10 mb-4">
+            <button
+                onClick={onClick}
+                className="flex items-center gap-2 px-8 py-4 rounded-2xl border border-border/60 bg-muted/40 hover:bg-[#FF6600]/10 hover:border-[#FF6600]/40 hover:text-[#FF6600] text-sm font-black uppercase tracking-widest transition-all group"
+            >
+                <ChevronDown size={16} className="group-hover:translate-y-0.5 transition-transform" />
+                {label}
+            </button>
+        </div>
     );
 }
 
@@ -48,6 +79,21 @@ function PlanchasCatalogContent() {
     const [mounted, setMounted] = useState(false);
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const prevTypeRef = useRef<string | null>(null);
+
+    // Per-section visible counts
+    const [visibleMachines, setVisibleMachines] = useState(PAGE_SIZE);
+    const [visibleAccessories, setVisibleAccessories] = useState(PAGE_SIZE);
+    const [visibleConsumables, setVisibleConsumables] = useState(PAGE_SIZE);
+
+    // Compatible machine filter (for accessories & consumables views)
+    const [selectedMachine, setSelectedMachine] = useState("");
+
+    // Reset visible counts when filters change
+    useEffect(() => {
+        setVisibleMachines(PAGE_SIZE);
+        setVisibleAccessories(PAGE_SIZE);
+        setVisibleConsumables(PAGE_SIZE);
+    }, [activeType, activeCategoryIndex, activeOpeningIndex, searchQuery, selectedMachine]);
 
     // Initialize from URL on first mount
     useEffect(() => {
@@ -72,10 +118,10 @@ function PlanchasCatalogContent() {
             } else {
                 setActiveType('all');
             }
-            // Reset other filters when changing type via URL
             setActiveCategoryIndex(0);
             setActiveOpeningIndex(0);
             setSearchQuery("");
+            setSelectedMachine("");
         }
     }, [searchParams, mounted]);
 
@@ -92,8 +138,6 @@ function PlanchasCatalogContent() {
 
     const categoryLabels = CATEGORIES_LABELS[locale] || CATEGORIES_LABELS.es;
     const openingLabels = OPENING_TYPES_LABELS[locale] || OPENING_TYPES_LABELS.es;
-
-
 
     const d = {
         es: {
@@ -115,7 +159,10 @@ function PlanchasCatalogContent() {
             machines: "Máquinas",
             accessories: "Accesorios",
             consumables: "Consumibles",
-            filterTitle: "Búsqueda Avanzada"
+            filterTitle: "Búsqueda Avanzada",
+            loadMore: "Ver más",
+            compatibleWith: "Máquina compatible",
+            allMachines: "Todas las máquinas",
         },
         en: {
             title: "Catalog",
@@ -136,47 +183,101 @@ function PlanchasCatalogContent() {
             machines: "Machines",
             accessories: "Accessories",
             consumables: "Consumables",
-            filterTitle: "Advanced Search"
+            filterTitle: "Advanced Search",
+            loadMore: "Load more",
+            compatibleWith: "Compatible machine",
+            allMachines: "All machines",
         }
     }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
 
-    const allItems = useMemo(() => {
-        // Map everything to a common item format for the list
-        const machines = planchasData.map(p => ({ ...p, _type: 'planchas' }));
-        const accs = allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } }));
-        const cons = allConsumablesData.map(c => ({ ...c, _type: 'consumables', category: { es: 'Consumible', en: 'Consumable' }, openingType: { es: 'Químico/Material', en: 'Chemical/Material' } }));
-        
-        const combined = [...machines, ...accs, ...cons];
-        
-        // Sort alphabetically by localized name
-        return combined.sort((a, b) => {
-            const nameA = (getLocalized(a.name, locale) || "").toLowerCase();
-            const nameB = (getLocalized(b.name, locale) || "").toLowerCase();
-            return nameA.localeCompare(nameB, locale);
+    // Map: model name (first word of localized name) → { accIds, consIds }
+    const machineCompatMap = useMemo(() => {
+        const map = new Map<string, { accIds: Set<string>; consIds: Set<string> }>();
+        planchasData.forEach(p => {
+            const fullName = getLocalized(p.name, locale) || getLocalized(p.name, 'es') || p.id;
+            const modelName = fullName.split(" ")[0]; // "Barein Plancha Térmica" → "Barein"
+            map.set(modelName, {
+                accIds: new Set((p.accessories || []).map((a: any) => a.id)),
+                consIds: new Set((p.consumables || []).map((c: any) => c.id)),
+            });
         });
+        return map;
     }, [locale]);
 
-     const filteredItems = useMemo(() => {
+    const machineModelNames = useMemo(() =>
+        Array.from(machineCompatMap.keys()).sort((a, b) => a.localeCompare(b, 'es')),
+        [machineCompatMap]
+    );
+
+    const applyCommonFilters = (items: any[]) => {
         const selectedCategory = CATEGORIES[activeCategoryIndex];
         const selectedOpening = OPENING_TYPES[activeOpeningIndex];
         const lowerSearchQuery = searchQuery.toLowerCase();
         const hasSearch = searchQuery.length > 0;
 
-        const filtered = allItems.filter((item: any) => {
-            const itemTypeMatches = activeType === "all" || item._type === activeType;
-            
+        return items.filter((item: any) => {
             const itemCat = typeof item.category === 'object' ? getLocalized(item.category, 'es') : item.category;
             const itemOpen = typeof item.openingType === 'object' ? getLocalized(item.openingType, 'es') : item.openingType;
             const itemName = typeof item.name === 'object' ? (getLocalized(item.name, locale) || "") : (item.name as string);
-            
+
             const matchesCategory = activeCategoryIndex === 0 || itemCat === selectedCategory;
             const matchesOpening = activeOpeningIndex === 0 || itemOpen === selectedOpening;
             const matchesSearch = !hasSearch || itemName.toLowerCase().includes(lowerSearchQuery);
 
-            return itemTypeMatches && matchesCategory && matchesOpening && matchesSearch;
+            return matchesCategory && matchesOpening && matchesSearch;
         });
-        return filtered;
-    }, [activeType, activeCategoryIndex, activeOpeningIndex, searchQuery, locale, allItems]);
+    };
+
+    const filteredMachines = useMemo(() =>
+        applyCommonFilters(planchasData.map(p => ({ ...p, _type: 'planchas' }))),
+        [activeCategoryIndex, activeOpeningIndex, searchQuery, locale]
+    );
+
+    const filteredAccessories = useMemo(() => {
+        const base = applyCommonFilters(allAccessoriesData.map(a => ({ ...a, _type: 'accessories', category: { es: 'Accesorio', en: 'Accessory' }, openingType: { es: 'Hardware', en: 'Hardware' } })));
+        if (!selectedMachine) return base;
+        const allowed = machineCompatMap.get(selectedMachine)?.accIds;
+        return allowed ? base.filter((a: any) => allowed.has(a.id)) : base;
+    }, [activeCategoryIndex, activeOpeningIndex, searchQuery, locale, selectedMachine, machineCompatMap]);
+
+    const filteredConsumables = useMemo(() => {
+        const base = applyCommonFilters(allConsumablesData.map(c => ({ ...c, _type: 'consumables', category: { es: 'Consumible', en: 'Consumable' }, openingType: { es: 'Químico/Material', en: 'Chemical/Material' } })));
+        if (!selectedMachine) return base;
+        const allowed = machineCompatMap.get(selectedMachine)?.consIds;
+        return allowed ? base.filter((c: any) => allowed.has(c.id)) : base;
+    }, [activeCategoryIndex, activeOpeningIndex, searchQuery, locale, selectedMachine, machineCompatMap]);
+
+    const totalFiltered = useMemo(() => {
+        if (activeType === 'all') return filteredMachines.length + filteredAccessories.length + filteredConsumables.length;
+        if (activeType === 'planchas') return filteredMachines.length;
+        if (activeType === 'accessories') return filteredAccessories.length;
+        return filteredConsumables.length;
+    }, [activeType, filteredMachines, filteredAccessories, filteredConsumables]);
+
+    const singleList = useMemo(() => {
+        if (activeType === 'planchas') return filteredMachines;
+        if (activeType === 'accessories') return filteredAccessories;
+        if (activeType === 'consumables') return filteredConsumables;
+        return [];
+    }, [activeType, filteredMachines, filteredAccessories, filteredConsumables]);
+
+    const renderGrid = (items: any[], startIndex = 0) => (
+        <div className="grid flex-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+            <AnimatePresence>
+                {items.map((item: any, index: number) => (
+                    <CatalogProductCard
+                        key={item.id}
+                        item={item as any}
+                        locale={locale}
+                        index={startIndex + index}
+                        isFeatureCard={false}
+                    />
+                ))}
+            </AnimatePresence>
+        </div>
+    );
+
+    const isEmpty = totalFiltered === 0;
 
     return (
         <div className="min-h-screen bg-background pb-32 selection:bg-[#FF6600] selection:text-white">
@@ -185,7 +286,7 @@ function PlanchasCatalogContent() {
             <header className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-muted/30 to-background border-b border-border/40">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_transparent_0%,_var(--background)_70%)] opacity-40" />
                 <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF6600]/30 to-transparent" />
-                
+
                 <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
@@ -208,7 +309,7 @@ function PlanchasCatalogContent() {
             {/* Enhanced Control Bar */}
             <div className="sticky top-20 z-40 bg-background/80 backdrop-blur-xl border-b border-border/40 py-6">
                 <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-8 justify-between">
-                    
+
                     {/* Primary Type Switcher */}
                     <div className="flex bg-muted p-1 rounded-2xl w-full lg:w-auto overflow-x-auto no-scrollbar">
                         {[
@@ -224,18 +325,18 @@ function PlanchasCatalogContent() {
                                     setActiveCategoryIndex(0);
                                     setActiveOpeningIndex(0);
                                     setSearchQuery("");
-                                    
+                                    setSelectedMachine("");
+
                                     if (t.id === 'all') {
                                         router.replace('/planchas', { scroll: false });
                                     } else {
                                         router.replace(`/planchas?type=${t.id}`, { scroll: false });
                                     }
                                 }}
-                                className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all whitespace-nowrap ${
-                                    activeType === t.id 
-                                        ? "bg-background text-[#FF6600] shadow-sm transform scale-105" 
-                                        : "text-muted-foreground hover:text-foreground"
-                                }`}
+                                className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all whitespace-nowrap ${activeType === t.id
+                                    ? "bg-background text-[#FF6600] shadow-sm transform scale-105"
+                                    : "text-muted-foreground hover:text-foreground"
+                                    }`}
                             >
                                 <t.icon size={14} />
                                 {t.label}
@@ -255,7 +356,7 @@ function PlanchasCatalogContent() {
                                 className="w-full bg-muted/50 border border-border/60 rounded-2xl py-3 pl-12 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-medium"
                             />
                         </div>
-                        <button 
+                        <button
                             onClick={() => setIsFilterOpen(!isFilterOpen)}
                             className={`p-3 rounded-2xl border transition-all ${isFilterOpen ? "bg-[#FF6600] text-white border-[#FF6600]" : "bg-muted/50 text-muted-foreground border-border/60 hover:text-foreground"}`}
                         >
@@ -273,41 +374,68 @@ function PlanchasCatalogContent() {
                             exit={{ height: 0, opacity: 0 }}
                             className="overflow-hidden bg-muted/30 border-t border-border/20"
                         >
-                            <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-12">
-                                <div className="space-y-4">
+                            {(activeType === "accessories" || activeType === "consumables") ? (
+                                /* ── Filtro máquina compatible ── */
+                                <div className="max-w-7xl mx-auto px-4 py-8 space-y-4">
                                     <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
-                                        <Package size={12} /> {d.catLabel}
+                                        <Zap size={12} /> {d.compatibleWith}
                                     </label>
                                     <div className="flex flex-wrap gap-2">
-                                        {categoryLabels.map((cat, idx) => (
+                                        <button
+                                            onClick={() => setSelectedMachine("")}
+                                            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${selectedMachine === "" ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                        >
+                                            {d.allMachines}
+                                        </button>
+                                        {machineModelNames.map(name => (
                                             <button
-                                                key={cat}
-                                                onClick={() => setActiveCategoryIndex(idx)}
-                                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeCategoryIndex === idx ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                key={name}
+                                                onClick={() => setSelectedMachine(selectedMachine === name ? "" : name)}
+                                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${selectedMachine === name ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
                                             >
-                                                {cat}
+                                                {name}
                                             </button>
                                         ))}
                                     </div>
                                 </div>
+                            ) : (
+                                /* ── Filtros categoría + sistema (máquinas / all) ── */
+                                <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+                                    <div className="space-y-4">
+                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                            <Package size={12} /> {d.catLabel}
+                                        </label>
+                                        <div className="flex flex-wrap gap-2">
+                                            {categoryLabels.map((cat, idx) => (
+                                                <button
+                                                    key={cat}
+                                                    onClick={() => setActiveCategoryIndex(idx)}
+                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeCategoryIndex === idx ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                >
+                                                    {cat}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
 
-                                <div className="space-y-4">
-                                    <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
-                                        <Zap size={12} /> {d.openLabel}
-                                    </label>
-                                    <div className="flex flex-wrap gap-2">
-                                        {openingLabels.map((type, idx) => (
-                                            <button
-                                                key={type}
-                                                onClick={() => setActiveOpeningIndex(idx)}
-                                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeOpeningIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
-                                            >
-                                                {type}
-                                            </button>
-                                        ))}
+                                    <div className="space-y-4">
+                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                            <Zap size={12} /> {d.openLabel}
+                                        </label>
+                                        <div className="flex flex-wrap gap-2">
+                                            {openingLabels.map((type, idx) => (
+                                                <button
+                                                    key={type}
+                                                    onClick={() => setActiveOpeningIndex(idx)}
+                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeOpeningIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                >
+                                                    {type}
+                                                </button>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            )}
                         </motion.div>
                     )}
                 </AnimatePresence>
@@ -317,26 +445,12 @@ function PlanchasCatalogContent() {
             <main className="max-w-7xl mx-auto px-4 mt-16">
                 <div className="flex items-center justify-between mb-12">
                     <h2 className="text-sm font-black uppercase tracking-[0.4em] text-muted-foreground/60 flex items-center gap-4">
-                        {d.showing} <span className="text-foreground">{filteredItems.length}</span> {d.results}
+                        {d.showing} <span className="text-foreground">{totalFiltered}</span> {d.results}
                         <div className="h-px w-20 bg-border/40" />
                     </h2>
                 </div>
 
-                <div className="grid flex-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-                    <AnimatePresence>
-                        {filteredItems.map((item: any, index: number) => (
-                            <CatalogProductCard 
-                                key={item.id} 
-                                item={item as any} 
-                                locale={locale} 
-                                index={index} 
-                                isFeatureCard={false}
-                            />
-                        ))}
-                    </AnimatePresence>
-                </div>
-
-                {filteredItems.length === 0 && (
+                {isEmpty ? (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -360,6 +474,48 @@ function PlanchasCatalogContent() {
                             {d.clearBtn}
                         </button>
                     </motion.div>
+                ) : activeType === "all" ? (
+                    /* ── SECCIONES separadas por tipo ── */
+                    <div className="space-y-20">
+
+                        {/* MÁQUINAS */}
+                        {filteredMachines.length > 0 && (
+                            <section>
+                                <SectionHeader icon={Zap} title={d.machines} count={Math.min(visibleMachines, filteredMachines.length)} total={filteredMachines.length} />
+                                {renderGrid(filteredMachines.slice(0, visibleMachines))}
+                                {visibleMachines < filteredMachines.length && (
+                                    <LoadMoreButton onClick={() => setVisibleMachines(v => v + PAGE_SIZE)} label={d.loadMore} />
+                                )}
+                            </section>
+                        )}
+
+                        {/* ACCESORIOS */}
+                        {filteredAccessories.length > 0 && (
+                            <section>
+                                <SectionHeader icon={Package} title={d.accessories} count={Math.min(visibleAccessories, filteredAccessories.length)} total={filteredAccessories.length} />
+                                {renderGrid(filteredAccessories.slice(0, visibleAccessories))}
+                                {visibleAccessories < filteredAccessories.length && (
+                                    <LoadMoreButton onClick={() => setVisibleAccessories(v => v + PAGE_SIZE)} label={d.loadMore} />
+                                )}
+                            </section>
+                        )}
+
+                        {/* CONSUMIBLES */}
+                        {filteredConsumables.length > 0 && (
+                            <section>
+                                <SectionHeader icon={Tag} title={d.consumables} count={Math.min(visibleConsumables, filteredConsumables.length)} total={filteredConsumables.length} />
+                                {renderGrid(filteredConsumables.slice(0, visibleConsumables))}
+                                {visibleConsumables < filteredConsumables.length && (
+                                    <LoadMoreButton onClick={() => setVisibleConsumables(v => v + PAGE_SIZE)} label={d.loadMore} />
+                                )}
+                            </section>
+                        )}
+                    </div>
+                ) : (
+                    /* ── TIPO ESPECÍFICO: todos los items sin paginación ── */
+                    <section>
+                        {renderGrid(singleList)}
+                    </section>
                 )}
             </main>
         </div>
