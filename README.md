@@ -122,6 +122,105 @@ Los campos opcionales pueden dejarse vacíos hasta que el PIM los rellene.
 
 ---
 
+## Asesor de compra (`/asesor`)
+
+Wizard de 3 pasos que recomienda 1-3 modelos según uso, volumen y formato:
+
+1. **¿Qué personalizas?** → categoría (Textil / Tazas / Gorras / Especializadas / Cualquiera)
+2. **Volumen diario** → mapea a sistema de cierre (Manual para bajo; Electromagnética/Eléctrica para medio; Neumática/Eléctrica para alto)
+3. **Formato de taller** → mapea a `size`
+
+### Lógica de scoring
+
+Cada máquina obtiene puntos por match:
+- Categoría: +3 (o -2 si no hay match y el usuario eligió categoría concreta)
+- Sistema ideal: +3 (primer sistema preferido)
+- Sistema compatible: +2 (segundo sistema preferido)
+- Formato: +2
+
+Top 3 con puntuación > 0 se muestran con explicación "Por qué encaja".
+
+### Mapas editables en `app/asesor/page.tsx`
+
+- `CATEGORY_MAP`: categoría del wizard → valor de `category.es` en `products.ts`
+- `VOLUME_PREFS`: volumen → lista ordenada de `openingType` preferidos
+- `FORMAT_MAP`: formato → valores aceptados de `size`
+
+---
+
+## Comparador de modelos (`/comparar`)
+
+Selecciona hasta 3 máquinas y las compara fila a fila.
+
+- Slots con picker modal (búsqueda por nombre)
+- Tabla con PVP, categoría, sistema, formato + unión de todas las `technicalSpecs` de las máquinas elegidas (labels localizados)
+- Estado en querystring: `/comparar?ids=modelo1,modelo2,modelo3` → URL compartible
+- Quick links al pie para ir a la ficha completa de cada modelo
+
+No requiere datos adicionales en `products.ts` — usa `technicalSpecs` existentes.
+
+---
+
+## Centro de aprendizaje (`/aprende`)
+
+Blog técnico basado en MDX. Sin CMS — los artículos viven en el repo.
+
+### Crear un artículo
+
+Crea `content/aprende/<slug>.mdx` con frontmatter:
+
+```mdx
+---
+title: "Tu título aquí"
+excerpt: "Resumen de 1-2 líneas que se muestra en el listado y meta description."
+category: guias         # guias | tecnica | mantenimiento | troubleshooting | novedades
+author: "Nombre Apellido"
+authorRole: "Ingeniero de producción"
+publishedAt: "2026-04-20"
+heroImage: "/products/alaska-plancha-termica-textil/01.png"
+videoUrl: "https://www.youtube.com/embed/XXXXX"
+products:               # slugs de productos para cross-linking
+  - alaska-plancha-termica-textil
+  - barbados-plancha-termica-textil
+downloads:              # slugs cuyos PDFs (public/downloads/<slug>/) se adjuntan
+  - alaska-plancha-termica-textil
+readingMinutes: 5       # opcional, se calcula automáticamente si falta
+---
+
+## Usa markdown estándar
+
+Párrafos, listas, `código`, [enlaces](https://…), **negrita**, *cursiva*, tablas…
+
+### Subencabezados
+...
+```
+
+### Elementos que renderiza la ficha de artículo
+
+- Hero con imagen + categoría + fecha + tiempo de lectura + autor
+- Vídeo embebido (iframe) si hay `videoUrl`
+- Contenido MDX con estilos tipográficos consistentes
+- Sección **Descargas**: PDFs agregados desde `public/downloads/<slug>/` de los productos listados en `downloads`
+- Sección **Productos relacionados**: cards completas de los `products`
+- Sección **Sigue aprendiendo**: 3 artículos distintos del actual
+
+### Cross-linking bidireccional
+
+- En `/aprende/<slug>`: muestra los productos referenciados en `products[]`
+- En `/planchas/<slug>`: muestra artículos que citan ese slug en su `products[]` (hasta 3)
+
+### Categorías disponibles
+
+Editables en `lib/articles.ts` (`CATEGORY_LABELS`):
+
+- `guias` — tutoriales paso a paso
+- `tecnica` — deep dives técnicos
+- `mantenimiento` — cuidado, calibración, repuestos
+- `troubleshooting` — resolución de problemas
+- `novedades` — lanzamientos, eventos
+
+---
+
 ## Despliegue
 
 ```bash
@@ -142,12 +241,23 @@ Ejecuta, dentro de `beinsen-dev-as/` (branch `as`):
 ```
 app/                           # App Router (páginas y layouts)
 ├── icon.png                   # Favicon (logo Beinsen 512x512)
+├── aprende/                   # Centro de aprendizaje (MDX)
+│   ├── page.tsx               # Índice
+│   └── [slug]/page.tsx        # Artículo
+├── asesor/                    # Wizard "¿Qué plancha necesito?"
+├── comparar/                  # Comparador de modelos
+├── planchas/                  # Catálogo + fichas
+└── ...
 components/
-├── ProductDetailView.tsx      # Ficha de producto (incluye ScrollToTopButton)
+├── ProductDetailView.tsx      # Ficha de producto (+ ScrollToTopButton)
 ├── ScrollToTopButton.tsx      # Botón flotante "ir arriba"
 ├── TrustedBrands.tsx          # Partners: yoimprimo, tiendasublimacion,
 │                              # tintaciss, espiraldigital, apphoto
+├── CatalogProductCard.tsx
+├── Navbar.tsx                 # Incluye links a /asesor /comparar /aprende
 └── ...
+content/
+└── aprende/<slug>.mdx         # Artículos del blog
 context/                       # LanguageContext
 data/
 ├── products.ts                # Catálogo (planchas, accesorios, consumibles)
@@ -158,6 +268,7 @@ lib/
 ├── i18n.ts
 ├── productImages.ts           # enrichWithLocalImages()
 ├── productDownloads.ts        # enrichWithLocalDownloads()
+├── articles.ts                # Loader de MDX + tipos del frontmatter
 └── utils.ts
 public/
 ├── brands/                    # Logos de partners
