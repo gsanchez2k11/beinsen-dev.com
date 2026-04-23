@@ -295,7 +295,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                                     {d.engineeringDesc}
                                 </p>
                             </div>
-                            <ProductHotspots imageSrc={plancha.hotspotImage || plancha.image} hotspots={plancha.hotspots} />
+                            <ProductHotspots imageSrc={plancha.hotspotImage || plancha.image} imageWidth={(plancha as any).hotspotImageWidth} imageHeight={(plancha as any).hotspotImageHeight} hotspots={plancha.hotspots} />
                         </ScrollReveal>
                     )}
 

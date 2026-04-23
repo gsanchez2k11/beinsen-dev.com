@@ -40,8 +40,10 @@ export function ProductBenefits({ benefits, gallery }: ProductBenefitsProps) {
                 const title = getLocalized(benefit.title, locale);
                 const description = getLocalized(benefit.description, locale);
 
-                // Pick an image from the gallery based on the index (or fallback to a nice abstract gradient)
-                const blockImage = gallery && gallery[index % gallery.length]
+                // Use explicit benefit image if set, otherwise pick from gallery by index
+                const blockImage = benefit.image
+                    ? benefit.image
+                    : gallery && gallery[index % gallery.length]
                     ? gallery[index % gallery.length]
                     : null;
 
