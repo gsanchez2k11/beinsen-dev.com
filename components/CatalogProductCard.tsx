@@ -75,9 +75,11 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
                     <div className="absolute top-6 right-6 flex flex-col gap-2 items-end">
                         <div className="bg-background/90 backdrop-blur-xl px-4 py-2 rounded-2xl text-sm font-black flex items-center gap-2 shadow-xl border border-border/20 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                             <Tag size={16} className="text-[#FF6600]" />
-                            {item.price !== "Consultar PVP" && item.price !== undefined
-                                ? (typeof item.price === 'number' ? `${item.price.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES')} €` : item.price)
-                                : dictionary.consultPvP}
+                            {(() => {
+                                const shown = item.pvp ?? item.price;
+                                if (shown === undefined || shown === "Consultar PVP") return dictionary.consultPvP;
+                                return typeof shown === 'number' ? `${shown.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES')} €` : shown;
+                            })()}
                         </div>
                         
                         {isIndustrial && (
@@ -92,9 +94,14 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
                 <div className="p-8 lg:p-10 flex flex-col flex-1 relative bg-gradient-to-br from-card via-card to-muted/10">
                     <div className="flex justify-between items-start mb-4 gap-4">
                         <div className="flex flex-col gap-2 text-left">
-                             <div className="flex items-center gap-2">
+                             <div className="flex items-center gap-2 flex-wrap">
                                 <span className="w-8 h-0.5 bg-[#FF6600]/40 rounded-full group-hover:w-12 transition-all duration-500" />
                                 <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/70">{category || "General"}</span>
+                                {item._type !== 'planchas' && item.reference && (
+                                    <span className="text-[10px] font-mono font-bold tracking-wider text-muted-foreground/60 bg-muted px-2 py-0.5 rounded">
+                                        Ref. {item.reference}
+                                    </span>
+                                )}
                              </div>
                              <h2 className={`font-black text-foreground group-hover:text-[#FF6600] transition-colors leading-[1.1] tracking-tight ${isFeatureCard ? 'text-3xl md:text-5xl' : 'text-2xl lg:text-3xl'}`}>
                                 {name}
