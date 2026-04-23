@@ -31,7 +31,7 @@ export function enrichWithLocalImages<T extends { slug?: string; image?: string;
     hotspotImageHeight: detail?.height,
     storySegments: product.storySegments?.map((seg: any, i: number) => ({
       ...seg,
-      image: g[i % g.length],
+      image: seg.image?.startsWith('/') ? seg.image : g[i % g.length],
     })),
   };
 }
