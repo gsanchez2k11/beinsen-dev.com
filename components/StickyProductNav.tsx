@@ -2,9 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, AnimatePresence } from "framer-motion";
-import { Euro, Home } from "lucide-react";
+import { Euro } from "lucide-react";
 import { ContactSpecialistButton } from "./ContactSpecialistButton";
-import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import { Localized, Locale } from "@/data/products";
@@ -51,21 +50,12 @@ export function StickyProductNav({ productName, price }: StickyProductNavProps) 
                     className="fixed top-0 left-0 right-0 z-[100] bg-background/80 backdrop-blur-xl border-b border-border shadow-sm py-4 px-4 sm:px-6 lg:px-8"
                 >
                     <div className="max-w-7xl mx-auto flex items-center justify-between">
-                        {/* Left: Product Name + Home */}
-                        <div className="flex items-center gap-4 min-w-0">
-                            <Link
-                                href="/"
-                                aria-label="Ir a inicio"
-                                className="w-12 h-12 rounded-full border border-border bg-muted/50 hover:bg-muted flex items-center justify-center transition-colors shrink-0"
-                            >
-                                <Home size={20} className="text-foreground" />
-                            </Link>
-                            <h2 className="text-lg md:text-xl font-bold text-foreground truncate">
-                                {localizedName}
-                            </h2>
-                        </div>
+                        {/* Left: Product Name */}
+                        <h2 className="text-lg md:text-xl font-bold text-foreground truncate max-w-[50%]">
+                            {localizedName}
+                        </h2>
 
-                        {/* Right: Price + CTA */}
+                        {/* Right: Actions */}
                         <div className="flex items-center gap-4">
                             <span className="hidden md:flex items-center gap-1 font-bold text-foreground text-xl mr-2">
                                 {price !== 'Consultar PVP' ? (

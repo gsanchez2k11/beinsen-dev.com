@@ -40,10 +40,8 @@ export function ProductBenefits({ benefits, gallery }: ProductBenefitsProps) {
                 const title = getLocalized(benefit.title, locale);
                 const description = getLocalized(benefit.description, locale);
 
-                // Use explicit benefit image if set, otherwise pick from gallery by index
-                const blockImage = benefit.image
-                    ? benefit.image
-                    : gallery && gallery[index % gallery.length]
+                // Pick an image from the gallery based on the index (or fallback to a nice abstract gradient)
+                const blockImage = gallery && gallery[index % gallery.length]
                     ? gallery[index % gallery.length]
                     : null;
 
@@ -88,7 +86,7 @@ export function ProductBenefits({ benefits, gallery }: ProductBenefitsProps) {
                                         src={blockImage}
                                         alt={typeof title === 'string' ? title : "Benefit"}
                                         fill
-                                        className={benefit.objectFit === "contain" ? "object-contain p-6" : benefit.objectFit === "cover-zoom" ? "object-cover scale-125" : "object-cover"}
+                                        className="object-cover"
                                         sizes="(max-width: 1024px) 100vw, 50vw"
                                     />
                                 ) : (
