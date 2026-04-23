@@ -21,8 +21,8 @@
   },
   "belice-plancha-termica-textil": {
     "src": "/detalles-maquinas/belice-plancha-termica-textil.png",
-    "width": 461,
-    "height": 640
+    "width": 518,
+    "height": 720
   },
   "doha-plancha-transfer-gran-formato": {
     "src": "/detalles-maquinas/doha-plancha-transfer-gran-formato.png",
@@ -84,8 +84,8 @@
     "width": 540,
     "height": 720
   },
-  "plancha-neumatica-doble-estacion-caen": {
-    "src": "/detalles-maquinas/plancha-neumatica-doble-estacion-caen.png",
+  "caen-plancha-neumatica-doble-estacion": {
+    "src": "/detalles-maquinas/caen-plancha-neumatica-doble-estacion.png",
     "width": 332,
     "height": 720
   },
@@ -94,8 +94,8 @@
     "width": 720,
     "height": 720
   },
-  "plancha-termica-barein": {
-    "src": "/detalles-maquinas/plancha-termica-barein.png",
+  "barein-plancha-termica": {
+    "src": "/detalles-maquinas/barein-plancha-termica.png",
     "width": 960,
     "height": 720
   },
