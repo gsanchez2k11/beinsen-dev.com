@@ -75,7 +75,7 @@ function PlanchasCatalogContent() {
     const [activeCategoryIndex, setActiveCategoryIndex] = useState(0);
     const [activeOpeningIndex, setActiveOpeningIndex] = useState(0);
     const [searchQuery, setSearchQuery] = useState("");
-    const [isFilterOpen, setIsFilterOpen] = useState(true);
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
     const [isInitialLoad, setIsInitialLoad] = useState(true);
     const prevTypeRef = useRef<string | null>(null);

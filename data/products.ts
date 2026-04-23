@@ -29,6 +29,7 @@ export interface Benefit {
   title: Localized<string> | string;
   description: Localized<string> | string;
   icon: string;
+  image?: string;
 }
 
 export interface Hotspot {
@@ -257,8 +258,10 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      { "x": 50, "y": 30, "title": { "es": "Resistencias de Alta Densidad", "en": "High-Density Elements" }, "description": { "es": "Distribución de calor uniforme para una sublimación perfecta de borde a borde.", "en": "Uniform heat distribution for perfect edge-to-edge sublimation." } },
-      { "x": 20, "y": 70, "title": { "es": "Controladores Digitales", "en": "Digital Controllers" }, "description": { "es": "Programación precisa de tiempo y temperatura por separado.", "en": "Precise separate time and temperature programming." } }
+      { "x": 81.1, "y": 22.7, "title": { "es": "Resistencia de alta calidad para tazas entre 11 y 15oz", "en": "High-quality heating element for 11–15oz mugs" }, "description": { "es": "", "en": "" } },
+      { "x": 12.6, "y": 43.3, "title": { "es": "Botones de encendido independientes", "en": "Independent power buttons" }, "description": { "es": "", "en": "" } },
+      { "x": 58.0, "y": 67.6, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 8.9,  "y": 71.9, "title": { "es": "Estructura robusta y duradera", "en": "Robust and durable structure" }, "description": { "es": "", "en": "" } }
     ],
     "downloads": [
       { "label": { "es": "Manual de Usuario", "en": "User Manual" }, "url": "/downloads/sore-manual.pdf" },
@@ -795,7 +798,13 @@ const rawPlanchasData: Plancha[] = [
         "Inspection and cleaning of internal components.",
         "Temperature verification and calibration."
       ]
-    }
+    },
+    "hotspots": [
+      { "x": 68,   "y": 20,   "title": { "es": "Nuevo botón de reset elegante",          "en": "New elegant reset button" },            "description": { "es": "", "en": "" } },
+      { "x": 27,   "y": 35.9, "title": { "es": "Nueva resistencia más eficaz y duradera", "en": "New more efficient and durable element" }, "description": { "es": "", "en": "" } },
+      { "x": 49.5, "y": 37.4, "title": { "es": "Controlador digital GY05N",               "en": "GY05N digital controller" },             "description": { "es": "", "en": "" } },
+      { "x": 48.6, "y": 52.1, "title": { "es": "Adaptador para tazas de 11 o 15oz",       "en": "Adapter for 11 or 15oz mugs" },           "description": { "es": "", "en": "" } }
+    ]
   },
   {
     "id": "plancha-neumatica-doble-estacion-caen",
@@ -893,6 +902,15 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Ajusta la cruz láser con máxima precisión y reduce errores de colocación para evitar impresiones fuera de lugar.", "en": "Fine-tune the cross laser with high precision and reduce placement errors to avoid off-position prints." },
         "icon": "Ruler"
       }
+    ],
+    "hotspots": [
+      { "x": 48.2, "y": 35.8, "title": { "es": "Cabeza movible", "en": "Movable head" }, "description": { "es": "", "en": "" } },
+      { "x": 54.5, "y": 40.3, "title": { "es": "Pantalla digital", "en": "Digital display" }, "description": { "es": "", "en": "" } },
+      { "x": 68.4, "y": 42.9, "title": { "es": "Botón de activación", "en": "Activation button" }, "description": { "es": "", "en": "" } },
+      { "x": 55.7, "y": 43.6, "title": { "es": "Regulador de presión", "en": "Pressure regulator" }, "description": { "es": "", "en": "" } },
+      { "x": 45.2, "y": 48.5, "title": { "es": "Botón activación láser", "en": "Laser activation button" }, "description": { "es": "", "en": "" } },
+      { "x": 52.7, "y": 51.1, "title": { "es": "Difusor de calor", "en": "Heat diffuser" }, "description": { "es": "", "en": "" } },
+      { "x": 78.3, "y": 53.9, "title": { "es": "Doble plato de 40x50", "en": "Double 40x50 plate" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -1002,6 +1020,13 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Clock"
       }
     ],
+    "hotspots": [
+      { "x": 50.2, "y": 10.6, "title": { "es": "Asa", "en": "Handle" }, "description": { "es": "", "en": "" } },
+      { "x": 49.1, "y": 30.3, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 50.6, "y": 50.7, "title": { "es": "Electroimán", "en": "Electromagnet" }, "description": { "es": "", "en": "" } },
+      { "x": 54.3, "y": 58.6, "title": { "es": "Plato para gorras", "en": "Cap plate" }, "description": { "es": "", "en": "" } },
+      { "x": 50.0, "y": 79.6, "title": { "es": "Base de trabajo", "en": "Work base" }, "description": { "es": "", "en": "" } }
+    ],
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -1103,6 +1128,13 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "La bandeja extraíble, el cierre electromagnético y la empuñadura ergonómica están pensados para que planchar sea más cómodo durante toda la jornada.", "en": "The pull-out tray, electromagnetic closure, and ergonomic handle are designed to keep pressing comfortable throughout the day." },
         "icon": "Zap"
       }
+    ],
+    "hotspots": [
+      { "x": 58.1, "y": 29.4, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 35.2, "y": 31.7, "title": { "es": "Apertura automática con electroimán", "en": "Automatic opening with electromagnet" }, "description": { "es": "", "en": "" } },
+      { "x": 14.6, "y": 55.4, "title": { "es": "Alfombrilla extra gruesa de algodón reciclado", "en": "Extra thick recycled cotton pad" }, "description": { "es": "", "en": "" } },
+      { "x": 34.4, "y": 70.4, "title": { "es": "Bandeja inferior deslizable", "en": "Sliding lower tray" }, "description": { "es": "", "en": "" } },
+      { "x": 61.9, "y": 74.9, "title": { "es": "Patas con protección de goma", "en": "Rubber-protected feet" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -1230,6 +1262,13 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Riad es una plancha pequeña pensada para quienes disponen de poco espacio. Con su controlador GY-04 podrás manipular la plancha sin grandes complicaciones.", "en": "Riad is a compact press designed for limited spaces. With its GY-04 controller, operation is simple and practical." },
         "icon": "MoveHorizontal"
       }
+    ],
+    "hotspots": [
+      { "x": 53.8, "y": 13.1, "title": { "es": "Perilla", "en": "Knob" }, "description": { "es": "", "en": "" } },
+      { "x": 84.3, "y": 24.2, "title": { "es": "Asa", "en": "Handle" }, "description": { "es": "", "en": "" } },
+      { "x": 36.3, "y": 45.0, "title": { "es": "Resistencia plana", "en": "Flat heating element" }, "description": { "es": "", "en": "" } },
+      { "x": 38.8, "y": 52.5, "title": { "es": "Base de trabajo", "en": "Work base" }, "description": { "es": "", "en": "" } },
+      { "x": 72.6, "y": 60.8, "title": { "es": "Cambio de plato", "en": "Plate change" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -1499,8 +1538,11 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      { "x": 45, "y": 20, "title": { "es": "Pantalla Táctil", "en": "Touch Screen" }, "description": { "es": "Visualización clara de parámetros y contador de ciclos.", "en": "Clear visualization of parameters and cycle counter." } },
-      { "x": 70, "y": 60, "title": { "es": "Cilindro Neumático", "en": "Pneumatic Cylinder" }, "description": { "es": "Mecánica robusta para una presión uniforme de larga duración.", "en": "Robust mechanics for long-lasting uniform pressure." } }
+      { "x": 33.2, "y": 18.7, "title": { "es": "Controlador digital GY-08", "en": "GY-08 digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 24.2, "y": 52.6, "title": { "es": "Cubierta anti quemaduras", "en": "Anti-burn cover" }, "description": { "es": "", "en": "" } },
+      { "x": 22.5, "y": 55.4, "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" }, "description": { "es": "", "en": "" } },
+      { "x": 38.6, "y": 67.6, "title": { "es": "Amplio espacio para colocar las prendas", "en": "Wide garment placement area" }, "description": { "es": "", "en": "" } },
+      { "x": 25.7, "y": 78.1, "title": { "es": "Bandeja extraíble con rueda", "en": "Pull-out tray with wheel" }, "description": { "es": "", "en": "" } }
     ],
     "downloads": [
       { "label": { "es": "Manual Esparta", "en": "Esparta Manual" }, "url": "/downloads/esparta-manual.pdf" }
@@ -1643,34 +1685,34 @@ const rawPlanchasData: Plancha[] = [
     ],
     "hotspots": [
       {
-        "x": 36.8,
-        "y": 36.5,
-        "title": { "es": "Ajuste de presión", "en": "Pressure adjustment" },
-        "description": { "es": "Perilla para ajustar la presión de trabajo según el tipo de taza y transfer.", "en": "Knob used to adjust working pressure based on mug type and transfer." }
-      },
-      {
-        "x": 44.5,
-        "y": 21.9,
+        "x": 46.1,
+        "y": 4.6,
         "title": { "es": "Asa", "en": "Handle" },
         "description": { "es": "Empuñadura principal para apertura y cierre manual de la plancha.", "en": "Main grip used for manual opening and closing of the press." }
       },
       {
-        "x": 81.2,
-        "y": 62.7,
-        "title": { "es": "Botón ON / OFF", "en": "ON / OFF button" },
-        "description": { "es": "Interruptor principal de encendido y apagado del equipo.", "en": "Main power switch for turning the machine on and off." }
+        "x": 37.9,
+        "y": 23.9,
+        "title": { "es": "Ajuste de presión", "en": "Pressure adjustment" },
+        "description": { "es": "Perilla para ajustar la presión de trabajo según el tipo de taza y transfer.", "en": "Knob used to adjust working pressure based on mug type and transfer." }
       },
       {
-        "x": 34.2,
-        "y": 58.2,
+        "x": 34,
+        "y": 51.9,
         "title": { "es": "Resistencia", "en": "Heating element" },
         "description": { "es": "Zona calefactora para transferencia térmica sobre tazas.", "en": "Heating zone used for thermal transfer on mugs." }
       },
       {
-        "x": 57.3,
-        "y": 60.2,
+        "x": 60.8,
+        "y": 58.5,
         "title": { "es": "Pantalla digital", "en": "Digital display" },
         "description": { "es": "Pantalla para configurar tiempo y temperatura de trabajo.", "en": "Display used to configure working time and temperature." }
+      },
+      {
+        "x": 86.8,
+        "y": 60.3,
+        "title": { "es": "Botón ON / OFF", "en": "ON / OFF button" },
+        "description": { "es": "Interruptor principal de encendido y apagado del equipo.", "en": "Main power switch for turning the machine on and off." }
       }
     ],
     "maintenanceTips": {
@@ -1782,6 +1824,12 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Configura temperatura y tiempo con total precisión para mantener resultados consistentes y profesionales en cada lote.", "en": "Set temperature and time with full precision to keep consistent, professional results in every batch." },
         "icon": "Target"
       }
+    ],
+    "hotspots": [
+      { "x": 56.0, "y": 32.1, "title": { "es": "Diseño ergonómico", "en": "Ergonomic design" }, "description": { "es": "", "en": "" } },
+      { "x": 48.3, "y": 42.4, "title": { "es": "Regulación sencilla", "en": "Easy adjustment" }, "description": { "es": "", "en": "" } },
+      { "x": 57.3, "y": 47.4, "title": { "es": "Intercambio fácil de resistencia", "en": "Easy element swap" }, "description": { "es": "", "en": "" } },
+      { "x": 29.0, "y": 51.2, "title": { "es": "Doble controlador digital", "en": "Dual digital controller" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -1915,7 +1963,14 @@ const rawPlanchasData: Plancha[] = [
         "Inspection and cleaning of internal components.",
         "Temperature verification and calibration."
       ]
-    }
+    },
+    "hotspots": [
+      { "x": 73.8, "y": 10.4, "title": { "es": "Asa",                                  "en": "Handle" },                               "description": { "es": "", "en": "" } },
+      { "x": 31.5, "y": 18.2, "title": { "es": "Sensor de activación",                  "en": "Activation sensor" },                    "description": { "es": "", "en": "" } },
+      { "x": 52,   "y": 28.9, "title": { "es": "Pantalla digital",                      "en": "Digital display" },                      "description": { "es": "", "en": "" } },
+      { "x": 28.8, "y": 39,   "title": { "es": "Resistencia",                           "en": "Heating element" },                      "description": { "es": "", "en": "" } },
+      { "x": 61,   "y": 87.8, "title": { "es": "Tuercas para ajustar la presión",       "en": "Pressure adjustment knobs" },             "description": { "es": "", "en": "" } }
+    ]
   },
   {
     "id": "sicilia-plancha-para-tazas",
@@ -2160,6 +2215,12 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Target"
       }
     ],
+    "hotspots": [
+      { "x": 36.1, "y": 33.5, "title": { "es": "Regulador manual de presión", "en": "Manual pressure regulator" }, "description": { "es": "", "en": "" } },
+      { "x": 84.6, "y": 40.3, "title": { "es": "Resorte de gas", "en": "Gas spring" }, "description": { "es": "", "en": "" } },
+      { "x": 58.9, "y": 40.6, "title": { "es": "Controlador digital GY-04", "en": "GY-04 digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 31.8, "y": 43.6, "title": { "es": "Placa calefactora de 15×20 cm", "en": "15×20 cm heating plate" }, "description": { "es": "", "en": "" } }
+    ],
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -2274,6 +2335,12 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Target"
       }
     ],
+    "hotspots": [
+      { "x": 42.2, "y": 34.3, "title": { "es": "Regulador manual de presión", "en": "Manual pressure regulator" }, "description": { "es": "", "en": "" } },
+      { "x": 73.9, "y": 43.5, "title": { "es": "Controlador digital GY04", "en": "GY04 digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 55.7, "y": 50.1, "title": { "es": "Resorte de gas", "en": "Gas spring" }, "description": { "es": "", "en": "" } },
+      { "x": 33.6, "y": 53.2, "title": { "es": "Plato especial para gorras", "en": "Special cap plate" }, "description": { "es": "", "en": "" } }
+    ],
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -2380,10 +2447,14 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      { "x": 38, "y": 12, "title": { "es": "Panel Táctil PLC", "en": "PLC Touch Panel" }, "description": { "es": "Interfaz intuitiva para controlar cada parámetro de producción y memorizar perfiles.", "en": "Intuitive interface to control every production parameter and store profiles." } },
-      { "x": 55, "y": 45, "title": { "es": "Doble Plato 40x50", "en": "Double 40x50 Plate" }, "description": { "es": "Platos rectificados para una distribución de calor perfecta. Permite preparar una prenda mientras la otra se plancha.", "en": "Ground plates for perfect heat distribution. Allows preparing one garment while the other is being pressed." } },
-      { "x": 15, "y": 30, "title": { "es": "Láseres de Cruz", "en": "Cross Lasers" }, "description": { "es": "Guías visuales de alta visibilidad para un registro exacto.", "en": "High-visibility visual guides for exact registration." } },
-      { "x": 80, "y": 60, "title": { "es": "Motorización Silenciosa", "en": "Silent Motorization" }, "description": { "es": "Sistema electromecánico que evita el ruido y mantenimiento de los compresores de aire.", "en": "Electromechanical system that avoids the noise and maintenance of air compressors." } }
+      { "x": 26.9, "y": 8.9,  "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
+      { "x": 41.9, "y": 13.5, "title": { "es": "Botón de desplazamiento horizontal", "en": "Horizontal displacement button" }, "description": { "es": "", "en": "" } },
+      { "x": 24.7, "y": 14.2, "title": { "es": "Láser de ayuda", "en": "Positioning laser" }, "description": { "es": "", "en": "" } },
+      { "x": 52.8, "y": 14.9, "title": { "es": "Regulador de velocidad de bajada", "en": "Lowering speed regulator" }, "description": { "es": "", "en": "" } },
+      { "x": 22.9, "y": 20.7, "title": { "es": "Controlador digital de desplazamiento", "en": "Digital displacement controller" }, "description": { "es": "", "en": "" } },
+      { "x": 54.4, "y": 42.6, "title": { "es": "Platos intercambiables con sistema de cambio rápido", "en": "Quick-change interchangeable plates" }, "description": { "es": "", "en": "" } },
+      { "x": 70.4, "y": 49.4, "title": { "es": "Amplio espacio de trabajo", "en": "Wide work area" }, "description": { "es": "", "en": "" } },
+      { "x": 55.3, "y": 87.1, "title": { "es": "Mesa de trabajo con ruedas con freno", "en": "Work table with locking wheels" }, "description": { "es": "", "en": "" } }
     ],
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática, estación de trabajo" },
@@ -2621,6 +2692,14 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "La pantalla táctil GY-13 con 3 memorias y los dos láseres de posicionamiento garantizan que cada prenda salga perfecta. Y cuando el trabajo lo requiere, el modo manual te da control total.", "en": "The GY-13 touch display with 3 memories and the two positioning lasers ensure every garment comes out perfect. And when the job requires it, manual mode gives you total control." },
         "image": "https://beinsen.com/wp-content/uploads/2025/07/miranda-principal.png"
       }
+    ],
+    "hotspots": [
+      { "x": 75.1, "y": 10.4, "title": { "es": "Láser", "en": "Laser" }, "description": { "es": "", "en": "" } },
+      { "x": 26.5, "y": 18.3, "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
+      { "x": 34.3, "y": 24.3, "title": { "es": "Botón de desplazamiento horizontal", "en": "Horizontal slide button" }, "description": { "es": "", "en": "" } },
+      { "x": 32.8, "y": 43.6, "title": { "es": "Platos intercambiables con sistema de cambio rápido", "en": "Interchangeable plates with quick-change system" }, "description": { "es": "", "en": "" } },
+      { "x": 67.6, "y": 47.5, "title": { "es": "Amplio espacio de trabajo", "en": "Wide workspace" }, "description": { "es": "", "en": "" } },
+      { "x": 47.6, "y": 52.9, "title": { "es": "Modo manual / semi", "en": "Manual / semi mode" }, "description": { "es": "", "en": "" } }
     ],
     "downloads": [
       { "label": { "es": "Manual de Usuario Miranda", "en": "Miranda User Manual" }, "url": "/downloads/miranda-manual.pdf" },
@@ -3357,7 +3436,15 @@ const rawPlanchasData: Plancha[] = [
         "Pressure verification and adjustment.",
         "Inspection and cleaning of internal components."
       ]
-    }
+    },
+    "hotspots": [
+      { "x": 52.6, "y": 37.6, "title": { "es": "Apertura automática con electroimán",                      "en": "Automatic opening with electromagnet" },            "description": { "es": "", "en": "" } },
+      { "x": 55.2, "y": 47.9, "title": { "es": "Contador manual de presión",                                "en": "Manual pressure gauge" },                          "description": { "es": "", "en": "" } },
+      { "x": 33.2, "y": 52.6, "title": { "es": "Controlador digital avanzado GY-06",                        "en": "Advanced GY-06 digital controller" },               "description": { "es": "", "en": "" } },
+      { "x": 59.3, "y": 73.9, "title": { "es": "Platos intercambiables con sistema de cambio rápido",       "en": "Interchangeable plates with quick-change system" },  "description": { "es": "", "en": "" } },
+      { "x": 41.9, "y": 81.7, "title": { "es": "Amortiguador neumático",                                     "en": "Pneumatic damper" },                                "description": { "es": "", "en": "" } },
+      { "x": 69.1, "y": 82.2, "title": { "es": "Bandeja deslizable",                                         "en": "Sliding tray" },                                    "description": { "es": "", "en": "" } }
+    ]
   },
   {
     "id": "alaska-plancha-termica-textil",
@@ -3425,44 +3512,28 @@ const rawPlanchasData: Plancha[] = [
     ],
     "benefits": [
       {
-        "title": { "es": "Eléctrica", "en": "Electric" },
-        "description": { "es": "Disfruta de funcionamiento automático eléctrico con una experiencia de uso cómoda y sin complicaciones.", "en": "Enjoy electric automatic operation with a smoother and more convenient user experience." },
-        "icon": "Zap"
+        "title": { "es": "Calor uniforme", "en": "Uniform heat" },
+        "description": { "es": "Hemos mejorado la placa calefactora con una nueva resistencia más avanzada, gruesa y pesada que mejora el reparto de presión y calor. Esta innovación, junto con la alfombrilla de última generación, hace que tu Beinsen Alaska sea más eficiente y económica que nunca.", "en": "We have upgraded the heating plate with a new, more advanced, thicker and heavier element that significantly improves pressure and heat distribution. This innovation, combined with the latest-generation pad, makes your Beinsen Alaska more efficient and economical than ever." },
+        "icon": "Target",
+        "image": "/products/alaska-plancha-termica-textil/02.png"
       },
       {
-        "title": { "es": "Resistencia avanzada", "en": "Advanced heating element" },
-        "description": { "es": "Incorpora una resistencia más avanzada, gruesa y pesada que mejora el reparto de presión y calor para una personalización más precisa.", "en": "Includes a thicker, more advanced heating element that improves pressure and heat distribution for more precise results." },
-        "icon": "Gauge"
+        "title": { "es": "Cómoda y compacta", "en": "Comfortable and compact" },
+        "description": { "es": "Todo pensado para tu comodidad. Aprovecha la bandeja inferior deslizante para colocar la prenda con facilidad gracias al gran espacio de maniobra y luego… nada de palancas… pulsa los botones laterales y tu nueva Beinsen Alaska hará lo suyo. Como tener una plancha neumática pero sin compresor.", "en": "Everything designed for your comfort. Use the sliding lower tray to place garments easily with plenty of maneuvering space — then no levers, just press the side buttons and let the Beinsen Alaska do its job. Like having a pneumatic press but without the compressor." },
+        "icon": "Settings",
+        "image": "/products/alaska-plancha-termica-textil/07.png"
       },
       {
         "title": { "es": "Pantalla táctil", "en": "Touch display" },
         "description": { "es": "El nuevo controlador táctil simplifica la configuración y el control de cada trabajo.", "en": "The new touch controller simplifies setup and job control." },
-        "icon": "MousePointer2"
+        "icon": "MousePointer2",
+        "image": "/products/alaska-plancha-termica-textil/03.png"
       },
       {
-        "title": { "es": "Bandeja deslizable", "en": "Sliding tray" },
-        "description": { "es": "Aprovecha la bandeja inferior deslizante para colocar prendas con mayor espacio de maniobra y total comodidad.", "en": "Use the sliding lower tray for easier garment placement and greater maneuvering space." },
-        "icon": "PanelBottom"
-      },
-      {
-        "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" },
-        "description": { "es": "Incluye protección para trabajar con más seguridad durante jornadas intensivas.", "en": "Includes protective coverage for safer operation during intensive workflows." },
-        "icon": "ShieldCheck"
-      },
-      {
-        "title": { "es": "Calor uniforme", "en": "Uniform heat" },
-        "description": { "es": "La innovación en placa calefactora y alfombrilla de última generación mejora eficiencia, economía y consistencia del resultado.", "en": "The upgraded heat plate and latest-generation pad improve efficiency, economy, and consistency." },
-        "icon": "Target"
-      },
-      {
-        "title": { "es": "Cómoda y compacta", "en": "Comfortable and compact" },
-        "description": { "es": "Coloca prendas con facilidad, pulsa los botones laterales y deja que la Alaska haga su trabajo como una neumática pero sin compresor.", "en": "Place garments easily, press the side buttons, and let Alaska work like a pneumatic unit but without a compressor." },
-        "icon": "Settings"
-      },
-      {
-        "title": { "es": "El poder de tu dedo", "en": "Control at your fingertips" },
-        "description": { "es": "Guarda hasta 3 ajustes de tiempo y temperatura y configura el nivel de presión directamente desde la pantalla.", "en": "Save up to 3 time/temperature presets and configure pressure level directly from the display." },
-        "icon": "Cpu"
+        "title": { "es": "Eléctrica", "en": "Electric" },
+        "description": { "es": "Disfruta de funcionamiento automático eléctrico con una experiencia de uso cómoda y sin complicaciones.", "en": "Enjoy electric automatic operation with a smooth and hassle-free user experience." },
+        "icon": "Zap",
+        "image": "/products/alaska-plancha-termica-textil/06.png"
       }
     ],
     "maintenanceTips": {
@@ -3486,7 +3557,14 @@ const rawPlanchasData: Plancha[] = [
         "Inspection and cleaning of internal components.",
         "Temperature verification and calibration."
       ]
-    }
+    },
+    "hotspots": [
+      { "x": 45.7, "y": 24.5, "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
+      { "x": 54.2, "y": 26.6, "title": { "es": "Bajada automática con botones laterales", "en": "Automatic lowering with side buttons" }, "description": { "es": "", "en": "" } },
+      { "x": 48.9, "y": 42.2, "title": { "es": "Nueva resistencia de alta tecnología", "en": "New high-technology heating element" }, "description": { "es": "", "en": "" } },
+      { "x": 52.1, "y": 57.7, "title": { "es": "Transferencia de imagen más precisa", "en": "More precise image transfer" }, "description": { "es": "", "en": "" } },
+      { "x": 43.6, "y": 71.8, "title": { "es": "Bandeja extraíble", "en": "Removable tray" }, "description": { "es": "", "en": "" } }
+    ]
   },
   {
     "id": "malvinas-plancha-termica-textil",
@@ -3636,7 +3714,18 @@ const rawPlanchasData: Plancha[] = [
         "Inspection and cleaning of internal components.",
         "Temperature verification and calibration."
       ]
-    }
+    },
+    "hotspots": [
+      { "x": 61.8, "y": 14.9, "title": { "es": "Nueva empuñadura con mando auxiliar", "en": "New handle with auxiliary control" }, "description": { "es": "", "en": "" } },
+      { "x": 37.1, "y": 35.3, "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" }, "description": { "es": "", "en": "" } },
+      { "x": 67.7, "y": 36.3, "title": { "es": "Regulador de presión y electroimán reversible", "en": "Pressure regulator and reversible electromagnet" }, "description": { "es": "", "en": "" } },
+      { "x": 65.6, "y": 41,   "title": { "es": "Botón de apagado de emergencia", "en": "Emergency stop button" }, "description": { "es": "", "en": "" } },
+      { "x": 79.4, "y": 45.8, "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
+      { "x": 57.7, "y": 51.8, "title": { "es": "Nueva resistencia de alta tecnología", "en": "New high-technology heating element" }, "description": { "es": "", "en": "" } },
+      { "x": 19.2, "y": 72.8, "title": { "es": "Sistema de platos intercambiables", "en": "Interchangeable plate system" }, "description": { "es": "", "en": "" } },
+      { "x": 18.2, "y": 85.3, "title": { "es": "Bandeja extraíble", "en": "Removable tray" }, "description": { "es": "", "en": "" } },
+      { "x": 36.1, "y": 88.9, "title": { "es": "Espacio extra grande para sudaderas o tejidos gruesos", "en": "Extra large space for hoodies or thick fabrics" }, "description": { "es": "", "en": "" } }
+    ]
   },
   {
     "id": "guyana-plancha-termica-textil",
@@ -3737,6 +3826,13 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Su diseño innovador agiliza el proceso, reduce el tiempo de inactividad y mejora la productividad para trabajar más y mejor.", "en": "Its innovative design speeds up work, reduces downtime, and improves productivity so you can work more and better." },
         "icon": "Gauge"
       }
+    ],
+    "hotspots": [
+      { "x": 61.5, "y": 20.2, "title": { "es": "Sistema de agarre secundario", "en": "Secondary grip system" }, "description": { "es": "", "en": "" } },
+      { "x": 49.1, "y": 31.6, "title": { "es": "Cierre y apertura con electroimán", "en": "Electromagnetic opening and closing" }, "description": { "es": "", "en": "" } },
+      { "x": 41.5, "y": 41.1, "title": { "es": "Controlador digital avanzado GY-06", "en": "Advanced GY-06 digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 69.3, "y": 82.4, "title": { "es": "Bandeja extraíble", "en": "Pull-out tray" }, "description": { "es": "", "en": "" } },
+      { "x": 40.9, "y": 83.6, "title": { "es": "Platos desplazables lateralmente", "en": "Laterally sliding plates" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -3871,6 +3967,13 @@ const rawPlanchasData: Plancha[] = [
         "icon": "ShieldCheck"
       }
     ],
+    "hotspots": [
+      { "x": 56.7, "y": 22.8, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 26.5, "y": 28.7, "title": { "es": "Perilla ajuste de presión", "en": "Pressure adjustment knob" }, "description": { "es": "", "en": "" } },
+      { "x": 19.6, "y": 40.3, "title": { "es": "Sistema de presión preciso", "en": "Precise pressure system" }, "description": { "es": "", "en": "" } },
+      { "x": 72.8, "y": 45.1, "title": { "es": "Botón de emergencia", "en": "Emergency button" }, "description": { "es": "", "en": "" } },
+      { "x": 83.9, "y": 50.8, "title": { "es": "Difusor de calor", "en": "Heat diffuser" }, "description": { "es": "", "en": "" } }
+    ],
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -3979,6 +4082,15 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Ajusta inclinación de bandeja, altura de rodillos, velocidad, presiones y temperaturas. Mueve y gira el controlador hasta 90º y desplaza la estación con su mueble con ruedas.", "en": "Adjust tray angle, roller height, speed, pressure, and temperature; move and rotate the controller up to 90º and reposition the station with its wheeled cabinet." },
         "icon": "Move"
       }
+    ],
+    "hotspots": [
+      { "x": 54.8, "y": 7.2,  "title": { "es": "Regulador de velocidad", "en": "Speed regulator" }, "description": { "es": "", "en": "" } },
+      { "x": 48.6, "y": 12.4, "title": { "es": "Pantalla desplazable", "en": "Sliding display" }, "description": { "es": "", "en": "" } },
+      { "x": 40.3, "y": 28.7, "title": { "es": "Presión ajustable", "en": "Adjustable pressure" }, "description": { "es": "", "en": "" } },
+      { "x": 65.8, "y": 29.4, "title": { "es": "Láser de ayuda al posicionamiento", "en": "Positioning laser guide" }, "description": { "es": "", "en": "" } },
+      { "x": 34.9, "y": 40.0, "title": { "es": "-", "en": "-" }, "description": { "es": "", "en": "" } },
+      { "x": 78.3, "y": 41.1, "title": { "es": "Bandeja de entrada abatible", "en": "Folding input tray" }, "description": { "es": "", "en": "" } },
+      { "x": 13.6, "y": 51.4, "title": { "es": "Bandeja de salida regulable", "en": "Adjustable output tray" }, "description": { "es": "", "en": "" } }
     ]
   },
   {
@@ -4084,6 +4196,14 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Incluye visor de presión, botón de emergencia, ventilador, filtro de aire y reguladores de velocidad para control total.", "en": "Includes pressure viewer, emergency button, fan, air filter, and speed regulators for full control." },
         "icon": "Settings"
       }
+    ],
+    "hotspots": [
+      { "x": 81.7, "y": 9.7,  "title": { "es": "Ventilador", "en": "Fan" }, "description": { "es": "", "en": "" } },
+      { "x": 45.6, "y": 20.8, "title": { "es": "Medidor de presión y botón de emergencia", "en": "Pressure gauge and emergency button" }, "description": { "es": "", "en": "" } },
+      { "x": 81.0, "y": 21.9, "title": { "es": "Regulador de velocidad", "en": "Speed regulator" }, "description": { "es": "", "en": "" } },
+      { "x": 51.1, "y": 27.6, "title": { "es": "Controlador digital GY-06", "en": "GY-06 digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 70.8, "y": 31.1, "title": { "es": "Guías láser de ayuda", "en": "Laser positioning guides" }, "description": { "es": "", "en": "" } },
+      { "x": 97.1, "y": 47.8, "title": { "es": "Filtro de aire", "en": "Air filter" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -4203,6 +4323,16 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Gauge"
       }
     ],
+    "hotspots": [
+      { "x": 36.9, "y": 22.6, "title": { "es": "Botón on/off", "en": "On/Off button" }, "description": { "es": "", "en": "" } },
+      { "x": 58.7, "y": 23.9, "title": { "es": "Filtro de aire", "en": "Air filter" }, "description": { "es": "", "en": "" } },
+      { "x": 41.5, "y": 24.2, "title": { "es": "Botón de emergencia", "en": "Emergency button" }, "description": { "es": "", "en": "" } },
+      { "x": 49.8, "y": 24.3, "title": { "es": "Pantalla digital", "en": "Digital display" }, "description": { "es": "", "en": "" } },
+      { "x": 36.7, "y": 32.0, "title": { "es": "Botón de activación", "en": "Activation button" }, "description": { "es": "", "en": "" } },
+      { "x": 62.7, "y": 53.8, "title": { "es": "Difusor de calor", "en": "Heat diffuser" }, "description": { "es": "", "en": "" } },
+      { "x": 53.1, "y": 67.2, "title": { "es": "Almohadilla", "en": "Pad" }, "description": { "es": "", "en": "" } },
+      { "x": 36.3, "y": 83.6, "title": { "es": "Cajón extraíble", "en": "Sliding drawer" }, "description": { "es": "", "en": "" } }
+    ],
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -4321,6 +4451,16 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Su resistencia está diseñada para mantener estabilidad térmica y rendimiento en jornadas exigentes.", "en": "Its heating element is designed for thermal stability and performance in demanding sessions." },
         "icon": "Gauge"
       }
+    ],
+    "hotspots": [
+      { "x": 41.7, "y": 19.0, "title": { "es": "Botón on/off", "en": "On/Off button" }, "description": { "es": "", "en": "" } },
+      { "x": 36.9, "y": 21.8, "title": { "es": "Filtro de aire", "en": "Air filter" }, "description": { "es": "", "en": "" } },
+      { "x": 58.7, "y": 24.7, "title": { "es": "Botón de emergencia", "en": "Emergency button" }, "description": { "es": "", "en": "" } },
+      { "x": 49.4, "y": 25.0, "title": { "es": "Pantalla digital", "en": "Digital display" }, "description": { "es": "", "en": "" } },
+      { "x": 36.5, "y": 31.5, "title": { "es": "Botón de activación", "en": "Activation button" }, "description": { "es": "", "en": "" } },
+      { "x": 60.2, "y": 54.3, "title": { "es": "Difusor de calor", "en": "Heat diffuser" }, "description": { "es": "", "en": "" } },
+      { "x": 52.9, "y": 66.5, "title": { "es": "Almohadilla", "en": "Pad" }, "description": { "es": "", "en": "" } },
+      { "x": 36.5, "y": 85.4, "title": { "es": "Cajón extraíble", "en": "Sliding drawer" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -4444,28 +4584,6 @@ const rawPlanchasData: Plancha[] = [
         "title": { "es": "Controlador digital GY-04", "en": "GY-04 digital controller" },
         "description": { "es": "Programa temperatura y tiempo con precisión. Con un rango de 0-999 segundos y temperatura máxima de 225°C, tienes el control total sobre cada personalización.", "en": "Program temperature and time precisely. With a 0-999 second range and maximum temperature of 225°C, you have full control over every customization." },
         "icon": "Cpu"
-      }
-    ],
-    "hotspots": [
-      {
-        "x": 55, "y": 20,
-        "title": { "es": "Controlador digital GY-04", "en": "GY-04 Digital Controller" },
-        "description": { "es": "Pantalla digital para configurar tiempo (0-999 seg.) y temperatura (hasta 225°C) con precisión.", "en": "Digital display to configure time (0-999 sec.) and temperature (up to 225°C) precisely." }
-      },
-      {
-        "x": 35, "y": 55,
-        "title": { "es": "Plato intercambiable", "en": "Interchangeable plate" },
-        "description": { "es": "Uno de los 3 platos disponibles. Sistema de intercambio rápido sin herramientas.", "en": "One of the 3 available plates. Quick-change system without tools." }
-      },
-      {
-        "x": 70, "y": 48,
-        "title": { "es": "Placa calefactora", "en": "Heating plate" },
-        "description": { "es": "Distribución de calor uniforme para una transferencia de diseño profesional sobre espinilleras.", "en": "Uniform heat distribution for professional design transfer on shin guards." }
-      },
-      {
-        "x": 20, "y": 70,
-        "title": { "es": "Sistema de intercambio rápido", "en": "Quick-change system" },
-        "description": { "es": "Permite cambiar entre los 3 tamaños de plato (205×171×218 / 114×132×179 / 97×115×115 mm) en segundos.", "en": "Allows switching between the 3 plate sizes (205×171×218 / 114×132×179 / 97×115×115 mm) in seconds." }
       }
     ],
     "downloads": [
