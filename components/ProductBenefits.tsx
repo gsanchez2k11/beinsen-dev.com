@@ -88,7 +88,7 @@ export function ProductBenefits({ benefits, gallery }: ProductBenefitsProps) {
                                         src={blockImage}
                                         alt={typeof title === 'string' ? title : "Benefit"}
                                         fill
-                                        className="object-cover"
+                                        className={benefit.objectFit === "contain" ? "object-contain p-6" : benefit.objectFit === "cover-zoom" ? "object-cover scale-125" : "object-cover"}
                                         sizes="(max-width: 1024px) 100vw, 50vw"
                                     />
                                 ) : (
