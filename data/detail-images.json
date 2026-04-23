@@ -1,0 +1,122 @@
+{
+  "alaska-plancha-termica-textil": {
+    "src": "/detalles-maquinas/alaska-plancha-termica-textil.png",
+    "width": 800,
+    "height": 800
+  },
+  "andra-prensa-automatica-tazas": {
+    "src": "/detalles-maquinas/andra-prensa-automatica-tazas.png",
+    "width": 800,
+    "height": 800
+  },
+  "aruba-plancha-para-tazas": {
+    "src": "/detalles-maquinas/aruba-plancha-para-tazas.png",
+    "width": 577,
+    "height": 433
+  },
+  "barbados-plancha-termica-textil": {
+    "src": "/detalles-maquinas/barbados-plancha-termica-textil.png",
+    "width": 1080,
+    "height": 720
+  },
+  "belice-plancha-termica-textil": {
+    "src": "/detalles-maquinas/belice-plancha-termica-textil.png",
+    "width": 518,
+    "height": 720
+  },
+  "doha-plancha-transfer-gran-formato": {
+    "src": "/detalles-maquinas/doha-plancha-transfer-gran-formato.png",
+    "width": 480,
+    "height": 720
+  },
+  "esparta-prensa-termica-neumatica": {
+    "src": "/detalles-maquinas/esparta-prensa-termica-neumatica.png",
+    "width": 720,
+    "height": 720
+  },
+  "gante-plancha-manual-gorras": {
+    "src": "/detalles-maquinas/gante-plancha-manual-gorras.png",
+    "width": 720,
+    "height": 720
+  },
+  "guyana-plancha-termica-textil": {
+    "src": "/detalles-maquinas/guyana-plancha-termica-textil.png",
+    "width": 1024,
+    "height": 683
+  },
+  "kenia-plancha-termica-textil": {
+    "src": "/detalles-maquinas/kenia-plancha-termica-textil.png",
+    "width": 720,
+    "height": 720
+  },
+  "maine-plancha-para-tazas": {
+    "src": "/detalles-maquinas/maine-plancha-para-tazas.png",
+    "width": 480,
+    "height": 720
+  },
+  "malvinas-plancha-termica-textil": {
+    "src": "/detalles-maquinas/malvinas-plancha-termica-textil.png",
+    "width": 800,
+    "height": 800
+  },
+  "miranda-prensa-termica-automatica-electrica": {
+    "src": "/detalles-maquinas/miranda-prensa-termica-automatica-electrica.png",
+    "width": 720,
+    "height": 720
+  },
+  "normandia-i-plancha-termica-textil": {
+    "src": "/detalles-maquinas/normandia-i-plancha-termica-textil.png",
+    "width": 1066,
+    "height": 720
+  },
+  "normandia-ii-plancha-termica-textil": {
+    "src": "/detalles-maquinas/normandia-ii-plancha-termica-textil.png",
+    "width": 1080,
+    "height": 720
+  },
+  "normandia-iii-plancha-termica-textil": {
+    "src": "/detalles-maquinas/normandia-iii-plancha-termica-textil.png",
+    "width": 1080,
+    "height": 720
+  },
+  "obrei-plancha-gorras-apertura-automatica": {
+    "src": "/detalles-maquinas/obrei-plancha-gorras-apertura-automatica.png",
+    "width": 540,
+    "height": 720
+  },
+  "caen-plancha-neumatica-doble-estacion": {
+    "src": "/detalles-maquinas/caen-plancha-neumatica-doble-estacion.png",
+    "width": 332,
+    "height": 720
+  },
+  "plancha-plana-para-sublimar": {
+    "src": "/detalles-maquinas/plancha-plana-para-sublimar.png",
+    "width": 720,
+    "height": 720
+  },
+  "barein-plancha-termica": {
+    "src": "/detalles-maquinas/barein-plancha-termica.png",
+    "width": 960,
+    "height": 720
+  },
+  "pocola-plancha-transfer-manual-pequena": {
+    "src": "/detalles-maquinas/pocola-plancha-transfer-manual-pequena.png",
+    "width": 720,
+    "height": 720
+  },
+  "sore-plancha-profesional-tazas": {
+    "src": "/detalles-maquinas/sore-plancha-profesional-tazas.png",
+    "width": 1024,
+    "height": 683
+  },
+  "tobago-estacion-planchado-continuo": {
+    "src": "/detalles-maquinas/tobago-estacion-planchado-continuo.png",
+    "width": 1262,
+    "height": 720
+  },
+  "trinidad-prensa-termica-automatica": {
+    "src": "/detalles-maquinas/trinidad-prensa-termica-automatica.png",
+    "width": 720,
+    "height": 720
+  }
+}
