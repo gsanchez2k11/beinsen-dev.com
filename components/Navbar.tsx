@@ -20,9 +20,12 @@ export function Navbar() {
     const { locale } = useLanguage();
 
     const d = {
-        es: { 
-            inicio: "Inicio", 
-            catalogo: "Catálogo", 
+        es: {
+            inicio: "Inicio",
+            catalogo: "Catálogo",
+            asesor: "Asesor",
+            comparar: "Comparar",
+            aprende: "Aprende",
             soporte: "Soporte Técnico",
             machines: "Máquinas Transfer",
             machines_desc: "Soluciones industriales de alta producción.",
@@ -32,9 +35,12 @@ export function Navbar() {
             cons_desc: "Vinilos, teflón y repuestos originales.",
             view_all: "Ver todo el catálogo"
         },
-        en: { 
-            inicio: "Home", 
-            catalogo: "Catalog", 
+        en: {
+            inicio: "Home",
+            catalogo: "Catalog",
+            asesor: "Advisor",
+            comparar: "Compare",
+            aprende: "Learn",
             soporte: "Technical Support",
             machines: "Heat Presses",
             machines_desc: "High production industrial solutions.",
@@ -151,6 +157,27 @@ export function Navbar() {
                         </div>
 
                         <Link
+                            href="/asesor"
+                            className="px-4 py-2 text-sm font-black uppercase tracking-widest text-foreground/70 hover:text-foreground hover:bg-muted/50 rounded-xl transition-all"
+                        >
+                            {d.asesor}
+                        </Link>
+
+                        <Link
+                            href="/comparar"
+                            className="px-4 py-2 text-sm font-black uppercase tracking-widest text-foreground/70 hover:text-foreground hover:bg-muted/50 rounded-xl transition-all"
+                        >
+                            {d.comparar}
+                        </Link>
+
+                        <Link
+                            href="/aprende"
+                            className="px-4 py-2 text-sm font-black uppercase tracking-widest text-foreground/70 hover:text-foreground hover:bg-muted/50 rounded-xl transition-all"
+                        >
+                            {d.aprende}
+                        </Link>
+
+                        <Link
                             href="/soporte"
                             className="px-6 py-2.5 rounded-xl bg-[#FF6600] text-white text-xs font-black uppercase tracking-widest hover:bg-[#cc5200] transition-all shadow-lg shadow-[#FF6600]/20 transform hover:-translate-y-0.5 ml-4"
                         >
@@ -214,8 +241,32 @@ export function Navbar() {
                             </div>
 
                             <Link
+                                href="/asesor"
+                                className="mt-4 px-6 py-5 text-center rounded-2xl border border-border/40 bg-muted/30 text-foreground text-xs font-black uppercase tracking-widest hover:bg-muted"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {d.asesor}
+                            </Link>
+
+                            <Link
+                                href="/comparar"
+                                className="mt-2 px-6 py-5 text-center rounded-2xl border border-border/40 bg-muted/30 text-foreground text-xs font-black uppercase tracking-widest hover:bg-muted"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {d.comparar}
+                            </Link>
+
+                            <Link
+                                href="/aprende"
+                                className="mt-2 px-6 py-5 text-center rounded-2xl border border-border/40 bg-muted/30 text-foreground text-xs font-black uppercase tracking-widest hover:bg-muted"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {d.aprende}
+                            </Link>
+
+                            <Link
                                 href="/soporte"
-                                className="mt-4 px-6 py-5 text-center rounded-2xl bg-[#FF6600] text-white text-xs font-black uppercase tracking-widest"
+                                className="mt-2 px-6 py-5 text-center rounded-2xl bg-[#FF6600] text-white text-xs font-black uppercase tracking-widest"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {d.soporte}

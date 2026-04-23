@@ -133,7 +133,7 @@ export function GlobalSearch() {
                         name: getLocalized(p.name, locale),
                         href: `/planchas/${p.slug}`,
                         icon: <MonitorPlay size={16} className="text-[#FF6600]" />,
-                        price: p.price
+                        price: (p as any).pvp ?? p.price
                     }))
                     .sort((a, b) => (a.name || "").localeCompare(b.name || "", locale)),
             });
@@ -148,7 +148,7 @@ export function GlobalSearch() {
                         name: getLocalized(a.name as any, locale),
                         href: a.slug ? `/planchas/${a.slug}` : "/planchas?type=accessories", 
                         icon: <Settings2 size={16} className="text-[#FF6600]" />,
-                        price: a.price
+                        price: (a as any).pvp ?? a.price
                     }))
                     .sort((a, b) => (a.name || "").localeCompare(b.name || "", locale)),
             });
@@ -160,7 +160,7 @@ export function GlobalSearch() {
                 name: getLocalized(c.name as any, locale),
                 href: c.slug ? `/planchas/${c.slug}` : "/planchas?type=consumables",
                 icon: <MonitorPlay size={16} className="text-[#FF6600]/80" />,
-                price: c.price
+                price: (c as any).pvp ?? c.price
             }));
             
             const accGroup = results.find(r => r.group === d.groupAcc);

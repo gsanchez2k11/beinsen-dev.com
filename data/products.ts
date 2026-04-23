@@ -5,8 +5,11 @@ export interface CompatibleItem {
   id: string;
   name: Localized<string> | string;
   price: number | string;
+  pvp?: number | string;
   image?: string;
   description?: Localized<string> | string;
+  reference?: string;
+  tiendaSublimacionUrl?: string;
 }
 
 export interface Accessory extends CompatibleItem {
@@ -29,8 +32,6 @@ export interface Benefit {
   title: Localized<string> | string;
   description: Localized<string> | string;
   icon: string;
-  image?: string;
-  objectFit?: "cover" | "contain" | "cover-zoom";
 }
 
 export interface Hotspot {
@@ -49,6 +50,9 @@ export interface Plancha {
   heroVideo?: string;
   size: Localized<string> | string;
   price: number | string;
+  pvp?: number | string;
+  reference?: string;
+  tiendaSublimacionUrl?: string;
   category: Localized<string> | string;
   openingType?: Localized<string> | string;
   features: Localized<string[]>;
@@ -69,7 +73,7 @@ export interface Plancha {
 }
 const rawPlanchasData: Plancha[] = [
   {
-    "id": "chinela-plancha-transfer-zapatillas",
+    "id": "plancha-transfer-zapatillas-chinela",
     "name": {
       "es": "Chinela Plancha Térmica Para Zapatillas",
       "en": "Chinela Heat Press For Sneakers",
@@ -84,7 +88,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "https://beinsen.com/wp-content/uploads/2019/11/zapas.jpg",
     "price": "Consultar PVP",
-    "slug": "chinela-plancha-transfer-zapatillas",
+    "slug": "plancha-transfer-zapatillas-chinela",
     "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
       "es": [
@@ -250,21 +254,17 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Control Independiente", "en": "Independent Control" },
         "description": { "es": "Cada resistencia cuenta con su propio controlador digital para máxima versatilidad.", "en": "Each element has its own digital controller for maximum versatility." },
-        "icon": "Settings",
-        "image": "/products/maquinas/sore-plancha-profesional-tazas/06.JPG"
+        "icon": "Settings"
       },
       {
         "title": { "es": "Diseño Ergonómico", "en": "Ergonomic Design" },
         "description": { "es": "Estructura optimizada para un cambio rápido de resistencias y fácil colocación.", "en": "Optimized structure for quick element change and easy placement." },
-        "icon": "MousePointer2",
-        "image": "/products/maquinas/sore-plancha-profesional-tazas/05.JPG"
+        "icon": "MousePointer2"
       }
     ],
     "hotspots": [
-      { "x": 81.1, "y": 22.7, "title": { "es": "Resistencia de alta calidad para tazas entre 11 y 15oz", "en": "High-quality heating element for 11–15oz mugs" }, "description": { "es": "", "en": "" } },
-      { "x": 12.6, "y": 43.3, "title": { "es": "Botones de encendido independientes", "en": "Independent power buttons" }, "description": { "es": "", "en": "" } },
-      { "x": 58.0, "y": 67.6, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 8.9,  "y": 71.9, "title": { "es": "Estructura robusta y duradera", "en": "Robust and durable structure" }, "description": { "es": "", "en": "" } }
+      { "x": 50, "y": 30, "title": { "es": "Resistencias de Alta Densidad", "en": "High-Density Elements" }, "description": { "es": "Distribución de calor uniforme para una sublimación perfecta de borde a borde.", "en": "Uniform heat distribution for perfect edge-to-edge sublimation." } },
+      { "x": 20, "y": 70, "title": { "es": "Controladores Digitales", "en": "Digital Controllers" }, "description": { "es": "Programación precisa de tiempo y temperatura por separado.", "en": "Precise separate time and temperature programming." } }
     ],
     "downloads": [
       { "label": { "es": "Manual de Usuario", "en": "User Manual" }, "url": "/downloads/sore-manual.pdf" },
@@ -292,8 +292,8 @@ const rawPlanchasData: Plancha[] = [
     }
   },
   {
-    "id": "dorian-plancha-termica-platos",
-    "slug": "dorian-plancha-termica-platos",
+    "id": "plancha-termica-dorian-platos",
+    "slug": "plancha-termica-dorian-platos",
     "name": {
       "es": "Dorian prensa térmica para platos",
       "en": "Dorian heat press for plates",
@@ -385,8 +385,8 @@ const rawPlanchasData: Plancha[] = [
     ]
   },
   {
-    "id": "barahona-plancha-para-tazas-6-en-1",
-    "slug": "barahona-plancha-para-tazas-6-en-1",
+    "id": "plancha-termica-para-tazas-4-en-1-alina",
+    "slug": "plancha-para-tazas-6-en-1",
     "name": {
       "es": "Barahona Plancha Térmica Para Tazas 6 en 1",
       "en": "Barahona Mug Heat Press 6-in-1",
@@ -767,22 +767,17 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Producción sin Esfuerzo", "en": "Effortless Production" },
         "description": { "es": "El sistema automático garantiza una presión perfecta sin intervención manual.", "en": "The automatic system ensures perfect pressure without manual intervention." },
-        "icon": "Zap",
-        "image": "/products/maquinas/andra-prensa-automatica-tazas/04.png",
-        "objectFit": "contain"
+        "icon": "Zap"
       },
       {
         "title": { "es": "Despreocúpate", "en": "Worry-free personalization" },
         "description": { "es": "Tú, que conoces mejor que nadie la presión del día a día, mereces que personalizar tus tazas sea algo divertido. Tú sólo pon el tiempo y la temperatura y despreocúpate durante unos segundos aunque sea.", "en": "Set the time and temperature, then let the press handle the cycle so mug personalization feels easier and more enjoyable." },
-        "icon": "Clock",
-        "image": "/products/maquinas/andra-prensa-automatica-tazas/05.png",
-        "objectFit": "contain"
+        "icon": "Clock"
       },
       {
         "title": { "es": "Más fuerte que nunca", "en": "Stronger than ever" },
         "description": { "es": "Esta nueva generación de Beinsen Andra incorpora mejoras en componentes clave como el motor, la resistencia y el botón de reset para ofrecer mayor fiabilidad.", "en": "This new Beinsen Andra generation improves key components such as the motor, heating element, and reset button for greater reliability." },
-        "icon": "ShieldCheck",
-        "image": "/products/maquinas/andra-prensa-automatica-tazas/012.JPG"
+        "icon": "ShieldCheck"
       }
     ],
     "maintenanceTips": {
@@ -806,17 +801,11 @@ const rawPlanchasData: Plancha[] = [
         "Inspection and cleaning of internal components.",
         "Temperature verification and calibration."
       ]
-    },
-    "hotspots": [
-      { "x": 68,   "y": 20,   "title": { "es": "Nuevo botón de reset elegante",          "en": "New elegant reset button" },            "description": { "es": "", "en": "" } },
-      { "x": 27,   "y": 35.9, "title": { "es": "Nueva resistencia más eficaz y duradera", "en": "New more efficient and durable element" }, "description": { "es": "", "en": "" } },
-      { "x": 49.5, "y": 37.4, "title": { "es": "Controlador digital GY05N",               "en": "GY05N digital controller" },             "description": { "es": "", "en": "" } },
-      { "x": 48.6, "y": 52.1, "title": { "es": "Adaptador para tazas de 11 o 15oz",       "en": "Adapter for 11 or 15oz mugs" },           "description": { "es": "", "en": "" } }
-    ]
+    }
   },
   {
-    "id": "caen-plancha-neumatica-doble-estacion",
-    "slug": "caen-plancha-neumatica-doble-estacion",
+    "id": "plancha-neumatica-doble-estacion-caen",
+    "slug": "plancha-neumatica-doble-estacion-caen",
     "name": {
       "es": "Caen estación de trabajo doble neumática",
       "en": "Caen double station pneumatic heat press",
@@ -888,8 +877,7 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Más velocidad, más eficiencia", "en": "More speed, more efficiency" },
         "description": { "es": "Gracias a su doble estación y mecanismo de lanzadera, puedes trabajar en dos artículos al mismo tiempo, duplicando la producción. Su funcionamiento neumático distribuye la presión de manera uniforme y asegura resultados impecables en cada prensado.", "en": "Thanks to its double station and shuttle mechanism, you can work on two items at once, doubling output with uniform pneumatic pressure on every press." },
-        "icon": "Zap",
-        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/07.png"
+        "icon": "Zap"
       },
       {
         "title": { "es": "Precisión digital y posicionamiento perfecto", "en": "Digital precision and perfect positioning" },
@@ -904,23 +892,13 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Construcción robusta", "en": "Robust construction" },
         "description": { "es": "La Beinsen Caén está construida con materiales de alta calidad para uso intensivo e incluye soporte con ruedas para una estación de trabajo estable y práctica.", "en": "Beinsen Caén is built with high-quality materials for intensive use and includes a wheeled stand for a stable, practical workstation." },
-        "icon": "ShieldCheck",
-        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/05.png"
+        "icon": "ShieldCheck"
       },
       {
         "title": { "es": "Ajuste al milímetro", "en": "Millimeter adjustment" },
         "description": { "es": "Ajusta la cruz láser con máxima precisión y reduce errores de colocación para evitar impresiones fuera de lugar.", "en": "Fine-tune the cross laser with high precision and reduce placement errors to avoid off-position prints." },
         "icon": "Ruler"
       }
-    ],
-    "hotspots": [
-      { "x": 48.2, "y": 35.8, "title": { "es": "Cabeza movible", "en": "Movable head" }, "description": { "es": "", "en": "" } },
-      { "x": 54.5, "y": 40.3, "title": { "es": "Pantalla digital", "en": "Digital display" }, "description": { "es": "", "en": "" } },
-      { "x": 68.4, "y": 42.9, "title": { "es": "Botón de activación", "en": "Activation button" }, "description": { "es": "", "en": "" } },
-      { "x": 55.7, "y": 43.6, "title": { "es": "Regulador de presión", "en": "Pressure regulator" }, "description": { "es": "", "en": "" } },
-      { "x": 45.2, "y": 48.5, "title": { "es": "Botón activación láser", "en": "Laser activation button" }, "description": { "es": "", "en": "" } },
-      { "x": 52.7, "y": 51.1, "title": { "es": "Difusor de calor", "en": "Heat diffuser" }, "description": { "es": "", "en": "" } },
-      { "x": 78.3, "y": 53.9, "title": { "es": "Doble plato de 40x50", "en": "Double 40x50 plate" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -1012,33 +990,23 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Sublima gorras y artículos pequeños", "en": "Sublimate caps and small items" },
         "description": { "es": "Gracias a su formato 2 en 1 podrás intercambiar platos y trabajar tanto gorras como artículos pequeños con su plato plano de 15 x 15.", "en": "Its 2-in-1 format lets you swap plates to sublimate both caps and small items using the 15 x 15 flat plate." },
-        "icon": "Zap",
-        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/06.png"
+        "icon": "Zap"
       },
       {
         "title": { "es": "Preparada para todos", "en": "Ready for every workshop" },
         "description": { "es": "La termofijadora Obrei está pensada para talleres con poco espacio, permitiendo sublimar distintos productos sin sacrificar comodidad.", "en": "Obrei is designed for compact workshops, letting you sublimate multiple product types without sacrificing comfort." },
-        "icon": "Layers",
-        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/05.png"
+        "icon": "Layers"
       },
       {
         "title": { "es": "Versátil en múltiples técnicas", "en": "Versatile across transfer methods" },
         "description": { "es": "Nada se te va a resistir: permite realizar métodos comunes de transferencia en caliente (flock, flex, sublimación), además de apoyar trabajos de pedrería, vinilo y transfer.", "en": "Handle common heat transfer methods (flock, flex, sublimation) and support rhinestone, vinyl, and transfer applications." },
-        "icon": "Settings",
-        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/01.JPG"
+        "icon": "Settings"
       },
       {
         "title": { "es": "Control total con apertura automática", "en": "Total control with automatic opening" },
         "description": { "es": "Su apertura y cierre automático te permite trabajar en otro plato mientras se sublima una pieza. Incluye alarma al finalizar el prensado para mantener la cadena de producción sin pausas.", "en": "Automatic opening and closing lets you work on another plate while one item is pressing. An end-cycle alarm keeps production flowing without pauses." },
         "icon": "Clock"
       }
-    ],
-    "hotspots": [
-      { "x": 50.2, "y": 10.6, "title": { "es": "Asa", "en": "Handle" }, "description": { "es": "", "en": "" } },
-      { "x": 49.1, "y": 30.3, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 50.6, "y": 50.7, "title": { "es": "Electroimán", "en": "Electromagnet" }, "description": { "es": "", "en": "" } },
-      { "x": 54.3, "y": 58.6, "title": { "es": "Plato para gorras", "en": "Cap plate" }, "description": { "es": "", "en": "" } },
-      { "x": 50.0, "y": 79.6, "title": { "es": "Base de trabajo", "en": "Work base" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -1124,34 +1092,23 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Electromagnética y preparada para producir", "en": "Electromagnetic and production-ready" },
         "description": { "es": "La Doha integra cierre electromagnético, controlador digital y bandeja extraíble para una operación fluida, precisa y cómoda en trabajos continuos.", "en": "Doha combines electromagnetic closure, digital control, and a pull-out tray for smooth, precise, and comfortable continuous production." },
-        "icon": "Settings",
-        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/05.jpg"
+        "icon": "Settings"
       },
       {
         "title": { "es": "Plato de 80 x 50 cm", "en": "80 x 50 cm platen" },
         "description": { "es": "Su plato de 80 x 50 cm te permite trabajar piezas de mayor tamaño en una sola planchada con acabado profesional.", "en": "Its 80 x 50 cm platen lets you handle larger pieces in a single press with professional finish." },
-        "icon": "Ruler",
-        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/01.jpg"
+        "icon": "Ruler"
       },
       {
         "title": { "es": "Amplía tus límites", "en": "Expand your limits" },
         "description": { "es": "Incluye en tu catálogo camisetas XXL, sudaderas, bolsas, banderas o paneles textiles de una sola planchada, con resultados limpios y consistentes.", "en": "Add XXL shirts, hoodies, bags, flags, or textile panels to your catalog in one press with clean, consistent results." },
-        "icon": "Layers",
-        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/02.jpg"
+        "icon": "Layers"
       },
       {
         "title": { "es": "Confort al máximo", "en": "Maximum comfort" },
         "description": { "es": "La bandeja extraíble, el cierre electromagnético y la empuñadura ergonómica están pensados para que planchar sea más cómodo durante toda la jornada.", "en": "The pull-out tray, electromagnetic closure, and ergonomic handle are designed to keep pressing comfortable throughout the day." },
-        "icon": "Zap",
-        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/09.png"
+        "icon": "Zap"
       }
-    ],
-    "hotspots": [
-      { "x": 58.1, "y": 29.4, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 35.2, "y": 31.7, "title": { "es": "Apertura automática con electroimán", "en": "Automatic opening with electromagnet" }, "description": { "es": "", "en": "" } },
-      { "x": 14.6, "y": 55.4, "title": { "es": "Alfombrilla extra gruesa de algodón reciclado", "en": "Extra thick recycled cotton pad" }, "description": { "es": "", "en": "" } },
-      { "x": 34.4, "y": 70.4, "title": { "es": "Bandeja inferior deslizable", "en": "Sliding lower tray" }, "description": { "es": "", "en": "" } },
-      { "x": 61.9, "y": 74.9, "title": { "es": "Patas con protección de goma", "en": "Rubber-protected feet" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -1177,8 +1134,127 @@ const rawPlanchasData: Plancha[] = [
     }
   },
   {
-    "id": "jamaica-planchas-transfer-multifuncion-para-sublimacion",
-    "slug": "jamaica-planchas-transfer-multifuncion-para-sublimacion",
+    "id": "planchas-termica-para-gorras",
+    "slug": "plancha-plana-para-sublimar",
+    "name": {
+      "es": "Riad Plancha Térmica",
+      "en": "Riad Heat Press",
+      "pt": "Riad Prensa Térmica",
+      "it": "Riad Pressa Termica"
+    },
+    "description": {
+      "es": "¡Marca tu estilo con la plancha térmica Riad de Beinsen! Sumérgete en un mundo de personalización y dale vida a tus creaciones con la compañera perfecta para el éxito. En Beinsen, nos enorgullece ofrecerte más que una simple plancha, nos esforzamos por brindarte una experiencia excepcional respaldada por nuestros valores y la calidad insuperable de nuestros productos.",
+      "en": "Essential tools for personalizing your caps with unique designs. Models designed to fit the cap's curvature.",
+      "pt": "Ferramentas essenciais para personalizar os seus bonés.",
+      "it": "Strumenti essenziali per personalizzare i tuoi cappelli."
+    },
+    "image": "https://beinsen.com/wp-content/uploads/2023/11/Riad-Sin-Fondo-1024x1024.png",
+    "price": "Consultar PVP",
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "features": {
+      "es": [
+        "Planchas diseñadas específicamente para gorras",
+        "Diseño ergonómico para facilitar la colocación",
+        "Resultados profesionales y duraderos"
+      ],
+      "en": [
+        "Presses specifically designed for caps",
+        "Ergonomic design for easy placement",
+        "Professional and durable results"
+      ]
+    },
+    "accessories": [
+      { "id": "termometro-digital-infrarrojos-it122" },
+      { "id": "plato-gorras-beinsen-riad" },
+      { "id": "resistencia-15x20-beinsen-riad" },
+      { "id": "resistencia-gorras-beinsen-riad" },
+      { "id": "plato-15x20-beinsen-riad" },
+      { "id": "almohadilla-teflon-termorresistente-15x15" }
+    ],
+    "consumables": [
+      { "id": "cinta-termica-10mm" }
+    ],
+
+    "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
+    "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
+    "technicalSpecs": [
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Riad" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo sandwich" },
+      { "label": { "es": "Ángulo de apertura", "en": "Opening Angle" }, "value": "45º" },
+      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Manual" },
+      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
+      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Cambiable" },
+      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "15 x 20 cm" },
+      { "label": { "es": "Máximo grosor imprimible", "en": "Maximum Printable Thickness" }, "value": "10 mm" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120 / 220V" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "300W / 500W" },
+      { "label": { "es": "Peso", "en": "Weight" }, "value": "40,5 Kg" },
+      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "28 x 26 x 34 cm" },
+      { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-04" },
+      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
+      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
+      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
+    ],
+    "benefits": [
+      {
+        "title": { "es": "Con Riad, la versatilidad está a tu alcance", "en": "Versatility within reach" },
+        "description": { "es": "Su plato de 15 x 20 cm te permite realizar trabajos pequeños con facilidad y precisión. Además, puedes añadir un toque personal a gorras gracias a su resistencia de 12 x 15 cm especialmente diseñada para ello.", "en": "Its 15 x 20 cm plate helps you handle small jobs with ease and precision, and you can also personalize caps with its dedicated 12 x 15 cm heating element." },
+        "icon": "Layers"
+      },
+      {
+        "title": { "es": "Preparada para todos", "en": "Ready for everyone" },
+        "description": { "es": "Ya sea que estés comenzando en el mundo de la personalización o que busques ampliar tus habilidades, Riad te brinda la solución perfecta para sublimar llaveros, placas, colgantes y más.", "en": "Whether you are just starting or expanding your skills, Riad gives you the perfect solution to sublimate keychains, plates, pendants, and more." },
+        "icon": "Zap"
+      },
+      {
+        "title": { "es": "La herramienta ideal", "en": "The ideal tool" },
+        "description": { "es": "Descubre la calidad y el rendimiento excepcionales de la plancha térmica Beinsen Riad. Da rienda suelta a tu creatividad y confía en Riad para dar vida a tus ideas de personalización.", "en": "Discover the exceptional quality and performance of the Beinsen Riad heat press. Unleash your creativity and bring your personalization ideas to life." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Modo eco y precalentamiento", "en": "Eco mode and preheating" },
+        "description": { "es": "Integra funciones de modo eco y precalentamiento para optimizar tiempos de trabajo y mejorar la eficiencia en cada jornada.", "en": "Includes eco mode and preheating functions to optimize workflow times and improve daily efficiency." },
+        "icon": "Leaf"
+      },
+      {
+        "title": { "es": "Pantalla digital y programable", "en": "Digital and programmable display" },
+        "description": { "es": "La pantalla digital facilita la configuración y su sistema programable te permite repetir ajustes con comodidad en producciones continuas.", "en": "Its digital display simplifies setup, and the programmable system helps you repeat settings in continuous production." },
+        "icon": "Cpu"
+      },
+      {
+        "title": { "es": "Resistencia duradera", "en": "Durable heating element" },
+        "description": { "es": "La resistencia está pensada para ofrecer estabilidad térmica y larga vida útil, manteniendo resultados consistentes en cada planchado.", "en": "The heating element is designed for thermal stability and long lifespan, keeping results consistent in every press." },
+        "icon": "Gauge"
+      },
+      {
+        "title": { "es": "Kit para gorras", "en": "Cap kit included" },
+        "description": { "es": "Los accesorios para gorras son fácilmente intercambiables y además incluye un clip de sujeción para gorras, mejorando estabilidad y acabado.", "en": "Cap accessories are easy to swap and include a cap holding clip, improving stability and finish quality." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Diseño deslizante y controlador digital", "en": "Sliding design with digital control" },
+        "description": { "es": "Riad es una plancha pequeña pensada para quienes disponen de poco espacio. Con su controlador GY-04 podrás manipular la plancha sin grandes complicaciones.", "en": "Riad is a compact press designed for limited spaces. With its GY-04 controller, operation is simple and practical." },
+        "icon": "MoveHorizontal"
+      }
+    ],
+    "maintenanceTips": {
+      "es": [
+        "Limpieza regular de las placas o superficies de sublimación.",
+        "Reemplazo de láminas protectoras o revestimientos.",
+        "Inspección y limpieza de los componentes internos.",
+        "Verificación y calibración de la temperatura."
+      ],
+      "en": [
+        "Regular cleaning of plates or sublimation surfaces.",
+        "Replacement of protective sheets or coatings.",
+        "Inspection and cleaning of internal components.",
+        "Temperature verification and calibration."
+      ]
+    }
+  },
+  {
+    "id": "planchas-transfer-multifuncion-para-sublimacion",
+    "slug": "planchas-transfer-multifuncion-para-sublimacion",
     "name": {
       "es": "Jamaica Plancha Térmica",
       "en": "Jamaica Heat Press",
@@ -1390,26 +1466,22 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Neumática", "en": "Pneumatic" },
         "description": { "es": "El sistema neumático aporta presión uniforme y constante para personalizaciones más precisas y cómodas en tiradas continuas.", "en": "The pneumatic system provides uniform, constant pressure for more precise and comfortable continuous personalization." },
-        "icon": "Wind",
-        "image": "/products/maquinas/esparta-prensa-termica-neumatica/05.jpg"
+        "icon": "Wind"
       },
       {
         "title": { "es": "Bandeja extraíble", "en": "Pull-out tray" },
         "description": { "es": "Facilita la colocación de prendas y mejora el flujo de trabajo para una operación más rápida y segura.", "en": "Makes garment placement easier and improves workflow for faster, safer operation." },
-        "icon": "PanelBottom",
-        "image": "/products/maquinas/esparta-prensa-termica-neumatica/08.png"
+        "icon": "PanelBottom"
       },
       {
         "title": { "es": "Pantalla táctil", "en": "Touch display" },
         "description": { "es": "Todo controlado: configura temperatura y temporizadores de forma intuitiva con su nuevo controlador digital.", "en": "Keep everything under control by setting temperature and timers intuitively with the new digital controller." },
-        "icon": "MousePointer2",
-        "image": "/products/maquinas/esparta-prensa-termica-neumatica/07.png"
+        "icon": "MousePointer2"
       },
       {
         "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
         "description": { "es": "Incluye sistema de intercambio rápido del plato inferior para adaptarse al ritmo de tu producción y reducir tiempos de inactividad.", "en": "Includes a quick-change lower plate system to match production needs and reduce downtime." },
-        "icon": "Layers",
-        "image": "/products/maquinas/esparta-prensa-termica-neumatica/04.png"
+        "icon": "Layers"
       },
       {
         "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" },
@@ -1433,11 +1505,8 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      { "x": 33.2, "y": 18.7, "title": { "es": "Controlador digital GY-08", "en": "GY-08 digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 24.2, "y": 52.6, "title": { "es": "Cubierta anti quemaduras", "en": "Anti-burn cover" }, "description": { "es": "", "en": "" } },
-      { "x": 22.5, "y": 55.4, "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" }, "description": { "es": "", "en": "" } },
-      { "x": 38.6, "y": 67.6, "title": { "es": "Amplio espacio para colocar las prendas", "en": "Wide garment placement area" }, "description": { "es": "", "en": "" } },
-      { "x": 25.7, "y": 78.1, "title": { "es": "Bandeja extraíble con rueda", "en": "Pull-out tray with wheel" }, "description": { "es": "", "en": "" } }
+      { "x": 45, "y": 20, "title": { "es": "Pantalla Táctil", "en": "Touch Screen" }, "description": { "es": "Visualización clara de parámetros y contador de ciclos.", "en": "Clear visualization of parameters and cycle counter." } },
+      { "x": 70, "y": 60, "title": { "es": "Cilindro Neumático", "en": "Pneumatic Cylinder" }, "description": { "es": "Mecánica robusta para una presión uniforme de larga duración.", "en": "Robust mechanics for long-lasting uniform pressure." } }
     ],
     "downloads": [
       { "label": { "es": "Manual Esparta", "en": "Esparta Manual" }, "url": "/downloads/esparta-manual.pdf" }
@@ -1467,7 +1536,7 @@ const rawPlanchasData: Plancha[] = [
   },
   {
     "id": "planchas-transfer-para-tazas-y-platos-descatalogadas",
-    "slug": "barein-plancha-termica",
+    "slug": "plancha-termica-barein",
     "name": {
       "es": "Barein Plancha Térmica",
       "en": "Barein Heat Press",
@@ -1535,14 +1604,12 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "¿Quieres personalizar tus tazas de forma fácil y rápida?", "en": "Customize mugs quickly and easily" },
         "description": { "es": "La plancha térmica Barein es la herramienta que necesitas. Con su resistencia intercambiable para tazas de 11oz y controlador digital GY-10, podrás ajustar la temperatura y el tiempo de forma precisa para cada trabajo.", "en": "Barein is the tool you need. With its interchangeable 11oz mug element and GY-10 digital controller, you can set temperature and time precisely for each job." },
-        "icon": "CupSoda",
-        "image": "/products/maquinas/barein-plancha-termica/04.png"
+        "icon": "CupSoda"
       },
       {
         "title": { "es": "Haz tu vida más sencilla", "en": "Make life easier" },
         "description": { "es": "Podrás cambiar la resistencia a mano sin necesidad de herramientas adicionales, y su estructura soldada de acero sólido garantiza una larga durabilidad.", "en": "You can swap the heating element by hand without extra tools, and its welded solid steel structure ensures long durability." },
-        "icon": "Wrench",
-        "image": "/products/maquinas/barein-plancha-termica/06.png"
+        "icon": "Wrench"
       },
       {
         "title": { "es": "Todo al alcance de tu mano", "en": "Everything at your fingertips" },
@@ -1582,34 +1649,34 @@ const rawPlanchasData: Plancha[] = [
     ],
     "hotspots": [
       {
-        "x": 46.1,
-        "y": 4.6,
-        "title": { "es": "Asa", "en": "Handle" },
-        "description": { "es": "Empuñadura principal para apertura y cierre manual de la plancha.", "en": "Main grip used for manual opening and closing of the press." }
-      },
-      {
-        "x": 37.9,
-        "y": 23.9,
+        "x": 36.8,
+        "y": 36.5,
         "title": { "es": "Ajuste de presión", "en": "Pressure adjustment" },
         "description": { "es": "Perilla para ajustar la presión de trabajo según el tipo de taza y transfer.", "en": "Knob used to adjust working pressure based on mug type and transfer." }
       },
       {
-        "x": 34,
-        "y": 51.9,
+        "x": 44.5,
+        "y": 21.9,
+        "title": { "es": "Asa", "en": "Handle" },
+        "description": { "es": "Empuñadura principal para apertura y cierre manual de la plancha.", "en": "Main grip used for manual opening and closing of the press." }
+      },
+      {
+        "x": 81.2,
+        "y": 62.7,
+        "title": { "es": "Botón ON / OFF", "en": "ON / OFF button" },
+        "description": { "es": "Interruptor principal de encendido y apagado del equipo.", "en": "Main power switch for turning the machine on and off." }
+      },
+      {
+        "x": 34.2,
+        "y": 58.2,
         "title": { "es": "Resistencia", "en": "Heating element" },
         "description": { "es": "Zona calefactora para transferencia térmica sobre tazas.", "en": "Heating zone used for thermal transfer on mugs." }
       },
       {
-        "x": 60.8,
-        "y": 58.5,
+        "x": 57.3,
+        "y": 60.2,
         "title": { "es": "Pantalla digital", "en": "Digital display" },
         "description": { "es": "Pantalla para configurar tiempo y temperatura de trabajo.", "en": "Display used to configure working time and temperature." }
-      },
-      {
-        "x": 86.8,
-        "y": 60.3,
-        "title": { "es": "Botón ON / OFF", "en": "ON / OFF button" },
-        "description": { "es": "Interruptor principal de encendido y apagado del equipo.", "en": "Main power switch for turning the machine on and off." }
       }
     ],
     "maintenanceTips": {
@@ -1699,9 +1766,7 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Control manual", "en": "Manual control" },
         "description": { "es": "Gestiona cada ciclo de personalización con precisión y control total en una operación manual confiable.", "en": "Manage each personalization cycle with precision and full control through reliable manual operation." },
-        "icon": "Settings",
-        "image": "/products/maquinas/maine-plancha-para-tazas/05.png",
-        "objectFit": "contain"
+        "icon": "Settings"
       },
       {
         "title": { "es": "Doble controlador", "en": "Dual controller" },
@@ -1711,9 +1776,7 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Resistencias intercambiables", "en": "Interchangeable elements" },
         "description": { "es": "Cambia resistencias de forma rápida para adaptarte a distintos formatos de taza y vaso según tus pedidos.", "en": "Swap elements quickly to adapt to different mug and cup formats based on your orders." },
-        "icon": "Layers",
-        "image": "/products/maquinas/maine-plancha-para-tazas/06.png",
-        "objectFit": "contain"
+        "icon": "Layers"
       },
       {
         "title": { "es": "Un universo de posibilidades", "en": "A universe of possibilities" },
@@ -1725,12 +1788,6 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Configura temperatura y tiempo con total precisión para mantener resultados consistentes y profesionales en cada lote.", "en": "Set temperature and time with full precision to keep consistent, professional results in every batch." },
         "icon": "Target"
       }
-    ],
-    "hotspots": [
-      { "x": 56.0, "y": 32.1, "title": { "es": "Diseño ergonómico", "en": "Ergonomic design" }, "description": { "es": "", "en": "" } },
-      { "x": 48.3, "y": 42.4, "title": { "es": "Regulación sencilla", "en": "Easy adjustment" }, "description": { "es": "", "en": "" } },
-      { "x": 57.3, "y": 47.4, "title": { "es": "Intercambio fácil de resistencia", "en": "Easy element swap" }, "description": { "es": "", "en": "" } },
-      { "x": 29.0, "y": 51.2, "title": { "es": "Doble controlador digital", "en": "Dual digital controller" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -1823,8 +1880,7 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "La cantidad es importante", "en": "Quantity matters" },
         "description": { "es": "Con 2 estaciones de trabajo independientes, podrás ajustar la plancha al tamaño y forma de cada taza y sublimar una taza y un termo a la vez sin preocupaciones.", "en": "With 2 independent workstations, you can adjust to each size and shape and sublimate a mug and a tumbler at the same time." },
-        "icon": "Layers",
-        "image": "/products/maquinas/aruba-plancha-para-tazas/05.png"
+        "icon": "Layers"
       },
       {
         "title": { "es": "La calidad es imprescindible", "en": "Quality is essential" },
@@ -1852,13 +1908,6 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Settings"
       }
     ],
-    "storySegments": [
-      {
-        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
-        "description": { "es": "Aruba Plancha Para Tazas ha sido diseñada para ofrecer resultados consistentes y alta productividad.", "en": "Aruba Mug Heat Press is designed to deliver consistent results and high productivity." },
-        "image": "/products/maquinas/aruba-plancha-para-tazas/03.png"
-      }
-    ],
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -1872,14 +1921,7 @@ const rawPlanchasData: Plancha[] = [
         "Inspection and cleaning of internal components.",
         "Temperature verification and calibration."
       ]
-    },
-    "hotspots": [
-      { "x": 73.8, "y": 10.4, "title": { "es": "Asa",                                  "en": "Handle" },                               "description": { "es": "", "en": "" } },
-      { "x": 31.5, "y": 18.2, "title": { "es": "Sensor de activación",                  "en": "Activation sensor" },                    "description": { "es": "", "en": "" } },
-      { "x": 52,   "y": 28.9, "title": { "es": "Pantalla digital",                      "en": "Digital display" },                      "description": { "es": "", "en": "" } },
-      { "x": 28.8, "y": 39,   "title": { "es": "Resistencia",                           "en": "Heating element" },                      "description": { "es": "", "en": "" } },
-      { "x": 61,   "y": 87.8, "title": { "es": "Tuercas para ajustar la presión",       "en": "Pressure adjustment knobs" },             "description": { "es": "", "en": "" } }
-    ]
+    }
   },
   {
     "id": "sicilia-plancha-para-tazas",
@@ -2051,7 +2093,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "https://beinsen.com/wp-content/uploads/2025/03/Diseno-sin-titulo-13.png",
     "price": "Consultar PVP",
-    "size": { "es": "Pequeño", "en": "Small", "pt": "Pequeno", "it": "Piccolo" },
+    "size": { "es": "Compacta", "en": "Compact", "pt": "Compacta", "it": "Compatta" },
     "features": {
       "es": [
         "Estructura compacta de grandes resultados",
@@ -2124,12 +2166,6 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Target"
       }
     ],
-    "hotspots": [
-      { "x": 36.1, "y": 33.5, "title": { "es": "Regulador manual de presión", "en": "Manual pressure regulator" }, "description": { "es": "", "en": "" } },
-      { "x": 84.6, "y": 40.3, "title": { "es": "Resorte de gas", "en": "Gas spring" }, "description": { "es": "", "en": "" } },
-      { "x": 58.9, "y": 40.6, "title": { "es": "Controlador digital GY-04", "en": "GY-04 digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 31.8, "y": 43.6, "title": { "es": "Placa calefactora de 15×20 cm", "en": "15×20 cm heating plate" }, "description": { "es": "", "en": "" } }
-    ],
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -2170,7 +2206,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "https://beinsen.com/wp-content/uploads/2025/03/riad.png",
     "price": "Consultar PVP",
-    "size": { "es": "Pequeño", "en": "Small", "pt": "Pequeno", "it": "Piccolo" },
+    "size": { "es": "Compacta", "en": "Compact", "pt": "Compacta", "it": "Compatta" },
     "features": {
       "es": [
         "Plato especial para gorras incluido",
@@ -2216,26 +2252,22 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Ligera", "en": "Lightweight" },
         "description": { "es": "Su diseño ligero facilita el trabajo diario y el transporte en producciones pequeñas o eventos.", "en": "Its lightweight design makes daily operation and transport easier for small productions or events." },
-        "icon": "Feather",
-        "image": "/products/maquinas/gante-plancha-manual-gorras/01.png"
+        "icon": "Feather"
       },
       {
         "title": { "es": "Controlador digital", "en": "Digital controller" },
         "description": { "es": "Configura tiempo y temperatura de forma sencilla con su controlador digital GY-04.", "en": "Set time and temperature easily with its GY-04 digital controller." },
-        "icon": "Cpu",
-        "image": "/products/maquinas/gante-plancha-manual-gorras/02.png"
+        "icon": "Cpu"
       },
       {
         "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
         "description": { "es": "Gracias a sus platos intercambiables podrás adaptar la plancha a distintas aplicaciones según tus necesidades.", "en": "Its interchangeable plates let you adapt the press to different applications as needed." },
-        "icon": "Layers",
-        "image": "/products/maquinas/gante-plancha-manual-gorras/04.png"
+        "icon": "Layers"
       },
       {
         "title": { "es": "Contigo al fin del mundo", "en": "Built to go the distance" },
         "description": { "es": "Nos hemos desprendido de lo supérfluo para conseguir una herramienta sencilla, compacta y económica pero capaz de dar grandes resultados. El plato especial para gorras, junto con el soporte para sujetarlas, te ofrece la herramienta perfecta para iniciarte en esto.", "en": "We removed everything unnecessary to create a simple, compact, and affordable tool that still delivers great results. The special cap plate, together with the cap holder, gives you the perfect setup to get started." },
-        "icon": "Zap",
-        "image": "/products/maquinas/gante-plancha-manual-gorras/03.png"
+        "icon": "Zap"
       },
       {
         "title": { "es": "Precisa y robusta", "en": "Precise and robust" },
@@ -2247,12 +2279,6 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Y si todo lo anterior no es suficiente para ti, solo tienes que añadir a tu Beinsen Gante el kit plano de 15 x 20. Es facilísimo de quitar y poner y su versatilidad te abrirá un nuevo mundo de posibilidades.", "en": "And if all of the above is not enough, simply add the 15 x 20 flat kit to your Beinsen Gante. It is very easy to install and remove, and its versatility opens a new world of possibilities." },
         "icon": "Target"
       }
-    ],
-    "hotspots": [
-      { "x": 42.2, "y": 34.3, "title": { "es": "Regulador manual de presión", "en": "Manual pressure regulator" }, "description": { "es": "", "en": "" } },
-      { "x": 73.9, "y": 43.5, "title": { "es": "Controlador digital GY04", "en": "GY04 digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 55.7, "y": 50.1, "title": { "es": "Resorte de gas", "en": "Gas spring" }, "description": { "es": "", "en": "" } },
-      { "x": 33.6, "y": 53.2, "title": { "es": "Plato especial para gorras", "en": "Special cap plate" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -2360,14 +2386,10 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      { "x": 26.9, "y": 8.9,  "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
-      { "x": 41.9, "y": 13.5, "title": { "es": "Botón de desplazamiento horizontal", "en": "Horizontal displacement button" }, "description": { "es": "", "en": "" } },
-      { "x": 24.7, "y": 14.2, "title": { "es": "Láser de ayuda", "en": "Positioning laser" }, "description": { "es": "", "en": "" } },
-      { "x": 52.8, "y": 14.9, "title": { "es": "Regulador de velocidad de bajada", "en": "Lowering speed regulator" }, "description": { "es": "", "en": "" } },
-      { "x": 22.9, "y": 20.7, "title": { "es": "Controlador digital de desplazamiento", "en": "Digital displacement controller" }, "description": { "es": "", "en": "" } },
-      { "x": 54.4, "y": 42.6, "title": { "es": "Platos intercambiables con sistema de cambio rápido", "en": "Quick-change interchangeable plates" }, "description": { "es": "", "en": "" } },
-      { "x": 70.4, "y": 49.4, "title": { "es": "Amplio espacio de trabajo", "en": "Wide work area" }, "description": { "es": "", "en": "" } },
-      { "x": 55.3, "y": 87.1, "title": { "es": "Mesa de trabajo con ruedas con freno", "en": "Work table with locking wheels" }, "description": { "es": "", "en": "" } }
+      { "x": 38, "y": 12, "title": { "es": "Panel Táctil PLC", "en": "PLC Touch Panel" }, "description": { "es": "Interfaz intuitiva para controlar cada parámetro de producción y memorizar perfiles.", "en": "Intuitive interface to control every production parameter and store profiles." } },
+      { "x": 55, "y": 45, "title": { "es": "Doble Plato 40x50", "en": "Double 40x50 Plate" }, "description": { "es": "Platos rectificados para una distribución de calor perfecta. Permite preparar una prenda mientras la otra se plancha.", "en": "Ground plates for perfect heat distribution. Allows preparing one garment while the other is being pressed." } },
+      { "x": 15, "y": 30, "title": { "es": "Láseres de Cruz", "en": "Cross Lasers" }, "description": { "es": "Guías visuales de alta visibilidad para un registro exacto.", "en": "High-visibility visual guides for exact registration." } },
+      { "x": 80, "y": 60, "title": { "es": "Motorización Silenciosa", "en": "Silent Motorization" }, "description": { "es": "Sistema electromecánico que evita el ruido y mantenimiento de los compresores de aire.", "en": "Electromechanical system that avoids the noise and maintenance of air compressors." } }
     ],
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática, estación de trabajo" },
@@ -2424,11 +2446,7 @@ const rawPlanchasData: Plancha[] = [
         "Check laser alignment quarterly.",
         "Keep the touch panel away from direct moisture."
       ]
-    },
-    "distributors": [
-      { "name": "Beinsen Direct", "url": "https://beinsen.com", "logo": "https://beinsen.com/wp-content/uploads/2023/02/logo-beinsen-1.png" },
-      { "name": "Amazon Business", "url": "https://amazon.es", "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" }
-    ]
+    }
   },
   {
     "id": "miranda-prensa-termica-automatica-electrica",
@@ -2519,20 +2537,17 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "100% eléctrica: di adiós al compresor", "en": "100% electric: say goodbye to the compressor" },
         "description": { "es": "Miranda no necesita compresor de aire. Funciona completamente con electricidad, lo que significa menos ruido, menos mantenimiento y total libertad de instalación en cualquier espacio.", "en": "Miranda needs no air compressor. It runs entirely on electricity — less noise, less maintenance, and total freedom to install it anywhere." },
-        "icon": "Zap",
-        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/05.png"
+        "icon": "Zap"
       },
       {
         "title": { "es": "Funcionamiento totalmente autónomo", "en": "Fully autonomous operation" },
         "description": { "es": "Miranda hace el trabajo duro sola. Se mueve de un plato a otro y completa el proceso de planchado sin intervención. Tú solo colocas la siguiente prenda, con la ayuda de los láseres, y listo.", "en": "Miranda does the hard work on its own. It moves from one plate to the other and completes the pressing cycle without intervention. You just place the next garment — the lasers help you do it perfectly." },
-        "icon": "Bot",
-        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/04.jpg"
+        "icon": "Bot"
       },
       {
         "title": { "es": "Doble plato con cambio rápido: que el ritmo no pare", "en": "Double plate with quick-change: keep the pace going" },
         "description": { "es": "Mientras un plato se plancha, preparas el siguiente. El sistema de intercambio rápido te permite cambiar de plato inferior tan rápido como lo exija tu producción, sin tiempo de inactividad.", "en": "While one plate is pressing, you prepare the next. The quick-change system lets you swap the lower plate as fast as your production demands, with no downtime." },
-        "icon": "Layers",
-        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/05.png"
+        "icon": "Layers"
       },
       {
         "title": { "es": "Láseres de posicionamiento de nueva generación", "en": "Next-generation positioning lasers" },
@@ -2608,14 +2623,6 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "La pantalla táctil GY-13 con 3 memorias y los dos láseres de posicionamiento garantizan que cada prenda salga perfecta. Y cuando el trabajo lo requiere, el modo manual te da control total.", "en": "The GY-13 touch display with 3 memories and the two positioning lasers ensure every garment comes out perfect. And when the job requires it, manual mode gives you total control." },
         "image": "https://beinsen.com/wp-content/uploads/2025/07/miranda-principal.png"
       }
-    ],
-    "hotspots": [
-      { "x": 75.1, "y": 10.4, "title": { "es": "Láser", "en": "Laser" }, "description": { "es": "", "en": "" } },
-      { "x": 26.5, "y": 18.3, "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
-      { "x": 34.3, "y": 24.3, "title": { "es": "Botón de desplazamiento horizontal", "en": "Horizontal slide button" }, "description": { "es": "", "en": "" } },
-      { "x": 32.8, "y": 43.6, "title": { "es": "Platos intercambiables con sistema de cambio rápido", "en": "Interchangeable plates with quick-change system" }, "description": { "es": "", "en": "" } },
-      { "x": 67.6, "y": 47.5, "title": { "es": "Amplio espacio de trabajo", "en": "Wide workspace" }, "description": { "es": "", "en": "" } },
-      { "x": 47.6, "y": 52.9, "title": { "es": "Modo manual / semi", "en": "Manual / semi mode" }, "description": { "es": "", "en": "" } }
     ],
     "downloads": [
       { "label": { "es": "Manual de Usuario Miranda", "en": "Miranda User Manual" }, "url": "/downloads/miranda-manual.pdf" },
@@ -3189,23 +3196,13 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Plancha sin parar", "en": "Press without stopping" },
         "description": { "es": "La simplicidad no significa fragilidad sino todo lo contrario. Con tu nueva plancha transfer Beinsen Belice no querrás dejar de planchar todo lo que se ponga a tu alcance, y gracias a su construcción robusta, además, no tendrás que hacerlo.", "en": "Simplicity does not mean fragility. With your new Beinsen Belice transfer press, robust construction supports continuous pressing jobs." },
-        "icon": "Zap",
-        "image": "/products/maquinas/belice-plancha-termica-textil/03.png",
-        "objectFit": "contain"
+        "icon": "Zap"
       },
       {
         "title": { "es": "Esas pequeñas cosas", "en": "Those little details" },
         "description": { "es": "Tu plancha es una compañera de trabajo de vital importancia para ti. Precisamente por eso necesitas que sea una herramienta cómoda que te permita centrarte en el resto de aspectos de la personalización.", "en": "Your press is a key work companion, so it is designed to be comfortable and let you focus on the rest of the personalization workflow." },
-        "icon": "Settings",
-        "objectFit": "contain"
+        "icon": "Settings"
       }
-    ],
-    "hotspots": [
-      { "x": 41.9, "y": 8.2,  "title": { "es": "Mango ergonómico",                                        "en": "Ergonomic handle" },                                      "description": { "es": "", "en": "" } },
-      { "x": 26.1, "y": 51.5, "title": { "es": "Controlador digital avanzado GY-06",                      "en": "Advanced digital controller GY-06" },                     "description": { "es": "", "en": "" } },
-      { "x": 47.3, "y": 66.9, "title": { "es": "Amplio ángulo de apertura",                               "en": "Wide opening angle" },                                    "description": { "es": "", "en": "" } },
-      { "x": 33.2, "y": 71.5, "title": { "es": "Resorte de gas",                                          "en": "Gas spring" },                                            "description": { "es": "", "en": "" } },
-      { "x": 71.0, "y": 86.3, "title": { "es": "Platos intercambiables con sistema de cambio rápido",    "en": "Interchangeable plates with quick-change system" },        "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -3306,21 +3303,17 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Electromagnética", "en": "Electromagnetic" },
         "description": { "es": "Su sistema electromagnético simplifica la apertura al terminar el ciclo y mejora la experiencia de uso en producción continua.", "en": "Its electromagnetic system simplifies opening at cycle end and improves continuous production workflow." },
-        "icon": "Zap",
-        "image": "/products/maquinas/barbados-plancha-termica-textil/06.png"
+        "icon": "Zap"
       },
       {
         "title": { "es": "Contador de presión", "en": "Pressure counter" },
         "description": { "es": "Aplica presión con mayor precisión gracias al contador manual para repetir configuraciones con seguridad.", "en": "Apply pressure more precisely with the manual counter to repeat settings reliably." },
-        "icon": "Gauge",
-        "image": "/products/maquinas/barbados-plancha-termica-textil/09.png"
+        "icon": "Gauge"
       },
       {
         "title": { "es": "Bandeja extraíble", "en": "Pull-out tray" },
         "description": { "es": "Desliza la bandeja inferior hacia ti y gana espacio para colocar prendas en segundos con mayor comodidad.", "en": "Slide the lower tray toward you to gain space and place garments in seconds more comfortably." },
-        "icon": "PanelBottom",
-        "image": "/products/maquinas/barbados-plancha-termica-textil/010.png",
-        "objectFit": "contain"
+        "icon": "PanelBottom"
       },
       {
         "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
@@ -3366,15 +3359,7 @@ const rawPlanchasData: Plancha[] = [
         "Pressure verification and adjustment.",
         "Inspection and cleaning of internal components."
       ]
-    },
-    "hotspots": [
-      { "x": 52.6, "y": 37.6, "title": { "es": "Apertura automática con electroimán",                      "en": "Automatic opening with electromagnet" },            "description": { "es": "", "en": "" } },
-      { "x": 55.2, "y": 47.9, "title": { "es": "Contador manual de presión",                                "en": "Manual pressure gauge" },                          "description": { "es": "", "en": "" } },
-      { "x": 33.2, "y": 52.6, "title": { "es": "Controlador digital avanzado GY-06",                        "en": "Advanced GY-06 digital controller" },               "description": { "es": "", "en": "" } },
-      { "x": 59.3, "y": 73.9, "title": { "es": "Platos intercambiables con sistema de cambio rápido",       "en": "Interchangeable plates with quick-change system" },  "description": { "es": "", "en": "" } },
-      { "x": 41.9, "y": 81.7, "title": { "es": "Amortiguador neumático",                                     "en": "Pneumatic damper" },                                "description": { "es": "", "en": "" } },
-      { "x": 69.1, "y": 82.2, "title": { "es": "Bandeja deslizable",                                         "en": "Sliding tray" },                                    "description": { "es": "", "en": "" } }
-    ]
+    }
   },
   {
     "id": "alaska-plancha-termica-textil",
@@ -3442,28 +3427,44 @@ const rawPlanchasData: Plancha[] = [
     ],
     "benefits": [
       {
-        "title": { "es": "Calor uniforme", "en": "Uniform heat" },
-        "description": { "es": "Hemos mejorado la placa calefactora con una nueva resistencia más avanzada, gruesa y pesada que mejora el reparto de presión y calor. Esta innovación, junto con la alfombrilla de última generación, hace que tu Beinsen Alaska sea más eficiente y económica que nunca.", "en": "We have upgraded the heating plate with a new, more advanced, thicker and heavier element that significantly improves pressure and heat distribution. This innovation, combined with the latest-generation pad, makes your Beinsen Alaska more efficient and economical than ever." },
-        "icon": "Target",
-        "image": "/products/maquinas/alaska-plancha-termica-textil/02.png"
+        "title": { "es": "Eléctrica", "en": "Electric" },
+        "description": { "es": "Disfruta de funcionamiento automático eléctrico con una experiencia de uso cómoda y sin complicaciones.", "en": "Enjoy electric automatic operation with a smoother and more convenient user experience." },
+        "icon": "Zap"
       },
       {
-        "title": { "es": "Cómoda y compacta", "en": "Comfortable and compact" },
-        "description": { "es": "Todo pensado para tu comodidad. Aprovecha la bandeja inferior deslizante para colocar la prenda con facilidad gracias al gran espacio de maniobra y luego… nada de palancas… pulsa los botones laterales y tu nueva Beinsen Alaska hará lo suyo. Como tener una plancha neumática pero sin compresor.", "en": "Everything designed for your comfort. Use the sliding lower tray to place garments easily with plenty of maneuvering space — then no levers, just press the side buttons and let the Beinsen Alaska do its job. Like having a pneumatic press but without the compressor." },
-        "icon": "Settings",
-        "image": "/products/maquinas/alaska-plancha-termica-textil/07.png"
+        "title": { "es": "Resistencia avanzada", "en": "Advanced heating element" },
+        "description": { "es": "Incorpora una resistencia más avanzada, gruesa y pesada que mejora el reparto de presión y calor para una personalización más precisa.", "en": "Includes a thicker, more advanced heating element that improves pressure and heat distribution for more precise results." },
+        "icon": "Gauge"
       },
       {
         "title": { "es": "Pantalla táctil", "en": "Touch display" },
         "description": { "es": "El nuevo controlador táctil simplifica la configuración y el control de cada trabajo.", "en": "The new touch controller simplifies setup and job control." },
-        "icon": "MousePointer2",
-        "image": "/products/maquinas/alaska-plancha-termica-textil/03.png"
+        "icon": "MousePointer2"
       },
       {
-        "title": { "es": "Eléctrica", "en": "Electric" },
-        "description": { "es": "Disfruta de funcionamiento automático eléctrico con una experiencia de uso cómoda y sin complicaciones.", "en": "Enjoy electric automatic operation with a smooth and hassle-free user experience." },
-        "icon": "Zap",
-        "image": "/products/maquinas/alaska-plancha-termica-textil/06.png"
+        "title": { "es": "Bandeja deslizable", "en": "Sliding tray" },
+        "description": { "es": "Aprovecha la bandeja inferior deslizante para colocar prendas con mayor espacio de maniobra y total comodidad.", "en": "Use the sliding lower tray for easier garment placement and greater maneuvering space." },
+        "icon": "PanelBottom"
+      },
+      {
+        "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" },
+        "description": { "es": "Incluye protección para trabajar con más seguridad durante jornadas intensivas.", "en": "Includes protective coverage for safer operation during intensive workflows." },
+        "icon": "ShieldCheck"
+      },
+      {
+        "title": { "es": "Calor uniforme", "en": "Uniform heat" },
+        "description": { "es": "La innovación en placa calefactora y alfombrilla de última generación mejora eficiencia, economía y consistencia del resultado.", "en": "The upgraded heat plate and latest-generation pad improve efficiency, economy, and consistency." },
+        "icon": "Target"
+      },
+      {
+        "title": { "es": "Cómoda y compacta", "en": "Comfortable and compact" },
+        "description": { "es": "Coloca prendas con facilidad, pulsa los botones laterales y deja que la Alaska haga su trabajo como una neumática pero sin compresor.", "en": "Place garments easily, press the side buttons, and let Alaska work like a pneumatic unit but without a compressor." },
+        "icon": "Settings"
+      },
+      {
+        "title": { "es": "El poder de tu dedo", "en": "Control at your fingertips" },
+        "description": { "es": "Guarda hasta 3 ajustes de tiempo y temperatura y configura el nivel de presión directamente desde la pantalla.", "en": "Save up to 3 time/temperature presets and configure pressure level directly from the display." },
+        "icon": "Cpu"
       }
     ],
     "maintenanceTips": {
@@ -3487,14 +3488,7 @@ const rawPlanchasData: Plancha[] = [
         "Inspection and cleaning of internal components.",
         "Temperature verification and calibration."
       ]
-    },
-    "hotspots": [
-      { "x": 45.7, "y": 24.5, "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
-      { "x": 54.2, "y": 26.6, "title": { "es": "Bajada automática con botones laterales", "en": "Automatic lowering with side buttons" }, "description": { "es": "", "en": "" } },
-      { "x": 48.9, "y": 42.2, "title": { "es": "Nueva resistencia de alta tecnología", "en": "New high-technology heating element" }, "description": { "es": "", "en": "" } },
-      { "x": 52.1, "y": 57.7, "title": { "es": "Transferencia de imagen más precisa", "en": "More precise image transfer" }, "description": { "es": "", "en": "" } },
-      { "x": 43.6, "y": 71.8, "title": { "es": "Bandeja extraíble", "en": "Removable tray" }, "description": { "es": "", "en": "" } }
-    ]
+    }
   },
   {
     "id": "malvinas-plancha-termica-textil",
@@ -3644,18 +3638,7 @@ const rawPlanchasData: Plancha[] = [
         "Inspection and cleaning of internal components.",
         "Temperature verification and calibration."
       ]
-    },
-    "hotspots": [
-      { "x": 61.8, "y": 14.9, "title": { "es": "Nueva empuñadura con mando auxiliar", "en": "New handle with auxiliary control" }, "description": { "es": "", "en": "" } },
-      { "x": 37.1, "y": 35.3, "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" }, "description": { "es": "", "en": "" } },
-      { "x": 67.7, "y": 36.3, "title": { "es": "Regulador de presión y electroimán reversible", "en": "Pressure regulator and reversible electromagnet" }, "description": { "es": "", "en": "" } },
-      { "x": 65.6, "y": 41,   "title": { "es": "Botón de apagado de emergencia", "en": "Emergency stop button" }, "description": { "es": "", "en": "" } },
-      { "x": 79.4, "y": 45.8, "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
-      { "x": 57.7, "y": 51.8, "title": { "es": "Nueva resistencia de alta tecnología", "en": "New high-technology heating element" }, "description": { "es": "", "en": "" } },
-      { "x": 19.2, "y": 72.8, "title": { "es": "Sistema de platos intercambiables", "en": "Interchangeable plate system" }, "description": { "es": "", "en": "" } },
-      { "x": 18.2, "y": 85.3, "title": { "es": "Bandeja extraíble", "en": "Removable tray" }, "description": { "es": "", "en": "" } },
-      { "x": 36.1, "y": 88.9, "title": { "es": "Espacio extra grande para sudaderas o tejidos gruesos", "en": "Extra large space for hoodies or thick fabrics" }, "description": { "es": "", "en": "" } }
-    ]
+    }
   },
   {
     "id": "guyana-plancha-termica-textil",
@@ -3719,8 +3702,7 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Electromagnética", "en": "Electromagnetic" },
         "description": { "es": "Integra sistema electromagnético para facilitar la operación y mantener ritmo de trabajo constante.", "en": "Includes an electromagnetic system to simplify operation and maintain consistent workflow pace." },
-        "icon": "Zap",
-        "image": "/products/maquinas/guyana-plancha-termica-textil/04.png"
+        "icon": "Zap"
       },
       {
         "title": { "es": "Modo manual/auto", "en": "Manual/auto mode" },
@@ -3730,14 +3712,12 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Controlador digital", "en": "Digital controller" },
         "description": { "es": "Controla tiempo y temperatura con precisión para repetir resultados de forma fiable.", "en": "Control time and temperature precisely for reliable repeatable results." },
-        "icon": "Cpu",
-        "image": "/products/maquinas/guyana-plancha-termica-textil/05.JPG"
+        "icon": "Cpu"
       },
       {
         "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
         "description": { "es": "El sistema de intercambio rápido para el plato inferior reduce tiempos de inactividad y agiliza cambios de trabajo.", "en": "The quick lower plate exchange system reduces downtime and speeds up job changes." },
-        "icon": "Layers",
-        "image": "/products/maquinas/guyana-plancha-termica-textil/01.png"
+        "icon": "Layers"
       },
       {
         "title": { "es": "Doble plato", "en": "Double plate" },
@@ -3759,13 +3739,6 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Su diseño innovador agiliza el proceso, reduce el tiempo de inactividad y mejora la productividad para trabajar más y mejor.", "en": "Its innovative design speeds up work, reduces downtime, and improves productivity so you can work more and better." },
         "icon": "Gauge"
       }
-    ],
-    "hotspots": [
-      { "x": 61.5, "y": 20.2, "title": { "es": "Sistema de agarre secundario", "en": "Secondary grip system" }, "description": { "es": "", "en": "" } },
-      { "x": 49.1, "y": 31.6, "title": { "es": "Cierre y apertura con electroimán", "en": "Electromagnetic opening and closing" }, "description": { "es": "", "en": "" } },
-      { "x": 41.5, "y": 41.1, "title": { "es": "Controlador digital avanzado GY-06", "en": "Advanced GY-06 digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 69.3, "y": 82.4, "title": { "es": "Bandeja extraíble", "en": "Pull-out tray" }, "description": { "es": "", "en": "" } },
-      { "x": 40.9, "y": 83.6, "title": { "es": "Platos desplazables lateralmente", "en": "Laterally sliding plates" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -3857,8 +3830,7 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Una máquina para sublimar polivalente", "en": "A versatile sublimation machine" },
         "description": { "es": "Con nuestra plancha térmica Kenia, diseñada especialmente para la sublimación de objetos de formas y dimensiones variadas, obtendrás resultados profesionales y duraderos.", "en": "With our Kenia heat press, specially designed for objects with varied shapes and dimensions, you get durable professional results." },
-        "icon": "Layers",
-        "objectFit": "contain"
+        "icon": "Layers"
       },
       {
         "title": { "es": "Una plancha con un diseño único", "en": "A press with unique design" },
@@ -3868,8 +3840,7 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Rodillo para lanyards", "en": "Lanyard roller" },
         "description": { "es": "Hemos desarrollado un rodillo especializado para cintas que facilita la elaboración de lanyards de forma casi automática, más rápida y uniforme.", "en": "We developed a specialized ribbon roller for near-automatic lanyard production, faster and more uniform." },
-        "icon": "RotateCw",
-        "image": "/products/maquinas/kenia-plancha-termica-textil/05.png"
+        "icon": "RotateCw"
       },
       {
         "title": { "es": "Modo eco y precalentamiento", "en": "Eco mode and preheating" },
@@ -3901,13 +3872,6 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "El plato inferior está cubierto con una almohadilla de silicona de alta calidad para un contacto fiable y constante.", "en": "The lower plate is covered with high-quality silicone padding for reliable, consistent contact." },
         "icon": "ShieldCheck"
       }
-    ],
-    "hotspots": [
-      { "x": 56.7, "y": 22.8, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 26.5, "y": 28.7, "title": { "es": "Perilla ajuste de presión", "en": "Pressure adjustment knob" }, "description": { "es": "", "en": "" } },
-      { "x": 19.6, "y": 40.3, "title": { "es": "Sistema de presión preciso", "en": "Precise pressure system" }, "description": { "es": "", "en": "" } },
-      { "x": 72.8, "y": 45.1, "title": { "es": "Botón de emergencia", "en": "Emergency button" }, "description": { "es": "", "en": "" } },
-      { "x": 83.9, "y": 50.8, "title": { "es": "Difusor de calor", "en": "Heat diffuser" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -3990,8 +3954,7 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Controlador digital", "en": "Digital controller" },
         "description": { "es": "Controla temperaturas, velocidades y presiones de forma directa desde su controlador digital.", "en": "Control temperature, speed, and pressure directly from its digital controller." },
-        "icon": "Cpu",
-        "image": "/products/maquinas/tobago-estacion-planchado-continuo/04.png"
+        "icon": "Cpu"
       },
       {
         "title": { "es": "Platos intercambiables", "en": "Interchangeable plates" },
@@ -4018,15 +3981,6 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Ajusta inclinación de bandeja, altura de rodillos, velocidad, presiones y temperaturas. Mueve y gira el controlador hasta 90º y desplaza la estación con su mueble con ruedas.", "en": "Adjust tray angle, roller height, speed, pressure, and temperature; move and rotate the controller up to 90º and reposition the station with its wheeled cabinet." },
         "icon": "Move"
       }
-    ],
-    "hotspots": [
-      { "x": 54.8, "y": 7.2,  "title": { "es": "Regulador de velocidad", "en": "Speed regulator" }, "description": { "es": "", "en": "" } },
-      { "x": 48.6, "y": 12.4, "title": { "es": "Pantalla desplazable", "en": "Sliding display" }, "description": { "es": "", "en": "" } },
-      { "x": 40.3, "y": 28.7, "title": { "es": "Presión ajustable", "en": "Adjustable pressure" }, "description": { "es": "", "en": "" } },
-      { "x": 65.8, "y": 29.4, "title": { "es": "Láser de ayuda al posicionamiento", "en": "Positioning laser guide" }, "description": { "es": "", "en": "" } },
-      { "x": 34.9, "y": 40.0, "title": { "es": "-", "en": "-" }, "description": { "es": "", "en": "" } },
-      { "x": 78.3, "y": 41.1, "title": { "es": "Bandeja de entrada abatible", "en": "Folding input tray" }, "description": { "es": "", "en": "" } },
-      { "x": 13.6, "y": 51.4, "title": { "es": "Bandeja de salida regulable", "en": "Adjustable output tray" }, "description": { "es": "", "en": "" } }
     ]
   },
   {
@@ -4100,26 +4054,22 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Neumática", "en": "Pneumatic" },
         "description": { "es": "Aporta una presión constante y uniforme para personalizaciones precisas en series continuas.", "en": "Delivers constant, even pressure for precise personalization in continuous runs." },
-        "icon": "Wind",
-        "image": "/products/maquinas/normandia-i-plancha-termica-textil/03.png"
+        "icon": "Wind"
       },
       {
         "title": { "es": "Doble plato", "en": "Double plate" },
         "description": { "es": "Su doble plato de gran tamaño multiplica el ritmo de producción sin perder precisión.", "en": "Its large double-plate setup multiplies production pace without sacrificing precision." },
-        "icon": "Layers",
-        "image": "/products/maquinas/normandia-i-plancha-termica-textil/02.png"
+        "icon": "Layers"
       },
       {
         "title": { "es": "Controlador digital", "en": "Digital controller" },
         "description": { "es": "Controla tiempos y temperatura de forma fácil e intuitiva con su display GY-06.", "en": "Control timing and temperature easily and intuitively with its GY-06 display." },
-        "icon": "Cpu",
-        "image": "/products/maquinas/normandia-i-plancha-termica-textil/04.png"
+        "icon": "Cpu"
       },
       {
         "title": { "es": "Guías láser", "en": "Laser guides" },
         "description": { "es": "Ajusta la cruz del láser al milímetro y evita impresiones fuera de lugar.", "en": "Set the laser crosshair with millimeter precision and avoid off-position prints." },
-        "icon": "Target",
-        "image": "/products/maquinas/normandia-i-plancha-termica-textil/05.png"
+        "icon": "Target"
       },
       {
         "title": { "es": "Tan compacta como versátil", "en": "Compact yet versatile" },
@@ -4136,14 +4086,6 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Incluye visor de presión, botón de emergencia, ventilador, filtro de aire y reguladores de velocidad para control total.", "en": "Includes pressure viewer, emergency button, fan, air filter, and speed regulators for full control." },
         "icon": "Settings"
       }
-    ],
-    "hotspots": [
-      { "x": 81.7, "y": 9.7,  "title": { "es": "Ventilador", "en": "Fan" }, "description": { "es": "", "en": "" } },
-      { "x": 45.6, "y": 20.8, "title": { "es": "Medidor de presión y botón de emergencia", "en": "Pressure gauge and emergency button" }, "description": { "es": "", "en": "" } },
-      { "x": 81.0, "y": 21.9, "title": { "es": "Regulador de velocidad", "en": "Speed regulator" }, "description": { "es": "", "en": "" } },
-      { "x": 51.1, "y": 27.6, "title": { "es": "Controlador digital GY-06", "en": "GY-06 digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 70.8, "y": 31.1, "title": { "es": "Guías láser de ayuda", "en": "Laser positioning guides" }, "description": { "es": "", "en": "" } },
-      { "x": 97.1, "y": 47.8, "title": { "es": "Filtro de aire", "en": "Air filter" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -4262,16 +4204,6 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Su resistencia está diseñada para soportar jornadas intensivas con estabilidad térmica y alto rendimiento.", "en": "Its heating element is built for intensive schedules with thermal stability and high output." },
         "icon": "Gauge"
       }
-    ],
-    "hotspots": [
-      { "x": 36.9, "y": 22.6, "title": { "es": "Botón on/off", "en": "On/Off button" }, "description": { "es": "", "en": "" } },
-      { "x": 58.7, "y": 23.9, "title": { "es": "Filtro de aire", "en": "Air filter" }, "description": { "es": "", "en": "" } },
-      { "x": 41.5, "y": 24.2, "title": { "es": "Botón de emergencia", "en": "Emergency button" }, "description": { "es": "", "en": "" } },
-      { "x": 49.8, "y": 24.3, "title": { "es": "Pantalla digital", "en": "Digital display" }, "description": { "es": "", "en": "" } },
-      { "x": 36.7, "y": 32.0, "title": { "es": "Botón de activación", "en": "Activation button" }, "description": { "es": "", "en": "" } },
-      { "x": 62.7, "y": 53.8, "title": { "es": "Difusor de calor", "en": "Heat diffuser" }, "description": { "es": "", "en": "" } },
-      { "x": 53.1, "y": 67.2, "title": { "es": "Almohadilla", "en": "Pad" }, "description": { "es": "", "en": "" } },
-      { "x": 36.3, "y": 83.6, "title": { "es": "Cajón extraíble", "en": "Sliding drawer" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -4392,16 +4324,6 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Gauge"
       }
     ],
-    "hotspots": [
-      { "x": 41.7, "y": 19.0, "title": { "es": "Botón on/off", "en": "On/Off button" }, "description": { "es": "", "en": "" } },
-      { "x": 36.9, "y": 21.8, "title": { "es": "Filtro de aire", "en": "Air filter" }, "description": { "es": "", "en": "" } },
-      { "x": 58.7, "y": 24.7, "title": { "es": "Botón de emergencia", "en": "Emergency button" }, "description": { "es": "", "en": "" } },
-      { "x": 49.4, "y": 25.0, "title": { "es": "Pantalla digital", "en": "Digital display" }, "description": { "es": "", "en": "" } },
-      { "x": 36.5, "y": 31.5, "title": { "es": "Botón de activación", "en": "Activation button" }, "description": { "es": "", "en": "" } },
-      { "x": 60.2, "y": 54.3, "title": { "es": "Difusor de calor", "en": "Heat diffuser" }, "description": { "es": "", "en": "" } },
-      { "x": 52.9, "y": 66.5, "title": { "es": "Almohadilla", "en": "Pad" }, "description": { "es": "", "en": "" } },
-      { "x": 36.5, "y": 85.4, "title": { "es": "Cajón extraíble", "en": "Sliding drawer" }, "description": { "es": "", "en": "" } }
-    ],
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -4442,7 +4364,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "https://beinsen.com/wp-content/uploads/2025/07/Diseno-sin-titulo.webp",
     "price": "Consultar PVP",
-    "size": { "es": "Pequeño", "en": "Small", "pt": "Pequeno", "it": "Piccolo" },
+    "size": { "es": "Compacta", "en": "Compact", "pt": "Compacta", "it": "Compatta" },
     "features": {
       "es": [
         "3 platos intercambiables: 205×171×218 mm / 114×132×179 mm / 97×115×115 mm",
@@ -4526,6 +4448,28 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Cpu"
       }
     ],
+    "hotspots": [
+      {
+        "x": 55, "y": 20,
+        "title": { "es": "Controlador digital GY-04", "en": "GY-04 Digital Controller" },
+        "description": { "es": "Pantalla digital para configurar tiempo (0-999 seg.) y temperatura (hasta 225°C) con precisión.", "en": "Digital display to configure time (0-999 sec.) and temperature (up to 225°C) precisely." }
+      },
+      {
+        "x": 35, "y": 55,
+        "title": { "es": "Plato intercambiable", "en": "Interchangeable plate" },
+        "description": { "es": "Uno de los 3 platos disponibles. Sistema de intercambio rápido sin herramientas.", "en": "One of the 3 available plates. Quick-change system without tools." }
+      },
+      {
+        "x": 70, "y": 48,
+        "title": { "es": "Placa calefactora", "en": "Heating plate" },
+        "description": { "es": "Distribución de calor uniforme para una transferencia de diseño profesional sobre espinilleras.", "en": "Uniform heat distribution for professional design transfer on shin guards." }
+      },
+      {
+        "x": 20, "y": 70,
+        "title": { "es": "Sistema de intercambio rápido", "en": "Quick-change system" },
+        "description": { "es": "Permite cambiar entre los 3 tamaños de plato (205×171×218 / 114×132×179 / 97×115×115 mm) en segundos.", "en": "Allows switching between the 3 plate sizes (205×171×218 / 114×132×179 / 97×115×115 mm) in seconds." }
+      }
+    ],
     "downloads": [
       { "label": { "es": "Manual de Usuario Estambul", "en": "Estambul User Manual" }, "url": "/downloads/estambul-manual.pdf" },
       { "label": { "es": "Ficha Técnica Estambul", "en": "Estambul Technical Sheet" }, "url": "/downloads/estambul-ficha-tecnica.pdf" }
@@ -4566,7 +4510,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "https://beinsen.com/wp-content/uploads/2024/01/felina-beinsen.png",
     "price": "Consultar PVP",
-    "size": { "es": "40×50 cm / 40×60 cm", "en": "40×50 cm / 40×60 cm", "pt": "40×50 cm / 40×60 cm", "it": "40×50 cm / 40×60 cm" },
+    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
     "features": {
       "es": [
         "Apertura giratoria swing-away 180° con base de cambio rápido y deslizamiento",
@@ -4715,10 +4659,6 @@ const rawPlanchasData: Plancha[] = [
   }
 ];
 
-const DEFAULT_DISTRIBUTORS = [
-  { name: "Beinsen Direct", url: "https://beinsen.com", logo: "https://beinsen.com/wp-content/uploads/2023/02/logo-beinsen-1.png" }
-];
-
 function uniqueStrings(values: string[]): string[] {
   return Array.from(new Set(values.filter(Boolean)));
 }
@@ -4799,7 +4739,7 @@ function enrichPlancha(plancha: Plancha): Plancha {
     downloads: plancha.downloads && plancha.downloads.length > 0 ? plancha.downloads : defaultDownloads,
     storySegments: plancha.storySegments && plancha.storySegments.length > 0 ? plancha.storySegments : defaultStorySegments,
     maintenanceTips: plancha.maintenanceTips || defaultMaintenanceTips,
-    distributors: plancha.distributors && plancha.distributors.length > 0 ? plancha.distributors : DEFAULT_DISTRIBUTORS
+    distributors: plancha.distributors
   };
 }
 
@@ -4820,6 +4760,7 @@ const rawAccessoriesData: Accessory[] = [
     description: { es: "Diodo láser de alta visibilidad para repuesto.", en: "High-visibility laser diode for replacement." }
   },
   {
+    "reference": "BPLAN159",
     id: "plato-resistencia-combo-38x38",
     slug: "plato-resistencia-combo-38x38",
     name: {
@@ -4839,11 +4780,11 @@ const rawAccessoriesData: Accessory[] = [
     technicalSpecs: [
       { label: { es: "Compatibilidad", en: "Compatibility", pt: "Compatibilidade", it: "Compatibilità" }, value: "Planchas Combo Beinsen 1ªGen (38x38)" },
       { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "38 x 38 cm" },
-      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Aluminio fundido" },
-      { label: { es: "P/N", en: "P/N", pt: "P/N", it: "P/N" }, value: "BPLAN159" }
+      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Aluminio fundido" }
     ]
   },
   {
+    "reference": "PLAACCA38",
     id: "almohadilla-silicona-38x38",
     slug: "almohadilla-silicona-38x38",
     name: {
@@ -4864,8 +4805,7 @@ const rawAccessoriesData: Accessory[] = [
       { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Silicona de grado industrial / Industrial grade silicone" },
       { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "38 x 38 cm" },
       { label: { es: "Espesor", en: "Thickness", pt: "Espessura", it: "Spessore" }, value: "10 mm" },
-      { label: { es: "Temperatura máxima", en: "Maximum Temperature", pt: "Temperatura máxima", it: "Temperatura massima" }, value: "220ºC" },
-      { label: { es: "P/N", en: "P/N", pt: "P/N", it: "P/N" }, value: "PLAACCA38" }
+      { label: { es: "Temperatura máxima", en: "Maximum Temperature", pt: "Temperatura máxima", it: "Temperatura massima" }, value: "220ºC" }
     ],
     gallery: [
       "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/a/l/almohadilla_38x38.webp",
@@ -4874,6 +4814,7 @@ const rawAccessoriesData: Accessory[] = [
     ]
   },
   {
+    "reference": "BTEFL155",
     "id": "lamina-teflon-38x38",
     "slug": "lamina-teflon-38x38",
     "name": {
@@ -4895,11 +4836,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)" },
       { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Proteger planchas y prendas / Protect plates and garments" },
-      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BTEFL155" }
+      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" }
     ]
   },
   {
+    "reference": "BTEFL156",
     "id": "lamina-teflon-40x50",
     "slug": "lamina-teflon-40x50",
     "name": {
@@ -4921,11 +4862,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)" },
       { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Proteger planchas y prendas / Protect plates and garments" },
-      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BTEFL156" }
+      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" }
     ]
   },
   {
+    "reference": "REPBEIRES11B",
     "id": "resistencia-tazas-11oz-b",
     "slug": "resistencia-tazas-11oz-b",
     "name": {
@@ -4944,11 +4885,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "B (Conector hembra flotante / Floating female connector)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barein, Sicilia, Maine, Clara, Sore, Barahona" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES11B" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barein, Sicilia, Maine, Clara, Sore, Barahona" }
     ]
   },
   {
+    "reference": "PLAACCRBE",
     "id": "resistencia-tazas-6-10oz",
     "slug": "resistencia-tazas-6-10oz",
     "name": {
@@ -4967,11 +4908,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "6 a 10 onzas" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barahona, Barein, Sore, Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "PLAACCRBE" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barahona, Barein, Sore, Maine" }
     ]
   },
   {
+    "reference": "REPBEIRES11A",
     "id": "resistencia-tazas-11oz-a",
     "slug": "resistencia-tazas-11oz-a",
     "name": {
@@ -4990,11 +4931,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "A (Conector macho / Male connector)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sore, Andra" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES11A" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sore, Andra" }
     ]
   },
   {
+    "reference": "REPBEIRES17C",
     "id": "resistencia-tazas-conicas-17oz",
     "slug": "resistencia-tazas-conicas-17oz",
     "name": {
@@ -5013,11 +4954,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "16.5cm largo / 17oz" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES17C" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" }
     ]
   },
   {
+    "reference": "REPBEIRSBMHB",
     "id": "resistencia-doble-taza-11-15oz",
     "slug": "resistencia-doble-taza-11-15oz",
     "name": {
@@ -5037,11 +4978,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "22 cm" },
       { "label": { "es": "Diámetro", "en": "Diameter", "pt": "Diâmetro", "it": "Diametro" }, "value": "7.5 - 10 cm" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Maine, Barahona" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRSBMHB" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Maine, Barahona" }
     ]
   },
   {
+    "reference": "90004029",
     "id": "plato-gorras-beinsen-riad",
     "slug": "plato-gorras-beinsen-riad",
     "name": {
@@ -5059,11 +5000,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Ottimizza la tua pressa termica modello Beinsen Riad con la nostra piastra inferiore per cappellini. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90004029" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" }
     ]
   },
   {
+    "reference": "90005119",
     "id": "resistencia-15x20-beinsen-riad",
     "slug": "resistencia-15x20-beinsen-riad",
     "name": {
@@ -5082,11 +5023,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Gante" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90005119" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" }
     ]
   },
   {
+    "reference": "90006134",
     "id": "resistencia-gorras-beinsen-riad",
     "slug": "resistencia-gorras-beinsen-riad",
     "name": {
@@ -5104,11 +5045,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza per sublimare cappellini per pressa termica Beinsen Riad."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006134" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" }
     ]
   },
   {
+    "reference": "90006380",
     "id": "plato-gorras-beinsen-obrei",
     "slug": "plato-gorras-beinsen-obrei",
     "name": {
@@ -5126,11 +5067,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Ottimizza la tua pressa termica modello Beinsen Obrei con la nostra piastra inferiore per cappellini. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006380" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" }
     ]
   },
   {
+    "reference": "PLAACRGOR",
     "id": "resistencia-gorras-combo-beinsen",
     "slug": "resistencia-gorras-combo-beinsen",
     "name": {
@@ -5150,11 +5091,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Medidas", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "122x150x100mm" },
       { "label": { "es": "Potencia", "en": "Power", "pt": "Potência", "it": "Potenza" }, "value": "300 W (220V)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Jamaica" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "PLAACRGOR" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Jamaica" }
     ]
   },
   {
+    "reference": "90005081",
     "id": "resistencia-gorras-beinsen-obrei",
     "slug": "resistencia-gorras-beinsen-obrei",
     "name": {
@@ -5174,11 +5115,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Medidas", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "122x150x100mm" },
       { "label": { "es": "Potencia", "en": "Power", "pt": "Potência", "it": "Potenza" }, "value": "300 W (220V)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90005081" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" }
     ]
   },
   {
+    "reference": "REPBEIRESPL1",
     "id": "resistencia-15x15-beinsen-obrei",
     "slug": "resistencia-15x15-beinsen-obrei",
     "name": {
@@ -5197,11 +5138,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRESPL1" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" }
     ]
   },
   {
+    "reference": "90006402",
     "id": "plato-15x20-beinsen-riad",
     "slug": "plato-15x20-beinsen-riad",
     "name": {
@@ -5220,11 +5161,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Gante" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006402" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" }
     ]
   },
   {
+    "reference": "90006379",
     "id": "plato-base-15x15-beinsen-obrei",
     "slug": "plato-base-15x15-beinsen-obrei",
     "name": {
@@ -5243,11 +5184,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006379" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" }
     ]
   },
   {
+    "reference": "90020103",
     "id": "plato-intercambiable-18x18-barbados",
     "slug": "plato-intercambiable-18x18-barbados",
     "name": {
@@ -5266,11 +5207,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020103" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" }
     ]
   },
   {
+    "reference": "90020104",
     "id": "plato-intercambiable-redondo-24-barbados",
     "slug": "plato-intercambiable-redondo-24-barbados",
     "name": {
@@ -5289,11 +5230,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020104" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" }
     ]
   },
   {
+    "reference": "90020107",
     "id": "plato-intercambiable-zapatillas-barbados",
     "slug": "plato-intercambiable-zapatillas-barbados",
     "name": {
@@ -5311,11 +5252,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base per scarpe per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Se personalizzi prodotti, una piastra per scarpe è un eccellente investimento."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020107" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" }
     ]
   },
   {
+    "reference": "90020100",
     "id": "plato-intercambiable-18x38-barbados",
     "slug": "plato-intercambiable-18x38-barbados",
     "name": {
@@ -5334,11 +5275,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020100" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" }
     ]
   },
   {
+    "reference": "90020102",
     "id": "plato-intercambiable-18x45-barbados",
     "slug": "plato-intercambiable-18x45-barbados",
     "name": {
@@ -5357,11 +5298,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020102" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" }
     ]
   },
   {
+    "reference": "90020101",
     "id": "plato-intercambiable-30x35-barbados",
     "slug": "plato-intercambiable-30x35-barbados",
     "name": {
@@ -5380,11 +5321,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020101" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" }
     ]
   },
   {
+    "reference": "MOLPLHOR",
     "id": "placa-polimero-platos-horno",
     "slug": "placa-polimero-platos-horno",
     "name": {
@@ -5403,11 +5344,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Platos de 15 cm - 25 cm (6\"-10\") / 15 cm - 25 cm (6\"-10\") plates" },
-      { "label": { "es": "Diámetros internos", "en": "Internal diameters", "pt": "Diâmetros internos", "it": "Diametri interni" }, "value": "13,5 cm, 15,5 cm, 17 cm, 20 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLPLHOR" }
+      { "label": { "es": "Diámetros internos", "en": "Internal diameters", "pt": "Diâmetros internos", "it": "Diametri interni" }, "value": "13,5 cm, 15,5 cm, 17 cm, 20 cm" }
     ]
   },
   {
+    "reference": "molplato3d",
     "id": "molde-3d-silicona-platos",
     "slug": "molde-3d-silicona-platos",
     "name": {
@@ -5430,11 +5371,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Gran resistencia, tubo de enganche para vacío, fijación firmemente sujeta" },
       { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "200ºC" },
-      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "molplato3d" }
+      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" }
     ]
   },
   {
+    "reference": "MOLTAZCO",
     "id": "molde-3d-silicona-tazas-conicas-jarras",
     "slug": "molde-3d-silicona-tazas-conicas-jarras",
     "name": {
@@ -5458,11 +5399,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento" },
       { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Personalización de tazas, asas, interiores y exteriores" },
       { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "200ºC" },
-      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLTAZCO" }
+      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" }
     ]
   },
   {
+    "reference": "MOLTAZRE",
     "id": "molde-3d-silicona-tazas-rectas",
     "slug": "molde-3d-silicona-tazas-rectas",
     "name": {
@@ -5486,11 +5427,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento" },
       { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "220ºC" },
-      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLTAZRE" }
+      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" }
     ]
   },
   {
+    "reference": "MOLTAZNR",
     "id": "molde-silicona-3-tazas-11oz",
     "slug": "molde-silicona-3-tazas-11oz",
     "name": {
@@ -5512,11 +5453,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona ecológica de alta calidad / High quality ecological silicone" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Botellas 200/300/400ml, tazas 11oz, huchas 11oz" },
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Resistente a altas temperaturas, respetuoso con el medio ambiente, fácil de usar" },
-      { "label": { "es": "Uso recomendado", "en": "Recommended use", "pt": "Uso recomendado", "it": "Uso consigliato" }, "value": "Evite usar objetos afilados. Asegúrese de fijar firmemente el papel de sublimación antes de usar." },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLTAZNR" }
+      { "label": { "es": "Uso recomendado", "en": "Recommended use", "pt": "Uso recomendado", "it": "Uso consigliato" }, "value": "Evite usar objetos afilados. Asegúrese de fijar firmemente el papel de sublimación antes de usar." }
     ]
   },
   {
+    "reference": "MOLVOTAL",
     "id": "molde-3d-silicona-3-botellas-aluminio",
     "slug": "molde-3d-silicona-3-botellas-aluminio",
     "name": {
@@ -5539,11 +5480,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona ecológica / Eco-friendly silicone" },
       { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Resistente a altas temperaturas, fácil de usar" },
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Abrazadera multiusos / Multi-purpose clamp" },
-      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Horno 3D sublimación de botellas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "MOLVOTAL" }
+      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Horno 3D sublimación de botellas" }
     ]
   },
   {
+    "reference": "BPLAN163",
     "id": "resistencia-platos-6-1-gen",
     "slug": "resistencia-platos-6-1-gen",
     "name": {
@@ -5562,11 +5503,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "6\" (15 cm)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Plancha Combo de Beinsen 1ª Generación (Dorian)" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BPLAN163" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Plancha Combo de Beinsen 1ª Generación (Dorian)" }
     ]
   },
   {
+    "reference": "REPBEIRES05P",
     "id": "resistencia-platos-5-dorian",
     "slug": "resistencia-platos-5-dorian",
     "name": {
@@ -5585,11 +5526,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "5\" (12.6 cm)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Dorian" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES05P" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Dorian" }
     ]
   },
   {
+    "reference": "ACMPRTKENROD",
     "id": "rodillo-cintas",
     "slug": "rodillo-cintas",
     "name": {
@@ -5607,11 +5548,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Accessorio per sublimare facilmente i nastri. Rullo in cui inserire i rotoli di nastro e farli scorrere grazie alla sua manovella. Progettato esclusivamente per adattarsi alla nostra pressa termica Kenia di Beinsen. Approvato CE. Facile montaggio e smontaggio."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Kenia" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "ACMPRTKENROD" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Kenia" }
     ]
   },
   {
+    "reference": "ACCALR80X1",
     "id": "almohadilla-algodon-80x110",
     "slug": "almohadilla-algodon-80x110",
     "name": {
@@ -5632,11 +5573,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Algodón reciclado / Recycled Cotton / Algodão reciclado / Cotone riciclato" },
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "80 x 110 cm" },
       { "label": { "es": "Grosor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "50 mm" },
-      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "ACCALR80X1" }
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" }
     ]
   },
   {
+    "reference": "140000109P2",
     "id": "filtro-hepa-sx8-sz1-tb",
     "slug": "filtro-hepa-sx8-sz1-tb",
     "name": {
@@ -5659,11 +5600,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Mecanismo de filtrado", "en": "Filter mechanism", "pt": "Mecanismo de filtro", "it": "Meccanismo di filtrazione" }, "value": "Impacto, intercepción y difusión" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Fibras ultra finas de vidrio" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1 (tipo TB)" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000109P2" }
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" }
     ]
   },
   {
+    "reference": "140000109",
     "id": "filtro-hepa-sx8-sz1-ta",
     "slug": "filtro-hepa-sx8-sz1-ta",
     "name": {
@@ -5686,11 +5627,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Mecanismo de filtrado", "en": "Filter mechanism", "pt": "Mecanismo de filtro", "it": "Meccanismo di filtrazione" }, "value": "Impacto, intercepción y difusión" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Fibras ultra finas de vidrio" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1 (tipo TA)" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000109" }
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" }
     ]
   },
   {
+    "reference": "140000110",
     "id": "filtro-carbon-sx8-sz1",
     "slug": "filtro-carbon-sx8-sz1",
     "name": {
@@ -5712,11 +5653,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 y SZ1 / InkOne SX8 and SZ1" },
       { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Elimina vapores, olores y residuos químicos / Removes vapors, odors and chemical residues" },
       { "label": { "es": "Intervalo de reemplazo", "en": "Replacement interval", "pt": "Intervalo de substituição", "it": "Intervallo di sostituzione" }, "value": "Cada 6 meses (uso continuo) / Every 6 months (continuous use)" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin mantenimiento / Easy replacement without maintenance" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000110" }
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin mantenimiento / Easy replacement without maintenance" }
     ]
   },
   {
+    "reference": "140000164",
     "id": "cojinete-f6904rs-sx8-sz1",
     "slug": "cojinete-f6904rs-sx8-sz1",
     "name": {
@@ -5738,11 +5679,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Diámetro exterior", "en": "Outer diameter", "pt": "Diâmetro externo", "it": "Diametro esterno" }, "value": "37 mm" },
       { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "9 mm" },
       { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble 2RS / Double 2RS" },
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Rodamiento con brida / Flange bearing" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000164" }
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Rodamiento con brida / Flange bearing" }
     ]
   },
   {
+    "reference": "140000163",
     "id": "cojinete-f6901rs-sx8-sz1",
     "slug": "cojinete-f6901rs-sx8-sz1",
     "name": {
@@ -5763,11 +5704,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Diámetro interior", "en": "Inner diameter", "pt": "Diâmetro interno", "it": "Diametro interno" }, "value": "12 mm" },
       { "label": { "es": "Diámetro exterior", "en": "Outer diameter", "pt": "Diâmetro externo", "it": "Diametro esterno" }, "value": "24 mm" },
       { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "6 mm" },
-      { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble RS / Double RS" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000163" }
+      { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble RS / Double RS" }
     ]
   },
   {
+    "reference": "140000157",
     "id": "fuente-alimentacion-24v-sx8-sz1-b",
     "slug": "fuente-alimentacion-24v-sx8-sz1-b",
     "name": {
@@ -5791,8 +5732,7 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Eficiencia energética", "en": "Energy efficiency", "pt": "Eficiência energética", "it": "Efficienza energetica" }, "value": "Alta / High" },
       { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Carcasa metálica ventilada / Ventilated metal enclosure" },
       { "label": { "es": "Certificación", "en": "Certification", "pt": "Certificação", "it": "Certificazione" }, "value": "CE" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000157" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" }
     ]
   },
   {
@@ -5823,6 +5763,7 @@ const rawAccessoriesData: Accessory[] = [
     ]
   },
   {
+    "reference": "140000150",
     "id": "sensor-placa-calefactora-sx8-sz1",
     "slug": "sensor-placa-calefactora-sx8-sz1",
     "name": {
@@ -5843,11 +5784,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Sensor tipo K" },
       { "label": { "es": "Rango", "en": "Range", "pt": "Gama", "it": "Gamma" }, "value": "0-800 °C" },
       { "label": { "es": "Sistema de conexión", "en": "Connection system", "pt": "Sistema de conexão", "it": "Sistema di connessione" }, "value": "Quick-plug" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000150" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" }
     ]
   },
   {
+    "reference": "140000149",
     "id": "contactor-ca-220v-sx8-sz1",
     "slug": "contactor-ca-220v-sx8-sz1",
     "name": {
@@ -5870,11 +5811,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Frecuencia", "en": "Frequency", "pt": "Frequência", "it": "Frequenza" }, "value": "50 Hz" },
       { "label": { "es": "Capacidad de corriente", "en": "Current capacity", "pt": "Capacidade de corrente", "it": "Capacità di corrente" }, "value": "40 A" },
       { "label": { "es": "Tiempo de respuesta", "en": "Response time", "pt": "Tempo de resposta", "it": "Tempo di risposta" }, "value": "≤ 0,1 s" },
-      { "label": { "es": "Norma", "en": "Standard", "pt": "Norma", "it": "Norma" }, "value": "GB/T16917.22" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000149" }
+      { "label": { "es": "Norma", "en": "Standard", "pt": "Norma", "it": "Norma" }, "value": "GB/T16917.22" }
     ]
   },
   {
+    "reference": "140000129",
     "id": "sensor-temperatura-sz1",
     "slug": "sensor-temperatura-sz1",
     "name": {
@@ -5893,11 +5834,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Plug-and-play" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000129" }
+      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Plug-and-play" }
     ]
   },
   {
+    "reference": "140000147",
     "id": "motor-deposito-polvo-sx8",
     "slug": "motor-deposito-polvo-sx8",
     "name": {
@@ -5920,11 +5861,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin necesidad de herramientas especiales" },
       { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Diseño robusto fabricado para soportar uso continuo en producción DTF" },
       { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Sistema de aplicación de polvo adhesivo DTF / DTF adhesive powder application system" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000147" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8" }
     ]
   },
   {
+    "reference": "140000170",
     "id": "rele-intermedio-24v-sz1",
     "slug": "rele-intermedio-24v-sz1",
     "name": {
@@ -5944,11 +5885,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Tensión de control", "en": "Control voltage", "pt": "Tensão de controle", "it": "Tensione di controllo" }, "value": "Bobina de 24 V DC" },
       { "label": { "es": "Capacidad de conmutación", "en": "Switching capacity", "pt": "Capacidade de comutação", "it": "Capacità di commutazione" }, "value": "5A a 250V AC o 5A a 28V DC (IEC255)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000170" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
     ]
   },
   {
+    "reference": "140000146",
     "id": "rele-estado-solido-sz1",
     "slug": "rele-estado-solido-sz1",
     "name": {
@@ -5969,11 +5910,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "SSR (Solid State Relay)" },
       { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "CDSSR-DA-4815" },
       { "label": { "es": "Entrada / Salida", "en": "Input / Output", "pt": "Entrada / Saída", "it": "Ingresso / Uscita" }, "value": "INPUT 3-32 VDC | OUTPUT 15A 24-480VAC" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000146" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
     ]
   },
   {
+    "reference": "140000114",
     "id": "rele-hornos-sx8-sz1",
     "slug": "rele-hornos-sx8-sz1",
     "name": {
@@ -5993,11 +5934,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Relé de estado sólido (SSR)" },
       { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "SSR-40DAH" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000114" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" }
     ]
   },
   {
+    "reference": "140000115",
     "id": "placa-base-hornos-sx8-sz1",
     "slug": "placa-base-hornos-sx8-sz1",
     "name": {
@@ -6021,11 +5962,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Rendimiento", "en": "Performance", "pt": "Desempenho", "it": "Prestazioni" }, "value": "Garantiza funcionamiento sincronizado y sin fallos en condiciones de alta exigencia" },
       { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla y rápida con conexión directa a sistemas integrados" },
       { "label": { "es": "Protección", "en": "Protection", "pt": "Proteção", "it": "Protezione" }, "value": "Minimiza riesgo de fallos eléctricos con componentes de alta calidad" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 / SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000115" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 / SZ1" }
     ]
   },
   {
+    "reference": "140000113",
     "id": "pantalla-hornos-sz1",
     "slug": "pantalla-hornos-sz1",
     "name": {
@@ -6049,11 +5990,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Precisión", "en": "Precision", "pt": "Precisão", "it": "Precisione" }, "value": "Alta precisión para ajustes finos y mantener calidad constante" },
       { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Estructura compacta con conexiones estándar para sustitución rápida y segura" },
       { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Materiales duraderos preparados para uso intensivo en producción" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000113" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
     ]
   },
   {
+    "reference": "140000128",
     "id": "lampara-horno-sz1",
     "slug": "lampara-horno-sz1",
     "name": {
@@ -6076,11 +6017,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Conexión", "en": "Connection", "pt": "Conexão", "it": "Connessione" }, "value": "Cable con conector en ambos extremos / Cable with connectors at both ends" },
       { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución rápida sin herramientas especiales" },
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Elemento calefactor original / Original heating element" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "140000128" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
     ]
   },
   {
+    "reference": "90006268",
     "id": "resistencia-tazas-2-5oz",
     "slug": "resistencia-tazas-2-5oz",
     "name": {
@@ -6099,11 +6040,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 8.5 cm (2.5oz)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006268" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" }
     ]
   },
   {
+    "reference": "90006264",
     "id": "resistencia-chupitos-1-5oz",
     "slug": "resistencia-chupitos-1-5oz",
     "name": {
@@ -6122,11 +6063,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 8 cm (1.5oz cónica)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90006264" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" }
     ]
   },
   {
+    "reference": "REPBEIRES20",
     "id": "resistencia-cilindrica-20-30oz",
     "slug": "resistencia-cilindrica-20-30oz",
     "name": {
@@ -6146,11 +6087,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "27 cm" },
       { "label": { "es": "Diámetro", "en": "Diameter", "pt": "Diâmetro", "it": "Diametro" }, "value": "Ajustable 9,5 - 12 cm" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Maine" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES20" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Maine" }
     ]
   },
   {
+    "reference": "90020154",
     "id": "plato-base-18x18-cambio-rapido",
     "slug": "plato-base-18x18-cambio-rapido",
     "name": {
@@ -6169,11 +6110,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020154" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" }
     ]
   },
   {
+    "reference": "90020155",
     "id": "plato-base-18x38-cambio-rapido",
     "slug": "plato-base-18x38-cambio-rapido",
     "name": {
@@ -6192,11 +6133,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020155" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" }
     ]
   },
   {
+    "reference": "90020152",
     "id": "plato-base-18x45-cambio-rapido",
     "slug": "plato-base-18x45-cambio-rapido",
     "name": {
@@ -6215,11 +6156,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020152" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" }
     ]
   },
   {
+    "reference": "90020151",
     "id": "plato-base-30x35-cambio-rapido",
     "slug": "plato-base-30x35-cambio-rapido",
     "name": {
@@ -6238,11 +6179,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020151" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" }
     ]
   },
   {
+    "reference": "90020158",
     "id": "plato-base-zapatillas-cambio-rapido",
     "slug": "plato-base-zapatillas-cambio-rapido",
     "name": {
@@ -6261,11 +6202,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020158" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" }
     ]
   },
   {
+    "reference": "90020156",
     "id": "plato-base-redondo-24-cambio-rapido",
     "slug": "plato-base-redondo-24-cambio-rapido",
     "name": {
@@ -6284,11 +6225,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020156" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" }
     ]
   },
   {
+    "reference": "90020157",
     "id": "plato-base-gorras-cambio-rapido",
     "slug": "plato-base-gorras-cambio-rapido",
     "name": {
@@ -6306,11 +6247,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale per cappellini compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare fino a 4 cappellini contemporaneamente."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020157" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" }
     ]
   },
   {
+    "reference": "90020172",
     "id": "plato-base-camisetas-cambio-rapido",
     "slug": "plato-base-camisetas-cambio-rapido",
     "name": {
@@ -6328,11 +6269,11 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale per magliette compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare magliette con la loro etichetta interna."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020172" }
+      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" }
     ]
   },
   {
+    "reference": "90020160",
     "id": "plato-base-40x50-2mangas-cambio-rapido",
     "slug": "plato-base-40x50-2mangas-cambio-rapido",
     "name": {
@@ -6351,11 +6292,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020160" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" }
     ]
   },
   {
+    "reference": "90020171",
     "id": "plato-base-12x45-mangas-cambio-rapido",
     "slug": "plato-base-12x45-mangas-cambio-rapido",
     "name": {
@@ -6374,11 +6315,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 45 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020171" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 45 cm" }
     ]
   },
   {
+    "reference": "90020164",
     "id": "plato-base-15x50-pantalones-cambio-rapido",
     "slug": "plato-base-15x50-pantalones-cambio-rapido",
     "name": {
@@ -6397,11 +6338,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 50 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020164" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 50 cm" }
     ]
   },
   {
+    "reference": "90020170",
     "id": "plato-base-15-5x25-5-cambio-rapido",
     "slug": "plato-base-15-5x25-5-cambio-rapido",
     "name": {
@@ -6420,11 +6361,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15,5 x 25,5 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020170" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15,5 x 25,5 cm" }
     ]
   },
   {
+    "reference": "90020163",
     "id": "plato-base-15x25-cambio-rapido",
     "slug": "plato-base-15x25-cambio-rapido",
     "name": {
@@ -6443,11 +6384,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 25 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020163" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 25 cm" }
     ]
   },
   {
+    "reference": "90020169",
     "id": "plato-base-25x30-cambio-rapido",
     "slug": "plato-base-25x30-cambio-rapido",
     "name": {
@@ -6466,11 +6407,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 30 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020169" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 30 cm" }
     ]
   },
   {
+    "reference": "90020162",
     "id": "plato-base-15x15-cambio-rapido",
     "slug": "plato-base-15x15-cambio-rapido",
     "name": {
@@ -6489,11 +6430,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90020162" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" }
     ]
   },
   {
+    "reference": "30050047",
     "id": "almohadilla-silicona-80x100",
     "slug": "almohadilla-silicona-80x100",
     "name": {
@@ -6514,11 +6455,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de grado industrial / Industrial grade silicone" },
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "80 x 100 cm" },
       { "label": { "es": "Espesor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "10 mm" },
-      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "30050047" }
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" }
     ]
   },
   {
+    "reference": "ACC001903",
     "id": "plato-38x38-beinsen-chinela",
     "slug": "plato-38x38-beinsen-chinela",
     "name": {
@@ -6537,11 +6478,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Chinela" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "ACC001903" }
+      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" }
     ]
   },
   {
+    "reference": "BHORN066",
     "id": "fusible-termico-3d-16",
     "slug": "fusible-termico-3d-16",
     "name": {
@@ -6563,11 +6504,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 105 x 40 mm" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Metal / Plástico / Metal / Plastic" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Horno 3D, Plancha Delia" },
-      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Filtro de aire para realizar vacío / Air filter for vacuum creation" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BHORN066" }
+      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Filtro de aire para realizar vacío / Air filter for vacuum creation" }
     ]
   },
   {
+    "reference": "90950104",
     "id": "almohadilla-teflon-termorresistente-40x50",
     "slug": "almohadilla-teflon-termorresistente-40x50",
     "name": {
@@ -6586,12 +6527,12 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "90950104" },
       { "label": { "es": "Referencia", "en": "Reference", "pt": "Referência", "it": "Riferimento" }, "value": "TP-20-BK" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
     ]
   },
   {
+    "reference": "BSNALMTFL38",
     "id": "almohadilla-teflon-termorresistente-38x38",
     "slug": "almohadilla-teflon-termorresistente-38x38",
     "name": {
@@ -6610,11 +6551,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BSNALMTFL38" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
     ]
   },
   {
+    "reference": "BSNALMTFL25",
     "id": "almohadilla-teflon-termorresistente-25x25",
     "slug": "almohadilla-teflon-termorresistente-25x25",
     "name": {
@@ -6633,11 +6574,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 25 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BSNALMTFL25" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
     ]
   },
   {
+    "reference": "BSNALMTFL15",
     "id": "almohadilla-teflon-termorresistente-15x15",
     "slug": "almohadilla-teflon-termorresistente-15x15",
     "name": {
@@ -6656,11 +6597,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "BSNALMTFL15" },
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
     ]
   },
   {
+    "reference": "S12253",
     "id": "termometro-digital-infrarrojos-it122",
     "slug": "termometro-digital-infrarrojos-it122",
     "name": {
@@ -6680,11 +6621,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "IT-122" },
       { "label": { "es": "Alimentación", "en": "Power", "pt": "Alimentação", "it": "Alimentazione" }, "value": "2 pilas AA (3V) - No incluidas" },
-      { "label": { "es": "Funciones", "en": "Functions", "pt": "Funções", "it": "Funzioni" }, "value": "Medición rápida, Alarma de fiebre, Retroiluminación tricolor" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "S12253" }
+      { "label": { "es": "Funciones", "en": "Functions", "pt": "Funções", "it": "Funzioni" }, "value": "Medición rápida, Alarma de fiebre, Retroiluminación tricolor" }
     ]
   },
   {
+    "reference": "3DGWST",
     "id": "guantes-protectores-algodon",
     "slug": "guantes-protectores-algodon",
     "name": {
@@ -6704,11 +6645,11 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Algodón y Nitrilo / Cotton and Nitrile" },
       { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 250ºC (periodos cortos) / Up to 250ºC (short periods)" },
-      { "label": { "es": "Talla", "en": "Size", "pt": "Tamanho", "it": "Taglia" }, "value": "Única (15 x 27 cm)" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "3DGWST" }
+      { "label": { "es": "Talla", "en": "Size", "pt": "Tamanho", "it": "Taglia" }, "value": "Única (15 x 27 cm)" }
     ]
   },
   {
+    "reference": "REPBEISOPMOV",
     "id": "mesa-universal-grande",
     "slug": "mesa-universal-grande-ruedas",
     "name": {
@@ -6730,11 +6671,11 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "71 cm" },
       { "label": { "es": "Peso", "en": "Weight", "pt": "Peso", "it": "Peso" }, "value": "25 kg" },
       { "label": { "es": "Ruedas", "en": "Wheels", "pt": "Rodas", "it": "Ruote" }, "value": "4 giratorias con freno / 4 rotating with brakes" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Estante inferior incluido / Lower shelf included" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEISOPMOV" }
+      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Estante inferior incluido / Lower shelf included" }
     ]
   },
   {
+    "reference": "REPBEIRES12C",
     "id": "resistencia-conica-tazas-12oz",
     "slug": "resistencia-conica-tazas-12oz",
     "name": {
@@ -6753,11 +6694,11 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cónica 12oz / Conical 12oz" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES12C" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Sicilia, Maine" }
     ]
   },
   {
+    "reference": "REPBEIRES17C",
     "id": "resistencia-conica-tazas-17oz",
     "slug": "resistencia-para-tazas-conicas-17oz",
     "name": {
@@ -6776,7 +6717,6 @@ const rawAccessoriesData: Accessory[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cónica 17oz / Conical 17oz" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES17C" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" }
     ]
   }
@@ -6786,6 +6726,7 @@ export const allAccessoriesData: Accessory[] = [...rawAccessoriesData].sort((a, 
 
 const rawConsumablesData: Consumable[] = [
   {
+    "reference": "CONSUBCIN10M",
     id: "cinta-termica-10mm",
     slug: "cinta-termica-sublimacion-10mm",
     name: {
@@ -6805,11 +6746,11 @@ const rawConsumablesData: Consumable[] = [
     technicalSpecs: [
       { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "10 mm" },
       { "label": { "es": "Largo", "en": "Length", "pt": "Comprimento", "it": "Lunghezza" }, "value": "33 m" },
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Kapton / Térmica" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "CONSUBCIN10M" }
+      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Kapton / Térmica" }
     ]
   },
   {
+    "reference": "PLAACCA50",
     id: "almohadilla-silicona-40x50",
     slug: "almohadilla-silicona-40x50",
     name: {
@@ -6829,8 +6770,7 @@ const rawConsumablesData: Consumable[] = [
     technicalSpecs: [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
       { "label": { "es": "Espesor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "10 mm" },
-      { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 220ºC / Up to 220ºC" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "PLAACCA50" }
+      { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 220ºC / Up to 220ºC" }
     ]
   },
   {
@@ -6858,6 +6798,7 @@ const rawConsumablesData: Consumable[] = [
     description: { es: "Elimina residuos del plato calentador.", en: "Removes residues from the heating plate." }
   },
   {
+    "reference": "REPBEIRES11A",
     "id": "resistencia-cilindrica-tazas-11oz-tipo-a",
     "slug": "resistencia-cilindrica-tazas-11oz-tipo-a",
     "name": {
@@ -6876,7 +6817,6 @@ const rawConsumablesData: Consumable[] = [
     },
     "technicalSpecs": [
       { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cilíndrica 11oz / Cylindrical 11oz" },
-      { "label": { "es": "P/N", "en": "P/N", "pt": "P/N", "it": "P/N" }, "value": "REPBEIRES11A" },
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Andra, Sore (A)" }
     ]
   }
