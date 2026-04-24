@@ -1,4 +1,24 @@
 {
+  "sicilia-plancha-para-tazas": {
+    "src": "/detalles-maquinas/sicilia-plancha-para-tazas.png",
+    "width": 500,
+    "height": 500
+  },
+  "luanda-plancha-termica-automatica": {
+    "src": "/detalles-maquinas/luanda-plancha-termica-automatica.png",
+    "width": 720,
+    "height": 720
+  },
+  "jamaica-planchas-transfer-multifuncion-para-sublimacion": {
+    "src": "/detalles-maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion.png",
+    "width": 1080,
+    "height": 720
+  },
+  "felina-prensa-swing-away-electrica": {
+    "src": "/detalles-maquinas/felina-prensa-swing-away-electrica.png",
+    "width": 1137,
+    "height": 720
+  },
   "alaska-plancha-termica-textil": {
     "src": "/detalles-maquinas/alaska-plancha-termica-textil.png",
     "width": 800,
@@ -24,9 +44,19 @@
     "width": 518,
     "height": 720
   },
+  "dorian-plancha-termica-platos": {
+    "src": "/detalles-maquinas/dorian-plancha-termica-platos.png",
+    "width": 600,
+    "height": 600
+  },
   "doha-plancha-transfer-gran-formato": {
     "src": "/detalles-maquinas/doha-plancha-transfer-gran-formato.png",
     "width": 480,
+    "height": 720
+  },
+  "estambul-prensa-termica-para-espinilleras": {
+    "src": "/detalles-maquinas/estambul-prensa-termica-para-espinilleras.png",
+    "width": 720,
     "height": 720
   },
   "esparta-prensa-termica-neumatica": {
@@ -89,9 +119,24 @@
     "width": 332,
     "height": 720
   },
-  "plancha-plana-para-sublimar": {
-    "src": "/detalles-maquinas/plancha-plana-para-sublimar.png",
+  "chinela-plancha-transfer-zapatillas": {
+    "src": "/detalles-maquinas/chinela-plancha-transfer-zapatillas.png",
     "width": 720,
+    "height": 720
+  },
+  "chicago-plancha-termica-automatica": {
+    "src": "/detalles-maquinas/chicago-plancha-termica-automatica.png",
+    "width": 1080,
+    "height": 720
+  },
+  "barahona-plancha-para-tazas-6-en-1": {
+    "src": "/detalles-maquinas/barahona-plancha-para-tazas-6-en-1.png",
+    "width": 960,
+    "height": 720
+  },
+  "alina-plancha-para-tazas": {
+    "src": "/detalles-maquinas/alina-plancha-para-tazas.png",
+    "width": 1080,
     "height": 720
   },
   "barein-plancha-termica": {
