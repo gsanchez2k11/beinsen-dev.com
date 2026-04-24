@@ -314,8 +314,8 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                     {/* Rich Key Benefits Grid */}
                     {plancha.benefits && plancha.benefits.length > 0 && (
                         <ScrollReveal className="w-full">
-                            <div className="text-center mb-20">
-                                <h3 className="text-4xl md:text-5xl font-black flex flex-col items-center gap-6">
+                            <div className="text-center mb-32">
+                                <h3 className="text-4xl md:text-5xl font-black flex flex-col items-center gap-8">
                                     {d.benefitsTitle} <span className="w-24 h-2 bg-[#FF6600] rounded-full" />
                                 </h3>
                             </div>

@@ -72,6 +72,7 @@ export interface Plancha {
   storySegments?: { title: Localized<string> | string; description: Localized<string> | string; image: string }[];
   maintenanceTips?: Localized<string[]>;
   distributors?: { name: string; url: string; logo?: string }[];
+  hidden?: boolean;
 }
 const rawPlanchasData: Plancha[] = [
   {
@@ -139,6 +140,13 @@ const rawPlanchasData: Plancha[] = [
       { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "69 x 53 x 55 cm" },
       { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
       { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" }
+    ],
+    "hotspots": [
+      { "x": 56.1, "y": 4.2, "title": { "es": "Asa ergonómica", "en": "Ergonomic handle" }, "description": { "es": "Diseñada para aplicar la presión de forma cómoda y controlada en cada ciclo de transfer.", "en": "Designed for comfortable and controlled pressure application in every transfer cycle." } },
+      { "x": 89.4, "y": 34.4, "title": { "es": "Botón de encendido", "en": "Power button" }, "description": { "es": "Enciende y apaga el equipo de forma rápida y segura.", "en": "Turns the machine on and off quickly and safely." } },
+      { "x": 77.6, "y": 35.0, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "Programa la temperatura y el tiempo con precisión para conseguir transfers perfectos en zapatillas y chinelas.", "en": "Set temperature and time precisely for perfect transfers on shoes and flip-flops." } },
+      { "x": 28.5, "y": 57.6, "title": { "es": "Placa de transfer para zapatillas", "en": "Shoe transfer plate" }, "description": { "es": "Superficie de trabajo específica para sublimar zapatillas, chinelas y artículos de calzado de distintos tamaños.", "en": "Work surface specifically designed for sublimating sneakers, flip-flops, and footwear of various sizes." } },
+      { "x": 26.5, "y": 71.9, "title": { "es": "Base estabilizadora", "en": "Stabilizing base" }, "description": { "es": "Estructura robusta que mantiene la máquina firme y nivelada durante el proceso de prensado.", "en": "Robust structure that keeps the machine stable and level throughout the pressing process." } }
     ],
     "maintenanceTips": {
       "es": [
@@ -353,6 +361,12 @@ const rawPlanchasData: Plancha[] = [
       { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Automático" },
       { "label": { "es": "Modelo", "en": "Model" }, "value": "Dorian" }
     ],
+    "hotspots": [
+      { "x": 34.7, "y": 12.3, "title": { "es": "Asa ergonómica", "en": "Ergonomic handle" }, "description": { "es": "Mango antideslizante que permite bajar y subir el plato superior con precisión y comodidad en cada ciclo.", "en": "Non-slip handle for precise and comfortable upper plate movement in every cycle." } },
+      { "x": 39.2, "y": 58.5, "title": { "es": "Resistencia circular", "en": "Circular heating element" }, "description": { "es": "Resistencia de forma circular diseñada para distribuir el calor de manera uniforme sobre toda la superficie del plato cerámico.", "en": "Circular heating element designed to distribute heat evenly across the entire ceramic plate surface." } },
+      { "x": 42.2, "y": 75.8, "title": { "es": "Placa de trabajo", "en": "Work plate" }, "description": { "es": "Superficie inferior donde se coloca el plato cerámico. Compatible con platos de hasta 15,2 cm de diámetro.", "en": "Lower surface where the ceramic plate is placed. Compatible with plates up to 15.2 cm in diameter." } },
+      { "x": 32.2, "y": 85.7, "title": { "es": "Controlador digital GY-04", "en": "GY-04 digital controller" }, "description": { "es": "Permite programar con precisión la temperatura y el tiempo de cada sublimación para obtener resultados profesionales y consistentes.", "en": "Precisely programs temperature and time for each sublimation to achieve professional and consistent results." } }
+    ],
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -371,22 +385,30 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Precisión en Cerámica", "en": "Ceramic Precision" },
         "description": { "es": "Presión uniforme para evitar roturas en soportes rígidos.", "en": "Uniform pressure to avoid breakage on rigid supports." },
-        "icon": "Zap"
+        "icon": "Zap",
+        "image": "/products/maquinas/dorian-plancha-termica-platos/02.png",
+        "objectFit": "contain"
       },
       {
         "title": { "es": "Versátil y Robusta", "en": "Versatile and Robust" },
         "description": { "es": "Fácil de montar y desmontar, con controlador digital GY-04 para ajustar tiempo y temperatura con precisión. Su estructura de acero sólido y acabado naranja Beinsen aportan durabilidad y estilo.", "en": "Easy to assemble and disassemble, with GY-04 digital controller for precise time and temperature settings. Solid steel structure and Beinsen orange finish provide durability and style." },
-        "icon": "Settings"
+        "icon": "Settings",
+        "image": "/products/maquinas/dorian-plancha-termica-platos/04.png",
+        "objectFit": "contain"
       },
       {
         "title": { "es": "Personalización Integral de Platos", "en": "Full Plate Customization" },
         "description": { "es": "Permite personalizar tanto el fondo como los bordes de platos cerámicos, ideal para frases, imágenes y diseños creativos en vajilla.", "en": "Lets you personalize both the center and edges of ceramic plates, ideal for phrases, images, and creative tableware designs." },
-        "icon": "Layers"
+        "icon": "Layers",
+        "image": "/products/maquinas/dorian-plancha-termica-platos/01.png",
+        "objectFit": "contain"
       },
       {
         "title": { "es": "Sublimación Hasta 15,2 cm", "en": "Sublimation Up to 15.2 cm" },
         "description": { "es": "Perfecta para sublimar platos de hasta 15,2 cm, logrando acabados profesionales con resultados consistentes.", "en": "Perfect for sublimating plates up to 15.2 cm, delivering professional and consistent results." },
-        "icon": "Target"
+        "icon": "Target",
+        "image": "/products/maquinas/dorian-plancha-termica-platos/03.png",
+        "objectFit": "contain"
       }
     ]
   },
@@ -453,22 +475,26 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "No habrá taza, termo o botella que se te resista", "en": "No mug, tumbler, or bottle can resist it" },
         "description": { "es": "Con sus 6 resistencias intercambiables, podrás personalizar cualquier tipo de taza con facilidad. Ya no tendrás que preocuparte por tamaños diferentes al estándar.", "en": "With 6 interchangeable heating elements, you can customize almost any mug format with ease, including non-standard sizes." },
-        "icon": "Layers"
+        "icon": "Layers",
+        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/02.png"
       },
       {
         "title": { "es": "Sencilla pero eficaz", "en": "Simple but effective" },
         "description": { "es": "Su diseño ergonómico y fácil de usar te permitirá cambiar las resistencias a mano fácilmente, sin necesidad de herramientas adicionales.", "en": "Its ergonomic, user-friendly design lets you change elements by hand without extra tools." },
-        "icon": "Settings"
+        "icon": "Settings",
+        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/03.png"
       },
       {
         "title": { "es": "Barahona será tu amiga fiel a la hora de sublimar", "en": "Barahona is your trusted sublimation ally" },
         "description": { "es": "Es la solución perfecta para los amantes de la personalización de tazas. No pierdas más tiempo con soluciones obsoletas y descubre todo lo que esta herramienta puede ofrecerte.", "en": "It is the perfect solution for mug customization lovers. Stop wasting time with outdated solutions and unlock everything this tool can offer." },
-        "icon": "ShieldCheck"
+        "icon": "ShieldCheck",
+        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/04.png"
       },
       {
         "title": { "es": "Versatilidad total", "en": "Total versatility" },
         "description": { "es": "El diseño de la plancha facilita sublimar tazas, botellas y termos de distintos tamaños: 1.5oz, 2.5oz, 6oz-10oz, 12oz, 17oz y 11oz-15oz.", "en": "Designed to sublimate mugs, bottles, and tumblers in multiple sizes: 1.5oz, 2.5oz, 6oz-10oz, 12oz, 17oz, and 11oz-15oz." },
-        "icon": "Ruler"
+        "icon": "Ruler",
+        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/01.png"
       },
       {
         "title": { "es": "Presión perfecta", "en": "Perfect pressure" },
@@ -480,6 +506,13 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Gracias al mango de soporte, podrás presionar fácilmente hacia abajo la máquina de prensado en caliente para tazas y mantener una buena presión de contacto.", "en": "The support handle makes it easy to press down the mug heat press while maintaining strong contact pressure." },
         "icon": "Cpu"
       }
+    ],
+    "hotspots": [
+      { "x": 51.8, "y": 22.1, "title": { "es": "Asa", "en": "Handle" }, "description": { "es": "Permite abrir y cerrar la prensa con comodidad y control en cada ciclo.", "en": "Allows opening and closing the press comfortably and with control in every cycle." } },
+      { "x": 56.1, "y": 50.8, "title": { "es": "Resistencia cilíndrica", "en": "Cylindrical heating element" }, "description": { "es": "Envuelve la taza para distribuir el calor de forma uniforme en toda la superficie.", "en": "Wraps the mug to distribute heat evenly across the entire surface." } },
+      { "x": 97.0, "y": 51.5, "title": { "es": "Botón de encendido", "en": "Power button" }, "description": { "es": "Enciende y apaga el equipo de forma rápida y segura.", "en": "Turns the machine on and off quickly and safely." } },
+      { "x": 81.8, "y": 52.5, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "Programa la temperatura y el tiempo con precisión para cada trabajo.", "en": "Program temperature and time precisely for each job." } },
+      { "x": 33.0, "y": 75.7, "title": { "es": "Perilla de ajuste", "en": "Adjustment knob" }, "description": { "es": "Regula la presión de prensado para adaptarse a distintos grosores de taza.", "en": "Adjusts pressing pressure to accommodate different mug thicknesses." } }
     ],
     "maintenanceTips": {
       "es": [
@@ -570,22 +603,26 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "La compañera ideal para personalizar tazas", "en": "The ideal companion for mug customization" },
         "description": { "es": "Alina está diseñada desde cero para la personalización de tazas. Con ella podrás abordar pedidos de cualquier formato sin necesidad de cambiar de máquina.", "en": "Alina is purpose-built for mug customization. Take on orders of any format without switching machines." },
-        "icon": "CupSoda"
+        "icon": "CupSoda",
+        "image": "/products/maquinas/alina-plancha-para-tazas/02.png"
       },
       {
         "title": { "es": "4 resistencias para cubrir todos los formatos", "en": "4 elements to cover all formats" },
         "description": { "es": "Incluye resistencias para tazas cilíndricas de 6 a 10oz y de 11 a 15oz, más cónicas de 12oz y 17oz. Podrás personalizar prácticamente cualquier taza del mercado.", "en": "Includes elements for cylindrical mugs 6-10oz and 11-15oz, plus conical 12oz and 17oz. Covers virtually any mug on the market." },
-        "icon": "Layers"
+        "icon": "Layers",
+        "image": "/products/maquinas/alina-plancha-para-tazas/03.png"
       },
       {
         "title": { "es": "Compatible con todos los métodos de transferencia", "en": "Compatible with all transfer methods" },
         "description": { "es": "Con la Alina podrás realizar flock, flex, sublimación y cualquier otro método común de transferencia en caliente sobre tazas.", "en": "With Alina you can perform flock, flex, sublimation and any other common heat transfer method on mugs." },
-        "icon": "Zap"
+        "icon": "Zap",
+        "image": "/products/maquinas/alina-plancha-para-tazas/04.png"
       },
       {
         "title": { "es": "Fácil montaje y desmontaje", "en": "Easy assembly and disassembly" },
         "description": { "es": "Las resistencias se cambian a mano sin herramientas adicionales, reduciendo el tiempo entre pedidos de diferentes tamaños.", "en": "Elements swap by hand without extra tools, reducing turnaround time between orders of different sizes." },
-        "icon": "Wrench"
+        "icon": "Wrench",
+        "image": "/products/maquinas/alina-plancha-para-tazas/05.png"
       },
       {
         "title": { "es": "Control digital preciso", "en": "Precise digital control" },
@@ -608,6 +645,13 @@ const rawPlanchasData: Plancha[] = [
         "icon": "ShieldCheck"
       }
     ],
+    "hotspots": [
+      { "x": 37.7, "y": 15.6, "title": { "es": "Asa", "en": "Handle" }, "description": { "es": "Permite abrir y cerrar la prensa con comodidad y control en cada ciclo.", "en": "Allows opening and closing the press comfortably and with control in every cycle." } },
+      { "x": 49.6, "y": 53.9, "title": { "es": "Resistencia cilíndrica", "en": "Cylindrical heating element" }, "description": { "es": "Envuelve la taza para distribuir el calor de forma uniforme en toda la superficie.", "en": "Wraps the mug to distribute heat evenly across the entire surface." } },
+      { "x": 89.4, "y": 55.1, "title": { "es": "Botón de encendido", "en": "Power button" }, "description": { "es": "Enciende y apaga el equipo de forma rápida y segura.", "en": "Turns the machine on and off quickly and safely." } },
+      { "x": 73.1, "y": 55.3, "title": { "es": "Controlador digital GY-04", "en": "GY-04 digital controller" }, "description": { "es": "Programa la temperatura y el tiempo con precisión para cada trabajo.", "en": "Program temperature and time precisely for each job." } },
+      { "x": 18.8, "y": 63.3, "title": { "es": "Perilla de ajuste", "en": "Adjustment knob" }, "description": { "es": "Regula la presión de prensado para adaptarse a distintos grosores de taza.", "en": "Adjusts pressing pressure to accommodate different mug thicknesses." } }
+    ],
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las resistencias y superficie de contacto.",
@@ -628,6 +672,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "horno-para-sublimacion",
     "slug": "horno-para-sublimacion",
+    "hidden": true,
     "name": {
       "es": "Horno sublimación 3D",
       "en": "3D Sublimation Oven",
@@ -1291,6 +1336,33 @@ const rawPlanchasData: Plancha[] = [
         "title": { "es": "Resistencias para vasos (6 oz, 9 oz, 12 oz y 15 oz)", "en": "Mug elements (6 oz, 9 oz, 12 oz, and 15 oz)" },
         "description": { "es": "Agrega un toque personal a tus bebidas para que cada sorbo sea especial y único.", "en": "Add a personal touch to your drinkware so every sip feels special and unique." },
         "icon": "CupSoda"
+      }
+    ],
+    "hotspots": [
+      {
+        "x": 51, "y": 3,
+        "title": { "es": "Asa de transporte", "en": "Carrying handle" },
+        "description": { "es": "Asa integrada en la estructura superior que facilita el transporte y reposicionamiento de la máquina en el taller sin esfuerzo adicional.", "en": "Integrated handle on the upper frame for easy transport and repositioning of the machine in the workshop." }
+      },
+      {
+        "x": 70, "y": 30,
+        "title": { "es": "Controlador digital GY-04", "en": "GY-04 Digital Controller" },
+        "description": { "es": "Panel digital con temporizador 0-999 seg., rango de temperatura 0-225°C y precisión ±0,5%. Permite programar y repetir configuraciones con exactitud para trabajos en serie.", "en": "Digital panel with 0-999 sec. timer, 0-225°C temperature range and ±0.5% accuracy. Program and repeat settings precisely for batch jobs." }
+      },
+      {
+        "x": 77, "y": 32,
+        "title": { "es": "Botón ON/OFF", "en": "ON/OFF button" },
+        "description": { "es": "Interruptor principal de encendido y apagado con acceso directo y ergonómico. Corta completamente la alimentación de la máquina para un uso seguro.", "en": "Main power on/off switch with direct ergonomic access. Fully cuts the machine's power supply for safe operation." }
+      },
+      {
+        "x": 31, "y": 34,
+        "title": { "es": "Sistema de apertura giratoria", "en": "Rotary opening system" },
+        "description": { "es": "Mecanismo de apertura giratoria manual que desplaza la platina superior hacia un lado, dejando la superficie de trabajo completamente libre para colocar y retirar objetos con comodidad.", "en": "Manual rotary opening mechanism that swings the upper platen to the side, leaving the work surface completely free for comfortable object placement and removal." }
+      },
+      {
+        "x": 31, "y": 70,
+        "title": { "es": "Base y estructura robusta", "en": "Robust base and frame" },
+        "description": { "es": "Estructura de acero resistente que garantiza estabilidad durante el prensado. El diseño compacto la hace ideal para talleres con espacio reducido sin renunciar a la potencia de 1.800 W.", "en": "Resistant steel frame ensures stability during pressing. The compact design makes it ideal for small workshops without sacrificing 1,800 W of power." }
       }
     ],
     "maintenanceTips": {
@@ -2001,24 +2073,24 @@ const rawPlanchasData: Plancha[] = [
     ],
     "hotspots": [
       {
-        "x": 55, "y": 22,
-        "title": { "es": "Controlador GY-04", "en": "GY-04 Controller" },
-        "description": { "es": "Pantalla digital con control de tiempo, temperatura, modo eco y precalentamiento.", "en": "Digital display with time, temperature, eco mode, and preheating controls." }
+        "x": 65.2, "y": 8.6,
+        "title": { "es": "Asa de transporte", "en": "Carrying handle" },
+        "description": { "es": "Asa integrada en la parte superior que facilita el transporte y reposicionamiento de la máquina en el taller sin esfuerzo adicional.", "en": "Integrated handle on the top that makes transporting and repositioning the machine in the workshop effortless." }
       },
       {
-        "x": 35, "y": 45,
-        "title": { "es": "Resistencia intercambiable", "en": "Interchangeable element" },
-        "description": { "es": "Zona calefactora adaptable a 8 formatos distintos de taza y termo.", "en": "Heating zone adaptable to 8 different mug and tumbler formats." }
+        "x": 57.8, "y": 49.8,
+        "title": { "es": "Resistencia intercambiable (8 formatos)", "en": "Interchangeable element (8 formats)" },
+        "description": { "es": "Sistema de 8 resistencias intercambiables sin herramientas: 1.5oz, 2.5oz, 6-9oz, 11-15oz, 12oz cónica, 17oz cónica y 20-30oz. Cubre todos los formatos del mercado con una sola máquina.", "en": "System of 8 tool-free interchangeable elements: 1.5oz, 2.5oz, 6-9oz, 11-15oz, 12oz conical, 17oz conical and 20-30oz. Covers every market format with a single machine." }
       },
       {
-        "x": 20, "y": 62,
-        "title": { "es": "Perillas de presión", "en": "Pressure knobs" },
-        "description": { "es": "4 perillas de ajuste manual para una presión perfecta en cada formato.", "en": "4 manual adjustment knobs for perfect pressure in every format." }
+        "x": 27.2, "y": 56.8,
+        "title": { "es": "Controlador digital GY-04", "en": "GY-04 Digital Controller" },
+        "description": { "es": "Panel digital con temporizador 0-999 seg., temperatura máxima 225°C, precisión ±0,5%, modo eco y precalentamiento. Programa y repite configuraciones con exactitud para trabajos en serie.", "en": "Digital panel with 0-999 sec. timer, 225°C maximum temperature, ±0.5% accuracy, eco mode and preheating. Program and repeat settings precisely for batch jobs." }
       },
       {
-        "x": 70, "y": 55,
-        "title": { "es": "Mango de soporte", "en": "Support handle" },
-        "description": { "es": "Empuñadura ergonómica para presionar hacia abajo con facilidad y mantener la presión de contacto óptima.", "en": "Ergonomic handle for easy downward pressing and maintaining optimal contact pressure." }
+        "x": 43.2, "y": 73.6,
+        "title": { "es": "Botón ON/OFF", "en": "ON/OFF button" },
+        "description": { "es": "Interruptor principal de encendido y apagado que corta completamente la alimentación de la máquina. Acceso directo y ergonómico para un uso seguro.", "en": "Main power on/off switch that fully cuts the machine's power supply. Direct ergonomic access for safe operation." }
       }
     ],
     "downloads": [
@@ -2347,22 +2419,26 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Automatización Industrial", "en": "Industrial Automation" },
         "description": { "es": "Sistema de desplazamiento eléctrico de doble plato que elimina la fatiga del operario y dobla la capacidad de producción.", "en": "Electric double-plate displacement system that eliminates operator fatigue and doubles production capacity." },
-        "icon": "Zap"
+        "icon": "Zap",
+        "image": "/products/maquinas/trinidad-prensa-termica-automatica/05.png"
       },
       {
         "title": { "es": "Precisión Láser Ultra", "en": "Ultra Laser Precision" },
         "description": { "es": "Doble proyector láser en cruz ajustable para un posicionamiento milimétrico de logos y diseños en cada prenda.", "en": "Adjustable cross-laser dual projectors for millimeter-perfect positioning of logos and designs on every garment." },
-        "icon": "Target"
+        "icon": "Target",
+        "image": "/products/maquinas/trinidad-prensa-termica-automatica/03.png"
       },
       {
         "title": { "es": "Control Inteligente PLC", "en": "Intelligent PLC Control" },
         "description": { "es": "Cerebro electrónico avanzado que gestiona presión, tiempo y temperatura con una estabilidad inigualable.", "en": "Advanced electronic brain that manages pressure, time, and temperature with unmatched stability." },
-        "icon": "Cpu"
+        "icon": "Cpu",
+        "image": "/products/maquinas/trinidad-prensa-termica-automatica/04.png"
       },
       {
         "title": { "es": "Seguridad de Vanguardia", "en": "Cutting-edge Safety" },
         "description": { "es": "Sensores de proximidad y botones de emergencia duales para garantizar la protección total del operario.", "en": "Proximity sensors and dual emergency buttons to ensure total operator protection." },
-        "icon": "ShieldCheck"
+        "icon": "ShieldCheck",
+        "image": "/products/maquinas/trinidad-prensa-termica-automatica/01.png"
       }
     ],
     "hotspots": [
@@ -2564,34 +2640,39 @@ const rawPlanchasData: Plancha[] = [
     ],
     "hotspots": [
       {
-        "x": 38, "y": 12,
-        "title": { "es": "Pantalla táctil GY-13", "en": "GY-13 Touch Display" },
+        "x": 75.1, "y": 10.4,
+        "title": { "es": "Láser de posicionamiento", "en": "Positioning laser" },
+        "description": { "es": "Dos láseres en cruz integrados para alinear diseños con precisión milimétrica. Garantizan la colocación exacta de la prenda en cada ciclo sin necesidad de marcas físicas.", "en": "Two integrated cross lasers for millimeter-precise design alignment. Guarantee exact garment placement every cycle without physical marks." }
+      },
+      {
+        "x": 26.5, "y": 18.3,
+        "title": { "es": "Controlador táctil GY-13", "en": "GY-13 Touch Controller" },
         "description": { "es": "Control táctil con 3 memorias de producción, ajuste de velocidad de transición y modos automático, semiautomático y manual.", "en": "Touch control with 3 production memories, transition speed adjustment, and automatic, semi-automatic and manual modes." }
       },
       {
-        "x": 22, "y": 35,
-        "title": { "es": "Láser de posicionamiento", "en": "Positioning laser" },
-        "description": { "es": "Uno de los dos láseres en cruz para alinear diseños con precisión milimétrica.", "en": "One of two cross lasers for millimeter-precise design alignment." }
+        "x": 22.6, "y": 24.0,
+        "title": { "es": "Botón de desplazamiento", "en": "Scroll button" },
+        "description": { "es": "Controla el movimiento horizontal de la prensa de un plato al otro para gestionar el ciclo de producción de forma rápida y precisa.", "en": "Controls the horizontal movement of the press from one plate to the other to manage the production cycle quickly and precisely." }
       },
       {
-        "x": 55, "y": 50,
-        "title": { "es": "Doble plato 40x50cm", "en": "Double 40x50cm plate" },
-        "description": { "es": "Dos platos intercambiables con sistema de cambio rápido. Mientras uno plancha, preparas el siguiente.", "en": "Two interchangeable plates with quick-change system. While one presses, you prepare the next." }
+        "x": 34.3, "y": 24.3,
+        "title": { "es": "Botón", "en": "Button" },
+        "description": { "es": "Botón de control integrado en el panel de operación para gestionar funciones de ciclo y seguridad durante la producción.", "en": "Control button integrated in the operation panel for managing cycle and safety functions during production." }
       },
       {
-        "x": 75, "y": 28,
-        "title": { "es": "Botón de desplazamiento horizontal", "en": "Horizontal scroll button" },
-        "description": { "es": "Controla el movimiento de la prensa de un plato al otro para gestionar el ciclo de producción.", "en": "Controls the press movement from one plate to the other to manage the production cycle." }
+        "x": 32.8, "y": 43.6,
+        "title": { "es": "Platos intercambiables con cambio rápido", "en": "Interchangeable quick-change plates" },
+        "description": { "es": "Dos platos de 40×50 cm con sistema de cambio rápido. Mientras uno plancha, preparas el siguiente para maximizar la productividad y reducir el tiempo de inactividad.", "en": "Two 40×50 cm plates with quick-change system. While one presses, you prepare the next to maximize productivity and reduce downtime." }
       },
       {
-        "x": 80, "y": 70,
-        "title": { "es": "Mesa con 4 ruedas con freno", "en": "Table with 4 braked wheels" },
-        "description": { "es": "Mueble integrado de alta calidad para trabajar cómodamente y mover la estación con facilidad.", "en": "Integrated high-quality cabinet for comfortable work and easy station movement." }
+        "x": 67.6, "y": 47.5,
+        "title": { "es": "Amplio espacio de trabajo", "en": "Large workspace" },
+        "description": { "es": "Superficie de trabajo generosa que facilita la colocación y preparación de prendas con total comodidad, reduciendo la fatiga en jornadas largas de producción continua.", "en": "Generous workspace that makes garment placement and preparation fully comfortable, reducing fatigue during long continuous production sessions." }
       },
       {
-        "x": 15, "y": 60,
-        "title": { "es": "Sensor detector de manos", "en": "Hand detection sensor" },
-        "description": { "es": "Sistema de seguridad integrado que detecta la presencia de manos y detiene el ciclo para proteger al operario.", "en": "Integrated safety system that detects hand presence and stops the cycle to protect the operator." }
+        "x": 47.6, "y": 52.9,
+        "title": { "es": "Modo manual y semiautomático", "en": "Manual and semi-automatic mode" },
+        "description": { "es": "Selecciona el modo de operación según el trabajo: automático para producción en serie, semiautomático para mayor control o manual para trabajos que requieren atención especial.", "en": "Select the operating mode to suit the job: automatic for batch production, semi-automatic for greater control, or manual for jobs requiring special attention." }
       }
     ],
     "storySegments": [
@@ -2712,22 +2793,26 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Compacta sin renunciar a la potencia", "en": "Compact without sacrificing power" },
         "description": { "es": "Chicago combina un tamaño reducido con unas prestaciones de nivel profesional. Ideal para talleres donde el espacio es limitado pero la exigencia de calidad no lo es.", "en": "Chicago combines a compact footprint with professional-level performance. Ideal for workshops where space is limited but quality demands are not." },
-        "icon": "Maximize"
+        "icon": "Maximize",
+        "image": "/products/maquinas/chicago-plancha-termica-automatica/02.png"
       },
       {
         "title": { "es": "Apertura y cierre automático", "en": "Automatic opening and closing" },
         "description": { "es": "Su sistema neumático de apertura y cierre automático elimina errores de operador y mantiene una presión perfectamente uniforme en cada ciclo.", "en": "Its pneumatic automatic opening and closing system eliminates operator errors and maintains perfectly uniform pressure every cycle." },
-        "icon": "Zap"
+        "icon": "Zap",
+        "image": "/products/maquinas/chicago-plancha-termica-automatica/03.png"
       },
       {
         "title": { "es": "Sublima materiales de hasta 35mm de grosor", "en": "Sublimate materials up to 35mm thick" },
         "description": { "es": "Gracias a su placa de gran recorrido, Chicago puede trabajar con prácticamente cualquier material: camisetas, sudaderas, mochilas, artículos rígidos y mucho más.", "en": "Thanks to its wide-travel plate, Chicago can handle virtually any material: t-shirts, hoodies, backpacks, rigid items, and much more." },
-        "icon": "Layers"
+        "icon": "Layers",
+        "image": "/products/maquinas/chicago-plancha-termica-automatica/05.png"
       },
       {
         "title": { "es": "Base deslizante para mayor comodidad", "en": "Sliding base for greater comfort" },
         "description": { "es": "La base deslizante permite cargar y descargar prendas sin esfuerzo y con total comodidad, reduciendo la fatiga durante las jornadas largas de producción.", "en": "The sliding base allows you to load and unload garments effortlessly and comfortably, reducing fatigue during long production sessions." },
-        "icon": "ArrowRight"
+        "icon": "ArrowRight",
+        "image": "/products/maquinas/chicago-plancha-termica-automatica/01.png"
       },
       {
         "title": { "es": "Ajuste automático de presión", "en": "Automatic pressure adjustment" },
@@ -2751,31 +2836,9 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      {
-        "x": 50, "y": 20,
-        "title": { "es": "Controlador GY-06", "en": "GY-06 Controller" },
-        "description": { "es": "Pantalla digital con control de tiempo, temperatura, modo eco y precalentamiento.", "en": "Digital display with time, temperature, eco mode, and preheating controls." }
-      },
-      {
-        "x": 20, "y": 55,
-        "title": { "es": "Botón de parada", "en": "Stop button" },
-        "description": { "es": "Parada de emergencia para detener el proceso al instante.", "en": "Emergency stop to halt the process instantly." }
-      },
-      {
-        "x": 50, "y": 65,
-        "title": { "es": "Placa calefactora 40x50cm", "en": "40x50cm heating plate" },
-        "description": { "es": "Resistencia fija con distribución de calor uniforme para resultados profesionales.", "en": "Fixed element with uniform heat distribution for professional results." }
-      },
-      {
-        "x": 75, "y": 45,
-        "title": { "es": "Base deslizante", "en": "Sliding base" },
-        "description": { "es": "Facilita la carga y descarga de prendas sin esfuerzo.", "en": "Makes loading and unloading garments effortless." }
-      },
-      {
-        "x": 80, "y": 20,
-        "title": { "es": "Sistema neumático", "en": "Pneumatic system" },
-        "description": { "es": "Apertura y cierre automático con presión uniforme en cada ciclo.", "en": "Automatic opening and closing with uniform pressure every cycle." }
-      }
+      { "x": 40.5, "y": 11.4, "title": { "es": "Controlador digital GY-06", "en": "GY-06 digital controller" }, "description": { "es": "Pantalla digital con control de tiempo, temperatura, modo eco y precalentamiento para una producción precisa y eficiente.", "en": "Digital display with time, temperature, eco mode, and preheating controls for precise and efficient production." } },
+      { "x": 43.1, "y": 62.8, "title": { "es": "Placa calefactora 40x50cm", "en": "40x50cm heating plate" }, "description": { "es": "Resistencia fija de gran superficie con distribución de calor uniforme. Permite trabajar con materiales de hasta 35mm de grosor.", "en": "Large fixed heating element with uniform heat distribution. Works with materials up to 35mm thick." } },
+      { "x": 28.9, "y": 83.1, "title": { "es": "Asa de la base deslizante", "en": "Sliding base handle" }, "description": { "es": "Permite desplazar la base de trabajo fácilmente para cargar y descargar prendas con total comodidad y sin esfuerzo.", "en": "Allows sliding the work base easily to load and unload garments comfortably and effortlessly." } }
     ],
     "downloads": [
       { "label": { "es": "Manual de Usuario", "en": "User Manual" }, "url": "/downloads/chicago-manual.pdf" },
@@ -2914,29 +2977,39 @@ const rawPlanchasData: Plancha[] = [
     ],
     "hotspots": [
       {
-        "x": 50, "y": 18,
-        "title": { "es": "Controlador GY-06", "en": "GY-06 Controller" },
-        "description": { "es": "Pantalla digital con modo eco, precalentamiento y control de tiempo y temperatura.", "en": "Digital display with eco mode, preheating, and time and temperature controls." }
+        "x": 40, "y": 14,
+        "title": { "es": "Controlador digital GY-06", "en": "GY-06 Digital Controller" },
+        "description": { "es": "Panel digital con temporizador 0-99 seg., temperatura máxima 225°C, precisión ±0,5%, modo eco y función de precalentamiento. Gestión intuitiva de todos los parámetros de producción.", "en": "Digital panel with 0-99 sec. timer, 225°C maximum temperature, ±0.5% accuracy, eco mode and preheating function. Intuitive management of all production parameters." }
       },
       {
-        "x": 20, "y": 50,
-        "title": { "es": "Botón de parada", "en": "Stop button" },
-        "description": { "es": "Parada de emergencia para detener el proceso al instante cuando sea necesario.", "en": "Emergency stop to halt the process instantly when needed." }
+        "x": 41, "y": 23,
+        "title": { "es": "Botón de parada de emergencia", "en": "Emergency stop button" },
+        "description": { "es": "Detiene el proceso al instante en caso de emergencia, protegiendo al operario y al material. Componente de seguridad certificado bajo estándar CE.", "en": "Halts the process instantly in an emergency, protecting both operator and material. Safety component certified to CE standard." }
       },
       {
-        "x": 50, "y": 65,
-        "title": { "es": "Placa calefactora 40x50cm", "en": "40x50cm heating plate" },
-        "description": { "es": "Resistencia fija con distribución de calor uniforme. Soporta materiales de hasta 68mm de grosor.", "en": "Fixed element with uniform heat distribution. Handles materials up to 68mm thick." }
+        "x": 31, "y": 26,
+        "title": { "es": "Botón ON/OFF", "en": "ON/OFF button" },
+        "description": { "es": "Interruptor principal de encendido y apagado que corta completamente la alimentación de la máquina. Acceso directo y ergonómico para un uso seguro.", "en": "Main power on/off switch that fully cuts the machine's power supply. Direct ergonomic access for safe operation." }
       },
       {
-        "x": 75, "y": 50,
-        "title": { "es": "Base deslizante", "en": "Sliding base" },
-        "description": { "es": "Facilita la carga y descarga de prendas sin esfuerzo para mayor comodidad.", "en": "Makes loading and unloading garments effortless for greater comfort." }
+        "x": 79, "y": 42,
+        "title": { "es": "Sistema de gas neumático", "en": "Pneumatic gas system" },
+        "description": { "es": "Sistema neumático de apertura y cierre automático con ángulo de 25°. Garantiza una presión perfectamente uniforme en cada ciclo y elimina la variabilidad del operario.", "en": "Pneumatic automatic opening and closing system with a 25° angle. Guarantees perfectly uniform pressure every cycle and eliminates operator variability." }
       },
       {
-        "x": 78, "y": 25,
-        "title": { "es": "Sistema neumático", "en": "Pneumatic system" },
-        "description": { "es": "Apertura y cierre automático a 25° con presión uniforme en cada ciclo.", "en": "Automatic opening and closing at 25° with uniform pressure every cycle." }
+        "x": 27, "y": 46,
+        "title": { "es": "Difusor de calor", "en": "Heat diffuser" },
+        "description": { "es": "Sistema de distribución uniforme del calor que asegura una temperatura homogénea en toda la superficie de la placa, evitando puntos fríos o calientes que afecten la calidad del transfer.", "en": "Uniform heat distribution system that ensures a homogeneous temperature across the entire plate surface, avoiding cold or hot spots that affect transfer quality." }
+      },
+      {
+        "x": 33, "y": 63,
+        "title": { "es": "Placa calefactora 40×50 cm", "en": "40×50 cm heating plate" },
+        "description": { "es": "Resistencia fija de 40×50 cm con distribución de calor uniforme y potencia de 2.500 W. Admite materiales de hasta 68 mm de grosor para versatilidad máxima.", "en": "Fixed 40×50 cm heating element with uniform heat distribution and 2,500 W power. Handles materials up to 68 mm thick for maximum versatility." }
+      },
+      {
+        "x": 32, "y": 82,
+        "title": { "es": "Bandeja extraíble", "en": "Removable tray" },
+        "description": { "es": "Bandeja inferior extraíble y deslizante que facilita la colocación precisa de prendas y materiales. Reduce la fatiga en jornadas largas y mejora la eficiencia del flujo de trabajo.", "en": "Removable sliding lower tray that enables precise garment and material placement. Reduces fatigue during long sessions and improves workflow efficiency." }
       }
     ],
     "downloads": [
@@ -2957,155 +3030,6 @@ const rawPlanchasData: Plancha[] = [
         "Inspection and cleaning of internal components.",
         "Temperature verification and calibration.",
         "Periodic inspection of the pneumatic system and its connections."
-      ]
-    }
-  },
-  {
-    "id": "bali-plancha-semiautomatica",
-    "slug": "bali-plancha-semiautomatica",
-    "name": {
-      "es": "Bali Plancha Semiautomática",
-      "en": "Bali Semi-Automatic Heat Press",
-      "pt": "Bali Prensa Semiautomática",
-      "it": "Bali Pressa Semiautomatica"
-    },
-    "description": {
-      "es": "La plancha semiautomática Bali ha sido mejorada con una estructura reforzada. Su sistema de apertura automática mediante anclaje electromagnético consigue que la plancha se abra sola tras pasar el tiempo programado, mientras que la presión se ajusta manualmente. Permite trabajar con artículos de hasta 20mm de espesor.",
-      "en": "The Bali semi-automatic press features a reinforced structure. Its electromagnetic anchor automatic opening system makes the press open on its own after the programmed time, while pressure is adjusted manually. Works with items up to 20mm thick.",
-      "pt": "A prensa semiautomática Bali tem uma estrutura reforçada. O seu sistema de abertura automática por âncora eletromagnética faz com que a prensa se abra sozinha após o tempo programado, enquanto a pressão é ajustada manualmente. Permite trabalhar com artigos de até 20mm de espessura.",
-      "it": "La pressa semiautomatica Bali ha una struttura rinforzata. Il suo sistema di apertura automatica a ancoraggio elettromagnetico fa aprire la pressa da sola allo scadere del tempo programmato, mentre la pressione viene regolata manualmente. Consente di lavorare con articoli fino a 20mm di spessore."
-    },
-    "image": "https://beinsen.com/wp-content/uploads/2024/01/bali-beinsen.png",
-    "price": "Consultar PVP",
-    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
-    "features": {
-      "es": [
-        "Apertura automática por anclaje electromagnético",
-        "Presión manual ajustable y estructura reforzada",
-        "Compatible con sublimación, transfer, vinilo y escudos bordados"
-      ],
-      "en": [
-        "Automatic opening via electromagnetic anchor",
-        "Manually adjustable pressure with reinforced structure",
-        "Compatible with sublimation, transfer, vinyl and embroidered emblems"
-      ],
-      "pt": [
-        "Abertura automática por âncora eletromagnética",
-        "Pressão manual ajustável com estrutura reforçada",
-        "Compatível com sublimação, transfer, vinil e emblemas bordados"
-      ],
-      "it": [
-        "Apertura automatica tramite ancoraggio elettromagnetico",
-        "Pressione manuale regolabile con struttura rinforzata",
-        "Compatibile con sublimazione, transfer, vinile ed emblemi ricamati"
-      ]
-    },
-    "accessories": [
-      { "id": "almohadilla-teflon-termorresistente-40x50" },
-      { "id": "almohadilla-teflon-termorresistente-38x38" },
-      { "id": "almohadilla-teflon-termorresistente-25x25" },
-      { "id": "almohadilla-teflon-termorresistente-15x15" },
-      { "id": "plato-base-camisetas-cambio-rapido" },
-      { "id": "plato-base-18x18-cambio-rapido" },
-      { "id": "plato-base-18x45-cambio-rapido" },
-      { "id": "plato-base-30x35-cambio-rapido" },
-      { "id": "termometro-digital-infrarrojos-it122" },
-      { "id": "mesa-universal-grande" },
-      { "id": "guantes-protectores-algodon" },
-      { "id": "almohadilla-silicona-40x50" }
-    ],
-    "consumables": [
-      { "id": "cinta-termica-10mm" }
-    ],
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
-    "openingType": { "es": "Semiautomática", "en": "Semi-Automatic", "pt": "Semiautomática", "it": "Semiautomatica" },
-    "technicalSpecs": [
-      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Bali" },
-      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Semiautomática" },
-      { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Automático (electromagnético)" },
-      { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
-      { "label": { "es": "Ajuste de presión", "en": "Pressure Adjustment" }, "value": "Manual" },
-      { "label": { "es": "Grosor máximo imprimible", "en": "Max Printable Thickness" }, "value": "20 mm" },
-      { "label": { "es": "Plato", "en": "Plate" }, "value": "Extraíble" },
-      { "label": { "es": "Contenido de la caja", "en": "Box Contents" }, "value": "Plancha montada, cable conector, plato extraíble, controlador digital" }
-    ],
-    "benefits": [
-      {
-        "title": { "es": "Apertura automática sin compresor", "en": "Automatic opening without compressor" },
-        "description": { "es": "El anclaje electromagnético libera la plancha automáticamente al finalizar el ciclo programado. No necesitas compresor de aire: más silencio, menos mantenimiento y mayor comodidad.", "en": "The electromagnetic anchor automatically releases the press when the programmed cycle ends. No air compressor needed — less noise, less maintenance, greater comfort." },
-        "icon": "Zap"
-      },
-      {
-        "title": { "es": "Estructura reforzada para uso intensivo", "en": "Reinforced structure for intensive use" },
-        "description": { "es": "Bali ha sido rediseñada con una estructura más robusta que garantiza estabilidad y durabilidad en jornadas largas de producción continua.", "en": "Bali has been redesigned with a more robust structure that guarantees stability and durability during long continuous production sessions." },
-        "icon": "ShieldCheck"
-      },
-      {
-        "title": { "es": "Presión manual perfectamente ajustable", "en": "Perfectly adjustable manual pressure" },
-        "description": { "es": "Controlas tú la presión de forma manual, adaptándola a cada tipo de artículo y material para obtener siempre el resultado óptimo.", "en": "You control pressure manually, adapting it to each article type and material to always get the optimal result." },
-        "icon": "Target"
-      },
-      {
-        "title": { "es": "Compatible con múltiples técnicas", "en": "Compatible with multiple techniques" },
-        "description": { "es": "Diseñada para sublimación, transfer con papel, vinilo transfer textil y aplicación de escudos y emblemas bordados. Una sola máquina para todos tus proyectos de personalización.", "en": "Designed for sublimation, paper transfer, vinyl textile transfer, and application of embroidered badges and emblems. One machine for all your customization projects." },
-        "icon": "Layers"
-      },
-      {
-        "title": { "es": "Trabaja con materiales de hasta 20mm", "en": "Work with materials up to 20mm thick" },
-        "description": { "es": "Su recorrido de plato permite personalizar artículos de hasta 20mm de grosor, ampliando las posibilidades más allá de la ropa plana convencional.", "en": "Its plate travel allows customizing items up to 20mm thick, expanding possibilities beyond conventional flat garments." },
-        "icon": "Ruler"
-      },
-      {
-        "title": { "es": "Plato extraíble para mayor versatilidad", "en": "Removable plate for greater versatility" },
-        "description": { "es": "El plato extraíble facilita la limpieza, el mantenimiento y la adaptación a diferentes superficies de trabajo según el pedido.", "en": "The removable plate makes cleaning, maintenance, and adaptation to different work surfaces easier depending on the job." },
-        "icon": "PanelBottom"
-      },
-      {
-        "title": { "es": "Controlador digital incluido", "en": "Digital controller included" },
-        "description": { "es": "Viene con controlador digital para programar temperatura y tiempo con precisión, garantizando resultados homogéneos en cada ciclo de producción.", "en": "Comes with a digital controller to program temperature and time precisely, guaranteeing consistent results in every production cycle." },
-        "icon": "Cpu"
-      }
-    ],
-    "hotspots": [
-      {
-        "x": 50, "y": 18,
-        "title": { "es": "Controlador digital", "en": "Digital controller" },
-        "description": { "es": "Programación de temperatura y tiempo para resultados precisos y repetibles.", "en": "Temperature and time programming for precise, repeatable results." }
-      },
-      {
-        "x": 22, "y": 40,
-        "title": { "es": "Anclaje electromagnético", "en": "Electromagnetic anchor" },
-        "description": { "es": "Sistema que libera la plancha automáticamente al finalizar el ciclo sin necesidad de compresor.", "en": "System that automatically releases the press at cycle end without a compressor." }
-      },
-      {
-        "x": 50, "y": 65,
-        "title": { "es": "Plato extraíble", "en": "Removable plate" },
-        "description": { "es": "Plato inferior extraíble para fácil limpieza y adaptación a distintos trabajos.", "en": "Removable lower plate for easy cleaning and adaptation to different jobs." }
-      },
-      {
-        "x": 78, "y": 38,
-        "title": { "es": "Ajuste de presión manual", "en": "Manual pressure adjustment" },
-        "description": { "es": "Perilla de ajuste manual para adaptar la presión al grosor y tipo de cada artículo.", "en": "Manual adjustment knob to adapt pressure to the thickness and type of each item." }
-      }
-    ],
-    "downloads": [
-      { "label": { "es": "Manual de Usuario Bali", "en": "Bali User Manual" }, "url": "/downloads/bali-manual.pdf" },
-      { "label": { "es": "Ficha Técnica Bali", "en": "Bali Technical Sheet" }, "url": "/downloads/bali-ficha-tecnica.pdf" }
-    ],
-    "maintenanceTips": {
-      "es": [
-        "Limpieza regular de la placa calefactora y la superficie de sublimación.",
-        "Reemplazo de láminas de teflón protectoras cuando presenten desgaste.",
-        "Inspección y limpieza de los componentes del anclaje electromagnético.",
-        "Verificación y calibración de la temperatura con termómetro externo.",
-        "Comprobar periódicamente el ajuste de presión y la integridad de la estructura."
-      ],
-      "en": [
-        "Regular cleaning of the heating plate and sublimation surface.",
-        "Replacement of protective teflon sheets when worn.",
-        "Inspection and cleaning of the electromagnetic anchor components.",
-        "Temperature verification and calibration with external thermometer.",
-        "Periodically check the pressure adjustment and structural integrity."
       ]
     }
   },
@@ -4492,22 +4416,30 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "No habrá espinillera que se te resista", "en": "No shin guard can resist it" },
         "description": { "es": "Con sus 3 platos de diferentes tamaños (205×171×218 mm / 114×132×179 mm / 97×115×115 mm) puedes personalizar cualquier espinillera del mercado, sin importar su tamaño o forma.", "en": "With its 3 different-sized plates (205×171×218 mm / 114×132×179 mm / 97×115×115 mm) you can customize any shin guard on the market, regardless of size or shape." },
-        "icon": "Target"
+        "icon": "Target",
+        "image": "/products/maquinas/estambul-prensa-termica-para-espinilleras/03.png",
+        "objectFit": "contain"
       },
       {
         "title": { "es": "Compacta: llévala a todas partes", "en": "Compact: take it anywhere" },
         "description": { "es": "Su diseño compacto hace de Estambul la compañera ideal para talleres con poco espacio o para llevarla a eventos y competiciones deportivas donde personalizas en el momento.", "en": "Its compact design makes Estambul the ideal companion for small workshops or for taking to sports events and competitions where you personalize on the spot." },
-        "icon": "Move"
+        "icon": "Move",
+        "image": "/products/maquinas/estambul-prensa-termica-para-espinilleras/04.png",
+        "objectFit": "contain"
       },
       {
         "title": { "es": "Robusta y duradera", "en": "Robust and durable" },
         "description": { "es": "Construida para soportar jornadas continuas de producción. Su estructura sólida garantiza resultados fiables sesión tras sesión.", "en": "Built to withstand continuous production sessions. Its solid structure guarantees reliable results session after session." },
-        "icon": "ShieldCheck"
+        "icon": "ShieldCheck",
+        "image": "/products/maquinas/estambul-prensa-termica-para-espinilleras/06.png",
+        "objectFit": "contain"
       },
       {
         "title": { "es": "Sencilla desde el primer uso", "en": "Simple from the very first use" },
         "description": { "es": "Utilizar Estambul te resultará tan fácil como el resto de la gama Beinsen. La placa calefactora y los platos permiten una colocación cómoda y una transferencia del diseño profesional desde el minuto uno.", "en": "Using Estambul is as easy as the rest of the Beinsen range. The heating plate and platens allow comfortable placement and professional design transfer from minute one." },
-        "icon": "Settings"
+        "icon": "Settings",
+        "image": "/products/maquinas/estambul-prensa-termica-para-espinilleras/02.png",
+        "objectFit": "contain"
       },
       {
         "title": { "es": "Sistema de intercambio rápido de platos", "en": "Quick-change plate system" },
@@ -4523,6 +4455,14 @@ const rawPlanchasData: Plancha[] = [
     "downloads": [
       { "label": { "es": "Manual de Usuario Estambul", "en": "Estambul User Manual" }, "url": "/downloads/estambul-manual.pdf" },
       { "label": { "es": "Ficha Técnica Estambul", "en": "Estambul Technical Sheet" }, "url": "/downloads/estambul-ficha-tecnica.pdf" }
+    ],
+    "hotspots": [
+      { "x": 56.8, "y": 11.8, "title": { "es": "Asa ergonómica", "en": "Ergonomic handle" }, "description": { "es": "Permite abrir y cerrar la prensa con comodidad y precisión en cada ciclo de sublimación.", "en": "Allows opening and closing the press comfortably and precisely in every sublimation cycle." } },
+      { "x": 63.3, "y": 26.5, "title": { "es": "Sistema de ajuste de presión", "en": "Pressure adjustment system" }, "description": { "es": "Regula la presión para adaptarse al grosor y forma de cada espinillera, garantizando un contacto perfecto.", "en": "Adjusts pressure to suit the thickness and shape of each shin guard for perfect contact." } },
+      { "x": 18.5, "y": 36.7, "title": { "es": "Perilla de ajuste", "en": "Adjustment knob" }, "description": { "es": "Facilita el posicionamiento y la sujeción de la espinillera para asegurar un transfer preciso y sin desplazamientos.", "en": "Facilitates positioning and securing the shin guard for precise transfer without shifting." } },
+      { "x": 79.7, "y": 36.9, "title": { "es": "Botón de encendido", "en": "Power button" }, "description": { "es": "Enciende y apaga el equipo de forma rápida y segura.", "en": "Turns the machine on and off quickly and safely." } },
+      { "x": 68.3, "y": 38.1, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "Programa la temperatura y el tiempo de sublimación con precisión para obtener resultados profesionales en cada espinillera.", "en": "Programs sublimation temperature and time precisely for professional results on every shin guard." } },
+      { "x": 52.6, "y": 58.8, "title": { "es": "Plato intercambiable", "en": "Interchangeable plate" }, "description": { "es": "Sistema de cambio rápido de platos sin herramientas. Compatible con 3 tamaños para cubrir cualquier espinillera del mercado.", "en": "Tool-free quick-change plate system. Compatible with 3 sizes to cover any shin guard on the market." } }
     ],
     "maintenanceTips": {
       "es": [
@@ -4619,22 +4559,26 @@ const rawPlanchasData: Plancha[] = [
       {
         "title": { "es": "Apertura giratoria 180° para mayor comodidad", "en": "180° swing-away opening for greater comfort" },
         "description": { "es": "La platina superior giratoria de 180° maximiza el espacio de trabajo, lo que permite cargar y descargar materiales con total facilidad y eficiencia, reduciendo la fatiga en jornadas largas.", "en": "The 180° swing-away upper platen maximizes workspace, making it easy to load and unload materials with total efficiency, reducing fatigue during long sessions." },
-        "icon": "RotateCcw"
+        "icon": "RotateCcw",
+        "image": "/products/maquinas/felina-prensa-swing-away-electrica/02.png"
       },
       {
         "title": { "es": "Protección anti-pellizco inteligente", "en": "Smart pinch protection" },
         "description": { "es": "Los sensores inteligentes detectan obstrucciones e inmediatamente detienen y levantan la placa de calefacción, protegiendo al operario y al material en todo momento.", "en": "Smart sensors detect obstructions and immediately stop and lift the heating plate, protecting the operator and materials at all times." },
-        "icon": "ShieldCheck"
+        "icon": "ShieldCheck",
+        "image": "/products/maquinas/felina-prensa-swing-away-electrica/03.png"
       },
       {
         "title": { "es": "Operación de doble mano para mayor seguridad", "en": "Two-hand operation for enhanced safety" },
         "description": { "es": "El diseño ergonómico exige presiones simultáneas en ambos mandos para activar la prensa, eliminando la posibilidad de activación accidental y garantizando un entorno de trabajo seguro.", "en": "The ergonomic design requires simultaneous pressure on both controls to activate the press, eliminating accidental activation and ensuring a safe working environment." },
-        "icon": "Hand"
+        "icon": "Hand",
+        "image": "/products/maquinas/felina-prensa-swing-away-electrica/04.png"
       },
       {
         "title": { "es": "Programación de transferencia en dos etapas", "en": "Two-stage transfer programming" },
         "description": { "es": "Incluye ciclos de precalentamiento y transferencia preprogramados para eliminar la humedad y fijar los diseños a la perfección. También puedes omitir el precalentamiento para agilizar el proceso con materiales secos.", "en": "Includes preprogrammed preheating and transfer cycles to remove moisture and set designs perfectly. You can also skip preheating for faster processing with dry materials." },
-        "icon": "Layers"
+        "icon": "Layers",
+        "image": "/products/maquinas/felina-prensa-swing-away-electrica/01.png"
       },
       {
         "title": { "es": "Ajuste automático de presión por material", "en": "Automatic pressure adjustment by material" },
@@ -4659,29 +4603,39 @@ const rawPlanchasData: Plancha[] = [
     ],
     "hotspots": [
       {
-        "x": 45, "y": 15,
+        "x": 79, "y": 24,
         "title": { "es": "Controlador táctil GY-13", "en": "GY-13 Touch Controller" },
-        "description": { "es": "Panel táctil con 3 memorias, contador de producción y ajuste de presión 0-8. Temporizador 0-999 seg. y temperatura hasta 225°C.", "en": "Touch panel with 3 memories, production counter and 0-8 pressure adjustment. Timer 0-999 sec. and temperature up to 225°C." }
+        "description": { "es": "Panel táctil con 3 memorias de configuración, contador de producción automático y ajuste de presión 0-8. Temporizador 0-999 seg. y temperatura máxima de 225°C.", "en": "Touch panel with 3 configuration memories, automatic production counter and 0-8 pressure adjustment. Timer 0-999 sec. and maximum temperature of 225°C." }
       },
       {
-        "x": 80, "y": 30,
-        "title": { "es": "Apertura giratoria 180°", "en": "180° swing-away opening" },
-        "description": { "es": "La platina superior gira 180° para maximizar el espacio de trabajo y facilitar la carga de materiales.", "en": "The upper platen swings 180° to maximize workspace and simplify material loading." }
+        "x": 67, "y": 36,
+        "title": { "es": "Botón de activación (doble mano)", "en": "Activation button (two-hand)" },
+        "description": { "es": "Parte del sistema de seguridad de doble mano: ambos botones deben pulsarse simultáneamente para cerrar la prensa, garantizando que las manos del operario estén alejadas del área de riesgo.", "en": "Part of the two-hand safety system: both buttons must be pressed simultaneously to close the press, keeping the operator's hands away from the hazard area." }
       },
       {
-        "x": 50, "y": 60,
+        "x": 62, "y": 39,
+        "title": { "es": "Brazo swing-away 180°", "en": "180° swing-away arm" },
+        "description": { "es": "El brazo giratorio desplaza la platina superior 180° hacia un lado, dejando el área de trabajo completamente libre para colocar y retirar materiales con total comodidad.", "en": "The swing arm moves the upper platen 180° to the side, leaving the work area completely free to place and remove materials with ease." }
+      },
+      {
+        "x": 79, "y": 38,
+        "title": { "es": "Botón de emergencia", "en": "Emergency stop button" },
+        "description": { "es": "Detiene y levanta la platina al instante en caso de emergencia. La función de reinicio con un toque permite reanudar el flujo de trabajo rápidamente sin pérdida de configuración.", "en": "Instantly stops and lifts the platen in an emergency. The one-touch restart function lets you quickly resume workflow without losing settings." }
+      },
+      {
+        "x": 77, "y": 53,
+        "title": { "es": "Ajuste de presión 0-8", "en": "Pressure adjustment 0-8" },
+        "description": { "es": "Regulación precisa de la presión en 8 niveles para adaptarse al grosor de cada material. El sensor inteligente asegura una distribución uniforme del calor.", "en": "Precise pressure regulation in 8 levels to adapt to the thickness of each material. The smart sensor ensures even heat distribution." }
+      },
+      {
+        "x": 80, "y": 64,
+        "title": { "es": "Sistema de refrigeración", "en": "Cooling system" },
+        "description": { "es": "Sistema de disipación de calor que mantiene la temperatura de los componentes internos dentro de los rangos seguros de operación, prolongando la vida útil de la máquina.", "en": "Heat dissipation system that keeps internal component temperatures within safe operating ranges, extending the machine's service life." }
+      },
+      {
+        "x": 16, "y": 79,
         "title": { "es": "Placa calefactora 40×50 / 40×60 cm", "en": "40×50 / 40×60 cm heating plate" },
-        "description": { "es": "Distribución de calor uniforme para materiales de hasta 35 mm de grosor. Disponible en dos tamaños.", "en": "Uniform heat distribution for materials up to 35 mm thick. Available in two sizes." }
-      },
-      {
-        "x": 20, "y": 70,
-        "title": { "es": "Base deslizante de cambio rápido", "en": "Quick-change sliding base" },
-        "description": { "es": "Facilita la colocación de materiales con precisión. Sistema de cambio rápido sin herramientas.", "en": "Precise material placement. Quick-change system without tools." }
-      },
-      {
-        "x": 15, "y": 40,
-        "title": { "es": "Botón de parada de emergencia", "en": "Emergency stop button" },
-        "description": { "es": "Detiene el proceso al instante. Reinicio con un toque para reanudar el flujo de trabajo.", "en": "Stops the process instantly. One-touch restart to resume workflow." }
+        "description": { "es": "Distribución de calor uniforme para sublimar materiales de hasta 35 mm de grosor. Disponible en dos tamaños para adaptarse a tus necesidades de producción.", "en": "Uniform heat distribution for sublimating materials up to 35 mm thick. Available in two sizes to suit your production needs." }
       }
     ],
     "downloads": [
@@ -4798,7 +4752,8 @@ const getSortName = (item: any) => {
   return name.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 };
 
-export const planchasData: Plancha[] = rawPlanchasData.map(enrichPlancha).sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
+export const planchasData: Plancha[] = rawPlanchasData.map(enrichPlancha).filter(p => !p.hidden).sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
+export const allPlanchasData: Plancha[] = rawPlanchasData.map(enrichPlancha).sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
 
 const rawAccessoriesData: Accessory[] = [
   {
