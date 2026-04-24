@@ -2611,14 +2611,6 @@ const rawPlanchasData: Plancha[] = [
         "image": "https://beinsen.com/wp-content/uploads/2025/07/miranda-principal.png"
       }
     ],
-    "hotspots": [
-      { "x": 75.1, "y": 10.4, "title": { "es": "Láser", "en": "Laser" }, "description": { "es": "", "en": "" } },
-      { "x": 26.5, "y": 18.3, "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
-      { "x": 34.3, "y": 24.3, "title": { "es": "Botón de desplazamiento horizontal", "en": "Horizontal slide button" }, "description": { "es": "", "en": "" } },
-      { "x": 32.8, "y": 43.6, "title": { "es": "Platos intercambiables con sistema de cambio rápido", "en": "Interchangeable plates with quick-change system" }, "description": { "es": "", "en": "" } },
-      { "x": 67.6, "y": 47.5, "title": { "es": "Amplio espacio de trabajo", "en": "Wide workspace" }, "description": { "es": "", "en": "" } },
-      { "x": 47.6, "y": 52.9, "title": { "es": "Modo manual / semi", "en": "Manual / semi mode" }, "description": { "es": "", "en": "" } }
-    ],
     "downloads": [
       { "label": { "es": "Manual de Usuario Miranda", "en": "Miranda User Manual" }, "url": "/downloads/miranda-manual.pdf" },
       { "label": { "es": "Ficha Técnica Miranda", "en": "Miranda Technical Sheet" }, "url": "/downloads/miranda-ficha-tecnica.pdf" }
