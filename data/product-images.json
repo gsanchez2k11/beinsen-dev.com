@@ -1,4 +1,10 @@
 {
+  "barahona-plancha-para-tazas-6-en-1": [
+    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/01.png",
+    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/02.png",
+    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/03.png",
+    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/04.png"
+  ],
   "alaska-plancha-termica-textil": [
     "/products/maquinas/alaska-plancha-termica-textil/01.png",
     "/products/maquinas/alaska-plancha-termica-textil/02.png",
@@ -102,15 +108,15 @@
     "/products/maquinas/belice-plancha-termica-textil/08.png"
   ],
   "chicago-plancha-termica-automatica": [
-    "/products/maquinas/chicago-plancha-termica-automatica/01.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/02.JPG",
-    "/products/maquinas/chicago-plancha-termica-automatica/03.JPG",
     "/products/maquinas/chicago-plancha-termica-automatica/04.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/05.JPG",
+    "/products/maquinas/chicago-plancha-termica-automatica/01.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/02.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/03.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/05.png",
     "/products/maquinas/chicago-plancha-termica-automatica/06.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/07.JPG",
-    "/products/maquinas/chicago-plancha-termica-automatica/08.JPG",
-    "/products/maquinas/chicago-plancha-termica-automatica/09.JPG"
+    "/products/maquinas/chicago-plancha-termica-automatica/07.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/08.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/09.png"
   ],
   "cinta-termica-sublimacion-10mm": [
     "/products/consumibles/cinta-termica-sublimacion-10mm/01.png"
@@ -129,6 +135,12 @@
   ],
   "contactor-ca-220v-sx8-sz1": [
     "/products/accesorios/contactor-ca-220v-sx8-sz1/01.png"
+  ],
+  "dorian-plancha-termica-platos": [
+    "/products/maquinas/dorian-plancha-termica-platos/01.png",
+    "/products/maquinas/dorian-plancha-termica-platos/02.png",
+    "/products/maquinas/dorian-plancha-termica-platos/03.png",
+    "/products/maquinas/dorian-plancha-termica-platos/04.png"
   ],
   "doha-plancha-transfer-gran-formato": [
     "/products/maquinas/doha-plancha-transfer-gran-formato/07.png",
@@ -153,11 +165,11 @@
     "/products/maquinas/esparta-prensa-termica-neumatica/07.png"
   ],
   "estambul-prensa-termica-para-espinilleras": [
+    "/products/maquinas/estambul-prensa-termica-para-espinilleras/05.png",
     "/products/maquinas/estambul-prensa-termica-para-espinilleras/01.png",
     "/products/maquinas/estambul-prensa-termica-para-espinilleras/02.png",
     "/products/maquinas/estambul-prensa-termica-para-espinilleras/03.png",
     "/products/maquinas/estambul-prensa-termica-para-espinilleras/04.png",
-    "/products/maquinas/estambul-prensa-termica-para-espinilleras/05.png",
     "/products/maquinas/estambul-prensa-termica-para-espinilleras/06.png"
   ],
   "felina-prensa-swing-away-electrica": [
@@ -377,7 +389,11 @@
     "/products/maquinas/barein-plancha-termica/06.png"
   ],
   "chinela-plancha-transfer-zapatillas": [
-    "/products/maquinas/chinela-plancha-transfer-zapatillas/01.jpg"
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/01.png",
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/02.png",
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/03.png",
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/04.png",
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/05.png"
   ],
   "jamaica-planchas-transfer-multifuncion-para-sublimacion": [
     "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/01.png",
@@ -664,15 +680,13 @@
     "/products/maquinas/tobago-estacion-planchado-continuo/04.png"
   ],
   "trinidad-prensa-termica-automatica": [
+    "/products/maquinas/trinidad-prensa-termica-automatica/06.png",
     "/products/maquinas/trinidad-prensa-termica-automatica/01.png",
     "/products/maquinas/trinidad-prensa-termica-automatica/02.png",
     "/products/maquinas/trinidad-prensa-termica-automatica/03.png",
     "/products/maquinas/trinidad-prensa-termica-automatica/04.png",
     "/products/maquinas/trinidad-prensa-termica-automatica/05.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/06.png",
     "/products/maquinas/trinidad-prensa-termica-automatica/07.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/08.jpg",
-    "/products/maquinas/trinidad-prensa-termica-automatica/09.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/10.jpg"
+    "/products/maquinas/trinidad-prensa-termica-automatica/08.png"
   ]
 }

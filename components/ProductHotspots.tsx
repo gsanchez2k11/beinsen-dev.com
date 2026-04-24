@@ -62,10 +62,10 @@ export function ProductHotspots({ imageSrc, imageWidth = 800, imageHeight = 800,
                                     <motion.div
                                         animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
                                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                                        className={`absolute w-7 h-7 rounded-full ${isActive ? 'bg-[#FF6600]' : 'bg-[#FF6600]/70'}`}
+                                        className={`absolute w-9 h-9 rounded-full ${isActive ? 'bg-[#FF6600]' : 'bg-[#FF6600]/70'}`}
                                     />
                                     <button
-                                        className={`relative w-4 h-4 rounded-full flex items-center justify-center shadow-lg transition-colors border ${isActive ? 'bg-[#FF6600] border-white text-white' : 'bg-background border-[#FF6600] text-[#FF6600] hover:bg-[#FF6600] hover:text-white'}`}
+                                        className={`relative w-6 h-6 rounded-full flex items-center justify-center shadow-lg transition-colors border-2 ${isActive ? 'bg-[#FF6600] border-white text-white' : 'bg-background border-[#FF6600] text-[#FF6600] hover:bg-[#FF6600] hover:text-white'}`}
                                         aria-label={`Ver detalles de ${title}`}
                                     >
                                         <Plus size={8} className={`transition-transform duration-300 ${isActive ? 'rotate-45' : ''}`} />

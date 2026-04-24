@@ -1,4 +1,4 @@
-import { planchasData, allAccessoriesData, allConsumablesData } from "@/data/products";
+import { planchasData, allPlanchasData, allAccessoriesData, allConsumablesData } from "@/data/products";
 import { notFound } from "next/navigation";
 import { ProductDetailView } from "@/components/ProductDetailView";
 import { getLocalized } from "@/lib/i18n";
@@ -20,7 +20,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const resolvedParams = await params;
-    const rawItem = [...planchasData, ...allAccessoriesData, ...allConsumablesData].find((p) => p.slug === resolvedParams.slug);
+    const rawItem = [...allPlanchasData, ...allAccessoriesData, ...allConsumablesData].find((p) => p.slug === resolvedParams.slug);
 
     if (!rawItem) {
         return {
@@ -54,9 +54,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function PlanchaDetail({ params }: { params: Promise<{ slug: string }> }) {
     const resolvedParams = await params;
-    const rawItem = [...planchasData, ...allAccessoriesData, ...allConsumablesData].find((p) => p.slug === resolvedParams.slug);
+    const rawItem = [...allPlanchasData, ...allAccessoriesData, ...allConsumablesData].find((p) => p.slug === resolvedParams.slug);
 
-    if (!rawItem) {
+    if (!rawItem || (rawItem as any).hidden) {
         notFound();
     }
 
