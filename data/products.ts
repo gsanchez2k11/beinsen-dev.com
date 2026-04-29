@@ -120,7 +120,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Manual-Chinela", "en": "User Manual - Manual-Chinela" }, "url": "/downloads/chinela-plancha-transfer-zapatillas/Manual-Chinela.pdf" }
+    ],
+        "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Giratoria" },
@@ -452,7 +455,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "limpiador-plato" }
     ],
 
-    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Manual-Barahona", "en": "User Manual - Manual-Barahona" }, "url": "/downloads/barahona-plancha-para-tazas-6-en-1/Manual-Barahona.pdf" }
+    ],
+        "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo", "en": "Model" }, "value": "Barahona" },
@@ -581,7 +587,10 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [
       { "id": "cinta-termica-10mm" }
     ],
-    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Manual-Alina-4en1 (1)", "en": "User Manual - Manual-Alina-4en1 (1)" }, "url": "/downloads/alina-plancha-para-tazas/Manual-Alina-4en1-(1).pdf" }
+    ],
+        "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo", "en": "Model" }, "value": "Alina" },
@@ -912,7 +921,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Guia-de-Usuario-Caen", "en": "User Manual - Guia-de-Usuario-Caen" }, "url": "/downloads/caen-plancha-neumatica-doble-estacion/Guia-de-Usuario-Caen.pdf" }
+    ],
+        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática, estación de trabajo" },
@@ -1040,7 +1052,11 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Obrei", "en": "User Manual - Guia-de-usuario-Obrei" }, "url": "/downloads/obrei-plancha-gorras-apertura-automatica/Guia-de-usuario-Obrei.pdf" },
+      { "label": { "es": "Manual de Usuario - Plancha-Obrei", "en": "User Manual - Plancha-Obrei" }, "url": "/downloads/obrei-plancha-gorras-apertura-automatica/Plancha-Obrei.pdf" }
+    ],
+        "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Obrei" },
@@ -1272,7 +1288,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Multifunción", "en": "Multi-function", "pt": "Multifunções", "it": "Multifunzione" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Manual-Jamaica", "en": "User Manual - Manual-Jamaica" }, "url": "/downloads/jamaica-planchas-transfer-multifuncion-para-sublimacion/Manual-Jamaica.pdf" }
+    ],
+        "category": { "es": "Multifunción", "en": "Multi-function", "pt": "Multifunções", "it": "Multifunzione" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Jamaica" },
@@ -1750,7 +1769,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Guia-de-Usuario-Maine", "en": "User Manual - Guia-de-Usuario-Maine" }, "url": "/downloads/maine-plancha-para-tazas/Guia-de-Usuario-Maine.pdf" }
+    ],
+        "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Para tazas" },
@@ -1874,7 +1896,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Manual-Aruba", "en": "User Manual - Manual-Aruba" }, "url": "/downloads/aruba-plancha-para-tazas/Manual-Aruba.pdf" }
+    ],
+        "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo", "en": "Model" }, "value": "Aruba" },
@@ -2151,7 +2176,10 @@ const rawPlanchasData: Plancha[] = [
     ],
     "consumables": [],
 
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Pocola-v1.0", "en": "User Manual - Guia-de-usuario-Pocola-v1.0" }, "url": "/downloads/pocola-plancha-transfer-manual-pequena/Guia-de-usuario-Pocola-v1.0.pdf" }
+    ],
+        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -2271,7 +2299,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Gante", "en": "User Manual - Guia-de-usuario-Gante" }, "url": "/downloads/gante-plancha-manual-gorras/Guia-de-usuario-Gante.pdf" }
+    ],
+        "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3080,7 +3111,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Plancha-Belice", "en": "User Manual - Plancha-Belice" }, "url": "/downloads/belice-plancha-termica-textil/Plancha-Belice.pdf" }
+    ],
+        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3198,7 +3232,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Manual-Barbados", "en": "User Manual - Manual-Barbados" }, "url": "/downloads/barbados-plancha-termica-textil/Manual-Barbados.pdf" }
+    ],
+        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3336,7 +3373,10 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [
     ],
 
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Alaska-v1.0-", "en": "User Manual - Guia-de-usuario-Alaska-v1.0-" }, "url": "/downloads/alaska-plancha-termica-textil/Guia-de-usuario-Alaska-v1.0-.pdf" }
+    ],
+        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Eléctrica", "en": "Electric", "pt": "Elétrica", "it": "Elettrica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3470,7 +3510,14 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [
     ],
 
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Malvinas-v1.2.1", "en": "User Manual - Guia-de-usuario-Malvinas-v1.2.1" }, "url": "/downloads/malvinas-plancha-termica-textil/Guia-de-usuario-Malvinas-v1.2.1.pdf" },
+      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Malvinas-v1.2.1Gabi", "en": "User Manual - Guia-de-usuario-Malvinas-v1.2.1Gabi" }, "url": "/downloads/malvinas-plancha-termica-textil/Guia-de-usuario-Malvinas-v1.2.1Gabi.pdf" },
+      { "label": { "es": "Manual de Usuario - Guia-di-utente-Malvinas-v1.2.1", "en": "User Manual - Guia-di-utente-Malvinas-v1.2.1" }, "url": "/downloads/malvinas-plancha-termica-textil/Guia-di-utente-Malvinas-v1.2.1.pdf" },
+      { "label": { "es": "Manual de Usuario - Guia-do-usuario-Malvinas-v1.2.1", "en": "User Manual - Guia-do-usuario-Malvinas-v1.2.1" }, "url": "/downloads/malvinas-plancha-termica-textil/Guia-do-usuario-Malvinas-v1.2.1.pdf" },
+      { "label": { "es": "Manual de Usuario - User-Guide-Malvinas-v1.2.1", "en": "User Manual - User-Guide-Malvinas-v1.2.1" }, "url": "/downloads/malvinas-plancha-termica-textil/User-Guide-Malvinas-v1.2.1.pdf" }
+    ],
+        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3614,7 +3661,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Plancha-Guyana", "en": "User Manual - Plancha-Guyana" }, "url": "/downloads/guyana-plancha-termica-textil/Plancha-Guyana.pdf" }
+    ],
+        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3751,7 +3801,10 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - Manual-Kenia", "en": "User Manual - Manual-Kenia" }, "url": "/downloads/kenia-plancha-termica-textil/Manual-Kenia.pdf" }
+    ],
+        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Kenia" },
@@ -3877,7 +3930,10 @@ const rawPlanchasData: Plancha[] = [
     ],
     "consumables": [],
 
-    "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
+"downloads": [
+      { "label": { "es": "Manual de Usuario - manual-tobago", "en": "User Manual - manual-tobago" }, "url": "/downloads/tobago-estacion-planchado-continuo/manual-tobago.pdf" }
+    ],
+        "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Calandra" },
       { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
