@@ -21,6 +21,12 @@ const LABELS = {
   "garantia": { es: "Garantía", en: "Warranty", pt: "Garantia", it: "Garanzia" },
   "despiece": { es: "Despiece", en: "Exploded View", pt: "Despiece", it: "Esploso" },
   "declaracion-conformidad": { es: "Declaración de Conformidad", en: "Declaration of Conformity", pt: "Declaração de Conformidade", it: "Dichiarazione di Conformità" },
+
+  // Malvinas — cada archivo etiquetado en su propio idioma
+  "guia-de-usuario-malvinas-v1.2.1": "Manual de Usuario",
+  "user-guide-malvinas-v1.2.1":      "User Manual",
+  "guia-do-usuario-malvinas-v1.2.1": "Manual do Utilizador",
+  "guia-di-utente-malvinas-v1.2.1":  "Manuale Utente",
 };
 
 function prettify(base) {
