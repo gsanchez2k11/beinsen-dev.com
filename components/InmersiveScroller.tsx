@@ -10,7 +10,8 @@ import type { Localized } from "@/data/products";
 interface StorySegment {
     title: Localized<string> | string;
     description: Localized<string> | string;
-    image: string;
+    image?: string;
+    iframe?: string;
 }
 
 interface InmersiveScrollerProps {
@@ -76,15 +77,22 @@ function StorySection({ segment, index, total, locale }: {
                     initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                     animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.8, rotate: -5 }}
                     transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="relative aspect-square md:aspect-[4/3] w-full"
+                    className={`relative w-full ${segment.iframe ? 'aspect-video' : 'aspect-square md:aspect-[4/3]'}`}
                 >
-                    <Image
-                        src={segment.image}
-                        alt={title || "Machine Detail"}
-                        fill
-                        className="object-contain drop-shadow-2xl"
-                        sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
+                    {segment.iframe ? (
+                        <div 
+                            className="w-full h-full rounded-2xl overflow-hidden shadow-2xl border border-border/50 [&>iframe]:w-full [&>iframe]:h-full" 
+                            dangerouslySetInnerHTML={{ __html: segment.iframe }} 
+                        />
+                    ) : segment.image ? (
+                        <Image
+                            src={segment.image}
+                            alt={title || "Machine Detail"}
+                            fill
+                            className="object-contain drop-shadow-2xl"
+                            sizes="(max-width: 1024px) 100vw, 50vw"
+                        />
+                    ) : null}
                     
                     {/* Decorative backglow */}
                     <div className="absolute inset-0 bg-[#FF6600]/5 blur-3xl rounded-full -z-10 animate-pulse" />

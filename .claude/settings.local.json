@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"require\\('sharp'\\)\")",
+      "Bash(node -e \"import\\('sharp'\\).then\\(\\({default:sharp}\\)=>sharp\\('public/detalles-maquinas/malvinas-plancha-termica-textil.png'\\).metadata\\(\\).then\\(m=>console.log\\(m.width,m.height,m.width/m.height\\)\\)\\)\")",
+      "Bash(node scripts/detect-hotspots.mjs)",
+      "Bash(node scripts/generate-detail-images.mjs)",
+      "Bash(node -e \"import\\('sharp'\\).then\\(\\({default:sharp}\\)=>sharp\\('public/detalles-maquinas/alaska-plancha-termica-textil.png'\\).metadata\\(\\).then\\(m=>console.log\\(m.width,m.height,m.width/m.height\\)\\)\\)\")",
+      "Bash(node -e \"const m=require\\('./data/product-images.json'\\); console.log\\('alaska:', m['alaska-plancha-termica-textil']\\)\")",
+      "Bash(mv andra.png andra-prensa-automatica-tazas.png)",
+      "Bash(mv aruba.png aruba-plancha-para-tazas.png)",
+      "Bash(mv baien.png plancha-termica-barein.png)",
+      "Bash(mv barbados.png barbados-plancha-termica-textil.png)",
+      "Bash(mv belice.png belice-plancha-termica-textil.png)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}
