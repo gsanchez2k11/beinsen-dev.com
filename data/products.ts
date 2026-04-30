@@ -69,7 +69,7 @@ export interface Plancha {
   hotspots?: Hotspot[];
   hotspotImage?: string;
   downloads?: { label: Localized<string> | string; url: string }[];
-  storySegments?: { title: Localized<string> | string; description: Localized<string> | string; image: string }[];
+  storySegments?: { title: Localized<string> | string; description: Localized<string> | string; image?: string; iframe?: string }[];
   maintenanceTips?: Localized<string[]>;
   distributors?: { name: string; url: string; logo?: string }[];
   hidden?: boolean;
@@ -120,9 +120,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Manual-Chinela", "en": "User Manual - Manual-Chinela" }, "url": "/downloads/chinela-plancha-transfer-zapatillas/Manual-Chinela.pdf" }
-    ],
+
         "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -283,10 +281,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 58.0, "y": 67.6, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
       { "x": 8.9,  "y": 71.9, "title": { "es": "Estructura robusta y duradera", "en": "Robust and durable structure" }, "description": { "es": "", "en": "" } }
     ],
-    "downloads": [
-      { "label": { "es": "Manual de Usuario", "en": "User Manual" }, "url": "/downloads/sore-manual.pdf" },
-      { "label": { "es": "Guía de Sublimación", "en": "Sublimation Guide" }, "url": "/downloads/guia-tazas.pdf" }
-    ],
+    
     "maintenanceTips": {
       "es": [
         "Limpiar las resistencias después de cada jornada",
@@ -370,6 +365,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 42.2, "y": 75.8, "title": { "es": "Placa de trabajo", "en": "Work plate" }, "description": { "es": "Superficie inferior donde se coloca el plato cerámico. Compatible con platos de hasta 15,2 cm de diámetro.", "en": "Lower surface where the ceramic plate is placed. Compatible with plates up to 15.2 cm in diameter." } },
       { "x": 32.2, "y": 85.7, "title": { "es": "Controlador digital GY-04", "en": "GY-04 digital controller" }, "description": { "es": "Permite programar con precisión la temperatura y el tiempo de cada sublimación para obtener resultados profesionales y consistentes.", "en": "Precisely programs temperature and time for each sublimation to achieve professional and consistent results." } }
     ],
+    
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -451,13 +447,9 @@ const rawPlanchasData: Plancha[] = [
     ],
     "consumables": [
       { "id": "teflon-40x50" },
-      { "id": "neopreno-base" },
-      { "id": "limpiador-plato" }
-    ],
+      ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Manual-Barahona", "en": "User Manual - Manual-Barahona" }, "url": "/downloads/barahona-plancha-para-tazas-6-en-1/Manual-Barahona.pdf" }
-    ],
+
         "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -587,9 +579,7 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [
       { "id": "cinta-termica-10mm" }
     ],
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Manual-Alina-4en1 (1)", "en": "User Manual - Manual-Alina-4en1 (1)" }, "url": "/downloads/alina-plancha-para-tazas/Manual-Alina-4en1-(1).pdf" }
-    ],
+
         "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -845,6 +835,7 @@ const rawPlanchasData: Plancha[] = [
         "image": "/products/maquinas/andra-prensa-automatica-tazas/012.JPG"
       }
     ],
+    
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -921,9 +912,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Guia-de-Usuario-Caen", "en": "User Manual - Guia-de-Usuario-Caen" }, "url": "/downloads/caen-plancha-neumatica-doble-estacion/Guia-de-Usuario-Caen.pdf" }
-    ],
+
         "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
@@ -1052,10 +1041,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Obrei", "en": "User Manual - Guia-de-usuario-Obrei" }, "url": "/downloads/obrei-plancha-gorras-apertura-automatica/Guia-de-usuario-Obrei.pdf" },
-      { "label": { "es": "Manual de Usuario - Plancha-Obrei", "en": "User Manual - Plancha-Obrei" }, "url": "/downloads/obrei-plancha-gorras-apertura-automatica/Plancha-Obrei.pdf" }
-    ],
+
         "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
@@ -1106,6 +1092,16 @@ const rawPlanchasData: Plancha[] = [
       { "x": 50.6, "y": 50.7, "title": { "es": "Electroimán", "en": "Electromagnet" }, "description": { "es": "", "en": "" } },
       { "x": 54.3, "y": 58.6, "title": { "es": "Plato para gorras", "en": "Cap plate" }, "description": { "es": "", "en": "" } },
       { "x": 50.0, "y": 79.6, "title": { "es": "Base de trabajo", "en": "Work base" }, "description": { "es": "", "en": "" } }
+    ],
+    "storySegments": [
+      {
+        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "description": {
+          "es": "Obrei ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "en": "Obrei is designed to deliver consistent results and high productivity."
+        },
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/GR9no1BrgI4?si=7mU8OuJ_4MX4fbpG\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      }
     ],
     "maintenanceTips": {
       "es": [
@@ -1220,6 +1216,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 34.4, "y": 70.4, "title": { "es": "Bandeja inferior deslizable", "en": "Sliding lower tray" }, "description": { "es": "", "en": "" } },
       { "x": 61.9, "y": 74.9, "title": { "es": "Patas con protección de goma", "en": "Rubber-protected feet" }, "description": { "es": "", "en": "" } }
     ],
+    
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -1288,9 +1285,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Manual-Jamaica", "en": "User Manual - Manual-Jamaica" }, "url": "/downloads/jamaica-planchas-transfer-multifuncion-para-sublimacion/Manual-Jamaica.pdf" }
-    ],
+
         "category": { "es": "Multifunción", "en": "Multi-function", "pt": "Multifunções", "it": "Multifunzione" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -1536,9 +1531,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 38.6, "y": 67.6, "title": { "es": "Amplio espacio para colocar las prendas", "en": "Wide garment placement area" }, "description": { "es": "", "en": "" } },
       { "x": 25.7, "y": 78.1, "title": { "es": "Bandeja extraíble con rueda", "en": "Pull-out tray with wheel" }, "description": { "es": "", "en": "" } }
     ],
-    "downloads": [
-      { "label": { "es": "Manual Esparta", "en": "Esparta Manual" }, "url": "/downloads/esparta-manual.pdf" }
-    ],
+    
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -1610,7 +1603,6 @@ const rawPlanchasData: Plancha[] = [
       "https://beinsen.com/wp-content/uploads/2022/03/IMG_0383-1024x768-removebg-preview.png"
     ],
     "hotspotImage": "https://beinsen.com/wp-content/uploads/2024/01/description_barein.png",
-    "videoUrl": "https://www.youtube.com/embed/r1fMuXcRomk",
     "technicalSpecs": [
       { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Barein" },
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo para tazas" },
@@ -1709,6 +1701,17 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Interruptor principal de encendido y apagado del equipo.", "en": "Main power switch for turning the machine on and off." }
       }
     ],
+    "storySegments": [
+      {
+        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "description": {
+          "es": "Barein ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "en": "Barein is designed to deliver consistent results and high productivity."
+        },
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/r1fMuXcRomk?si=sNKbdTDInM_4FfSY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      }
+    ],
+    
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -1769,9 +1772,17 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Guia-de-Usuario-Maine", "en": "User Manual - Guia-de-Usuario-Maine" }, "url": "/downloads/maine-plancha-para-tazas/Guia-de-Usuario-Maine.pdf" }
+"storySegments": [
+      {
+        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "description": {
+          "es": "Barein ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "en": "Barein is designed to deliver consistent results and high productivity."
+        },
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/r1fMuXcRomk?si=sNKbdTDInM_4FfSY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      }
     ],
+    
         "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -1896,9 +1907,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Manual-Aruba", "en": "User Manual - Manual-Aruba" }, "url": "/downloads/aruba-plancha-para-tazas/Manual-Aruba.pdf" }
-    ],
+
         "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -1960,6 +1969,16 @@ const rawPlanchasData: Plancha[] = [
         "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
         "description": { "es": "Aruba Plancha Para Tazas ha sido diseñada para ofrecer resultados consistentes y alta productividad.", "en": "Aruba Mug Heat Press is designed to deliver consistent results and high productivity." },
         "image": "/products/maquinas/aruba-plancha-para-tazas/03.png"
+      }
+    ],
+    "storySegments": [
+      {
+        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "description": {
+          "es": "Aruba ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "en": "Aruba is designed to deliver consistent results and high productivity."
+        },
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/iMqchcLuzXI?si=AW9EClCe08xL4s7h\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
       }
     ],
     "maintenanceTips": {
@@ -2118,10 +2137,7 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Interruptor principal de encendido y apagado que corta completamente la alimentación de la máquina. Acceso directo y ergonómico para un uso seguro.", "en": "Main power on/off switch that fully cuts the machine's power supply. Direct ergonomic access for safe operation." }
       }
     ],
-    "downloads": [
-      { "label": { "es": "Manual de Usuario Sicilia", "en": "Sicilia User Manual" }, "url": "/downloads/sicilia-manual.pdf" },
-      { "label": { "es": "Ficha Técnica Sicilia", "en": "Sicilia Technical Sheet" }, "url": "/downloads/sicilia-ficha-tecnica.pdf" }
-    ],
+    
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -2176,9 +2192,7 @@ const rawPlanchasData: Plancha[] = [
     ],
     "consumables": [],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Pocola-v1.0", "en": "User Manual - Guia-de-usuario-Pocola-v1.0" }, "url": "/downloads/pocola-plancha-transfer-manual-pequena/Guia-de-usuario-Pocola-v1.0.pdf" }
-    ],
+
         "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -2299,9 +2313,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Gante", "en": "User Manual - Guia-de-usuario-Gante" }, "url": "/downloads/gante-plancha-manual-gorras/Guia-de-usuario-Gante.pdf" }
-    ],
+
         "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -2503,10 +2515,7 @@ const rawPlanchasData: Plancha[] = [
       { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "2, uno a cada lado la unidad principal" },
       { "label": { "es": "Seguridad", "en": "Safety" }, "value": "Cierre de seguridad, sensor detector de manos integrado" }
     ],
-    "downloads": [
-      { "label": { "es": "Manual de Usuario", "en": "User Manual" }, "url": "/downloads/trinidad-manual.pdf" },
-      { "label": { "es": "Ficha Técnica", "en": "Technical Sheet" }, "url": "/downloads/trinidad-ficha-tecnica.pdf" }
-    ],
+    
     "storySegments": [
       {
         "title": { "es": "Doble productividad", "en": "Double Productivity" },
@@ -2723,10 +2732,7 @@ const rawPlanchasData: Plancha[] = [
         "image": "https://beinsen.com/wp-content/uploads/2025/07/miranda-principal.png"
       }
     ],
-    "downloads": [
-      { "label": { "es": "Manual de Usuario Miranda", "en": "Miranda User Manual" }, "url": "/downloads/miranda-manual.pdf" },
-      { "label": { "es": "Ficha Técnica Miranda", "en": "Miranda Technical Sheet" }, "url": "/downloads/miranda-ficha-tecnica.pdf" }
-    ],
+    
     "maintenanceTips": {
       "es": [
         "No apagues la máquina inmediatamente: la placa de calor está demasiado caliente, deja que enfríe.",
@@ -2871,10 +2877,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 43.1, "y": 62.8, "title": { "es": "Placa calefactora 40x50cm", "en": "40x50cm heating plate" }, "description": { "es": "Resistencia fija de gran superficie con distribución de calor uniforme. Permite trabajar con materiales de hasta 35mm de grosor.", "en": "Large fixed heating element with uniform heat distribution. Works with materials up to 35mm thick." } },
       { "x": 28.9, "y": 83.1, "title": { "es": "Asa de la base deslizante", "en": "Sliding base handle" }, "description": { "es": "Permite desplazar la base de trabajo fácilmente para cargar y descargar prendas con total comodidad y sin esfuerzo.", "en": "Allows sliding the work base easily to load and unload garments comfortably and effortlessly." } }
     ],
-    "downloads": [
-      { "label": { "es": "Manual de Usuario", "en": "User Manual" }, "url": "/downloads/chicago-manual.pdf" },
-      { "label": { "es": "Ficha Técnica", "en": "Technical Sheet" }, "url": "/downloads/chicago-ficha-tecnica.pdf" }
-    ],
+    
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -3043,10 +3046,17 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Bandeja inferior extraíble y deslizante que facilita la colocación precisa de prendas y materiales. Reduce la fatiga en jornadas largas y mejora la eficiencia del flujo de trabajo.", "en": "Removable sliding lower tray that enables precise garment and material placement. Reduces fatigue during long sessions and improves workflow efficiency." }
       }
     ],
-    "downloads": [
-      { "label": { "es": "Manual de Usuario Luanda", "en": "Luanda User Manual" }, "url": "/downloads/luanda-manual.pdf" },
-      { "label": { "es": "Ficha Técnica Luanda", "en": "Luanda Technical Sheet" }, "url": "/downloads/luanda-ficha-tecnica.pdf" }
+    "storySegments": [
+      {
+        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "description": {
+          "es": "Luanda ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "en": "Luanda is designed to deliver consistent results and high productivity."
+        },
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/taGyk1tr-4A?si=aisxcjHDWVBjYuR-\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      }
     ],
+    
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -3111,9 +3121,17 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Plancha-Belice", "en": "User Manual - Plancha-Belice" }, "url": "/downloads/belice-plancha-termica-textil/Plancha-Belice.pdf" }
+"storySegments": [
+      {
+        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "description": {
+          "es": "Belice ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "en": "Belice is designed to deliver consistent results and high productivity."
+        },
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FucxTcU6rWc?si=uozoT_LKDPHrl0Fv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      }
     ],
+    
         "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -3232,9 +3250,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Manual-Barbados", "en": "User Manual - Manual-Barbados" }, "url": "/downloads/barbados-plancha-termica-textil/Manual-Barbados.pdf" }
-    ],
+
         "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
@@ -3373,9 +3389,7 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Alaska-v1.0-", "en": "User Manual - Guia-de-usuario-Alaska-v1.0-" }, "url": "/downloads/alaska-plancha-termica-textil/Guia-de-usuario-Alaska-v1.0-.pdf" }
-    ],
+
         "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Eléctrica", "en": "Electric", "pt": "Elétrica", "it": "Elettrica" },
     "technicalSpecs": [
@@ -3510,13 +3524,7 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Malvinas-v1.2.1", "en": "User Manual - Guia-de-usuario-Malvinas-v1.2.1" }, "url": "/downloads/malvinas-plancha-termica-textil/Guia-de-usuario-Malvinas-v1.2.1.pdf" },
-      { "label": { "es": "Manual de Usuario - Guia-de-usuario-Malvinas-v1.2.1Gabi", "en": "User Manual - Guia-de-usuario-Malvinas-v1.2.1Gabi" }, "url": "/downloads/malvinas-plancha-termica-textil/Guia-de-usuario-Malvinas-v1.2.1Gabi.pdf" },
-      { "label": { "es": "Manual de Usuario - Guia-di-utente-Malvinas-v1.2.1", "en": "User Manual - Guia-di-utente-Malvinas-v1.2.1" }, "url": "/downloads/malvinas-plancha-termica-textil/Guia-di-utente-Malvinas-v1.2.1.pdf" },
-      { "label": { "es": "Manual de Usuario - Guia-do-usuario-Malvinas-v1.2.1", "en": "User Manual - Guia-do-usuario-Malvinas-v1.2.1" }, "url": "/downloads/malvinas-plancha-termica-textil/Guia-do-usuario-Malvinas-v1.2.1.pdf" },
-      { "label": { "es": "Manual de Usuario - User-Guide-Malvinas-v1.2.1", "en": "User Manual - User-Guide-Malvinas-v1.2.1" }, "url": "/downloads/malvinas-plancha-termica-textil/User-Guide-Malvinas-v1.2.1.pdf" }
-    ],
+
         "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
@@ -3661,9 +3669,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Plancha-Guyana", "en": "User Manual - Plancha-Guyana" }, "url": "/downloads/guyana-plancha-termica-textil/Plancha-Guyana.pdf" }
-    ],
+
         "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
@@ -3801,9 +3807,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - Manual-Kenia", "en": "User Manual - Manual-Kenia" }, "url": "/downloads/kenia-plancha-termica-textil/Manual-Kenia.pdf" }
-    ],
+
         "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
@@ -3930,9 +3934,7 @@ const rawPlanchasData: Plancha[] = [
     ],
     "consumables": [],
 
-"downloads": [
-      { "label": { "es": "Manual de Usuario - manual-tobago", "en": "User Manual - manual-tobago" }, "url": "/downloads/tobago-estacion-planchado-continuo/manual-tobago.pdf" }
-    ],
+
         "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Calandra" },
@@ -4119,6 +4121,17 @@ const rawPlanchasData: Plancha[] = [
       { "x": 70.8, "y": 31.1, "title": { "es": "Guías láser de ayuda", "en": "Laser positioning guides" }, "description": { "es": "", "en": "" } },
       { "x": 97.1, "y": 47.8, "title": { "es": "Filtro de aire", "en": "Air filter" }, "description": { "es": "", "en": "" } }
     ],
+    "storySegments": [
+      {
+        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "description": {
+          "es": "Normandia I ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "en": "Normandia I is designed to deliver consistent results and high productivity."
+        },
+        "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1X3zCovLJzc?si=cT6yFeAXEuSJUmDv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      }
+    ],
+    
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -4247,6 +4260,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 53.1, "y": 67.2, "title": { "es": "Almohadilla", "en": "Pad" }, "description": { "es": "", "en": "" } },
       { "x": 36.3, "y": 83.6, "title": { "es": "Cajón extraíble", "en": "Sliding drawer" }, "description": { "es": "", "en": "" } }
     ],
+    
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -4376,6 +4390,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 52.9, "y": 66.5, "title": { "es": "Almohadilla", "en": "Pad" }, "description": { "es": "", "en": "" } },
       { "x": 36.5, "y": 85.4, "title": { "es": "Cajón extraíble", "en": "Sliding drawer" }, "description": { "es": "", "en": "" } }
     ],
+    
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -4508,10 +4523,7 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Cpu"
       }
     ],
-    "downloads": [
-      { "label": { "es": "Manual de Usuario Estambul", "en": "Estambul User Manual" }, "url": "/downloads/estambul-manual.pdf" },
-      { "label": { "es": "Ficha Técnica Estambul", "en": "Estambul Technical Sheet" }, "url": "/downloads/estambul-ficha-tecnica.pdf" }
-    ],
+    
     "hotspots": [
       { "x": 56.8, "y": 11.8, "title": { "es": "Asa ergonómica", "en": "Ergonomic handle" }, "description": { "es": "Permite abrir y cerrar la prensa con comodidad y precisión en cada ciclo de sublimación.", "en": "Allows opening and closing the press comfortably and precisely in every sublimation cycle." } },
       { "x": 63.3, "y": 26.5, "title": { "es": "Sistema de ajuste de presión", "en": "Pressure adjustment system" }, "description": { "es": "Regula la presión para adaptarse al grosor y forma de cada espinillera, garantizando un contacto perfecto.", "en": "Adjusts pressure to suit the thickness and shape of each shin guard for perfect contact." } },
@@ -4694,10 +4706,7 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Distribución de calor uniforme para sublimar materiales de hasta 35 mm de grosor. Disponible en dos tamaños para adaptarse a tus necesidades de producción.", "en": "Uniform heat distribution for sublimating materials up to 35 mm thick. Available in two sizes to suit your production needs." }
       }
     ],
-    "downloads": [
-      { "label": { "es": "Manual de Usuario Felina", "en": "Felina User Manual" }, "url": "/downloads/felina-manual.pdf" },
-      { "label": { "es": "Ficha Técnica Felina", "en": "Felina Technical Sheet" }, "url": "/downloads/felina-ficha-tecnica.pdf" }
-    ],
+    
     "maintenanceTips": {
       "es": [
         "Limpieza regular de la placa calefactora y la platina inferior tras cada jornada.",
@@ -6841,22 +6850,6 @@ const rawConsumablesData: Consumable[] = [
     price: 15,
     image: "https://beinsen.com/wp-content/uploads/2019/11/grecia6.jpg",
     description: { es: "Protege tus prendas y el plato de calor.", en: "Protects your garments and the heat plate." }
-  },
-  {
-    id: "neopreno-base",
-    slug: "goma-neopreno-base",
-    name: { es: "Goma de Neopreno Base", en: "Neoprene Base Rubber" },
-    price: 45,
-    image: "https://beinsen.com/wp-content/uploads/2019/11/zapas.jpg",
-    description: { es: "Amortiguación perfecta para una presión uniforme.", en: "Perfect cushioning for uniform pressure." }
-  },
-  {
-    id: "limpiador-plato",
-    slug: "limpiador-platos-ez-off",
-    name: { es: "Limpiador de plato", en: "Plate Cleaner (EZ-Off)" },
-    price: 12,
-    image: "https://beinsen.com/wp-content/uploads/2019/11/limpiador-plato.jpg",
-    description: { es: "Elimina residuos del plato calentador.", en: "Removes residues from the heating plate." }
   },
   {
     "reference": "REPBEIRES11A",

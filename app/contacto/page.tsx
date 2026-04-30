@@ -23,7 +23,31 @@ import { getLocalized } from "@/lib/i18n";
 export default function ContactPage() {
     const { locale } = useLanguage();
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formStep, setFormStep] = useState(1);
+    const [error, setError] = useState<string | null>(null);
+    
+    // Form States
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        company: "",
+        country: "España",
+        interestType: "machine" as "machine" | "general",
+        machine: planchasData[0]?.slug || "",
+        message: ""
+    });
+
+    const showError = (msg: string) => {
+        setError(msg);
+        setTimeout(() => setError(null), 5000);
+    };
+
+    const countries = [
+        "España", "Portugal", "Francia", "Italia", "Alemania", "Reino Unido", 
+        "México", "Argentina", "Chile", "Colombia", "Perú", "Ecuador", 
+        "Estados Unidos", "Andorra", "Otro"
+    ];
     
     const d = {
         es: {
@@ -35,14 +59,18 @@ export default function ContactPage() {
             company: "Empresa",
             country: "País",
             machine: "Máquina de Interés",
+            general: "Consultoría General",
+            interestSelection: "Tipo de Consulta",
             message: "¿Cómo podemos ayudarle?",
             send: "Enviar Solicitud",
+            sending: "Enviando...",
             thanks: "¡Gracias por contactar!",
             thanksDesc: "Su solicitud ha sido recibida. Un asesor técnico se pondrá en contacto con usted en menos de 24 horas laborables.",
             step1: "Información Básica",
             step2: "Detalles del Proyecto",
             next: "Siguiente Paso",
             back: "Volver",
+            errorRequired: "Por favor, rellene todos los campos obligatorios.",
             infoTitle: "Sede Central",
             infoAddress: "Av. Alto de las Atalayas, 18",
             infoCity: "30110 Cabezo de Torres, Murcia",
@@ -58,14 +86,18 @@ export default function ContactPage() {
             company: "Company",
             country: "Country",
             machine: "Machine of Interest",
+            general: "General Consultation",
+            interestSelection: "Query Type",
             message: "How can we help you?",
             send: "Send Request",
+            sending: "Sending...",
             thanks: "Thank you for contacting us!",
             thanksDesc: "Your request has been received. A technical advisor will contact you within 24 business hours.",
             step1: "Basic Information",
             step2: "Project Details",
             next: "Next Step",
             back: "Back",
+            errorRequired: "Please fill in all required fields.",
             infoTitle: "Headquarters",
             infoAddress: "Av. Alto de las Atalayas, 18",
             infoCity: "30110 Cabezo de Torres, Murcia, Spain",
@@ -74,9 +106,51 @@ export default function ContactPage() {
         }
     }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsSubmitted(true);
+        
+        // Comprehensive check for all fields
+        if (!formData.name.trim() || !formData.email.trim() || !formData.company.trim() || !formData.message.trim()) {
+            showError(d.errorRequired);
+            return;
+        }
+
+        // Email format validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            showError(locale === 'es' ? "Por favor, introduzca un correo electrónico válido." : "Please enter a valid email address.");
+            return;
+        }
+
+        setIsSubmitting(true);
+        setError(null);
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    company: formData.company,
+                    country: formData.country,
+                    product: formData.interestType === 'machine' ? formData.machine : 'Consultoría General',
+                    message: formData.message,
+                    recipient: "web@futura.es"
+                }),
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+            } else {
+                alert("Error al enviar el mensaje. Por favor, inténtelo de nuevo.");
+            }
+        } catch (error) {
+            console.error("Contact error:", error);
+            alert("Error de conexión. Por favor, compruebe su conexión e inténtelo de nuevo.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -172,24 +246,40 @@ export default function ContactPage() {
                                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                                         <div className="space-y-2">
                                                             <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.name}</label>
-                                                            <input required type="text" className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
+                                                            <input required type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
                                                         </div>
                                                         <div className="space-y-2">
                                                             <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.email}</label>
-                                                            <input required type="email" className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
+                                                            <input required type="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
                                                         </div>
                                                         <div className="space-y-2">
                                                             <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.company}</label>
-                                                            <input required type="text" className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
+                                                            <input required type="text" value={formData.company} onChange={(e) => setFormData({...formData, company: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
                                                         </div>
                                                         <div className="space-y-2">
                                                             <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.country}</label>
-                                                            <input required type="text" className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
+                                                            <div className="relative">
+                                                                <select 
+                                                                    required 
+                                                                    value={formData.country} 
+                                                                    onChange={(e) => setFormData({...formData, country: e.target.value})} 
+                                                                    className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light appearance-none"
+                                                                >
+                                                                    {countries.map(c => <option key={c} value={c}>{c}</option>)}
+                                                                </select>
+                                                                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                                                            </div>
                                                         </div>
                                                         <div className="md:col-span-2 pt-4">
                                                             <button 
                                                                 type="button" 
-                                                                onClick={() => setFormStep(2)}
+                                                                onClick={() => {
+                                                                    if (!formData.name || !formData.email || !formData.company || !formData.country) {
+                                                                        showError(d.errorRequired);
+                                                                        return;
+                                                                    }
+                                                                    setFormStep(2);
+                                                                }}
                                                                 className="w-full md:w-auto px-12 py-5 bg-[#FF6600] text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3"
                                                             >
                                                                 {d.next} <ArrowRight size={18} />
@@ -198,18 +288,57 @@ export default function ContactPage() {
                                                     </div>
                                                 ) : (
                                                     <div className="space-y-8">
-                                                        <div className="space-y-2">
-                                                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.machine}</label>
-                                                            <select className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light appearance-none">
-                                                                {planchasData.map(p => (
-                                                                    <option key={p.id} value={p.id}>{getLocalized(p.name, locale)}</option>
-                                                                ))}
-                                                                <option value="other">Otro / Consultoría General</option>
-                                                            </select>
+                                                        <div className="space-y-4">
+                                                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.interestSelection}</label>
+                                                            <div className="flex gap-4">
+                                                                <button 
+                                                                    type="button"
+                                                                    onClick={() => setFormData({...formData, interestType: 'machine'})}
+                                                                    className={`flex-1 p-4 rounded-2xl border transition-all text-sm font-bold flex items-center justify-center gap-2 ${formData.interestType === 'machine' ? 'bg-[#FF6600] border-[#FF6600] text-white shadow-lg shadow-[#FF6600]/20' : 'bg-muted/30 border-white/5 text-muted-foreground hover:bg-muted/50'}`}
+                                                                >
+                                                                    <Briefcase size={18} /> {d.machine}
+                                                                </button>
+                                                                <button 
+                                                                    type="button"
+                                                                    onClick={() => setFormData({...formData, interestType: 'general'})}
+                                                                    className={`flex-1 p-4 rounded-2xl border transition-all text-sm font-bold flex items-center justify-center gap-2 ${formData.interestType === 'general' ? 'bg-[#FF6600] border-[#FF6600] text-white shadow-lg shadow-[#FF6600]/20' : 'bg-muted/30 border-white/5 text-muted-foreground hover:bg-muted/50'}`}
+                                                                >
+                                                                    <MessageSquare size={18} /> {d.general}
+                                                                </button>
+                                                            </div>
                                                         </div>
+
+                                                        {formData.interestType === 'machine' && (
+                                                            <motion.div 
+                                                                initial={{ opacity: 0, y: -10 }} 
+                                                                animate={{ opacity: 1, y: 0 }}
+                                                                className="space-y-2"
+                                                            >
+                                                                <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.machine}</label>
+                                                                <div className="relative">
+                                                                    <select 
+                                                                        value={formData.machine} 
+                                                                        onChange={(e) => setFormData({...formData, machine: e.target.value})} 
+                                                                        className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light appearance-none"
+                                                                    >
+                                                                        {planchasData.map(p => (
+                                                                            <option key={p.id} value={getLocalized(p.name, locale)}>{getLocalized(p.name, locale)}</option>
+                                                                        ))}
+                                                                    </select>
+                                                                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                                                                </div>
+                                                            </motion.div>
+                                                        )}
+
                                                         <div className="space-y-2">
                                                             <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.message}</label>
-                                                            <textarea rows={4} className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light resize-none" />
+                                                            <textarea 
+                                                                required
+                                                                value={formData.message}
+                                                                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                                                                rows={4} 
+                                                                className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light resize-none" 
+                                                            />
                                                         </div>
                                                         <div className="flex flex-col md:flex-row gap-4 pt-4">
                                                             <button 
@@ -221,14 +350,30 @@ export default function ContactPage() {
                                                             </button>
                                                             <button 
                                                                 type="submit" 
-                                                                className="flex-1 px-12 py-5 bg-[#FF6600] text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 shadow-xl shadow-[#FF6600]/20"
+                                                                disabled={isSubmitting}
+                                                                className="flex-1 px-12 py-5 bg-[#FF6600] text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 shadow-xl shadow-[#FF6600]/20 disabled:opacity-50"
                                                             >
-                                                                {d.send} <Send size={18} />
+                                                                {isSubmitting ? d.sending : d.send} <Send size={18} />
                                                             </button>
                                                         </div>
                                                     </div>
                                                 )}
                                             </form>
+
+                                            {/* Modern Error Notification */}
+                                            <AnimatePresence>
+                                                {error && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                        className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-2xl flex items-center gap-3 text-red-500"
+                                                    >
+                                                        <ShieldCheck className="w-5 h-5 shrink-0" />
+                                                        <p className="text-sm font-bold tracking-tight">{error}</p>
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
                                         </motion.div>
                                     ) : (
                                         <motion.div

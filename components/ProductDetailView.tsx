@@ -419,6 +419,8 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                                     <a 
                                         key={i} 
                                         href={download.url} 
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="flex items-center justify-between p-8 bg-card border border-border/50 rounded-3xl hover:border-[#FF6600] hover:bg-[#FF6600]/5 transition-all group shadow-sm hover:shadow-xl hover:shadow-[#FF6600]/5"
                                     >
                                         <div className="flex items-center gap-6">

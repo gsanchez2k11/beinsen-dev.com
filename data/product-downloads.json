@@ -11,6 +11,12 @@
       "url": "/downloads/alina-plancha-para-tazas/Manual-Alina-4en1-(1).pdf"
     }
   ],
+  "andra-prensa-automatica-tazas": [
+    {
+      "label": "Andra Manual Usuario",
+      "url": "/downloads/andra-prensa-automatica-tazas/Andra-manual-usuario.pdf"
+    }
+  ],
   "aruba-plancha-para-tazas": [
     {
       "label": "Manual Aruba",
@@ -27,6 +33,12 @@
     {
       "label": "Manual Barbados",
       "url": "/downloads/barbados-plancha-termica-textil/Manual-Barbados.pdf"
+    }
+  ],
+  "barein-plancha-termica": [
+    {
+      "label": "Plancha Barein",
+      "url": "/downloads/barein-plancha-termica/Plancha-Barein.pdf"
     }
   ],
   "belice-plancha-termica-textil": [
@@ -57,22 +69,26 @@
       "url": "/downloads/chinela-plancha-transfer-zapatillas/Manual-Chinela.pdf"
     }
   ],
+  "doha-plancha-transfer-gran-formato": [
+    {
+      "label": "Guia De Usuario Doha 50 X 80",
+      "url": "/downloads/doha-plancha-transfer-gran-formato/Guia-de-Usuario-Doha-50-x-80.pdf"
+    }
+  ],
+  "dorian-plancha-termica-platos": [
+    {
+      "label": "Manual Dorian",
+      "url": "/downloads/dorian-plancha-termica-platos/Manual-Dorian.pdf"
+    }
+  ],
   "esparta-prensa-termica-neumatica": [
     {
       "label": "Guia De Usuario Esparta",
       "url": "/downloads/esparta-prensa-termica-neumatica/Guia-de-usuario-Esparta.pdf"
     },
     {
-      "label": "Guia De Usuario Espartagabi",
-      "url": "/downloads/esparta-prensa-termica-neumatica/Guia-de-usuario-EspartaGabi.pdf"
-    },
-    {
       "label": "Guia Do Utilizador Esparta",
       "url": "/downloads/esparta-prensa-termica-neumatica/Guia-do-utilizador-Esparta.pdf"
-    },
-    {
-      "label": "Guia Do Utilizador",
-      "url": "/downloads/esparta-prensa-termica-neumatica/Guia-do-utilizador.pdf"
     },
     {
       "label": "Guida Utente Esparta",
@@ -85,8 +101,20 @@
   ],
   "gante-plancha-manual-gorras": [
     {
+      "label": "Guia Do Utilizador",
+      "url": "/downloads/gante-plancha-manual-gorras/GUIA  DO UTILIZADOR.pdf"
+    },
+    {
+      "label": "Guida Utente",
+      "url": "/downloads/gante-plancha-manual-gorras/GUIDA  UTENTE.pdf"
+    },
+    {
       "label": "Guia De Usuario Gante",
       "url": "/downloads/gante-plancha-manual-gorras/Guia-de-usuario-Gante.pdf"
+    },
+    {
+      "label": "User Guide Gante",
+      "url": "/downloads/gante-plancha-manual-gorras/USER GUIDE-gante.pdf"
     }
   ],
   "guyana-plancha-termica-textil": [
@@ -125,10 +153,6 @@
       "url": "/downloads/malvinas-plancha-termica-textil/Guia-de-usuario-Malvinas-v1.2.1.pdf"
     },
     {
-      "label": "Guia De Usuario Malvinas V1.2.1gabi",
-      "url": "/downloads/malvinas-plancha-termica-textil/Guia-de-usuario-Malvinas-v1.2.1Gabi.pdf"
-    },
-    {
       "label": "Manuale Utente",
       "url": "/downloads/malvinas-plancha-termica-textil/Guia-di-utente-Malvinas-v1.2.1.pdf"
     },
@@ -159,20 +183,58 @@
       "url": "/downloads/miranda-prensa-termica-automatica-electrica/User-guide-Miranda.pdf"
     }
   ],
+  "normandia-i-plancha-termica-textil": [
+    {
+      "label": "Plancha Normandia 1",
+      "url": "/downloads/normandia-i-plancha-termica-textil/Plancha-Normandia-1.pdf"
+    }
+  ],
+  "normandia-ii-plancha-termica-textil": [
+    {
+      "label": "Plancha Normandia 2",
+      "url": "/downloads/normandia-ii-plancha-termica-textil/Plancha-Normandia-2.pdf"
+    }
+  ],
+  "normandia-iii-plancha-termica-textil": [
+    {
+      "label": "Plancha Normandia 3",
+      "url": "/downloads/normandia-iii-plancha-termica-textil/Plancha-Normandia-3.pdf"
+    }
+  ],
   "obrei-plancha-gorras-apertura-automatica": [
+    {
+      "label": "Guia Do Utilizador",
+      "url": "/downloads/obrei-plancha-gorras-apertura-automatica/GUIA  DO UTILIZADOR.pdf"
+    },
+    {
+      "label": "Guida Utente",
+      "url": "/downloads/obrei-plancha-gorras-apertura-automatica/GUIDA  UTENTE.pdf"
+    },
     {
       "label": "Guia De Usuario Obrei",
       "url": "/downloads/obrei-plancha-gorras-apertura-automatica/Guia-de-usuario-Obrei.pdf"
     },
     {
-      "label": "Plancha Obrei",
-      "url": "/downloads/obrei-plancha-gorras-apertura-automatica/Plancha-Obrei.pdf"
+      "label": "User Guide",
+      "url": "/downloads/obrei-plancha-gorras-apertura-automatica/USER GUIDE.pdf"
     }
   ],
   "pocola-plancha-transfer-manual-pequena": [
     {
+      "label": "Guia Do Utilizador",
+      "url": "/downloads/pocola-plancha-transfer-manual-pequena/GUIA  DO UTILIZADOR.pdf"
+    },
+    {
+      "label": "Guida Utente",
+      "url": "/downloads/pocola-plancha-transfer-manual-pequena/GUIDA  UTENTE.pdf"
+    },
+    {
       "label": "Guia De Usuario Pocola V1.0",
       "url": "/downloads/pocola-plancha-transfer-manual-pequena/Guia-de-usuario-Pocola-v1.0.pdf"
+    },
+    {
+      "label": "User Guide",
+      "url": "/downloads/pocola-plancha-transfer-manual-pequena/USER GUIDE.pdf"
     }
   ],
   "sicilia-plancha-para-tazas": [
@@ -188,6 +250,18 @@
     }
   ],
   "tobago-estacion-planchado-continuo": [
+    {
+      "label": "Guia Do Utilizador",
+      "url": "/downloads/tobago-estacion-planchado-continuo/GUIA  DO UTILIZADOR.pdf"
+    },
+    {
+      "label": "Guida Utente",
+      "url": "/downloads/tobago-estacion-planchado-continuo/GUIDA  UTENTE.pdf"
+    },
+    {
+      "label": "User Guide",
+      "url": "/downloads/tobago-estacion-planchado-continuo/USER GUIDE.pdf"
+    },
     {
       "label": "Manual Tobago",
       "url": "/downloads/tobago-estacion-planchado-continuo/manual-tobago.pdf"

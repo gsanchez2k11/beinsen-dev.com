@@ -44,21 +44,71 @@ export function ContactSpecialistButton({
         };
     }, [isOpen]);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const [phone, setPhone] = useState("");
+    const [name, setName] = useState("");
+
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const input = e.target.value.replace(/\D/g, "");
+        
+        // Limit to 9 digits (standard Spanish number)
+        const truncated = input.slice(0, 9);
+        
+        // Apply formatting: XXX XXX XXX
+        let formatted = "";
+        if (truncated.length > 0) {
+            formatted += truncated.slice(0, 3);
+        }
+        if (truncated.length > 3) {
+            formatted += " " + truncated.slice(3, 6);
+        }
+        if (truncated.length > 6) {
+            formatted += " " + truncated.slice(6, 9);
+        }
+        
+        setPhone(formatted);
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate API call to CRM/Lead system
-        setTimeout(() => {
-            setIsSubmitting(false);
-            setIsSuccess(true);
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name,
+                    phone: `+34 ${phone}`,
+                    product: productName,
+                    recipient: "web@futura.es"
+                }),
+            });
 
-            // Auto close after showing success message
-            setTimeout(() => {
-                setIsOpen(false);
-                setTimeout(() => setIsSuccess(false), 500); // Reset after close animation
-            }, 2500);
-        }, 1500);
+            if (response.ok) {
+                setIsSubmitting(false);
+                setIsSuccess(true);
+
+                // Auto close after showing success message
+                setTimeout(() => {
+                    setIsOpen(false);
+                    setTimeout(() => {
+                        setIsSuccess(false);
+                        setName("");
+                        setPhone("");
+                    }, 500);
+                }, 2500);
+            } else {
+                console.error("Failed to send lead");
+                setIsSubmitting(false);
+                alert("Hubo un error al enviar tus datos. Por favor, inténtalo de nuevo.");
+            }
+        } catch (error) {
+            console.error("Error sending lead:", error);
+            setIsSubmitting(false);
+            alert("Hubo un error de conexión. Por favor, inténtalo de nuevo.");
+        }
     };
 
     return (
@@ -100,6 +150,8 @@ export function ContactSpecialistButton({
                                     <input
                                         type="text"
                                         required
+                                        value={name}
+                                        onChange={(e) => setName(e.target.value)}
                                         placeholder="Tu Nombre"
                                         className="w-full bg-background border border-border rounded-xl px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#FF6600]/50 transition-all font-medium"
                                     />
@@ -113,6 +165,8 @@ export function ContactSpecialistButton({
                                         <input
                                             type="tel"
                                             required
+                                            value={phone}
+                                            onChange={handlePhoneChange}
                                             placeholder="Tu Teléfono"
                                             className="flex-1 bg-background border border-border rounded-xl px-4 py-2.5 text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-[#FF6600]/50 transition-all font-medium"
                                         />
