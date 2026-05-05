@@ -3,7 +3,6 @@
 import React, { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Image from "next/image";
-import { Lightbox } from "./Lightbox";
 
 export function TiltImage({ src, alt }: { src: string; alt: string }) {
     const ref = useRef<HTMLDivElement>(null);
@@ -50,7 +49,7 @@ export function TiltImage({ src, alt }: { src: string; alt: string }) {
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             style={{ perspective: 1200 }}
-            className="w-full h-full flex items-center justify-center relative cursor-crosshair group z-10"
+            className="w-full h-full flex items-center justify-center relative group z-10"
         >
             <motion.div
                 style={{
@@ -94,9 +93,6 @@ export function TiltImage({ src, alt }: { src: string; alt: string }) {
                         className="object-contain p-4 brightness-95 group-hover:brightness-105 transition-all duration-500"
                     />
                 </motion.div>
-
-                {/* Lightbox Trigger injected into the Tilt boundaries */}
-                <Lightbox src={src} alt={alt} />
             </motion.div>
         </div>
     );
