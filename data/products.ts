@@ -70,6 +70,8 @@ export interface Plancha {
   hotspotImage?: string;
   downloads?: { label: Localized<string> | string; url: string }[];
   storySegments?: { title: Localized<string> | string; description: Localized<string> | string; image?: string; iframe?: string }[];
+  storyHeadline?: Localized<string> | string;
+  storyTitle?: Localized<string> | string;
   maintenanceTips?: Localized<string[]>;
   distributors?: { name: string; url: string; logo?: string }[];
   hidden?: boolean;
@@ -1096,11 +1098,12 @@ const rawPlanchasData: Plancha[] = [
       { "x": 54.3, "y": 58.6, "title": { "es": "Plato para gorras", "en": "Cap plate" }, "description": { "es": "", "en": "" } },
       { "x": 50.0, "y": 79.6, "title": { "es": "Base de trabajo", "en": "Work base" }, "description": { "es": "", "en": "" } }
     ],
+    "storyHeadline": { "es": "Precisión y Control", "en": "Redefining the workflow" },
     "storySegments": [
       {
-        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "title": { "es": "Acabados impecables", "en": "Professional performance" },
         "description": {
-          "es": "Obrei ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "es": "Obrei está diseñada para garantizar estampados precisos con una facilidad de uso inigualable.",
           "en": "Obrei is designed to deliver consistent results and high productivity."
         },
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/GR9no1BrgI4?si=7mU8OuJ_4MX4fbpG\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
@@ -1704,11 +1707,12 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Interruptor principal de encendido y apagado del equipo.", "en": "Main power switch for turning the machine on and off." }
       }
     ],
+    "storyHeadline": { "es": "Potencia Industrial", "en": "Redefining the workflow" },
     "storySegments": [
       {
-        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "title": { "es": "Máxima durabilidad", "en": "Professional performance" },
         "description": {
-          "es": "Barein ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "es": "Barein ha sido construida para soportar largas jornadas de trabajo sin comprometer la calidad.",
           "en": "Barein is designed to deliver consistent results and high productivity."
         },
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/r1fMuXcRomk?si=sNKbdTDInM_4FfSY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
@@ -1775,11 +1779,12 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"storySegments": [
+"storyHeadline": { "es": "Innovación Térmica", "en": "Redefining the workflow" },
+    "storySegments": [
       {
-        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "title": { "es": "Calor uniforme", "en": "Professional performance" },
         "description": {
-          "es": "Barein ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "es": "Barein asegura una distribución de temperatura perfecta para transferencias sin fallos.",
           "en": "Barein is designed to deliver consistent results and high productivity."
         },
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/r1fMuXcRomk?si=sNKbdTDInM_4FfSY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
@@ -1968,11 +1973,12 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Settings"
       }
     ],
+    "storyHeadline": { "es": "Versatilidad Sin Límites", "en": "Redefining the workflow" },
     "storySegments": [
       {
-        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "title": { "es": "Adaptable a todo", "en": "Professional performance" },
         "description": {
-          "es": "Aruba ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "es": "Aruba es la herramienta definitiva para quienes buscan diversificar su oferta de productos.",
           "en": "Aruba is designed to deliver consistent results and high productivity."
         },
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/iMqchcLuzXI?si=AW9EClCe08xL4s7h\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
@@ -3043,11 +3049,12 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Bandeja inferior extraíble y deslizante que facilita la colocación precisa de prendas y materiales. Reduce la fatiga en jornadas largas y mejora la eficiencia del flujo de trabajo.", "en": "Removable sliding lower tray that enables precise garment and material placement. Reduces fatigue during long sessions and improves workflow efficiency." }
       }
     ],
+    "storyHeadline": { "es": "Eficiencia Comprobada", "en": "Redefining the workflow" },
     "storySegments": [
       {
-        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "title": { "es": "Rendimiento superior", "en": "Professional performance" },
         "description": {
-          "es": "Luanda ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "es": "Luanda ha sido optimizada para reducir los tiempos de ciclo y maximizar tu producción diaria.",
           "en": "Luanda is designed to deliver consistent results and high productivity."
         },
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/taGyk1tr-4A?si=aisxcjHDWVBjYuR-\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
@@ -3118,11 +3125,12 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"storySegments": [
+"storyHeadline": { "es": "Trabajo Inteligente", "en": "Redefining the workflow" },
+    "storySegments": [
       {
-        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "title": { "es": "Flujo continuo", "en": "Professional performance" },
         "description": {
-          "es": "Belice ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "es": "Belice te permite trabajar reduciendo el esfuerzo manual en cada ciclo de planchado.",
           "en": "Belice is designed to deliver consistent results and high productivity."
         },
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FucxTcU6rWc?si=uozoT_LKDPHrl0Fv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
@@ -4118,11 +4126,12 @@ const rawPlanchasData: Plancha[] = [
       { "x": 70.8, "y": 31.1, "title": { "es": "Guías láser de ayuda", "en": "Laser positioning guides" }, "description": { "es": "", "en": "" } },
       { "x": 97.1, "y": 47.8, "title": { "es": "Filtro de aire", "en": "Air filter" }, "description": { "es": "", "en": "" } }
     ],
+    "storyHeadline": { "es": "Diseño Ergonómico", "en": "Redefining the workflow" },
     "storySegments": [
       {
-        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
+        "title": { "es": "Comodidad total", "en": "Professional performance" },
         "description": {
-          "es": "Normandia I ha sido diseñada para ofrecer resultados consistentes y alta productividad.",
+          "es": "Normandia I está pensada para el bienestar del operador, haciendo que el proceso sea rápido y seguro.",
           "en": "Normandia I is designed to deliver consistent results and high productivity."
         },
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1X3zCovLJzc?si=cT6yFeAXEuSJUmDv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"

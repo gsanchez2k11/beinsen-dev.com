@@ -193,6 +193,8 @@ export function ProductDetailView({
         }
     };
     const d = dictionary[locale] || dictionary.es;
+    const storyHeadline = getLocalized(plancha.storyHeadline, locale) || (locale === 'es' ? "Redefiniendo el flujo de trabajo" : "Redefining the workflow");
+    const storyTitle = getLocalized(plancha.storyTitle, locale) || d.storyTitle;
 
     const activeItems = activeTab === "accessories" ? fullAccessories : fullConsumables;
 
@@ -306,8 +308,8 @@ export function ProductDetailView({
                 {plancha.storySegments && plancha.storySegments.length > 0 && (
                     <div className="mt-32">
                         <ScrollReveal className="text-center mb-16">
-                            <span className="text-[#FF6600] font-black uppercase tracking-[0.4em] text-sm">{d.storyTitle}</span>
-                            <h2 className="text-5xl md:text-7xl font-black mt-6 tracking-tight">Redefiniendo el flujo de trabajo</h2>
+                            <span className="text-[#FF6600] font-black uppercase tracking-[0.4em] text-sm">{storyTitle}</span>
+                            <h2 className="text-5xl md:text-7xl font-black mt-6 tracking-tight">{storyHeadline}</h2>
                         </ScrollReveal>
                         <InmersiveScroller segments={plancha.storySegments} />
                     </div>
