@@ -3,11 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, CheckCircle2, ChevronRight, Euro, Maximize, FileText, Download, PlayCircle, Wrench, Store, ExternalLink, Globe, Package, Zap, ShoppingCart } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Euro, Maximize, FileText, Download, PlayCircle, Wrench, Store, ExternalLink, Globe, Package, Zap, ShoppingCart } from "lucide-react";
 import { ContactSpecialistButton } from "@/components/ContactSpecialistButton";
 import { TiltImage } from "@/components/TiltImage";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ProductGallery } from "@/components/ProductGallery";
+import { ProductHeroGallery } from "@/components/ProductHeroGallery";
 import { TechSpecs } from "@/components/TechSpecs";
 import { ProductBenefits } from "@/components/ProductBenefits";
 import { StickyProductNav } from "@/components/StickyProductNav";
@@ -23,10 +24,17 @@ interface ProductDetailViewProps {
     plancha: Plancha;
     fullAccessories?: CompatibleItem[];
     fullConsumables?: CompatibleItem[];
+    compatiblePlanchas?: Plancha[];
     kind?: "planchas" | "accessories" | "consumables";
 }
 
-export function ProductDetailView({ plancha, fullAccessories = [], fullConsumables = [], kind = "planchas" }: ProductDetailViewProps) {
+export function ProductDetailView({ 
+    plancha, 
+    fullAccessories = [], 
+    fullConsumables = [], 
+    compatiblePlanchas = [],
+    kind = "planchas" 
+}: ProductDetailViewProps) {
     const { locale } = useLanguage();
     const [activeTab, setActiveTab] = useState<"accessories" | "consumables">("accessories");
 
@@ -71,7 +79,9 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             buyNow: "Comprar ahora",
             visitWeb: "Visitar web",
             certified: "Componente industrial certificado",
-            essential: "Consumible esencial Beinsen"
+            essential: "Consumible esencial Beinsen",
+            compatibleMachines: "Máquinas Compatibles",
+            compatibleMachinesDesc: "Este componente es compatible con los siguientes equipos industriales de alto rendimiento."
         },
         en: {
             inicio: "Home",
@@ -105,7 +115,9 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             buyNow: "Buy now",
             visitWeb: "Visit website",
             certified: "Certified industrial component",
-            essential: "Essential Beinsen consumable"
+            essential: "Essential Beinsen consumable",
+            compatibleMachines: "Compatible Machines",
+            compatibleMachinesDesc: "This component is compatible with the following high-performance industrial equipment."
         },
         pt: {
             inicio: "Início",
@@ -139,7 +151,9 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             buyNow: "Comprar agora",
             visitWeb: "Visitar web",
             certified: "Componente industrial certificado",
-            essential: "Consumível essencial Beinsen"
+            essential: "Consumível essencial Beinsen",
+            compatibleMachines: "Máquinas Compatíveis",
+            compatibleMachinesDesc: "Este componente é compatível com os seguintes equipamentos industriais."
         },
         it: {
             inicio: "Inizio",
@@ -173,7 +187,9 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
             buyNow: "Acquista ora",
             visitWeb: "Visita il sito",
             certified: "Componente industriale certificato",
-            essential: "Consumabile essenziale Beinsen"
+            essential: "Consumabile essenziale Beinsen",
+            compatibleMachines: "Macchine Compatibili",
+            compatibleMachinesDesc: "Questo componente è compatibile con le seguenti attrezzature industriali."
         }
     };
     const d = dictionary[locale] || dictionary.es;
@@ -256,7 +272,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                         </ScrollReveal>
                     </div>
 
-                    <ScrollReveal delay={0.4} className="relative z-10 w-full max-w-[85rem] mx-auto mt-20 h-[50vh] lg:h-[75vh] perspective-[2500px]">
+                    <ScrollReveal delay={0.4} className="relative z-10 w-full max-w-[85rem] mx-auto mt-20 h-[60vh] lg:h-[85vh] perspective-[2500px]">
                         {plancha.heroVideo ? (
                             <video
                                 src={plancha.heroVideo}
@@ -264,8 +280,10 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                                 muted
                                 loop
                                 playsInline
-                                className="pointer-events-none h-full w-full rounded-3xl border border-border/50 bg-card object-contain"
+                                className="pointer-events-none h-full w-full rounded-3xl border border-border/50 bg-card object-contain shadow-2xl"
                             />
+                        ) : plancha.gallery && plancha.gallery.length > 1 ? (
+                            <ProductHeroGallery images={plancha.gallery} productName={name || ""} />
                         ) : (
                             <TiltImage src={plancha.image} alt={name || ""} />
                         )}
@@ -443,6 +461,56 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                         </ScrollReveal>
                     )}
 
+                    {/* Compatible Machines for Accessories/Consumables */}
+                    {kind !== "planchas" && compatiblePlanchas.length > 0 && (
+                        <ScrollReveal className="pt-32 border-t border-border">
+                            <div className="text-center mb-16">
+                                <h2 className="text-5xl font-black mb-6 tracking-tight">{d.compatibleMachines}</h2>
+                                <p className="text-xl text-muted-foreground font-light max-w-2xl mx-auto">{d.compatibleMachinesDesc}</p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                 {compatiblePlanchas.map((machine) => (
+                                    <div key={machine.id} className="group p-6 rounded-[2.5rem] bg-card border border-border/50 hover:border-[#FF6600] hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all flex flex-col gap-6 relative">
+                                        <Link href={`/planchas/${machine.slug}`} className="absolute inset-0 z-10" aria-label={getLocalized(machine.name, locale)} />
+                                        <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden bg-muted">
+                                            {machine.image ? (
+                                                <Image 
+                                                    src={machine.image} 
+                                                    alt={getLocalized(machine.name, locale) || ""} 
+                                                    fill 
+                                                    className="object-contain p-4 group-hover:scale-110 transition-transform duration-700" 
+                                                />
+                                            ) : null}
+                                        </div>
+                                        <div className="flex flex-col flex-1 px-2">
+                                            <div className="flex justify-between items-start mb-4">
+                                                <div className="flex flex-col gap-1.5 min-w-0">
+                                                    <h4 className="font-black text-xl tracking-tight leading-tight group-hover:text-[#FF6600] transition-colors">
+                                                        {getLocalized(machine.name, locale)}
+                                                    </h4>
+                                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FF6600]/70">
+                                                        {getLocalized(machine.category, locale)}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p className="text-sm text-muted-foreground italic mb-6 line-clamp-2">
+                                                {getLocalized(machine.description, locale)}
+                                            </p>
+                                            <div className="mt-auto flex items-center justify-between">
+                                                <span className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-black opacity-60">
+                                                    {getLocalized(machine.openingType, locale)}
+                                                </span>
+                                                <div className="w-10 h-10 rounded-full bg-muted group-hover:bg-[#FF6600] group-hover:text-white flex items-center justify-center transition-colors relative z-20">
+                                                    <ArrowRight size={18} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </ScrollReveal>
+                    )}
                     {/* Enhanced Ecosystem (Accessories & Consumables) */}
                     {(fullAccessories.length > 0 || fullConsumables.length > 0) && (
                         <ScrollReveal className="pt-32 border-t border-border">
@@ -472,7 +540,7 @@ export function ProductDetailView({ plancha, fullAccessories = [], fullConsumabl
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                 {activeItems.map((item: any) => (
+                                 {activeItems.filter(item => item.id && getLocalized(item.name, locale)).map((item: any) => (
                                     <div key={item.id} className="group p-6 rounded-[2.5rem] bg-card border border-border/50 hover:border-[#FF6600] hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all flex flex-col gap-6 relative">
                                         {item.slug && (
                                             <Link href={`/planchas/${item.slug}`} className="absolute inset-0 z-10" aria-label={getLocalized(item.name, locale)} />

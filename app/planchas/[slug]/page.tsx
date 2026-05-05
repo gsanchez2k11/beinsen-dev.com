@@ -88,19 +88,30 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
     };
 
     const getFullItemData = (items: { id: string, price?: number | string }[], source: any[]) => {
-        return items.map(item => {
-            const fullData = source.find(s => s.id === item.id);
-            return {
-                ...fullData,
-                price: item.price || fullData?.price || "Consultar PVP"
-            } as any;
-        });
+        return items
+            .map(item => {
+                const fullData = source.find(s => s.id === item.id);
+                if (!fullData) return null;
+                return {
+                    ...fullData,
+                    price: item.price || fullData.price || "Consultar PVP"
+                } as any;
+            })
+            .filter((item): item is any => item !== null);
     };
 
     const fullAccessories = getFullItemData((item as any).accessories || [], allAccessoriesData).map((a: any) => enrichWithLocalImages(a));
     const fullConsumables = getFullItemData((item as any).consumables || [], allConsumablesData).map((c: any) => enrichWithLocalImages(c));
 
     const relatedArticles = getArticlesByProduct(resolvedParams.slug).slice(0, 3);
+
+    // Find compatible machines for accessories/consumables
+    const compatiblePlanchas = kind !== "planchas" 
+        ? allPlanchasData.filter(p => 
+            p.accessories?.some(a => a.id === rawItem.id) || 
+            p.consumables?.some(c => c.id === rawItem.id)
+          ).map(p => enrichWithLocalImages(p))
+        : [];
 
     return (
         <>
@@ -113,6 +124,7 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
                 plancha={item as any}
                 fullAccessories={fullAccessories}
                 fullConsumables={fullConsumables}
+                compatiblePlanchas={compatiblePlanchas}
                 kind={kind}
             />
 
