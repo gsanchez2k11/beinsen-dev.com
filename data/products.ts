@@ -4763,12 +4763,25 @@ function enrichPlancha(plancha: Plancha): Plancha {
     { label: { es: "Formato", en: "Format" }, value: plancha.size }
   ];
 
+  const storyPool = [
+    { headline: "Precisión y Control", title: "Acabados impecables", desc: "está diseñada para garantizar estampados precisos con una facilidad de uso inigualable", enDesc: "is designed to guarantee precise prints with unmatched ease of use" },
+    { headline: "Potencia Industrial", title: "Máxima durabilidad", desc: "ha sido construida para soportar largas jornadas de trabajo sin comprometer la calidad", enDesc: "is built to withstand long workdays without compromising quality" },
+    { headline: "Innovación Térmica", title: "Calor uniforme", desc: "asegura una distribución de temperatura perfecta para transferencias sin fallos", enDesc: "ensures perfect temperature distribution for flawless transfers" },
+    { headline: "Versatilidad Sin Límites", title: "Adaptable a todo", desc: "es la herramienta definitiva para quienes buscan diversificar su oferta de productos", enDesc: "is the ultimate tool for those looking to diversify their product offerings" },
+    { headline: "Eficiencia Comprobada", title: "Rendimiento superior", desc: "ha sido optimizada para reducir los tiempos de ciclo y maximizar tu producción diaria", enDesc: "has been optimized to reduce cycle times and maximize your daily production" },
+    { headline: "Trabajo Inteligente", title: "Flujo continuo", desc: "te permite trabajar reduciendo el esfuerzo manual en cada ciclo de planchado", enDesc: "allows you to work by reducing manual effort in every pressing cycle" },
+    { headline: "Diseño Ergonómico", title: "Comodidad total", desc: "está pensada para el bienestar del operador, haciendo que el proceso sea rápido y seguro", enDesc: "is designed for operator comfort, making the process fast and safe" },
+    { headline: "Alto Rendimiento", title: "Resultados profesionales", desc: "te ofrece el control exacto necesario para trabajos que requieren la mayor exigencia", enDesc: "offers the exact control needed for highly demanding jobs" }
+  ];
+  const hash = plancha.id.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  const selectedStory = storyPool[hash % storyPool.length];
+
   const defaultStorySegments = [
     {
-      title: { es: "Rendimiento profesional", en: "Professional performance" },
+      title: { es: selectedStory.title, en: "Professional performance" },
       description: {
-        es: `${esName} ha sido diseñada para ofrecer resultados consistentes y alta productividad.`,
-        en: `${enName} is designed to deliver consistent results and high productivity.`
+        es: `${esName} ${selectedStory.desc}.`,
+        en: `${enName} ${selectedStory.enDesc}.`
       },
       image: plancha.image
     }
@@ -4806,6 +4819,7 @@ function enrichPlancha(plancha: Plancha): Plancha {
 
   return {
     ...plancha,
+    storyHeadline: plancha.storyHeadline || { es: selectedStory.headline, en: "Redefining the workflow" },
     gallery: uniqueStrings([plancha.image, ...(plancha.gallery || [])]),
     technicalSpecs: plancha.technicalSpecs && plancha.technicalSpecs.length > 0 ? plancha.technicalSpecs : defaultTechnicalSpecs,
     benefits: plancha.benefits && plancha.benefits.length > 0 ? plancha.benefits : defaultBenefits,
@@ -6271,4 +6285,4 @@ const rawConsumablesData: Consumable[] = [
     ]
   }
 ];
-export const allConsumablesData: Consumable[] = [...rawConsumablesData].sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
+export const allConsumablesData: Consumable[] = [...rawConsumablesData].sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
