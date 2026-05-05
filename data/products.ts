@@ -108,6 +108,7 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "accessories": [
+      { "id": "plato-38x38-beinsen-chinela" },
       { "id": "termometro-digital-infrarrojos-it122" },
       { "id": "almohadilla-teflon-termorresistente-38x38" },
       { "id": "almohadilla-teflon-termorresistente-25x25" },
@@ -233,6 +234,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "resistencia-tazas-11oz-b" }
     ],
     "consumables": [
+      { "id": "resistencia-tazas-11oz-a" },
       { "id": "cinta-termica-10mm" },
       { "id": "resistencia-cilindrica-tazas-11oz-tipo-a" }
     ],
@@ -577,6 +579,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "mesa-universal-grande" }
     ],
     "consumables": [
+      { "id": "resistencia-tazas-11oz-a" },
       { "id": "cinta-termica-10mm" }
     ],
 
@@ -1904,6 +1907,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "resistencia-conica-tazas-17oz" }
     ],
     "consumables": [
+      { "id": "resistencia-tazas-11oz-a" },
       { "id": "cinta-termica-10mm" }
     ],
 
@@ -1962,13 +1966,6 @@ const rawPlanchasData: Plancha[] = [
         "title": { "es": "Fácil de usar", "en": "Easy to use" },
         "description": { "es": "Es fácil de operar incluso para quienes no tienen experiencia previa en personalización de tazas.", "en": "It is easy to operate even for users without previous mug personalization experience." },
         "icon": "Settings"
-      }
-    ],
-    "storySegments": [
-      {
-        "title": { "es": "Rendimiento profesional", "en": "Professional performance" },
-        "description": { "es": "Aruba Plancha Para Tazas ha sido diseñada para ofrecer resultados consistentes y alta productividad.", "en": "Aruba Mug Heat Press is designed to deliver consistent results and high productivity." },
-        "image": "/products/maquinas/aruba-plancha-para-tazas/03.png"
       }
     ],
     "storySegments": [
@@ -4822,68 +4819,6 @@ export const allPlanchasData: Plancha[] = rawPlanchasData.map(enrichPlancha).sor
 
 const rawAccessoriesData: Accessory[] = [
   {
-    id: "laser-posicionamiento",
-    slug: "laser-posicionamiento",
-    name: { es: "Láser de Posicionamiento Extra", en: "Extra Positioning Laser" },
-    price: 120,
-    image: "https://beinsen.com/wp-content/uploads/2025/07/Sin-titulo-1000-x-1000-px-1.png",
-    description: { es: "Diodo láser de alta visibilidad para repuesto.", en: "High-visibility laser diode for replacement." }
-  },
-  {
-    "reference": "BPLAN159",
-    id: "plato-resistencia-combo-38x38",
-    slug: "plato-resistencia-combo-38x38",
-    name: {
-      es: "Plato y resistencia planchas para planchas combo Beinsen 38x38",
-      en: "Plate and heating element for Beinsen combo 38x38 heat press",
-      pt: "Prato e resistência para prensas combo Beinsen 38x38",
-      it: "Piastra e resistenza per presse combo Beinsen 38x38"
-    },
-    price: "Consultar PVP",
-    image: "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-resiplana_1.webp",
-    description: {
-      es: "Repuesto de plato y resistencia. Plato superior con resistencia incorporada, para todos los modelos combo 38X38 de 1ªGeneración. Este plato es el que aplica el calor sobre el objeto a planchar. Características: Dimensiones plato: 38 cm x 38 cm. Fundición a presión. Calor plano y uniforme. Material de aluminio fino. Fácil montaje.",
-      en: "Replacement plate and heating element. Upper plate with built-in heating element, for all 1st Generation 38X38 combo models. Dimensions: 38x38cm. Die-cast. Flat and uniform heat. Thin aluminum material. Easy assembly.",
-      pt: "Prato e resistência de substituição. Prato superior com resistência incorporada, para todos os modelos combo 38X38 de 1ª Geração. Dimensões: 38x38cm. Fundição sob pressão. Calor plano e uniforme. Material de alumínio fino. Fácil montagem.",
-      it: "Piastra e resistenza di ricambio. Piastra superiore con resistenza incorporata, per tutti i modelli combo 38X38 di 1ª Generazione. Dimensioni: 38x38cm. Pressofusione. Calore piatto e uniforme. Sottile materiale in alluminio. Facile montaggio."
-    },
-    technicalSpecs: [
-      { label: { es: "Compatibilidad", en: "Compatibility", pt: "Compatibilidade", it: "Compatibilità" }, value: "Planchas Combo Beinsen 1ªGen (38x38)" },
-      { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "38 x 38 cm" },
-      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Aluminio fundido" }
-    ]
-  },
-  {
-    "reference": "PLAACCA38",
-    id: "almohadilla-silicona-38x38",
-    slug: "almohadilla-silicona-38x38",
-    name: {
-      es: "Almohadilla de silicona de 38x38",
-      en: "38x38 silicone pad",
-      pt: "Almofada de silicone de 38x38",
-      it: "Cuscinetto in silicone 38x38"
-    },
-    price: "Consultar PVP",
-    image: "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-61-fucn8ygl._ac_uf894_1000_ql80_.webp",
-    description: {
-      es: "Almohadilla de silicona de 38x38 cm diseñada para proteger las prendas y garantizar una presión uniforme durante el transfer. Resistente al calor hasta 220ºC con espesor de 10mm.",
-      en: "38x38 cm silicone pad designed to protect garments and ensure uniform pressure during transfer. Heat resistant up to 220ºC with 10mm thickness.",
-      pt: "Almofada de silicone de 38x38 cm para proteger as peças e garantir pressão uniforme durante a transferência. Resistente ao calor até 220ºC com 10mm de espessura.",
-      it: "Cuscinetto in silicone 38x38 cm per proteggere i capi e garantire una pressione uniforme durante il trasferimento. Resistente al calore fino a 220ºC con spessore di 10mm."
-    },
-    technicalSpecs: [
-      { label: { es: "Material", en: "Material", pt: "Material", it: "Materiale" }, value: "Silicona de grado industrial / Industrial grade silicone" },
-      { label: { es: "Dimensiones", en: "Dimensions", pt: "Dimensões", it: "Dimensioni" }, value: "38 x 38 cm" },
-      { label: { es: "Espesor", en: "Thickness", pt: "Espessura", it: "Spessore" }, value: "10 mm" },
-      { label: { es: "Temperatura máxima", en: "Maximum Temperature", pt: "Temperatura máxima", it: "Temperatura massima" }, value: "220ºC" }
-    ],
-    gallery: [
-      "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/a/l/almohadilla_38x38.webp",
-      "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-61-fucn8ygl._ac_uf894_1000_ql80_.webp",
-      "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/7/1/71kmkhpeqol._ac_sl1500_-removebg-preview_2.webp"
-    ]
-  },
-  {
     "reference": "BTEFL155",
     "id": "lamina-teflon-38x38",
     "slug": "lamina-teflon-38x38",
@@ -5062,7 +4997,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra per cappellini per Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_1522.webp",
+    "image": "",
     "description": {
       "es": "Optimiza tu prensa térmica modelo Beinsen Riad con nuestro plato inferior para gorras. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Riad. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
       "en": "Optimize your Beinsen Riad heat press with our lower cap plate. Specifically designed for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes. Manufactured with high quality materials, it guarantees uniform heat distribution and precise sublimation results.",
@@ -5084,7 +5019,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza 15x20cm per pressa Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_1579.webp",
+    "image": "",
     "description": {
       "es": "Resistencia de 15x20cm. para prensa térmica de etiquetas y gorras Beinsen Riad. Permite cambiar el módulo de gorras a un plato plano pequeño ideal para etiquetas o diseños en bolsillos.",
       "en": "15x20cm heating element for Beinsen Riad label and cap heat press. Allows changing the cap module to a small flat plate ideal for labels or pocket designs.",
@@ -5107,7 +5042,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza per cappellini per Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_1848_1_.webp",
+    "image": "",
     "description": {
       "es": "Resistencia para sublimar gorras para prensa térmica Beinsen Riad.",
       "en": "Cap sublimation heating element for Beinsen Riad heat press.",
@@ -5129,7 +5064,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra per cappellini per Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-20190422112715700.webp.webp",
+    "image": "",
     "description": {
       "es": "Optimiza tu prensa térmica modelo Beinsen Obrei con nuestro plato inferior para gorras. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Obrei. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
       "en": "Optimize your Beinsen Obrei heat press with our lower cap plate. Specifically designed for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes. Manufactured with high quality materials, it guarantees uniform heat distribution and precise sublimation results.",
@@ -5199,7 +5134,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza 15x15cm per pressa Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-20190327163426731.webp.webp",
+    "image": "",
     "description": {
       "es": "Resistencia de 15x15cm. para prensa térmica Beinsen Obrei.",
       "en": "15x15cm heating element for Beinsen Obrei heat press.",
@@ -5222,7 +5157,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra 15x20cm per Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_1786.webp",
+    "image": "",
     "description": {
       "es": "Optimiza tu prensa térmica modelo Beinsen Riad con nuestro plato inferior de 15x20cm. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Riad. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
       "en": "Optimize your Beinsen Riad heat press with our 15x20cm lower plate. Specifically designed for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes.",
@@ -5564,7 +5499,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza per piatti 6\" - 1ª Generazione"
     },
     "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/t/r/transparent-sin_re.webp",
+    "image": "",
     "description": {
       "es": "Resistencia de calor para planchas de platos. Este plato es el que aplica el calor sobre el objeto a planchar. Resistencia para platos de 6\".",
       "en": "Heating element for plate presses. This plate applies heat to the object to be pressed. 6\" plate heating element.",
@@ -5600,28 +5535,6 @@ const rawAccessoriesData: Accessory[] = [
     ]
   },
   {
-    "reference": "ACMPRTKENROD",
-    "id": "rodillo-cintas",
-    "slug": "rodillo-cintas",
-    "name": {
-      "es": "Rodillo para Cintas",
-      "en": "Ribbon roller",
-      "pt": "Rolo para fitas",
-      "it": "Rullo per nastri"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-rodillo-kenia.webp",
-    "description": {
-      "es": "Accesorio para sublimar cintas de manera sencilla. Rodillo donde insertar los rollos de cinta y pasarlas gracias a su manivela. Diseñado exclusivamente para adaptarse a nuestra plancha térmica Kenia de Beinsen. CE aprobado. Fácil montaje y desmontaje.",
-      "en": "Accessory to easily sublimate ribbons. Roller where to insert the ribbon rolls and pass them through thanks to its crank. Exclusively designed to adapt to our Beinsen Kenia heat press. CE approved. Easy assembly and disassembly.",
-      "pt": "Acessório para sublimar fitas de forma simples. Rolo onde inserir os rolos de fita e passá-los graças à sua manivela. Projetado exclusivamente para se adaptar à nossa prensa térmica Kenia da Beinsen. Aprovado CE. Fácil montagem e desmontagem.",
-      "it": "Accessorio per sublimare facilmente i nastri. Rullo in cui inserire i rotoli di nastro e farli scorrere grazie alla sua manovella. Progettato esclusivamente per adattarsi alla nostra pressa termica Kenia di Beinsen. Approvato CE. Facile montaggio e smontaggio."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Kenia" }
-    ]
-  },
-  {
     "reference": "ACCALR80X1",
     "id": "almohadilla-algodon-80x110",
     "slug": "almohadilla-algodon-80x110",
@@ -5644,450 +5557,6 @@ const rawAccessoriesData: Accessory[] = [
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "80 x 110 cm" },
       { "label": { "es": "Grosor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "50 mm" },
       { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" }
-    ]
-  },
-  {
-    "reference": "140000109P2",
-    "id": "filtro-hepa-sx8-sz1-tb",
-    "slug": "filtro-hepa-sx8-sz1-tb",
-    "name": {
-      "es": "Filtro Hepa para purificador de humos para SX8 y SZ1 TB",
-      "en": "Hepa filter for smoke purifier SX8 and SZ1 TB",
-      "pt": "Filtro Hepa para purificador de fumos para SX8 e SZ1 TB",
-      "it": "Filtro Hepa per purificatore fumi per SX8 e SZ1 TB"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/f/i/filtro-hepa-purificador-humos-ho_3__1.webp",
-    "description": {
-      "es": "El Filtro HEPA para purificador de humos para hornos DTF InkOne SX8 / SZ1 es un recambio esencial que captura eficazmente micropartículas durante el proceso de curado, garantizando un entorno limpio y seguro en la impresión DTF profesional.",
-      "en": "The HEPA filter for smoke purifier for DTF InkOne SX8 / SZ1 ovens is an essential replacement that effectively captures microparticles during the curing process, ensuring a clean and safe environment in professional DTF printing.",
-      "pt": "O Filtro HEPA para purificador de fumos para fornos DTF InkOne SX8 / SZ1 é um recambio essencial que captura eficazmente micropartículas durante o processo de cura, garantindo um ambiente limpo e seguro na impressão DTF profissional.",
-      "it": "Il Filtro HEPA per purificatore fumi per forni DTF InkOne SX8 / SZ1 è un ricambio essenziale che cattura efficacemente microparticelle durante il processo di polimerizzazione, garantendo un ambiente pulito e sicuro nella stampa DTF professionale."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "HEPA - Tamaño B (posición 2)" },
-      { "label": { "es": "Eficiencia de filtración", "en": "Filtration efficiency", "pt": "Eficiência de filtração", "it": "Efficienza di filtrazione" }, "value": "99,97 % de partículas 0,3 micras" },
-      { "label": { "es": "Mecanismo de filtrado", "en": "Filter mechanism", "pt": "Mecanismo de filtro", "it": "Meccanismo di filtrazione" }, "value": "Impacto, intercepción y difusión" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Fibras ultra finas de vidrio" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1 (tipo TB)" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" }
-    ]
-  },
-  {
-    "reference": "140000109",
-    "id": "filtro-hepa-sx8-sz1-ta",
-    "slug": "filtro-hepa-sx8-sz1-ta",
-    "name": {
-      "es": "Filtro Hepa para purificador de humos para SX8 y SZ1 TA",
-      "en": "Hepa filter for smoke purifier SX8 and SZ1 TA",
-      "pt": "Filtro Hepa para purificador de fumos para SX8 e SZ1 TA",
-      "it": "Filtro Hepa per purificatore fumi per SX8 e SZ1 TA"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/f/i/filtro-hepa-purificador-humos-ho_3_.webp",
-    "description": {
-      "es": "El Filtro HEPA para purificador de humos para hornos DTF InkOne SX8 / SZ1 es un recambio esencial que captura eficazmente micropartículas durante el proceso de curado, garantizando un entorno limpio y seguro en la impresión DTF profesional.",
-      "en": "The HEPA filter for smoke purifier for DTF InkOne SX8 / SZ1 ovens is an essential replacement that effectively captures microparticles during the curing process, ensuring a clean and safe environment in professional DTF printing.",
-      "pt": "O Filtro HEPA para purificador de fumos para fornos DTF InkOne SX8 / SZ1 é um recambio essencial que captura eficazmente micropartículas durante o processo de cura, garantindo um ambiente limpo e seguro na impressão DTF profissional.",
-      "it": "Il Filtro HEPA per purificatore fumi per forni DTF InkOne SX8 / SZ1 è un ricambio essenziale che cattura efficacemente microparticelle durante il processo di polimerizzazione, garantendo un ambiente pulito e sicuro nella stampa DTF professionale."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "HEPA - Tamaño A (posición 1)" },
-      { "label": { "es": "Eficiencia de filtración", "en": "Filtration efficiency", "pt": "Eficiência de filtração", "it": "Efficienza di filtrazione" }, "value": "99,97 % de partículas 0,3 micras" },
-      { "label": { "es": "Mecanismo de filtrado", "en": "Filter mechanism", "pt": "Mecanismo de filtro", "it": "Meccanismo di filtrazione" }, "value": "Impacto, intercepción y difusión" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Fibras ultra finas de vidrio" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1 (tipo TA)" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Recambio rápido sin herramientas" }
-    ]
-  },
-  {
-    "reference": "140000110",
-    "id": "filtro-carbon-sx8-sz1",
-    "slug": "filtro-carbon-sx8-sz1",
-    "name": {
-      "es": "Filtro de Carbón activado para purificador de humos para SX8 y SZ1",
-      "en": "Activated carbon filter for smoke purifier SX8 and SZ1",
-      "pt": "Filtro de carvão ativado para purificador de fumos para SX8 e SZ1",
-      "it": "Filtro a carboni attivi per purificatore fumi per SX8 e SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/f/i/filtro-carbon-activado-purificad_2_.png",
-    "description": {
-      "es": "El Filtro de Carbón activado para purificador de humos para SX8 y SZ1 es un recambio esencial para mantener el aire libre de vapores, olores y residuos químicos durante el curado DTF, asegurando un entorno de trabajo más limpio, seguro y libre de contaminantes.",
-      "en": "The Activated carbon filter for smoke purifier SX8 and SZ1 is an essential replacement to keep air free from vapors, odors and chemical residues during DTF curing, ensuring a cleaner, safer and contaminant-free work environment.",
-      "pt": "O Filtro de carvão ativado para purificador de fumos para SX8 e SZ1 é um recambio essencial para manter o ar livre de vapores, odores e resíduos químicos durante a cura DTF, garantindo um ambiente de trabalho mais limpo, seguro e livre de contaminantes.",
-      "it": "Il Filtro a carboni attivi per purificatore fumi per SX8 e SZ1 è un ricambio essenziale per mantenere l'aria libera da vapori, odori e residui chimici durante la polimerizzazione DTF, garantendo un ambiente di lavoro più pulito, sicuro e privo di contaminanti."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Tipo de filtrado", "en": "Filter type", "pt": "Tipo de filtro", "it": "Tipo di filtro" }, "value": "Carbón activado / Activated carbon" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 y SZ1 / InkOne SX8 and SZ1" },
-      { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Elimina vapores, olores y residuos químicos / Removes vapors, odors and chemical residues" },
-      { "label": { "es": "Intervalo de reemplazo", "en": "Replacement interval", "pt": "Intervalo de substituição", "it": "Intervallo di sostituzione" }, "value": "Cada 6 meses (uso continuo) / Every 6 months (continuous use)" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin mantenimiento / Easy replacement without maintenance" }
-    ]
-  },
-  {
-    "reference": "140000164",
-    "id": "cojinete-f6904rs-sx8-sz1",
-    "slug": "cojinete-f6904rs-sx8-sz1",
-    "name": {
-      "es": "Cojinete de borde F6904RS para horno y aplicador DTF InkOne SX8 y SZ1",
-      "en": "F6904RS flange bearing for DTF InkOne SX8 and SZ1 oven",
-      "pt": "Rolamento de flange F6904RS para forno DTF InkOne SX8 e SZ1",
-      "it": "Cuscinetto flangiato F6904RS per forno DTF InkOne SX8 e SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/o/cojinete-borde-f6901rs-horno-apl_3__1.webp",
-    "description": {
-      "es": "El Cojinete de borde F6904RS para horno y aplicador DTF InkOne SX8 y SZ1 es un recambio de alta precisión usado en ejes de guiado y en la cinta transportadora del horno, garantizando estabilidad térmica y movimiento suave del film. Su doble sellado 2RS lo protege del polvo, la humedad y los residuos del curado.",
-      "en": "The F6904RS flange bearing for DTF InkOne SX8 and SZ1 oven is a high-precision replacement used in guide shafts and conveyor belts, ensuring thermal stability and smooth film movement. Its double 2RS seal protects against dust, moisture and curing residues.",
-      "pt": "O Rolamento de flange F6904RS para forno DTF InkOne SX8 e SZ1 é um recambio de alta precisão usado em eixos de guia e na correia transportadora do forno, garantindo estabilidade térmica e movimento suave do filme. Seu duplo selo 2RS protege contra poeira, umidade e resíduos de cura.",
-      "it": "Il Cuscinetto flangiato F6904RS per forno DTF InkOne SX8 e SZ1 è un ricambio di alta precisione utilizzato negli assi di guida e nei nastri trasportatori del forno, garantendo stabilità termica e movimento morbido del film. La sua doppia guarnizione 2RS protegge da polvere, umidità e residui di polimerizzazione."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Diámetro interior", "en": "Inner diameter", "pt": "Diâmetro interno", "it": "Diametro interno" }, "value": "20 mm" },
-      { "label": { "es": "Diámetro exterior", "en": "Outer diameter", "pt": "Diâmetro externo", "it": "Diametro esterno" }, "value": "37 mm" },
-      { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "9 mm" },
-      { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble 2RS / Double 2RS" },
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Rodamiento con brida / Flange bearing" }
-    ]
-  },
-  {
-    "reference": "140000163",
-    "id": "cojinete-f6901rs-sx8-sz1",
-    "slug": "cojinete-f6901rs-sx8-sz1",
-    "name": {
-      "es": "Cojinete de borde F6901RS para horno y aplicador DTF InkOne SX8 y SZ1",
-      "en": "F6901RS flange bearing for DTF InkOne SX8 and SZ1 oven",
-      "pt": "Rolamento de flange F6901RS para forno DTF InkOne SX8 e SZ1",
-      "it": "Cuscinetto flangiato F6901RS per forno DTF InkOne SX8 e SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/o/cojinete-borde-f6901rs-horno-apl_3_.webp",
-    "description": {
-      "es": "El Cojinete de borde F6901RS para horno y aplicador DTF InkOne SX8 y SZ1 es el recambio técnico diseñado para garantizar un movimiento estable y preciso en los ejes de guiado del film. Su sellado doble RS lo protege del polvo y la humedad, asegurando un rendimiento fiable en entornos DTF exigentes.",
-      "en": "The F6901RS flange bearing for DTF InkOne SX8 and SZ1 oven is the technical replacement designed to ensure stable and precise movement in the film guide shafts. Its double RS seal protects against dust and moisture, ensuring reliable performance in demanding DTF environments.",
-      "pt": "O Rolamento de flange F6901RS para forno DTF InkOne SX8 e SZ1 é a peça de substituição técnica projetada para garantir movimento estável e preciso nos eixos de guia do filme. Seu selo duplo RS protege contra poeira e umidade, garantindo desempenho confiável em ambientes DTF exigentes.",
-      "it": "Il Cuscinetto flangiato F6901RS per forno DTF InkOne SX8 e SZ1 è il ricambio tecnico progettato per garantire un movimento stabile e preciso negli alberi di guida del film. La sua doppia guarnizione RS protegge da polvere e umidità, garantendo prestazioni affidabili in ambienti DTF impegnativi."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Diámetro interior", "en": "Inner diameter", "pt": "Diâmetro interno", "it": "Diametro interno" }, "value": "12 mm" },
-      { "label": { "es": "Diámetro exterior", "en": "Outer diameter", "pt": "Diâmetro externo", "it": "Diametro esterno" }, "value": "24 mm" },
-      { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "6 mm" },
-      { "label": { "es": "Tipo de sellado", "en": "Seal type", "pt": "Tipo de vedação", "it": "Tipo di sigillo" }, "value": "Doble RS / Double RS" }
-    ]
-  },
-  {
-    "reference": "140000157",
-    "id": "fuente-alimentacion-24v-sx8-sz1-b",
-    "slug": "fuente-alimentacion-24v-sx8-sz1-b",
-    "name": {
-      "es": "Fuente de alimentación de 24 V para horno y aplicador DTF InkOne SX8 y SZ1 tipo B",
-      "en": "24V Power supply for DTF InkOne SX8 and SZ1 oven type B",
-      "pt": "Fonte de alimentação de 24V para forno DTF InkOne SX8 e SZ1 tipo B",
-      "it": "Alimentatore 24V per forno DTF InkOne SX8 e SZ1 tipo B"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/f/u/fuente-alimentacion-24v-horno-ap_4__1.webp",
-    "description": {
-      "es": "La Fuente de alimentación de 24 V para horno y aplicador DTF InkOne SX8 y SZ1 es un recambio que proporciona un suministro eléctrico estable, seguro y eficiente para los sistemas de calefacción y control del horno. Diseñada para ofrecer un rendimiento fiable y continuo, protege los componentes internos del equipo y asegura un funcionamiento sin interrupciones.",
-      "en": "The 24V Power supply for DTF InkOne SX8 and SZ1 oven is a replacement that provides stable, safe and efficient electrical power for heating and control systems. Designed to deliver reliable and continuous performance, it protects internal equipment components and ensures uninterrupted operation.",
-      "pt": "A Fonte de alimentação de 24V para forno DTF InkOne SX8 e SZ1 é um recambio que fornece uma alimentação elétrica estável, segura e eficiente para os sistemas de aquecimento e controle do forno. Projetada para fornecer desempenho confiável e contínuo, protege os componentes internos do equipamento e garante operação ininterrupta.",
-      "it": "L'Alimentatore 24V per forno DTF InkOne SX8 e SZ1 è un ricambio che fornisce un'alimentazione elettrica stabile, sicura ed efficiente per i sistemi di riscaldamento e controllo del forno. Progettato per offrire prestazioni affidabili e continue, protegge i componenti interni dell'apparecchiatura e garantisce un funzionamento ininterrotto."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Voltaje de salida", "en": "Output voltage", "pt": "Voltagem de saída", "it": "Tensione di uscita" }, "value": "24 V" },
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "B" },
-      { "label": { "es": "Protección integrada", "en": "Integrated protection", "pt": "Proteção integrada", "it": "Protezione integrata" }, "value": "Sobrecarga, sobrecalentamiento, picos de tensión" },
-      { "label": { "es": "Eficiencia energética", "en": "Energy efficiency", "pt": "Eficiência energética", "it": "Efficienza energetica" }, "value": "Alta / High" },
-      { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Carcasa metálica ventilada / Ventilated metal enclosure" },
-      { "label": { "es": "Certificación", "en": "Certification", "pt": "Certificação", "it": "Certificazione" }, "value": "CE" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" }
-    ]
-  },
-  {
-    "id": "fuente-alimentacion-24v-sx8-sz1",
-    "slug": "fuente-alimentacion-24v-sx8-sz1",
-    "name": {
-      "es": "Fuente de alimentación de 24 V para horno y aplicador DTF InkOne SX8 y SZ1",
-      "en": "24V Power supply for DTF InkOne SX8 and SZ1 oven",
-      "pt": "Fonte de alimentação de 24V para forno DTF InkOne SX8 e SZ1",
-      "it": "Alimentatore 24V per forno DTF InkOne SX8 e SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/f/u/fuente-alimentacion-24v-horno-ap_4_.webp",
-    "description": {
-      "es": "La Fuente de alimentación de 24 V para horno y aplicador DTF InkOne SX8 y SZ1 es un recambio que proporciona un suministro eléctrico estable, seguro y eficiente para los sistemas de calefacción y control del horno. Diseñada para ofrecer un rendimiento fiable y continuo, protege los componentes internos del equipo y asegura un funcionamiento sin interrupciones.",
-      "en": "The 24V Power supply for DTF InkOne SX8 and SZ1 oven is a replacement that provides stable, safe and efficient electrical power for heating and control systems. Designed to deliver reliable and continuous performance, it protects internal equipment components and ensures uninterrupted operation.",
-      "pt": "A Fonte de alimentação de 24V para forno DTF InkOne SX8 e SZ1 é um recambio que fornece uma alimentação elétrica estável, segura e eficiente para os sistemas de aquecimento e controle do forno. Projetada para fornecer desempenho confiável e contínuo, protege os componentes internos do equipamento e garante operação ininterrupta.",
-      "it": "L'Alimentatore 24V per forno DTF InkOne SX8 e SZ1 è un ricambio che fornisce un'alimentazione elettrica stabile, sicura ed efficiente per i sistemi di riscaldamento e controllo del forno. Progettato per offrire prestazioni affidabili e continue, protegge i componenti interni dell'apparecchiatura e garantisce un funzionamento ininterrotto."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Voltaje de salida", "en": "Output voltage", "pt": "Voltagem de saída", "it": "Tensione di uscita" }, "value": "24 V" },
-      { "label": { "es": "Protección integrada", "en": "Integrated protection", "pt": "Proteção integrada", "it": "Protezione integrata" }, "value": "Sobrecarga, sobrecalentamiento, picos de tensión" },
-      { "label": { "es": "Eficiencia energética", "en": "Energy efficiency", "pt": "Eficiência energética", "it": "Efficienza energetica" }, "value": "Alta / High" },
-      { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Carcasa metálica ventilada / Ventilated metal enclosure" },
-      { "label": { "es": "Certificación", "en": "Certification", "pt": "Certificação", "it": "Certificazione" }, "value": "CE" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución directa sin adaptaciones" }
-    ]
-  },
-  {
-    "reference": "140000150",
-    "id": "sensor-placa-calefactora-sx8-sz1",
-    "slug": "sensor-placa-calefactora-sx8-sz1",
-    "name": {
-      "es": "Sensor de la placa calefactora delantera para horno y aplicador DTF InkOne SX8 y SZ1",
-      "en": "Front heating plate sensor for DTF InkOne SX8 and SZ1 oven",
-      "pt": "Sensor da placa de aquecimento frontal para forno DTF InkOne SX8 e SZ1",
-      "it": "Sensore piastra riscaldante anteriore per forno DTF InkOne SX8 e SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/s/e/sensor-placa-calefactora-delante_3_.webp",
-    "description": {
-      "es": "El Sensor de la placa calefactora delantera para horno y aplicador DTF InkOne SX8 y SZ1 mide con precisión la temperatura del sistema de precalentamiento del film. Este repuesto diseñado para InkOne garantiza un control térmico estable, rendimiento constante y una instalación rápida y segura. Cable térmico protegido con funda aislante y conectores rápidos (quick-plug).",
-      "en": "The Front heating plate sensor for DTF InkOne SX8 and SZ1 oven accurately measures the temperature of the film preheating system. This replacement designed for InkOne ensures stable thermal control, consistent performance and quick, safe installation. Protected thermal cable with insulating sleeve and quick-plug connectors.",
-      "pt": "O Sensor da placa de aquecimento frontal para forno DTF InkOne SX8 e SZ1 mede com precisão a temperatura do sistema de pré-aquecimento do filme. Este recambio projetado para InkOne garante controle térmico estável, desempenho constante e instalação rápida e segura. Cabo térmico protegido com manga isolante e conectores rápidos.",
-      "it": "Il Sensore della piastra riscaldante anteriore per forno DTF InkOne SX8 e SZ1 misura con precisione la temperatura del sistema di preriscaldamento del film. Questo ricambio progettato per InkOne garantisce un controllo termico stabile, prestazioni costanti e un'installazione rapida e sicura. Cavo termico protetto con guaina isolante e connettori rapidi."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Sensor tipo K" },
-      { "label": { "es": "Rango", "en": "Range", "pt": "Gama", "it": "Gamma" }, "value": "0-800 °C" },
-      { "label": { "es": "Sistema de conexión", "en": "Connection system", "pt": "Sistema de conexão", "it": "Sistema di connessione" }, "value": "Quick-plug" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" }
-    ]
-  },
-  {
-    "reference": "140000149",
-    "id": "contactor-ca-220v-sx8-sz1",
-    "slug": "contactor-ca-220v-sx8-sz1",
-    "name": {
-      "es": "Contactor de CA 220 V para horno y aplicador DTF InkOne SX8 y SZ1",
-      "en": "220V AC Contactor for DTF InkOne SX8 and SZ1 oven",
-      "pt": "Contator AC 220V para forno DTF InkOne SX8 e SZ1",
-      "it": "Contattore AC 220V per forno DTF InkOne SX8 e SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/s/e/sensor-temperatura-horno-aplicad_1.webp",
-    "description": {
-      "es": "El Contactor de CA 220 V para horno y aplicador DTF InkOne SX8 y SZ1 es un recambio del sistema eléctrico de estos equipos, responsable de controlar y proteger la alimentación principal, garantizando un funcionamiento estable y seguro durante los procesos de curado DTF.",
-      "en": "The 220V AC Contactor for DTF InkOne SX8 and SZ1 oven is an electrical system replacement responsible for controlling and protecting the main power supply, ensuring stable and safe operation during DTF curing processes.",
-      "pt": "O Contator AC 220V para forno DTF InkOne SX8 e SZ1 é um recambio do sistema elétrico destes equipamentos, responsável por controlar e proteger a alimentação principal, garantindo funcionamento estável e seguro durante os processos de cura DTF.",
-      "it": "Il Contattore AC 220V per forno DTF InkOne SX8 e SZ1 è un ricambio del sistema elettrico di questi apparecchi, responsabile del controllo e della protezione dell'alimentazione principale, garantendo un funzionamento stabile e sicuro durante i processi di polimerizzazione DTF."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Interruptor diferencial / Differential switch" },
-      { "label": { "es": "Tensión nominal", "en": "Rated voltage", "pt": "Tensão nominal", "it": "Tensione nominale" }, "value": "230–400 V" },
-      { "label": { "es": "Frecuencia", "en": "Frequency", "pt": "Frequência", "it": "Frequenza" }, "value": "50 Hz" },
-      { "label": { "es": "Capacidad de corriente", "en": "Current capacity", "pt": "Capacidade de corrente", "it": "Capacità di corrente" }, "value": "40 A" },
-      { "label": { "es": "Tiempo de respuesta", "en": "Response time", "pt": "Tempo de resposta", "it": "Tempo di risposta" }, "value": "≤ 0,1 s" },
-      { "label": { "es": "Norma", "en": "Standard", "pt": "Norma", "it": "Norma" }, "value": "GB/T16917.22" }
-    ]
-  },
-  {
-    "reference": "140000129",
-    "id": "sensor-temperatura-sz1",
-    "slug": "sensor-temperatura-sz1",
-    "name": {
-      "es": "Sensor de temperatura para horno y aplicador DTF InkOne SZ1",
-      "en": "Temperature sensor for DTF InkOne SZ1 oven",
-      "pt": "Sensor de temperatura para forno DTF InkOne SZ1",
-      "it": "Sensore di temperatura per forno DTF InkOne SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/s/e/sensor-temperatura-horno-aplicad.webp",
-    "description": {
-      "es": "El Sensor de temperatura para horno y aplicador DTF InkOne SZ1 es el recambio del dispositivo que mide con precisión la temperatura interna del equipo durante el curado de transfers. Función clave para asegurar una fusión homogénea del polvo de poliamida. Conectores rápidos tipo quick-plug y cable térmico protegido con funda aislante resistente al calor.",
-      "en": "The Temperature sensor for DTF InkOne SZ1 oven is the replacement device that accurately measures the internal temperature of the equipment during transfer curing. Key function to ensure uniform fusion of polyamide powder. Quick-plug connectors and thermal cable protected with heat-resistant insulating sleeve.",
-      "pt": "O Sensor de temperatura para forno DTF InkOne SZ1 é o recambio do dispositivo que mede com precisão a temperatura interna do equipamento durante a cura dos transfers. Função chave para garantir a fusão homogênea do pó de poliamida. Conectores rápidos e cabo térmico protegido com manga isolante resistente ao calor.",
-      "it": "Il Sensore di temperatura per forno DTF InkOne SZ1 è il ricambio del dispositivo che misura con precisione la temperatura interna dell'apparecchiatura durante la polimerizzazione dei transfer. Funzione chiave per garantire una fusione omogenea della polvere di poliammide. Connettori rapidi e cavo termico protetto con guaina isolante termoresistente."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Plug-and-play" }
-    ]
-  },
-  {
-    "reference": "140000147",
-    "id": "motor-deposito-polvo-sx8",
-    "slug": "motor-deposito-polvo-sx8",
-    "name": {
-      "es": "Motor del depósito del polvo DTF para horno y aplicador DTF InkOne SX8",
-      "en": "DTF powder tank motor for DTF InkOne SX8 oven",
-      "pt": "Motor do tanque de pó DTF para forno DTF InkOne SX8",
-      "it": "Motore serbatoio polvere DTF per forno DTF InkOne SX8"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/m/o/motor-deposito-polvo-dtf-horno-a_3_.webp",
-    "description": {
-      "es": "El Motor del depósito del polvo DTF para horno y aplicador DTF InkOne SX8 es una pieza de recambio del sistema de aplicación de polvo, responsable de regular la velocidad de aplicación del polvo adhesivo antes de que el film pase a la cámara de sacudida. Garantiza una dispensación constante y uniforme del polvo DTF para obtener resultados óptimos en cada impresión.",
-      "en": "The DTF powder tank motor for DTF InkOne SX8 oven is a replacement part of the powder application system, responsible for regulating the speed of adhesive powder application before the film passes to the shake chamber. Ensures constant and uniform DTF powder dispensing for optimal results in every print.",
-      "pt": "O Motor do tanque de pó DTF para forno DTF InkOne SX8 é uma peça de reposição do sistema de aplicação de pó, responsável por regular a velocidade de aplicação do pó adesivo antes do filme passar para a câmara de agitação. Garante dispensação constante e uniforme do pó DTF para resultados ótimos em cada impressão.",
-      "it": "Il Motore serbatoio polvere DTF per forno DTF InkOne SX8 è una parte di ricambio del sistema di applicazione della polvere, responsabile della regolazione della velocità di applicazione della polvere adesiva prima che il film passi nella camera di agitazione. Garantisce un'erogazione costante e uniforme della polvere DTF per risultati ottimali in ogni stampa."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Controla velocidad y flujo del polvo en el depósito de aplicación" },
-      { "label": { "es": "Rendimiento", "en": "Performance", "pt": "Desempenho", "it": "Prestazioni" }, "value": "Dispensación constante y uniforme del polvo DTF" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla sin necesidad de herramientas especiales" },
-      { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Diseño robusto fabricado para soportar uso continuo en producción DTF" },
-      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Sistema de aplicación de polvo adhesivo DTF / DTF adhesive powder application system" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8" }
-    ]
-  },
-  {
-    "reference": "140000170",
-    "id": "rele-intermedio-24v-sz1",
-    "slug": "rele-intermedio-24v-sz1",
-    "name": {
-      "es": "Relé intermedio de 24V + base para horno y aplicador InkOne SZ1",
-      "en": "24V intermediate relay + base for InkOne SZ1 oven",
-      "pt": "Relé intermediário 24V + base para forno InkOne SZ1",
-      "it": "Relè intermedio 24V + base per forno InkOne SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/rele-intermedio-24v-base-horno-a_3_.webp",
-    "description": {
-      "es": "El Relé intermedio de 24 V + base para horno y aplicador DTF InkOne SZ1 es el recambio del dispositivo que permite, a la señal de control de 24 V, accionar el contactor de potencia de CA, asegurando una conmutación fiable y segura del sistema de secado. Conjunto con socket/soporte para montaje en carril DIN incluido.",
-      "en": "The 24V intermediate relay + base for DTF InkOne SZ1 applicator oven is the replacement device that allows the 24V control signal to actuate the AC power contactor, ensuring reliable and safe switching of the drying system. Set with socket/support for DIN rail mounting included.",
-      "pt": "O Relé intermediário de 24V + base para forno e aplicador DTF InkOne SZ1 é a peça de reposição que permite à sinal de controle de 24V acionar o contator de potência de CA, garantindo uma comutação confiável e segura do sistema de secagem. Conjunto com soquete para montagem em trilho DIN incluído.",
-      "it": "Il Relè intermedio 24V + base per forno e applicatore DTF InkOne SZ1 è il dispositivo di ricambio che consente al segnale di controllo 24V di azionare il contattore di potenza CA, garantendo una commutazione affidabile e sicura del sistema di essiccazione. Set con zoccolo/supporto per montaggio su guida DIN incluso."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Tensión de control", "en": "Control voltage", "pt": "Tensão de controle", "it": "Tensione di controllo" }, "value": "Bobina de 24 V DC" },
-      { "label": { "es": "Capacidad de conmutación", "en": "Switching capacity", "pt": "Capacidade de comutação", "it": "Capacità di commutazione" }, "value": "5A a 250V AC o 5A a 28V DC (IEC255)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
-    ]
-  },
-  {
-    "reference": "140000146",
-    "id": "rele-estado-solido-sz1",
-    "slug": "rele-estado-solido-sz1",
-    "name": {
-      "es": "Relé de estado sólido CDSSR-1DA 15DA para horno aplicador DTF InkOne SZ1",
-      "en": "CDSSR-1DA 15DA Solid state relay for DTF InkOne SZ1 oven",
-      "pt": "Relé de estado sólido CDSSR-1DA 15DA para forno DTF InkOne SZ1",
-      "it": "Relè a stato solido CDSSR-1DA 15DA per forno DTF InkOne SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/r/e/rele-estado-solido-cdssr-1da-15d_4_.webp",
-    "description": {
-      "es": "El Relé de estado sólido CDSSR-1DA 15DA para horno aplicador DTF InkOne SZ1 es una pieza de recambio esencial para el control de corriente alterna. Este componente garantiza un funcionamiento continuo, estable y silencioso, ideal para equipos que operan en procesos de curado térmico prolongado. Tipo SSR sin partes móviles, ofrece mayor durabilidad. Eficiencia energética y conmutación rápida y segura.",
-      "en": "The CDSSR-1DA 15DA Solid state relay for DTF InkOne SZ1 applicator oven is an essential replacement part for AC control. This component guarantees continuous, stable and silent operation. SSR type with no moving parts, energy efficient and fast switching.",
-      "pt": "O Relé de estado sólido CDSSR-1DA 15DA para forno DTF InkOne SZ1 é uma peça de reposição essencial para o controle CA. Este componente garante um funcionamento contínuo, estável e silencioso. Tipo SSR sem partes móveis, eficiente em energia e comutação rápida.",
-      "it": "Il relè a stato solido CDSSR-1DA 15DA per forno DTF InkOne SZ1 è una parte di ricambio essenziale per il controllo CA. Questo componente garantisce un funzionamento continuo, stabile e silenzioso. Tipo SSR senza parti mobili, alta efficienza e commutazione veloce."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "SSR (Solid State Relay)" },
-      { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "CDSSR-DA-4815" },
-      { "label": { "es": "Entrada / Salida", "en": "Input / Output", "pt": "Entrada / Saída", "it": "Ingresso / Uscita" }, "value": "INPUT 3-32 VDC | OUTPUT 15A 24-480VAC" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
-    ]
-  },
-  {
-    "reference": "140000114",
-    "id": "rele-hornos-sx8-sz1",
-    "slug": "rele-hornos-sx8-sz1",
-    "name": {
-      "es": "Relé para hornos DTF InkOne SX8 / SZ1",
-      "en": "Relay for DTF InkOne SX8 / SZ1 ovens",
-      "pt": "Relé para fornos DTF InkOne SX8 / SZ1",
-      "it": "Relè per forni DTF InkOne SX8 / SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/r/e/rele-hornos-dtf-inkone-sx8-sz1_2_.webp",
-    "description": {
-      "es": "El Relé para hornos DTF InkOne SZ1 es una pieza de recambio esencial para el control de corriente alterna en estos equipos. Se trata de un relé de estado sólido, silencioso, seguro y eficiente, diseñado para garantizar un funcionamiento continuo y sin interrupciones. Aislamiento eléctrico mediante optoacoplador.",
-      "en": "The Relay for DTF InkOne SZ1 ovens is an essential replacement part for alternating current control in these devices. It is a solid state relay, silent, safe and efficient, designed to ensure continuous operation without interruptions. Electrical isolation by optocoupler.",
-      "pt": "O Relé para fornos DTF InkOne SZ1 é uma peça de reposição essencial para controle de corrente alternada nestes equipamentos. É um relé de estado sólido, silencioso, seguro e eficiente, projetado para garantir operação contínua e sem interrupções. Isolamento elétrico via optoacoplador.",
-      "it": "Il Relè per forni DTF InkOne SZ1 è una parte di ricambio essenziale per il controllo della corrente alternata in queste apparecchiature. Si tratta di un relè a stato solido, silenzioso, sicuro ed efficiente, progettato per garantire un funzionamento continuo e senza interruzioni. Isolamento elettrico tramite optoisolatore."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Relé de estado sólido (SSR)" },
-      { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "SSR-40DAH" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8, SZ1" }
-    ]
-  },
-  {
-    "reference": "140000115",
-    "id": "placa-base-hornos-sx8-sz1",
-    "slug": "placa-base-hornos-sx8-sz1",
-    "name": {
-      "es": "Placa base para hornos DTF InkOne SX8 / SZ1",
-      "en": "Motherboard for DTF InkOne SX8 / SZ1 ovens",
-      "pt": "Placa principal para fornos DTF InkOne SX8 / SZ1",
-      "it": "Scheda madre per forni DTF InkOne SX8 / SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/p/l/placa-base-hornos-dtf-inkone-sx8.png",
-    "description": {
-      "es": "La Placa base para hornos DTF InkOne SX8 / SZ1 es el componente clave que gestiona todos los procesos electrónicos del horno, garantizando un funcionamiento preciso, seguro y coordinado. Asegura el control eficiente del curado, el avance del film y los sistemas de enfriamiento.",
-      "en": "The Motherboard for DTF InkOne SX8 / SZ1 ovens is the key component that manages all electronic processes of the oven, ensuring precise, safe and coordinated operation. Ensures efficient control of curing, film advancement and cooling systems.",
-      "pt": "A Placa principal para fornos DTF InkOne SX8 / SZ1 é o componente-chave que gerencia todos os processos eletrônicos do forno, garantindo operação precisa, segura e coordenada. Garante controle eficiente da cura, avanço do filme e sistemas de resfriamento.",
-      "it": "La Scheda madre per forni DTF InkOne SX8 / SZ1 è il componente chiave che gestisce tutti i processi elettronici del forno, garantendo un funzionamento preciso, sicuro e coordinato. Assicura il controllo efficiente della polimerizzazione, dell'avanzamento del film e dei sistemi di raffreddamento."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Control central del horno que coordina todas las funciones electrónicas" },
-      { "label": { "es": "Gestión del proceso", "en": "Process management", "pt": "Gestão do processo", "it": "Gestione del processo" }, "value": "Supervisa temperatura, avance del film, agitación de polvo y ventiladores de enfriamiento" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Estabilidad y precisión, respuesta rápida, diseño optimizado" },
-      { "label": { "es": "Rendimiento", "en": "Performance", "pt": "Desempenho", "it": "Prestazioni" }, "value": "Garantiza funcionamiento sincronizado y sin fallos en condiciones de alta exigencia" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución sencilla y rápida con conexión directa a sistemas integrados" },
-      { "label": { "es": "Protección", "en": "Protection", "pt": "Proteção", "it": "Protezione" }, "value": "Minimiza riesgo de fallos eléctricos con componentes de alta calidad" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SX8 / SZ1" }
-    ]
-  },
-  {
-    "reference": "140000113",
-    "id": "pantalla-hornos-sz1",
-    "slug": "pantalla-hornos-sz1",
-    "name": {
-      "es": "Pantalla para hornos DTF InkOne SZ1",
-      "en": "Display for DTF InkOne SZ1 ovens",
-      "pt": "Ecrã para fornos DTF InkOne SZ1",
-      "it": "Display per forni DTF InkOne SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/p/a/pantalla-hornos-dtf-inkone-sx8-s.webp",
-    "description": {
-      "es": "La Pantalla para hornos DTF InkOne SZ1 es un recambio que incluye el panel táctil con la placa de control integrada. Permite gestionar con precisión todos los parámetros del horno: temperatura, velocidad, polvo, succión y más, garantizando una operación controlada y eficiente.",
-      "en": "The Display for DTF InkOne SZ1 ovens is a replacement that includes the touchscreen panel with integrated control board. Allows you to manage precisely all oven parameters: temperature, speed, powder, suction and more, ensuring controlled and efficient operation.",
-      "pt": "A Ecrã para fornos DTF InkOne SZ1 é um recambio que inclui o painel sensível ao toque com placa de controle integrada. Permite gerenciar com precisão todos os parâmetros do forno: temperatura, velocidade, pó, sucção e muito mais, garantindo operação controlada e eficiente.",
-      "it": "Il Display per forni DTF InkOne SZ1 è un ricambio che include il pannello touchscreen con scheda di controllo integrata. Consente di gestire con precisione tutti i parametri del forno: temperatura, velocità, polvere, aspirazione e altro, garantendo un funzionamento controllato ed efficiente."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Tipo de pantalla", "en": "Display type", "pt": "Tipo de ecrã", "it": "Tipo di display" }, "value": "Panel táctil integrado / Integrated touchscreen panel" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Panel digital avanzado que unifica visualización y control en una única interfaz" },
-      { "label": { "es": "Parámetros controlables", "en": "Controllable parameters", "pt": "Parâmetros controláveis", "it": "Parametri controllabili" }, "value": "Temperatura, velocidad de cinta, pre-calentamiento, aplicación y agitación de polvo" },
-      { "label": { "es": "Precisión", "en": "Precision", "pt": "Precisão", "it": "Precisione" }, "value": "Alta precisión para ajustes finos y mantener calidad constante" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Estructura compacta con conexiones estándar para sustitución rápida y segura" },
-      { "label": { "es": "Construcción", "en": "Construction", "pt": "Construção", "it": "Costruzione" }, "value": "Materiales duraderos preparados para uso intensivo en producción" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
-    ]
-  },
-  {
-    "reference": "140000128",
-    "id": "lampara-horno-sz1",
-    "slug": "lampara-horno-sz1",
-    "name": {
-      "es": "Lámpara para horno y aplicador DTF InkOne SZ1",
-      "en": "Lamp for DTF InkOne SZ1 oven",
-      "pt": "Lâmpada para forno DTF InkOne SZ1",
-      "it": "Lampada per forno DTF InkOne SZ1"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/l/a/lampara-horno-aplicador-dtf-inko.png",
-    "description": {
-      "es": "La Lámpara para horno y aplicador DTF InkOne SZ1 es un repuesto original diseñado para garantizar un calentamiento uniforme y estable en los procesos de curado del polvo de poliamida. Mantiene el rendimiento óptimo del equipo y asegura una fusión perfecta en cada impresión DTF.",
-      "en": "The Lamp for DTF InkOne SZ1 oven is an original replacement designed to ensure uniform and stable heating in polyamide powder curing processes. Maintains optimal equipment performance and ensures perfect adhesive fusion in each DTF print.",
-      "pt": "A Lâmpada para forno DTF InkOne SZ1 é um recambio original projetado para garantir aquecimento uniforme e estável nos processos de cura do pó de poliamida. Mantém o desempenho ideal do equipamento e garante fusão perfeita do adesivo em cada impressão DTF.",
-      "it": "La Lampada per forno DTF InkOne SZ1 è un ricambio originale progettato per garantire un riscaldamento uniforme e stabile nei processi di polimerizzazione della polvere di poliammide. Mantiene le prestazioni ottimali dell'apparecchiatura e garantisce una fusione perfetta dell'adesivo in ogni stampa DTF."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Calentamiento uniforme y estable / Uniform and stable heating" },
-      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Curado de polvo de poliamida DTF / DTF polyamide powder curing" },
-      { "label": { "es": "Conexión", "en": "Connection", "pt": "Conexão", "it": "Connessione" }, "value": "Cable con conector en ambos extremos / Cable with connectors at both ends" },
-      { "label": { "es": "Instalación", "en": "Installation", "pt": "Instalação", "it": "Installazione" }, "value": "Sustitución rápida sin herramientas especiales" },
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Elemento calefactor original / Original heating element" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "InkOne SZ1" }
     ]
   },
   {
@@ -6217,7 +5686,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 18x45cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-img_20250709_094912-removebg-preview_1_.webp",
+    "image": "",
     "description": {
       "es": "Plato base de 18 x 45 centímetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de pantalones de manera sencilla.",
       "en": "18 x 45 cm base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing pants easily.",
@@ -6539,7 +6008,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Piastra 38x38cm per Beinsen Chinela"
     },
     "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-beinsen-logo2019-150x150-1_1__2.webp",
+    "image": "",
     "description": {
       "es": "Optimiza tu prensa térmica modelo Beinsen Chinela con nuestro plato inferior de 38x38cm. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Chinela. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
       "en": "Optimize your Beinsen Chinela heat press with our 38x38cm lower plate. Designed specifically for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes. Made with high quality materials, it guarantees an even heat distribution.",
@@ -6549,32 +6018,6 @@ const rawAccessoriesData: Accessory[] = [
     "technicalSpecs": [
       { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Chinela" },
       { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" }
-    ]
-  },
-  {
-    "reference": "BHORN066",
-    "id": "fusible-termico-3d-16",
-    "slug": "fusible-termico-3d-16",
-    "name": {
-      "es": "Fusible térmico 3D-16",
-      "en": "3D-16 Thermal fuse",
-      "pt": "Fusível térmico 3D-16",
-      "it": "Fusibile termico 3D-16"
-    },
-    "price": "Consultar PVP",
-    "image": "https://tiendasublimacion.com/media/catalog/product/cache/4d459db0e065797d06d3da0b8aac83aa/w/h/white-beinsen-logo2019-150x150-1_1__1_11.jpg",
-    "description": {
-      "es": "Filtro de aire para nuestro horno de sublimación 3D. Esta pieza es fundamental para el horno ya que sin ella no podemos realizar el vacío. Compatible también con la plancha térmica Beinsen para tazas Delia.",
-      "en": "Air filter for our 3D sublimation oven. This part is essential for the oven as we cannot create a vacuum without it. Also compatible with our Beinsen thermal plate for Delia mugs.",
-      "pt": "Filtro de ar para nosso forno de sublimação 3D. Esta peça é essencial para o forno, pois sem ela não podemos realizar o vácuo. Também compatível com nossa placa térmica Beinsen para canecas Delia.",
-      "it": "Filtro dell'aria per il nostro forno di sublimazione 3D. Questo componente è essenziale per il forno poiché senza di esso non possiamo creare il vuoto. Compatibile anche con la nostra piastra termica Beinsen per tazze Delia."
-    },
-    "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Filtro de aire / Air filter" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 105 x 40 mm" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Metal / Plástico / Metal / Plastic" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Horno 3D, Plancha Delia" },
-      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Filtro de aire para realizar vacío / Air filter for vacuum creation" }
     ]
   },
   {
@@ -6796,62 +6239,6 @@ export const allAccessoriesData: Accessory[] = [...rawAccessoriesData].sort((a, 
 
 const rawConsumablesData: Consumable[] = [
   {
-    "reference": "CONSUBCIN10M",
-    id: "cinta-termica-10mm",
-    slug: "cinta-termica-sublimacion-10mm",
-    name: {
-      "es": "Cinta térmica adhesiva para sublimación - 10mm x 33m",
-      "en": "Sublimation thermal adhesive tape - 10mm x 33m",
-      "pt": "Fita térmica adesiva para sublimação - 10mm x 33m",
-      "it": "Nastro termico adesivo per sublimazione - 10mm x 33m"
-    },
-    price: 4.15,
-    image: "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/c/i/cinta-termica-tipo-kapton-de-0-4.webp",
-    description: {
-      "es": "Cinta térmica de alta calidad idónea para aplicar sobre tazas, textiles y cerámica. Resiste altas temperaturas sin derretirse y asegura que el papel de sublimación se mantenga firme sin dejar marcas.",
-      "en": "High-quality thermal tape ideal for mugs, textiles, and ceramics. Withstands high temperatures without melting and ensures sublimation paper stays firm without leaving marks.",
-      "pt": "Fita térmica de alta qualidade ideal para canecas, têxteis e cerâmicas. Resiste a altas temperaturas sem derreter e garante que o papel de sublimação permaneça firme sem deixar marcas.",
-      "it": "Nastro termico di alta qualità ideale per tazze, tessuti e ceramica. Resiste alle alte temperature senza sciogliersi e assicura che la carta sublimatica rimanga salda senza lasciare segni."
-    },
-    technicalSpecs: [
-      { "label": { "es": "Ancho", "en": "Width", "pt": "Largura", "it": "Larghezza" }, "value": "10 mm" },
-      { "label": { "es": "Largo", "en": "Length", "pt": "Comprimento", "it": "Lunghezza" }, "value": "33 m" },
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Kapton / Térmica" }
-    ]
-  },
-  {
-    "reference": "PLAACCA50",
-    id: "almohadilla-silicona-40x50",
-    slug: "almohadilla-silicona-40x50",
-    name: {
-      "es": "Almohadilla de silicona de 40 x 50 cm para plato base",
-      "en": "Silicone pad 40 x 50 cm for base plate",
-      "pt": "Almofada de silicone de 40 x 50 cm para prato base",
-      "it": "Tappetino in silicone 40 x 50 cm per piastra base"
-    },
-    price: "Consultar PVP",
-    image: "https://tiendasublimacion.com/media/catalog/product/cache/b1fc9389cb3c8abc49296622cc18a994/w/h/white-61z1xwc-uul._ac_sl1500_.webp",
-    description: {
-      "es": "Mejora tus impresiones de sublimación con nuestra almohadilla de silicona. Resistente al calor hasta 220ºC y con un espesor de 10mm, asegura una impresión uniforme y perfecta.",
-      "en": "Improve your sublimation prints with our silicone pad. Heat resistant up to 220ºC and 10mm thick, it ensures uniform and perfect printing.",
-      "pt": "Melhore as suas impressões de sublimação com a nossa almofada de silicone. Resistente ao calor até 220ºC e com 10mm de espessura, garante uma impressão uniforme e perfeita.",
-      "it": "Migliora le tue stampe a sublimazione con il nostro tappetino in silicone. Resistente al calore fino a 220ºC e con uno spessore di 10 mm, assicura una stampa uniforme e perfetta."
-    },
-    technicalSpecs: [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
-      { "label": { "es": "Espesor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "10 mm" },
-      { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 220ºC / Up to 220ºC" }
-    ]
-  },
-  {
-    id: "teflon-40x50",
-    slug: "lamina-teflon-40x50",
-    name: { es: "Lámina de Teflón 40x50", en: "Teflon Sheet 40x50" },
-    price: 15,
-    image: "https://beinsen.com/wp-content/uploads/2019/11/grecia6.jpg",
-    description: { es: "Protege tus prendas y el plato de calor.", en: "Protects your garments and the heat plate." }
-  },
-  {
     "reference": "REPBEIRES11A",
     "id": "resistencia-cilindrica-tazas-11oz-tipo-a",
     "slug": "resistencia-cilindrica-tazas-11oz-tipo-a",
@@ -6875,5 +6262,4 @@ const rawConsumablesData: Consumable[] = [
     ]
   }
 ];
-export const allConsumablesData: Consumable[] = [...rawConsumablesData].sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));
-
+export const allConsumablesData: Consumable[] = [...rawConsumablesData].sort((a, b) => getSortName(a).localeCompare(getSortName(b), 'es'));

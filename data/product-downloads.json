@@ -99,6 +99,16 @@
       "url": "/downloads/esparta-prensa-termica-neumatica/User-guide-Esparta.pdf"
     }
   ],
+  "felina-prensa-swing-away-electrica": [
+    {
+      "label": "Guia De Usuario Felina Swing Away",
+      "url": "/downloads/felina-prensa-swing-away-electrica/Guia-de-usuario-Felina-Swing-Away.docx"
+    },
+    {
+      "label": "Guia De Usuario Felina",
+      "url": "/downloads/felina-prensa-swing-away-electrica/Guia-de-usuario-Felina.docx"
+    }
+  ],
   "gante-plancha-manual-gorras": [
     {
       "label": "Guia Do Utilizador",
@@ -265,6 +275,24 @@
     {
       "label": "Manual Tobago",
       "url": "/downloads/tobago-estacion-planchado-continuo/manual-tobago.pdf"
+    }
+  ],
+  "trinidad-prensa-termica-automatica": [
+    {
+      "label": "Guia De Usuario Trinidad",
+      "url": "/downloads/trinidad-prensa-termica-automatica/Guia-de-usuario-Trinidad.docx"
+    },
+    {
+      "label": "Guia Do Utilizador Trinidad",
+      "url": "/downloads/trinidad-prensa-termica-automatica/Guia-do-utilizador-Trinidad.docx"
+    },
+    {
+      "label": "Guida Utente Trinidad",
+      "url": "/downloads/trinidad-prensa-termica-automatica/Guida-utente-Trinidad.docx"
+    },
+    {
+      "label": "User Guide Trinidad",
+      "url": "/downloads/trinidad-prensa-termica-automatica/User-guide-Trinidad.docx"
     }
   ]
 }
