@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Zap, Box, Package, ArrowRight, Settings } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
@@ -18,8 +18,31 @@ export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const megaWrapperRef = useRef<HTMLDivElement>(null);
+    const megaButtonRef = useRef<HTMLButtonElement>(null);
     const { locale } = useLanguage();
     const pathname = usePathname();
+
+    useEffect(() => {
+        if (!isMegaMenuOpen) return;
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setIsMegaMenuOpen(false);
+                megaButtonRef.current?.focus();
+            }
+        };
+        const onPointerDown = (e: MouseEvent) => {
+            if (megaWrapperRef.current && !megaWrapperRef.current.contains(e.target as Node)) {
+                setIsMegaMenuOpen(false);
+            }
+        };
+        document.addEventListener("keydown", onKey);
+        document.addEventListener("mousedown", onPointerDown);
+        return () => {
+            document.removeEventListener("keydown", onKey);
+            document.removeEventListener("mousedown", onPointerDown);
+        };
+    }, [isMegaMenuOpen]);
 
     const isActive = (href: string) => {
         if (href === "/") return pathname === "/";
@@ -101,11 +124,18 @@ export function Navbar() {
                     <div className="hidden md:flex items-center space-x-2">
                         {/* Mega Menu Trigger */}
                         <div
+                            ref={megaWrapperRef}
                             className="relative"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
                             <button
+                                ref={megaButtonRef}
+                                type="button"
+                                aria-expanded={isMegaMenuOpen}
+                                aria-haspopup="true"
+                                aria-controls="catalog-mega-menu"
+                                onClick={() => setIsMegaMenuOpen(v => !v)}
                                 className={`flex items-center gap-2 px-4 py-2 text-sm font-black uppercase tracking-widest transition-all rounded-xl ${isMegaMenuOpen || isCatalogActive ? 'text-[#FF6600] bg-[#FF6600]/5' : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'}`}
                             >
                                 {d.catalogo}
@@ -115,6 +145,9 @@ export function Navbar() {
                             <AnimatePresence>
                                 {isMegaMenuOpen && (
                                     <motion.div
+                                        id="catalog-mega-menu"
+                                        role="region"
+                                        aria-label={d.catalogo}
                                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                                         animate={{ opacity: 1, y: 0, scale: 1 }}
                                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
