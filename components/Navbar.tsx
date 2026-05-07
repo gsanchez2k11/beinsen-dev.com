@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Zap, Box, Package, ArrowRight, Settings } from "lucide-react";
 import { useState, useRef } from "react";
 import { Inter } from "next/font/google";
@@ -18,6 +19,13 @@ export function Navbar() {
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
     const { locale } = useLanguage();
+    const pathname = usePathname();
+
+    const isActive = (href: string) => {
+        if (href === "/") return pathname === "/";
+        return pathname === href || pathname.startsWith(`${href}/`);
+    };
+    const isCatalogActive = pathname === "/planchas" || pathname.startsWith("/planchas/") || pathname === "/accesorios" || pathname.startsWith("/accesorios/");
 
     const d = {
         es: {
@@ -70,7 +78,7 @@ export function Navbar() {
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${inter.className} border-b border-white/5`}>
+        <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${inter.className} border-b border-border/40`}>
             {/* Glossy Backdrop */}
             <div className="absolute inset-0 bg-background/60 backdrop-blur-2xl -z-10" />
             
@@ -91,21 +99,14 @@ export function Navbar() {
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-2">
-                        <Link 
-                            href="/" 
-                            className="px-4 py-2 text-sm font-black uppercase tracking-widest text-foreground/70 hover:text-foreground hover:bg-muted/50 rounded-xl transition-all"
-                        >
-                            {d.inicio}
-                        </Link>
-                        
                         {/* Mega Menu Trigger */}
-                        <div 
+                        <div
                             className="relative"
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
-                            <button 
-                                className={`flex items-center gap-2 px-4 py-2 text-sm font-black uppercase tracking-widest transition-all rounded-xl ${isMegaMenuOpen ? 'text-[#FF6600] bg-[#FF6600]/5' : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'}`}
+                            <button
+                                className={`flex items-center gap-2 px-4 py-2 text-sm font-black uppercase tracking-widest transition-all rounded-xl ${isMegaMenuOpen || isCatalogActive ? 'text-[#FF6600] bg-[#FF6600]/5' : 'text-foreground/70 hover:text-foreground hover:bg-muted/50'}`}
                             >
                                 {d.catalogo}
                                 <ChevronDown size={14} className={`transition-transform duration-300 ${isMegaMenuOpen ? 'rotate-180' : ''}`} />
@@ -158,28 +159,28 @@ export function Navbar() {
 
                         <Link
                             href="/asesor"
-                            className="px-4 py-2 text-sm font-black uppercase tracking-widest text-foreground/70 hover:text-foreground hover:bg-muted/50 rounded-xl transition-all"
+                            className={`px-4 py-2 text-sm font-black uppercase tracking-widest rounded-xl transition-all ${isActive("/asesor") ? "text-[#FF6600] bg-[#FF6600]/5" : "text-foreground/70 hover:text-foreground hover:bg-muted/50"}`}
                         >
                             {d.asesor}
                         </Link>
 
                         <Link
                             href="/comparar"
-                            className="px-4 py-2 text-sm font-black uppercase tracking-widest text-foreground/70 hover:text-foreground hover:bg-muted/50 rounded-xl transition-all"
+                            className={`px-4 py-2 text-sm font-black uppercase tracking-widest rounded-xl transition-all ${isActive("/comparar") ? "text-[#FF6600] bg-[#FF6600]/5" : "text-foreground/70 hover:text-foreground hover:bg-muted/50"}`}
                         >
                             {d.comparar}
                         </Link>
 
                         <Link
                             href="/aprende"
-                            className="px-4 py-2 text-sm font-black uppercase tracking-widest text-foreground/70 hover:text-foreground hover:bg-muted/50 rounded-xl transition-all"
+                            className={`px-4 py-2 text-sm font-black uppercase tracking-widest rounded-xl transition-all ${isActive("/aprende") ? "text-[#FF6600] bg-[#FF6600]/5" : "text-foreground/70 hover:text-foreground hover:bg-muted/50"}`}
                         >
                             {d.aprende}
                         </Link>
 
                         <Link
                             href="/soporte"
-                            className="px-6 py-2.5 rounded-xl bg-[#FF6600] text-white text-xs font-black uppercase tracking-widest hover:bg-[#cc5200] transition-all shadow-lg shadow-[#FF6600]/20 transform hover:-translate-y-0.5 ml-4"
+                            className="px-6 py-2.5 rounded-xl bg-[#FF6600] text-white text-xs font-black uppercase tracking-widest whitespace-nowrap hover:bg-[#cc5200] transition-all shadow-lg shadow-[#FF6600]/20 transform hover:-translate-y-0.5 ml-4"
                         >
                             {d.soporte}
                         </Link>
