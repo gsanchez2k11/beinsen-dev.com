@@ -70,9 +70,9 @@ export default function SuccessStoriesPage() {
                                     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${i % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}>
                                         
                                         {/* Image Section */}
-                                        <div className={`relative aspect-[4/5] md:aspect-video lg:aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
+                                        <div className={`relative aspect-[4/5] md:aspect-video lg:aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl bg-muted/20 ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
                                             <Image 
-                                                src={story.mainImage} 
+                                                src={story.verticalImage || story.mainImage} 
                                                 alt={title || ""} 
                                                 fill 
                                                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
