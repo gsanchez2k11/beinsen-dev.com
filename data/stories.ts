@@ -10,6 +10,7 @@ export interface CaseStudy {
     solution: Localized<string>;
     results: Localized<string[]>;
     mainImage: string;
+    verticalImage?: string;
     gallery?: string[];
     relatedMachineId: string;
     location: string;
@@ -67,7 +68,8 @@ export const storiesData: CaseStudy[] = [
                 "Consistenza cromatica totale nei trasferimenti ad alta temperatura"
             ]
         },
-        mainImage: "https://images.unsplash.com/photo-1558444479-c8485183056e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        mainImage: "/stories/casosexitos1-1-v2.png",
+        verticalImage: "/stories/casosexitos1-2-v2.png",
         relatedMachineId: "trinidad-prensa-termica-automatica",
         location: "Alicante, España",
         year: "2023"

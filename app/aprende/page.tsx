@@ -59,14 +59,14 @@ export default function AprendeIndex() {
                                             href={`/aprende/${a.slug}`}
                                             className="group flex flex-col bg-card border border-border/40 rounded-3xl overflow-hidden hover:border-[#FF6600]/40 hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all"
                                         >
-                                            <div className="relative aspect-[16/10] bg-muted overflow-hidden">
+                                            <div className="relative aspect-[16/10] bg-white overflow-hidden">
                                                 {a.heroImage ? (
                                                     <Image
                                                         src={a.heroImage}
                                                         alt={a.title}
                                                         fill
                                                         sizes="(max-width: 768px) 100vw, 33vw"
-                                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                                        className="object-contain scale-125 group-hover:scale-[1.3] transition-transform duration-700"
                                                     />
                                                 ) : (
                                                     <div className="absolute inset-0 bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center">
