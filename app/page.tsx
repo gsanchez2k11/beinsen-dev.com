@@ -241,7 +241,7 @@ export default function Home() {
                             {
                                 title: d.categories.cons,
                                 link: "/planchas?type=consumables",
-                                img: "/cat-consumibles.png",
+                                img: "/cat-consumibles-v2.png",
                                 icon: Package,
                                 tag: "Original Supplies"
                             }
@@ -387,9 +387,9 @@ export default function Home() {
                                         fill 
                                         className="object-cover opacity-60 group-hover:scale-110 grayscale group-hover:grayscale-0 transition-all duration-1000"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-20" />
                                     
-                                    <div className="absolute inset-0 p-10 flex flex-col justify-end">
+                                    <div className="absolute inset-0 p-10 flex flex-col justify-end z-30">
                                         <div className="space-y-4">
                                             <span className="text-[#FF6600] text-[10px] font-black uppercase tracking-[0.2em]">
                                                 {getLocalized(story.industry, locale)}

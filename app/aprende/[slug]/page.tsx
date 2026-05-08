@@ -119,8 +119,8 @@ export default async function ArticleDetail({ params }: { params: Promise<{ slug
             {/* Hero image */}
             {article.heroImage && (
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-                    <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-border/50 shadow-xl">
-                        <Image src={article.heroImage} alt={article.title} fill sizes="(max-width: 1024px) 100vw, 1024px" className="object-cover" priority />
+                    <div className="relative aspect-[16/9] rounded-3xl overflow-hidden border border-border/50 shadow-xl bg-white">
+                        <Image src={article.heroImage} alt={article.title} fill sizes="(max-width: 1024px) 100vw, 1024px" className="object-contain scale-125" priority />
                     </div>
                 </div>
             )}
