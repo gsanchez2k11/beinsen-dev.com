@@ -22,9 +22,9 @@
     "/products/maquinas/alina-plancha-para-tazas/05.png"
   ],
   "almohadilla-algodon-80x110": [
-    "/products/accesorios/almohadilla-algodon-80x110/01.png",
-    "/products/accesorios/almohadilla-algodon-80x110/02.png",
-    "/products/accesorios/almohadilla-algodon-80x110/03.png"
+    "/products/consumibles/almohadilla-algodon-80x110/01.png",
+    "/products/consumibles/almohadilla-algodon-80x110/02.png",
+    "/products/consumibles/almohadilla-algodon-80x110/03.png"
   ],
   "almohadilla-silicona-38x38": [
     "/products/accesorios/almohadilla-silicona-38x38/01.png",
@@ -36,32 +36,32 @@
     "/products/consumibles/almohadilla-silicona-40x50/02.png"
   ],
   "almohadilla-silicona-80x100": [
-    "/products/accesorios/almohadilla-silicona-80x100/01.png",
-    "/products/accesorios/almohadilla-silicona-80x100/02.png",
-    "/products/accesorios/almohadilla-silicona-80x100/03.png"
+    "/products/consumibles/almohadilla-silicona-80x100/01.png",
+    "/products/consumibles/almohadilla-silicona-80x100/02.png",
+    "/products/consumibles/almohadilla-silicona-80x100/03.png"
   ],
   "almohadilla-teflon-termorresistente-15x15": [
-    "/products/accesorios/almohadilla-teflon-termorresistente-15x15/01.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-15x15/02.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-15x15/03.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-15x15/04.png"
+    "/products/consumibles/almohadilla-teflon-termorresistente-15x15/01.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-15x15/02.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-15x15/03.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-15x15/04.png"
   ],
   "almohadilla-teflon-termorresistente-25x25": [
-    "/products/accesorios/almohadilla-teflon-termorresistente-25x25/01.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-25x25/02.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-25x25/03.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-25x25/04.png"
+    "/products/consumibles/almohadilla-teflon-termorresistente-25x25/01.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-25x25/02.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-25x25/03.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-25x25/04.png"
   ],
   "almohadilla-teflon-termorresistente-38x38": [
-    "/products/accesorios/almohadilla-teflon-termorresistente-38x38/01.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-38x38/02.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-38x38/03.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-38x38/04.png"
+    "/products/consumibles/almohadilla-teflon-termorresistente-38x38/01.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-38x38/02.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-38x38/03.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-38x38/04.png"
   ],
   "almohadilla-teflon-termorresistente-40x50": [
-    "/products/accesorios/almohadilla-teflon-termorresistente-40x50/01.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-40x50/02.png",
-    "/products/accesorios/almohadilla-teflon-termorresistente-40x50/03.png"
+    "/products/consumibles/almohadilla-teflon-termorresistente-40x50/01.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-40x50/02.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-40x50/03.png"
   ],
   "andra-prensa-automatica-tazas": [
     "/products/maquinas/andra-prensa-automatica-tazas/013.png",
@@ -239,10 +239,10 @@
     "/products/maquinas/kenia-plancha-termica-textil/06.png"
   ],
   "lamina-teflon-38x38": [
-    "/products/accesorios/lamina-teflon-38x38/01.png"
+    "/products/consumibles/lamina-teflon-38x38/01.png"
   ],
   "lamina-teflon-40x50": [
-    "/products/accesorios/lamina-teflon-40x50/01.png"
+    "/products/consumibles/lamina-teflon-40x50/01.png"
   ],
   "lampara-horno-sz1": [
     "/products/accesorios/lampara-horno-sz1/01.png",

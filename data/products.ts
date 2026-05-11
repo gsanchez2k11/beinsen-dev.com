@@ -1,4 +1,4 @@
-export type Locale = 'es' | 'en' | 'pt' | 'it';
+﻿export type Locale = 'es' | 'en' | 'pt' | 'it';
 export type Localized<T> = { [key in Locale]?: T };
 
 export interface CompatibleItem {
@@ -123,7 +123,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
+    "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Giratoria" },
@@ -282,9 +282,9 @@ const rawPlanchasData: Plancha[] = [
       { "x": 81.1, "y": 22.7, "title": { "es": "Resistencia de alta calidad para tazas entre 11 y 15oz", "en": "High-quality heating element for 11–15oz mugs" }, "description": { "es": "", "en": "" } },
       { "x": 12.6, "y": 43.3, "title": { "es": "Botones de encendido independientes", "en": "Independent power buttons" }, "description": { "es": "", "en": "" } },
       { "x": 58.0, "y": 67.6, "title": { "es": "Controlador digital", "en": "Digital controller" }, "description": { "es": "", "en": "" } },
-      { "x": 8.9,  "y": 71.9, "title": { "es": "Estructura robusta y duradera", "en": "Robust and durable structure" }, "description": { "es": "", "en": "" } }
+      { "x": 8.9, "y": 71.9, "title": { "es": "Estructura robusta y duradera", "en": "Robust and durable structure" }, "description": { "es": "", "en": "" } }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "Limpiar las resistencias después de cada jornada",
@@ -368,7 +368,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 42.2, "y": 75.8, "title": { "es": "Placa de trabajo", "en": "Work plate" }, "description": { "es": "Superficie inferior donde se coloca el plato cerámico. Compatible con platos de hasta 15,2 cm de diámetro.", "en": "Lower surface where the ceramic plate is placed. Compatible with plates up to 15.2 cm in diameter." } },
       { "x": 32.2, "y": 85.7, "title": { "es": "Controlador digital GY-04", "en": "GY-04 digital controller" }, "description": { "es": "Permite programar con precisión la temperatura y el tiempo de cada sublimación para obtener resultados profesionales y consistentes.", "en": "Precisely programs temperature and time for each sublimation to achieve professional and consistent results." } }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -450,10 +450,10 @@ const rawPlanchasData: Plancha[] = [
     ],
     "consumables": [
       { "id": "teflon-40x50" },
-      ],
+    ],
 
 
-        "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo", "en": "Model" }, "value": "Barahona" },
@@ -584,7 +584,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-        "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo", "en": "Model" }, "value": "Alina" },
@@ -839,7 +839,7 @@ const rawPlanchasData: Plancha[] = [
         "image": "/products/maquinas/andra-prensa-automatica-tazas/012.JPG"
       }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -863,10 +863,10 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "hotspots": [
-      { "x": 68,   "y": 20,   "title": { "es": "Nuevo botón de reset elegante",          "en": "New elegant reset button" },            "description": { "es": "", "en": "" } },
-      { "x": 27,   "y": 35.9, "title": { "es": "Nueva resistencia más eficaz y duradera", "en": "New more efficient and durable element" }, "description": { "es": "", "en": "" } },
-      { "x": 49.5, "y": 37.4, "title": { "es": "Controlador digital GY05N",               "en": "GY05N digital controller" },             "description": { "es": "", "en": "" } },
-      { "x": 48.6, "y": 52.1, "title": { "es": "Adaptador para tazas de 11 o 15oz",       "en": "Adapter for 11 or 15oz mugs" },           "description": { "es": "", "en": "" } }
+      { "x": 68, "y": 20, "title": { "es": "Nuevo botón de reset elegante", "en": "New elegant reset button" }, "description": { "es": "", "en": "" } },
+      { "x": 27, "y": 35.9, "title": { "es": "Nueva resistencia más eficaz y duradera", "en": "New more efficient and durable element" }, "description": { "es": "", "en": "" } },
+      { "x": 49.5, "y": 37.4, "title": { "es": "Controlador digital GY05N", "en": "GY05N digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 48.6, "y": 52.1, "title": { "es": "Adaptador para tazas de 11 o 15oz", "en": "Adapter for 11 or 15oz mugs" }, "description": { "es": "", "en": "" } }
     ]
   },
   {
@@ -917,7 +917,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Neumática", "en": "Pneumatic", "pt": "Pneumática", "it": "Pneumatica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Neumática, estación de trabajo" },
@@ -1046,7 +1046,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
+    "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Obrei" },
@@ -1221,7 +1221,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 34.4, "y": 70.4, "title": { "es": "Bandeja inferior deslizable", "en": "Sliding lower tray" }, "description": { "es": "", "en": "" } },
       { "x": 61.9, "y": 74.9, "title": { "es": "Patas con protección de goma", "en": "Rubber-protected feet" }, "description": { "es": "", "en": "" } }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -1291,7 +1291,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Multifunción", "en": "Multi-function", "pt": "Multifunções", "it": "Multifunzione" },
+    "category": { "es": "Multifunción", "en": "Multi-function", "pt": "Multifunções", "it": "Multifunzione" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Jamaica" },
@@ -1536,7 +1536,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 38.6, "y": 67.6, "title": { "es": "Amplio espacio para colocar las prendas", "en": "Wide garment placement area" }, "description": { "es": "", "en": "" } },
       { "x": 25.7, "y": 78.1, "title": { "es": "Bandeja extraíble con rueda", "en": "Pull-out tray with wheel" }, "description": { "es": "", "en": "" } }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -1717,7 +1717,7 @@ const rawPlanchasData: Plancha[] = [
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/r1fMuXcRomk?si=sNKbdTDInM_4FfSY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
       }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -1778,7 +1778,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"storyHeadline": { "es": "Innovación Térmica", "en": "Redefining the workflow" },
+    "storyHeadline": { "es": "Innovación Térmica", "en": "Redefining the workflow" },
     "storySegments": [
       {
         "title": { "es": "Calor uniforme", "en": "Professional performance" },
@@ -1789,8 +1789,8 @@ const rawPlanchasData: Plancha[] = [
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/r1fMuXcRomk?si=sNKbdTDInM_4FfSY\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
       }
     ],
-    
-        "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+
+    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Para tazas" },
@@ -1916,7 +1916,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
+    "category": { "es": "Tazas y Botellas", "en": "Mugs & Bottles", "pt": "Canecas e Garrafas", "it": "Tazze e Bottiglie" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo", "en": "Model" }, "value": "Aruba" },
@@ -1998,11 +1998,11 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "hotspots": [
-      { "x": 73.8, "y": 10.4, "title": { "es": "Asa",                                  "en": "Handle" },                               "description": { "es": "", "en": "" } },
-      { "x": 31.5, "y": 18.2, "title": { "es": "Sensor de activación",                  "en": "Activation sensor" },                    "description": { "es": "", "en": "" } },
-      { "x": 52,   "y": 28.9, "title": { "es": "Pantalla digital",                      "en": "Digital display" },                      "description": { "es": "", "en": "" } },
-      { "x": 28.8, "y": 39,   "title": { "es": "Resistencia",                           "en": "Heating element" },                      "description": { "es": "", "en": "" } },
-      { "x": 61,   "y": 87.8, "title": { "es": "Tuercas para ajustar la presión",       "en": "Pressure adjustment knobs" },             "description": { "es": "", "en": "" } }
+      { "x": 73.8, "y": 10.4, "title": { "es": "Asa", "en": "Handle" }, "description": { "es": "", "en": "" } },
+      { "x": 31.5, "y": 18.2, "title": { "es": "Sensor de activación", "en": "Activation sensor" }, "description": { "es": "", "en": "" } },
+      { "x": 52, "y": 28.9, "title": { "es": "Pantalla digital", "en": "Digital display" }, "description": { "es": "", "en": "" } },
+      { "x": 28.8, "y": 39, "title": { "es": "Resistencia", "en": "Heating element" }, "description": { "es": "", "en": "" } },
+      { "x": 61, "y": 87.8, "title": { "es": "Tuercas para ajustar la presión", "en": "Pressure adjustment knobs" }, "description": { "es": "", "en": "" } }
     ]
   },
   {
@@ -2139,7 +2139,7 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Interruptor principal de encendido y apagado que corta completamente la alimentación de la máquina. Acceso directo y ergonómico para un uso seguro.", "en": "Main power on/off switch that fully cuts the machine's power supply. Direct ergonomic access for safe operation." }
       }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -2195,7 +2195,7 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [],
 
 
-        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -2316,7 +2316,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
+    "category": { "es": "Gorras", "en": "Caps", "pt": "Bonés", "it": "Cappelli" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -2487,7 +2487,7 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      { "x": 26.9, "y": 8.9,  "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
+      { "x": 26.9, "y": 8.9, "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
       { "x": 41.9, "y": 13.5, "title": { "es": "Botón de desplazamiento horizontal", "en": "Horizontal displacement button" }, "description": { "es": "", "en": "" } },
       { "x": 24.7, "y": 14.2, "title": { "es": "Láser de ayuda", "en": "Positioning laser" }, "description": { "es": "", "en": "" } },
       { "x": 52.8, "y": 14.9, "title": { "es": "Regulador de velocidad de bajada", "en": "Lowering speed regulator" }, "description": { "es": "", "en": "" } },
@@ -2517,7 +2517,7 @@ const rawPlanchasData: Plancha[] = [
       { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "2, uno a cada lado la unidad principal" },
       { "label": { "es": "Seguridad", "en": "Safety" }, "value": "Cierre de seguridad, sensor detector de manos integrado" }
     ],
-    
+
     "storySegments": [
       {
         "title": { "es": "Doble productividad", "en": "Double Productivity" },
@@ -2734,7 +2734,7 @@ const rawPlanchasData: Plancha[] = [
         "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/01.png"
       }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "No apagues la máquina inmediatamente: la placa de calor está demasiado caliente, deja que enfríe.",
@@ -2879,7 +2879,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 43.1, "y": 62.8, "title": { "es": "Placa calefactora 40x50cm", "en": "40x50cm heating plate" }, "description": { "es": "Resistencia fija de gran superficie con distribución de calor uniforme. Permite trabajar con materiales de hasta 35mm de grosor.", "en": "Large fixed heating element with uniform heat distribution. Works with materials up to 35mm thick." } },
       { "x": 28.9, "y": 83.1, "title": { "es": "Asa de la base deslizante", "en": "Sliding base handle" }, "description": { "es": "Permite desplazar la base de trabajo fácilmente para cargar y descargar prendas con total comodidad y sin esfuerzo.", "en": "Allows sliding the work base easily to load and unload garments comfortably and effortlessly." } }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -3059,7 +3059,7 @@ const rawPlanchasData: Plancha[] = [
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/taGyk1tr-4A?si=aisxcjHDWVBjYuR-\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
       }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "Limpieza regular de las placas o superficies de sublimación.",
@@ -3124,7 +3124,7 @@ const rawPlanchasData: Plancha[] = [
       { "id": "cinta-termica-10mm" }
     ],
 
-"storyHeadline": { "es": "Trabajo Inteligente", "en": "Redefining the workflow" },
+    "storyHeadline": { "es": "Trabajo Inteligente", "en": "Redefining the workflow" },
     "storySegments": [
       {
         "title": { "es": "Flujo continuo", "en": "Professional performance" },
@@ -3135,8 +3135,8 @@ const rawPlanchasData: Plancha[] = [
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/FucxTcU6rWc?si=uozoT_LKDPHrl0Fv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
       }
     ],
-    
-        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3175,11 +3175,11 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      { "x": 41.9, "y": 8.2,  "title": { "es": "Mango ergonómico",                                        "en": "Ergonomic handle" },                                      "description": { "es": "", "en": "" } },
-      { "x": 26.1, "y": 51.5, "title": { "es": "Controlador digital avanzado GY-06",                      "en": "Advanced digital controller GY-06" },                     "description": { "es": "", "en": "" } },
-      { "x": 47.3, "y": 66.9, "title": { "es": "Amplio ángulo de apertura",                               "en": "Wide opening angle" },                                    "description": { "es": "", "en": "" } },
-      { "x": 33.2, "y": 71.5, "title": { "es": "Resorte de gas",                                          "en": "Gas spring" },                                            "description": { "es": "", "en": "" } },
-      { "x": 71.0, "y": 86.3, "title": { "es": "Platos intercambiables con sistema de cambio rápido",    "en": "Interchangeable plates with quick-change system" },        "description": { "es": "", "en": "" } }
+      { "x": 41.9, "y": 8.2, "title": { "es": "Mango ergonómico", "en": "Ergonomic handle" }, "description": { "es": "", "en": "" } },
+      { "x": 26.1, "y": 51.5, "title": { "es": "Controlador digital avanzado GY-06", "en": "Advanced digital controller GY-06" }, "description": { "es": "", "en": "" } },
+      { "x": 47.3, "y": 66.9, "title": { "es": "Amplio ángulo de apertura", "en": "Wide opening angle" }, "description": { "es": "", "en": "" } },
+      { "x": 33.2, "y": 71.5, "title": { "es": "Resorte de gas", "en": "Gas spring" }, "description": { "es": "", "en": "" } },
+      { "x": 71.0, "y": 86.3, "title": { "es": "Platos intercambiables con sistema de cambio rápido", "en": "Interchangeable plates with quick-change system" }, "description": { "es": "", "en": "" } }
     ],
     "maintenanceTips": {
       "es": [
@@ -3255,7 +3255,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3343,12 +3343,12 @@ const rawPlanchasData: Plancha[] = [
       ]
     },
     "hotspots": [
-      { "x": 52.6, "y": 37.6, "title": { "es": "Apertura automática con electroimán",                      "en": "Automatic opening with electromagnet" },            "description": { "es": "", "en": "" } },
-      { "x": 55.2, "y": 47.9, "title": { "es": "Contador manual de presión",                                "en": "Manual pressure gauge" },                          "description": { "es": "", "en": "" } },
-      { "x": 33.2, "y": 52.6, "title": { "es": "Controlador digital avanzado GY-06",                        "en": "Advanced GY-06 digital controller" },               "description": { "es": "", "en": "" } },
-      { "x": 59.3, "y": 73.9, "title": { "es": "Platos intercambiables con sistema de cambio rápido",       "en": "Interchangeable plates with quick-change system" },  "description": { "es": "", "en": "" } },
-      { "x": 41.9, "y": 81.7, "title": { "es": "Amortiguador neumático",                                     "en": "Pneumatic damper" },                                "description": { "es": "", "en": "" } },
-      { "x": 69.1, "y": 82.2, "title": { "es": "Bandeja deslizable",                                         "en": "Sliding tray" },                                    "description": { "es": "", "en": "" } }
+      { "x": 52.6, "y": 37.6, "title": { "es": "Apertura automática con electroimán", "en": "Automatic opening with electromagnet" }, "description": { "es": "", "en": "" } },
+      { "x": 55.2, "y": 47.9, "title": { "es": "Contador manual de presión", "en": "Manual pressure gauge" }, "description": { "es": "", "en": "" } },
+      { "x": 33.2, "y": 52.6, "title": { "es": "Controlador digital avanzado GY-06", "en": "Advanced GY-06 digital controller" }, "description": { "es": "", "en": "" } },
+      { "x": 59.3, "y": 73.9, "title": { "es": "Platos intercambiables con sistema de cambio rápido", "en": "Interchangeable plates with quick-change system" }, "description": { "es": "", "en": "" } },
+      { "x": 41.9, "y": 81.7, "title": { "es": "Amortiguador neumático", "en": "Pneumatic damper" }, "description": { "es": "", "en": "" } },
+      { "x": 69.1, "y": 82.2, "title": { "es": "Bandeja deslizable", "en": "Sliding tray" }, "description": { "es": "", "en": "" } }
     ]
   },
   {
@@ -3394,7 +3394,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Eléctrica", "en": "Electric", "pt": "Elétrica", "it": "Elettrica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3529,7 +3529,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3626,7 +3626,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 61.8, "y": 14.9, "title": { "es": "Nueva empuñadura con mando auxiliar", "en": "New handle with auxiliary control" }, "description": { "es": "", "en": "" } },
       { "x": 37.1, "y": 35.3, "title": { "es": "Cubierta antiquemaduras", "en": "Anti-burn cover" }, "description": { "es": "", "en": "" } },
       { "x": 67.7, "y": 36.3, "title": { "es": "Regulador de presión y electroimán reversible", "en": "Pressure regulator and reversible electromagnet" }, "description": { "es": "", "en": "" } },
-      { "x": 65.6, "y": 41,   "title": { "es": "Botón de apagado de emergencia", "en": "Emergency stop button" }, "description": { "es": "", "en": "" } },
+      { "x": 65.6, "y": 41, "title": { "es": "Botón de apagado de emergencia", "en": "Emergency stop button" }, "description": { "es": "", "en": "" } },
       { "x": 79.4, "y": 45.8, "title": { "es": "Pantalla táctil", "en": "Touch screen" }, "description": { "es": "", "en": "" } },
       { "x": 57.7, "y": 51.8, "title": { "es": "Nueva resistencia de alta tecnología", "en": "New high-technology heating element" }, "description": { "es": "", "en": "" } },
       { "x": 19.2, "y": 72.8, "title": { "es": "Sistema de platos intercambiables", "en": "Interchangeable plate system" }, "description": { "es": "", "en": "" } },
@@ -3674,7 +3674,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Electromagnética", "en": "Electromagnetic", "pt": "Eletromagnética", "it": "Elettromagnetica" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
@@ -3812,7 +3812,7 @@ const rawPlanchasData: Plancha[] = [
     ],
 
 
-        "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
+    "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
       { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Kenia" },
@@ -3941,7 +3941,7 @@ const rawPlanchasData: Plancha[] = [
     "consumables": [],
 
 
-        "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
+    "category": { "es": "Especializadas", "en": "Specialized", "pt": "Especializadas", "it": "Specializzate" },
     "technicalSpecs": [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Calandra" },
       { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Automático" },
@@ -4002,7 +4002,7 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      { "x": 54.8, "y": 7.2,  "title": { "es": "Regulador de velocidad", "en": "Speed regulator" }, "description": { "es": "", "en": "" } },
+      { "x": 54.8, "y": 7.2, "title": { "es": "Regulador de velocidad", "en": "Speed regulator" }, "description": { "es": "", "en": "" } },
       { "x": 48.6, "y": 12.4, "title": { "es": "Pantalla desplazable", "en": "Sliding display" }, "description": { "es": "", "en": "" } },
       { "x": 40.3, "y": 28.7, "title": { "es": "Presión ajustable", "en": "Adjustable pressure" }, "description": { "es": "", "en": "" } },
       { "x": 65.8, "y": 29.4, "title": { "es": "Láser de ayuda al posicionamiento", "en": "Positioning laser guide" }, "description": { "es": "", "en": "" } },
@@ -4120,7 +4120,7 @@ const rawPlanchasData: Plancha[] = [
       }
     ],
     "hotspots": [
-      { "x": 81.7, "y": 9.7,  "title": { "es": "Ventilador", "en": "Fan" }, "description": { "es": "", "en": "" } },
+      { "x": 81.7, "y": 9.7, "title": { "es": "Ventilador", "en": "Fan" }, "description": { "es": "", "en": "" } },
       { "x": 45.6, "y": 20.8, "title": { "es": "Medidor de presión y botón de emergencia", "en": "Pressure gauge and emergency button" }, "description": { "es": "", "en": "" } },
       { "x": 81.0, "y": 21.9, "title": { "es": "Regulador de velocidad", "en": "Speed regulator" }, "description": { "es": "", "en": "" } },
       { "x": 51.1, "y": 27.6, "title": { "es": "Controlador digital GY-06", "en": "GY-06 digital controller" }, "description": { "es": "", "en": "" } },
@@ -4138,7 +4138,7 @@ const rawPlanchasData: Plancha[] = [
         "iframe": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1X3zCovLJzc?si=cT6yFeAXEuSJUmDv\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
       }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -4267,7 +4267,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 53.1, "y": 67.2, "title": { "es": "Almohadilla", "en": "Pad" }, "description": { "es": "", "en": "" } },
       { "x": 36.3, "y": 83.6, "title": { "es": "Cajón extraíble", "en": "Sliding drawer" }, "description": { "es": "", "en": "" } }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -4397,7 +4397,7 @@ const rawPlanchasData: Plancha[] = [
       { "x": 52.9, "y": 66.5, "title": { "es": "Almohadilla", "en": "Pad" }, "description": { "es": "", "en": "" } },
       { "x": 36.5, "y": 85.4, "title": { "es": "Cajón extraíble", "en": "Sliding drawer" }, "description": { "es": "", "en": "" } }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
@@ -4530,7 +4530,7 @@ const rawPlanchasData: Plancha[] = [
         "icon": "Cpu"
       }
     ],
-    
+
     "hotspots": [
       { "x": 56.8, "y": 11.8, "title": { "es": "Asa ergonómica", "en": "Ergonomic handle" }, "description": { "es": "Permite abrir y cerrar la prensa con comodidad y precisión en cada ciclo de sublimación.", "en": "Allows opening and closing the press comfortably and precisely in every sublimation cycle." } },
       { "x": 63.3, "y": 26.5, "title": { "es": "Sistema de ajuste de presión", "en": "Pressure adjustment system" }, "description": { "es": "Regula la presión para adaptarse al grosor y forma de cada espinillera, garantizando un contacto perfecto.", "en": "Adjusts pressure to suit the thickness and shape of each shin guard for perfect contact." } },
@@ -4713,7 +4713,7 @@ const rawPlanchasData: Plancha[] = [
         "description": { "es": "Distribución de calor uniforme para sublimar materiales de hasta 35 mm de grosor. Disponible en dos tamaños para adaptarse a tus necesidades de producción.", "en": "Uniform heat distribution for sublimating materials up to 35 mm thick. Available in two sizes to suit your production needs." }
       }
     ],
-    
+
     "maintenanceTips": {
       "es": [
         "Limpieza regular de la placa calefactora y la platina inferior tras cada jornada.",
@@ -4853,7 +4853,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Foglio di teflon 38x38 cm"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/lamina-teflon-38x38/01.png",
+    "image": "/products/consumibles/lamina-teflon-38x38/01.png",
     "description": {
       "es": "Lámina de teflón para proteger las planchas térmicas. Esta delgada lámina de material aislante influye más de lo que imaginamos tanto en los resultados como en la calidad de los productos sublimados y en la vida útil de las planchas térmicas.",
       "en": "Teflon sheet to protect heat plates. This thin insulating material has more impact than we imagine on results, quality of sublimated products and lifespan of heat plates.",
@@ -4879,7 +4879,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Foglio di teflon 40x50 cm"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/lamina-teflon-40x50/01.png",
+    "image": "/products/consumibles/lamina-teflon-40x50/01.png",
     "description": {
       "es": "Lámina de teflón para proteger las planchas térmicas. Esta delgada lámina de material aislante influye más de lo que imaginamos tanto en los resultados como en la calidad de los productos sublimados y en la vida útil de las planchas térmicas.",
       "en": "Teflon sheet to protect heat plates. This thin insulating material has more impact than we imagine on results, quality of sublimated products and lifespan of heat plates.",
@@ -5569,7 +5569,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Cuscinetto in cotone riciclato 80 x 110 cm"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/almohadilla-algodon-80x110/01.png",
+    "image": "/products/consumibles/almohadilla-algodon-80x110/01.png",
     "description": {
       "es": "Alfombrilla de 80x110cm para planchas transfer de gran tamaño. Aseguran una presión uniforme durante el planchado.",
       "en": "80x110cm pad for large format heat presses. Ensures uniform pressure during pressing.",
@@ -6007,7 +6007,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Cuscinetto in silicone 80 x 100 cm per piastra base"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/almohadilla-silicona-80x100/01.png",
+    "image": "/products/consumibles/almohadilla-silicona-80x100/01.png",
     "description": {
       "es": "Almohadilla de silicona de 80 x 100cm para plato base. Resistente al calor hasta 220ºC y con un espesor de 10mm, asegura una impresión uniforme y perfecta en cualquier prensa de calor.",
       "en": "80 x 100cm silicone pad for base plate. Heat resistant up to 220ºC with 10mm thickness, ensures uniform and perfect printing on any heat press.",
@@ -6032,7 +6032,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Cuscinetto in teflon termoresistente nero 40 x 50 cm. tp-20-bk"
     },
     "price": 30,
-    "image": "/products/accesorios/almohadilla-teflon-termorresistente-40x50/01.png",
+    "image": "/products/consumibles/almohadilla-teflon-termorresistente-40x50/01.png",
     "description": {
       "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
       "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
@@ -6056,7 +6056,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Cuscinetto in teflon termoresistente 38x38 cm."
     },
     "price": 25,
-    "image": "/products/accesorios/almohadilla-teflon-termorresistente-38x38/01.png",
+    "image": "/products/consumibles/almohadilla-teflon-termorresistente-38x38/01.png",
     "description": {
       "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
       "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
@@ -6079,7 +6079,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Cuscinetto in teflon termoresistente 25x25 cm."
     },
     "price": 15,
-    "image": "/products/accesorios/almohadilla-teflon-termorresistente-25x25/01.png",
+    "image": "/products/consumibles/almohadilla-teflon-termorresistente-25x25/01.png",
     "description": {
       "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
       "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
@@ -6102,7 +6102,7 @@ const rawAccessoriesData: Accessory[] = [
       "it": "Cuscinetto in teflon termoresistente 15x15 cm."
     },
     "price": 10.70,
-    "image": "/products/accesorios/almohadilla-teflon-termorresistente-15x15/01.png",
+    "image": "/products/consumibles/almohadilla-teflon-termorresistente-15x15/01.png",
     "description": {
       "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
       "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
