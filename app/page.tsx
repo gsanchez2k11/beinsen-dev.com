@@ -227,21 +227,21 @@ export default function Home() {
                             { 
                                 title: d.categories.machines, 
                                 link: "/planchas?type=planchas", 
-                                img: "/cat-maquinas.png",
+                                img: "/categories/cat-maquinas.png",
                                 icon: Settings,
                                 tag: "High Production"
                             },
                             {
                                 title: d.categories.accs,
                                 link: "/planchas?type=accessories",
-                                img: "/cat-accesorios.png",
+                                img: "/categories/cat-accesorios.png",
                                 icon: Box,
                                 tag: "Pro Hardware"
                             },
                             {
                                 title: d.categories.cons,
                                 link: "/planchas?type=consumables",
-                                img: "/cat-consumibles-v2.png",
+                                img: "/categories/cat-consumibles-v2.png",
                                 icon: Package,
                                 tag: "Original Supplies"
                             }

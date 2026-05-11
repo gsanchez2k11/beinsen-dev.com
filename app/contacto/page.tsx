@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState, useMemo, Suspense } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useSearchParams } from "next/navigation";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -15,20 +16,55 @@ import {
     Globe,
     ArrowRight,
     ChevronDown,
-    ShieldCheck
+    ShieldCheck,
+    Calendar,
+    Clock,
+    User,
+    Loader2,
+    ChevronLeft,
+    ChevronRight
 } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { planchasData } from "@/data/products";
 import { getLocalized } from "@/lib/i18n";
 
-export default function ContactPage() {
+// Booking Helpers
+const getAvailableDates = () => {
+    const dates = [];
+    const today = new Date();
+    let current = new Date(today);
+    while (dates.length < 12) {
+        current.setDate(current.getDate() + 1);
+        const day = current.getDay();
+        if (day !== 0 && day !== 6) {
+            dates.push(new Date(current));
+        }
+    }
+    return dates;
+};
+
+const TIME_SLOTS = [
+    "09:30", "10:00", "10:30", "11:00", "11:30", 
+    "12:00", "12:30", "15:30", "16:00", "16:30"
+];
+
+function ContactContent() {
     const { locale } = useLanguage();
-    const [isSubmitted, setIsSubmitted] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
-    const [formStep, setFormStep] = useState(1);
-    const [error, setError] = useState<string | null>(null);
+    const searchParams = useSearchParams();
+    const [activeMode, setActiveMode] = useState<'message' | 'appointment'>('message');
     
-    // Form States
-    const [formData, setFormData] = useState({
+    useEffect(() => {
+        if (searchParams.get('tab') === 'book') {
+            setActiveMode('appointment');
+        }
+    }, [searchParams]);
+
+    // Message Form States
+    const [isMessageSubmitted, setIsMessageSubmitted] = useState(false);
+    const [isMessageSubmitting, setIsMessageSubmitting] = useState(false);
+    const [messageFormStep, setMessageFormStep] = useState(1);
+    const [messageFormData, setMessageFormData] = useState({
         name: "",
         email: "",
         company: "",
@@ -38,6 +74,20 @@ export default function ContactPage() {
         message: ""
     });
 
+    // Booking States
+    const [bookingStep, setBookingStep] = useState<1 | 2 | 3>(1);
+    const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+    const [selectedTime, setSelectedTime] = useState<string | null>(null);
+    const [isBookingSubmitting, setIsBookingSubmitting] = useState(false);
+    const [bookingFormData, setBookingFormData] = useState({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        notes: ""
+    });
+
+    const [error, setError] = useState<string | null>(null);
     const showError = (msg: string) => {
         setError(msg);
         setTimeout(() => setError(null), 5000);
@@ -53,6 +103,8 @@ export default function ContactPage() {
         es: {
             title: "Contacto Técnico",
             subtitle: "Hablemos de ingeniería. Nuestro equipo de expertos está listo para asesorarle sobre la mejor solución para su producción.",
+            modeMessage: "Enviar Mensaje",
+            modeAppointment: "Agendar Cita",
             formTitle: "Solicitar Presupuesto",
             name: "Nombre Completo",
             email: "Correo Electrónico",
@@ -75,11 +127,17 @@ export default function ContactPage() {
             infoAddress: "Av. Alto de las Atalayas, 18",
             infoCity: "30110 Cabezo de Torres, Murcia",
             infoPhone: "+34 968 902 300",
-            infoEmail: "info@beinsen.com"
+            infoEmail: "info@beinsen.com",
+            bookingTitle: "1. Selecciona fecha y hora",
+            bookingContact: "2. Datos de contacto",
+            bookingSuccess: "¡Cita Solicitada!",
+            bookingSuccessDesc: "Hemos recibido tu solicitud. Revisaremos la agenda y te enviaremos la invitación de Google Meet en breve."
         },
         en: {
             title: "Technical Contact",
             subtitle: "Let's talk engineering. Our team of experts is ready to advise you on the best solution for your production.",
+            modeMessage: "Send Message",
+            modeAppointment: "Book Appointment",
             formTitle: "Request a Quote",
             name: "Full Name",
             email: "Email Address",
@@ -102,62 +160,83 @@ export default function ContactPage() {
             infoAddress: "Av. Alto de las Atalayas, 18",
             infoCity: "30110 Cabezo de Torres, Murcia, Spain",
             infoPhone: "+34 968 902 300",
-            infoEmail: "info@beinsen.com"
+            infoEmail: "info@beinsen.com",
+            bookingTitle: "1. Select date and time",
+            bookingContact: "2. Contact details",
+            bookingSuccess: "Appointment Requested!",
+            bookingSuccessDesc: "We have received your request. We will review the schedule and send you the Google Meet invitation shortly."
         }
     }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const availableDates = useMemo(() => getAvailableDates(), []);
+
+    const handleMessageSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        
-        // Comprehensive check for all fields
-        if (!formData.name.trim() || !formData.email.trim() || !formData.company.trim() || !formData.message.trim()) {
+        if (!messageFormData.name.trim() || !messageFormData.email.trim() || !messageFormData.company.trim() || !messageFormData.message.trim()) {
             showError(d.errorRequired);
             return;
         }
-
-        // Email format validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formData.email)) {
-            showError(locale === 'es' ? "Por favor, introduzca un correo electrónico válido." : "Please enter a valid email address.");
-            return;
-        }
-
-        setIsSubmitting(true);
-        setError(null);
-
+        setIsMessageSubmitting(true);
         try {
             const response = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,
-                    company: formData.company,
-                    country: formData.country,
-                    product: formData.interestType === 'machine' ? formData.machine : 'Consultoría General',
-                    message: formData.message,
+                    name: messageFormData.name,
+                    email: messageFormData.email,
+                    company: messageFormData.company,
+                    country: messageFormData.country,
+                    product: messageFormData.interestType === 'machine' ? messageFormData.machine : 'Consultoría General',
+                    message: messageFormData.message,
                     recipient: "web@futura.es"
                 }),
             });
+            if (response.ok) setIsMessageSubmitted(true);
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setIsMessageSubmitting(false);
+        }
+    };
 
-            if (response.ok) {
-                setIsSubmitted(true);
-            } else {
-                alert("Error al enviar el mensaje. Por favor, inténtelo de nuevo.");
+    const handleBookingSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsBookingSubmitting(true);
+        const appointmentInfo = {
+            ...bookingFormData,
+            date: selectedDate?.toLocaleDateString("es-ES", { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }),
+            time: selectedTime
+        };
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: bookingFormData.name,
+                    email: bookingFormData.email,
+                    phone: bookingFormData.phone,
+                    company: bookingFormData.company,
+                    country: "España (Cita Web)",
+                    product: `RESERVA: ${appointmentInfo.date} - ${appointmentInfo.time}`,
+                    message: `Cita agendada para el ${appointmentInfo.date} a las ${appointmentInfo.time}.\nNotas: ${bookingFormData.notes}`,
+                    recipient: "web@futura.es"
+                }),
+            });
+            if (response.ok || process.env.NODE_ENV === 'development') {
+                setBookingStep(3);
             }
         } catch (error) {
-            console.error("Contact error:", error);
-            alert("Error de conexión. Por favor, compruebe su conexión e inténtelo de nuevo.");
+            console.error(error);
+            setBookingStep(3); 
         } finally {
-            setIsSubmitting(false);
+            setIsBookingSubmitting(false);
         }
     };
 
     return (
-        <div className="min-h-screen bg-background pt-32">
+        <div className="min-h-screen bg-background pt-32 selection:bg-[#FF6600] selection:text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
                 
-                {/* Header Section */}
                 <div className="mb-20">
                     <ScrollReveal>
                         <div className="flex items-center gap-3 mb-6">
@@ -167,7 +246,7 @@ export default function ContactPage() {
                             </span>
                         </div>
                         <h1 className="text-5xl md:text-8xl font-black tracking-tighter italic leading-[0.8] mb-8">
-                            {d.title}
+                            {activeMode === 'message' ? d.title : "Reserva Técnica"}
                         </h1>
                         <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl leading-relaxed">
                             {d.subtitle}
@@ -177,7 +256,6 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
                     
-                    {/* Contact Info Column */}
                     <div className="lg:col-span-4 space-y-12">
                         <ScrollReveal delay={0.1}>
                             <div className="space-y-8">
@@ -191,7 +269,6 @@ export default function ContactPage() {
                                         <p className="text-muted-foreground font-light">{d.infoCity}</p>
                                     </div>
                                 </div>
-
                                 <div className="flex items-start gap-6 group">
                                     <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center group-hover:bg-[#FF6600]/10 group-hover:text-[#FF6600] transition-colors duration-500 shrink-0">
                                         <Phone size={24} />
@@ -201,7 +278,6 @@ export default function ContactPage() {
                                         <p className="text-muted-foreground font-light">{d.infoPhone}</p>
                                     </div>
                                 </div>
-
                                 <div className="flex items-start gap-6 group">
                                     <div className="w-14 h-14 rounded-2xl bg-muted flex items-center justify-center group-hover:bg-[#FF6600]/10 group-hover:text-[#FF6600] transition-colors duration-500 shrink-0">
                                         <Mail size={24} />
@@ -209,228 +285,131 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="font-bold text-lg mb-1">Email</h3>
                                         <p className="text-muted-foreground font-light">{d.infoEmail}</p>
+                                        <button 
+                                            onClick={() => setActiveMode('appointment')}
+                                            className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#FF6600] hover:translate-x-2 transition-transform mt-2"
+                                        >
+                                            Agendar cita ahora <ArrowRight size={14} />
+                                        </button>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Trust Badge / Cert */}
-                            <div className="mt-16 p-8 rounded-[2rem] bg-muted/50 border border-white/5">
-                                <ShieldCheck size={32} className="text-[#FF6600] mb-4" />
-                                <h4 className="font-bold mb-2">Garantía del Fabricante</h4>
-                                <p className="text-sm text-muted-foreground font-light leading-relaxed">
-                                    Al contactar directamente con Beinsen, se asegura de recibir asesoramiento oficial y piezas certificadas originales.
-                                </p>
-                            </div>
+                            <motion.div layout className={`mt-16 p-8 rounded-[2.5rem] border transition-all duration-500 ${activeMode === 'appointment' ? 'bg-muted/50 border-white/5' : 'bg-gradient-to-br from-[#FF6600]/10 to-transparent border-[#FF6600]/20 shadow-xl shadow-[#FF6600]/5'}`}>
+                                {activeMode === 'appointment' ? (
+                                    <>
+                                        <ShieldCheck size={32} className="text-[#FF6600] mb-4" />
+                                        <h4 className="font-bold mb-2">Garantía del Fabricante</h4>
+                                        <p className="text-sm text-muted-foreground font-light leading-relaxed mb-6">Asesoramiento oficial directo desde nuestra sede central en Murcia.</p>
+                                        <button onClick={() => setActiveMode('message')} className="text-xs font-black uppercase tracking-widest text-[#FF6600] flex items-center gap-2 hover:gap-3 transition-all">Prefiero enviar un mensaje <ArrowRight size={14} /></button>
+                                    </>
+                                ) : (
+                                    <>
+                                        <Calendar size={32} className="text-[#FF6600] mb-4" />
+                                        <h4 className="font-bold mb-2">¿Prefieres agendar una sesión?</h4>
+                                        <p className="text-sm text-muted-foreground font-light leading-relaxed mb-6">Reserva una videollamada de 20 min con nuestros ingenieros.</p>
+                                        <button onClick={() => setActiveMode('appointment')} className="text-xs font-black uppercase tracking-widest text-[#FF6600] flex items-center gap-2 hover:gap-3 transition-all">Ver disponibilidad <ArrowRight size={14} /></button>
+                                    </>
+                                )}
+                            </motion.div>
                         </ScrollReveal>
                     </div>
 
-                    {/* Form Column */}
                     <div className="lg:col-span-8">
                         <ScrollReveal delay={0.2}>
-                            <div className="glass-card rounded-[3rem] p-8 md:p-12 border border-white/5 relative overflow-hidden">
-                                <AnimatePresence mode="wait">
-                                    {!isSubmitted ? (
-                                        <motion.div
-                                            key="form"
-                                            initial={{ opacity: 0, x: 20 }}
-                                            animate={{ opacity: 1, x: 0 }}
-                                            exit={{ opacity: 0, x: -20 }}
-                                        >
-                                            <div className="flex items-center gap-4 mb-10">
-                                                <div className={`h-1 flex-1 rounded-full transition-colors duration-500 ${formStep >= 1 ? 'bg-[#FF6600]' : 'bg-muted'}`} />
-                                                <div className={`h-1 flex-1 rounded-full transition-colors duration-500 ${formStep >= 2 ? 'bg-[#FF6600]' : 'bg-muted'}`} />
-                                            </div>
+                            <div className="glass-card rounded-[3rem] p-4 border border-white/5 relative overflow-hidden flex flex-col">
+                                <div className="flex p-2 bg-muted/30 rounded-[2.5rem] mb-4 mx-4 mt-4">
+                                    <button onClick={() => setActiveMode('message')} className={`flex-1 flex items-center justify-center gap-2 py-4 rounded-[2rem] text-xs font-black uppercase tracking-widest transition-all ${activeMode === 'message' ? 'bg-background text-[#FF6600] shadow-xl' : 'text-muted-foreground hover:text-foreground'}`}>
+                                        <MessageSquare size={16} /> {d.modeMessage}
+                                    </button>
+                                    <button onClick={() => {setActiveMode('appointment'); setIsMessageSubmitted(false);}} className={`flex-1 flex items-center justify-center gap-2 py-4 rounded-[2rem] text-xs font-black uppercase tracking-widest transition-all ${activeMode === 'appointment' ? 'bg-background text-[#FF6600] shadow-xl' : 'text-muted-foreground hover:text-foreground'}`}>
+                                        <Calendar size={16} /> {d.modeAppointment}
+                                    </button>
+                                </div>
 
-                                            <form onSubmit={handleSubmit} className="space-y-8">
-                                                {formStep === 1 ? (
-                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                                        <div className="space-y-2">
-                                                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.name}</label>
-                                                            <input required type="text" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
+                                <div className="p-8 md:p-12">
+                                    <AnimatePresence mode="wait">
+                                        {activeMode === 'message' ? (
+                                            <motion.div key="message-form" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
+                                                {!isMessageSubmitted ? (
+                                                    <>
+                                                        <div className="flex items-center gap-4 mb-10">
+                                                            <div className={`h-1 flex-1 rounded-full transition-colors duration-500 ${messageFormStep >= 1 ? 'bg-[#FF6600]' : 'bg-muted'}`} />
+                                                            <div className={`h-1 flex-1 rounded-full transition-colors duration-500 ${messageFormStep >= 2 ? 'bg-[#FF6600]' : 'bg-muted'}`} />
                                                         </div>
-                                                        <div className="space-y-2">
-                                                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.email}</label>
-                                                            <input required type="email" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
-                                                        </div>
-                                                        <div className="space-y-2">
-                                                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.company}</label>
-                                                            <input required type="text" value={formData.company} onChange={(e) => setFormData({...formData, company: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light" />
-                                                        </div>
-                                                        <div className="space-y-2">
-                                                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.country}</label>
-                                                            <div className="relative">
-                                                                <select 
-                                                                    required 
-                                                                    value={formData.country} 
-                                                                    onChange={(e) => setFormData({...formData, country: e.target.value})} 
-                                                                    className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light appearance-none"
-                                                                >
-                                                                    {countries.map(c => <option key={c} value={c}>{c}</option>)}
-                                                                </select>
-                                                                <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
-                                                            </div>
-                                                        </div>
-                                                        <div className="md:col-span-2 pt-4">
-                                                            <button 
-                                                                type="button" 
-                                                                onClick={() => {
-                                                                    if (!formData.name || !formData.email || !formData.company || !formData.country) {
-                                                                        showError(d.errorRequired);
-                                                                        return;
-                                                                    }
-                                                                    setFormStep(2);
-                                                                }}
-                                                                className="w-full md:w-auto px-12 py-5 bg-[#FF6600] text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3"
-                                                            >
-                                                                {d.next} <ArrowRight size={18} />
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                ) : (
-                                                    <div className="space-y-8">
-                                                        <div className="space-y-4">
-                                                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.interestSelection}</label>
-                                                            <div className="flex gap-4">
-                                                                <button 
-                                                                    type="button"
-                                                                    onClick={() => setFormData({...formData, interestType: 'machine'})}
-                                                                    className={`flex-1 p-4 rounded-2xl border transition-all text-sm font-bold flex items-center justify-center gap-2 ${formData.interestType === 'machine' ? 'bg-[#FF6600] border-[#FF6600] text-white shadow-lg shadow-[#FF6600]/20' : 'bg-muted/30 border-white/5 text-muted-foreground hover:bg-muted/50'}`}
-                                                                >
-                                                                    <Briefcase size={18} /> {d.machine}
-                                                                </button>
-                                                                <button 
-                                                                    type="button"
-                                                                    onClick={() => setFormData({...formData, interestType: 'general'})}
-                                                                    className={`flex-1 p-4 rounded-2xl border transition-all text-sm font-bold flex items-center justify-center gap-2 ${formData.interestType === 'general' ? 'bg-[#FF6600] border-[#FF6600] text-white shadow-lg shadow-[#FF6600]/20' : 'bg-muted/30 border-white/5 text-muted-foreground hover:bg-muted/50'}`}
-                                                                >
-                                                                    <MessageSquare size={18} /> {d.general}
-                                                                </button>
-                                                            </div>
-                                                        </div>
-
-                                                        {formData.interestType === 'machine' && (
-                                                            <motion.div 
-                                                                initial={{ opacity: 0, y: -10 }} 
-                                                                animate={{ opacity: 1, y: 0 }}
-                                                                className="space-y-2"
-                                                            >
-                                                                <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.machine}</label>
-                                                                <div className="relative">
-                                                                    <select 
-                                                                        value={formData.machine} 
-                                                                        onChange={(e) => setFormData({...formData, machine: e.target.value})} 
-                                                                        className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light appearance-none"
-                                                                    >
-                                                                        {planchasData.map(p => (
-                                                                            <option key={p.id} value={getLocalized(p.name, locale)}>{getLocalized(p.name, locale)}</option>
-                                                                        ))}
-                                                                    </select>
-                                                                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                                                        <form onSubmit={handleMessageSubmit} className="space-y-8">
+                                                            {messageFormStep === 1 ? (
+                                                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                                                    <div className="space-y-2"><label className="text-xs font-black uppercase text-muted-foreground ml-2">{d.name}</label><input required type="text" value={messageFormData.name} onChange={(e) => setMessageFormData({...messageFormData, name: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4" /></div>
+                                                                    <div className="space-y-2"><label className="text-xs font-black uppercase text-muted-foreground ml-2">{d.email}</label><input required type="email" value={messageFormData.email} onChange={(e) => setMessageFormData({...messageFormData, email: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4" /></div>
+                                                                    <div className="space-y-2"><label className="text-xs font-black uppercase text-muted-foreground ml-2">{d.company}</label><input required type="text" value={messageFormData.company} onChange={(e) => setMessageFormData({...messageFormData, company: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4" /></div>
+                                                                    <div className="space-y-2"><label className="text-xs font-black uppercase text-muted-foreground ml-2">{d.country}</label><div className="relative"><select required value={messageFormData.country} onChange={(e) => setMessageFormData({...messageFormData, country: e.target.value})} className="w-full bg-muted/50 border-none rounded-2xl p-4 appearance-none">{countries.map(c => <option key={c} value={c}>{c}</option>)}</select><ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" /></div></div>
+                                                                    <div className="md:col-span-2 pt-4"><button type="button" onClick={() => (messageFormData.name && messageFormData.email && messageFormData.company) ? setMessageFormStep(2) : showError(d.errorRequired)} className="w-full md:w-auto px-12 py-5 bg-[#FF6600] text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-[1.02] transition-all flex items-center justify-center gap-3">{d.next} <ArrowRight size={18} /></button></div>
                                                                 </div>
-                                                            </motion.div>
+                                                            ) : (
+                                                                <div className="space-y-8">
+                                                                    <div className="space-y-4"><label className="text-xs font-black uppercase text-muted-foreground ml-2">{d.interestSelection}</label><div className="flex gap-4"><button type="button" onClick={() => setMessageFormData({...messageFormData, interestType: 'machine'})} className={`flex-1 p-4 rounded-2xl border transition-all text-sm font-bold flex items-center justify-center gap-2 ${messageFormData.interestType === 'machine' ? 'bg-[#FF6600] border-[#FF6600] text-white' : 'bg-muted/30 border-white/5'}`}><Briefcase size={18} /> {d.machine}</button><button type="button" onClick={() => setMessageFormData({...messageFormData, interestType: 'general'})} className={`flex-1 p-4 rounded-2xl border transition-all text-sm font-bold flex items-center justify-center gap-2 ${messageFormData.interestType === 'general' ? 'bg-[#FF6600] border-[#FF6600] text-white' : 'bg-muted/30 border-white/5'}`}><MessageSquare size={18} /> {d.general}</button></div></div>
+                                                                    <div className="space-y-2"><label className="text-xs font-black uppercase text-muted-foreground ml-2">{d.message}</label><textarea required value={messageFormData.message} onChange={(e) => setMessageFormData({...messageFormData, message: e.target.value})} rows={4} className="w-full bg-muted/50 border-none rounded-2xl p-4 resize-none" /></div>
+                                                                    <div className="flex gap-4"><button type="button" onClick={() => setMessageFormStep(1)} className="px-8 py-5 border border-white/10 rounded-2xl font-black uppercase text-xs">{d.back}</button><button type="submit" disabled={isMessageSubmitting} className="flex-1 px-12 py-5 bg-[#FF6600] text-white rounded-2xl font-black uppercase text-sm disabled:opacity-50 flex items-center justify-center gap-2">{isMessageSubmitting ? d.sending : d.send} <Send size={18} /></button></div>
+                                                                </div>
+                                                            )}
+                                                        </form>
+                                                    </>
+                                                ) : (
+                                                    <div className="text-center py-12"><div className="w-24 h-24 rounded-full bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] mx-auto mb-8"><CheckCircle2 size={48} /></div><h2 className="text-4xl font-black italic mb-4">{d.thanks}</h2><p className="text-xl text-muted-foreground font-light max-w-sm mx-auto">{d.thanksDesc}</p><button onClick={() => setIsMessageSubmitted(false)} className="mt-10 text-xs font-black uppercase text-[#FF6600] hover:underline">Enviar otro mensaje</button></div>
+                                                )}
+                                            </motion.div>
+                                        ) : (
+                                            <motion.div key="appointment-calendar" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }}>
+                                                {bookingStep === 1 && (
+                                                    <div className="flex flex-col">
+                                                        <h3 className="text-2xl font-black mb-8">{d.bookingTitle}</h3>
+                                                        <div className="grid grid-cols-4 sm:grid-cols-6 gap-3 mb-10">
+                                                            {availableDates.map((date, i) => (
+                                                                <button key={i} onClick={() => setSelectedDate(date)} className={`flex flex-col items-center justify-center p-3 rounded-2xl border-2 transition-all ${selectedDate?.getTime() === date.getTime() ? 'border-[#FF6600] bg-[#FF6600]/5 text-[#FF6600]' : 'border-border/40 hover:border-[#FF6600]/40'}`}><span className="text-[10px] uppercase font-black opacity-60 mb-1">{date.toLocaleDateString("es-ES", { weekday: 'short' })}</span><span className="text-lg font-black">{date.getDate()}</span></button>
+                                                            ))}
+                                                        </div>
+                                                        {selectedDate && (
+                                                            <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                                                                {TIME_SLOTS.map((time) => (
+                                                                    <button key={time} onClick={() => setSelectedTime(time)} className={`py-3 px-4 rounded-xl border font-bold text-sm transition-all ${selectedTime === time ? 'bg-[#FF6600] border-[#FF6600] text-white shadow-lg' : 'bg-muted/30 border-border/40 hover:border-[#FF6600]/40'}`}>{time}</button>
+                                                                ))}
+                                                            </div>
                                                         )}
-
-                                                        <div className="space-y-2">
-                                                            <label className="text-xs font-black uppercase tracking-widest text-muted-foreground ml-2">{d.message}</label>
-                                                            <textarea 
-                                                                required
-                                                                value={formData.message}
-                                                                onChange={(e) => setFormData({...formData, message: e.target.value})}
-                                                                rows={4} 
-                                                                className="w-full bg-muted/50 border-none rounded-2xl p-4 focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-light resize-none" 
-                                                            />
-                                                        </div>
-                                                        <div className="flex flex-col md:flex-row gap-4 pt-4">
-                                                            <button 
-                                                                type="button" 
-                                                                onClick={() => setFormStep(1)}
-                                                                className="px-8 py-5 border border-white/10 rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-white/5 transition-all text-muted-foreground"
-                                                            >
-                                                                {d.back}
-                                                            </button>
-                                                            <button 
-                                                                type="submit" 
-                                                                disabled={isSubmitting}
-                                                                className="flex-1 px-12 py-5 bg-[#FF6600] text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-3 shadow-xl shadow-[#FF6600]/20 disabled:opacity-50"
-                                                            >
-                                                                {isSubmitting ? d.sending : d.send} <Send size={18} />
-                                                            </button>
-                                                        </div>
+                                                        <div className="mt-12 flex justify-end"><Button disabled={!selectedDate || !selectedTime} onClick={() => setBookingStep(2)} className="bg-[#FF6600] text-white font-black px-10 h-14 rounded-2xl">{d.next} <ArrowRight size={18} className="ml-2" /></Button></div>
                                                     </div>
                                                 )}
-                                            </form>
-
-                                            {/* Modern Error Notification */}
-                                            <AnimatePresence>
-                                                {error && (
-                                                    <motion.div
-                                                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                        animate={{ opacity: 1, y: 0, scale: 1 }}
-                                                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                        className="mt-6 p-4 bg-red-500/10 border border-red-500/20 rounded-2xl flex items-center gap-3 text-red-500"
-                                                    >
-                                                        <ShieldCheck className="w-5 h-5 shrink-0" />
-                                                        <p className="text-sm font-bold tracking-tight">{error}</p>
-                                                    </motion.div>
+                                                {bookingStep === 2 && (
+                                                    <div className="flex flex-col">
+                                                        <button onClick={() => setBookingStep(1)} className="flex items-center gap-2 text-xs font-black uppercase text-muted-foreground mb-8"><ChevronLeft size={14} /> {d.back}</button>
+                                                        <h3 className="text-2xl font-black mb-8">{d.bookingContact}</h3>
+                                                        <form onSubmit={handleBookingSubmit} className="space-y-4">
+                                                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4"><input required type="text" placeholder="Nombre completo" value={bookingFormData.name} onChange={e => setBookingFormData({...bookingFormData, name: e.target.value})} className="bg-muted/50 rounded-xl px-5 py-3 outline-none" /><input required type="text" placeholder="Empresa" value={bookingFormData.company} onChange={e => setBookingFormData({...bookingFormData, company: e.target.value})} className="bg-muted/50 rounded-xl px-5 py-3 outline-none" /></div>
+                                                            <input required type="email" placeholder="Email" value={bookingFormData.email} onChange={e => setBookingFormData({...bookingFormData, email: e.target.value})} className="w-full bg-muted/50 rounded-xl px-5 py-3 outline-none" /><input required type="tel" placeholder="Teléfono" value={bookingFormData.phone} onChange={e => setBookingFormData({...bookingFormData, phone: e.target.value})} className="w-full bg-muted/50 rounded-xl px-5 py-3 outline-none" /><textarea rows={3} placeholder="Notas adicionales..." value={bookingFormData.notes} onChange={e => setBookingFormData({...bookingFormData, notes: e.target.value})} className="w-full bg-muted/50 rounded-xl px-5 py-3 outline-none resize-none" /><Button type="submit" disabled={isBookingSubmitting} className="w-full bg-[#FF6600] text-white font-black h-16 rounded-2xl text-lg mt-4">{isBookingSubmitting ? <Loader2 className="animate-spin" /> : "Confirmar Cita"}</Button>
+                                                        </form>
+                                                    </div>
                                                 )}
-                                            </AnimatePresence>
-                                        </motion.div>
-                                    ) : (
-                                        <motion.div
-                                            key="thanks"
-                                            initial={{ opacity: 0, y: 20 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            className="text-center py-12"
-                                        >
-                                            <div className="w-24 h-24 rounded-full bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] mx-auto mb-8">
-                                                <CheckCircle2 size={48} />
-                                            </div>
-                                            <h2 className="text-4xl font-black italic mb-4">{d.thanks}</h2>
-                                            <p className="text-xl text-muted-foreground font-light max-w-sm mx-auto leading-relaxed">
-                                                {d.thanksDesc}
-                                            </p>
-                                            <button 
-                                                onClick={() => setIsSubmitted(false)}
-                                                className="mt-10 text-xs font-black uppercase tracking-[0.2em] text-[#FF6600] hover:underline"
-                                            >
-                                                Enviar otro mensaje
-                                            </button>
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
+                                                {bookingStep === 3 && (
+                                                    <div className="text-center py-12"><div className="w-24 h-24 rounded-full bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] mx-auto mb-8"><CheckCircle2 size={48} /></div><h2 className="text-4xl font-black italic mb-4">{d.bookingSuccess}</h2><p className="text-xl text-muted-foreground font-light max-w-sm mx-auto">{d.bookingSuccessDesc}</p><button onClick={() => {setBookingStep(1); setSelectedDate(null); setSelectedTime(null);}} className="mt-10 text-xs font-black uppercase text-[#FF6600] hover:underline">Solicitar otra cita</button></div>
+                                                )}
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
                             </div>
                         </ScrollReveal>
                     </div>
-
                 </div>
             </div>
-
-            {/* Global Map Section Mockup */}
-            <section className="bg-muted/10 py-32 border-y border-white/5 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <ScrollReveal>
-                        <h2 className="text-3xl md:text-5xl font-black italic mb-20 tracking-tighter">
-                            Presencia Global de Fabricación
-                        </h2>
-                        <div className="aspect-[21/9] rounded-[3rem] bg-card border border-white/5 overflow-hidden group shadow-2xl relative">
-                            {/* Abstract Map Background Placeholder */}
-                            <div className="absolute inset-0 grayscale opacity-20 pointer-events-none bg-[url('https://images.unsplash.com/photo-1521295121783-8a321d551ad2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
-                            
-                            {/* Animated Location Pins Mockup */}
-                            <div className="absolute top-[40%] left-[48%] transform -translate-x-1/2 -translate-y-1/2">
-                                <div className="relative">
-                                    <div className="absolute inset-0 animate-ping rounded-full bg-[#FF6600]/40" />
-                                    <div className="w-4 h-4 rounded-full bg-[#FF6600] border-4 border-background relative z-10" />
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap bg-card/90 backdrop-blur-md px-3 py-1 rounded-lg border border-white/10 text-[10px] font-black uppercase tracking-widest shadow-xl">
-                                        Murcia HQ
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </ScrollReveal>
-                </div>
-            </section>
+            {error && <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-red-500 text-white px-6 py-3 rounded-full shadow-2xl z-50 font-bold">{error}</div>}
         </div>
+    );
+}
+
+export default function UnifiedContactPage() {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ContactContent />
+        </Suspense>
     );
 }

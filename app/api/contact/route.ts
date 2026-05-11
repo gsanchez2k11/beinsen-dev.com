@@ -6,9 +6,11 @@ export async function POST(request: Request) {
     const { name, phone, email, company, country, product, message, recipient } = await request.json();
 
     // Configuración del transportador de correo
+    const port = Number(process.env.EMAIL_SERVER_PORT) || 587;
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_SERVER_HOST || 'smtp.gmail.com',
-      port: Number(process.env.EMAIL_SERVER_PORT) || 587,
+      port: port,
+      secure: port === 465, // true for 465, false for other ports
       auth: {
         user: process.env.EMAIL_SERVER_USER,
         pass: process.env.EMAIL_SERVER_PASSWORD,
