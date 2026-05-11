@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Shirt, Coffee, HardHat, Layers, Sparkles, Gauge, ArrowRight, ArrowLeft, RotateCcw, CheckCircle2 } from "lucide-react";
+import { Shirt, Coffee, HardHat, Layers, Sparkles, Gauge, ArrowRight, ArrowLeft, RotateCcw, CheckCircle2, Calendar as CalendarIcon } from "lucide-react";
 import { planchasData } from "@/data/products";
 import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
@@ -366,6 +366,12 @@ export default function AsesorPage() {
                                 >
                                     <RotateCcw size={14} /> {d.restart}
                                 </button>
+                                <Link
+                                    href="/contacto?tab=book"
+                                    className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-border/60 bg-[#FF6600]/10 text-[#FF6600] hover:bg-[#FF6600]/20 text-sm font-black uppercase tracking-widest transition-all"
+                                >
+                                    <CalendarIcon size={14} /> Agendar Cita
+                                </Link>
                                 <Link
                                     href="/contacto"
                                     className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-[#FF6600] text-white hover:scale-105 text-sm font-black uppercase tracking-widest transition-transform shadow-lg shadow-[#FF6600]/30"

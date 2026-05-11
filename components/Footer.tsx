@@ -75,7 +75,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <Link href="/" className="inline-block">
                             <Image
-                                src="/logo.png"
+                                src="/brand/logo.png"
                                 alt="Beinsen Logo"
                                 width={150}
                                 height={50}

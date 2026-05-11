@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MessageSquare, ArrowRight, Loader2, CheckCircle2 } from "lucide-react";
+import { MessageSquare, ArrowRight, Loader2, CheckCircle2, Calendar } from "lucide-react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ContactSpecialistButtonProps {
@@ -185,6 +186,14 @@ export function ContactSpecialistButton({
                                             "Solicitar Llamada Inmediata"
                                         )}
                                     </Button>
+                                    <div className="pt-2 text-center">
+                                        <Link 
+                                            href="/contacto?tab=book" 
+                                            className="text-[10px] uppercase font-black tracking-widest text-muted-foreground hover:text-[#FF6600] transition-colors flex items-center justify-center gap-1.5"
+                                        >
+                                            <Calendar size={12} /> O agenda una cita técnica
+                                        </Link>
+                                    </div>
                                 </form>
                             </>
                         ) : (

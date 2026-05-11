@@ -40,14 +40,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         openGraph: {
             title: name,
             description: description.substring(0, 160) + "...",
-            images: [item.image || '/logo.png'],
+            images: [item.image || '/brand/logo.png'],
             type: "website",
         },
         twitter: {
             card: "summary_large_image",
             title: name,
             description: description.substring(0, 160) + "...",
-            images: [item.image || '/logo.png'],
+            images: [item.image || '/brand/logo.png'],
         },
     };
 }

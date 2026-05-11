@@ -16,7 +16,8 @@ import {
     LifeBuoy,
     HelpCircle,
     Mail,
-    Phone
+    Phone,
+    Calendar
 } from "lucide-react";
 import { useState, useMemo } from "react";
 import Link from "next/link";
@@ -217,10 +218,16 @@ export default function SupportPage() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-center lg:justify-end">
+                        <div className="flex flex-col items-center lg:items-end gap-6">
+                            <Link 
+                                href="/contacto?tab=book"
+                                className="w-full sm:w-auto px-12 py-6 bg-white text-black rounded-[2rem] font-black uppercase tracking-widest text-sm hover:scale-[1.05] transition-all shadow-2xl flex items-center justify-center gap-3"
+                            >
+                                <Calendar size={18} /> Agendar Cita Técnica
+                            </Link>
                             <Link 
                                 href="/contacto"
-                                className="px-12 py-6 bg-[#FF6600] text-white rounded-[2rem] font-black uppercase tracking-widest text-sm hover:scale-[1.05] transition-all shadow-2xl shadow-[#FF6600]/20"
+                                className="w-full sm:w-auto px-12 py-6 border border-white/20 text-white rounded-[2rem] font-black uppercase tracking-widest text-sm hover:bg-white hover:text-black transition-all flex items-center justify-center gap-3"
                             >
                                 {d.contactBtn}
                             </Link>
