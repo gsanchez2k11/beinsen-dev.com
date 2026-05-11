@@ -55,7 +55,7 @@ Misma convención que las imágenes, aplicada a PDFs/Office.
 
 ### Cómo añadir documentos
 
-1. Crea `public/downloads/<slug>/`.
+1. Crea `public/manuales/<slug>/`.
 2. Coloca los archivos.
 3. Regenera (`npm run downloads`) y despliega.
 
@@ -74,7 +74,7 @@ Otros nombres se muestran "prettified" (guiones → espacios, title case). Forma
 ### Flujo
 
 ```
-public/downloads/<slug>/*.pdf
+public/manuales/<slug>/*.pdf
         │
         ▼
 scripts/generate-product-downloads.mjs
@@ -182,7 +182,7 @@ videoUrl: "https://www.youtube.com/embed/XXXXX"
 products:               # slugs de productos para cross-linking
   - alaska-plancha-termica-textil
   - barbados-plancha-termica-textil
-downloads:              # slugs cuyos PDFs (public/downloads/<slug>/) se adjuntan
+downloads:              # slugs cuyos PDFs (public/manuales/<slug>/) se adjuntan
   - alaska-plancha-termica-textil
 readingMinutes: 5       # opcional, se calcula automáticamente si falta
 ---
@@ -200,7 +200,7 @@ Párrafos, listas, `código`, [enlaces](https://…), **negrita**, *cursiva*, ta
 - Hero con imagen + categoría + fecha + tiempo de lectura + autor
 - Vídeo embebido (iframe) si hay `videoUrl`
 - Contenido MDX con estilos tipográficos consistentes
-- Sección **Descargas**: PDFs agregados desde `public/downloads/<slug>/` de los productos listados en `downloads`
+- Sección **Descargas**: PDFs agregados desde `public/manuales/<slug>/` de los productos listados en `downloads`
 - Sección **Productos relacionados**: cards completas de los `products`
 - Sección **Sigue aprendiendo**: 3 artículos distintos del actual
 

@@ -1140,7 +1140,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "/products/maquinas/doha-plancha-transfer-gran-formato/01.jpg",
     "price": "Consultar PVP",
-    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "size": { "es": "40x50 / 50x80 cm", "en": "40x50 / 50x80 cm" },
     "features": {
       "es": [
         "Sistema neumático de alto rendimiento",
@@ -1172,20 +1172,20 @@ const rawPlanchasData: Plancha[] = [
       { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Sandwich" },
       { "label": { "es": "Modo de funcionamiento", "en": "Operating Mode" }, "value": "Cierre manual y apertura automática" },
       { "label": { "es": "Ángulo de apertura", "en": "Opening Angle" }, "value": "25 grados" },
-      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "8mm." },
-      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "✓" },
+      { "label": { "es": "Grosor máximo del personalizable", "en": "Max Customizable Thickness" }, "value": "8 mm" },
+      { "label": { "es": "Modelo de display", "en": "Display Model" }, "value": "GY-04 Digital" },
       { "label": { "es": "Táctil", "en": "Touch" }, "value": "✗" },
-      { "label": { "es": "Memorias", "en": "Memories" }, "value": "✗" },
       { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
       { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
-      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "80x50cm." },
-      { "label": { "es": "Potencia", "en": "Power" }, "value": "3.600W" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "40x50 / 50x80 cm" },
+      { "label": { "es": "Placa inferior", "en": "Bottom Plate" }, "value": { "es": "Deslizable / Intercambiable", "en": "Sliding / Interchangeable" } },
+      { "label": { "es": "Potencia (40x50 / 50x80)", "en": "Power (40x50 / 50x80)" }, "value": "1.6-1.8 kW / 2.4-3.6 kW" },
       { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
-      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "110Kg." },
-      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "163Kg." },
-      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "105x97x95cm" },
-      { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120V / 220V" },
+      { "label": { "es": "Peso neto (40x50 / 50x80)", "en": "Net Weight (40x50 / 50x80)" }, "value": "57 kg / 110 kg" },
+      { "label": { "es": "Peso bruto (40x50 / 50x80)", "en": "Gross Weight (40x50 / 50x80)" }, "value": "65 kg / 163 kg" },
+      { "label": { "es": "Tamaño del embalaje (40x50 / 50x80)", "en": "Package Size (40x50 / 50x80)" }, "value": "89x54x75cm / 105x97x95cm" },
+      { "label": { "es": "Resorte de gas", "en": "Gas Spring" }, "value": "✓" },
       { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" }
     ],
     "benefits": [
@@ -3094,7 +3094,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "/products/maquinas/belice-plancha-termica-textil/01.png",
     "price": "Consultar PVP",
-    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "size": { "es": "38x38 / 40x50 cm", "en": "38x38 / 40x50 cm" },
     "features": {
       "es": [
         "Formato textil versátil",
@@ -3149,11 +3149,11 @@ const rawPlanchasData: Plancha[] = [
       { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
       { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "38×38 o 40x50cm." },
       { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
-      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Potencia (38x38 / 40x50)", "en": "Power (38x38 / 40x50)" }, "value": "1.6 kW / 1.8 kW" },
       { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
-      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "43Kg." },
-      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "49Kg." },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120V / 220V" },
+      { "label": { "es": "Peso neto (38x38 / 40x50)", "en": "Net Weight (38x38 / 40x50)" }, "value": "35Kg. / 42Kg." },
+      { "label": { "es": "Peso bruto (38x38 / 40x50)", "en": "Gross Weight (38x38 / 40x50)" }, "value": "43Kg. / 49Kg." },
       { "label": { "es": "Tamaño de la máquina", "en": "Machine Size" }, "value": "71x40x50cm" },
       { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "94x57x57cm" },
       { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
@@ -3221,7 +3221,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "/products/maquinas/barbados-plancha-termica-textil/01.jpg",
     "price": "Consultar PVP",
-    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "size": { "es": "38x38 / 40x50 cm", "en": "38x38 / 40x50 cm" },
     "features": {
       "es": [
         "Construcción robusta",
@@ -3268,11 +3268,11 @@ const rawPlanchasData: Plancha[] = [
       { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
       { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "38×38 o 40x50cm." },
       { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✓" },
-      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Potencia (38x38 / 40x50)", "en": "Power (38x38 / 40x50)" }, "value": "1.6 kW / 1.8 kW" },
       { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225ºC" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
-      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "27,40Kg." },
-      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "43,40Kg." },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120V / 220V" },
+      { "label": { "es": "Peso neto (38x38 / 40x50)", "en": "Net Weight (38x38 / 40x50)" }, "value": "27Kg. / 35Kg." },
+      { "label": { "es": "Peso bruto (38x38 / 40x50)", "en": "Gross Weight (38x38 / 40x50)" }, "value": "43Kg. / 51Kg." },
       { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "92x52x51cm" },
       { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
       { "label": { "es": "Láser de posicionamiento", "en": "Positioning Laser" }, "value": "✗" }
@@ -3368,7 +3368,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "/products/maquinas/alaska-plancha-termica-textil/01.png",
     "price": "Consultar PVP",
-    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "size": { "es": "38x38 / 40x50 cm", "en": "38x38 / 40x50 cm" },
     "features": {
       "es": [
         "Diseño compacto y funcional",
@@ -3407,10 +3407,10 @@ const rawPlanchasData: Plancha[] = [
       { "label": { "es": "Número de platos", "en": "Number of Plates" }, "value": "1" },
       { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "38×38 o 40x50cm." },
       { "label": { "es": "Platos intercambiables", "en": "Interchangeable Plates" }, "value": "✗" },
-      { "label": { "es": "Potencia", "en": "Power" }, "value": "1.800W" },
+      { "label": { "es": "Potencia (38x38 / 40x50)", "en": "Power (38x38 / 40x50)" }, "value": "1.6 kW / 1.8 kW" },
       { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "230ºC" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
-      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "39Kg." },
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "120V / 220V" },
+      { "label": { "es": "Peso neto (38x38 / 40x50)", "en": "Net Weight (38x38 / 40x50)" }, "value": "35Kg. / 42Kg." },
       { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "46Kg." },
       { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "75x52x50cm" },
       { "label": { "es": "Soporte", "en": "Support" }, "value": "✗" },
@@ -3785,7 +3785,7 @@ const rawPlanchasData: Plancha[] = [
     },
     "image": "/products/maquinas/kenia-plancha-termica-textil/01.png",
     "price": "Consultar PVP",
-    "size": { "es": "Estándar", "en": "Standard", "pt": "Padrão", "it": "Standard" },
+    "size": { "es": "100 x 25 cm", "en": "100 x 25 cm" },
     "features": {
       "es": [
         "Enfoque profesional",
@@ -3815,22 +3815,24 @@ const rawPlanchasData: Plancha[] = [
         "category": { "es": "Textil", "en": "Textile", "pt": "Têxtil", "it": "Tessile" },
     "openingType": { "es": "Manual", "en": "Manual", "pt": "Manual", "it": "Manuale" },
     "technicalSpecs": [
-      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Modelo Kenia" },
-      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo sandwich (semiautomática)" },
+      { "label": { "es": "Modelo de plancha", "en": "Press Model" }, "value": "Kenia" },
+      { "label": { "es": "Tipo de plancha", "en": "Press Type" }, "value": "Tipo sandwich (especial lanyards)" },
       { "label": { "es": "Ángulo de apertura", "en": "Opening Angle" }, "value": "25º" },
       { "label": { "es": "Modo de apertura", "en": "Opening Mode" }, "value": "Automático" },
       { "label": { "es": "Modo de cierre", "en": "Closing Mode" }, "value": "Manual" },
-      { "label": { "es": "Tipo de resistencia", "en": "Heating Element Type" }, "value": "Fija" },
-      { "label": { "es": "Tamaño de resistencia", "en": "Heating Element Size" }, "value": "100 x 25 cm" },
-      { "label": { "es": "Máximo grosor imprimible", "en": "Maximum Printable Thickness" }, "value": "20mm" },
-      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "220V" },
-      { "label": { "es": "Potencia", "en": "Power" }, "value": "4850W" },
-      { "label": { "es": "Peso", "en": "Weight" }, "value": "90 Kg" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions" }, "value": "210 x 80 x 84 cm" },
+      { "label": { "es": "Tamaño del plato", "en": "Plate Size" }, "value": "100 x 25 cm" },
       { "label": { "es": "Controlador digital", "en": "Digital Controller" }, "value": "GY-06" },
-      { "label": { "es": "Precisión del controlador", "en": "Controller Precision" }, "value": "±0.5%" },
-      { "label": { "es": "Temporizador", "en": "Timer" }, "value": "0-999 mm seg" },
-      { "label": { "es": "Rango de temperatura", "en": "Temperature Range" }, "value": "0º-225º" }
+      { "label": { "es": "Voltaje", "en": "Voltage" }, "value": "110V / 220V" },
+      { "label": { "es": "Amperaje", "en": "Amperage" }, "value": "20A / 11A" },
+      { "label": { "es": "Frecuencia", "en": "Frequency" }, "value": "50-60 Hz" },
+      { "label": { "es": "Potencia", "en": "Power" }, "value": "2.2 kW / 2.4 kW" },
+      { "label": { "es": "Rango del temporizador", "en": "Timer Range" }, "value": "0-999 seg." },
+      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature" }, "value": "225 ºC" },
+      { "label": { "es": "Precisión de temperatura", "en": "Temperature Precision" }, "value": "±5 ºC" },
+      { "label": { "es": "Peso neto", "en": "Net Weight" }, "value": "90 Kg" },
+      { "label": { "es": "Peso bruto", "en": "Gross Weight" }, "value": "138.6 Kg" },
+      { "label": { "es": "Tamaño de la máquina", "en": "Machine Size" }, "value": "105 x 79 x 46 cm" },
+      { "label": { "es": "Tamaño del embalaje", "en": "Package Size" }, "value": "120 x 96 x 62 cm (Cajón madera)" }
     ],
     "benefits": [
       {
@@ -4812,7 +4814,7 @@ function enrichPlancha(plancha: Plancha): Plancha {
   const defaultDownloads = [
     {
       label: { es: "Ficha Técnica", en: "Technical Sheet" },
-      url: `/downloads/${plancha.slug}.pdf`
+      url: `/manuales/${plancha.slug}.pdf`
     }
   ];
 

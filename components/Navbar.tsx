@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { Menu, X, ChevronDown, Zap, Box, Package, ArrowRight, Settings } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Suspense } from "react";
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
@@ -14,7 +14,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export function Navbar() {
+function NavbarContent() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
     const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -22,6 +22,7 @@ export function Navbar() {
     const megaButtonRef = useRef<HTMLButtonElement>(null);
     const { locale } = useLanguage();
     const pathname = usePathname();
+    const searchParams = useSearchParams();
 
     useEffect(() => {
         if (!isMegaMenuOpen) return;
@@ -110,7 +111,7 @@ export function Navbar() {
                     <div className="flex-shrink-0 flex items-center">
                         <Link href="/" className="group flex items-center gap-3">
                             <Image
-                                src="/logo.png"
+                                src="/brand/logo.png"
                                 alt="Beinsen Logo"
                                 width={120}
                                 height={40}
@@ -212,6 +213,13 @@ export function Navbar() {
                         </Link>
 
                         <Link
+                            href="/contacto?tab=book"
+                            className={`px-4 py-2 text-sm font-black uppercase tracking-widest rounded-xl transition-all ${pathname === "/contacto" && searchParams.get('tab') === 'book' ? "text-[#FF6600] bg-[#FF6600]/5" : "text-foreground/70 hover:text-foreground hover:bg-muted/50"}`}
+                        >
+                            Citas
+                        </Link>
+
+                        <Link
                             href="/soporte"
                             className="px-6 py-2.5 rounded-xl bg-[#FF6600] text-white text-xs font-black uppercase tracking-widest whitespace-nowrap hover:bg-[#cc5200] transition-all shadow-lg shadow-[#FF6600]/20 transform hover:-translate-y-0.5 ml-4"
                         >
@@ -299,6 +307,14 @@ export function Navbar() {
                             </Link>
 
                             <Link
+                                href="/contacto?tab=book"
+                                className="mt-2 px-6 py-5 text-center rounded-2xl border border-border/40 bg-muted/30 text-foreground text-xs font-black uppercase tracking-widest hover:bg-muted"
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Agendar Cita
+                            </Link>
+
+                            <Link
                                 href="/soporte"
                                 className="mt-2 px-6 py-5 text-center rounded-2xl bg-[#FF6600] text-white text-xs font-black uppercase tracking-widest"
                                 onClick={() => setIsOpen(false)}
@@ -315,5 +331,13 @@ export function Navbar() {
                 )}
             </AnimatePresence>
         </nav>
+    );
+}
+
+export function Navbar() {
+    return (
+        <Suspense fallback={null}>
+            <NavbarContent />
+        </Suspense>
     );
 }

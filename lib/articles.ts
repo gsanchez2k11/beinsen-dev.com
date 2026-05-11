@@ -14,7 +14,7 @@ export interface ArticleFrontmatter {
     authorRole?: string;
     publishedAt: string;  // ISO date
     products?: string[];  // slugs of related products
-    downloads?: string[]; // slugs to map to public/downloads/<slug>/
+    downloads?: string[]; // slugs to map to public/manuales/<slug>/
     readingMinutes?: number;
 }
 

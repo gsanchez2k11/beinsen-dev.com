@@ -4,7 +4,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const DOWNLOADS_DIR = path.join(ROOT, "public", "downloads");
+const DOWNLOADS_DIR = path.join(ROOT, "public", "manuales");
 const OUTPUT = path.join(ROOT, "data", "product-downloads.json");
 const DOC_EXT = /\.(pdf|docx?|xlsx?)$/i;
 
@@ -50,7 +50,7 @@ if (fs.existsSync(DOWNLOADS_DIR)) {
     manifest[slug] = files.map((f) => {
       const base = f.replace(DOC_EXT, "").toLowerCase();
       const label = LABELS[base] || prettify(base);
-      return { label, url: `/downloads/${slug}/${f}` };
+      return { label, url: `/manuales/${slug}/${f}` };
     });
   }
 }
