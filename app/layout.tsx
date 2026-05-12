@@ -4,16 +4,100 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { MagneticCursor } from "@/components/MagneticCursor";
-import { LanguageProvider } from "@/context/LanguageContext";
-import CookieConsent from "@/components/CookieConsent";
+import { ClientProviders } from "@/components/ClientProviders";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Beinsen | Planchas Transfer Profesionales",
-  description: "Fabricante líder de planchas transfer para personalización de prendas. Calidad, robustez y precisión para profesionales exigentes en sublimación, DTF y vinilo textil.",
-  keywords: "planchas transfer, personalización, sublimación, DTF, vinilo textil, beinsen",
+  title: {
+    default: "Beinsen | Planchas Transfer y Prensas Térmicas Industriales",
+    template: "%s | Beinsen",
+  },
+  description: "Fabricante líder de planchas transfer y prensas térmicas industriales para sublimación, DTF y vinilo textil. Calidad certificada, presencia en 50+ países.",
+  metadataBase: new URL("https://beinsen.com"),
+  alternates: {
+    languages: {
+      es: "https://beinsen.com",
+      en: "https://beinsen.com",
+      pt: "https://beinsen.com",
+      it: "https://beinsen.com",
+      "x-default": "https://beinsen.com",
+    },
+  },
+  openGraph: {
+    siteName: "Beinsen",
+    locale: "es_ES",
+    type: "website",
+    images: [
+      {
+        url: "/brand/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Beinsen — Fabricante de Planchas Transfer Industriales",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@beinsen",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "@id": "https://beinsen.com/#organization",
+  name: "Beinsen",
+  url: "https://beinsen.com",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://beinsen.com/brand/logo.png",
+    width: 300,
+    height: 100,
+  },
+  image: "https://beinsen.com/brand/logo.png",
+  description: "Fabricante líder de planchas transfer y prensas térmicas industriales para sublimación, DTF y vinilo textil. Presencia en más de 50 países.",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Av. Alto de las Atalayas, 18",
+    addressLocality: "Cabezo de Torres",
+    addressRegion: "Murcia",
+    postalCode: "30110",
+    addressCountry: "ES",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 37.9887,
+    longitude: -1.0742,
+  },
+  telephone: "+34968902300",
+  email: "info@beinsen.com",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+34-968-902-300",
+    contactType: "sales",
+    email: "info@beinsen.com",
+    availableLanguage: ["Spanish", "English", "Portuguese", "Italian"],
+  },
+  areaServed: {
+    "@type": "GeoCircle",
+    geoMidpoint: { "@type": "GeoCoordinates", latitude: 37.9887, longitude: -1.0742 },
+    geoRadius: "50000000",
+  },
+  sameAs: [
+    "https://www.linkedin.com/company/beinsen",
+    "https://www.instagram.com/beinsen",
+  ],
 };
 
 export default function RootLayout({
@@ -23,6 +107,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+      </head>
       <body className={`${inter.variable} min-h-screen flex flex-col pt-20 bg-background text-foreground`}>
         <ThemeProvider
           attribute="class"
@@ -30,15 +120,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LanguageProvider>
-            <MagneticCursor />
+          <ClientProviders>
             <Navbar />
             <main className="flex-1">
               {children}
             </main>
             <Footer />
-            <CookieConsent />
-          </LanguageProvider>
+          </ClientProviders>
         </ThemeProvider>
       </body>
     </html>

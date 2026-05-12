@@ -22,12 +22,23 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     return {
         title: `${article.title} | Beinsen`,
         description: article.excerpt,
+        alternates: {
+            canonical: `https://beinsen.com/aprende/${slug}`,
+        },
         openGraph: {
             title: article.title,
             description: article.excerpt,
-            images: article.heroImage ? [article.heroImage] : ["/brand/logo.png"],
+            url: `https://beinsen.com/aprende/${slug}`,
+            images: article.heroImage ? [{ url: article.heroImage, width: 1200, height: 630, alt: article.title }] : ["/brand/og-home.jpg"],
             type: "article",
             publishedTime: article.publishedAt,
+            authors: article.author ? [article.author] : undefined,
+        },
+        twitter: {
+            card: "summary_large_image",
+            title: article.title,
+            description: article.excerpt,
+            images: article.heroImage ? [article.heroImage] : ["/brand/og-home.jpg"],
         },
     };
 }
@@ -65,12 +76,38 @@ export default async function ArticleDetail({ params }: { params: Promise<{ slug
         return enriched.downloads || [];
     });
 
-    const otherArticles = getAllArticles()
-        .filter((a) => a.slug !== article.slug)
-        .slice(0, 3);
+    const allOthers = getAllArticles().filter((a) => a.slug !== article.slug);
+    const otherArticles = [
+        ...allOthers.filter((a) => a.category === article.category),
+        ...allOthers.filter((a) => a.category !== article.category),
+    ].slice(0, 3);
+
+    const blogPostingSchema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: article.title,
+        description: article.excerpt,
+        image: article.heroImage || "https://beinsen.com/brand/og-home.jpg",
+        datePublished: article.publishedAt,
+        dateModified: article.publishedAt,
+        author: article.author
+            ? { "@type": "Person", name: article.author, jobTitle: article.authorRole || "Ingeniero Beinsen" }
+            : { "@type": "Organization", name: "Beinsen", url: "https://beinsen.com" },
+        publisher: {
+            "@type": "Organization",
+            name: "Beinsen",
+            logo: { "@type": "ImageObject", url: "https://beinsen.com/brand/logo.png" },
+        },
+        url: `https://beinsen.com/aprende/${article.slug ?? ""}`,
+        mainEntityOfPage: { "@type": "WebPage", "@id": `https://beinsen.com/aprende/${article.slug ?? ""}` },
+    };
 
     return (
         <article className="min-h-screen bg-background pb-24 selection:bg-[#FF6600] selection:text-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+            />
             {/* Hero */}
             <header className="relative pt-32 pb-16 overflow-hidden border-b border-border/40">
                 {article.heroImage && (

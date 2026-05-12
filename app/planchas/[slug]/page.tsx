@@ -1,12 +1,13 @@
 import { planchasData, allPlanchasData, allAccessoriesData, allConsumablesData } from "@/data/products";
 import { notFound } from "next/navigation";
 import { ProductDetailView } from "@/components/ProductDetailView";
+import { CatalogProductCard } from "@/components/CatalogProductCard";
 import { getLocalized } from "@/lib/i18n";
 import { enrichWithLocalImages } from "@/lib/productImages";
 import { enrichWithLocalDownloads } from "@/lib/productDownloads";
 import { getArticlesByProduct } from "@/lib/articles";
 import Link from "next/link";
-import { BookOpen, ArrowRight } from "lucide-react";
+import { BookOpen, ArrowRight, Zap } from "lucide-react";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
@@ -23,31 +24,36 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const rawItem = [...allPlanchasData, ...allAccessoriesData, ...allConsumablesData].find((p) => p.slug === resolvedParams.slug);
 
     if (!rawItem) {
-        return {
-            title: "Producto no encontrado | Beinsen",
-        };
+        return { title: "Producto no encontrado | Beinsen" };
     }
 
     const item = enrichWithLocalImages(rawItem as any);
-
-    // Default to 'es' for metadata on server-side
     const name = getLocalized(item.name as any, 'es');
     const description = getLocalized(item.description as any, 'es') || "";
+    const rawDesc = description.length > 155 ? description.substring(0, 155) + "…" : description;
+    const category = getLocalized((rawItem as any).category as any, 'es') || "";
+    const titleSuffix = category ? ` — ${category} | Beinsen` : " | Beinsen";
+    const ogImage = item.image || "https://beinsen.com/brand/og-home.jpg";
 
     return {
-        title: `${name} | Beinsen`,
-        description: description.substring(0, 160) + "...",
+        title: `${name}${titleSuffix}`,
+        description: rawDesc,
+        alternates: {
+            canonical: `https://beinsen.com/planchas/${resolvedParams.slug}`,
+        },
         openGraph: {
-            title: name,
-            description: description.substring(0, 160) + "...",
-            images: [item.image || '/brand/logo.png'],
+            title: `${name} — ${category || "Beinsen"}`,
+            description: rawDesc,
+            url: `https://beinsen.com/planchas/${resolvedParams.slug}`,
+            images: [{ url: ogImage, width: 1200, height: 630, alt: name }],
             type: "website",
+            siteName: "Beinsen",
         },
         twitter: {
             card: "summary_large_image",
-            title: name,
-            description: description.substring(0, 160) + "...",
-            images: [item.image || '/brand/logo.png'],
+            title: `${name} — ${category || "Beinsen"}`,
+            description: rawDesc,
+            images: [ogImage],
         },
     };
 }
@@ -70,22 +76,39 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
     const name = getLocalized(item.name as any, 'es');
     const description = getLocalized(item.description as any, 'es') || "";
 
-    const jsonLd = {
+    const category = getLocalized((rawItem as any).category as any, 'es') || "";
+    const productUrl = `https://beinsen.com/planchas/${resolvedParams.slug}`;
+
+    const productSchema = {
         '@context': 'https://schema.org',
         '@type': 'Product',
-        name: name,
-        image: item.image,
-        description: description,
-        brand: {
-            '@type': 'Brand',
-            name: 'Beinsen'
-        },
+        name,
+        image: item.image ? [item.image] : [],
+        description,
+        sku: (rawItem as any).reference || resolvedParams.slug,
+        brand: { '@type': 'Brand', name: 'Beinsen' },
+        manufacturer: { '@type': 'Organization', name: 'Beinsen', url: 'https://beinsen.com' },
+        category,
+        url: productUrl,
         offers: {
-            '@type': 'AggregateOffer',
-            priceCurrency: 'EUR',
+            '@type': 'Offer',
+            url: productUrl,
             availability: 'https://schema.org/InStock',
-        }
+            seller: { '@type': 'Organization', name: 'Beinsen', url: 'https://beinsen.com' },
+        },
     };
+
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://beinsen.com' },
+            { '@type': 'ListItem', position: 2, name: 'Catálogo', item: 'https://beinsen.com/planchas' },
+            { '@type': 'ListItem', position: 3, name, item: productUrl },
+        ],
+    };
+
+    const jsonLd = [productSchema, breadcrumbSchema];
 
     const getFullItemData = (items: { id: string, price?: number | string }[], source: any[]) => {
         return items
@@ -105,6 +128,17 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
 
     const relatedArticles = getArticlesByProduct(resolvedParams.slug).slice(0, 3);
 
+    // Similar machines (same category, exclude current)
+    const similarMachines = kind === "planchas"
+        ? planchasData
+            .filter(p =>
+                p.slug !== resolvedParams.slug &&
+                getLocalized((p as any).category as any, 'es') === category
+            )
+            .slice(0, 4)
+            .map(p => enrichWithLocalImages(p as any))
+        : [];
+
     // Find compatible machines for accessories/consumables
     const compatiblePlanchas = kind !== "planchas" 
         ? allPlanchasData.filter(p => 
@@ -119,6 +153,7 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
+
             {/* @ts-ignore - Support both Plancha and CompatibleItem */}
             <ProductDetailView
                 plancha={item as any}
@@ -149,6 +184,21 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
                                     Leer <ArrowRight size={12} />
                                 </span>
                             </Link>
+                        ))}
+                    </div>
+                </section>
+            )}
+
+            {similarMachines.length > 0 && (
+                <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
+                    <div className="flex items-center gap-4 mb-10">
+                        <Zap size={20} className="text-[#FF6600]" />
+                        <h3 className="text-sm font-black uppercase tracking-[0.3em]">También te puede interesar</h3>
+                        <div className="h-px flex-1 bg-border/40" />
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {similarMachines.map((p: any, i: number) => (
+                            <CatalogProductCard key={p.id} item={p} locale="es" index={i} isFeatureCard={false} />
                         ))}
                     </div>
                 </section>

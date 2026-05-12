@@ -4,8 +4,25 @@ import { BookOpen, Clock, ArrowRight } from "lucide-react";
 import { getAllArticles, CATEGORY_LABELS, type ArticleCategory } from "@/lib/articles";
 
 export const metadata = {
-    title: "Aprende | Beinsen",
-    description: "Guías, técnica, mantenimiento y troubleshooting de planchas térmicas Beinsen por nuestro equipo de ingeniería.",
+    title: "Centro de Aprendizaje — Guías y Técnica de Planchas Transfer | Beinsen",
+    description: "Guías técnicas, mantenimiento y troubleshooting de planchas transfer y prensas térmicas Beinsen. Artículos escritos por nuestro equipo de ingeniería.",
+    alternates: {
+        canonical: "https://beinsen.com/aprende",
+    },
+    openGraph: {
+        title: "Aprende con Beinsen — Guías Técnicas de Planchas Transfer",
+        description: "Guías de mantenimiento, troubleshooting y técnica de planchas transfer escritas por ingenieros Beinsen.",
+        url: "https://beinsen.com/aprende",
+        siteName: "Beinsen",
+        type: "website",
+        images: [{ url: "https://beinsen.com/brand/og-home.jpg", width: 1200, height: 630, alt: "Centro de Aprendizaje Beinsen" }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Aprende con Beinsen — Guías Técnicas de Planchas Transfer",
+        description: "Guías, mantenimiento y troubleshooting de planchas transfer profesionales.",
+        images: ["https://beinsen.com/brand/og-home.jpg"],
+    },
 };
 
 export default function AprendeIndex() {
