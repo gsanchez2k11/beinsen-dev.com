@@ -62,7 +62,7 @@ export function MagneticCursor() {
                 }}
                 animate={{
                     scale: isPointer ? 1.5 : 1,
-                    backgroundColor: isPointer ? "rgba(255, 102, 0, 0.1)" : "transparent",
+                    backgroundColor: isPointer ? "rgba(255, 102, 0, 0.1)" : "rgba(0, 0, 0, 0)",
                 }}
                 transition={{ duration: 0.15, ease: "easeOut" }}
             />

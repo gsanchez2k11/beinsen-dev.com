@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const BRANDS = [
@@ -25,11 +24,10 @@ export function TrustedBrands() {
                 </p>
             </div>
 
-            <div className="flex w-[200%]">
-                <motion.div
-                    animate={{ x: ["0%", "-50%"] }}
-                    transition={{ ease: "linear", duration: 30, repeat: Infinity }}
+            <div className="flex w-[200%] overflow-hidden">
+                <div
                     className="flex flex-none w-full justify-around items-center"
+                    style={{ animation: "marquee 30s linear infinite" }}
                 >
                     {LOOP.map((brand, i) => (
                         <a
@@ -50,7 +48,7 @@ export function TrustedBrands() {
                             />
                         </a>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );
