@@ -71,10 +71,11 @@ export default function CasosExitoClient() {
                                         
                                         {/* Image Section */}
                                         <div className={`relative aspect-[4/5] md:aspect-video lg:aspect-[4/5] rounded-[3rem] overflow-hidden border border-white/5 shadow-2xl bg-muted/20 ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
-                                            <Image 
-                                                src={story.verticalImage || story.mainImage} 
-                                                alt={title || ""} 
-                                                fill 
+                                            <Image
+                                                src={story.verticalImage || story.mainImage}
+                                                alt={title || ""}
+                                                fill
+                                                sizes="(max-width: 1024px) 100vw, 50vw"
                                                 className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                             />
                                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />

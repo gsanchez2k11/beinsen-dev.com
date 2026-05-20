@@ -1,6 +1,10 @@
 import manifest from "@/data/product-downloads.json";
 
-type DownloadEntry = { label: Record<string, string> | string; url: string };
+type DownloadEntry = {
+  label: Record<string, string> | string;
+  url?: string;
+  languages?: Partial<Record<"es" | "en" | "pt" | "it", string>>;
+};
 type Manifest = Record<string, DownloadEntry[]>;
 const typedManifest = manifest as Manifest;
 

@@ -35,11 +35,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const titleSuffix = category ? ` — ${category} | Beinsen` : " | Beinsen";
     const ogImage = item.image || "https://beinsen.com/brand/og-home.jpg";
 
+    const url = `https://beinsen.com/planchas/${resolvedParams.slug}`;
     return {
         title: `${name}${titleSuffix}`,
         description: rawDesc,
         alternates: {
-            canonical: `https://beinsen.com/planchas/${resolvedParams.slug}`,
+            canonical: url,
+            languages: {
+                es: url,
+                en: url,
+                pt: url,
+                it: url,
+                "x-default": url,
+            },
         },
         openGraph: {
             title: `${name} — ${category || "Beinsen"}`,

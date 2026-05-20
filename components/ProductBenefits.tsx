@@ -82,7 +82,7 @@ export function ProductBenefits({ benefits, gallery }: ProductBenefitsProps) {
                             transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
                             className="w-full lg:w-1/2"
                         >
-                            <div className="relative aspect-[4/3] rounded-[2rem] overflow-hidden bg-card border border-border pb-10 shadow-2xl">
+                            <div className={`relative aspect-[4/3] rounded-[2rem] overflow-hidden ${benefit.bgClass || "bg-card"} border border-border pb-10 shadow-2xl`}>
                                 {blockImage ? (
                                     <Image
                                         src={blockImage}

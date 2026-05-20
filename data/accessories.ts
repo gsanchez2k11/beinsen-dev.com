@@ -1174,28 +1174,5 @@ export const rawAccessoriesData: Accessory[] = [
   { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cónica 12oz / Conical 12oz" },
   { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Sicilia, Maine" }
     ]
-  },
-  {
-    "reference": "REPBEIRES17C",
-    "id": "resistencia-conica-tazas-17oz",
-    "slug": "resistencia-para-tazas-conicas-17oz",
-    "name": {
-      "es": "Resistencia para tazas Cónicas de 17oz",
-      "en": "Heating element for 17oz Conical mugs",
-      "pt": "Resistência para canecas Cónicas 17oz",
-      "it": "Resistenza per tazze Coniche da 17oz"
-    },
-    "price": 52,
-    "image": "/products/accesorios/resistencia-tazas-conicas-17oz/01.png",
-    "description": {
-      "es": "Resistencia de alta calidad para tazas cónicas de 17 onzas. Permite una transferencia de calor uniforme. Fácil de montar y desmontar, asegurando una producción eficiente.",
-      "en": "High-quality heating element for 17oz conical mugs. Allows uniform heat transfer. Easy to assemble and disassemble, ensuring efficient production.",
-      "pt": "Resistência de alta qualidade para canecas cónicas de 17 onças. Permite uma transferência de calor uniforme. Fácil de montar e desmontar, garantindo uma produção eficiente.",
-      "it": "Resistenza di alta qualità per tazze coniche da 17 once. Consente un trasferimento di calore uniforme. Facile da montare e smontare, garantendo una produzione efficiente."
-    },
-    "technicalSpecs": [
-  { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cónica 17oz / Conical 17oz" },
-  { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" }
-    ]
   }
 ];
