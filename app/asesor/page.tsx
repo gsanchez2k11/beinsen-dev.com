@@ -3,13 +3,13 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Shirt, Coffee, HardHat, Layers, Sparkles, Gauge, ArrowRight, ArrowLeft, RotateCcw, CheckCircle2, Calendar as CalendarIcon } from "lucide-react";
+import { Shirt, Coffee, HardHat, Layers, Sparkles, Boxes, Gauge, ArrowRight, ArrowLeft, RotateCcw, CheckCircle2, Calendar as CalendarIcon } from "lucide-react";
 import { planchasData } from "@/data/products";
 import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
 import { useLanguage } from "@/context/LanguageContext";
 
-type CategoryKey = "textil" | "tazas" | "gorras" | "especializadas" | "cualquiera";
+type CategoryKey = "textil" | "tazas" | "gorras" | "especializadas" | "multifuncion" | "cualquiera";
 type VolumeKey = "bajo" | "medio" | "alto";
 type FormatKey = "compacta" | "estandar" | "industrial";
 
@@ -18,14 +18,15 @@ const CATEGORY_MAP: Record<CategoryKey, string | null> = {
     tazas: "Tazas y Botellas",
     gorras: "Gorras",
     especializadas: "Especializadas",
+    multifuncion: "Multifunción",
     cualquiera: null,
 };
 
 // Volume → preferred opening systems (in order of preference)
 const VOLUME_PREFS: Record<VolumeKey, string[]> = {
     bajo: ["Manual", "Electromagnética"],
-    medio: ["Electromagnética", "Eléctrica"],
-    alto: ["Neumática", "Eléctrica"],
+    medio: ["Electromagnética", "Eléctrica", "Swing-Away Eléctrica"],
+    alto: ["Neumática", "Automática", "Eléctrica"],
 };
 
 const FORMAT_MAP: Record<FormatKey, string[]> = {
@@ -33,6 +34,14 @@ const FORMAT_MAP: Record<FormatKey, string[]> = {
     estandar: ["Estándar"],
     industrial: ["Industrial", "Estación de trabajo"],
 };
+
+// Tamaños compuestos ("38x38 / 40x50 cm", "100 x 25 cm"...) los clasificamos como Estándar.
+function normalizeSize(size: string | undefined): string {
+    if (!size) return "";
+    if (["Compacta", "Estándar", "Industrial", "Estación de trabajo"].includes(size)) return size;
+    if (/\d+\s*x\s*\d+/i.test(size)) return "Estándar";
+    return size;
+}
 
 export default function AsesorPage() {
     const { locale } = useLanguage();
@@ -63,6 +72,7 @@ export default function AsesorPage() {
                 tazas: "Tazas y botellas",
                 gorras: "Gorras",
                 especializadas: "Zapatos, balones, espinilleras…",
+                multifuncion: "Multifunción (varios formatos)",
                 cualquiera: "Varias cosas / no lo tengo claro",
             },
             vol: {
@@ -107,6 +117,7 @@ export default function AsesorPage() {
                 tazas: "Mugs & bottles",
                 gorras: "Caps",
                 especializadas: "Shoes, balls, shin guards…",
+                multifuncion: "Multifunction (various formats)",
                 cualquiera: "Various / not sure",
             },
             vol: {
@@ -142,7 +153,8 @@ export default function AsesorPage() {
         const scored = planchasData.map((p: any) => {
             const pCat = typeof p.category === "object" ? p.category.es : p.category;
             const pOpen = typeof p.openingType === "object" ? p.openingType.es : p.openingType;
-            const pSize = typeof p.size === "object" ? p.size.es : p.size;
+            const pSizeRaw = typeof p.size === "object" ? p.size.es : p.size;
+            const pSize = normalizeSize(pSizeRaw);
 
             let score = 0;
             const reasons: string[] = [];
@@ -157,10 +169,11 @@ export default function AsesorPage() {
             const sysIdx = prefSystems.indexOf(pOpen);
             if (sysIdx === 0) { score += 3; reasons.push(`Sistema ideal: ${pOpen}`); }
             else if (sysIdx === 1) { score += 2; reasons.push(`Sistema compatible: ${pOpen}`); }
+            else if (sysIdx >= 2) { score += 1; reasons.push(`Sistema: ${pOpen}`); }
 
             if (prefFormats.includes(pSize)) {
                 score += 2;
-                reasons.push(`Formato: ${pSize}`);
+                reasons.push(`Formato: ${pSizeRaw}`);
             }
 
             return { product: p, score, reasons };
@@ -184,6 +197,7 @@ export default function AsesorPage() {
         { key: "tazas", icon: Coffee },
         { key: "gorras", icon: HardHat },
         { key: "especializadas", icon: Layers },
+        { key: "multifuncion", icon: Boxes },
         { key: "cualquiera", icon: Sparkles },
     ];
     const VOLUME_OPTIONS: VolumeKey[] = ["bajo", "medio", "alto"];
