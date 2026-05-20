@@ -10266,6 +10266,12 @@ const rawPlanchasData: Plancha[] = [
       "pt": "Especializadas",
       "it": "Specializzate"
     },
+    "openingType": {
+      "es": "Automática",
+      "en": "Automatic",
+      "pt": "Automática",
+      "it": "Automatica"
+    },
     "technicalSpecs": [
       {
         "label": {
