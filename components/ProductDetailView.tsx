@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Euro, Maximize, FileText, Download, PlayCircle, Wrench, Store, ExternalLink, Globe, Package, Zap, ShoppingCart } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Euro, Maximize, FileText, Download, PlayCircle, Wrench, Store, ExternalLink, Globe, Package, Zap } from "lucide-react";
 import { ContactSpecialistButton } from "@/components/ContactSpecialistButton";
 import { TiltImage } from "@/components/TiltImage";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -27,6 +27,13 @@ interface ProductDetailViewProps {
     compatiblePlanchas?: Plancha[];
     kind?: "planchas" | "accessories" | "consumables";
 }
+
+const MANUAL_LANGUAGES: { code: "es" | "en" | "pt" | "it"; label: string; flag: string }[] = [
+    { code: "es", label: "Español", flag: "🇪🇸" },
+    { code: "en", label: "English", flag: "🇬🇧" },
+    { code: "pt", label: "Português", flag: "🇵🇹" },
+    { code: "it", label: "Italiano", flag: "🇮🇹" },
+];
 
 export function ProductDetailView({ 
     plancha, 
@@ -220,7 +227,7 @@ export function ProductDetailView({
                     <div className="absolute top-1/2 left-1/2 w-[80vw] h-[80vw] rounded-full bg-[#FF6600]/5 blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
                     <div className="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
 
-                    <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center">
+                    <div className="relative z-20 container mx-auto px-4 w-full">
                         <ScrollReveal delay={0}>
                             <Link
                                 href="/planchas"
@@ -229,8 +236,27 @@ export function ProductDetailView({
                                 <ArrowLeft size={16} /> {d.back}
                             </Link>
                         </ScrollReveal>
+                    </div>
 
-                        <ScrollReveal delay={0.1}>
+                    <div className="relative z-10 w-full max-w-[85rem] mx-auto h-[60vh] lg:h-[80vh] perspective-[2500px]">
+                        {plancha.heroVideo ? (
+                            <video
+                                src={plancha.heroVideo}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                                className="pointer-events-none h-full w-full rounded-3xl border border-border/50 bg-card object-contain shadow-2xl"
+                            />
+                        ) : plancha.gallery && plancha.gallery.length > 1 ? (
+                            <ProductHeroGallery images={plancha.gallery} productName={name || ""} />
+                        ) : (
+                            <TiltImage src={plancha.image} alt={name || ""} />
+                        )}
+                    </div>
+
+                    <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center mt-20">
+                        <ScrollReveal delay={0.2}>
                             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground tracking-tighter leading-[0.9] mb-8 max-w-6xl mx-auto drop-shadow-sm">
                                 {name}
                             </h1>
@@ -243,18 +269,18 @@ export function ProductDetailView({
                             )}
                         </ScrollReveal>
 
-                        <ScrollReveal delay={0.2} className="mb-14">
+                        <ScrollReveal delay={0.3} className="mb-14">
                             <p className="text-xl md:text-3xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
                                 {description}
                             </p>
                         </ScrollReveal>
 
-                        <ScrollReveal delay={0.3}>
+                        <ScrollReveal delay={0.4}>
                             <div className="flex flex-col sm:flex-row items-center gap-10 mt-4 justify-center">
                                 <div className="p-[2.5px] rounded-2xl bg-gradient-to-r from-[#FF6600] to-[#FF9900] shadow-2xl shadow-[#FF6600]/30 transform hover:scale-105 transition-transform duration-300">
                                     <ContactSpecialistButton productName={name || ""} size="lg" className="w-full sm:w-auto text-xl h-16 px-12 rounded-2xl bg-background text-foreground hover:bg-transparent hover:text-white transition-all border-none" />
                                 </div>
-                                
+
                                 <div className="flex flex-col items-center sm:items-start text-foreground">
                                     <span className="text-xs text-muted-foreground uppercase tracking-[0.3em] font-black mb-1 opacity-50">{d.investment}</span>
                                     {(() => {
@@ -273,23 +299,6 @@ export function ProductDetailView({
                             </div>
                         </ScrollReveal>
                     </div>
-
-                    <ScrollReveal delay={0.4} className="relative z-10 w-full max-w-[85rem] mx-auto mt-20 h-[60vh] lg:h-[85vh] perspective-[2500px]">
-                        {plancha.heroVideo ? (
-                            <video
-                                src={plancha.heroVideo}
-                                autoPlay
-                                muted
-                                loop
-                                playsInline
-                                className="pointer-events-none h-full w-full rounded-3xl border border-border/50 bg-card object-contain shadow-2xl"
-                            />
-                        ) : plancha.gallery && plancha.gallery.length > 1 ? (
-                            <ProductHeroGallery images={plancha.gallery} productName={name || ""} />
-                        ) : (
-                            <TiltImage src={plancha.image} alt={name || ""} />
-                        )}
-                    </ScrollReveal>
                 </div>
 
                 {/* Image Gallery (for accessories/consumables without benefits section) */}
@@ -435,23 +444,60 @@ export function ProductDetailView({
                             </h3>
                             <p className="text-xl text-muted-foreground mb-10 font-light italic leading-relaxed">{d.downloadsDesc}</p>
                             <div className="space-y-6">
-                                {plancha.downloads?.map((download, i) => (
-                                    <a 
-                                        key={i} 
-                                        href={download.url} 
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center justify-between p-8 bg-card border border-border/50 rounded-3xl hover:border-[#FF6600] hover:bg-[#FF6600]/5 transition-all group shadow-sm hover:shadow-xl hover:shadow-[#FF6600]/5"
-                                    >
-                                        <div className="flex items-center gap-6">
-                                            <div className="w-14 h-14 rounded-2xl bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
-                                                <FileText size={28} />
+                                {plancha.downloads?.map((download, i) => {
+                                    const label = getLocalized(download.label, locale);
+                                    if (download.languages) {
+                                        return (
+                                            <div key={i} className="p-8 bg-card border border-border/50 rounded-3xl shadow-sm">
+                                                <div className="flex items-center gap-6 mb-6">
+                                                    <div className="w-14 h-14 rounded-2xl bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
+                                                        <FileText size={28} />
+                                                    </div>
+                                                    <span className="font-bold text-xl">{label}</span>
+                                                </div>
+                                                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                                    {MANUAL_LANGUAGES.map((l) => {
+                                                        const url = download.languages?.[l.code];
+                                                        if (!url) return null;
+                                                        return (
+                                                            <a
+                                                                key={l.code}
+                                                                href={url}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                aria-label={`${label} — ${l.label}`}
+                                                                className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl border border-border/50 bg-background/50 hover:border-[#FF6600] hover:bg-[#FF6600]/5 transition-all group"
+                                                            >
+                                                                <span className="text-3xl leading-none" aria-hidden>{l.flag}</span>
+                                                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground group-hover:text-[#FF6600] transition-colors">
+                                                                    {l.code}
+                                                                </span>
+                                                            </a>
+                                                        );
+                                                    })}
+                                                </div>
                                             </div>
-                                            <span className="font-bold text-xl group-hover:text-foreground">{getLocalized(download.label, locale)}</span>
-                                        </div>
-                                        <Download size={24} className="text-muted-foreground group-hover:text-[#FF6600] transition-colors" />
-                                    </a>
-                                ))}
+                                        );
+                                    }
+                                    if (!download.url) return null;
+                                    return (
+                                        <a
+                                            key={i}
+                                            href={download.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-between p-8 bg-card border border-border/50 rounded-3xl hover:border-[#FF6600] hover:bg-[#FF6600]/5 transition-all group shadow-sm hover:shadow-xl hover:shadow-[#FF6600]/5"
+                                        >
+                                            <div className="flex items-center gap-6">
+                                                <div className="w-14 h-14 rounded-2xl bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600]">
+                                                    <FileText size={28} />
+                                                </div>
+                                                <span className="font-bold text-xl group-hover:text-foreground">{label}</span>
+                                            </div>
+                                            <Download size={24} className="text-muted-foreground group-hover:text-[#FF6600] transition-colors" />
+                                        </a>
+                                    );
+                                })}
                             </div>
                         </ScrollReveal>
                     </div>
@@ -588,9 +634,9 @@ export function ProductDetailView({
                                                 <span className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-black opacity-60">
                                                     {activeTab === "accessories" ? d.certified : d.essential}
                                                 </span>
-                                                <button className="w-10 h-10 rounded-full bg-muted group-hover:bg-[#FF6600] group-hover:text-white flex items-center justify-center transition-colors relative z-20">
-                                                    <ShoppingCart size={18} />
-                                                </button>
+                                                <span className="w-10 h-10 rounded-full bg-muted group-hover:bg-[#FF6600] group-hover:text-white flex items-center justify-center transition-colors">
+                                                    <ArrowRight size={18} />
+                                                </span>
                                             </div>
                                         </div>
                                     </div>

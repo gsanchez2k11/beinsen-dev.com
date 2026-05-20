@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -14,6 +14,11 @@ interface ProductHeroGalleryProps {
 export function ProductHeroGallery({ images, productName }: ProductHeroGalleryProps) {
     const { locale } = useLanguage();
     const [activeIndex, setActiveIndex] = useState(0);
+    const isFirstRender = useRef(true);
+
+    useEffect(() => {
+        isFirstRender.current = false;
+    }, []);
 
     if (!images || images.length === 0) return null;
 
@@ -31,10 +36,10 @@ export function ProductHeroGallery({ images, productName }: ProductHeroGalleryPr
         <div className="w-full flex flex-col gap-8 h-full">
             {/* Main Stage */}
             <div className="relative flex-1 group rounded-[2.5rem] overflow-hidden bg-card/50 backdrop-blur-sm border border-border/50 shadow-2xl">
-                <AnimatePresence mode="wait">
+                <AnimatePresence mode="wait" initial={false}>
                     <motion.div
                         key={activeIndex}
-                        initial={{ opacity: 0, scale: 0.95, x: 20 }}
+                        initial={isFirstRender.current ? false : { opacity: 0, scale: 0.95, x: 20 }}
                         animate={{ opacity: 1, scale: 1, x: 0 }}
                         exit={{ opacity: 0, scale: 1.05, x: -20 }}
                         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -47,6 +52,7 @@ export function ProductHeroGallery({ images, productName }: ProductHeroGalleryPr
                             className="object-contain p-8 md:p-12"
                             priority
                             sizes="(max-width: 1280px) 100vw, 85rem"
+                            fetchPriority="high"
                         />
                     </motion.div>
                 </AnimatePresence>

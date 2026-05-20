@@ -1,35 +1,33 @@
 {
-  "barahona-plancha-para-tazas-6-en-1": [
-    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/01.png",
-    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/02.png",
-    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/03.png",
-    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/04.png"
-  ],
   "alaska-plancha-termica-textil": [
-    "/products/maquinas/alaska-plancha-termica-textil/01.png",
-    "/products/maquinas/alaska-plancha-termica-textil/02.png",
-    "/products/maquinas/alaska-plancha-termica-textil/03.png",
-    "/products/maquinas/alaska-plancha-termica-textil/04.png",
-    "/products/maquinas/alaska-plancha-termica-textil/05.png",
-    "/products/maquinas/alaska-plancha-termica-textil/06.png",
-    "/products/maquinas/alaska-plancha-termica-textil/07.png"
+    "/products/maquinas/alaska-plancha-termica-textil/fotoPrincipal.png",
+    "/products/maquinas/alaska-plancha-termica-textil/fotoExp.png",
+    "/products/maquinas/alaska-plancha-termica-textil/fotoB1.png",
+    "/products/maquinas/alaska-plancha-termica-textil/fotoB2.png",
+    "/products/maquinas/alaska-plancha-termica-textil/fotoB3.png",
+    "/products/maquinas/alaska-plancha-termica-textil/fotoB4.png",
+    "/products/maquinas/alaska-plancha-termica-textil/fotoExtra1.png",
+    "/products/maquinas/alaska-plancha-termica-textil/fotoExtra2.png",
+    "/products/maquinas/alaska-plancha-termica-textil/fotoExtra3.png"
   ],
   "alina-plancha-para-tazas": [
-    "/products/maquinas/alina-plancha-para-tazas/01.png",
-    "/products/maquinas/alina-plancha-para-tazas/02.png",
-    "/products/maquinas/alina-plancha-para-tazas/03.png",
-    "/products/maquinas/alina-plancha-para-tazas/04.png",
-    "/products/maquinas/alina-plancha-para-tazas/05.png"
+    "/products/maquinas/alina-plancha-para-tazas/fotoPrincipal.png",
+    "/products/maquinas/alina-plancha-para-tazas/fotoB1.png",
+    "/products/maquinas/alina-plancha-para-tazas/fotoB2.png",
+    "/products/maquinas/alina-plancha-para-tazas/fotoB3.png",
+    "/products/maquinas/alina-plancha-para-tazas/fotoB4.png"
   ],
   "almohadilla-algodon-80x110": [
     "/products/consumibles/almohadilla-algodon-80x110/01.png",
     "/products/consumibles/almohadilla-algodon-80x110/02.png",
-    "/products/consumibles/almohadilla-algodon-80x110/03.png"
+    "/products/consumibles/almohadilla-algodon-80x110/03.png",
+    "/products/consumibles/almohadilla-algodon-80x110/04.png"
   ],
   "almohadilla-silicona-38x38": [
-    "/products/accesorios/almohadilla-silicona-38x38/01.png",
-    "/products/accesorios/almohadilla-silicona-38x38/02.png",
-    "/products/accesorios/almohadilla-silicona-38x38/03.png"
+    "/products/consumibles/almohadilla-silicona-38x38/01.png",
+    "/products/consumibles/almohadilla-silicona-38x38/02.png",
+    "/products/consumibles/almohadilla-silicona-38x38/03.png",
+    "/products/consumibles/almohadilla-silicona-38x38/04.png"
   ],
   "almohadilla-silicona-40x50": [
     "/products/consumibles/almohadilla-silicona-40x50/01.png",
@@ -38,13 +36,15 @@
   "almohadilla-silicona-80x100": [
     "/products/consumibles/almohadilla-silicona-80x100/01.png",
     "/products/consumibles/almohadilla-silicona-80x100/02.png",
-    "/products/consumibles/almohadilla-silicona-80x100/03.png"
+    "/products/consumibles/almohadilla-silicona-80x100/03.png",
+    "/products/consumibles/almohadilla-silicona-80x100/04.png"
   ],
   "almohadilla-teflon-termorresistente-15x15": [
     "/products/consumibles/almohadilla-teflon-termorresistente-15x15/01.png",
     "/products/consumibles/almohadilla-teflon-termorresistente-15x15/02.png",
     "/products/consumibles/almohadilla-teflon-termorresistente-15x15/03.png",
-    "/products/consumibles/almohadilla-teflon-termorresistente-15x15/04.png"
+    "/products/consumibles/almohadilla-teflon-termorresistente-15x15/04.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-15x15/05.png"
   ],
   "almohadilla-teflon-termorresistente-25x25": [
     "/products/consumibles/almohadilla-teflon-termorresistente-25x25/01.png",
@@ -56,7 +56,8 @@
     "/products/consumibles/almohadilla-teflon-termorresistente-38x38/01.png",
     "/products/consumibles/almohadilla-teflon-termorresistente-38x38/02.png",
     "/products/consumibles/almohadilla-teflon-termorresistente-38x38/03.png",
-    "/products/consumibles/almohadilla-teflon-termorresistente-38x38/04.png"
+    "/products/consumibles/almohadilla-teflon-termorresistente-38x38/04.png",
+    "/products/consumibles/almohadilla-teflon-termorresistente-38x38/05.png"
   ],
   "almohadilla-teflon-termorresistente-40x50": [
     "/products/consumibles/almohadilla-teflon-termorresistente-40x50/01.png",
@@ -64,59 +65,89 @@
     "/products/consumibles/almohadilla-teflon-termorresistente-40x50/03.png"
   ],
   "andra-prensa-automatica-tazas": [
-    "/products/maquinas/andra-prensa-automatica-tazas/013.png",
-    "/products/maquinas/andra-prensa-automatica-tazas/02.png",
-    "/products/maquinas/andra-prensa-automatica-tazas/03.png",
-    "/products/maquinas/andra-prensa-automatica-tazas/04.png",
-    "/products/maquinas/andra-prensa-automatica-tazas/05.png",
-    "/products/maquinas/andra-prensa-automatica-tazas/06.JPG",
-    "/products/maquinas/andra-prensa-automatica-tazas/07.JPG",
-    "/products/maquinas/andra-prensa-automatica-tazas/08.JPG",
-    "/products/maquinas/andra-prensa-automatica-tazas/09.JPG",
-    "/products/maquinas/andra-prensa-automatica-tazas/010.JPG",
-    "/products/maquinas/andra-prensa-automatica-tazas/011.JPG",
-    "/products/maquinas/andra-prensa-automatica-tazas/012.JPG"
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoPrincipal.png",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoB1.png",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoB2.png",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoB3.jpg",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoB4.jpg",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoExtra1.jpg",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoExtra2.png",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoExtra3.png",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoExtra4.jpg",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoExtra5.jpg",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoExtra6.jpg",
+    "/products/maquinas/andra-prensa-automatica-tazas/fotoExtra7.jpg"
   ],
   "aruba-plancha-para-tazas": [
-    "/products/maquinas/aruba-plancha-para-tazas/01.png",
-    "/products/maquinas/aruba-plancha-para-tazas/02.png",
-    "/products/maquinas/aruba-plancha-para-tazas/03.png",
-    "/products/maquinas/aruba-plancha-para-tazas/04.png",
-    "/products/maquinas/aruba-plancha-para-tazas/05.png",
-    "/products/maquinas/aruba-plancha-para-tazas/06.png"
+    "/products/maquinas/aruba-plancha-para-tazas/fotoPrincipal.png",
+    "/products/maquinas/aruba-plancha-para-tazas/fotoExp.png",
+    "/products/maquinas/aruba-plancha-para-tazas/fotoB1.png",
+    "/products/maquinas/aruba-plancha-para-tazas/fotoB2.png",
+    "/products/maquinas/aruba-plancha-para-tazas/fotoB3.png",
+    "/products/maquinas/aruba-plancha-para-tazas/fotoB4.png",
+    "/products/maquinas/aruba-plancha-para-tazas/fotoExtra1.png"
+  ],
+  "barahona-plancha-para-tazas-6-en-1": [
+    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoPrincipal.png",
+    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB1.png",
+    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB2.png",
+    "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB3.png"
   ],
   "barbados-plancha-termica-textil": [
-    "/products/maquinas/barbados-plancha-termica-textil/03.png",
-    "/products/maquinas/barbados-plancha-termica-textil/01.jpg",
-    "/products/maquinas/barbados-plancha-termica-textil/02.jpg",
-    "/products/maquinas/barbados-plancha-termica-textil/04.png",
-    "/products/maquinas/barbados-plancha-termica-textil/05.png",
-    "/products/maquinas/barbados-plancha-termica-textil/06.png",
-    "/products/maquinas/barbados-plancha-termica-textil/07.png",
-    "/products/maquinas/barbados-plancha-termica-textil/08.jpg",
-    "/products/maquinas/barbados-plancha-termica-textil/09.png",
-    "/products/maquinas/barbados-plancha-termica-textil/010.png"
+    "/products/maquinas/barbados-plancha-termica-textil/fotoPrincipal.png",
+    "/products/maquinas/barbados-plancha-termica-textil/fotoExp.png",
+    "/products/maquinas/barbados-plancha-termica-textil/fotoB1.png",
+    "/products/maquinas/barbados-plancha-termica-textil/fotoB2.png",
+    "/products/maquinas/barbados-plancha-termica-textil/fotoB3.png",
+    "/products/maquinas/barbados-plancha-termica-textil/fotoB4.png",
+    "/products/maquinas/barbados-plancha-termica-textil/fotoExtra1.png",
+    "/products/maquinas/barbados-plancha-termica-textil/fotoExtra2.png"
+  ],
+  "barein-plancha-termica": [
+    "/products/maquinas/barein-plancha-termica/fotoPrincipal.png",
+    "/products/maquinas/barein-plancha-termica/fotoB1.png",
+    "/products/maquinas/barein-plancha-termica/fotoB2.png",
+    "/products/maquinas/barein-plancha-termica/fotoB3.png",
+    "/products/maquinas/barein-plancha-termica/fotoB4.png",
+    "/products/maquinas/barein-plancha-termica/fotoExtra1.png",
+    "/products/maquinas/barein-plancha-termica/fotoExtra2.png",
+    "/products/maquinas/barein-plancha-termica/fotoExtra3.png"
   ],
   "belice-plancha-termica-textil": [
-    "/products/maquinas/belice-plancha-termica-textil/04.png",
-    "/products/maquinas/belice-plancha-termica-textil/01.png",
-    "/products/maquinas/belice-plancha-termica-textil/02.jpg",
-    "/products/maquinas/belice-plancha-termica-textil/03.png",
-    "/products/maquinas/belice-plancha-termica-textil/05.png",
-    "/products/maquinas/belice-plancha-termica-textil/06.png",
-    "/products/maquinas/belice-plancha-termica-textil/07.png",
-    "/products/maquinas/belice-plancha-termica-textil/08.png"
+    "/products/maquinas/belice-plancha-termica-textil/fotoPrincipal.png",
+    "/products/maquinas/belice-plancha-termica-textil/fotoB1.png",
+    "/products/maquinas/belice-plancha-termica-textil/fotoB2.png",
+    "/products/maquinas/belice-plancha-termica-textil/fotoB3.jpg",
+    "/products/maquinas/belice-plancha-termica-textil/fotoB4.png",
+    "/products/maquinas/belice-plancha-termica-textil/fotoExtra1.png",
+    "/products/maquinas/belice-plancha-termica-textil/fotoExtra2.png",
+    "/products/maquinas/belice-plancha-termica-textil/fotoExtra3.png"
+  ],
+  "caen-plancha-neumatica-doble-estacion": [
+    "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoPrincipal.png",
+    "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB1.png",
+    "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB2.png",
+    "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB3.png",
+    "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB4.png",
+    "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoExtra1.png",
+    "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoExtra2.png",
+    "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoExtra3.png"
   ],
   "chicago-plancha-termica-automatica": [
-    "/products/maquinas/chicago-plancha-termica-automatica/04.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/01.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/02.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/03.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/05.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/06.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/07.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/08.png",
-    "/products/maquinas/chicago-plancha-termica-automatica/09.png"
+    "/products/maquinas/chicago-plancha-termica-automatica/fotoPrincipal.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/fotoB1.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/fotoB2.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/fotoB3.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/fotoB4.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/fotoExtra1.png",
+    "/products/maquinas/chicago-plancha-termica-automatica/fotoExtra2.png"
+  ],
+  "chinela-plancha-transfer-zapatillas": [
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoPrincipal.png",
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB1.png",
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB2.png",
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB3.png",
+    "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB4.png"
   ],
   "cinta-termica-sublimacion-10mm": [
     "/products/consumibles/cinta-termica-sublimacion-10mm/01.png"
@@ -136,66 +167,70 @@
   "contactor-ca-220v-sx8-sz1": [
     "/products/accesorios/contactor-ca-220v-sx8-sz1/01.png"
   ],
-  "dorian-plancha-termica-platos": [
-    "/products/maquinas/dorian-plancha-termica-platos/01.png",
-    "/products/maquinas/dorian-plancha-termica-platos/02.png",
-    "/products/maquinas/dorian-plancha-termica-platos/03.png",
-    "/products/maquinas/dorian-plancha-termica-platos/04.png"
-  ],
   "doha-plancha-transfer-gran-formato": [
-    "/products/maquinas/doha-plancha-transfer-gran-formato/07.png",
-    "/products/maquinas/doha-plancha-transfer-gran-formato/01.jpg",
-    "/products/maquinas/doha-plancha-transfer-gran-formato/02.jpg",
-    "/products/maquinas/doha-plancha-transfer-gran-formato/03.jpg",
-    "/products/maquinas/doha-plancha-transfer-gran-formato/04.jpg",
-    "/products/maquinas/doha-plancha-transfer-gran-formato/05.jpg",
-    "/products/maquinas/doha-plancha-transfer-gran-formato/06.png",
-    "/products/maquinas/doha-plancha-transfer-gran-formato/08.png",
-    "/products/maquinas/doha-plancha-transfer-gran-formato/09.png",
-    "/products/maquinas/doha-plancha-transfer-gran-formato/10.jpg"
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoPrincipal.png",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB1.jpg",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB2.jpg",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB3.jpg",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB4.png",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra1.jpg",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra2.jpg",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra3.png",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra4.png",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra5.jpg",
+    "/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra6.png"
+  ],
+  "dorian-plancha-termica-platos": [
+    "/products/maquinas/dorian-plancha-termica-platos/fotoPrincipal.png",
+    "/products/maquinas/dorian-plancha-termica-platos/fotoB1.png",
+    "/products/maquinas/dorian-plancha-termica-platos/fotoB2.png",
+    "/products/maquinas/dorian-plancha-termica-platos/fotoB4.png"
   ],
   "esparta-prensa-termica-neumatica": [
-    "/products/maquinas/esparta-prensa-termica-neumatica/08.png",
-    "/products/maquinas/esparta-prensa-termica-neumatica/01.jpg",
-    "/products/maquinas/esparta-prensa-termica-neumatica/02.jpg",
-    "/products/maquinas/esparta-prensa-termica-neumatica/03.jpg",
-    "/products/maquinas/esparta-prensa-termica-neumatica/04.png",
-    "/products/maquinas/esparta-prensa-termica-neumatica/05.jpg",
-    "/products/maquinas/esparta-prensa-termica-neumatica/06.jpg",
-    "/products/maquinas/esparta-prensa-termica-neumatica/07.png"
+    "/products/maquinas/esparta-prensa-termica-neumatica/fotoPrincipal.png",
+    "/products/maquinas/esparta-prensa-termica-neumatica/fotoB1.jpg",
+    "/products/maquinas/esparta-prensa-termica-neumatica/fotoB2.jpg",
+    "/products/maquinas/esparta-prensa-termica-neumatica/fotoB3.png",
+    "/products/maquinas/esparta-prensa-termica-neumatica/fotoB4.png",
+    "/products/maquinas/esparta-prensa-termica-neumatica/fotoExtra1.jpg",
+    "/products/maquinas/esparta-prensa-termica-neumatica/fotoExtra2.jpg",
+    "/products/maquinas/esparta-prensa-termica-neumatica/fotoExtra3.jpg"
   ],
   "estambul-prensa-termica-para-espinilleras": [
-    "/products/maquinas/estambul-prensa-termica-para-espinilleras/05.png",
-    "/products/maquinas/estambul-prensa-termica-para-espinilleras/01.png",
-    "/products/maquinas/estambul-prensa-termica-para-espinilleras/02.png",
-    "/products/maquinas/estambul-prensa-termica-para-espinilleras/03.png",
-    "/products/maquinas/estambul-prensa-termica-para-espinilleras/04.png",
-    "/products/maquinas/estambul-prensa-termica-para-espinilleras/06.png"
+    "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoPrincipal.png",
+    "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoB1.png",
+    "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoB2.png",
+    "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoB3.png",
+    "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoB4.png",
+    "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoExtra1.png"
   ],
   "felina-prensa-swing-away-electrica": [
-    "/products/maquinas/felina-prensa-swing-away-electrica/01.png",
-    "/products/maquinas/felina-prensa-swing-away-electrica/02.png",
-    "/products/maquinas/felina-prensa-swing-away-electrica/03.png",
-    "/products/maquinas/felina-prensa-swing-away-electrica/04.png",
-    "/products/maquinas/felina-prensa-swing-away-electrica/05.png"
+    "/products/maquinas/felina-prensa-swing-away-electrica/fotoPrincipal.png",
+    "/products/maquinas/felina-prensa-swing-away-electrica/fotoB1.png",
+    "/products/maquinas/felina-prensa-swing-away-electrica/fotoB2.png",
+    "/products/maquinas/felina-prensa-swing-away-electrica/fotoB3.png",
+    "/products/maquinas/felina-prensa-swing-away-electrica/fotoB4.png"
   ],
   "filtro-carbon-sx8-sz1": [
     "/products/accesorios/filtro-carbon-sx8-sz1/01.png",
     "/products/accesorios/filtro-carbon-sx8-sz1/02.png",
     "/products/accesorios/filtro-carbon-sx8-sz1/03.png",
-    "/products/accesorios/filtro-carbon-sx8-sz1/04.png"
+    "/products/accesorios/filtro-carbon-sx8-sz1/04.png",
+    "/products/accesorios/filtro-carbon-sx8-sz1/05.png"
   ],
   "filtro-hepa-sx8-sz1-ta": [
     "/products/accesorios/filtro-hepa-sx8-sz1-ta/01.png",
     "/products/accesorios/filtro-hepa-sx8-sz1-ta/02.png",
     "/products/accesorios/filtro-hepa-sx8-sz1-ta/03.png",
-    "/products/accesorios/filtro-hepa-sx8-sz1-ta/04.png"
+    "/products/accesorios/filtro-hepa-sx8-sz1-ta/04.png",
+    "/products/accesorios/filtro-hepa-sx8-sz1-ta/05.png"
   ],
   "filtro-hepa-sx8-sz1-tb": [
     "/products/accesorios/filtro-hepa-sx8-sz1-tb/01.png",
     "/products/accesorios/filtro-hepa-sx8-sz1-tb/02.png",
     "/products/accesorios/filtro-hepa-sx8-sz1-tb/03.png",
-    "/products/accesorios/filtro-hepa-sx8-sz1-tb/04.png"
+    "/products/accesorios/filtro-hepa-sx8-sz1-tb/04.png",
+    "/products/accesorios/filtro-hepa-sx8-sz1-tb/05.png"
   ],
   "fuente-alimentacion-24v-sx8-sz1": [
     "/products/accesorios/fuente-alimentacion-24v-sx8-sz1/01.png",
@@ -213,30 +248,38 @@
     "/products/accesorios/fusible-termico-3d-16/01.png"
   ],
   "gante-plancha-manual-gorras": [
-    "/products/maquinas/gante-plancha-manual-gorras/05.png",
-    "/products/maquinas/gante-plancha-manual-gorras/01.png",
-    "/products/maquinas/gante-plancha-manual-gorras/02.png",
-    "/products/maquinas/gante-plancha-manual-gorras/03.png",
-    "/products/maquinas/gante-plancha-manual-gorras/04.png",
-    "/products/maquinas/gante-plancha-manual-gorras/06.png"
+    "/products/maquinas/gante-plancha-manual-gorras/fotoPrincipal.png",
+    "/products/maquinas/gante-plancha-manual-gorras/fotoB1.png",
+    "/products/maquinas/gante-plancha-manual-gorras/fotoB2.png",
+    "/products/maquinas/gante-plancha-manual-gorras/fotoB3.png",
+    "/products/maquinas/gante-plancha-manual-gorras/fotoB4.png",
+    "/products/maquinas/gante-plancha-manual-gorras/fotoExtra1.png"
   ],
   "guantes-protectores-algodon": [
     "/products/accesorios/guantes-protectores-algodon/01.png"
   ],
   "guyana-plancha-termica-textil": [
-    "/products/maquinas/guyana-plancha-termica-textil/03.png",
-    "/products/maquinas/guyana-plancha-termica-textil/01.png",
-    "/products/maquinas/guyana-plancha-termica-textil/02.png",
-    "/products/maquinas/guyana-plancha-termica-textil/04.png",
-    "/products/maquinas/guyana-plancha-termica-textil/05.JPG"
+    "/products/maquinas/guyana-plancha-termica-textil/fotoPrincipal.png",
+    "/products/maquinas/guyana-plancha-termica-textil/fotoB1.png",
+    "/products/maquinas/guyana-plancha-termica-textil/fotoB2.jpg",
+    "/products/maquinas/guyana-plancha-termica-textil/fotoB3.png",
+    "/products/maquinas/guyana-plancha-termica-textil/fotoB4.png"
+  ],
+  "jamaica-planchas-transfer-multifuncion-para-sublimacion": [
+    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoPrincipal.png",
+    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB1.png",
+    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB2.png",
+    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB3.png",
+    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB4.png",
+    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoExtra1.png"
   ],
   "kenia-plancha-termica-textil": [
-    "/products/maquinas/kenia-plancha-termica-textil/01.png",
-    "/products/maquinas/kenia-plancha-termica-textil/02.png",
-    "/products/maquinas/kenia-plancha-termica-textil/03.png",
-    "/products/maquinas/kenia-plancha-termica-textil/04.png",
-    "/products/maquinas/kenia-plancha-termica-textil/05.png",
-    "/products/maquinas/kenia-plancha-termica-textil/06.png"
+    "/products/maquinas/kenia-plancha-termica-textil/fotoPrincipal.png",
+    "/products/maquinas/kenia-plancha-termica-textil/fotoB1.png",
+    "/products/maquinas/kenia-plancha-termica-textil/fotoB2.png",
+    "/products/maquinas/kenia-plancha-termica-textil/fotoB3.png",
+    "/products/maquinas/kenia-plancha-termica-textil/fotoB4.png",
+    "/products/maquinas/kenia-plancha-termica-textil/fotoExtra1.png"
   ],
   "lamina-teflon-38x38": [
     "/products/consumibles/lamina-teflon-38x38/01.png"
@@ -246,40 +289,32 @@
   ],
   "lampara-horno-sz1": [
     "/products/accesorios/lampara-horno-sz1/01.png",
-    "/products/accesorios/lampara-horno-sz1/02.png",
     "/products/accesorios/lampara-horno-sz1/03.png"
   ],
   "luanda-plancha-termica-automatica": [
-    "/products/maquinas/luanda-plancha-termica-automatica/01.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/02.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/03.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/04.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/05.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/06.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/07.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/08.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/09.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/10.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/11.png",
-    "/products/maquinas/luanda-plancha-termica-automatica/12.png"
+    "/products/maquinas/luanda-plancha-termica-automatica/fotoPrincipal.png",
+    "/products/maquinas/luanda-plancha-termica-automatica/fotoB1.png",
+    "/products/maquinas/luanda-plancha-termica-automatica/fotoB2.png",
+    "/products/maquinas/luanda-plancha-termica-automatica/fotoB3.png",
+    "/products/maquinas/luanda-plancha-termica-automatica/fotoB4.png",
+    "/products/maquinas/luanda-plancha-termica-automatica/fotoExtra1.png"
   ],
   "maine-plancha-para-tazas": [
-    "/products/maquinas/maine-plancha-para-tazas/01.png",
-    "/products/maquinas/maine-plancha-para-tazas/02.png",
-    "/products/maquinas/maine-plancha-para-tazas/03.png",
-    "/products/maquinas/maine-plancha-para-tazas/04.png",
-    "/products/maquinas/maine-plancha-para-tazas/05.png",
-    "/products/maquinas/maine-plancha-para-tazas/06.png"
+    "/products/maquinas/maine-plancha-para-tazas/fotoPrincipal.png",
+    "/products/maquinas/maine-plancha-para-tazas/fotoB1.png",
+    "/products/maquinas/maine-plancha-para-tazas/fotoB2.png",
+    "/products/maquinas/maine-plancha-para-tazas/fotoB3.png",
+    "/products/maquinas/maine-plancha-para-tazas/fotoB4.png",
+    "/products/maquinas/maine-plancha-para-tazas/fotoExtra1.png",
+    "/products/maquinas/maine-plancha-para-tazas/fotoExtra2.png"
   ],
   "malvinas-plancha-termica-textil": [
-    "/products/maquinas/malvinas-plancha-termica-textil/01.png",
-    "/products/maquinas/malvinas-plancha-termica-textil/02.png",
-    "/products/maquinas/malvinas-plancha-termica-textil/03.png",
-    "/products/maquinas/malvinas-plancha-termica-textil/04.png",
-    "/products/maquinas/malvinas-plancha-termica-textil/05.png",
-    "/products/maquinas/malvinas-plancha-termica-textil/06.jpg",
-    "/products/maquinas/malvinas-plancha-termica-textil/07.jpg",
-    "/products/maquinas/malvinas-plancha-termica-textil/08.png"
+    "/products/maquinas/malvinas-plancha-termica-textil/fotoPrincipal.png",
+    "/products/maquinas/malvinas-plancha-termica-textil/fotoB1.png",
+    "/products/maquinas/malvinas-plancha-termica-textil/fotoB2.png",
+    "/products/maquinas/malvinas-plancha-termica-textil/fotoB3.png",
+    "/products/maquinas/malvinas-plancha-termica-textil/fotoB4.png",
+    "/products/maquinas/malvinas-plancha-termica-textil/fotoExtra3.png"
   ],
   "mesa-universal-grande-ruedas": [
     "/products/accesorios/mesa-universal-grande-ruedas/01.png",
@@ -289,17 +324,18 @@
     "/products/accesorios/mesa-universal-grande-ruedas/05.png"
   ],
   "miranda-prensa-termica-automatica-electrica": [
-    "/products/maquinas/miranda-prensa-termica-automatica-electrica/02.png",
-    "/products/maquinas/miranda-prensa-termica-automatica-electrica/01.png",
-    "/products/maquinas/miranda-prensa-termica-automatica-electrica/03.png",
-    "/products/maquinas/miranda-prensa-termica-automatica-electrica/04.jpg",
-    "/products/maquinas/miranda-prensa-termica-automatica-electrica/05.png",
-    "/products/maquinas/miranda-prensa-termica-automatica-electrica/06.png"
+    "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoPrincipal.png",
+    "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoExp.png",
+    "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB1.png",
+    "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB2.jpg",
+    "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB3.png",
+    "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB4.png"
   ],
   "molde-3d-silicona-3-botellas-aluminio": [
     "/products/accesorios/molde-3d-silicona-3-botellas-aluminio/01.png",
     "/products/accesorios/molde-3d-silicona-3-botellas-aluminio/02.png",
-    "/products/accesorios/molde-3d-silicona-3-botellas-aluminio/03.png"
+    "/products/accesorios/molde-3d-silicona-3-botellas-aluminio/03.png",
+    "/products/accesorios/molde-3d-silicona-3-botellas-aluminio/04.png"
   ],
   "molde-3d-silicona-platos": [
     "/products/accesorios/molde-3d-silicona-platos/01.png",
@@ -327,34 +363,47 @@
     "/products/accesorios/motor-deposito-polvo-sx8/04.png"
   ],
   "normandia-i-plancha-termica-textil": [
-    "/products/maquinas/normandia-i-plancha-termica-textil/01.png",
-    "/products/maquinas/normandia-i-plancha-termica-textil/02.png",
-    "/products/maquinas/normandia-i-plancha-termica-textil/03.png",
-    "/products/maquinas/normandia-i-plancha-termica-textil/04.png",
-    "/products/maquinas/normandia-i-plancha-termica-textil/05.png"
+    "/products/maquinas/normandia-i-plancha-termica-textil/fotoPrincipal.png",
+    "/products/maquinas/normandia-i-plancha-termica-textil/fotoB1.png",
+    "/products/maquinas/normandia-i-plancha-termica-textil/fotoB2.png",
+    "/products/maquinas/normandia-i-plancha-termica-textil/fotoB3.png",
+    "/products/maquinas/normandia-i-plancha-termica-textil/fotoB4.png",
+    "/products/maquinas/normandia-i-plancha-termica-textil/fotoExtra1.png"
   ],
   "normandia-ii-plancha-termica-textil": [
-    "/products/maquinas/normandia-ii-plancha-termica-textil/01.png",
-    "/products/maquinas/normandia-ii-plancha-termica-textil/02.png",
-    "/products/maquinas/normandia-ii-plancha-termica-textil/03.png",
-    "/products/maquinas/normandia-ii-plancha-termica-textil/04.png",
-    "/products/maquinas/normandia-ii-plancha-termica-textil/05.png",
-    "/products/maquinas/normandia-ii-plancha-termica-textil/06.png"
+    "/products/maquinas/normandia-ii-plancha-termica-textil/fotoPrincipal.png",
+    "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB1.png",
+    "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB2.png",
+    "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB3.png",
+    "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB4.png",
+    "/products/maquinas/normandia-ii-plancha-termica-textil/fotoExtra1.png",
+    "/products/maquinas/normandia-ii-plancha-termica-textil/fotoExtra2.png",
+    "/products/maquinas/normandia-ii-plancha-termica-textil/fotoExtra3.png"
+  ],
+  "normandia-iii-plancha-termica-textil": [
+    "/products/maquinas/normandia-iii-plancha-termica-textil/fotoPrincipal.png",
+    "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB1.png",
+    "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB2.png",
+    "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB3.png",
+    "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB4.png",
+    "/products/maquinas/normandia-iii-plancha-termica-textil/fotoExtra1.png",
+    "/products/maquinas/normandia-iii-plancha-termica-textil/fotoExtra2.png",
+    "/products/maquinas/normandia-iii-plancha-termica-textil/fotoExtra3.png"
   ],
   "obrei-plancha-gorras-apertura-automatica": [
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/014.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/01.JPG",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/02.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/03.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/04.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/05.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/06.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/07.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/08.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/10.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/11.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/12.png",
-    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/13.png"
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoPrincipal.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB1.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB2.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB3.jpg",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB4.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra1.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra2.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra3.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra4.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra5.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra6.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra7.png",
+    "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra8.png"
   ],
   "pantalla-hornos-sz1": [
     "/products/accesorios/pantalla-hornos-sz1/01.png",
@@ -369,39 +418,6 @@
     "/products/accesorios/placa-polimero-platos-horno/02.png",
     "/products/accesorios/placa-polimero-platos-horno/03.png",
     "/products/accesorios/placa-polimero-platos-horno/04.png"
-  ],
-  "caen-plancha-neumatica-doble-estacion": [
-    "/products/maquinas/caen-plancha-neumatica-doble-estacion/04.png",
-    "/products/maquinas/caen-plancha-neumatica-doble-estacion/01.png",
-    "/products/maquinas/caen-plancha-neumatica-doble-estacion/02.png",
-    "/products/maquinas/caen-plancha-neumatica-doble-estacion/03.png",
-    "/products/maquinas/caen-plancha-neumatica-doble-estacion/05.png",
-    "/products/maquinas/caen-plancha-neumatica-doble-estacion/06.png",
-    "/products/maquinas/caen-plancha-neumatica-doble-estacion/07.png",
-    "/products/maquinas/caen-plancha-neumatica-doble-estacion/08.png"
-  ],
-  "barein-plancha-termica": [
-    "/products/maquinas/barein-plancha-termica/01.png",
-    "/products/maquinas/barein-plancha-termica/02.png",
-    "/products/maquinas/barein-plancha-termica/03.png",
-    "/products/maquinas/barein-plancha-termica/04.png",
-    "/products/maquinas/barein-plancha-termica/05.png",
-    "/products/maquinas/barein-plancha-termica/06.png"
-  ],
-  "chinela-plancha-transfer-zapatillas": [
-    "/products/maquinas/chinela-plancha-transfer-zapatillas/01.png",
-    "/products/maquinas/chinela-plancha-transfer-zapatillas/02.png",
-    "/products/maquinas/chinela-plancha-transfer-zapatillas/03.png",
-    "/products/maquinas/chinela-plancha-transfer-zapatillas/04.png",
-    "/products/maquinas/chinela-plancha-transfer-zapatillas/05.png"
-  ],
-  "jamaica-planchas-transfer-multifuncion-para-sublimacion": [
-    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/01.png",
-    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/02.png",
-    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/03.png",
-    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/04.png",
-    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/05.png",
-    "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/06.png"
   ],
   "plato-15x20-beinsen-riad": [
     "/products/accesorios/plato-15x20-beinsen-riad/01.png"
@@ -532,8 +548,8 @@
     "/products/accesorios/plato-resistencia-combo-38x38/03.png"
   ],
   "pocola-plancha-transfer-manual-pequena": [
-    "/products/maquinas/pocola-plancha-transfer-manual-pequena/01.png",
-    "/products/maquinas/pocola-plancha-transfer-manual-pequena/02.png"
+    "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoPrincipal.png",
+    "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoB1.png"
   ],
   "rele-estado-solido-sz1": [
     "/products/accesorios/rele-estado-solido-sz1/01.png",
@@ -570,9 +586,9 @@
     "/products/accesorios/resistencia-cilindrica-20-30oz/05.png"
   ],
   "resistencia-cilindrica-tazas-11oz-tipo-a": [
-    "/products/consumibles/resistencia-cilindrica-tazas-11oz-tipo-a/01.png",
-    "/products/consumibles/resistencia-cilindrica-tazas-11oz-tipo-a/02.png",
-    "/products/consumibles/resistencia-cilindrica-tazas-11oz-tipo-a/03.png"
+    "/products/accesorios/resistencia-cilindrica-tazas-11oz-tipo-a/01.png",
+    "/products/accesorios/resistencia-cilindrica-tazas-11oz-tipo-a/02.png",
+    "/products/accesorios/resistencia-cilindrica-tazas-11oz-tipo-a/03.png"
   ],
   "resistencia-conica-tazas-12oz": [
     "/products/accesorios/resistencia-conica-tazas-12oz/01.png",
@@ -594,11 +610,6 @@
   ],
   "resistencia-gorras-combo-beinsen": [
     "/products/accesorios/resistencia-gorras-combo-beinsen/01.png"
-  ],
-  "resistencia-para-tazas-conicas-17oz": [
-    "/products/accesorios/resistencia-para-tazas-conicas-17oz/01.png",
-    "/products/accesorios/resistencia-para-tazas-conicas-17oz/02.png",
-    "/products/accesorios/resistencia-para-tazas-conicas-17oz/03.png"
   ],
   "resistencia-platos-5-dorian": [
     "/products/accesorios/resistencia-platos-5-dorian/01.png"
@@ -647,20 +658,20 @@
     "/products/accesorios/sensor-temperatura-sz1/01.png"
   ],
   "sicilia-plancha-para-tazas": [
-    "/products/maquinas/sicilia-plancha-para-tazas/01.png",
-    "/products/maquinas/sicilia-plancha-para-tazas/02.png",
-    "/products/maquinas/sicilia-plancha-para-tazas/03.JPG",
-    "/products/maquinas/sicilia-plancha-para-tazas/04.JPG",
-    "/products/maquinas/sicilia-plancha-para-tazas/05.JPG"
+    "/products/maquinas/sicilia-plancha-para-tazas/fotoPrincipal.png",
+    "/products/maquinas/sicilia-plancha-para-tazas/fotoB1.png",
+    "/products/maquinas/sicilia-plancha-para-tazas/fotoB2.jpg",
+    "/products/maquinas/sicilia-plancha-para-tazas/fotoB3.jpg",
+    "/products/maquinas/sicilia-plancha-para-tazas/fotoB4.jpg"
   ],
   "sore-plancha-profesional-tazas": [
-    "/products/maquinas/sore-plancha-profesional-tazas/02.png",
-    "/products/maquinas/sore-plancha-profesional-tazas/01.png",
-    "/products/maquinas/sore-plancha-profesional-tazas/03.jpg",
-    "/products/maquinas/sore-plancha-profesional-tazas/04.jpg",
-    "/products/maquinas/sore-plancha-profesional-tazas/05.JPG",
-    "/products/maquinas/sore-plancha-profesional-tazas/06.JPG",
-    "/products/maquinas/sore-plancha-profesional-tazas/07.jpg"
+    "/products/maquinas/sore-plancha-profesional-tazas/fotoPrincipal.png",
+    "/products/maquinas/sore-plancha-profesional-tazas/fotoB1.jpg",
+    "/products/maquinas/sore-plancha-profesional-tazas/fotoB2.jpg",
+    "/products/maquinas/sore-plancha-profesional-tazas/fotoB3.png",
+    "/products/maquinas/sore-plancha-profesional-tazas/fotoB4.jpg",
+    "/products/maquinas/sore-plancha-profesional-tazas/fotoExtra1.jpg",
+    "/products/maquinas/sore-plancha-profesional-tazas/fotoExtra2.jpg"
   ],
   "termometro-digital-infrarrojos-it122": [
     "/products/accesorios/termometro-digital-infrarrojos-it122/01.png",
@@ -668,20 +679,18 @@
     "/products/accesorios/termometro-digital-infrarrojos-it122/03.png"
   ],
   "tobago-estacion-planchado-continuo": [
-    "/products/maquinas/tobago-estacion-planchado-continuo/05.png",
-    "/products/maquinas/tobago-estacion-planchado-continuo/01.png",
-    "/products/maquinas/tobago-estacion-planchado-continuo/02.jpg",
-    "/products/maquinas/tobago-estacion-planchado-continuo/03.jpg",
-    "/products/maquinas/tobago-estacion-planchado-continuo/04.png"
+    "/products/maquinas/tobago-estacion-planchado-continuo/fotoPrincipal.png",
+    "/products/maquinas/tobago-estacion-planchado-continuo/fotoB1.png",
+    "/products/maquinas/tobago-estacion-planchado-continuo/fotoB2.png",
+    "/products/maquinas/tobago-estacion-planchado-continuo/fotoB3.jpg",
+    "/products/maquinas/tobago-estacion-planchado-continuo/fotoB4.jpg"
   ],
   "trinidad-prensa-termica-automatica": [
-    "/products/maquinas/trinidad-prensa-termica-automatica/06.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/01.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/02.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/03.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/04.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/05.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/07.png",
-    "/products/maquinas/trinidad-prensa-termica-automatica/08.png"
+    "/products/maquinas/trinidad-prensa-termica-automatica/fotoPrincipal.png",
+    "/products/maquinas/trinidad-prensa-termica-automatica/fotoExp.png",
+    "/products/maquinas/trinidad-prensa-termica-automatica/fotoB1.png",
+    "/products/maquinas/trinidad-prensa-termica-automatica/fotoB2.png",
+    "/products/maquinas/trinidad-prensa-termica-automatica/fotoB3.png",
+    "/products/maquinas/trinidad-prensa-termica-automatica/fotoB4.png"
   ]
 }

@@ -23,7 +23,16 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     return {
         title,
         description,
-        alternates: { canonical: url },
+        alternates: {
+            canonical: url,
+            languages: {
+                es: url,
+                en: url,
+                pt: url,
+                it: url,
+                "x-default": url,
+            },
+        },
         openGraph: {
             title,
             description,
@@ -43,6 +52,8 @@ export default function CasoExitoPage({ params }: { params: { slug: string } }) 
         ? story.mainImage
         : `${BASE_URL}${story.mainImage}`;
 
+    const storyUrl = `${BASE_URL}/casos-exito/${story.slug}`;
+
     const articleSchema = {
         "@context": "https://schema.org",
         "@type": "Article",
@@ -61,22 +72,26 @@ export default function CasoExitoPage({ params }: { params: { slug: string } }) 
             logo: { "@type": "ImageObject", url: `${BASE_URL}/brand/logo.png` },
         },
         image: imageUrl,
-        url: `${BASE_URL}/casos-exito/${story.slug}`,
-        mainEntityOfPage: {
-            "@type": "WebPage",
-            "@id": `${BASE_URL}/casos-exito/${story.slug}`,
-        },
-        about: {
-            "@type": "Organization",
-            name: story.client,
-        },
+        url: storyUrl,
+        mainEntityOfPage: { "@type": "WebPage", "@id": storyUrl },
+        about: { "@type": "Organization", name: story.client },
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Inicio", item: BASE_URL },
+            { "@type": "ListItem", position: 2, name: "Casos de Éxito", item: `${BASE_URL}/casos-exito` },
+            { "@type": "ListItem", position: 3, name: story.title.es, item: storyUrl },
+        ],
     };
 
     return (
         <>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema]) }}
             />
             <StoryDetailClient story={story} />
         </>

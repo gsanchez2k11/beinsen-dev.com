@@ -21,6 +21,8 @@ import {
 } from "lucide-react";
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import { SupportFAQ } from "@/components/SupportFAQ";
+import { faqData } from "@/data/faq";
 
 const TYPE_ICONS: Record<ResourceType, any> = {
     manual: FileText,
@@ -81,9 +83,23 @@ export default function SupportPage() {
         });
     }, [activeTab, searchQuery, locale]);
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqData.map((q) => ({
+            "@type": "Question",
+            name: q.question.es,
+            acceptedAnswer: { "@type": "Answer", text: q.answer.es },
+        })),
+    };
+
     return (
         <div className="min-h-screen bg-background pt-32 pb-40">
-            
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+
             {/* Header */}
             <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
                 <ScrollReveal>
@@ -190,6 +206,8 @@ export default function SupportPage() {
                         })}
                     </AnimatePresence>
                 </div>
+
+                <SupportFAQ />
 
                 {/* Contact Help Section */}
                 <div className="mt-32 p-12 md:p-20 rounded-[4rem] bg-black text-white relative overflow-hidden text-center md:text-left">

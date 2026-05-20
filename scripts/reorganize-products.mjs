@@ -90,7 +90,7 @@ const ACCESORIOS = new Set([
   'guantes-protectores-algodon',
   'mesa-universal-grande-ruedas',
   'resistencia-conica-tazas-12oz',
-  'resistencia-para-tazas-conicas-17oz',
+  'resistencia-tazas-conicas-17oz',
 ]);
 
 // Slugs classified as consumables (from rawConsumablesData)

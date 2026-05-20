@@ -19,11 +19,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const article = getArticle(slug);
     if (!article) return { title: "Artículo no encontrado | Beinsen" };
+    const url = `https://beinsen.com/aprende/${slug}`;
     return {
         title: `${article.title} | Beinsen`,
         description: article.excerpt,
         alternates: {
-            canonical: `https://beinsen.com/aprende/${slug}`,
+            canonical: url,
+            languages: {
+                es: url,
+                en: url,
+                pt: url,
+                it: url,
+                "x-default": url,
+            },
         },
         openGraph: {
             title: article.title,
@@ -82,6 +90,8 @@ export default async function ArticleDetail({ params }: { params: Promise<{ slug
         ...allOthers.filter((a) => a.category !== article.category),
     ].slice(0, 3);
 
+    const articleUrl = `https://beinsen.com/aprende/${article.slug ?? ""}`;
+
     const blogPostingSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
@@ -98,15 +108,25 @@ export default async function ArticleDetail({ params }: { params: Promise<{ slug
             name: "Beinsen",
             logo: { "@type": "ImageObject", url: "https://beinsen.com/brand/logo.png" },
         },
-        url: `https://beinsen.com/aprende/${article.slug ?? ""}`,
-        mainEntityOfPage: { "@type": "WebPage", "@id": `https://beinsen.com/aprende/${article.slug ?? ""}` },
+        url: articleUrl,
+        mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
+    };
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Inicio", item: "https://beinsen.com" },
+            { "@type": "ListItem", position: 2, name: "Aprende", item: "https://beinsen.com/aprende" },
+            { "@type": "ListItem", position: 3, name: article.title, item: articleUrl },
+        ],
     };
 
     return (
         <article className="min-h-screen bg-background pb-24 selection:bg-[#FF6600] selection:text-white">
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify([blogPostingSchema, breadcrumbSchema]) }}
             />
             {/* Hero */}
             <header className="relative pt-32 pb-16 overflow-hidden border-b border-border/40">
