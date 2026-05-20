@@ -5,6 +5,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ClientProviders } from "@/components/ClientProviders";
+import { Analytics } from "@/components/Analytics";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -50,6 +51,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
   },
 };
 
@@ -100,6 +104,25 @@ const localBusinessSchema = {
   ],
 };
 
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://beinsen.com/#website",
+  url: "https://beinsen.com",
+  name: "Beinsen",
+  description: "Fabricante líder de planchas transfer y prensas térmicas industriales.",
+  publisher: { "@id": "https://beinsen.com/#organization" },
+  inLanguage: ["es", "en", "pt", "it"],
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://beinsen.com/planchas?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -112,8 +135,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
       </head>
       <body className={`${inter.variable} min-h-screen flex flex-col pt-20 bg-background text-foreground`}>
+        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

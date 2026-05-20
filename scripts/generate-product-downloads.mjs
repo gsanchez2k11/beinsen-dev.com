@@ -7,9 +7,8 @@ const ROOT = path.resolve(__dirname, "..");
 const DOWNLOADS_DIR = path.join(ROOT, "public", "manuales");
 const OUTPUT = path.join(ROOT, "data", "product-downloads.json");
 const DOC_EXT = /\.(pdf|docx?|xlsx?)$/i;
+const LANG_MANUAL = /^manual-(es|en|pt|it)\.pdf$/i;
 
-// Localized labels for recognized filenames (case-insensitive, without extension).
-// Unknown filenames fall back to a prettified version of the base name.
 const LABELS = {
   "manual": { es: "Manual de Usuario", en: "User Manual", pt: "Manual do Utilizador", it: "Manuale Utente" },
   "manual-usuario": { es: "Manual de Usuario", en: "User Manual", pt: "Manual do Utilizador", it: "Manuale Utente" },
@@ -21,12 +20,13 @@ const LABELS = {
   "garantia": { es: "Garantía", en: "Warranty", pt: "Garantia", it: "Garanzia" },
   "despiece": { es: "Despiece", en: "Exploded View", pt: "Despiece", it: "Esploso" },
   "declaracion-conformidad": { es: "Declaración de Conformidad", en: "Declaration of Conformity", pt: "Declaração de Conformidade", it: "Dichiarazione di Conformità" },
+};
 
-  // Malvinas — cada archivo etiquetado en su propio idioma
-  "guia-de-usuario-malvinas-v1.2.1": "Manual de Usuario",
-  "user-guide-malvinas-v1.2.1":      "User Manual",
-  "guia-do-usuario-malvinas-v1.2.1": "Manual do Utilizador",
-  "guia-di-utente-malvinas-v1.2.1":  "Manuale Utente",
+const MAINTENANCE_LABEL = {
+  es: "Libro de Mantenimiento",
+  en: "Maintenance Book",
+  pt: "Livro de Manutenção",
+  it: "Libretto di Manutenzione",
 };
 
 function prettify(base) {
@@ -47,11 +47,40 @@ if (fs.existsSync(DOWNLOADS_DIR)) {
     if (!fs.statSync(dir).isDirectory()) continue;
     const files = fs.readdirSync(dir).filter((f) => DOC_EXT.test(f)).sort();
     if (files.length === 0) continue;
-    manifest[slug] = files.map((f) => {
-      const base = f.replace(DOC_EXT, "").toLowerCase();
-      const label = LABELS[base] || prettify(base);
-      return { label, url: `/manuales/${slug}/${f}` };
-    });
+
+    const entries = [];
+    const langManuals = {};
+
+    for (const f of files) {
+      const langMatch = f.match(LANG_MANUAL);
+      if (langMatch) {
+        langManuals[langMatch[1].toLowerCase()] = `/manuales/${slug}/${f}`;
+        continue;
+      }
+
+      const base = f.replace(DOC_EXT, "");
+      const lowerBase = base.toLowerCase();
+      let label;
+
+      if (lowerBase.startsWith("libro_mantenimiento")) {
+        label = MAINTENANCE_LABEL;
+      } else {
+        label = LABELS[lowerBase] || prettify(base);
+      }
+
+      entries.push({ label, url: `/manuales/${slug}/${f}` });
+    }
+
+    if (Object.keys(langManuals).length > 0) {
+      entries.unshift({
+        label: LABELS["manual"],
+        languages: langManuals,
+      });
+    }
+
+    if (entries.length > 0) {
+      manifest[slug] = entries;
+    }
   }
 }
 
