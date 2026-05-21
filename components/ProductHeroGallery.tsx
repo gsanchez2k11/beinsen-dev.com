@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -14,11 +14,6 @@ interface ProductHeroGalleryProps {
 export function ProductHeroGallery({ images, productName }: ProductHeroGalleryProps) {
     const { locale } = useLanguage();
     const [activeIndex, setActiveIndex] = useState(0);
-    const isFirstRender = useRef(true);
-
-    useEffect(() => {
-        isFirstRender.current = false;
-    }, []);
 
     if (!images || images.length === 0) return null;
 
@@ -36,26 +31,31 @@ export function ProductHeroGallery({ images, productName }: ProductHeroGalleryPr
         <div className="w-full flex flex-col gap-8 h-full">
             {/* Main Stage */}
             <div className="relative flex-1 group rounded-[2.5rem] overflow-hidden bg-card/50 backdrop-blur-sm border border-border/50 shadow-2xl">
-                <AnimatePresence mode="wait" initial={false}>
+                {/* Render todas las imágenes a la vez para que el navegador las descargue
+                    de inmediato; solo la activa es visible. El cambio de slide pasa a ser
+                    instantáneo porque la imagen ya está cacheada. */}
+                {images.map((img, idx) => (
                     <motion.div
-                        key={activeIndex}
-                        initial={isFirstRender.current ? false : { opacity: 0, scale: 0.95, x: 20 }}
-                        animate={{ opacity: 1, scale: 1, x: 0 }}
-                        exit={{ opacity: 0, scale: 1.05, x: -20 }}
-                        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                        className="relative w-full h-full"
+                        key={idx}
+                        initial={false}
+                        animate={{ opacity: idx === activeIndex ? 1 : 0 }}
+                        transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                        className="absolute inset-0"
+                        style={{ pointerEvents: idx === activeIndex ? "auto" : "none" }}
+                        aria-hidden={idx !== activeIndex}
                     >
                         <Image
-                            src={images[activeIndex]}
-                            alt={`${productName} - View ${activeIndex + 1}`}
+                            src={img}
+                            alt={`${productName} - View ${idx + 1}`}
                             fill
                             className="object-contain p-8 md:p-12"
-                            priority
+                            priority={idx === 0}
+                            loading={idx === 0 ? undefined : "eager"}
                             sizes="(max-width: 1280px) 100vw, 85rem"
-                            fetchPriority="high"
+                            fetchPriority={idx === 0 ? "high" : "low"}
                         />
                     </motion.div>
-                </AnimatePresence>
+                ))}
 
                 {/* Floating Controls */}
                 <div className="absolute inset-0 flex items-center justify-between p-6 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">

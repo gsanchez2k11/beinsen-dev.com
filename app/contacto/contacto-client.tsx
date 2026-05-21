@@ -28,6 +28,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { planchasData } from "@/data/products";
 import { getLocalized } from "@/lib/i18n";
+import { SupportFAQ } from "@/components/SupportFAQ";
 
 // Booking Helpers
 const getAvailableDates = () => {
@@ -492,6 +493,7 @@ function ContactContent() {
                     </div>
                 </div>
             </div>
+            <SupportFAQ />
             {error && <div className="fixed bottom-8 left-1/2 -translate-x-1/2 bg-red-500 text-white px-6 py-3 rounded-full shadow-2xl z-50 font-bold">{error}</div>}
         </div>
     );

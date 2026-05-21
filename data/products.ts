@@ -76,6 +76,7 @@ export interface Plancha {
   maintenanceTips?: Localized<string[]>;
   distributors?: { name: string; url: string; logo?: string }[];
   hidden?: boolean;
+  isNew?: boolean;
 }
 const rawPlanchasData: Plancha[] = [
   {
@@ -95,6 +96,7 @@ const rawPlanchasData: Plancha[] = [
     "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoPrincipal.png",
     "price": "Consultar PVP",
     "slug": "chinela-plancha-transfer-zapatillas",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-beinsen-para-zapatillas-chinela.html",
     "size": {
       "es": "Estándar",
       "en": "Standard",
@@ -430,6 +432,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "sore-plancha-profesional-tazas",
     "slug": "sore-plancha-profesional-tazas",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-beinsen-para-5-tazas-sore.html",
     "name": {
       "es": "Sore plancha profesional para tazas",
       "en": "Sore professional mug press",
@@ -1926,6 +1929,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "plancha-para-tazas",
     "slug": "andra-prensa-automatica-tazas",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-beinsen-para-tazas-automatica-andra.html",
     "name": {
       "es": "Andra prensa automática para tazas",
       "en": "Andra automatic mug press",
@@ -2628,6 +2632,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "obrei-plancha-gorras-apertura-automatica",
     "slug": "obrei-plancha-gorras-apertura-automatica",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-gorras-obrei.html",
     "name": {
       "es": "Obrei plancha para gorras con apertura automática",
       "en": "Obrei cap press with automatic opening",
@@ -2953,6 +2958,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "planchas-transfer-con-apertura-neumatica",
     "slug": "doha-plancha-transfer-gran-formato",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/doha-plancha-transfer-gran-formato.html",
     "storyHeadline": {
       "es": "Gran formato, presión neumática",
       "en": "Large format, pneumatic precision"
@@ -3305,6 +3311,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "jamaica-planchas-transfer-multifuncion-para-sublimacion",
     "slug": "jamaica-planchas-transfer-multifuncion-para-sublimacion",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/beinsen-jamaica-prensa-termica.html",
     "storyHeadline": {
       "es": "Una máquina, todos los formatos",
       "en": "One machine, every format"
@@ -3688,6 +3695,8 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "esparta-prensa-termica-neumatica",
     "slug": "esparta-prensa-termica-neumatica",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/prensa-termica-neumatica-beinsen-esparta.html",
+    "isNew": true,
     "storyHeadline": {
       "es": "Potencia neumática profesional",
       "en": "Pro-grade pneumatic power"
@@ -4133,6 +4142,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "planchas-transfer-para-tazas-y-platos-descatalogadas",
     "slug": "barein-plancha-termica",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-beinsen-manual-para-tazas-barein-11oz.html",
     "name": {
       "es": "Barein Plancha Térmica",
       "en": "Barein Heat Press",
@@ -4503,6 +4513,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "maine-plancha-para-tazas",
     "slug": "maine-plancha-para-tazas",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-transfer-tazas-beinsen-main.html",
     "name": {
       "es": "Maine Plancha Para Tazas",
       "en": "Maine Mug Heat Press",
@@ -4872,6 +4883,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "aruba-plancha-para-tazas",
     "slug": "aruba-plancha-para-tazas",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-beinsen-manual-2-tazas-aruba.html",
     "name": {
       "es": "Aruba Plancha Para Tazas",
       "en": "Aruba Mug Heat Press",
@@ -5590,6 +5602,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "pocola-plancha-transfer-manual-pequena",
     "slug": "pocola-plancha-transfer-manual-pequena",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/pocola-plancha-plana-compacta.html",
     "name": {
       "es": "Pocola plancha transfer manual pequeña",
       "en": "Pocola small manual heat press",
@@ -5786,18 +5799,8 @@ const rawPlanchasData: Plancha[] = [
           "en": "Designed to provide an agile and comfortable experience for small-format personalization tasks."
         },
         "icon": "Feather",
-        "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoB1.png"
-      },
-      {
-        "title": {
-          "es": "Controlador digital",
-          "en": "Digital controller"
-        },
-        "description": {
-          "es": "Controla tiempo y temperatura de forma sencilla con su display GY-04 para trabajar con precisión en cada planchado.",
-          "en": "Easily control time and temperature through its GY-04 display for precise results on every press."
-        },
-        "icon": "Cpu"
+        "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoB1.png",
+        "objectFit": "contain"
       },
       {
         "title": {
@@ -5808,40 +5811,9 @@ const rawPlanchasData: Plancha[] = [
           "es": "Su sistema de platos intercambiables amplía tus posibilidades para personalizar diferentes tipos de artículos con una sola máquina.",
           "en": "Its interchangeable plate system expands your options to customize different items with a single machine."
         },
-        "icon": "Layers"
-      },
-      {
-        "title": {
-          "es": "Contigo al fin del mundo",
-          "en": "Built to go the distance"
-        },
-        "description": {
-          "es": "Nos hemos desprendido de lo supérfluo para conseguir una herramienta sencilla, compacta y económica pero capaz de dar grandes resultados. El versátil plato plano de 15 x 20 cm te permite utilizarla para bodys, llaveros, fundas para móvil y casi todo lo que se te ocurra.",
-          "en": "We removed the unnecessary to deliver a simple, compact, and affordable tool that still offers great results. Its versatile 15 x 20 cm flat plate lets you personalize bodysuits, keychains, phone cases, and almost anything you can imagine."
-        },
-        "icon": "Zap"
-      },
-      {
-        "title": {
-          "es": "Precisa y robusta",
-          "en": "Precise and robust"
-        },
-        "description": {
-          "es": "La nueva prensa térmica Beinsen Pocola te lo pone fácil durante todo el proceso de personalización. Comienza regulando la presión necesaria con su nuevo mando regulador mejorado, utiliza el controlador digital para seleccionar tiempo y temperatura y al acabar separa la placa calefactora de manera sencilla y elegante con el resorte de gas.",
-          "en": "The new Beinsen Pocola simplifies your full personalization process. Start by setting pressure with its improved regulator, use the digital controller to select time and temperature, and finish by separating the heating plate smoothly with the gas spring."
-        },
-        "icon": "Settings"
-      },
-      {
-        "title": {
-          "es": "Amplía tus horizontes",
-          "en": "Expand your horizons"
-        },
-        "description": {
-          "es": "Y si todo lo anterior no es suficiente para ti, solo tienes que añadir a tu Beinsen Pocola el kit para gorras. Es facilísimo de quitar y poner y te permite personalizar estos artículos tan demandados.",
-          "en": "And if all of the above is not enough, just add the cap kit to your Beinsen Pocola. It is very easy to install and remove, and lets you personalize these highly demanded items."
-        },
-        "icon": "Target"
+        "icon": "Layers",
+        "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoPrincipal.png",
+        "objectFit": "contain"
       }
     ],
     "hotspots": [
@@ -5920,6 +5892,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "gante-plancha-manual-gorras",
     "slug": "gante-plancha-manual-gorras",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/beinsen-gante-plancha-manual-gorras.html",
     "name": {
       "es": "Gante plancha manual para gorras",
       "en": "Gante manual cap press",
@@ -6254,6 +6227,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "trinidad-prensa-termica-automatica",
     "slug": "trinidad-prensa-termica-automatica",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/beinsen-trinidad-estacion-trabajo-neumatica.html",
     "storyHeadline": {
       "es": "Automática de doble plato",
       "en": "Dual-plate automatic press"
@@ -6677,6 +6651,8 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "miranda-prensa-termica-automatica-electrica",
     "slug": "miranda-prensa-termica-automatica-electrica",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/beinsen-miranda-estacion-trabajo-electrica.html",
+    "isNew": true,
     "storyHeadline": {
       "es": "Automática eléctrica, sin compresor",
       "en": "Electric automatic, no compressor"
@@ -7913,6 +7889,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "belice-plancha-termica-textil",
     "slug": "belice-plancha-termica-textil",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/belice-plancha-transfer-manual-40x50.html",
     "name": {
       "es": "Belice Plancha Térmica Textil",
       "en": "Belice Heat Press",
@@ -8262,6 +8239,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "barbados-plancha-termica-textil",
     "slug": "barbados-plancha-termica-textil",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-transfer-para-camisetas-beinsen-barbados-40x50cm.html",
     "name": {
       "es": "Barbados Plancha Térmica Textil",
       "en": "Barbados Heat Press",
@@ -8696,6 +8674,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "alaska-plancha-termica-textil",
     "slug": "alaska-plancha-termica-textil",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/beinsen-alaska-plancha-transfer-electrica-compacta-de-40x50.html",
     "name": {
       "es": "Alaska Plancha Térmica Textil",
       "en": "Alaska Heat Press",
@@ -9047,6 +9026,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "malvinas-plancha-termica-textil",
     "slug": "malvinas-plancha-termica-textil",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-transfer-profesional-beinsen-malvinas.html",
     "name": {
       "es": "Malvinas Plancha Térmica Textil",
       "en": "Malvinas Heat Press",
@@ -9556,6 +9536,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "guyana-plancha-termica-textil",
     "slug": "guyana-plancha-termica-textil",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-beinsen-semiautomatica-doble-plato-guyana-40cmx50cm.html",
     "name": {
       "es": "Guyana Plancha Térmica Textil",
       "en": "Guyana Heat Press",
@@ -9921,6 +9902,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "kenia-plancha-termica-textil",
     "slug": "kenia-plancha-termica-textil",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-termica-cintas-kenia.html",
     "name": {
       "es": "Kenia Plancha Térmica Textil",
       "en": "Kenia Heat Press",
@@ -10321,6 +10303,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "tobago-estacion-planchado-continuo",
     "slug": "tobago-estacion-planchado-continuo",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/prensa-termica-textil-dtf-1.html",
     "storyHeadline": {
       "es": "Planchado en línea continuo",
       "en": "Continuous in-line pressing"
@@ -10668,6 +10651,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "normandia-i-plancha-termica-textil",
     "slug": "normandia-i-plancha-termica-textil",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-doble-plato-neumatica.html",
     "name": {
       "es": "Normandía I Plancha Térmica Textil",
       "en": "Normandia I Heat Press",
@@ -11077,6 +11061,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "normandia-iii-plancha-termica-textil",
     "slug": "normandia-iii-plancha-termica-textil",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-neumatica-beinsen-80x110.html",
     "name": {
       "es": "Normandía III Plancha Térmica Textil",
       "en": "Normandia III Heat Press",
@@ -11872,6 +11857,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "estambul-prensa-termica-para-espinilleras",
     "slug": "estambul-prensa-termica-para-espinilleras",
+    "isNew": true,
     "storyHeadline": {
       "es": "Personalización deportiva especializada",
       "en": "Specialized sports personalization"
@@ -12245,6 +12231,7 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "felina-prensa-swing-away-electrica",
     "slug": "felina-prensa-swing-away-electrica",
+    "isNew": true,
     "storyHeadline": {
       "es": "Swing-away eléctrica, acceso total",
       "en": "Electric swing-away, full access"
@@ -12782,6 +12769,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "REPBEIRES11B",
     "id": "resistencia-tazas-11oz-b",
     "slug": "resistencia-tazas-11oz-b",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-cilindrica-para-tazas-de-11oz.html",
     "name": {
       "es": "Resistencia cilíndrica para tazas de 11oz tipo B",
       "en": "Cylindrical heating element for 11oz mugs type B",
@@ -12805,6 +12793,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "PLAACCRBE",
     "id": "resistencia-tazas-6-10oz",
     "slug": "resistencia-tazas-6-10oz",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-cilindrica-para-tazas-de-6-10oz.html",
     "name": {
       "es": "Resistencia cilíndrica para tazas de 6-10oz",
       "en": "Cylindrical heating element for 6-10oz mugs",
@@ -12828,6 +12817,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "REPBEIRES11A",
     "id": "resistencia-tazas-11oz-a",
     "slug": "resistencia-tazas-11oz-a",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-cilindrica-para-tazas-de-11oz.html",
     "name": {
       "es": "Resistencia cilíndrica para tazas de 11oz tipo A",
       "en": "Cylindrical heating element for 11oz mugs type A",
@@ -12851,6 +12841,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "REPBEIRES17C",
     "id": "resistencia-tazas-conicas-17oz",
     "slug": "resistencia-tazas-conicas-17oz",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-para-tazas-conicas-de-17oz.html",
     "name": {
       "es": "Resistencia para tazas Cónicas de 17oz",
       "en": "17oz Conical mug heating element",
@@ -12874,6 +12865,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "REPBEIRSBMHB",
     "id": "resistencia-doble-taza-11-15oz",
     "slug": "resistencia-doble-taza-11-15oz",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-cilindrica-para-tazas-de-11oz.html",
     "name": {
       "es": "Resistencia cilíndrica para 2 tazas de 11oz-15oz",
       "en": "Cylindrical heating element for 2 mugs 11oz-15oz",
@@ -12898,6 +12890,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90004029",
     "id": "plato-gorras-beinsen-riad",
     "slug": "plato-gorras-beinsen-riad",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-para-gorras-para-beinsen-riad.html",
     "name": {
       "es": "Plato para gorras para Beinsen Riad",
       "en": "Cap plate for Beinsen Riad",
@@ -12920,6 +12913,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90005119",
     "id": "resistencia-15x20-beinsen-riad",
     "slug": "resistencia-15x20-beinsen-riad",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-de-15x20cm-para-plancha-beinsen-riad.html",
     "name": {
       "es": "Resistencia de 15x20cm para plancha Beinsen Riad",
       "en": "15x20cm heating element for Beinsen Riad press",
@@ -12943,6 +12937,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90006134",
     "id": "resistencia-gorras-beinsen-riad",
     "slug": "resistencia-gorras-beinsen-riad",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-para-gorras-para-beinsen-riad.html",
     "name": {
       "es": "Resistencia para gorras para Beinsen Riad",
       "en": "Cap heating element for Beinsen Riad",
@@ -12965,6 +12960,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90006380",
     "id": "plato-gorras-beinsen-obrei",
     "slug": "plato-gorras-beinsen-obrei",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-para-gorras-para-beinsen-obrei.html",
     "name": {
       "es": "Plato para gorras para Beinsen Obrei",
       "en": "Cap plate for Beinsen Obrei",
@@ -12987,6 +12983,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "PLAACRGOR",
     "id": "resistencia-gorras-combo-beinsen",
     "slug": "resistencia-gorras-combo-beinsen",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-para-gorras-para-plancha-beinsen-obrei.html",
     "name": {
       "es": "Resistencia para gorras para plancha combo Beinsen",
       "en": "Cap heating element for Beinsen combo press",
@@ -13011,6 +13008,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90005081",
     "id": "resistencia-gorras-beinsen-obrei",
     "slug": "resistencia-gorras-beinsen-obrei",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-para-gorras-para-plancha-beinsen-obrei.html",
     "name": {
       "es": "Resistencia para gorras para plancha Beinsen Obrei",
       "en": "Cap heating element for Beinsen Obrei press",
@@ -13035,6 +13033,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "REPBEIRESPL1",
     "id": "resistencia-15x15-beinsen-obrei",
     "slug": "resistencia-15x15-beinsen-obrei",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-de-15x15cm-para-plancha-beinsen-obrei.html",
     "name": {
       "es": "Resistencia de 15x15cm para plancha Beinsen Obrei",
       "en": "15x15cm heating element for Beinsen Obrei press",
@@ -13058,6 +13057,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90006402",
     "id": "plato-15x20-beinsen-riad",
     "slug": "plato-15x20-beinsen-riad",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-de-15x20cm-para-beinsen-riad.html",
     "name": {
       "es": "Plato de 15x20cm para Beinsen Riad",
       "en": "15x20cm plate for Beinsen Riad",
@@ -13081,6 +13081,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90006379",
     "id": "plato-base-15x15-beinsen-obrei",
     "slug": "plato-base-15x15-beinsen-obrei",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-base-de-15x15cm-para-plancha-beinsen-obrei.html",
     "name": {
       "es": "Plato base de 15x15cm para plancha Beinsen Obrei",
       "en": "15x15cm base plate for Beinsen Obrei press",
@@ -13104,6 +13105,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020103",
     "id": "plato-intercambiable-18x18-barbados",
     "slug": "plato-intercambiable-18x18-barbados",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-intercambiable-de-18x18cm-para-beinsen-barbados.html",
     "name": {
       "es": "Plato intercambiable de 18x18cm para Beinsen Barbados",
       "en": "18x18cm interchangeable plate for Beinsen Barbados",
@@ -13127,6 +13129,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020104",
     "id": "plato-intercambiable-redondo-24-barbados",
     "slug": "plato-intercambiable-redondo-24-barbados",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-intercambiable-redondo-de-24cm-para-beinsen-barbados.html",
     "name": {
       "es": "Plato intercambiable redondo de 24cm para Beinsen Barbados",
       "en": "24cm round interchangeable plate for Beinsen Barbados",
@@ -13150,6 +13153,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020107",
     "id": "plato-intercambiable-zapatillas-barbados",
     "slug": "plato-intercambiable-zapatillas-barbados",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-intercambiable-para-zapatillas-para-barbados.html",
     "name": {
       "es": "Plato intercambiable para zapatillas para Barbados",
       "en": "Interchangeable shoe plate for Barbados",
@@ -13172,6 +13176,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020100",
     "id": "plato-intercambiable-18x38-barbados",
     "slug": "plato-intercambiable-18x38-barbados",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-intercambiable-de-18x38cm-para-beinsen-barbados.html",
     "name": {
       "es": "Plato intercambiable de 18x38cm para Beinsen Barbados",
       "en": "18x38cm interchangeable plate for Beinsen Barbados",
@@ -13195,6 +13200,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020102",
     "id": "plato-intercambiable-18x45-barbados",
     "slug": "plato-intercambiable-18x45-barbados",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-intercambiable-de-18x45cm-para-beinsen-barbados.html",
     "name": {
       "es": "Plato intercambiable de 18x45cm para Beinsen Barbados",
       "en": "18x45cm interchangeable plate for Beinsen Barbados",
@@ -13218,6 +13224,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020101",
     "id": "plato-intercambiable-30x35-barbados",
     "slug": "plato-intercambiable-30x35-barbados",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-intercambiable-de-30x35cm-para-beinsen-barbados.html",
     "name": {
       "es": "Plato intercambiable de 30x35cm para Beinsen Barbados",
       "en": "30x35cm interchangeable plate for Beinsen Barbados",
@@ -13241,6 +13248,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "MOLPLHOR",
     "id": "placa-polimero-platos-horno",
     "slug": "placa-polimero-platos-horno",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/placa-polimero-platos-6-10-pulgadas-horno.html",
     "name": {
       "es": "Placa de polímero para platos de 6 a 10\" para horno",
       "en": "Polymer plate for 6 to 10\" plates for oven",
@@ -13264,6 +13272,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "molplato3d",
     "id": "molde-3d-silicona-platos",
     "slug": "molde-3d-silicona-platos",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/moldes-3d-de-silicona-para-platos-en-horno-3d.html",
     "name": {
       "es": "Moldes 3D de silicona para platos en horno 3D",
       "en": "3D silicone molds for plates in 3D oven",
@@ -13291,6 +13300,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "MOLTAZCO",
     "id": "molde-3d-silicona-tazas-conicas-jarras",
     "slug": "molde-3d-silicona-tazas-conicas-jarras",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/molde-3d-de-silicona-para-tazas-conicas-y-jarras-de-cerveza.html",
     "name": {
       "es": "Molde 3D de silicona para tazas cónicas y jarras de cerveza",
       "en": "3D silicone mold for conical mugs and beer steins",
@@ -13319,6 +13329,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "MOLTAZRE",
     "id": "molde-3d-silicona-tazas-rectas",
     "slug": "molde-3d-silicona-tazas-rectas",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/molde-3d-de-silicona-para-tazas-rectas.html",
     "name": {
       "es": "Molde 3D de silicona para tazas rectas",
       "en": "3D silicone mold for straight mugs",
@@ -13347,6 +13358,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "MOLTAZNR",
     "id": "molde-silicona-3-tazas-11oz",
     "slug": "molde-silicona-3-tazas-11oz",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/molde-silicona-3-tazas-11oz-mj-lh11.html",
     "name": {
       "es": "Molde de silicona para 3 tazas de 11oz MJ-LH11",
       "en": "Silicone mold for 3 mugs 11oz MJ-LH11",
@@ -13373,6 +13385,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "MOLVOTAL",
     "id": "molde-3d-silicona-3-botellas-aluminio",
     "slug": "molde-3d-silicona-3-botellas-aluminio",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/molde-3d-de-silicona-para-botellas-de-aluminio.html",
     "name": {
       "es": "Molde 3D de silicona para 3 botellas de aluminio",
       "en": "3D silicone mold for 3 aluminum bottles",
@@ -13400,6 +13413,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "BPLAN163",
     "id": "resistencia-platos-6-1-gen",
     "slug": "resistencia-platos-6-1-gen",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-para-platos-6-1-generacion.html",
     "name": {
       "es": "Resistencia para platos 6\" - 1ª Generación",
       "en": "Heating element for 6\" plates - 1st Generation",
@@ -13423,6 +13437,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "REPBEIRES05P",
     "id": "resistencia-platos-5-dorian",
     "slug": "resistencia-platos-5-dorian",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-para-platos-de-5-dorian.html",
     "name": {
       "es": "Resistencia para Platos de 5\" Dorian",
       "en": "5\" plate heating element for Dorian",
@@ -13446,6 +13461,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90006268",
     "id": "resistencia-tazas-2-5oz",
     "slug": "resistencia-tazas-2-5oz",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-2-5cm-mini-tazas.html",
     "name": {
       "es": "Resistencia cilíndrica de 2.5oz para mini tazas",
       "en": "2.5oz Cylindrical heating element for mini mugs",
@@ -13492,6 +13508,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "REPBEIRES20",
     "id": "resistencia-cilindrica-20-30oz",
     "slug": "resistencia-cilindrica-20-30oz",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-cilindrica-de-20-a-30-onzas.html",
     "name": {
       "es": "Resistencia cilíndrica de 20 a 30 onzas",
       "en": "20 to 30 oz cylindrical heating element",
@@ -13516,6 +13533,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020154",
     "id": "plato-base-18x18-cambio-rapido",
     "slug": "plato-base-18x18-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-18x18-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 18x18cm para intercambio rápido",
       "en": "18x18cm base plate for quick change",
@@ -13539,6 +13557,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020155",
     "id": "plato-base-18x38-cambio-rapido",
     "slug": "plato-base-18x38-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-18x38-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 18x38cm para intercambio rápido",
       "en": "18x38cm base plate for quick change",
@@ -13562,6 +13581,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020152",
     "id": "plato-base-18x45-cambio-rapido",
     "slug": "plato-base-18x45-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-18x45-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 18x45cm para intercambio rápido",
       "en": "18x45cm base plate for quick change",
@@ -13585,6 +13605,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020151",
     "id": "plato-base-30x35-cambio-rapido",
     "slug": "plato-base-30x35-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-30x35-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 30x35cm para intercambio rápido",
       "en": "30x35cm base plate for quick change",
@@ -13608,6 +13629,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020158",
     "id": "plato-base-zapatillas-cambio-rapido",
     "slug": "plato-base-zapatillas-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-zapatillas-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 18x38cm especial zapatillas para intercambio rápido",
       "en": "18x38cm special shoe base plate for quick change",
@@ -13631,6 +13653,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020156",
     "id": "plato-base-redondo-24-cambio-rapido",
     "slug": "plato-base-redondo-24-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-redondo-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base redondo de 24cm para intercambio rápido",
       "en": "24cm round base plate for quick change",
@@ -13654,6 +13677,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020157",
     "id": "plato-base-gorras-cambio-rapido",
     "slug": "plato-base-gorras-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-gorras-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base especial gorras para sistema de cambio rápido",
       "en": "Special cap base plate for quick change system",
@@ -13676,6 +13700,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020172",
     "id": "plato-base-camisetas-cambio-rapido",
     "slug": "plato-base-camisetas-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-camisetas-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base especial camisetas para sistema de cambio rápido",
       "en": "Special t-shirt base plate for quick change system",
@@ -13721,6 +13746,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020171",
     "id": "plato-base-12x45-mangas-cambio-rapido",
     "slug": "plato-base-12x45-mangas-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-mangas-12x45-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 12 x 45cm especial mangas para intercambio rápido",
       "en": "12 x 45cm special sleeve base plate for quick change",
@@ -13744,6 +13770,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020164",
     "id": "plato-base-15x50-pantalones-cambio-rapido",
     "slug": "plato-base-15x50-pantalones-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-pantalones-15x50-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 15 x 50cm especial pantalones para intercambio rápido",
       "en": "15 x 50cm special pants base plate for quick change",
@@ -13767,6 +13794,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020170",
     "id": "plato-base-15-5x25-5-cambio-rapido",
     "slug": "plato-base-15-5x25-5-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-gorras-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 15,5x25,5cm para sistema de cambio rápido",
       "en": "15.5x25.5cm base plate for quick change system",
@@ -13790,6 +13818,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020163",
     "id": "plato-base-15x25-cambio-rapido",
     "slug": "plato-base-15x25-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-gorras-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 15x25cm para sistema de cambio rápido",
       "en": "15x25cm base plate for quick change system",
@@ -13813,6 +13842,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020169",
     "id": "plato-base-25x30-cambio-rapido",
     "slug": "plato-base-25x30-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-gorras-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 25x30cm para sistema de cambio rápido",
       "en": "25x30cm base plate for quick change system",
@@ -13836,6 +13866,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "90020162",
     "id": "plato-base-15x15-cambio-rapido",
     "slug": "plato-base-15x15-cambio-rapido",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-gorras-intercambio-rapido-beinsen.html",
     "name": {
       "es": "Plato base de 15x15cm para sistema de cambio rápido",
       "en": "15x15cm base plate for quick change system",
@@ -13859,6 +13890,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "S12253",
     "id": "termometro-digital-infrarrojos-it122",
     "slug": "termometro-digital-infrarrojos-it122",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/termometro-digital-de-infrarrojos-it-122.html",
     "name": {
       "es": "Termómetro digital de infrarrojos IT-122",
       "en": "Digital Infrared Thermometer IT-122",
@@ -13883,6 +13915,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "3DGWST",
     "id": "guantes-protectores-algodon",
     "slug": "guantes-protectores-algodon",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/guantes-protectores-de-algodon.html",
     "name": {
       "es": "Guantes protectores de algodón",
       "en": "Protective cotton gloves",
@@ -13907,6 +13940,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "REPBEISOPMOV",
     "id": "mesa-universal-grande",
     "slug": "mesa-universal-grande-ruedas",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/mesa-universal-con-ruedas-para-plancha-termica.html",
     "name": {
       "es": "Mesa universal grande con ruedas para plancha térmica",
       "en": "Large universal table with wheels for heat press",
@@ -13933,6 +13967,7 @@ const rawAccessoriesData: Accessory[] = [
     "reference": "REPBEIRES12C",
     "id": "resistencia-conica-tazas-12oz",
     "slug": "resistencia-conica-tazas-12oz",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-conica-para-tazas-de-12oz.html",
     "name": {
       "es": "Resistencia cónica para tazas de 12oz",
       "en": "Conical heating element for 12oz mugs",
@@ -13961,6 +13996,7 @@ const rawConsumablesData: Consumable[] = [
     "reference": "BTEFL155",
     "id": "lamina-teflon-38x38",
     "slug": "lamina-teflon-38x38",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/lamina-de-teflon-de-38x38-cm.html",
     "name": {
       "es": "Lámina de teflón de 38x38 cm",
       "en": "38x38 cm Teflon sheet",
@@ -13987,6 +14023,7 @@ const rawConsumablesData: Consumable[] = [
     "reference": "BTEFL156",
     "id": "lamina-teflon-40x50",
     "slug": "lamina-teflon-40x50",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/lamina-de-teflon-de-40x50.html",
     "name": {
       "es": "Lámina de teflón de 40x50 cm",
       "en": "40x50 cm Teflon sheet",
@@ -14013,6 +14050,7 @@ const rawConsumablesData: Consumable[] = [
     "reference": "ACCALR80X1",
     "id": "almohadilla-algodon-80x110",
     "slug": "almohadilla-algodon-80x110",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/almohadilla-algodon-reciclado-80x110.html",
     "name": {
       "es": "Almohadilla de algodón reciclado de 80 x 110cm",
       "en": "80 x 110cm recycled cotton pad",
@@ -14038,6 +14076,7 @@ const rawConsumablesData: Consumable[] = [
     "reference": "30050047",
     "id": "almohadilla-silicona-80x100",
     "slug": "almohadilla-silicona-80x100",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/almohadilla-de-silicona-para-zapatillas.html",
     "name": {
       "es": "Almohadilla de silicona de 80 x 100cm para plato base",
       "en": "80 x 100cm silicone pad for base plate",
@@ -14063,6 +14102,7 @@ const rawConsumablesData: Consumable[] = [
     "reference": "90950104",
     "id": "almohadilla-teflon-termorresistente-40x50",
     "slug": "almohadilla-teflon-termorresistente-40x50",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/almohadilla-de-teflon-termorresistente-de-40x50-cm.html",
     "name": {
       "es": "Almohadilla de teflón termorresistente negra de 40 x 50 cm. tp-20-bk",
       "en": "Black heat-resistant Teflon pad 40 x 50 cm. tp-20-bk",
@@ -14087,6 +14127,7 @@ const rawConsumablesData: Consumable[] = [
     "reference": "BSNALMTFL38",
     "id": "almohadilla-teflon-termorresistente-38x38",
     "slug": "almohadilla-teflon-termorresistente-38x38",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/almohadilla-de-teflon-termorresistente-de-38x38-cm.html",
     "name": {
       "es": "Almohadilla de teflón termorresistente de 38x38 cm.",
       "en": "Heat-resistant Teflon pad 38x38 cm.",
@@ -14110,6 +14151,7 @@ const rawConsumablesData: Consumable[] = [
     "reference": "BSNALMTFL25",
     "id": "almohadilla-teflon-termorresistente-25x25",
     "slug": "almohadilla-teflon-termorresistente-25x25",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/almohadilla-de-teflon-termorresistente-de-25x25-cm.html",
     "name": {
       "es": "Almohadilla de teflón termorresistente de 25x25 cm.",
       "en": "Heat-resistant Teflon pad 25x25 cm.",
@@ -14133,6 +14175,7 @@ const rawConsumablesData: Consumable[] = [
     "reference": "BSNALMTFL15",
     "id": "almohadilla-teflon-termorresistente-15x15",
     "slug": "almohadilla-teflon-termorresistente-15x15",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/almohadilla-de-teflon-termorresistente-de-15x15-cm.html",
     "name": {
       "es": "Almohadilla de teflón termorresistente de 15x15 cm.",
       "en": "Heat-resistant Teflon pad 15x15 cm.",
@@ -14156,6 +14199,7 @@ const rawConsumablesData: Consumable[] = [
     "reference": "REPBEIRES11A",
     "id": "resistencia-cilindrica-tazas-11oz-tipo-a",
     "slug": "resistencia-cilindrica-tazas-11oz-tipo-a",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/resistencia-cilindrica-para-tazas-de-11oz.html",
     "name": {
       "es": "Resistencia cilíndrica para tazas de 11oz tipo A",
       "en": "Cylindrical heating element for 11oz mugs type A",

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BookOpen, Clock, ArrowRight } from "lucide-react";
 import { getAllArticles, CATEGORY_LABELS, type ArticleCategory } from "@/lib/articles";
+import { SupportContactCTA } from "@/components/SupportContactCTA";
 
 export const metadata = {
     title: "Centro de Aprendizaje — Guías y Técnica de Planchas Transfer | Beinsen",
@@ -119,6 +120,7 @@ export default function AprendeIndex() {
                     </div>
                 )}
             </div>
+            <SupportContactCTA />
         </div>
     );
 }

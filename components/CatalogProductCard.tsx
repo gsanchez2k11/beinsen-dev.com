@@ -4,7 +4,7 @@ import React, { memo } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Tag, Maximize2, Target, Box } from "lucide-react";
+import { ArrowUpRight, Tag, Maximize2, Target, Box, Sparkles } from "lucide-react";
 import { getLocalized } from "@/lib/i18n";
 import { enrichWithLocalImages } from "@/lib/productImages";
 import type { Locale } from "@/data/products";
@@ -26,11 +26,12 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
     const size = item.size ? getLocalized(item.size, locale) : null;
 
     const dictionary = {
-        es: { details: "Ver Detalles", consultPvP: "Consultar PVP", highProd: "Alta Producción", industrial: "Industrial Pro" },
-        en: { details: "View Details", consultPvP: "Check Price", highProd: "High Production", industrial: "Industrial Pro" },
+        es: { details: "Ver Detalles", consultPvP: "Consultar PVP", highProd: "Alta Producción", industrial: "Industrial Pro", isNew: "Novedad" },
+        en: { details: "View Details", consultPvP: "Check Price", highProd: "High Production", industrial: "Industrial Pro", isNew: "New" },
     }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
 
     const isIndustrial = item.openingType === "Automática" || item.openingType === "Neumática";
+    const isNew = !!item.isNew;
     const href = item.slug ? `/planchas/${item.slug}` : "#";
 
     return (
@@ -44,7 +45,11 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
         >
             <Link
                 href={href}
-                className="flex flex-col h-full bg-card rounded-[2.5rem] overflow-hidden border border-border/40 hover:border-[#FF6600]/40 shadow-sm hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all duration-500 relative ring-1 ring-border/5"
+                className={`flex flex-col h-full bg-card rounded-[2.5rem] overflow-hidden border shadow-sm transition-all duration-500 relative ring-1 ${
+                    isNew
+                        ? "border-[#FF6600] ring-[#FF6600]/30 shadow-xl shadow-[#FF6600]/20 hover:shadow-2xl hover:shadow-[#FF6600]/40"
+                        : "border-border/40 ring-border/5 hover:border-[#FF6600]/40 hover:shadow-2xl hover:shadow-[#FF6600]/10"
+                }`}
             >
                 {/* Image Container */}
                 <div className={`relative overflow-hidden bg-muted ${isFeatureCard ? 'aspect-[21/9]' : 'aspect-square md:aspect-[4/3]'}`}>
@@ -71,22 +76,31 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
 
-                    {/* Technical Badges */}
-                    <div className="absolute top-6 right-6 flex flex-col gap-2 items-end">
-                        <div className="bg-background/90 backdrop-blur-xl px-4 py-2 rounded-2xl text-sm font-black flex items-center gap-2 shadow-xl border border-border/20 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                            <Tag size={16} className="text-[#FF6600]" />
-                            {(() => {
-                                const shown = item.pvp ?? item.price;
-                                if (shown === undefined || shown === "Consultar PVP") return dictionary.consultPvP;
-                                return typeof shown === 'number' ? `${shown.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES')} €` : shown;
-                            })()}
-                        </div>
-                        
-                        {isIndustrial && (
-                            <div className="bg-[#FF6600] text-white px-3 py-1.5 rounded-xl text-[10px] font-black tracking-widest uppercase shadow-lg shadow-[#FF6600]/20 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 delay-75">
-                                {dictionary.industrial}
+                    {/* NEW Badge */}
+                    {isNew && (
+                        <div className="absolute top-6 left-6 z-10">
+                            <div className="bg-[#FF6600] text-white px-3 py-1.5 rounded-xl text-[10px] font-black tracking-widest uppercase shadow-lg shadow-[#FF6600]/40 flex items-center gap-1.5">
+                                <Sparkles size={12} />
+                                {dictionary.isNew}
                             </div>
-                        )}
+                        </div>
+                    )}
+
+                    {/* Industrial Badge (top-right) */}
+                    {isIndustrial && (
+                        <div className="absolute top-6 right-6 bg-[#FF6600] text-white px-3 py-1.5 rounded-xl text-[10px] font-black tracking-widest uppercase shadow-lg shadow-[#FF6600]/20 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 delay-75">
+                            {dictionary.industrial}
+                        </div>
+                    )}
+
+                    {/* Price Badge (bottom-right) */}
+                    <div className="absolute bottom-6 right-6 bg-background/90 backdrop-blur-xl px-4 py-2 rounded-2xl text-sm font-black flex items-center gap-2 shadow-xl border border-border/20 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                        <Tag size={16} className="text-[#FF6600]" />
+                        {(() => {
+                            const shown = item.pvp ?? item.price;
+                            if (shown === undefined || shown === "Consultar PVP") return dictionary.consultPvP;
+                            return typeof shown === 'number' ? `${shown.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES')} €` : shown;
+                        })()}
                     </div>
                 </div>
 

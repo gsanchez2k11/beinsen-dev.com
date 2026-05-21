@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, X, Search, Check, ArrowRight, Scale, Zap } from "lucide-react";
 import { planchasData } from "@/data/products";
 import { getLocalized } from "@/lib/i18n";
+import { SupportContactCTA } from "@/components/SupportContactCTA";
 import { enrichWithLocalImages } from "@/lib/productImages";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -342,6 +343,7 @@ function CompareContent() {
                     )}
                 </AnimatePresence>
             </div>
+            <SupportContactCTA />
         </div>
     );
 }
