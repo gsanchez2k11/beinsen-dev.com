@@ -80,8 +80,42 @@ function CompareContent() {
             specPrice_fallback: "Check price",
             viewDetail: "View details",
             removeAll: "Clear all",
+        },
+        pt: {
+            tag: "Comparador Beinsen",
+            title: "Comparar modelos",
+            subtitle: "Escolha até 3 máquinas e compare-as linha a linha. Perfeito para decidir com critério.",
+            addMachine: "Adicionar máquina",
+            pickerTitle: "Escolha uma máquina",
+            searchPlaceholder: "Procurar modelo...",
+            empty: "Ainda não adicionou nenhuma máquina.",
+            emptyHint: "Clique num espaço para começar.",
+            specCategory: "Categoria",
+            specSystem: "Sistema",
+            specFormat: "Formato",
+            specPrice: "PVP",
+            specPrice_fallback: "Consultar PVP",
+            viewDetail: "Ver ficha",
+            removeAll: "Remover tudo",
+        },
+        it: {
+            tag: "Comparatore Beinsen",
+            title: "Confronta modelli",
+            subtitle: "Scegli fino a 3 macchine e confrontale riga per riga. Perfetto per decidere con criterio.",
+            addMachine: "Aggiungi macchina",
+            pickerTitle: "Scegli una macchina",
+            searchPlaceholder: "Cerca modello...",
+            empty: "Non hai ancora aggiunto alcuna macchina.",
+            emptyHint: "Clicca su uno slot per iniziare.",
+            specCategory: "Categoria",
+            specSystem: "Sistema",
+            specFormat: "Formato",
+            specPrice: "Prezzo al pubblico",
+            specPrice_fallback: "Richiedi prezzo",
+            viewDetail: "Vedi scheda",
+            removeAll: "Rimuovi tutto",
         }
-    }[locale === "pt" || locale === "it" ? "es" : locale] || { es: {} }.es;
+    }[locale] || { es: {} }.es;
 
     const machines = useMemo(() => planchasData.map(p => enrichWithLocalImages(p as any)), []);
 

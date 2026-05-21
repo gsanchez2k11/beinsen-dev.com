@@ -81,8 +81,38 @@ function NavbarContent() {
             cons: "Consumables",
             cons_desc: "Vinyls, teflon and original parts.",
             view_all: "View full catalog"
+        },
+        pt: {
+            inicio: "Início",
+            catalogo: "Catálogo",
+            asesor: "Assessor",
+            comparar: "Comparar",
+            aprende: "Aprender",
+            soporte: "Suporte Técnico",
+            machines: "Prensas Térmicas",
+            machines_desc: "Soluções industriais de alta produção.",
+            accs: "Acessórios Pro",
+            accs_desc: "Complementos para otimizar o seu fluxo.",
+            cons: "Consumíveis",
+            cons_desc: "Vinis, teflon e peças originais.",
+            view_all: "Ver todo o catálogo"
+        },
+        it: {
+            inicio: "Home",
+            catalogo: "Catalogo",
+            asesor: "Consulente",
+            comparar: "Confronta",
+            aprende: "Impara",
+            soporte: "Supporto Tecnico",
+            machines: "Presse a Caldo",
+            machines_desc: "Soluzioni industriali ad alta produzione.",
+            accs: "Accessori Pro",
+            accs_desc: "Complementi per ottimizzare il tuo flusso.",
+            cons: "Consumabili",
+            cons_desc: "Vinili, teflon e ricambi originali.",
+            view_all: "Vedi l'intero catalogo"
         }
-    }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
+    }[locale] || { es: {} }.es;
 
     const handleMouseEnter = () => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);

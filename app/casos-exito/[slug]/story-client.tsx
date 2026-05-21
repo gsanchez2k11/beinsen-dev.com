@@ -36,7 +36,25 @@ export default function StoryDetailClient({ story }: { story: CaseStudy }) {
             viewMachine: "View Machine",
             client: "Client",
         },
-    } as Record<string, typeof esLabels>)[locale === 'pt' || locale === 'it' ? 'es' : locale] || esLabels;
+        pt: {
+            back: "Casos de Sucesso",
+            challenge: "O Desafio",
+            solution: "A Solução",
+            results: "Resultados-Chave",
+            relatedMachine: "Máquina utilizada",
+            viewMachine: "Ver Máquina",
+            client: "Cliente",
+        },
+        it: {
+            back: "Casi di Successo",
+            challenge: "La Sfida",
+            solution: "La Soluzione",
+            results: "Risultati Chiave",
+            relatedMachine: "Macchina utilizzata",
+            viewMachine: "Vedi Macchina",
+            client: "Cliente",
+        },
+    } as Record<string, typeof esLabels>)[locale] || esLabels;
 
     return (
         <div className="min-h-screen bg-background pt-32 pb-32">

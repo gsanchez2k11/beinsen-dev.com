@@ -28,7 +28,9 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
     const dictionary = {
         es: { details: "Ver Detalles", consultPvP: "Consultar PVP", highProd: "Alta Producción", industrial: "Industrial Pro", isNew: "Novedad" },
         en: { details: "View Details", consultPvP: "Check Price", highProd: "High Production", industrial: "Industrial Pro", isNew: "New" },
-    }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
+        pt: { details: "Ver Detalhes", consultPvP: "Consultar PVP", highProd: "Alta Produção", industrial: "Industrial Pro", isNew: "Novidade" },
+        it: { details: "Vedi Dettagli", consultPvP: "Richiedi Prezzo", highProd: "Alta Produzione", industrial: "Industrial Pro", isNew: "Novità" },
+    }[locale] || { es: {} }.es;
 
     const isIndustrial = item.openingType === "Automática" || item.openingType === "Neumática";
     const isNew = !!item.isNew;

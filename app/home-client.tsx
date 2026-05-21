@@ -105,8 +105,100 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                 cta: "View all cases",
                 results: "Key results"
             }
+        },
+        pt: {
+            hero: {
+                tag: "Beinsen Engineering",
+                title: "Prensas Transfer Profissionais",
+                accent: "Resultados Impecáveis",
+                desc: "Projetamos e fabricamos maquinaria de transferência térmica de alta gama para as oficinas mais exigentes do mundo.",
+                cta_main: "Explorar Catálogo",
+                cta_presupuesto: "Pedir Orçamento",
+                cta_sec: "A Nossa Tecnologia"
+            },
+            categories: {
+                title: "As Nossas Soluções",
+                machines: "Máquinas Transfer",
+                accs: "Acessórios Profissionais",
+                cons: "Consumíveis e Insumos"
+            },
+            leadership: {
+                title: "Liderança em Engenharia",
+                precision: "Precisão Absoluta",
+                precision_desc: "Controlo digital PID que mantém a temperatura com uma variação mínima de ±0,5 °C.",
+                durability: "Construção Blindada",
+                durability_desc: "Chassis de aço estrutural concebido para operar 24/7 sem perda de pressão.",
+                safety: "Segurança Certificada",
+                safety_desc: "Sistemas de proteção ativa contra entalamentos e gestão térmica avançada."
+            },
+            trinidad_teaser: {
+                badge: "Flagship series",
+                title: "Trinidad Pro",
+                desc: "Descubra a máquina que está a redefinir os padrões da indústria têxtil global."
+            },
+            global: {
+                title: "Presença Global",
+                desc: "De Barcelona para o mundo. Exportamos tecnologia de vanguarda para mais de 50 países.",
+                stats: [
+                    { label: "Países", value: "50+", icon: Globe2 },
+                    { label: "Distribuidores", value: "120+", icon: Building2 },
+                    { label: "Clientes", value: "5000+", icon: Users2 }
+                ]
+            },
+            stories: {
+                title: "Impacto Real",
+                subtitle: "A nossa engenharia em funcionamento nas fábricas mais exigentes.",
+                cta: "Ver todos os casos",
+                results: "Resultados-chave"
+            }
+        },
+        it: {
+            hero: {
+                tag: "Beinsen Engineering",
+                title: "Presse Transfer Professionali",
+                accent: "Risultati Impeccabili",
+                desc: "Progettiamo e produciamo macchinari per il trasferimento termico di alta gamma per le officine più esigenti al mondo.",
+                cta_main: "Esplora il Catalogo",
+                cta_presupuesto: "Richiedi un Preventivo",
+                cta_sec: "La Nostra Tecnologia"
+            },
+            categories: {
+                title: "Le Nostre Soluzioni",
+                machines: "Presse Transfer",
+                accs: "Accessori Professionali",
+                cons: "Materiali di Consumo"
+            },
+            leadership: {
+                title: "Leadership in Ingegneria",
+                precision: "Precisione Assoluta",
+                precision_desc: "Controllo digitale PID che mantiene la temperatura con una variazione minima di ±0,5 °C.",
+                durability: "Costruzione Blindata",
+                durability_desc: "Telaio in acciaio strutturale progettato per operare 24/7 senza perdita di pressione.",
+                safety: "Sicurezza Certificata",
+                safety_desc: "Sistemi di protezione attiva contro gli intrappolamenti e gestione termica avanzata."
+            },
+            trinidad_teaser: {
+                badge: "Flagship series",
+                title: "Trinidad Pro",
+                desc: "Scopri la macchina che sta ridefinendo gli standard dell'industria tessile globale."
+            },
+            global: {
+                title: "Presenza Globale",
+                desc: "Da Barcellona al mondo. Esportiamo tecnologia all'avanguardia in oltre 50 paesi.",
+                stats: [
+                    { label: "Paesi", value: "50+", icon: Globe2 },
+                    { label: "Distributori", value: "120+", icon: Building2 },
+                    { label: "Clienti", value: "5000+", icon: Users2 }
+                ]
+            },
+            stories: {
+                title: "Impatto Reale",
+                subtitle: "La nostra ingegneria in funzione nelle fabbriche più esigenti.",
+                cta: "Vedi tutti i casi",
+                results: "Risultati chiave"
+            }
         }
-    }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
+    }[locale] || { es: {} }.es;
 
     return (
         <div className="flex flex-col w-full bg-background">

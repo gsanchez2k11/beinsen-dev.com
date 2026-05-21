@@ -32,8 +32,28 @@ export default function AccesoriosClient() {
             distributionDesc: "Consult your authorized dealer for immediate availability.",
             noResults: "No accessories found.",
             searchPlaceholder: "Search accessories..."
+        },
+        pt: {
+            title: "Engenharia em Acessórios",
+            subtitle: "Cada detalhe conta. Potencie a versatilidade dos seus equipamentos com componentes originais.",
+            infoTitle: "Apoio a Acessórios",
+            infoText: "Todos os acessórios Beinsen possuem certificação de compatibilidade e são concebidos para uso industrial intensivo.",
+            distribution: "Distribuição Oficial",
+            distributionDesc: "Consulte o seu distribuidor autorizado para disponibilidade imediata.",
+            noResults: "Não foram encontrados acessórios.",
+            searchPlaceholder: "Procurar acessórios..."
+        },
+        it: {
+            title: "Ingegneria negli Accessori",
+            subtitle: "Ogni dettaglio conta. Potenzia la versatilità delle tue macchine con componenti originali.",
+            infoTitle: "Supporto Accessori",
+            infoText: "Tutti gli accessori Beinsen sono certificati per compatibilità e progettati per un uso industriale intensivo.",
+            distribution: "Distribuzione Ufficiale",
+            distributionDesc: "Consulta il tuo rivenditore autorizzato per la disponibilità immediata.",
+            noResults: "Nessun accessorio trovato.",
+            searchPlaceholder: "Cerca accessori..."
         }
-    }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
+    }[locale] || { es: {} }.es;
 
     const filteredItems = useMemo(() => {
         return allAccessoriesData

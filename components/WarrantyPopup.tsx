@@ -53,7 +53,29 @@ export function WarrantyPopup() {
             dismiss: "Close notice",
             reopen: "See warranty offer",
         },
-    }[locale === "pt" || locale === "it" ? "es" : locale] || { es: {} }.es;
+        pt: {
+            tag: "Exclusivo Beinsen",
+            upTo: "ATÉ",
+            yearsBig: "3",
+            yearsLabel: "ANOS",
+            sub: "de garantia grátis",
+            desc: "Registe a sua máquina em soporte.beinsen.com",
+            cta: "Ativar agora",
+            dismiss: "Fechar aviso",
+            reopen: "Ver oferta de garantia",
+        },
+        it: {
+            tag: "Esclusiva Beinsen",
+            upTo: "FINO A",
+            yearsBig: "3",
+            yearsLabel: "ANNI",
+            sub: "di garanzia gratuita",
+            desc: "Registra la tua macchina su soporte.beinsen.com",
+            cta: "Attiva ora",
+            dismiss: "Chiudi avviso",
+            reopen: "Vedi offerta di garanzia",
+        },
+    }[locale] || { es: {} }.es;
 
     return (
         <>
