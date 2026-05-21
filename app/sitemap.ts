@@ -2,8 +2,9 @@ import { MetadataRoute } from 'next'
 import { planchasData, allAccessoriesData, allConsumablesData } from '@/data/products'
 import { getArticleSlugs, getArticle } from '@/lib/articles'
 import { storiesData } from '@/data/stories'
+import { SITE_URL } from '@/lib/site'
 
-const BASE_URL = 'https://beinsen.com'
+const BASE_URL = SITE_URL
 
 export default function sitemap(): MetadataRoute.Sitemap {
     // Static routes
@@ -56,24 +57,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 0.6,
         },
-        {
-            url: `${BASE_URL}/privacidad`,
-            lastModified: new Date('2025-01-01'),
-            changeFrequency: 'yearly',
-            priority: 0.2,
-        },
-        {
-            url: `${BASE_URL}/legal`,
-            lastModified: new Date('2025-01-01'),
-            changeFrequency: 'yearly',
-            priority: 0.2,
-        },
-        {
-            url: `${BASE_URL}/condiciones`,
-            lastModified: new Date('2025-01-01'),
-            changeFrequency: 'yearly',
-            priority: 0.2,
-        },
+        // Páginas legales se sirven con robots:noindex (ver layout) y se omiten del sitemap
     ]
 
     // Product detail pages (planchas + accessories + consumables all use /planchas/[slug])

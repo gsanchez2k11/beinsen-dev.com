@@ -221,7 +221,7 @@ function ContactContent() {
                     country: messageFormData.country,
                     product: messageFormData.interestType === 'machine' ? messageFormData.machine : 'Consultoría General',
                     message: messageFormData.message,
-                    recipient: "web@futura.es"
+
                 }),
             });
             if (response.ok) setIsMessageSubmitted(true);
@@ -265,7 +265,7 @@ function ContactContent() {
                     country: "España (Cita Web)",
                     product: `RESERVA: ${appointmentInfo.date} - ${appointmentInfo.time}`,
                     message: `Cita agendada para el ${appointmentInfo.date} a las ${appointmentInfo.time}.\nNotas: ${bookingFormData.notes}`,
-                    recipient: "web@futura.es"
+
                 }),
             });
             if (response.ok || process.env.NODE_ENV === 'development') {
