@@ -726,6 +726,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Sublimación cerámica al milímetro",
       "en": "Millimeter-perfect ceramic sublimation"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Sublimación en cerámica", "en": "Ceramic sublimation" },
+        "description": {
+          "es": "Dorian está diseñada específicamente para platos cerámicos de hasta 15,2 cm. Su presión uniforme evita roturas y garantiza que tanto el centro como los bordes queden perfectamente impresos.",
+          "en": "Dorian is purpose-built for ceramic plates up to 15.2 cm. Its uniform pressure prevents breakage and ensures both center and rim print perfectly."
+        }
+      }
+    ],
     "name": {
       "es": "Dorian prensa térmica para platos",
       "en": "Dorian heat press for plates",
@@ -1335,6 +1344,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Cuatro resistencias, infinitos formatos",
       "en": "Four elements, endless mug formats"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Cuatro tazas en cada ciclo", "en": "Four mugs every cycle" },
+        "description": {
+          "es": "Las 4 resistencias intercambiables de Alina te permiten cubrir desde tazas estándar hasta cónicas sin cambiar de máquina. Calienta uniformemente y ofrece resultados nítidos en cada serie.",
+          "en": "Alina's 4 interchangeable elements cover everything from standard mugs to conical ones without switching machines. Heats evenly and delivers crisp results in every batch."
+        }
+      }
+    ],
     "name": {
       "es": "Alina Plancha Para Tazas 4 en 1",
       "en": "Alina Mug Heat Press 4-in-1",
@@ -2213,6 +2231,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Doble estación neumática sin pausas",
       "en": "Dual pneumatic stations, zero downtime"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Producción en paralelo", "en": "Parallel production" },
+        "description": {
+          "es": "Mientras un plato cierra, tú colocas la siguiente prenda en el otro. Caen multiplica tu ritmo de personalización gracias a su sistema neumático de doble estación.",
+          "en": "While one platen closes, you load the next garment on the other. Caen multiplies your personalization speed thanks to its dual-station pneumatic system."
+        }
+      }
+    ],
     "name": {
       "es": "Caen estación de trabajo doble neumática",
       "en": "Caen double station pneumatic heat press",
@@ -2930,6 +2957,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Gran formato, presión neumática",
       "en": "Large format, pneumatic precision"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Plato 50×80 cm", "en": "50×80 cm platen" },
+        "description": {
+          "es": "Personaliza piezas que no caben en una plancha estándar. Doha estira tu catálogo a banderas, lonas, sudaderas grandes y todo lo que necesite formato grande sin perder la presión uniforme.",
+          "en": "Personalize pieces that don't fit a standard press. Doha extends your catalog to flags, banners, large hoodies and anything needing big-format pressing without losing uniform pressure."
+        }
+      }
+    ],
     "name": {
       "es": "Doha Plancha transfer de gran formato",
       "en": "Pneumatic opening heat presses",
@@ -3273,6 +3309,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Una máquina, todos los formatos",
       "en": "One machine, every format"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Multi-formato en un solo equipo", "en": "Multi-format in one rig" },
+        "description": {
+          "es": "Jamaica reemplaza varias máquinas con un solo equipo. Cambia entre formatos (textil, tazas, gorras, platos) intercambiando accesorios y optimiza tu espacio sin sacrificar versatilidad.",
+          "en": "Jamaica replaces several machines with one. Switch between formats (textile, mugs, caps, plates) by swapping attachments and optimize your space without sacrificing versatility."
+        }
+      }
+    ],
     "name": {
       "es": "Jamaica Plancha Térmica",
       "en": "Jamaica Heat Press",
@@ -3647,6 +3692,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Potencia neumática profesional",
       "en": "Pro-grade pneumatic power"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Cierre neumático regulado", "en": "Regulated pneumatic closure" },
+        "description": {
+          "es": "El sistema neumático de Esparta te da una presión constante y ajustable, ideal para series largas donde un cierre manual te dejaría agotado. Sube y baja sola, tú solo colocas la prenda.",
+          "en": "Esparta's pneumatic system delivers constant, adjustable pressure—ideal for long runs where manual closing would wear you out. It opens and closes on its own; you just place the garment."
+        }
+      }
+    ],
     "name": {
       "es": "Esparta prensa térmica neumática",
       "en": "Esparta pneumatic heat press",
@@ -5171,6 +5225,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Ocho resistencias para cualquier taza",
       "en": "Eight elements for any mug"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Ocho formatos de taza", "en": "Eight mug formats" },
+        "description": {
+          "es": "De chupitos de 1,5oz a termos de 30oz: Sicilia cubre todos los formatos del mercado en una sola máquina. Intercambia la resistencia según lo que vayas a personalizar y ahorra invertir en varias prensas.",
+          "en": "From 1.5oz shots to 30oz tumblers, Sicilia covers every mug format on the market in a single machine. Swap the heating element to match what you're personalizing and save buying multiple presses."
+        }
+      }
+    ],
     "name": {
       "es": "Sicilia Plancha Para Tazas 8 en 1",
       "en": "Sicilia Mug Heat Press 8-in-1",
@@ -10262,6 +10325,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Planchado en línea continuo",
       "en": "Continuous in-line pressing"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Calandra continua", "en": "Continuous calender" },
+        "description": {
+          "es": "Tobago no plancha pieza a pieza: alimentas la cinta y la máquina se encarga del resto. Personalización en serie continua a la velocidad que define tu volumen, no la de tu mano.",
+          "en": "Tobago doesn't press piece by piece: you feed the belt and the machine handles the rest. Continuous serial personalization at the speed your volume demands, not your hand."
+        }
+      }
+    ],
     "name": {
       "es": "Tobago Estación de Planchado Continuo",
       "en": "Tobago Continuous Press Station",
@@ -11804,6 +11876,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Personalización deportiva especializada",
       "en": "Specialized sports personalization"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Específica para espinilleras", "en": "Built for shin guards" },
+        "description": {
+          "es": "Estambul resuelve un formato que ninguna plancha estándar cubre. Su plato curvo se adapta a la forma de la espinillera para que el transfer quede perfectamente fijado sin arrugas ni zonas frías.",
+          "en": "Estambul handles a format no standard press covers. Its curved platen fits the shin guard's shape so the transfer sticks perfectly—no wrinkles, no cold spots."
+        }
+      }
+    ],
     "name": {
       "es": "Estambul prensa térmica para espinilleras",
       "en": "Estambul shin guard heat press",
@@ -12168,6 +12249,15 @@ const rawPlanchasData: Plancha[] = [
       "es": "Swing-away eléctrica, acceso total",
       "en": "Electric swing-away, full access"
     },
+    "storySegments": [
+      {
+        "title": { "es": "Plato giratorio sin compresor", "en": "Swing-away, no compressor" },
+        "description": {
+          "es": "Felina aparta el plato superior hacia un lado, dejándote acceso total a la zona de trabajo sin riesgo de quemaduras. Y todo eléctrico: sin compresor, sin ruido, sin mantenimiento neumático.",
+          "en": "Felina swings the upper platen aside, giving you full access to the work area with no burn risk. All-electric: no compressor, no noise, no pneumatic maintenance."
+        }
+      }
+    ],
     "name": {
       "es": "Felina Prensa Swing-Away Eléctrica",
       "en": "Felina Electric Swing-Away Heat Press",
