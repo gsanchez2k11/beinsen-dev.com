@@ -21,11 +21,51 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Foglio di teflon per proteggere le piastre termiche. Questo sottile materiale isolante ha più impatto di quanto immaginiamo sui risultati, sulla qualità dei prodotti sublimati e sulla durata delle piastre termiche."
     },
     "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Lámina de teflón PTFE / PTFE Teflon sheet" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)" },
-      { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Proteger planchas y prendas / Protect plates and garments" },
-      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" }
+      {
+        "label": {
+          "es": "Tipo",
+          "en": "Type",
+          "pt": "Tipo",
+          "it": "Tipo"
+        },
+        "value": "Lámina de teflón PTFE / PTFE Teflon sheet"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "38 x 38 cm"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)"
+      },
+      {
+        "label": {
+          "es": "Función principal",
+          "en": "Main function",
+          "pt": "Função principal",
+          "it": "Funzione principale"
+        },
+        "value": "Proteger planchas y prendas / Protect plates and garments"
+      },
+      {
+        "label": {
+          "es": "Beneficios",
+          "en": "Benefits",
+          "pt": "Benefícios",
+          "it": "Vantaggi"
+        },
+        "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas"
+      }
     ]
   },
   {
@@ -48,11 +88,51 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Foglio di teflon per proteggere le piastre termiche. Questo sottile materiale isolante ha più impatto di quanto immaginiamo sui risultati, sulla qualità dei prodotti sublimati e sulla durata delle piastre termiche."
     },
     "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Lámina de teflón PTFE / PTFE Teflon sheet" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)" },
-      { "label": { "es": "Función principal", "en": "Main function", "pt": "Função principal", "it": "Funzione principale" }, "value": "Proteger planchas y prendas / Protect plates and garments" },
-      { "label": { "es": "Beneficios", "en": "Benefits", "pt": "Benefícios", "it": "Vantaggi" }, "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas" }
+      {
+        "label": {
+          "es": "Tipo",
+          "en": "Type",
+          "pt": "Tipo",
+          "it": "Tipo"
+        },
+        "value": "Lámina de teflón PTFE / PTFE Teflon sheet"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "40 x 50 cm"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "PTFE (Politetrafluoroetileno) / PTFE (Polytetrafluoroethylene)"
+      },
+      {
+        "label": {
+          "es": "Función principal",
+          "en": "Main function",
+          "pt": "Função principal",
+          "it": "Funzione principale"
+        },
+        "value": "Proteger planchas y prendas / Protect plates and garments"
+      },
+      {
+        "label": {
+          "es": "Beneficios",
+          "en": "Benefits",
+          "pt": "Benefícios",
+          "it": "Vantaggi"
+        },
+        "value": "Evita manchas de tintas, previene quemaduras, extiende vida útil de planchas"
+      }
     ]
   },
   {
@@ -75,10 +155,42 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Cuscinetto 80x110cm per presse termiche di grande formato. Garantisce pressione uniforme durante la pressatura."
     },
     "technicalSpecs": [
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Algodón reciclado / Recycled Cotton / Algodão reciclado / Cotone riciclato" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "80 x 110 cm" },
-      { "label": { "es": "Grosor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "50 mm" },
-      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" }
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Algodón reciclado / Recycled Cotton / Algodão reciclado / Cotone riciclato"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "80 x 110 cm"
+      },
+      {
+        "label": {
+          "es": "Grosor",
+          "en": "Thickness",
+          "pt": "Espessura",
+          "it": "Spessore"
+        },
+        "value": "50 mm"
+      },
+      {
+        "label": {
+          "es": "Temperatura máxima",
+          "en": "Maximum Temperature",
+          "pt": "Temperatura máxima",
+          "it": "Temperatura massima"
+        },
+        "value": "220ºC"
+      }
     ]
   },
   {
@@ -101,10 +213,42 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Cuscinetto in silicone 80 x 100 cm per piastra base. Resistente al calore fino a 220ºC con spessore di 10mm, garantisce una stampa uniforme e perfetta su qualsiasi pressa termica."
     },
     "technicalSpecs": [
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de grado industrial / Industrial grade silicone" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "80 x 100 cm" },
-      { "label": { "es": "Espesor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" }, "value": "10 mm" },
-      { "label": { "es": "Temperatura máxima", "en": "Maximum Temperature", "pt": "Temperatura máxima", "it": "Temperatura massima" }, "value": "220ºC" }
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Silicona de grado industrial / Industrial grade silicone"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "80 x 100 cm"
+      },
+      {
+        "label": {
+          "es": "Espesor",
+          "en": "Thickness",
+          "pt": "Espessura",
+          "it": "Spessore"
+        },
+        "value": "10 mm"
+      },
+      {
+        "label": {
+          "es": "Temperatura máxima",
+          "en": "Maximum Temperature",
+          "pt": "Temperatura máxima",
+          "it": "Temperatura massima"
+        },
+        "value": "220ºC"
+      }
     ]
   },
   {
@@ -127,9 +271,33 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Ideale per proteggere bottoni, orli, cerniere, ecc. Previene i graffi sulla piastra metallica superiore della pressa. Antiaderente. Facile da pulire."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" },
-      { "label": { "es": "Referencia", "en": "Reference", "pt": "Referência", "it": "Riferimento" }, "value": "TP-20-BK" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "40 x 50 cm"
+      },
+      {
+        "label": {
+          "es": "Referencia",
+          "en": "Reference",
+          "pt": "Referência",
+          "it": "Riferimento"
+        },
+        "value": "TP-20-BK"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Teflón termorresistente / Heat-resistant Teflon"
+      }
     ]
   },
   {
@@ -152,8 +320,24 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Ideale per proteggere bottoni, orli, cerniere, ecc. Previene i graffi sulla piastra metallica superiore della pressa. Antiaderente. Facile da pulire."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "38 x 38 cm" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "38 x 38 cm"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Teflón termorresistente / Heat-resistant Teflon"
+      }
     ]
   },
   {
@@ -176,8 +360,24 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Ideale per proteggere bottoni, orli, cerniere, ecc. Previene i graffi sulla piastra metallica superiore della pressa. Antiaderente. Facile da pulire."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 25 cm" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "25 x 25 cm"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Teflón termorresistente / Heat-resistant Teflon"
+      }
     ]
   },
   {
@@ -191,7 +391,7 @@ export const rawConsumablesData: Consumable[] = [
       "pt": "Almofada de teflon termorresistente 15x15 cm.",
       "it": "Cuscinetto in teflon termoresistente 15x15 cm."
     },
-    "price": 10.70,
+    "price": 10.7,
     "image": "/products/consumibles/almohadilla-teflon-termorresistente-15x15/01.png",
     "description": {
       "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
@@ -200,8 +400,24 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Ideale per proteggere bottoni, orli, cerniere, ecc. Previene i graffi sulla piastra metallica superiore della pressa. Antiaderente. Facile da pulire."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Teflón termorresistente / Heat-resistant Teflon" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "15 x 15 cm"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Teflón termorresistente / Heat-resistant Teflon"
+      }
     ]
   },
   {
@@ -224,8 +440,24 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza di ricambio o accessoria per presse per tazze Beinsen. Permette di personalizzare tazze da 11 once in modo semplice: basta collegare e iniziare a lavorare. Si consiglia di preriscaldare per alcuni minuti al primo utilizzo."
     },
     "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cilíndrica 11oz / Cylindrical 11oz" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Andra, Sore (A)" }
+      {
+        "label": {
+          "es": "Tipo",
+          "en": "Type",
+          "pt": "Tipo",
+          "it": "Tipo"
+        },
+        "value": "Cilíndrica 11oz / Cylindrical 11oz"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Andra, Sore (A)"
+      }
     ]
   }
 ];
