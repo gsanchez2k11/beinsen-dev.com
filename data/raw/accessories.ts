@@ -21,8 +21,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Per le presse per tazze Beinsen, come pezzo di ricambio o accessorio, puoi personalizzare tazze da 11 once con la nostra resistenza. Ricordati di lasciarla riscaldare per qualche minuto al primo utilizzo."
     },
     "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "B (Conector hembra flotante / Floating female connector)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barein, Sicilia, Maine, Clara, Sore, Barahona" }
+      {
+        "label": {
+          "es": "Tipo",
+          "en": "Type",
+          "pt": "Tipo",
+          "it": "Tipo"
+        },
+        "value": "B (Conector hembra flotante / Floating female connector)"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Alina, Aruba, Barein, Sicilia, Maine, Clara, Sore, Barahona"
+      }
     ]
   },
   {
@@ -45,8 +61,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Per le presse per tazze Beinsen, come pezzo di ricambio o accessorio, puoi personalizzare tazze da 6 a 10 once con la nostra resistenza. Ricordati di lasciarla riscaldare per qualche minuto al primo utilizzo."
     },
     "technicalSpecs": [
-      { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "6 a 10 onzas" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Barahona, Barein, Sore, Maine" }
+      {
+        "label": {
+          "es": "Capacidad",
+          "en": "Capacity",
+          "pt": "Capacidade",
+          "it": "Capacità"
+        },
+        "value": "6 a 10 onzas"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Alina, Aruba, Barahona, Barein, Sore, Maine"
+      }
     ]
   },
   {
@@ -69,8 +101,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Per le presse per tazze Beinsen, come pezzo di ricambio o accessorio, puoi personalizzare tazze da 11 once con la nostra resistenza. Ricordati di lasciarla riscaldare per qualche minuto al primo utilizzo."
     },
     "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "A (Conector macho / Male connector)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sore, Andra" }
+      {
+        "label": {
+          "es": "Tipo",
+          "en": "Type",
+          "pt": "Tipo",
+          "it": "Tipo"
+        },
+        "value": "A (Conector macho / Male connector)"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Sore, Andra"
+      }
     ]
   },
   {
@@ -93,8 +141,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Per le presse per tazze Beinsen, come pezzo di ricambio o accessorio, puoi personalizzare tazze coniche da 17 once con la nostra resistenza. Ricordati di lasciarla riscaldare per qualche minuto al primo utilizzo."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "16.5cm largo / 17oz" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Aruba, Maine" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "16.5cm largo / 17oz"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Alina, Sicilia, Aruba, Maine"
+      }
     ]
   },
   {
@@ -117,9 +181,33 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Espandi le tue capacità di personalizzazione con questa resistenza per tazze per le presse transfer Beinsen. Appositamente progettato per sublimare due tazze da 11 once contemporaneamente."
     },
     "technicalSpecs": [
-      { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "22 cm" },
-      { "label": { "es": "Diámetro", "en": "Diameter", "pt": "Diâmetro", "it": "Diametro" }, "value": "7.5 - 10 cm" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Sicilia, Maine, Barahona" }
+      {
+        "label": {
+          "es": "Altura",
+          "en": "Height",
+          "pt": "Altura",
+          "it": "Altezza"
+        },
+        "value": "22 cm"
+      },
+      {
+        "label": {
+          "es": "Diámetro",
+          "en": "Diameter",
+          "pt": "Diâmetro",
+          "it": "Diametro"
+        },
+        "value": "7.5 - 10 cm"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Alina, Sicilia, Maine, Barahona"
+      }
     ]
   },
   {
@@ -142,7 +230,15 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Ottimizza la tua pressa termica modello Beinsen Riad con la nostra piastra inferiore per cappellini. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Riad, Pocola"
+      }
     ]
   },
   {
@@ -165,8 +261,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza 15x20cm. per pressa termica per etichette e cappellini Beinsen Riad. Ideale per loghi e design su tasche."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Gante" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Riad, Gante"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "15 x 20 cm"
+      }
     ]
   },
   {
@@ -189,7 +301,15 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza per sublimare cappellini per pressa termica Beinsen Riad."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Pocola" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Riad, Pocola"
+      }
     ]
   },
   {
@@ -212,7 +332,15 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Ottimizza la tua pressa termica modello Beinsen Obrei con la nostra piastra inferiore per cappellini. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Obrei"
+      }
     ]
   },
   {
@@ -235,9 +363,33 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza di calore per cappellini per pressa Combo di 1ª generazione. Pezzo di ricambio in metallo. Superficie di stiratura approssimativa: 120 x 70 mm. Misure cavo di collegamento: 310 mm di lunghezza."
     },
     "technicalSpecs": [
-      { "label": { "es": "Medidas", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "122x150x100mm" },
-      { "label": { "es": "Potencia", "en": "Power", "pt": "Potência", "it": "Potenza" }, "value": "300 W (220V)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Jamaica" }
+      {
+        "label": {
+          "es": "Medidas",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "122x150x100mm"
+      },
+      {
+        "label": {
+          "es": "Potencia",
+          "en": "Power",
+          "pt": "Potência",
+          "it": "Potenza"
+        },
+        "value": "300 W (220V)"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Jamaica"
+      }
     ]
   },
   {
@@ -260,9 +412,33 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza di calore per cappellini per pressa Beinsen Obrei. Pezzo di ricambio in metallo. Superficie di stiratura approssimativa: 120 x 70 mm."
     },
     "technicalSpecs": [
-      { "label": { "es": "Medidas", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "122x150x100mm" },
-      { "label": { "es": "Potencia", "en": "Power", "pt": "Potência", "it": "Potenza" }, "value": "300 W (220V)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" }
+      {
+        "label": {
+          "es": "Medidas",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "122x150x100mm"
+      },
+      {
+        "label": {
+          "es": "Potencia",
+          "en": "Power",
+          "pt": "Potência",
+          "it": "Potenza"
+        },
+        "value": "300 W (220V)"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Obrei"
+      }
     ]
   },
   {
@@ -285,8 +461,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza 15x15cm. per pressa termica Beinsen Obrei."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "15 x 15 cm"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Obrei"
+      }
     ]
   },
   {
@@ -309,8 +501,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Ottimizza la tua pressa termica modello Beinsen Riad con la nostra piastra inferiore da 15x20cm. Progettata specificatamente per questo modello, la nostra piastra inferiore intercambiabile ti consente di adattare la tua pressa termica a diverse dimensioni di prodotti."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Riad, Gante" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 20 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Riad, Gante"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "15 x 20 cm"
+      }
     ]
   },
   {
@@ -333,8 +541,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15x15 cm per pressa termica Beinsen Obrei. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Obrei" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Obrei"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "15 x 15 cm"
+      }
     ]
   },
   {
@@ -357,8 +581,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base intercambiabile da 18 x 18 cm per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per loghi e piccoli disegni."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Barbados"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "18 x 18 cm"
+      }
     ]
   },
   {
@@ -381,8 +621,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base rotonda da 24 cm di diametro per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per piatti, cuscini e disegni circolari."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Barbados"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "24 cm diámetro"
+      }
     ]
   },
   {
@@ -405,7 +661,15 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base per scarpe per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Se personalizzi prodotti, una piastra per scarpe è un eccellente investimento."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Barbados"
+      }
     ]
   },
   {
@@ -428,8 +692,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base da 18 x 38 cm per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per magliette da bambino e taglie piccole."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Barbados"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "18 x 38 cm"
+      }
     ]
   },
   {
@@ -452,8 +732,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base da 18 x 45 cm per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per capi e tessuti stretti e molto lunghi."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Barbados"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "18 x 45 cm"
+      }
     ]
   },
   {
@@ -476,8 +772,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base da 30 x 35 cm per la tua pressa transfer Beinsen Barbados. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Perfetta per materiali di medie dimensioni che richiedono tensione."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Barbados" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Barbados"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "30 x 35 cm"
+      }
     ]
   },
   {
@@ -500,8 +812,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Questo stampo per lastra in polimero a sublimazione viene utilizzato in una termopressa sottovuoto 3D per impedire la deformazione delle lastre in polimero durante il processo di sublimazione. Lo stampo è diviso in diversi cerchi di diverse dimensioni, consentendo di regolare lo stampo per adattarsi a piatti di diverse dimensioni."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Platos de 15 cm - 25 cm (6\"-10\") / 15 cm - 25 cm (6\"-10\") plates" },
-      { "label": { "es": "Diámetros internos", "en": "Internal diameters", "pt": "Diâmetros internos", "it": "Diametri interni" }, "value": "13,5 cm, 15,5 cm, 17 cm, 20 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Platos de 15 cm - 25 cm (6\"-10\") / 15 cm - 25 cm (6\"-10\") plates"
+      },
+      {
+        "label": {
+          "es": "Diámetros internos",
+          "en": "Internal diameters",
+          "pt": "Diâmetros internos",
+          "it": "Diametri interni"
+        },
+        "value": "13,5 cm, 15,5 cm, 17 cm, 20 cm"
+      }
     ]
   },
   {
@@ -524,12 +852,60 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Stampi 3D in silicone per piatti in forno 3D. Questi stampi sono l'accessorio utilizzato per personalizzare i piatti nel forno di sublimazione. Utilizzandoli, puoi garantire che la carta di sublimazione rimanga saldamente fissata e ottenere una stampa perfetta, specialmente ai bordi con lo stampo quadrato universale."
     },
     "technicalSpecs": [
-      { "label": { "es": "Molde redondo", "en": "Round mold", "pt": "Molde redondo", "it": "Stampo rotondo" }, "value": "Hasta 21 cm de diámetro / Up to 21 cm diameter" },
-      { "label": { "es": "Molde cuadrado", "en": "Square mold", "pt": "Molde quadrado", "it": "Stampo quadrato" }, "value": "Universal para todos los tamaños de platos / Universal for all plate sizes" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Gran resistencia, tubo de enganche para vacío, fijación firmemente sujeta" },
-      { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "200ºC" },
-      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" }
+      {
+        "label": {
+          "es": "Molde redondo",
+          "en": "Round mold",
+          "pt": "Molde redondo",
+          "it": "Stampo rotondo"
+        },
+        "value": "Hasta 21 cm de diámetro / Up to 21 cm diameter"
+      },
+      {
+        "label": {
+          "es": "Molde cuadrado",
+          "en": "Square mold",
+          "pt": "Molde quadrado",
+          "it": "Stampo quadrato"
+        },
+        "value": "Universal para todos los tamaños de platos / Universal for all plate sizes"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Silicona de alta calidad / High quality silicone"
+      },
+      {
+        "label": {
+          "es": "Características",
+          "en": "Features",
+          "pt": "Características",
+          "it": "Caratteristiche"
+        },
+        "value": "Gran resistencia, tubo de enganche para vacío, fijación firmemente sujeta"
+      },
+      {
+        "label": {
+          "es": "Temperatura sublimación",
+          "en": "Sublimation temperature",
+          "pt": "Temperatura sublimação",
+          "it": "Temperatura sublimazione"
+        },
+        "value": "200ºC"
+      },
+      {
+        "label": {
+          "es": "Tiempo de curado",
+          "en": "Curing time",
+          "pt": "Tempo de cura",
+          "it": "Tempo di polimerizzazione"
+        },
+        "value": "7 minutos"
+      }
     ]
   },
   {
@@ -552,13 +928,69 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Stampo 3D in silicone per tazze coniche e boccali di birra 12 e 17oz per forno 3D. Questo accessorio viene utilizzato per personalizzare tazze coniche e boccali di birra nel forno di sublimazione, garantendo che la carta di sublimazione rimanga saldamente fissata per una stampa perfetta. Può essere utilizzato anche per qualsiasi altro tipo di tazza, inclusi manici e fondi."
     },
     "technicalSpecs": [
-      { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "Tazas cónicas y jarras 12-17oz" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "145 x 110 x 175 mm" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento" },
-      { "label": { "es": "Función", "en": "Function", "pt": "Função", "it": "Funzione" }, "value": "Personalización de tazas, asas, interiores y exteriores" },
-      { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "200ºC" },
-      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" }
+      {
+        "label": {
+          "es": "Capacidad",
+          "en": "Capacity",
+          "pt": "Capacidade",
+          "it": "Capacità"
+        },
+        "value": "Tazas cónicas y jarras 12-17oz"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "145 x 110 x 175 mm"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Silicona de alta calidad / High quality silicone"
+      },
+      {
+        "label": {
+          "es": "Características",
+          "en": "Features",
+          "pt": "Características",
+          "it": "Caratteristiche"
+        },
+        "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento"
+      },
+      {
+        "label": {
+          "es": "Función",
+          "en": "Function",
+          "pt": "Função",
+          "it": "Funzione"
+        },
+        "value": "Personalización de tazas, asas, interiores y exteriores"
+      },
+      {
+        "label": {
+          "es": "Temperatura sublimación",
+          "en": "Sublimation temperature",
+          "pt": "Temperatura sublimação",
+          "it": "Temperatura sublimazione"
+        },
+        "value": "200ºC"
+      },
+      {
+        "label": {
+          "es": "Tiempo de curado",
+          "en": "Curing time",
+          "pt": "Tempo de cura",
+          "it": "Tempo di polimerizzazione"
+        },
+        "value": "7 minutos"
+      }
     ]
   },
   {
@@ -581,13 +1013,69 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Stampo 3D in silicone per tazze dritte personalizzabili in forno 3D. Questo accessorio viene utilizzato per personalizzare tazze dritte nel forno di sublimazione, garantendo che la carta di sublimazione rimanga saldamente fissata per una stampa perfetta. Può essere utilizzato anche per qualsiasi altro tipo di tazza, inclusi manici e interni."
     },
     "technicalSpecs": [
-      { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "17,8 cm" },
-      { "label": { "es": "Diámetro superior", "en": "Top diameter", "pt": "Diâmetro superior", "it": "Diametro superiore" }, "value": "11 cm" },
-      { "label": { "es": "Diámetro inferior", "en": "Bottom diameter", "pt": "Diâmetro inferior", "it": "Diametro inferiore" }, "value": "9 cm" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona de alta calidad / High quality silicone" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento" },
-      { "label": { "es": "Temperatura sublimación", "en": "Sublimation temperature", "pt": "Temperatura sublimação", "it": "Temperatura sublimazione" }, "value": "220ºC" },
-      { "label": { "es": "Tiempo de curado", "en": "Curing time", "pt": "Tempo de cura", "it": "Tempo di polimerizzazione" }, "value": "7 minutos" }
+      {
+        "label": {
+          "es": "Altura",
+          "en": "Height",
+          "pt": "Altura",
+          "it": "Altezza"
+        },
+        "value": "17,8 cm"
+      },
+      {
+        "label": {
+          "es": "Diámetro superior",
+          "en": "Top diameter",
+          "pt": "Diâmetro superior",
+          "it": "Diametro superiore"
+        },
+        "value": "11 cm"
+      },
+      {
+        "label": {
+          "es": "Diámetro inferior",
+          "en": "Bottom diameter",
+          "pt": "Diâmetro inferior",
+          "it": "Diametro inferiore"
+        },
+        "value": "9 cm"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Silicona de alta calidad / High quality silicone"
+      },
+      {
+        "label": {
+          "es": "Características",
+          "en": "Features",
+          "pt": "Características",
+          "it": "Caratteristiche"
+        },
+        "value": "Tapa hermética, tubo de vacío integrado, fácil acoplamiento"
+      },
+      {
+        "label": {
+          "es": "Temperatura sublimación",
+          "en": "Sublimation temperature",
+          "pt": "Temperatura sublimação",
+          "it": "Temperatura sublimazione"
+        },
+        "value": "220ºC"
+      },
+      {
+        "label": {
+          "es": "Tiempo de curado",
+          "en": "Curing time",
+          "pt": "Tempo de cura",
+          "it": "Tempo di polimerizzazione"
+        },
+        "value": "7 minutos"
+      }
     ]
   },
   {
@@ -610,11 +1098,51 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Morsetto multipurpose che consente di sublimare fino a 3 tazze da 11oz contemporaneamente, appositamente progettato per ottimizzare il flusso di lavoro nel trasferimento di design su tazze utilizzando un forno 3D. Grazie alla sua realizzazione con materiali in silicone ecologico e facilità d'uso, questo prodotto consente di ottenere un prodotto finale più preciso e migliorato. Fornisce un contatto più stretto tra la tazza e la carta per il trasferimento di sublimazione sottovuoto, garantendo un effetto di stampa impressionante."
     },
     "technicalSpecs": [
-      { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "Hasta 3 tazas de 11oz / Up to 3 mugs 11oz" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona ecológica de alta calidad / High quality ecological silicone" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Botellas 200/300/400ml, tazas 11oz, huchas 11oz" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Resistente a altas temperaturas, respetuoso con el medio ambiente, fácil de usar" },
-      { "label": { "es": "Uso recomendado", "en": "Recommended use", "pt": "Uso recomendado", "it": "Uso consigliato" }, "value": "Evite usar objetos afilados. Asegúrese de fijar firmemente el papel de sublimación antes de usar." }
+      {
+        "label": {
+          "es": "Capacidad",
+          "en": "Capacity",
+          "pt": "Capacidade",
+          "it": "Capacità"
+        },
+        "value": "Hasta 3 tazas de 11oz / Up to 3 mugs 11oz"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Silicona ecológica de alta calidad / High quality ecological silicone"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Botellas 200/300/400ml, tazas 11oz, huchas 11oz"
+      },
+      {
+        "label": {
+          "es": "Características",
+          "en": "Features",
+          "pt": "Características",
+          "it": "Caratteristiche"
+        },
+        "value": "Resistente a altas temperaturas, respetuoso con el medio ambiente, fácil de usar"
+      },
+      {
+        "label": {
+          "es": "Uso recomendado",
+          "en": "Recommended use",
+          "pt": "Uso recomendado",
+          "it": "Uso consigliato"
+        },
+        "value": "Evite usar objetos afilados. Asegúrese de fijar firmemente el papel de sublimación antes de usar."
+      }
     ]
   },
   {
@@ -637,12 +1165,60 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Stampo di trasferimento termico con morsa multiuso per forno 3D. Consente di sublimare fino a 3 bottiglie di alluminio contemporaneamente, ottimizzando il flusso di lavoro. Fornisce un contatto più stretto tra la bottiglia e la carta di trasferimento per sublimazione sottovuoto, garantendo effetti di stampa straordinari."
     },
     "technicalSpecs": [
-      { "label": { "es": "Capacidad", "en": "Capacity", "pt": "Capacidade", "it": "Capacità" }, "value": "3 botellas / 3 bottles" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Botellas de aluminio 400/500/600/750ml" },
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Silicona ecológica / Eco-friendly silicone" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Resistente a altas temperaturas, fácil de usar" },
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Abrazadera multiusos / Multi-purpose clamp" },
-      { "label": { "es": "Aplicación", "en": "Application", "pt": "Aplicação", "it": "Applicazione" }, "value": "Horno 3D sublimación de botellas" }
+      {
+        "label": {
+          "es": "Capacidad",
+          "en": "Capacity",
+          "pt": "Capacidade",
+          "it": "Capacità"
+        },
+        "value": "3 botellas / 3 bottles"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Botellas de aluminio 400/500/600/750ml"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Silicona ecológica / Eco-friendly silicone"
+      },
+      {
+        "label": {
+          "es": "Características",
+          "en": "Features",
+          "pt": "Características",
+          "it": "Caratteristiche"
+        },
+        "value": "Resistente a altas temperaturas, fácil de usar"
+      },
+      {
+        "label": {
+          "es": "Tipo",
+          "en": "Type",
+          "pt": "Tipo",
+          "it": "Tipo"
+        },
+        "value": "Abrazadera multiusos / Multi-purpose clamp"
+      },
+      {
+        "label": {
+          "es": "Aplicación",
+          "en": "Application",
+          "pt": "Aplicação",
+          "it": "Applicazione"
+        },
+        "value": "Horno 3D sublimación de botellas"
+      }
     ]
   },
   {
@@ -665,8 +1241,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza di calore per presse per piatti. Questa piastra applica calore all'oggetto da pressare. Resistenza per piatti da 6\"."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "6\" (15 cm)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Plancha Combo de Beinsen 1ª Generación (Dorian)" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "6\" (15 cm)"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Plancha Combo de Beinsen 1ª Generación (Dorian)"
+      }
     ]
   },
   {
@@ -689,8 +1281,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza di calore per pressa per Piatti Beinsen da 5\"(12.6cm)."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "5\" (12.6 cm)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Dorian" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "5\" (12.6 cm)"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Dorian"
+      }
     ]
   },
   {
@@ -713,8 +1321,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza da 18 x 8.5 cm compatibile con presse transfer per tazze. Ideale per personalizzare tazze piccole con risultati precisi e professionali."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 8.5 cm (2.5oz)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "18 x 8.5 cm (2.5oz)"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Sicilia, Maine"
+      }
     ]
   },
   {
@@ -736,8 +1360,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza da 12 x 8 cm compatibile con presse transfer per tazze. Ideale per personalizzare tazzine da caffè espresso e bicchierini da shot da 1.5 oz con risultati precisi e professionali."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 8 cm (1.5oz cónica)" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Sicilia, Maine" }
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "12 x 8 cm (1.5oz cónica)"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Sicilia, Maine"
+      }
     ]
   },
   {
@@ -760,9 +1400,33 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Resistenza cilindrica da 20 a 30 once – Compatibile con la pressa Maine. Fai un salto di qualità nei tuoi disegni cilindrici con questa resistenza specializzata per sublimare bottiglie, thermos o altri grandi contenitori. Distribuzione uniforme del calore grazie alla sua costruzione robusta."
     },
     "technicalSpecs": [
-      { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "27 cm" },
-      { "label": { "es": "Diámetro", "en": "Diameter", "pt": "Diâmetro", "it": "Diametro" }, "value": "Ajustable 9,5 - 12 cm" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Maine" }
+      {
+        "label": {
+          "es": "Altura",
+          "en": "Height",
+          "pt": "Altura",
+          "it": "Altezza"
+        },
+        "value": "27 cm"
+      },
+      {
+        "label": {
+          "es": "Diámetro",
+          "en": "Diameter",
+          "pt": "Diâmetro",
+          "it": "Diametro"
+        },
+        "value": "Ajustable 9,5 - 12 cm"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Maine"
+      }
     ]
   },
   {
@@ -785,8 +1449,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 18 x 18 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare oggetti piccoli."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 18 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "18 x 18 cm"
+      }
     ]
   },
   {
@@ -809,8 +1489,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 18 x 38 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare le maniche."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "18 x 38 cm"
+      }
     ]
   },
   {
@@ -833,8 +1529,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 18 x 45 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare pantaloni in modo semplice."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 45 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "18 x 45 cm"
+      }
     ]
   },
   {
@@ -857,8 +1569,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 30 x 35 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare indumenti per bambini o oggetti di medie dimensioni in modo semplice."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "30 x 35 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "30 x 35 cm"
+      }
     ]
   },
   {
@@ -881,8 +1609,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale per scarpe da 18 x 38 cm compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare scarpe da ginnastica."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "18 x 38 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "18 x 38 cm"
+      }
     ]
   },
   {
@@ -905,8 +1649,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base rotonda da 24 centimetri di diametro compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare oggetti rotondi o senza bordi."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "24 cm diámetro" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "24 cm diámetro"
+      }
     ]
   },
   {
@@ -929,7 +1689,15 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale per cappellini compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare fino a 4 cappellini contemporaneamente."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      }
     ]
   },
   {
@@ -952,7 +1720,15 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale per magliette compatibile con il sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Ideale per personalizzare magliette con la loro etichetta interna."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      }
     ]
   },
   {
@@ -974,8 +1750,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base da 40 x 50 cm speciale per maniche con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Questa dimensione è ideale per la personalizzazione di 2 maniche contemporaneamente."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "40 x 50 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "40 x 50 cm"
+      }
     ]
   },
   {
@@ -998,8 +1790,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 12 x 45 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Questa dimensione è ideale per la personalizzazione delle maniche."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "12 x 45 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "12 x 45 cm"
+      }
     ]
   },
   {
@@ -1022,8 +1830,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15 x 50 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità per garantire un'applicazione uniforme e precisa. Questa dimensione è ideale per la personalizzazione dei pantaloni."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 50 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "15 x 50 cm"
+      }
     ]
   },
   {
@@ -1046,8 +1870,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15,5 x 25,5 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Perfetta per maniche, pantaloni, sciarpe, borse e custodie."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15,5 x 25,5 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "15,5 x 25,5 cm"
+      }
     ]
   },
   {
@@ -1070,8 +1910,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15 x 25 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Perfetta per maniche, pantaloni, sciarpe, borse e custodie."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 25 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "15 x 25 cm"
+      }
     ]
   },
   {
@@ -1094,8 +1950,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base da 25 x 30 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Perfetta per magliette bambino, cuscini, asciugamani, tovaglie, ecc."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "25 x 30 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "25 x 30 cm"
+      }
     ]
   },
   {
@@ -1118,8 +1990,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15 x 15 cm con sistema di cambio rapido per la tua pressa transfer Beinsen. Fabbricata con materiali resistenti e di alta qualità. Perfetta per patch, loghi, sottobicchieri e altri articoli piccoli."
     },
     "technicalSpecs": [
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Malvinas, Esparta, Trinidad, Miranda" },
-      { "label": { "es": "Dimensiones", "en": "Dimensions", "pt": "Dimensões", "it": "Dimensioni" }, "value": "15 x 15 cm" }
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Malvinas, Esparta, Trinidad, Miranda"
+      },
+      {
+        "label": {
+          "es": "Dimensiones",
+          "en": "Dimensions",
+          "pt": "Dimensões",
+          "it": "Dimensioni"
+        },
+        "value": "15 x 15 cm"
+      }
     ]
   },
   {
@@ -1133,7 +2021,7 @@ export const rawAccessoriesData: Accessory[] = [
       "pt": "Termómetro digital infravermelho IT-122",
       "it": "Termometro digitale a infrarossi IT-122"
     },
-    "price": 24.90,
+    "price": 24.9,
     "image": "/products/accesorios/termometro-digital-infrarrojos-it122/01.png",
     "description": {
       "es": "Termómetro infrarrojo digital portátil sin contacto. Permite medir la temperatura de una habitación o de una taza al momento mientras se presiona el botón de modo de objeto. Ideal para controlar la temperatura con rapidez y precisión desde una distancia de seguridad.",
@@ -1142,9 +2030,33 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Termometro digitale a infrarossi portatile senza contatto. Consente di misurare istantaneamente la temperatura di una stanza o di un oggetto. Ideale per monitorare la temperatura in modo rapido e accurato da una distanza di sicurezza."
     },
     "technicalSpecs": [
-      { "label": { "es": "Modelo", "en": "Model", "pt": "Modelo", "it": "Modello" }, "value": "IT-122" },
-      { "label": { "es": "Alimentación", "en": "Power", "pt": "Alimentação", "it": "Alimentazione" }, "value": "2 pilas AA (3V) - No incluidas" },
-      { "label": { "es": "Funciones", "en": "Functions", "pt": "Funções", "it": "Funzioni" }, "value": "Medición rápida, Alarma de fiebre, Retroiluminación tricolor" }
+      {
+        "label": {
+          "es": "Modelo",
+          "en": "Model",
+          "pt": "Modelo",
+          "it": "Modello"
+        },
+        "value": "IT-122"
+      },
+      {
+        "label": {
+          "es": "Alimentación",
+          "en": "Power",
+          "pt": "Alimentação",
+          "it": "Alimentazione"
+        },
+        "value": "2 pilas AA (3V) - No incluidas"
+      },
+      {
+        "label": {
+          "es": "Funciones",
+          "en": "Functions",
+          "pt": "Funções",
+          "it": "Funzioni"
+        },
+        "value": "Medición rápida, Alarma de fiebre, Retroiluminación tricolor"
+      }
     ]
   },
   {
@@ -1167,9 +2079,33 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Guanti protettivi in cotone per lavorare in totale sicurezza. Consentono di maneggiare presse transfer e supporti stampati senza pericoli. Con trama in nitrile per una migliore presa e resistenza termica fino a 250ºC."
     },
     "technicalSpecs": [
-      { "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" }, "value": "Algodón y Nitrilo / Cotton and Nitrile" },
-      { "label": { "es": "Resistencia Térmica", "en": "Heat Resistance", "pt": "Resistência Térmica", "it": "Resistenza Termica" }, "value": "Hasta 250ºC (periodos cortos) / Up to 250ºC (short periods)" },
-      { "label": { "es": "Talla", "en": "Size", "pt": "Tamanho", "it": "Taglia" }, "value": "Única (15 x 27 cm)" }
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Algodón y Nitrilo / Cotton and Nitrile"
+      },
+      {
+        "label": {
+          "es": "Resistencia Térmica",
+          "en": "Heat Resistance",
+          "pt": "Resistência Térmica",
+          "it": "Resistenza Termica"
+        },
+        "value": "Hasta 250ºC (periodos cortos) / Up to 250ºC (short periods)"
+      },
+      {
+        "label": {
+          "es": "Talla",
+          "en": "Size",
+          "pt": "Tamanho",
+          "it": "Taglia"
+        },
+        "value": "Única (15 x 27 cm)"
+      }
     ]
   },
   {
@@ -1192,11 +2128,51 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Supporto mobile universale per presse transfer Beinsen. Con una superficie di 98x88 cm e un'altezza di 71 cm, supporta tutti i tipi di presse. Le quattro ruote piroettanti con freno ne consentono un facile spostamento. Include un ripiano inferiore per organizzare strumenti e materiali."
     },
     "technicalSpecs": [
-      { "label": { "es": "Dimensiones Superficie", "en": "Surface Dimensions", "pt": "Dimensões da Superfície", "it": "Dimensioni Superficie" }, "value": "98 x 88 cm" },
-      { "label": { "es": "Altura", "en": "Height", "pt": "Altura", "it": "Altezza" }, "value": "71 cm" },
-      { "label": { "es": "Peso", "en": "Weight", "pt": "Peso", "it": "Peso" }, "value": "25 kg" },
-      { "label": { "es": "Ruedas", "en": "Wheels", "pt": "Rodas", "it": "Ruote" }, "value": "4 giratorias con freno / 4 rotating with brakes" },
-      { "label": { "es": "Características", "en": "Features", "pt": "Características", "it": "Caratteristiche" }, "value": "Estante inferior incluido / Lower shelf included" }
+      {
+        "label": {
+          "es": "Dimensiones Superficie",
+          "en": "Surface Dimensions",
+          "pt": "Dimensões da Superfície",
+          "it": "Dimensioni Superficie"
+        },
+        "value": "98 x 88 cm"
+      },
+      {
+        "label": {
+          "es": "Altura",
+          "en": "Height",
+          "pt": "Altura",
+          "it": "Altezza"
+        },
+        "value": "71 cm"
+      },
+      {
+        "label": {
+          "es": "Peso",
+          "en": "Weight",
+          "pt": "Peso",
+          "it": "Peso"
+        },
+        "value": "25 kg"
+      },
+      {
+        "label": {
+          "es": "Ruedas",
+          "en": "Wheels",
+          "pt": "Rodas",
+          "it": "Ruote"
+        },
+        "value": "4 giratorias con freno / 4 rotating with brakes"
+      },
+      {
+        "label": {
+          "es": "Características",
+          "en": "Features",
+          "pt": "Características",
+          "it": "Caratteristiche"
+        },
+        "value": "Estante inferior incluido / Lower shelf included"
+      }
     ]
   },
   {
@@ -1219,8 +2195,24 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Progettata per tazze coniche da 12 once. Facile installazione tramite viti e connettore rapido. Ideale come ricambio o accessorio per ampliare le capacità della tua pressa Beinsen."
     },
     "technicalSpecs": [
-      { "label": { "es": "Tipo", "en": "Type", "pt": "Tipo", "it": "Tipo" }, "value": "Cónica 12oz / Conical 12oz" },
-      { "label": { "es": "Compatibilidad", "en": "Compatibility", "pt": "Compatibilidade", "it": "Compatibilità" }, "value": "Alina, Aruba, Sicilia, Maine" }
+      {
+        "label": {
+          "es": "Tipo",
+          "en": "Type",
+          "pt": "Tipo",
+          "it": "Tipo"
+        },
+        "value": "Cónica 12oz / Conical 12oz"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Alina, Aruba, Sicilia, Maine"
+      }
     ]
   }
 ];
