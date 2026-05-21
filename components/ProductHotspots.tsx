@@ -35,7 +35,10 @@ export function ProductHotspots({ imageSrc, imageWidth = 800, imageHeight = 800,
                 >
                     <Image
                         src={imageSrc}
-                        alt="Product interactive features"
+                        // Imagen decorativa — los hotspots interactivos tienen
+                        // sus propios títulos/descripciones accesibles.
+                        alt=""
+                        role="presentation"
                         fill
                         unoptimized
                         className="object-contain"

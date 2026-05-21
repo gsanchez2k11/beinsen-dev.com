@@ -20,7 +20,8 @@ export default function AccesoriosClient() {
             infoText: "Todos los accesorios Beinsen cuentan con certificación de compatibilidad y están diseñados para el uso rudo industrial.",
             distribution: "Distribución Oficial",
             distributionDesc: "Consulte con su distribuidor autorizado para disponibilidad inmediata.",
-            noResults: "No se encontraron accesorios."
+            noResults: "No se encontraron accesorios.",
+            searchPlaceholder: "Buscar accesorios..."
         },
         en: {
             title: "Accessory Engineering",
@@ -29,7 +30,8 @@ export default function AccesoriosClient() {
             infoText: "All Beinsen accessories are compatibility certified and designed for rugged industrial use.",
             distribution: "Official Distribution",
             distributionDesc: "Consult your authorized dealer for immediate availability.",
-            noResults: "No accessories found."
+            noResults: "No accessories found.",
+            searchPlaceholder: "Search accessories..."
         }
     }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
 
@@ -95,13 +97,14 @@ export default function AccesoriosClient() {
 
                         <div className="relative group">
                             <input
-                                type="text"
-                                placeholder="Search..."
+                                type="search"
+                                placeholder={d.searchPlaceholder || "Buscar accesorios..."}
+                                aria-label={d.searchPlaceholder || "Buscar accesorios"}
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 className="w-full bg-card/50 border border-white/5 rounded-2xl px-12 py-4 text-sm focus:outline-none focus:border-[#FF6600]/40 transition-all font-light"
                             />
-                            <Filter size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-[#FF6600] transition-colors" />
+                            <Filter size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground group-focus-within:text-[#FF6600] transition-colors" aria-hidden="true" />
                         </div>
                     </aside>
 
