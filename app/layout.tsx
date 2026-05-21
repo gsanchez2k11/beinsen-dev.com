@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ClientProviders } from "@/components/ClientProviders";
 import { Analytics } from "@/components/Analytics";
+import { WarrantyPopup } from "@/components/WarrantyPopup";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -154,6 +155,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <WarrantyPopup />
           </ClientProviders>
         </ThemeProvider>
       </body>

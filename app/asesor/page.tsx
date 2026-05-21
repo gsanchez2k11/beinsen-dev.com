@@ -7,6 +7,7 @@ import { Shirt, Coffee, HardHat, Layers, Sparkles, Boxes, Gauge, ArrowRight, Arr
 import { planchasData } from "@/data/products";
 import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
+import { SupportContactCTA } from "@/components/SupportContactCTA";
 import { useLanguage } from "@/context/LanguageContext";
 
 type CategoryKey = "textil" | "tazas" | "gorras" | "especializadas" | "multifuncion" | "cualquiera";
@@ -397,6 +398,7 @@ export default function AsesorPage() {
                     )}
                 </AnimatePresence>
             </div>
+            <SupportContactCTA />
         </div>
     );
 }

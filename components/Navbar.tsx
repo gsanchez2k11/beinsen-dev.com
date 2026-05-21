@@ -219,12 +219,14 @@ function NavbarContent() {
                             Citas
                         </Link>
 
-                        <Link
-                            href="/soporte"
+                        <a
+                            href="https://soporte.beinsen.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="px-6 py-2.5 rounded-xl bg-[#FF6600] text-white text-xs font-black uppercase tracking-widest whitespace-nowrap hover:bg-[#cc5200] transition-all shadow-lg shadow-[#FF6600]/20 transform hover:-translate-y-0.5 ml-4"
                         >
                             {d.soporte}
-                        </Link>
+                        </a>
 
                         <div className="flex items-center gap-2 border-l border-border/40 pl-6 ml-2">
                             <LanguageSelector />
@@ -314,13 +316,15 @@ function NavbarContent() {
                                 Agendar Cita
                             </Link>
 
-                            <Link
-                                href="/soporte"
+                            <a
+                                href="https://soporte.beinsen.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="mt-2 px-6 py-5 text-center rounded-2xl bg-[#FF6600] text-white text-xs font-black uppercase tracking-widest"
                                 onClick={() => setIsOpen(false)}
                             >
                                 {d.soporte}
-                            </Link>
+                            </a>
 
                             <div className="flex justify-between items-center pt-8 mt-4 border-t border-border/40 px-6">
                                 <ThemeToggle />

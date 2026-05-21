@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Euro, Maximize, FileText, Download, PlayCircle, Wrench, Store, ExternalLink, Globe, Package, Zap } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Euro, Maximize, FileText, Download, PlayCircle, Wrench, Store, ExternalLink, Globe, Package, Zap, BadgeCheck, ShoppingBag } from "lucide-react";
 import { ContactSpecialistButton } from "@/components/ContactSpecialistButton";
 import { TiltImage } from "@/components/TiltImage";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -84,6 +84,8 @@ export function ProductDetailView({
             distributorsTitle: "Dónde Comprar",
             distributorsDesc: "Adquiere este producto en nuestra tienda oficial.",
             buyNow: "Comprar ahora",
+            officialDistributor: "Distribuidor Oficial",
+            buyAtPartner: "Disponible en nuestro distribuidor oficial. Compra segura con entrega rápida.",
             visitWeb: "Visitar web",
             certified: "Componente industrial certificado",
             essential: "Consumible esencial Beinsen",
@@ -120,6 +122,8 @@ export function ProductDetailView({
             distributorsTitle: "Where to Buy",
             distributorsDesc: "Get this product at our official store.",
             buyNow: "Buy now",
+            officialDistributor: "Official Distributor",
+            buyAtPartner: "Available at our official distributor. Safe purchase with fast delivery.",
             visitWeb: "Visit website",
             certified: "Certified industrial component",
             essential: "Essential Beinsen consumable",
@@ -156,6 +160,8 @@ export function ProductDetailView({
             distributorsTitle: "Onde Comprar",
             distributorsDesc: "Adquira este produto na nossa loja oficial.",
             buyNow: "Comprar agora",
+            officialDistributor: "Distribuidor Oficial",
+            buyAtPartner: "Disponível no nosso distribuidor oficial.",
             visitWeb: "Visitar web",
             certified: "Componente industrial certificado",
             essential: "Consumível essencial Beinsen",
@@ -192,6 +198,8 @@ export function ProductDetailView({
             distributorsTitle: "Dove Acquistare",
             distributorsDesc: "Acquista questo prodotto nel nostro store ufficiale.",
             buyNow: "Acquista ora",
+            officialDistributor: "Distributore Ufficiale",
+            buyAtPartner: "Disponibile presso il nostro distributore ufficiale.",
             visitWeb: "Visita il sito",
             certified: "Componente industriale certificato",
             essential: "Consumabile essenziale Beinsen",
@@ -389,19 +397,47 @@ export function ProductDetailView({
                                 <h3 className="text-4xl font-black mb-4 tracking-tight">{d.distributorsTitle}</h3>
                                 <p className="text-muted-foreground text-lg">{d.distributorsDesc}</p>
                             </div>
-                            <div className="max-w-xl mx-auto">
+                            <div className="max-w-4xl mx-auto">
                                 <a
                                     href={(plancha as any).tiendaSublimacionUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="group p-10 bg-card border border-border/50 rounded-[2.5rem] hover:border-[#FF6600] transition-all flex flex-col items-center text-center gap-8 hover:shadow-2xl hover:shadow-[#FF6600]/10"
+                                    className="group relative block overflow-hidden rounded-[2rem] bg-gradient-to-br from-card via-card to-muted/40 border border-border/50 hover:border-[#FF6600] transition-all duration-500 hover:shadow-2xl hover:shadow-[#FF6600]/15"
                                 >
-                                    <div className="relative w-64 h-16 opacity-80 group-hover:opacity-100 transition-opacity grayscale group-hover:grayscale-0">
-                                        <Image src="/brands/tiendasublimacion.webp" alt="Tienda Sublimación" fill className="object-contain" />
+                                    {/* Decorative orange glow */}
+                                    <div className="absolute -top-32 -right-32 w-72 h-72 rounded-full bg-[#FF6600]/10 blur-[100px] pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+
+                                    <div className="relative p-6 md:p-8 flex flex-col md:flex-row items-center gap-6">
+                                        {/* Logo */}
+                                        <div className="shrink-0 flex items-center justify-center w-44 h-20 rounded-2xl bg-white dark:bg-white/95 p-4 shadow-sm border border-border/20 transition-transform duration-500 group-hover:scale-[1.02]">
+                                            <div className="relative w-full h-full">
+                                                <Image src="/brands/tiendasublimacion.webp" alt="Tienda Sublimación" fill className="object-contain" sizes="176px" />
+                                            </div>
+                                        </div>
+
+                                        {/* Content */}
+                                        <div className="flex-1 min-w-0 text-center md:text-left">
+                                            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#FF6600]/10 text-[#FF6600] text-[9px] font-black uppercase tracking-[0.2em] border border-[#FF6600]/20 mb-2">
+                                                <BadgeCheck size={11} />
+                                                {d.officialDistributor}
+                                            </div>
+                                            <h4 className="text-lg md:text-xl font-black tracking-tight mb-1 leading-tight truncate">
+                                                TiendaSublimacion.com
+                                            </h4>
+                                            <p className="text-xs md:text-sm text-muted-foreground font-light line-clamp-2">
+                                                {d.buyAtPartner}
+                                            </p>
+                                        </div>
+
+                                        {/* CTA Button */}
+                                        <div className="shrink-0 w-full md:w-auto">
+                                            <div className="inline-flex w-full md:w-auto items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#FF6600] text-white font-black uppercase tracking-widest text-[11px] whitespace-nowrap shadow-lg shadow-[#FF6600]/30 group-hover:bg-[#cc5200] group-hover:shadow-xl group-hover:shadow-[#FF6600]/40 group-hover:scale-[1.03] transition-all duration-300">
+                                                <ShoppingBag size={14} />
+                                                {d.buyNow}
+                                                <ExternalLink size={12} className="ml-0.5 opacity-70 transition-transform group-hover:translate-x-0.5" />
+                                            </div>
+                                        </div>
                                     </div>
-                                    <span className="inline-flex items-center gap-2 text-[#FF6600] font-bold text-sm uppercase tracking-wider group-hover:underline">
-                                        {d.buyNow} <ExternalLink size={14} />
-                                    </span>
                                 </a>
                             </div>
                         </ScrollReveal>

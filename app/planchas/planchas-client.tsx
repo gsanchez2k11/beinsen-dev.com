@@ -304,7 +304,7 @@ function PlanchasCatalogContent() {
         const base = applyCommonFilters(planchasData.map(p => ({ ...p, _type: 'planchas' })));
         const selectedFormat = FORMATS[activeFormatIndex];
         const selectedPlate = PLATE_TYPES[activePlateIndex];
-        return base.filter((item: any) => {
+        const filtered = base.filter((item: any) => {
             if (activeFormatIndex !== 0) {
                 const itemSize = typeof item.size === 'object' ? getLocalized(item.size, 'es') : item.size;
                 if (itemSize !== selectedFormat) return false;
@@ -320,6 +320,26 @@ function PlanchasCatalogContent() {
                 if (isInterchangeable !== wantInterchangeable) return false;
             }
             return true;
+        });
+
+        // Orden: novedades primero, después por categoría (mismo orden que el selector
+        // CATEGORIES), y dentro de cada categoría alfabético.
+        const categoryOrder = CATEGORIES.slice(1); // sin "Todas"
+        const catWeight = (item: any) => {
+            const cat = typeof item.category === 'object' ? getLocalized(item.category, 'es') : item.category;
+            const idx = categoryOrder.indexOf(cat);
+            return idx === -1 ? categoryOrder.length : idx;
+        };
+        const sortName = (item: any) => {
+            const n = typeof item.name === 'object' ? (getLocalized(item.name, 'es') || '') : (item.name || '');
+            return n.toLowerCase();
+        };
+        return filtered.sort((a: any, b: any) => {
+            if (a.isNew && !b.isNew) return -1;
+            if (!a.isNew && b.isNew) return 1;
+            const cw = catWeight(a) - catWeight(b);
+            if (cw !== 0) return cw;
+            return sortName(a).localeCompare(sortName(b), 'es');
         });
     }, [activeCategoryIndex, activeOpeningIndex, activeFormatIndex, activePlateIndex, searchQuery, locale]);
 
