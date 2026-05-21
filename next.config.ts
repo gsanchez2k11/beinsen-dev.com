@@ -38,7 +38,6 @@ const nextConfig: NextConfig = {
         minimumCacheTTL: 60 * 60 * 24 * 365,
         remotePatterns: [
             { protocol: "https", hostname: "beinsen.com" },
-            { protocol: "https", hostname: "dev.beinsen.com" },
             { protocol: "https", hostname: "images.unsplash.com" },
             { protocol: "https", hostname: "tiendasublimacion.com" },
         ],
