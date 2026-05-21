@@ -46,7 +46,7 @@ export function ProductHeroGallery({ images, productName }: ProductHeroGalleryPr
                     >
                         <Image
                             src={img}
-                            alt={`${productName} - View ${idx + 1}`}
+                            alt={idx === 0 ? `${productName} — vista principal` : `${productName} — imagen ${idx + 1} de ${images.length}`}
                             fill
                             className="object-contain p-8 md:p-12"
                             priority={idx === 0}
@@ -94,15 +94,17 @@ export function ProductHeroGallery({ images, productName }: ProductHeroGalleryPr
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={() => setActiveIndex(index)}
+                        aria-label={`Ver imagen ${index + 1} de ${images.length} — ${productName}`}
+                        aria-current={activeIndex === index ? "true" : undefined}
                         className={`relative w-20 h-20 rounded-2xl overflow-hidden border-2 transition-all shrink-0 bg-card ${
-                            activeIndex === index 
-                            ? "border-[#FF6600] ring-4 ring-[#FF6600]/10 shadow-lg" 
+                            activeIndex === index
+                            ? "border-[#FF6600] ring-4 ring-[#FF6600]/10 shadow-lg"
                             : "border-border/50 hover:border-[#FF6600]/50 grayscale hover:grayscale-0"
                         }`}
                     >
                         <Image
                             src={img}
-                            alt={`${productName} thumbnail ${index + 1}`}
+                            alt=""
                             fill
                             className="object-contain p-2"
                             sizes="80px"

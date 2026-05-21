@@ -137,6 +137,13 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} min-h-screen flex flex-col pt-20 bg-background text-foreground`}>
+        {/* Skip-link: solo visible al recibir foco con teclado. */}
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[1000] focus:px-6 focus:py-3 focus:rounded-xl focus:bg-[#FF6600] focus:text-white focus:font-black focus:uppercase focus:tracking-widest focus:text-xs focus:shadow-2xl"
+        >
+          Saltar al contenido
+        </a>
         <Analytics />
         <ThemeProvider
           attribute="class"
@@ -146,7 +153,7 @@ export default function RootLayout({
         >
           <ClientProviders>
             <Navbar />
-            <main className="flex-1">
+            <main id="main" className="flex-1">
               {children}
             </main>
             <Footer />
