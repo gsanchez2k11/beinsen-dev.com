@@ -102,12 +102,14 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    href="/soporte"
+                                <a
+                                    href="https://soporte.beinsen.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                                 >
                                     {d.support}
-                                </Link>
+                                </a>
                             </li>
                         </ul>
                     </div>
