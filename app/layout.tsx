@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import dynamic from "next/dynamic";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { ClientProviders } from "@/components/ClientProviders";
 import { Analytics } from "@/components/Analytics";
-import { WarrantyPopup } from "@/components/WarrantyPopup";
+import { SITE_URL } from "@/lib/site";
+
+// Popup que aparece a los 6 s — se difiere para no impactar TBT inicial.
+// (ssr:false no es válido en Server Components; el componente ya gestiona
+// el primer render con sessionStorage en useEffect.)
+const WarrantyPopup = dynamic(
+  () => import("@/components/WarrantyPopup").then(m => ({ default: m.WarrantyPopup }))
+);
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -16,28 +24,15 @@ export const metadata: Metadata = {
     template: "%s | Beinsen",
   },
   description: "Fabricante líder de planchas transfer y prensas térmicas industriales para sublimación, DTF y vinilo textil. Calidad certificada, presencia en 50+ países.",
-  metadataBase: new URL("https://beinsen.com"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
-    languages: {
-      es: "https://beinsen.com",
-      en: "https://beinsen.com",
-      pt: "https://beinsen.com",
-      it: "https://beinsen.com",
-      "x-default": "https://beinsen.com",
-    },
+    canonical: "/",
   },
   openGraph: {
     siteName: "Beinsen",
     locale: "es_ES",
     type: "website",
-    images: [
-      {
-        url: "/brand/og-home.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Beinsen — Fabricante de Planchas Transfer Industriales",
-      },
-    ],
+    // images se generan dinámicamente vía app/opengraph-image.tsx
   },
   twitter: {
     card: "summary_large_image",
@@ -61,16 +56,16 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
-  "@id": "https://beinsen.com/#organization",
+  "@id": `${SITE_URL}/#organization`,
   name: "Beinsen",
-  url: "https://beinsen.com",
+  url: SITE_URL,
   logo: {
     "@type": "ImageObject",
-    url: "https://beinsen.com/brand/logo.png",
+    url: `${SITE_URL}/brand/logo.png`,
     width: 300,
     height: 100,
   },
-  image: "https://beinsen.com/brand/logo.png",
+  image: `${SITE_URL}/brand/logo.png`,
   description: "Fabricante líder de planchas transfer y prensas térmicas industriales para sublimación, DTF y vinilo textil. Presencia en más de 50 países.",
   address: {
     "@type": "PostalAddress",
@@ -108,17 +103,17 @@ const localBusinessSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://beinsen.com/#website",
-  url: "https://beinsen.com",
+  "@id": `${SITE_URL}/#website`,
+  url: SITE_URL,
   name: "Beinsen",
   description: "Fabricante líder de planchas transfer y prensas térmicas industriales.",
-  publisher: { "@id": "https://beinsen.com/#organization" },
+  publisher: { "@id": `${SITE_URL}/#organization` },
   inLanguage: ["es", "en", "pt", "it"],
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://beinsen.com/planchas?q={search_term_string}",
+      urlTemplate: `${SITE_URL}/planchas?q={search_term_string}`,
     },
     "query-input": "required name=search_term_string",
   },

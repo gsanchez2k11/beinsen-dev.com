@@ -2,8 +2,9 @@ import { storiesData } from "@/data/stories";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import StoryDetailClient from "./story-client";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = "https://beinsen.com";
+const BASE_URL = SITE_URL;
 
 export function generateStaticParams() {
     return storiesData.map((s) => ({ slug: s.slug }));
@@ -25,13 +26,6 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
         description,
         alternates: {
             canonical: url,
-            languages: {
-                es: url,
-                en: url,
-                pt: url,
-                it: url,
-                "x-default": url,
-            },
         },
         openGraph: {
             title,
