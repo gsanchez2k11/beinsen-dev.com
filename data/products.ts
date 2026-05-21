@@ -722,6 +722,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "dorian-plancha-termica-platos",
     "slug": "dorian-plancha-termica-platos",
+    "storyHeadline": {
+      "es": "Sublimación cerámica al milímetro",
+      "en": "Millimeter-perfect ceramic sublimation"
+    },
     "name": {
       "es": "Dorian prensa térmica para platos",
       "en": "Dorian heat press for plates",
@@ -1327,6 +1331,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "alina-plancha-para-tazas",
     "slug": "alina-plancha-para-tazas",
+    "storyHeadline": {
+      "es": "Cuatro resistencias, infinitos formatos",
+      "en": "Four elements, endless mug formats"
+    },
     "name": {
       "es": "Alina Plancha Para Tazas 4 en 1",
       "en": "Alina Mug Heat Press 4-in-1",
@@ -2201,6 +2209,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "caen-plancha-neumatica-doble-estacion",
     "slug": "caen-plancha-neumatica-doble-estacion",
+    "storyHeadline": {
+      "es": "Doble estación neumática sin pausas",
+      "en": "Dual pneumatic stations, zero downtime"
+    },
     "name": {
       "es": "Caen estación de trabajo doble neumática",
       "en": "Caen double station pneumatic heat press",
@@ -2914,6 +2926,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "planchas-transfer-con-apertura-neumatica",
     "slug": "doha-plancha-transfer-gran-formato",
+    "storyHeadline": {
+      "es": "Gran formato, presión neumática",
+      "en": "Large format, pneumatic precision"
+    },
     "name": {
       "es": "Doha Plancha transfer de gran formato",
       "en": "Pneumatic opening heat presses",
@@ -3253,6 +3269,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "jamaica-planchas-transfer-multifuncion-para-sublimacion",
     "slug": "jamaica-planchas-transfer-multifuncion-para-sublimacion",
+    "storyHeadline": {
+      "es": "Una máquina, todos los formatos",
+      "en": "One machine, every format"
+    },
     "name": {
       "es": "Jamaica Plancha Térmica",
       "en": "Jamaica Heat Press",
@@ -3623,6 +3643,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "esparta-prensa-termica-neumatica",
     "slug": "esparta-prensa-termica-neumatica",
+    "storyHeadline": {
+      "es": "Potencia neumática profesional",
+      "en": "Pro-grade pneumatic power"
+    },
     "name": {
       "es": "Esparta prensa térmica neumática",
       "en": "Esparta pneumatic heat press",
@@ -5143,6 +5167,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "sicilia-plancha-para-tazas",
     "slug": "sicilia-plancha-para-tazas",
+    "storyHeadline": {
+      "es": "Ocho resistencias para cualquier taza",
+      "en": "Eight elements for any mug"
+    },
     "name": {
       "es": "Sicilia Plancha Para Tazas 8 en 1",
       "en": "Sicilia Mug Heat Press 8-in-1",
@@ -6163,6 +6191,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "trinidad-prensa-termica-automatica",
     "slug": "trinidad-prensa-termica-automatica",
+    "storyHeadline": {
+      "es": "Automática de doble plato",
+      "en": "Dual-plate automatic press"
+    },
     "name": {
       "es": "Trinidad prensa térmica automática",
       "en": "Trinidad automatic heat press",
@@ -6582,6 +6614,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "miranda-prensa-termica-automatica-electrica",
     "slug": "miranda-prensa-termica-automatica-electrica",
+    "storyHeadline": {
+      "es": "Automática eléctrica, sin compresor",
+      "en": "Electric automatic, no compressor"
+    },
     "name": {
       "es": "Miranda prensa térmica automática eléctrica",
       "en": "Miranda electric automatic heat press",
@@ -10222,6 +10258,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "tobago-estacion-planchado-continuo",
     "slug": "tobago-estacion-planchado-continuo",
+    "storyHeadline": {
+      "es": "Planchado en línea continuo",
+      "en": "Continuous in-line pressing"
+    },
     "name": {
       "es": "Tobago Estación de Planchado Continuo",
       "en": "Tobago Continuous Press Station",
@@ -11760,6 +11800,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "estambul-prensa-termica-para-espinilleras",
     "slug": "estambul-prensa-termica-para-espinilleras",
+    "storyHeadline": {
+      "es": "Personalización deportiva especializada",
+      "en": "Specialized sports personalization"
+    },
     "name": {
       "es": "Estambul prensa térmica para espinilleras",
       "en": "Estambul shin guard heat press",
@@ -12120,6 +12164,10 @@ const rawPlanchasData: Plancha[] = [
   {
     "id": "felina-prensa-swing-away-electrica",
     "slug": "felina-prensa-swing-away-electrica",
+    "storyHeadline": {
+      "es": "Swing-away eléctrica, acceso total",
+      "en": "Electric swing-away, full access"
+    },
     "name": {
       "es": "Felina Prensa Swing-Away Eléctrica",
       "en": "Felina Electric Swing-Away Heat Press",
