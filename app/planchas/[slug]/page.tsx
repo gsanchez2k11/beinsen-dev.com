@@ -9,6 +9,7 @@ import { getArticlesByProduct } from "@/lib/articles";
 import Link from "next/link";
 import { BookOpen, ArrowRight, Zap } from "lucide-react";
 import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
     const allSlugs = [
@@ -33,26 +34,22 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const rawDesc = description.length > 155 ? description.substring(0, 155) + "…" : description;
     const category = getLocalized((rawItem as any).category as any, 'es') || "";
     const titleSuffix = category ? ` — ${category} | Beinsen` : " | Beinsen";
-    const ogImage = item.image || "https://beinsen.com/brand/og-home.jpg";
+    // si no hay imagen del producto, Next.js usa el opengraph-image dinámico
+    const ogImage = item.image
+        ? (item.image.startsWith('http') ? item.image : `${SITE_URL}${item.image}`)
+        : `${SITE_URL}/opengraph-image`;
 
-    const url = `https://beinsen.com/planchas/${resolvedParams.slug}`;
+    const url = `${SITE_URL}/planchas/${resolvedParams.slug}`;
     return {
         title: `${name}${titleSuffix}`,
         description: rawDesc,
         alternates: {
             canonical: url,
-            languages: {
-                es: url,
-                en: url,
-                pt: url,
-                it: url,
-                "x-default": url,
-            },
         },
         openGraph: {
             title: `${name} — ${category || "Beinsen"}`,
             description: rawDesc,
-            url: `https://beinsen.com/planchas/${resolvedParams.slug}`,
+            url,
             images: [{ url: ogImage, width: 1200, height: 630, alt: name }],
             type: "website",
             siteName: "Beinsen",
@@ -85,33 +82,49 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
     const description = getLocalized(item.description as any, 'es') || "";
 
     const category = getLocalized((rawItem as any).category as any, 'es') || "";
-    const productUrl = `https://beinsen.com/planchas/${resolvedParams.slug}`;
+    const productUrl = `${SITE_URL}/planchas/${resolvedParams.slug}`;
+
+    // Imagen absoluta para schema (Google las requiere absolutas)
+    const schemaImages = item.image
+        ? [item.image.startsWith('http') ? item.image : `${SITE_URL}${item.image}`]
+        : [];
+
+    // Solo añadimos `offers` si hay precio numérico real; con "Consultar PVP"
+    // Google descarta el rich snippet entero ("Falta el campo price").
+    const rawPrice = (rawItem as any).pvp ?? (rawItem as any).price;
+    const hasNumericPrice = typeof rawPrice === 'number';
+
+    const offers = hasNumericPrice
+        ? {
+            '@type': 'Offer' as const,
+            url: productUrl,
+            priceCurrency: 'EUR',
+            price: rawPrice,
+            availability: 'https://schema.org/InStock',
+            seller: { '@type': 'Organization', name: 'Beinsen', url: SITE_URL },
+        }
+        : undefined;
 
     const productSchema = {
         '@context': 'https://schema.org',
         '@type': 'Product',
         name,
-        image: item.image ? [item.image] : [],
+        image: schemaImages,
         description,
         sku: (rawItem as any).reference || resolvedParams.slug,
         brand: { '@type': 'Brand', name: 'Beinsen' },
-        manufacturer: { '@type': 'Organization', name: 'Beinsen', url: 'https://beinsen.com' },
+        manufacturer: { '@type': 'Organization', name: 'Beinsen', url: SITE_URL },
         category,
         url: productUrl,
-        offers: {
-            '@type': 'Offer',
-            url: productUrl,
-            availability: 'https://schema.org/InStock',
-            seller: { '@type': 'Organization', name: 'Beinsen', url: 'https://beinsen.com' },
-        },
+        ...(offers ? { offers } : {}),
     };
 
     const breadcrumbSchema = {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://beinsen.com' },
-            { '@type': 'ListItem', position: 2, name: 'Catálogo', item: 'https://beinsen.com/planchas' },
+            { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITE_URL },
+            { '@type': 'ListItem', position: 2, name: 'Catálogo', item: `${SITE_URL}/planchas` },
             { '@type': 'ListItem', position: 3, name, item: productUrl },
         ],
     };

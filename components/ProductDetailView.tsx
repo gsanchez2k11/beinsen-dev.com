@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Euro, Maximize, FileText, Download, PlayCircle, Wrench, Store, ExternalLink, Globe, Package, Zap, BadgeCheck, ShoppingBag } from "lucide-react";
@@ -12,13 +13,25 @@ import { ProductHeroGallery } from "@/components/ProductHeroGallery";
 import { TechSpecs } from "@/components/TechSpecs";
 import { ProductBenefits } from "@/components/ProductBenefits";
 import { StickyProductNav } from "@/components/StickyProductNav";
-import { ProductHotspots } from "@/components/ProductHotspots";
-import { RoiCalculator } from "@/components/RoiCalculator";
-import { InmersiveScroller } from "@/components/InmersiveScroller";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import type { Plancha, CompatibleItem } from "@/data/products";
+
+// Componentes pesados below-the-fold: se cargan en cliente bajo demanda
+// para reducir el JS inicial de la ruta /planchas/[slug].
+const ProductHotspots = dynamic(
+    () => import("@/components/ProductHotspots").then(m => ({ default: m.ProductHotspots })),
+    { ssr: false }
+);
+const InmersiveScroller = dynamic(
+    () => import("@/components/InmersiveScroller").then(m => ({ default: m.InmersiveScroller })),
+    { ssr: false }
+);
+const RoiCalculator = dynamic(
+    () => import("@/components/RoiCalculator").then(m => ({ default: m.RoiCalculator })),
+    { ssr: false }
+);
 
 interface ProductDetailViewProps {
     plancha: Plancha;

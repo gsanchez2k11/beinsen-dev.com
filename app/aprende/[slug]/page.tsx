@@ -10,6 +10,7 @@ import { enrichWithLocalImages } from "@/lib/productImages";
 import { enrichWithLocalDownloads } from "@/lib/productDownloads";
 import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
+import { SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
     return getArticleSlugs().map((slug) => ({ slug }));
@@ -19,25 +20,19 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     const { slug } = await params;
     const article = getArticle(slug);
     if (!article) return { title: "Artículo no encontrado | Beinsen" };
-    const url = `https://beinsen.com/aprende/${slug}`;
+    const url = `${SITE_URL}/aprende/${slug}`;
     return {
         title: `${article.title} | Beinsen`,
         description: article.excerpt,
         alternates: {
             canonical: url,
-            languages: {
-                es: url,
-                en: url,
-                pt: url,
-                it: url,
-                "x-default": url,
-            },
         },
         openGraph: {
             title: article.title,
             description: article.excerpt,
-            url: `https://beinsen.com/aprende/${slug}`,
-            images: article.heroImage ? [{ url: article.heroImage, width: 1200, height: 630, alt: article.title }] : ["/brand/og-home.jpg"],
+            url: `${SITE_URL}/aprende/${slug}`,
+            // si hay hero image del artículo úsala; si no, Next.js usa el opengraph-image dinámico
+            ...(article.heroImage ? { images: [{ url: article.heroImage, width: 1200, height: 630, alt: article.title }] } : {}),
             type: "article",
             publishedTime: article.publishedAt,
             authors: article.author ? [article.author] : undefined,
@@ -46,7 +41,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             card: "summary_large_image",
             title: article.title,
             description: article.excerpt,
-            images: article.heroImage ? [article.heroImage] : ["/brand/og-home.jpg"],
+            // si no hay heroImage, Next.js usa el opengraph-image.tsx por defecto
+            ...(article.heroImage ? { images: [article.heroImage] } : {}),
         },
     };
 }
@@ -90,23 +86,25 @@ export default async function ArticleDetail({ params }: { params: Promise<{ slug
         ...allOthers.filter((a) => a.category !== article.category),
     ].slice(0, 3);
 
-    const articleUrl = `https://beinsen.com/aprende/${article.slug ?? ""}`;
+    const articleUrl = `${SITE_URL}/aprende/${article.slug ?? ""}`;
 
     const blogPostingSchema = {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         headline: article.title,
         description: article.excerpt,
-        image: article.heroImage || "https://beinsen.com/brand/og-home.jpg",
+        image: article.heroImage
+            ? (article.heroImage.startsWith('http') ? article.heroImage : `${SITE_URL}${article.heroImage}`)
+            : `${SITE_URL}/opengraph-image`,
         datePublished: article.publishedAt,
         dateModified: article.publishedAt,
         author: article.author
             ? { "@type": "Person", name: article.author, jobTitle: article.authorRole || "Ingeniero Beinsen" }
-            : { "@type": "Organization", name: "Beinsen", url: "https://beinsen.com" },
+            : { "@type": "Organization", name: "Beinsen", url: SITE_URL },
         publisher: {
             "@type": "Organization",
             name: "Beinsen",
-            logo: { "@type": "ImageObject", url: "https://beinsen.com/brand/logo.png" },
+            logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/logo.png` },
         },
         url: articleUrl,
         mainEntityOfPage: { "@type": "WebPage", "@id": articleUrl },
@@ -116,8 +114,8 @@ export default async function ArticleDetail({ params }: { params: Promise<{ slug
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Inicio", item: "https://beinsen.com" },
-            { "@type": "ListItem", position: 2, name: "Aprende", item: "https://beinsen.com/aprende" },
+            { "@type": "ListItem", position: 1, name: "Inicio", item: SITE_URL },
+            { "@type": "ListItem", position: 2, name: "Aprende", item: `${SITE_URL}/aprende` },
             { "@type": "ListItem", position: 3, name: article.title, item: articleUrl },
         ],
     };
