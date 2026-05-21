@@ -20,7 +20,19 @@ export function SupportContactCTA() {
             bookBtn: "Book Technical Appointment",
             contactBtn: "Contact Support",
         },
-    }[locale === "pt" || locale === "it" ? "es" : locale] || { es: {} }.es;
+        pt: {
+            title: "Não encontra o que procura?",
+            desc: "A nossa equipa de engenharia está disponível para assistência remota personalizada.",
+            bookBtn: "Agendar Visita Técnica",
+            contactBtn: "Contactar o Suporte",
+        },
+        it: {
+            title: "Non trovi quello che cerchi?",
+            desc: "Il nostro team di ingegneria è disponibile per assistenza remota personalizzata.",
+            bookBtn: "Prenota Appuntamento Tecnico",
+            contactBtn: "Contatta il Supporto",
+        },
+    }[locale] || { es: {} }.es;
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">

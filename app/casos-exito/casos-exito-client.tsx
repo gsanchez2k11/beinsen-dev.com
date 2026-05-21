@@ -34,8 +34,30 @@ export default function CasosExitoClient() {
             results: "Key Results",
             location: "Location",
             year: "Year"
+        },
+        pt: {
+            title: "Casos de Sucesso",
+            tag: "Engenharia de Campo",
+            subtitle: "Descubra como a Beinsen transforma a produtividade industrial em todo o mundo através de soluções térmicas de precisão.",
+            viewStory: "Ver Detalhes",
+            impact: "Impacto Industrial",
+            challenge: "O Desafio",
+            results: "Resultados-Chave",
+            location: "Localização",
+            year: "Ano"
+        },
+        it: {
+            title: "Casi di Successo",
+            tag: "Ingegneria sul Campo",
+            subtitle: "Scoprite come Beinsen trasforma la produttività industriale in tutto il mondo grazie a soluzioni termiche di precisione.",
+            viewStory: "Vedi Dettagli",
+            impact: "Impatto Industriale",
+            challenge: "La Sfida",
+            results: "Risultati Chiave",
+            location: "Località",
+            year: "Anno"
         }
-    }[locale === 'pt' || locale === 'it' ? 'es' : locale] || { es: {} }.es;
+    }[locale] || { es: {} }.es;
 
     return (
         <div className="min-h-screen bg-background pt-32">
