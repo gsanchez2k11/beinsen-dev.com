@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { productAliases } from "./lib/productAliases";
 
 // Cabeceras de seguridad aplicadas a todas las rutas. Si más adelante
 // se añade un proveedor externo (chat, mapa, etc.) habrá que ampliar
@@ -54,6 +55,15 @@ const nextConfig: NextConfig = {
                 headers: securityHeaders,
             },
         ];
+    },
+    // URLs cortas de marketing: /esparta → /planchas/esparta-prensa-termica-neumatica
+    // Redirección 308 permanente; la URL larga sigue siendo la canónica (bueno para SEO).
+    async redirects() {
+        return productAliases.map(({ alias, slug }) => ({
+            source: `/${alias}`,
+            destination: `/planchas/${slug}`,
+            permanent: true,
+        }));
     },
 };
 
