@@ -15858,10 +15858,10 @@ export const rawPlanchasData: Plancha[] = [
       "it": "Tessile"
     },
     "openingType": {
-      "es": "Eléctrica",
-      "en": "Electric",
-      "pt": "Elétrica",
-      "it": "Elettrica"
+      "es": "Giratoria",
+      "en": "Swing-Away",
+      "pt": "Giratória",
+      "it": "Girevole"
     },
     "technicalSpecs": [
       {
