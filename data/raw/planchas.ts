@@ -56,9 +56,6 @@ export const rawPlanchasData: Plancha[] = [
         "id": "termometro-digital-infrarrojos-it122"
       },
       {
-        "id": "almohadilla-silicona-38x38"
-      },
-      {
         "id": "mesa-universal-grande"
       },
       {
@@ -77,6 +74,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-silicona-38x38"
       }
     ],
     "storyHeadline": {
@@ -1743,9 +1743,6 @@ export const rawPlanchasData: Plancha[] = [
         "id": "resistencia-tazas-conicas-17oz"
       },
       {
-        "id": "almohadilla-silicona-40x50"
-      },
-      {
         "id": "mesa-universal-grande"
       },
       {
@@ -1755,6 +1752,9 @@ export const rawPlanchasData: Plancha[] = [
     "consumables": [
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
       }
     ],
     "category": {
@@ -2875,13 +2875,7 @@ export const rawPlanchasData: Plancha[] = [
     },
     "accessories": [
       {
-        "id": "almohadilla-silicona-40x50"
-      },
-      {
         "id": "termometro-digital-infrarrojos-it122"
-      },
-      {
-        "id": "almohadilla-silicona-38x38"
       },
       {
         "id": "guantes-protectores-algodon"
@@ -2905,6 +2899,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-silicona-38x38"
       }
     ],
     "category": {
@@ -4300,9 +4300,6 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "resistencia-gorras-combo-beinsen"
-      },
-      {
-        "id": "almohadilla-silicona-40x50"
       }
     ],
     "consumables": [
@@ -4320,6 +4317,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
       }
     ],
     "category": {
@@ -8640,9 +8640,6 @@ export const rawPlanchasData: Plancha[] = [
         "id": "plato-base-gorras-cambio-rapido"
       },
       {
-        "id": "almohadilla-silicona-40x50"
-      },
-      {
         "id": "termometro-digital-infrarrojos-it122"
       },
       {
@@ -8667,6 +8664,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "lamina-teflon-40x50"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
       }
     ],
     "category": {
@@ -9161,9 +9161,6 @@ export const rawPlanchasData: Plancha[] = [
     },
     "accessories": [
       {
-        "id": "almohadilla-silicona-40x50"
-      },
-      {
         "id": "termometro-digital-infrarrojos-it122"
       },
       {
@@ -9182,6 +9179,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-38x38"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
       }
     ],
     "storyHeadline": {
@@ -9627,9 +9627,6 @@ export const rawPlanchasData: Plancha[] = [
     },
     "accessories": [
       {
-        "id": "almohadilla-silicona-40x50"
-      },
-      {
         "id": "termometro-digital-infrarrojos-it122"
       },
       {
@@ -9648,6 +9645,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-38x38"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
       }
     ],
     "category": {
@@ -10165,12 +10165,6 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "guantes-protectores-algodon"
-      },
-      {
-        "id": "almohadilla-silicona-38x38"
-      },
-      {
-        "id": "almohadilla-silicona-40x50"
       }
     ],
     "consumables": [
@@ -10194,6 +10188,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "lamina-teflon-40x50"
+      },
+      {
+        "id": "almohadilla-silicona-38x38"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
       }
     ],
     "storyHeadline": {
@@ -10631,12 +10631,6 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "plato-intercambiable-30x35-barbados"
-      },
-      {
-        "id": "almohadilla-silicona-38x38"
-      },
-      {
-        "id": "almohadilla-silicona-40x50"
       }
     ],
     "consumables": [
@@ -10657,6 +10651,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "lamina-teflon-40x50"
+      },
+      {
+        "id": "almohadilla-silicona-38x38"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
       }
     ],
     "storyHeadline": {
@@ -13764,9 +13764,6 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "guantes-protectores-algodon"
-      },
-      {
-        "id": "almohadilla-silicona-40x50"
       }
     ],
     "consumables": [
@@ -13784,6 +13781,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
       }
     ],
     "category": {
@@ -15838,9 +15838,6 @@ export const rawPlanchasData: Plancha[] = [
     },
     "accessories": [
       {
-        "id": "almohadilla-silicona-40x50"
-      },
-      {
         "id": "termometro-digital-infrarrojos-it122"
       },
       {
@@ -15859,6 +15856,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "lamina-teflon-40x50"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
       }
     ],
     "category": {
