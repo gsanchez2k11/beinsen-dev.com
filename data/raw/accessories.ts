@@ -1946,5 +1946,64 @@ export const rawAccessoriesData: Accessory[] = [
         "value": "Alina, Aruba, Sicilia, Maine"
       }
     ]
+  },
+  {
+    "reference": "BPLAN159",
+    "id": "plato-resistencia-combo-38x38",
+    "slug": "plato-resistencia-combo-38x38",
+    "tiendaSublimacionUrl": "https://tiendasublimacion.com/plato-y-resistencia-planchas-para-planchas-combo-beinsen-38x38.html",
+    "name": {
+      "es": "Plato + resistencia para planchas combo Beinsen 38 x 38",
+      "en": "Platen + heating element for Beinsen Combo 38 x 38 presses",
+      "pt": "Prato + resistência para prensas combo Beinsen 38 x 38",
+      "it": "Piastra + resistenza per presse combo Beinsen 38 x 38"
+    },
+    "price": "Consultar PVP",
+    "pvp": 157.3,
+    "image": "https://tiendasublimacion.com/media/catalog/product/cache/8acdd8bc2d5574fb711d6c7b202fdd18/w/h/white-resiplana_1.webp",
+    "description": {
+      "es": "Repuesto de plato superior con resistencia incorporada para planchas combo Beinsen 38 x 38 de 1ª generación. Aplica calor plano y uniforme sobre los objetos a planchar.",
+      "en": "Upper platen replacement with built-in heating element for first-generation Beinsen Combo 38 x 38 presses. Delivers flat, uniform heat on the items being pressed.",
+      "pt": "Reposição de prato superior com resistência incorporada para prensas combo Beinsen 38 x 38 de 1ª geração. Aplica calor plano e uniforme sobre os objetos a prensar.",
+      "it": "Ricambio della piastra superiore con resistenza integrata per presse combo Beinsen 38 x 38 di prima generazione. Applica calore piano e uniforme sugli oggetti da pressare."
+    },
+    "technicalSpecs": [
+      {
+        "label": {
+          "es": "Dimensiones plato",
+          "en": "Platen dimensions",
+          "pt": "Dimensões do prato",
+          "it": "Dimensioni piastra"
+        },
+        "value": "38 x 38 cm"
+      },
+      {
+        "label": {
+          "es": "Material",
+          "en": "Material",
+          "pt": "Material",
+          "it": "Materiale"
+        },
+        "value": "Aluminio fundido / Cast aluminium"
+      },
+      {
+        "label": {
+          "es": "Compatibilidad",
+          "en": "Compatibility",
+          "pt": "Compatibilidade",
+          "it": "Compatibilità"
+        },
+        "value": "Planchas Combo Beinsen 1ª generación 38 x 38"
+      },
+      {
+        "label": {
+          "es": "Incluye",
+          "en": "Includes",
+          "pt": "Inclui",
+          "it": "Include"
+        },
+        "value": "Plato + resistencia + cableado + adaptador"
+      }
+    ]
   }
 ];
