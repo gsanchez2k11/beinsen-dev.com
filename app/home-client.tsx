@@ -26,8 +26,8 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
             },
             categories: {
                 title: "Nuestras Soluciones",
-                machines: "Máquinas Transfer",
-                accs: "Accesorios Profesionales",
+                machines: "Prensas Transfer",
+                accs: "Accesorios",
                 cons: "Insumos y Consumibles"
             },
             leadership: {
@@ -72,8 +72,8 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
             },
             categories: {
                 title: "Our Solutions",
-                machines: "Transfer Machines",
-                accs: "Professional Accessories",
+                machines: "Transfer Presses",
+                accs: "Accessories",
                 cons: "Supplies & Consumables"
             },
             leadership: {
@@ -118,8 +118,8 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
             },
             categories: {
                 title: "As Nossas Soluções",
-                machines: "Máquinas Transfer",
-                accs: "Acessórios Profissionais",
+                machines: "Prensas Transfer",
+                accs: "Acessórios",
                 cons: "Consumíveis e Insumos"
             },
             leadership: {
@@ -165,7 +165,7 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
             categories: {
                 title: "Le Nostre Soluzioni",
                 machines: "Presse Transfer",
-                accs: "Accessori Professionali",
+                accs: "Accessori",
                 cons: "Materiali di Consumo"
             },
             leadership: {
