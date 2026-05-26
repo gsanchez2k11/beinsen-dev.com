@@ -515,7 +515,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "termometro-digital-infrarrojos-it122"
-      },
+      }
+    ],
+    "consumables": [
       {
         "id": "resistencia-tazas-6-10oz"
       },
@@ -524,9 +526,7 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "resistencia-tazas-11oz-a"
-      }
-    ],
-    "consumables": [
+      },
       {
         "id": "cinta-termica-10mm"
       },
@@ -919,16 +919,16 @@ export const rawPlanchasData: Plancha[] = [
     },
     "accessories": [
       {
-        "id": "resistencia-platos-6-1-gen"
-      },
-      {
         "id": "termometro-digital-infrarrojos-it122"
-      },
-      {
-        "id": "resistencia-platos-5-dorian"
       }
     ],
     "consumables": [
+      {
+        "id": "resistencia-platos-6-1-gen"
+      },
+      {
+        "id": "resistencia-platos-5-dorian"
+      },
       {
         "id": "cinta-termica-10mm"
       }
@@ -1274,9 +1274,6 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "mesa-universal-grande"
-      },
-      {
-        "id": "laser-posicionamiento"
       }
     ],
     "consumables": [
@@ -1731,6 +1728,11 @@ export const rawPlanchasData: Plancha[] = [
         "id": "termometro-digital-infrarrojos-it122"
       },
       {
+        "id": "mesa-universal-grande"
+      }
+    ],
+    "consumables": [
+      {
         "id": "resistencia-tazas-6-10oz"
       },
       {
@@ -1743,13 +1745,8 @@ export const rawPlanchasData: Plancha[] = [
         "id": "resistencia-tazas-conicas-17oz"
       },
       {
-        "id": "mesa-universal-grande"
-      },
-      {
         "id": "resistencia-tazas-11oz-a"
-      }
-    ],
-    "consumables": [
+      },
       {
         "id": "cinta-termica-10mm"
       },
@@ -2182,14 +2179,7 @@ export const rawPlanchasData: Plancha[] = [
         "Puoi utilizzarlo per sublimare piccoli oggetti come portachiavi, targhette, ciondoli, vetro ecc."
       ]
     },
-    "accessories": [
-      {
-        "id": "molde-3d-silicona-tazas-conicas-jarras"
-      },
-      {
-        "id": "molde-3d-silicona-platos"
-      }
-    ],
+    "accessories": [],
     "consumables": [],
     "category": {
       "es": "Textil",
@@ -3382,22 +3372,22 @@ export const rawPlanchasData: Plancha[] = [
     },
     "accessories": [
       {
-        "id": "resistencia-gorras-beinsen-obrei"
-      },
-      {
         "id": "termometro-digital-infrarrojos-it122"
       },
       {
         "id": "plato-gorras-beinsen-obrei"
       },
       {
-        "id": "resistencia-15x15-beinsen-obrei"
-      },
-      {
         "id": "plato-base-15x15-beinsen-obrei"
       }
     ],
     "consumables": [
+      {
+        "id": "resistencia-gorras-beinsen-obrei"
+      },
+      {
+        "id": "resistencia-15x15-beinsen-obrei"
+      },
       {
         "id": "cinta-termica-10mm"
       },
@@ -4294,15 +4284,15 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "termometro-digital-infrarrojos-it122"
-      },
+      }
+    ],
+    "consumables": [
       {
         "id": "plato-resistencia-combo-38x38"
       },
       {
         "id": "resistencia-gorras-combo-beinsen"
-      }
-    ],
-    "consumables": [
+      },
       {
         "id": "cinta-termica-10mm"
       },
@@ -5349,15 +5339,15 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
-      },
+      }
+    ],
+    "consumables": [
       {
         "id": "resistencia-tazas-6-10oz"
       },
       {
         "id": "resistencia-tazas-11oz-b"
-      }
-    ],
-    "consumables": [
+      },
       {
         "id": "cinta-termica-10mm"
       }
@@ -5834,7 +5824,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
-      },
+      }
+    ],
+    "consumables": [
       {
         "id": "resistencia-tazas-2-5oz"
       },
@@ -5858,9 +5850,7 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "resistencia-tazas-11oz-b"
-      }
-    ],
-    "consumables": [
+      },
       {
         "id": "cinta-termica-10mm"
       }
@@ -6314,7 +6304,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
-      },
+      }
+    ],
+    "consumables": [
       {
         "id": "resistencia-tazas-6-10oz"
       },
@@ -6329,9 +6321,7 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "resistencia-tazas-11oz-a"
-      }
-    ],
-    "consumables": [
+      },
       {
         "id": "cinta-termica-10mm"
       }
@@ -6791,6 +6781,11 @@ export const rawPlanchasData: Plancha[] = [
         "id": "termometro-digital-infrarrojos-it122"
       },
       {
+        "id": "mesa-universal-grande"
+      }
+    ],
+    "consumables": [
+      {
         "id": "resistencia-tazas-2-5oz"
       },
       {
@@ -6811,11 +6806,6 @@ export const rawPlanchasData: Plancha[] = [
       {
         "id": "resistencia-tazas-6-10oz"
       },
-      {
-        "id": "mesa-universal-grande"
-      }
-    ],
-    "consumables": [
       {
         "id": "cinta-termica-10mm"
       },
@@ -7239,13 +7229,13 @@ export const rawPlanchasData: Plancha[] = [
         "id": "plato-gorras-beinsen-riad"
       },
       {
-        "id": "resistencia-gorras-beinsen-riad"
-      },
-      {
         "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
+      {
+        "id": "resistencia-gorras-beinsen-riad"
+      },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
       }
@@ -7620,13 +7610,13 @@ export const rawPlanchasData: Plancha[] = [
         "id": "plato-15x20-beinsen-riad"
       },
       {
-        "id": "resistencia-15x20-beinsen-riad"
-      },
-      {
         "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
+      {
+        "id": "resistencia-15x20-beinsen-riad"
+      },
       {
         "id": "cinta-termica-10mm"
       }
