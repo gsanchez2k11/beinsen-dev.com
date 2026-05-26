@@ -10,7 +10,7 @@ import { getLocalized } from "@/lib/i18n";
 import { CatalogProductCard } from "@/components/CatalogProductCard";
 
 const CATEGORIES = ["Todas", "Textil", "Tazas y Botellas", "Gorras", "Especializadas", "Multifunción"];
-const OPENING_TYPES = ["Cualquiera", "Manual", "Electromagnética", "Neumática", "Eléctrica", "Automática"];
+const OPENING_TYPES = ["Cualquiera", "Manual", "Electromagnética", "Neumática", "Eléctrica", "Automática", "Giratoria"];
 const FORMATS = ["Cualquiera", "Compacta", "Estándar", "Industrial", "Estación de trabajo"];
 const PLATE_TYPES = ["Cualquiera", "Intercambiable", "Fijo"];
 
@@ -22,10 +22,10 @@ const CATEGORIES_LABELS = {
 };
 
 const OPENING_TYPES_LABELS = {
-    es: ["Cualquiera", "Manual", "Electromagnética", "Neumática", "Eléctrica", "Automática"],
-    en: ["Any", "Manual", "Electromagnetic", "Pneumatic", "Electric", "Automatic"],
-    pt: ["Qualquer", "Manual", "Eletromagnética", "Pneumática", "Elétrica", "Automática"],
-    it: ["Qualsiasi", "Manuale", "Elettromagnetica", "Pneumatica", "Elettrica", "Automatica"]
+    es: ["Cualquiera", "Manual", "Electromagnética", "Neumática", "Eléctrica", "Automática", "Giratoria"],
+    en: ["Any", "Manual", "Electromagnetic", "Pneumatic", "Electric", "Automatic", "Swing-Away"],
+    pt: ["Qualquer", "Manual", "Eletromagnética", "Pneumática", "Elétrica", "Automática", "Giratória"],
+    it: ["Qualsiasi", "Manuale", "Elettromagnetica", "Pneumatica", "Elettrica", "Automatica", "Girevole"]
 };
 
 const FORMATS_LABELS = {
