@@ -1281,7 +1281,7 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "consumables": [
       {
-        "id": "teflon-40x50"
+        "id": "lamina-teflon-40x50"
       }
     ],
     "storyHeadline": {
