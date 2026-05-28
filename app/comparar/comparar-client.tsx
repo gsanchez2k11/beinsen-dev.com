@@ -11,6 +11,7 @@ import { getLocalized } from "@/lib/i18n";
 import { SupportContactCTA } from "@/components/SupportContactCTA";
 import { enrichWithLocalImages } from "@/lib/productImages";
 import { useLanguage } from "@/context/LanguageContext";
+import { PRICES_VISIBLE } from "@/lib/pricing";
 
 const MAX_SLOTS = 3;
 
@@ -177,6 +178,7 @@ function CompareContent() {
     };
 
     const formatPrice = (p: any) => {
+        if (!PRICES_VISIBLE) return d.specPrice_fallback;
         const shown = p.pvp ?? p.price;
         if (shown === undefined || shown === "Consultar PVP") return d.specPrice_fallback;
         return typeof shown === "number" ? `${shown.toLocaleString(locale === "en" ? "en-GB" : "es-ES")} €` : shown;

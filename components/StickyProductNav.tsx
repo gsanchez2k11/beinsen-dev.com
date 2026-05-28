@@ -7,6 +7,7 @@ import { ContactSpecialistButton } from "./ContactSpecialistButton";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
+import { PRICES_VISIBLE } from "@/lib/pricing";
 import { Localized, Locale } from "@/data/products";
 
 interface StickyProductNavProps {
@@ -68,7 +69,7 @@ export function StickyProductNav({ productName, price }: StickyProductNavProps) 
                         {/* Right: Price + CTA */}
                         <div className="flex items-center gap-4">
                             <span className="hidden md:flex items-center gap-1 font-bold text-foreground text-xl mr-2">
-                                {price !== 'Consultar PVP' ? (
+                                {PRICES_VISIBLE && price !== 'Consultar PVP' ? (
                                     <>
                                         <Euro size={20} className="text-[#FF6600]" />
                                         {typeof price === 'number' ? price.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES') : price}
