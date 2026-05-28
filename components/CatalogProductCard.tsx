@@ -48,6 +48,7 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
         >
             <Link
                 href={href}
+                aria-label={`${dictionary.details}: ${name}`}
                 className={`flex flex-col h-full bg-card rounded-[2.5rem] overflow-hidden border shadow-sm transition-all duration-500 relative ring-1 ${
                     isNew
                         ? "border-[#FF6600] ring-[#FF6600]/30 shadow-xl shadow-[#FF6600]/20 hover:shadow-2xl hover:shadow-[#FF6600]/40"
