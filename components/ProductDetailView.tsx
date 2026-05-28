@@ -70,7 +70,9 @@ export function ProductDetailView({
     const dictionary = {
         es: {
             inicio: "Inicio",
-            planchas: "Planchas",
+            kindPlanchas: "Prensas",
+            kindAccessories: "Accesorios",
+            kindConsumables: "Consumibles",
             back: "Volver al catálogo",
             investment: "PVP",
             checkPrice: "Consultar PVP",
@@ -108,7 +110,9 @@ export function ProductDetailView({
         },
         en: {
             inicio: "Home",
-            planchas: "Heat Presses",
+            kindPlanchas: "Presses",
+            kindAccessories: "Accessories",
+            kindConsumables: "Consumables",
             back: "Back to catalog",
             investment: "Retail Price",
             checkPrice: "Check Price",
@@ -146,7 +150,9 @@ export function ProductDetailView({
         },
         pt: {
             inicio: "Início",
-            planchas: "Prensas Térmicas",
+            kindPlanchas: "Prensas",
+            kindAccessories: "Acessórios",
+            kindConsumables: "Consumíveis",
             back: "Voltar ao catálogo",
             investment: "PVP",
             checkPrice: "Consultar PVP",
@@ -184,7 +190,9 @@ export function ProductDetailView({
         },
         it: {
             inicio: "Inizio",
-            planchas: "Presse a Caldo",
+            kindPlanchas: "Presse",
+            kindAccessories: "Accessori",
+            kindConsumables: "Consumabili",
             back: "Torna al catalogo",
             investment: "Prezzo al Pubblico",
             checkPrice: "Consultare PVP",
@@ -227,17 +235,24 @@ export function ProductDetailView({
 
     const activeItems = activeTab === "accessories" ? fullAccessories : fullConsumables;
 
+    // Categoría y URL del filtro según el tipo de producto.
+    const kindLabel =
+        kind === "accessories" ? d.kindAccessories :
+        kind === "consumables" ? d.kindConsumables :
+        d.kindPlanchas;
+    const kindHref = `/planchas?type=${kind}`;
+
     return (
         <div className="bg-background min-h-screen pt-24 pb-24 overflow-x-hidden selection:bg-[#FF6600] selection:text-white">
-            <StickyProductNav productName={plancha.name} price={plancha.price} />
+            <StickyProductNav productName={plancha.name} price={plancha.price} kindLabel={kindLabel} kindHref={kindHref} />
             <ScrollToTopButton />
-           
+
             {/* Dynamic Breadcrumbs */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
                 <nav className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
                     <Link href="/" className="hover:text-[#FF6600] transition-colors">{d.inicio}</Link>
                     <ChevronRight size={14} className="text-border" />
-                    <Link href="/planchas" className="hover:text-[#FF6600] transition-colors">{d.planchas}</Link>
+                    <Link href={kindHref} className="hover:text-[#FF6600] transition-colors">{kindLabel}</Link>
                     <ChevronRight size={14} className="text-border" />
                     <span className="text-foreground">{name}</span>
                 </nav>
