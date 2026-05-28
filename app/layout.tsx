@@ -58,6 +58,8 @@ const localBusinessSchema = {
   "@type": ["Organization", "LocalBusiness"],
   "@id": `${SITE_URL}/#organization`,
   name: "Beinsen",
+  legalName: "Futura Teck de Murcia S.L.U.",
+  alternateName: "Futura Teck",
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
@@ -67,6 +69,13 @@ const localBusinessSchema = {
   },
   image: `${SITE_URL}/brand/logo.png`,
   description: "Fabricante líder de planchas transfer y prensas térmicas industriales para sublimación, DTF y vinilo textil. Presencia en más de 50 países.",
+  vatID: "ESB30507743",
+  taxID: "B30507743",
+  iso6523Code: "0202:B30507743",
+  identifier: [
+    { "@type": "PropertyValue", propertyID: "VAT", value: "ESB30507743" },
+    { "@type": "PropertyValue", propertyID: "Registro Mercantil", value: "Murcia, Tomo MU-1135, Folio 47, Hoja MU-20685" },
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "Av. Alto de las Atalayas, 18",
