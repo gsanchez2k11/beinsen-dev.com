@@ -73,6 +73,12 @@ export default function LegalPage() {
           </p>
           <a href="mailto:info@beinsen.com" className="text-[#FF6600] font-bold hover:underline">info@beinsen.com</a>
         </section>
+
+        <footer className="pt-8 border-t border-border mt-12">
+          <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
+            Versión 1.1 — Última actualización: 28 de mayo de 2026
+          </p>
+        </footer>
       </>
     )
   };

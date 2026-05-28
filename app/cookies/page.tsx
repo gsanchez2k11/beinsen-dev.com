@@ -127,7 +127,7 @@ export default function CookiesPage() {
 
                 <footer className="pt-8 border-t border-border">
                     <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
-                        Última actualización: 28 de mayo de 2026
+                        Versión 1.0 — Última actualización: 28 de mayo de 2026
                     </p>
                 </footer>
             </>
