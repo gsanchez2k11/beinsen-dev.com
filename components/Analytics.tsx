@@ -1,8 +1,26 @@
-import Script from "next/script";
+"use client";
 
+import Script from "next/script";
+import { useEffect, useState } from "react";
+import { getConsent, subscribeConsent, type Consent } from "@/lib/consent";
+
+/**
+ * Carga Google Analytics SOLO si:
+ *   - hay `NEXT_PUBLIC_GA_ID` configurado, Y
+ *   - el usuario ha aceptado todas las cookies (consent === "all").
+ *
+ * Cumple LSSI art. 22.2 — bloqueo previo hasta consentimiento explícito.
+ */
 export function Analytics() {
     const gaId = process.env.NEXT_PUBLIC_GA_ID;
-    if (!gaId) return null;
+    const [consent, setConsentState] = useState<Consent>(null);
+
+    useEffect(() => {
+        setConsentState(getConsent());
+        return subscribeConsent(setConsentState);
+    }, []);
+
+    if (!gaId || consent !== "all") return null;
 
     return (
         <>

@@ -21,7 +21,8 @@ export function Footer() {
             rights: "Todos los derechos reservados.",
             privacy: "Privacidad",
             legal: "Aviso Legal",
-            conditions: "Condiciones Generales"
+            conditions: "Condiciones Generales",
+            cookies: "Cookies"
         },
         en: {
             desc: "Manufacturer of heat press machines for garment personalization. Quality, robustness, and precision for demanding professionals.",
@@ -35,7 +36,8 @@ export function Footer() {
             rights: "All rights reserved.",
             privacy: "Privacy Policy",
             legal: "Legal Notice",
-            conditions: "General Conditions"
+            conditions: "General Conditions",
+            cookies: "Cookies"
         },
         pt: {
             desc: "Fabricante de prensas térmicas para personalização de vestuário. Qualidade, robustez e precisão para profissionais exigentes.",
@@ -49,7 +51,8 @@ export function Footer() {
             rights: "Todos os direitos reservados.",
             privacy: "Privacidade",
             legal: "Aviso Legal",
-            conditions: "Condições Gerais"
+            conditions: "Condições Gerais",
+            cookies: "Cookies"
         },
         it: {
             desc: "Produttore di presse a caldo per la personalizzazione dei capi. Qualità, robustezza e precisione per professionisti esigenti.",
@@ -63,7 +66,8 @@ export function Footer() {
             rights: "Tutti i diritti riservati.",
             privacy: "Privacy",
             legal: "Note Legali",
-            conditions: "Condizioni Generali"
+            conditions: "Condizioni Generali",
+            cookies: "Cookie"
         }
     }[locale] || { es: {} }.es;
 
@@ -144,6 +148,9 @@ export function Footer() {
                     <div className="flex flex-wrap gap-4 justify-center md:justify-end">
                         <Link href="/privacidad" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
                             {d.privacy}
+                        </Link>
+                        <Link href="/cookies" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
+                            {d.cookies}
                         </Link>
                         <Link href="/condiciones" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
                             {d.conditions}
