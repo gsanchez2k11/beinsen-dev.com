@@ -16,6 +16,7 @@ import { StickyProductNav } from "@/components/StickyProductNav";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
+import { PRICES_VISIBLE } from "@/lib/pricing";
 import type { Plancha, CompatibleItem } from "@/data/products";
 
 // Componentes pesados below-the-fold: se cargan en cliente bajo demanda
@@ -305,6 +306,9 @@ export function ProductDetailView({
                                 <div className="flex flex-col items-center sm:items-start text-foreground">
                                     <span className="text-xs text-muted-foreground uppercase tracking-[0.3em] font-black mb-1 opacity-50">{d.investment}</span>
                                     {(() => {
+                                        if (!PRICES_VISIBLE) {
+                                            return <span className="text-2xl font-black text-muted-foreground">{d.checkPrice}</span>;
+                                        }
                                         const shown = (plancha as any).pvp ?? plancha.price;
                                         if (shown === undefined || shown === 'Consultar PVP') {
                                             return <span className="text-2xl font-black text-muted-foreground">{d.checkPrice}</span>;
@@ -552,7 +556,7 @@ export function ProductDetailView({
                     </div>
 
                     {/* ROI Calculator for Automatics */}
-                    {openingType === 'Automática' && typeof plancha.price === 'number' && (
+                    {PRICES_VISIBLE && openingType === 'Automática' && typeof plancha.price === 'number' && (
                         <ScrollReveal className="w-full py-20">
                             <RoiCalculator machineName={name || ""} machinePrice={plancha.price} />
                         </ScrollReveal>
@@ -666,6 +670,9 @@ export function ProductDetailView({
                                                 </div>
                                                 <div className="text-right shrink-0">
                                                     {(() => {
+                                                        if (!PRICES_VISIBLE) {
+                                                            return <span className="text-muted-foreground font-bold text-base tracking-tight">{d.checkPrice}</span>;
+                                                        }
                                                         const shown = item.pvp ?? item.price;
                                                         return (
                                                             <span className="text-foreground font-black text-2xl tracking-tighter">

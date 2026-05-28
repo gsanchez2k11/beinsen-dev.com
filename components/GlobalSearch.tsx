@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { planchasData, allAccessoriesData, allConsumablesData, Locale } from "@/data/products";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
+import { PRICES_VISIBLE } from "@/lib/pricing";
 
 export function GlobalSearch() {
     const { locale } = useLanguage();
@@ -269,7 +270,7 @@ export function GlobalSearch() {
                                                                         {item.name}
                                                                     </p>
                                                                     <p className="text-xs text-muted-foreground">
-                                                                        {item.price === 'Consultar PVP' ? d.checkPrice : `${item.price} €`}
+                                                                        {!PRICES_VISIBLE || item.price === 'Consultar PVP' ? d.checkPrice : `${item.price} €`}
                                                                     </p>
                                                                 </div>
                                                             </div>

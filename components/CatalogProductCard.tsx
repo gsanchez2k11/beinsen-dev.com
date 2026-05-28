@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ArrowUpRight, Tag, Maximize2, Target, Box, Sparkles } from "lucide-react";
 import { getLocalized } from "@/lib/i18n";
 import { enrichWithLocalImages } from "@/lib/productImages";
+import { PRICES_VISIBLE } from "@/lib/pricing";
 import type { Locale } from "@/data/products";
 
 interface CatalogProductCardProps {
@@ -99,6 +100,7 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
                     <div className="absolute bottom-6 right-6 bg-background/90 backdrop-blur-xl px-4 py-2 rounded-2xl text-sm font-black flex items-center gap-2 shadow-xl border border-border/20 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                         <Tag size={16} className="text-[#FF6600]" />
                         {(() => {
+                            if (!PRICES_VISIBLE) return dictionary.consultPvP;
                             const shown = item.pvp ?? item.price;
                             if (shown === undefined || shown === "Consultar PVP") return dictionary.consultPvP;
                             return typeof shown === 'number' ? `${shown.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES')} €` : shown;
