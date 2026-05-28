@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Aprende con Beinsen — Guías Técnicas de Prensas Transfer'
+export const alt = 'Aprende con Beinsen — Guías Técnicas de Planchas Transfer'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 

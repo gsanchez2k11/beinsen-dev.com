@@ -4,14 +4,14 @@ import { getAllArticles } from "@/lib/articles";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-    title: "Beinsen | Fabricante de Prensas Transfer y Prensas Térmicas Profesionales",
+    title: "Beinsen | Fabricante de Planchas Transfer y Prensas Térmicas Profesionales",
     description: "Fabricante líder de planchas transfer y prensas térmicas industriales para sublimación, DTF y vinilo textil. Calidad certificada, presencia en 50+ países. Solicita presupuesto.",
     alternates: {
         canonical: SITE_URL,
     },
     openGraph: {
-        title: "Beinsen | Fabricante de Prensas Transfer Profesionales",
-        description: "Prensas transfer e industriales para sublimación, DTF y vinilo textil. Más de 50 países. Solicita presupuesto.",
+        title: "Beinsen | Fabricante de Planchas Transfer Profesionales",
+        description: "Planchas transfer e industriales para sublimación, DTF y vinilo textil. Más de 50 países. Solicita presupuesto.",
         url: SITE_URL,
         siteName: "Beinsen",
         // images se generan dinámicamente vía app/opengraph-image.tsx
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Beinsen | Fabricante de Prensas Transfer Profesionales",
-        description: "Prensas transfer e industriales para sublimación, DTF y vinilo textil. Más de 50 países.",
+        title: "Beinsen | Fabricante de Planchas Transfer Profesionales",
+        description: "Planchas transfer e industriales para sublimación, DTF y vinilo textil. Más de 50 países.",
         // images se generan dinámicamente vía app/twitter-image.tsx (fallback al OG)
     },
 };

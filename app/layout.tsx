@@ -20,7 +20,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: {
-    default: "Beinsen | Prensas Transfer y Prensas Térmicas Industriales",
+    default: "Beinsen | Planchas Transfer y Prensas Térmicas Industriales",
     template: "%s | Beinsen",
   },
   description: "Fabricante líder de planchas transfer y prensas térmicas industriales para sublimación, DTF y vinilo textil. Calidad certificada, presencia en 50+ países.",
