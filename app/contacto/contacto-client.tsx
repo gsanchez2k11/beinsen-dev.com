@@ -72,7 +72,8 @@ function ContactContent() {
         country: "España",
         interestType: "machine" as "machine" | "general",
         machine: planchasData[0]?.slug || "",
-        message: ""
+        message: "",
+        consent: false
     });
 
     // Booking States
@@ -85,7 +86,8 @@ function ContactContent() {
         email: "",
         phone: "",
         company: "",
-        notes: ""
+        notes: "",
+        consent: false
     });
 
     const [error, setError] = useState<string | null>(null);
@@ -155,7 +157,12 @@ function ContactContent() {
             bookingTitle: "1. Selecciona fecha y hora",
             bookingContact: "2. Datos de contacto",
             bookingSuccess: "¡Cita Solicitada!",
-            bookingSuccessDesc: "Hemos recibido tu solicitud. Revisaremos la agenda y te enviaremos la invitación de Google Meet en breve."
+            bookingSuccessDesc: "Hemos recibido tu solicitud. Revisaremos la agenda y te enviaremos la invitación de Google Meet en breve.",
+            consentPrefix: "He leído y acepto la ",
+            consentLink: "Política de Privacidad",
+            consentSuffix: " y el tratamiento de mis datos para responder a esta consulta.",
+            consentRequired: "Para enviar el formulario debes aceptar la Política de Privacidad.",
+            rgpdShort: "Responsable: Futura Teck de Murcia S.L.U. Finalidad: atender tu consulta. Base: consentimiento y medidas precontractuales. No cesiones a terceros con fines comerciales. Derechos en /privacidad."
         },
         en: {
             title: "Technical Contact",
@@ -188,7 +195,12 @@ function ContactContent() {
             bookingTitle: "1. Select date and time",
             bookingContact: "2. Contact details",
             bookingSuccess: "Appointment Requested!",
-            bookingSuccessDesc: "We have received your request. We will review the schedule and send you the Google Meet invitation shortly."
+            bookingSuccessDesc: "We have received your request. We will review the schedule and send you the Google Meet invitation shortly.",
+            consentPrefix: "I have read and accept the ",
+            consentLink: "Privacy Policy",
+            consentSuffix: " and the processing of my data to respond to this inquiry.",
+            consentRequired: "You must accept the Privacy Policy to submit the form.",
+            rgpdShort: "Controller: Futura Teck de Murcia S.L.U. Purpose: respond to your inquiry. Legal basis: consent and pre-contractual measures. No commercial transfers to third parties. Rights at /privacidad."
         },
         pt: {
             title: "Contacto Técnico",
@@ -221,7 +233,12 @@ function ContactContent() {
             bookingTitle: "1. Selecione data e hora",
             bookingContact: "2. Dados de contacto",
             bookingSuccess: "Reunião Solicitada!",
-            bookingSuccessDesc: "Recebemos o seu pedido. Vamos rever a agenda e enviar-lhe o convite do Google Meet em breve."
+            bookingSuccessDesc: "Recebemos o seu pedido. Vamos rever a agenda e enviar-lhe o convite do Google Meet em breve.",
+            consentPrefix: "Li e aceito a ",
+            consentLink: "Política de Privacidade",
+            consentSuffix: " e o tratamento dos meus dados para responder a esta consulta.",
+            consentRequired: "Para enviar o formulário deve aceitar a Política de Privacidade.",
+            rgpdShort: "Responsável: Futura Teck de Murcia S.L.U. Finalidade: atender o seu pedido. Base: consentimento e medidas pré-contratuais. Sem cessões a terceiros com fins comerciais. Direitos em /privacidad."
         },
         it: {
             title: "Contatto Tecnico",
@@ -254,7 +271,12 @@ function ContactContent() {
             bookingTitle: "1. Seleziona data e ora",
             bookingContact: "2. Dati di contatto",
             bookingSuccess: "Appuntamento Richiesto!",
-            bookingSuccessDesc: "Abbiamo ricevuto la vostra richiesta. Esamineremo l'agenda e vi invieremo a breve l'invito di Google Meet."
+            bookingSuccessDesc: "Abbiamo ricevuto la vostra richiesta. Esamineremo l'agenda e vi invieremo a breve l'invito di Google Meet.",
+            consentPrefix: "Ho letto e accetto l'",
+            consentLink: "Informativa sulla Privacy",
+            consentSuffix: " e il trattamento dei miei dati per rispondere a questa richiesta.",
+            consentRequired: "Per inviare il modulo devi accettare l'Informativa sulla Privacy.",
+            rgpdShort: "Titolare: Futura Teck de Murcia S.L.U. Finalità: rispondere alla tua richiesta. Base: consenso e misure precontrattuali. Nessuna cessione a terzi per scopi commerciali. Diritti su /privacidad."
         }
     }[locale] || { es: {} }.es;
 
@@ -268,10 +290,11 @@ function ContactContent() {
         else if (!validateEmail(messageFormData.email)) errors.email = "Email inválido";
         if (!messageFormData.company.trim()) errors.company = "Requerido";
         if (!messageFormData.message.trim()) errors.message = "Requerido";
+        if (!messageFormData.consent) errors.consent = "Requerido";
 
         if (Object.keys(errors).length > 0) {
             setValidationErrors(errors);
-            showError(d.errorRequired);
+            showError(errors.consent ? d.consentRequired : d.errorRequired);
             return;
         }
         setValidationErrors({});
@@ -307,9 +330,11 @@ function ContactContent() {
         if (!bookingFormData.phone.trim()) errors.b_phone = "Requerido";
         else if (!validatePhone(bookingFormData.phone)) errors.b_phone = "Teléfono inválido";
         if (!bookingFormData.company.trim()) errors.b_company = "Requerido";
+        if (!bookingFormData.consent) errors.b_consent = "Requerido";
 
         if (Object.keys(errors).length > 0) {
             setValidationErrors(errors);
+            if (errors.b_consent) showError(d.consentRequired);
             return;
         }
         setValidationErrors({});
@@ -486,7 +511,25 @@ function ContactContent() {
                                                                 <div className="space-y-8">
                                                                     <div className="space-y-4"><label className="text-xs font-black uppercase text-muted-foreground ml-2">{d.interestSelection}</label><div className="flex gap-4"><button type="button" onClick={() => setMessageFormData({...messageFormData, interestType: 'machine'})} className={`flex-1 p-4 rounded-2xl border transition-all text-sm font-bold flex items-center justify-center gap-2 ${messageFormData.interestType === 'machine' ? 'bg-[#FF6600] border-[#FF6600] text-white' : 'bg-muted/30 border-white/5'}`}><Briefcase size={18} /> {d.machine}</button><button type="button" onClick={() => setMessageFormData({...messageFormData, interestType: 'general'})} className={`flex-1 p-4 rounded-2xl border transition-all text-sm font-bold flex items-center justify-center gap-2 ${messageFormData.interestType === 'general' ? 'bg-[#FF6600] border-[#FF6600] text-white' : 'bg-muted/30 border-white/5'}`}><MessageSquare size={18} /> {d.general}</button></div></div>
                                                                     <div className="space-y-2"><label htmlFor="contact-message" className="text-xs font-black uppercase text-muted-foreground ml-2">{d.message}</label><textarea id="contact-message" required value={messageFormData.message} onChange={(e) => setMessageFormData({...messageFormData, message: e.target.value})} rows={4} className="w-full bg-muted/50 border-none rounded-2xl p-4 resize-none" /></div>
-                                                                    <div className="flex gap-4"><button type="button" onClick={() => setMessageFormStep(1)} className="px-8 py-5 border border-white/10 rounded-2xl font-black uppercase text-xs">{d.back}</button><button type="submit" disabled={isMessageSubmitting} className="flex-1 px-12 py-5 bg-[#FF6600] text-white rounded-2xl font-black uppercase text-sm disabled:opacity-50 flex items-center justify-center gap-2">{isMessageSubmitting ? d.sending : d.send} <Send size={18} /></button></div>
+                                                                    <div className="space-y-3 pt-2">
+                                                                        <p className="text-[10px] text-muted-foreground/80 leading-relaxed italic">{d.rgpdShort}</p>
+                                                                        <label className={`flex items-start gap-3 text-xs cursor-pointer p-3 rounded-xl border-2 transition-all ${validationErrors.consent ? 'border-red-500/50 bg-red-500/5 text-foreground' : 'border-border/40 text-muted-foreground hover:border-[#FF6600]/30'}`}>
+                                                                            <input
+                                                                                type="checkbox"
+                                                                                checked={messageFormData.consent}
+                                                                                onChange={(e) => setMessageFormData({...messageFormData, consent: e.target.checked})}
+                                                                                className="mt-0.5 w-4 h-4 rounded accent-[#FF6600] shrink-0"
+                                                                                aria-required="true"
+                                                                                aria-invalid={!!validationErrors.consent}
+                                                                            />
+                                                                            <span>
+                                                                                {d.consentPrefix}
+                                                                                <Link href="/privacidad" className="text-[#FF6600] hover:underline">{d.consentLink}</Link>
+                                                                                {d.consentSuffix}
+                                                                            </span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div className="flex gap-4"><button type="button" onClick={() => setMessageFormStep(1)} className="px-8 py-5 border border-white/10 rounded-2xl font-black uppercase text-xs">{d.back}</button><button type="submit" disabled={isMessageSubmitting || !messageFormData.consent} className="flex-1 px-12 py-5 bg-[#FF6600] text-white rounded-2xl font-black uppercase text-sm disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2">{isMessageSubmitting ? d.sending : d.send} <Send size={18} /></button></div>
                                                                 </div>
                                                             )}
                                                         </form>
@@ -543,7 +586,25 @@ function ContactContent() {
                                                             <input required type="email" aria-label="Email" placeholder="Email" value={bookingFormData.email} onChange={e => setBookingFormData({...bookingFormData, email: e.target.value})} className={`w-full bg-muted/50 rounded-xl px-5 py-3 outline-none border-2 transition-all ${validationErrors.b_email ? 'border-red-500/30' : 'border-transparent'}`} />
                                                             <input required type="tel" aria-label="Teléfono" placeholder="Teléfono" value={bookingFormData.phone} onChange={e => setBookingFormData({...bookingFormData, phone: e.target.value})} className={`w-full bg-muted/50 rounded-xl px-5 py-3 outline-none border-2 transition-all ${validationErrors.b_phone ? 'border-red-500/30' : 'border-transparent'}`} />
                                                             <textarea rows={3} placeholder="Notas adicionales..." value={bookingFormData.notes} onChange={e => setBookingFormData({...bookingFormData, notes: e.target.value})} className="w-full bg-muted/50 rounded-xl px-5 py-3 outline-none resize-none" />
-                                                            <Button type="submit" disabled={isBookingSubmitting} className="w-full bg-[#FF6600] text-white font-black h-16 rounded-2xl text-lg mt-4">{isBookingSubmitting ? <Loader2 className="animate-spin" /> : "Confirmar Cita"}</Button>
+                                                            <div className="space-y-3 pt-2">
+                                                                <p className="text-[10px] text-muted-foreground/80 leading-relaxed italic">{d.rgpdShort}</p>
+                                                                <label className={`flex items-start gap-3 text-xs cursor-pointer p-3 rounded-xl border-2 transition-all ${validationErrors.b_consent ? 'border-red-500/50 bg-red-500/5 text-foreground' : 'border-border/40 text-muted-foreground hover:border-[#FF6600]/30'}`}>
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        checked={bookingFormData.consent}
+                                                                        onChange={(e) => setBookingFormData({...bookingFormData, consent: e.target.checked})}
+                                                                        className="mt-0.5 w-4 h-4 rounded accent-[#FF6600] shrink-0"
+                                                                        aria-required="true"
+                                                                        aria-invalid={!!validationErrors.b_consent}
+                                                                    />
+                                                                    <span>
+                                                                        {d.consentPrefix}
+                                                                        <Link href="/privacidad" className="text-[#FF6600] hover:underline">{d.consentLink}</Link>
+                                                                        {d.consentSuffix}
+                                                                    </span>
+                                                                </label>
+                                                            </div>
+                                                            <Button type="submit" disabled={isBookingSubmitting || !bookingFormData.consent} className="w-full bg-[#FF6600] text-white font-black h-16 rounded-2xl text-lg mt-4 disabled:opacity-50 disabled:cursor-not-allowed">{isBookingSubmitting ? <Loader2 className="animate-spin" /> : "Confirmar Cita"}</Button>
                                                         </form>
                                                     </div>
                                                 )}
