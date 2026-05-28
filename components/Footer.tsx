@@ -22,7 +22,9 @@ export function Footer() {
             privacy: "Privacidad",
             legal: "Aviso Legal",
             conditions: "Condiciones Generales",
-            cookies: "Cookies"
+            cookies: "Cookies",
+            accessibility: "Accesibilidad",
+            subprocessors: "Subprocesadores"
         },
         en: {
             desc: "Manufacturer of heat press machines for garment personalization. Quality, robustness, and precision for demanding professionals.",
@@ -37,7 +39,9 @@ export function Footer() {
             privacy: "Privacy Policy",
             legal: "Legal Notice",
             conditions: "General Conditions",
-            cookies: "Cookies"
+            cookies: "Cookies",
+            accessibility: "Accessibility",
+            subprocessors: "Subprocessors"
         },
         pt: {
             desc: "Fabricante de prensas térmicas para personalização de vestuário. Qualidade, robustez e precisão para profissionais exigentes.",
@@ -52,7 +56,9 @@ export function Footer() {
             privacy: "Privacidade",
             legal: "Aviso Legal",
             conditions: "Condições Gerais",
-            cookies: "Cookies"
+            cookies: "Cookies",
+            accessibility: "Acessibilidade",
+            subprocessors: "Subprocessadores"
         },
         it: {
             desc: "Produttore di presse a caldo per la personalizzazione dei capi. Qualità, robustezza e precisione per professionisti esigenti.",
@@ -67,7 +73,9 @@ export function Footer() {
             privacy: "Privacy",
             legal: "Note Legali",
             conditions: "Condizioni Generali",
-            cookies: "Cookie"
+            cookies: "Cookie",
+            accessibility: "Accessibilità",
+            subprocessors: "Subprocessori"
         }
     }[locale] || { es: {} }.es;
 
@@ -157,6 +165,12 @@ export function Footer() {
                         </Link>
                         <Link href="/legal" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
                             {d.legal}
+                        </Link>
+                        <Link href="/subprocesadores" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
+                            {d.subprocessors}
+                        </Link>
+                        <Link href="/accesibilidad" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
+                            {d.accessibility}
                         </Link>
                     </div>
                 </div>
