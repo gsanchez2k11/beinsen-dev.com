@@ -159,7 +159,6 @@ function CatalogoContent() {
     const [searchQuery, setSearchQuery] = useState("");
     const [isFilterOpen, setIsFilterOpen] = useState(true);
     const [mounted, setMounted] = useState(false);
-    const [isInitialLoad, setIsInitialLoad] = useState(true);
     const prevTypeRef = useRef<string | null>(null);
 
     const [visibleMachines, setVisibleMachines] = useState(PAGE_SIZE);
@@ -182,7 +181,6 @@ function CatalogoContent() {
             setActiveType(typeParam as any);
             prevTypeRef.current = typeParam;
         }
-        setIsInitialLoad(false);
     }, []);
 
     useEffect(() => {
@@ -203,16 +201,6 @@ function CatalogoContent() {
             setSelectedMachine("");
         }
     }, [searchParams, mounted]);
-
-    useEffect(() => {
-        if (isInitialLoad || !mounted) return;
-        if (activeType === "all") {
-            router.push("/catalogo");
-        } else {
-            router.push(`/catalogo?type=${activeType}`);
-        }
-        prevTypeRef.current = activeType === "all" ? null : activeType;
-    }, [activeType, isInitialLoad, mounted, router]);
 
     const categoryLabels = CATEGORIES_LABELS[locale] || CATEGORIES_LABELS.es;
     const openingLabels = OPENING_TYPES_LABELS[locale] || OPENING_TYPES_LABELS.es;
