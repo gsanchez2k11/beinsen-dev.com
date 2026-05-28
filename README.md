@@ -240,7 +240,7 @@ Ejecuta, dentro de `beinsen-dev-as/` (branch `as`):
 
 ```
 app/                           # App Router (páginas y layouts)
-├── icon.png                   # Favicon (logo Beinsen 512x512)
+├── favicon.ico                # Favicon (logo Beinsen)
 ├── aprende/                   # Centro de aprendizaje (MDX)
 │   ├── page.tsx               # Índice
 │   └── [slug]/page.tsx        # Artículo
