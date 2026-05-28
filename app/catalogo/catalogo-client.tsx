@@ -44,22 +44,22 @@ const PLATE_TYPES_LABELS = {
 
 const PAGE_SIZE = 8;
 
-export default function PlanchasClient() {
+export default function CatalogoClient() {
     return (
         <>
-            <PlanchasCatalogHeader />
+            <CatalogoHeader />
             <Suspense fallback={
                 <div className="min-h-[60vh] bg-background pt-16 text-center font-black uppercase tracking-[0.3em] opacity-40">
                     Cargando...
                 </div>
             }>
-                <PlanchasCatalogContent />
+                <CatalogoContent />
             </Suspense>
         </>
     );
 }
 
-function PlanchasCatalogHeader() {
+function CatalogoHeader() {
     const { locale } = useLanguage();
     const d = ({
         es: {
@@ -147,7 +147,7 @@ function LoadMoreButton({ onClick, label }: { onClick: () => void; label: string
     );
 }
 
-function PlanchasCatalogContent() {
+function CatalogoContent() {
     const { locale } = useLanguage();
     const searchParams = useSearchParams();
     const router = useRouter();
@@ -207,9 +207,9 @@ function PlanchasCatalogContent() {
     useEffect(() => {
         if (isInitialLoad || !mounted) return;
         if (activeType === "all") {
-            router.push("/planchas");
+            router.push("/catalogo");
         } else {
-            router.push(`/planchas?type=${activeType}`);
+            router.push(`/catalogo?type=${activeType}`);
         }
         prevTypeRef.current = activeType === "all" ? null : activeType;
     }, [activeType, isInitialLoad, mounted, router]);
@@ -479,9 +479,9 @@ function PlanchasCatalogContent() {
                                     setSelectedMachine("");
 
                                     if (t.id === 'all') {
-                                        router.replace('/planchas', { scroll: false });
+                                        router.replace('/catalogo', { scroll: false });
                                     } else {
-                                        router.replace(`/planchas?type=${t.id}`, { scroll: false });
+                                        router.replace(`/catalogo?type=${t.id}`, { scroll: false });
                                     }
                                 }}
                                 className={`flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-black uppercase tracking-widest transition-all whitespace-nowrap ${activeType === t.id
@@ -651,7 +651,7 @@ function PlanchasCatalogContent() {
                                 setActiveFormatIndex(0);
                                 setActivePlateIndex(0);
                                 setSearchQuery("");
-                                router.replace('/planchas', { scroll: false });
+                                router.replace('/catalogo', { scroll: false });
                             }}
                             className="bg-foreground text-background px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-xs hover:scale-105 transition-transform"
                         >

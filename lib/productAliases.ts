@@ -3,7 +3,7 @@ import { rawPlanchasData } from "../data/raw/planchas";
 /**
  * URLs cortas de marketing para las planchas.
  *
- *   beinsen.com/esparta  →  /planchas/esparta-prensa-termica-neumatica
+ *   beinsen.com/esparta  →  /catalogo/esparta-prensa-termica-neumatica
  *
  * El alias es el primer segmento del slug (el nombre del modelo). Si dos
  * productos comparten ese segmento (p. ej. la serie Normandía), se usa

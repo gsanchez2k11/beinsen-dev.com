@@ -40,7 +40,7 @@ export default function NotFound() {
                     </Link>
 
                     <Link
-                        href="/planchas"
+                        href="/catalogo"
                         className="group flex flex-col items-center gap-3 p-6 bg-card border border-border/40 rounded-3xl hover:border-[#FF6600]/40 hover:bg-[#FF6600]/5 transition-all"
                     >
                         <div className="w-12 h-12 rounded-2xl bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] group-hover:bg-[#FF6600] group-hover:text-white transition-all">

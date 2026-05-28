@@ -20,7 +20,7 @@ import { PRICES_VISIBLE } from "@/lib/pricing";
 import type { Plancha, CompatibleItem } from "@/data/products";
 
 // Componentes pesados below-the-fold: se cargan en cliente bajo demanda
-// para reducir el JS inicial de la ruta /planchas/[slug].
+// para reducir el JS inicial de la ruta /catalogo/[slug].
 const ProductHotspots = dynamic(
     () => import("@/components/ProductHotspots").then(m => ({ default: m.ProductHotspots })),
     { ssr: false }
@@ -240,7 +240,7 @@ export function ProductDetailView({
         kind === "accessories" ? d.kindAccessories :
         kind === "consumables" ? d.kindConsumables :
         d.kindPlanchas;
-    const kindHref = `/planchas?type=${kind}`;
+    const kindHref = `/catalogo?type=${kind}`;
 
     return (
         <div className="bg-background min-h-screen pt-24 pb-24 overflow-x-hidden selection:bg-[#FF6600] selection:text-white">
@@ -267,7 +267,7 @@ export function ProductDetailView({
                     <div className="relative z-20 container mx-auto px-4 w-full">
                         <ScrollReveal delay={0}>
                             <Link
-                                href="/planchas"
+                                href="/catalogo"
                                 className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-[#FF6600] transition-colors mb-8"
                             >
                                 <ArrowLeft size={16} /> {d.back}
@@ -588,7 +588,7 @@ export function ProductDetailView({
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                                  {compatiblePlanchas.map((machine) => (
                                     <div key={machine.id} className="group p-6 rounded-[2.5rem] bg-card border border-border/50 hover:border-[#FF6600] hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all flex flex-col gap-6 relative">
-                                        <Link href={`/planchas/${machine.slug}`} className="absolute inset-0 z-10" aria-label={getLocalized(machine.name, locale)} />
+                                        <Link href={`/catalogo/${machine.slug}`} className="absolute inset-0 z-10" aria-label={getLocalized(machine.name, locale)} />
                                         <div className="relative w-full aspect-video rounded-[2rem] overflow-hidden bg-muted">
                                             {machine.image ? (
                                                 <Image 
@@ -659,7 +659,7 @@ export function ProductDetailView({
                                  {activeItems.filter(item => item.id && getLocalized(item.name, locale)).map((item: any) => (
                                     <div key={item.id} className="group p-6 rounded-[2.5rem] bg-card border border-border/50 hover:border-[#FF6600] hover:shadow-2xl hover:shadow-[#FF6600]/10 transition-all flex flex-col gap-6 relative">
                                         {item.slug && (
-                                            <Link href={`/planchas/${item.slug}`} className="absolute inset-0 z-10" aria-label={getLocalized(item.name, locale)} />
+                                            <Link href={`/catalogo/${item.slug}`} className="absolute inset-0 z-10" aria-label={getLocalized(item.name, locale)} />
                                         )}
                                         <div className="relative w-full aspect-square rounded-[2rem] overflow-hidden bg-muted">
                                             {item.image ? (

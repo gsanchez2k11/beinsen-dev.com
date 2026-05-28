@@ -293,7 +293,7 @@ function CompareContent() {
                                 {selectedProducts.map((p) => (
                                     <Link
                                         key={p.id}
-                                        href={`/planchas/${p.slug}`}
+                                        href={`/catalogo/${p.slug}`}
                                         className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FF6600]/10 hover:bg-[#FF6600] text-[#FF6600] hover:text-white text-xs font-black uppercase tracking-widest transition-all"
                                     >
                                         {getLocalized(p.name, locale)} <ArrowRight size={12} />

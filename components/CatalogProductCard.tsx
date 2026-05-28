@@ -35,7 +35,7 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
 
     const isIndustrial = item.openingType === "Automática" || item.openingType === "Neumática";
     const isNew = !!item.isNew;
-    const href = item.slug ? `/planchas/${item.slug}` : "#";
+    const href = item.slug ? `/catalogo/${item.slug}` : "#";
 
     return (
         <motion.div

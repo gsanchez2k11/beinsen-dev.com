@@ -248,7 +248,7 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                             <div className="absolute inset-0 bg-white/20 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500" />
                         </Link>
                         <Link
-                            href="/planchas"
+                            href="/catalogo"
                             className="px-10 py-5 bg-background border border-border/60 text-foreground rounded-2xl font-black uppercase tracking-widest text-xs hover:bg-muted transition-all flex items-center gap-2"
                         >
                             {d.hero.cta_main} <ArrowRight size={18} className="text-[#FF6600]" />
@@ -286,21 +286,21 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                         {[
                             {
                                 title: d.categories.machines,
-                                link: "/planchas?type=planchas",
+                                link: "/catalogo?type=planchas",
                                 img: "/categories/cat-maquinas.png",
                                 icon: Settings,
                                 tag: "High Production"
                             },
                             {
                                 title: d.categories.accs,
-                                link: "/planchas?type=accessories",
+                                link: "/catalogo?type=accessories",
                                 img: "/categories/cat-accesorios.png",
                                 icon: Box,
                                 tag: "Pro Hardware"
                             },
                             {
                                 title: d.categories.cons,
-                                link: "/planchas?type=consumables",
+                                link: "/catalogo?type=consumables",
                                 img: "/categories/cat-consumibles-v2.png",
                                 icon: Package,
                                 tag: "Original Supplies"
@@ -402,7 +402,7 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                                         {d.trinidad_teaser.desc}
                                     </p>
                                     <Link
-                                        href="/planchas/trinidad-prensa-termica-automatica"
+                                        href="/catalogo/trinidad-prensa-termica-automatica"
                                         className="text-[10px] font-black uppercase tracking-[0.2em] text-[#FF6600] flex items-center gap-2 group/btn"
                                     >
                                         Explorar Ingeniería <ArrowRight size={14} className="group-hover/btn:translate-x-2 transition-transform" />

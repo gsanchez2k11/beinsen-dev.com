@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         ? (item.image.startsWith('http') ? item.image : `${SITE_URL}${item.image}`)
         : `${SITE_URL}/opengraph-image`;
 
-    const url = `${SITE_URL}/planchas/${resolvedParams.slug}`;
+    const url = `${SITE_URL}/catalogo/${resolvedParams.slug}`;
     return {
         title: `${name}${titleSuffix}`,
         description: rawDesc,
@@ -82,7 +82,7 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
     const description = getLocalized(item.description as any, 'es') || "";
 
     const category = getLocalized((rawItem as any).category as any, 'es') || "";
-    const productUrl = `${SITE_URL}/planchas/${resolvedParams.slug}`;
+    const productUrl = `${SITE_URL}/catalogo/${resolvedParams.slug}`;
 
     // Imagen absoluta para schema (Google las requiere absolutas)
     const schemaImages = item.image
@@ -124,7 +124,7 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
         '@type': 'BreadcrumbList',
         itemListElement: [
             { '@type': 'ListItem', position: 1, name: 'Inicio', item: SITE_URL },
-            { '@type': 'ListItem', position: 2, name: 'Catálogo', item: `${SITE_URL}/planchas` },
+            { '@type': 'ListItem', position: 2, name: 'Catálogo', item: `${SITE_URL}/catalogo` },
             { '@type': 'ListItem', position: 3, name, item: productUrl },
         ],
     };
