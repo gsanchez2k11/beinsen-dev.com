@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Beinsen — Fabricante de Planchas Transfer Industriales'
+export const alt = 'Beinsen — Fabricante de Prensas Transfer Industriales'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -71,7 +71,7 @@ export default async function Image() {
                         fontStyle: 'italic',
                     }}
                 >
-                    Planchas Transfer
+                    Prensas Transfer
                     <br />
                     <span style={{ color: '#FF6600' }}>Profesionales</span>
                 </div>

@@ -10,9 +10,9 @@ export function Footer() {
 
     const d = {
         es: {
-            desc: "Fabricante de planchas transfer para personalización de prendas. Calidad, robustez y precisión para profesionales exigentes.",
+            desc: "Fabricante de prensas transfer para personalización de prendas. Calidad, robustez y precisión para profesionales exigentes.",
             quickLinks: "Enlaces Rápidos",
-            planchas: "Planchas Transfer",
+            planchas: "Prensas Transfer",
             accesorios: "Accesorios y Consumibles",
             support: "Área de Soporte",
             contact: "Contacto",

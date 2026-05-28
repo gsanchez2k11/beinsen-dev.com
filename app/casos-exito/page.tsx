@@ -3,7 +3,7 @@ import CasosExitoClient from "./casos-exito-client";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-    title: "Casos de Éxito — Planchas Transfer Beinsen en el Mundo | Beinsen",
+    title: "Casos de Éxito — Prensas Transfer Beinsen en el Mundo | Beinsen",
     description: "Descubre cómo talleres y empresas de personalización en 50+ países han escalado su producción con planchas transfer Beinsen. Resultados reales, casos verificados.",
     alternates: {
         canonical: `${SITE_URL}/casos-exito`,
