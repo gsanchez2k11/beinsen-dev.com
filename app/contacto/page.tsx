@@ -3,7 +3,7 @@ import ContactoClient from "./contacto-client";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-    title: "Contacto y Presupuesto | Beinsen — Planchas Transfer Profesionales",
+    title: "Contacto y Presupuesto | Beinsen — Prensas Transfer Profesionales",
     description: "Solicita presupuesto personalizado, resuelve dudas técnicas o agenda una videollamada con nuestros ingenieros. Respuesta garantizada en menos de 24 horas laborables.",
     alternates: {
         canonical: `${SITE_URL}/contacto`,

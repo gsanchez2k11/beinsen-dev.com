@@ -17,7 +17,7 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
         es: {
             hero: {
                 tag: "Beinsen Engineering",
-                title: "Planchas Transfer Profesionales",
+                title: "Prensas Transfer Profesionales",
                 accent: "Resultados Impecables",
                 desc: "Diseñamos y fabricamos maquinaria de transferencia térmica de alta gama para los talleres más exigentes del mundo.",
                 cta_main: "Explorar Catálogo",

@@ -6,13 +6,13 @@ import { SupportContactCTA } from "@/components/SupportContactCTA";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata = {
-    title: "Centro de Aprendizaje — Guías y Técnica de Planchas Transfer | Beinsen",
+    title: "Centro de Aprendizaje — Guías y Técnica de Prensas Transfer | Beinsen",
     description: "Guías técnicas, mantenimiento y troubleshooting de planchas transfer y prensas térmicas Beinsen. Artículos escritos por nuestro equipo de ingeniería.",
     alternates: {
         canonical: `${SITE_URL}/aprende`,
     },
     openGraph: {
-        title: "Aprende con Beinsen — Guías Técnicas de Planchas Transfer",
+        title: "Aprende con Beinsen — Guías Técnicas de Prensas Transfer",
         description: "Guías de mantenimiento, troubleshooting y técnica de planchas transfer escritas por ingenieros Beinsen.",
         url: `${SITE_URL}/aprende`,
         siteName: "Beinsen",
@@ -21,7 +21,7 @@ export const metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Aprende con Beinsen — Guías Técnicas de Planchas Transfer",
+        title: "Aprende con Beinsen — Guías Técnicas de Prensas Transfer",
         description: "Guías, mantenimiento y troubleshooting de planchas transfer profesionales.",
     },
 };
