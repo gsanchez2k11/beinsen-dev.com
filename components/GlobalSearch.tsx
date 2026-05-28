@@ -22,7 +22,7 @@ export function GlobalSearch() {
             placeholder: "Busca máquinas, accesorios o características...",
             empty: "Busca cualquier modelo de plancha o recambio.",
             noResults: "No hay resultados para",
-            groupPlanchas: "Prensas Industriales",
+            groupPlanchas: "Planchas Industriales",
             groupAcc: "Accesorios y Recambios",
             kbdClose: "para cerrar",
             navHint: "Navega con",

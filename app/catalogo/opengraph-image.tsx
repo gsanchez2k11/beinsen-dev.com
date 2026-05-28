@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Catálogo Beinsen — Prensas Transfer Industriales'
+export const alt = 'Catálogo Beinsen — Planchas Transfer Industriales'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
