@@ -58,6 +58,11 @@ export default function LegalPage() {
             <p className="text-muted-foreground text-sm">
               Las presentes Condiciones Generales se regirán por la legislación española. Futura Teck de Murcia S.L.U. y el usuario/a se someten a la Jurisdicción de los Juzgados y Tribunales del domicilio del usuario.
             </p>
+
+            <h4 className="font-bold">VII. Plataforma de Soporte Técnico y Garantías</h4>
+            <p className="text-muted-foreground text-sm">
+              El servicio de soporte técnico oficial, el registro de productos y la gestión de garantías de los equipos Beinsen se prestan a través de la plataforma <a href="https://soporte.beinsen.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline font-semibold">soporte.beinsen.com</a>, que dispone de sus propias condiciones de uso, política de privacidad y política de garantías específicas, disponibles en dicha plataforma. El acceso a soporte.beinsen.com se realiza con cuenta separada del presente sitio web.
+            </p>
           </div>
         </section>
 
