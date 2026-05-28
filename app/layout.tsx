@@ -113,7 +113,7 @@ const websiteSchema = {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: `${SITE_URL}/planchas?q={search_term_string}`,
+      urlTemplate: `${SITE_URL}/catalogo?q={search_term_string}`,
     },
     "query-input": "required name=search_term_string",
   },

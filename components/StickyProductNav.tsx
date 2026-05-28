@@ -15,7 +15,7 @@ interface StickyProductNavProps {
     price: string | number;
     /** Etiqueta de la categoría (Prensas / Accesorios / Consumibles) ya traducida. */
     kindLabel: string;
-    /** Destino del enlace de categoría (p. ej. /planchas?type=planchas). */
+    /** Destino del enlace de categoría (p. ej. /catalogo?type=planchas). */
     kindHref: string;
 }
 

@@ -56,14 +56,28 @@ const nextConfig: NextConfig = {
             },
         ];
     },
-    // URLs cortas de marketing: /esparta → /planchas/esparta-prensa-termica-neumatica
-    // Redirección 308 permanente; la URL larga sigue siendo la canónica (bueno para SEO).
     async redirects() {
-        return productAliases.map(({ alias, slug }) => ({
-            source: `/${alias}`,
-            destination: `/planchas/${slug}`,
-            permanent: true,
-        }));
+        return [
+            // Compatibilidad con la URL antigua del catálogo (rename /planchas → /catalogo).
+            // Cubre tanto /planchas como /planchas/<slug>. El querystring (?type=...) se conserva.
+            {
+                source: "/planchas",
+                destination: "/catalogo",
+                permanent: true,
+            },
+            {
+                source: "/planchas/:slug*",
+                destination: "/catalogo/:slug*",
+                permanent: true,
+            },
+            // URLs cortas de marketing: /esparta → /catalogo/esparta-prensa-termica-neumatica
+            // 308 permanente; la URL larga sigue siendo la canónica (bueno para SEO).
+            ...productAliases.map(({ alias, slug }) => ({
+                source: `/${alias}`,
+                destination: `/catalogo/${slug}`,
+                permanent: true,
+            })),
+        ];
     },
 };
 

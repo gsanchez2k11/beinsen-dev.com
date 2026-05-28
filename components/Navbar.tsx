@@ -49,7 +49,7 @@ function NavbarContent() {
         if (href === "/") return pathname === "/";
         return pathname === href || pathname.startsWith(`${href}/`);
     };
-    const isCatalogActive = pathname === "/planchas" || pathname.startsWith("/planchas/") || pathname === "/accesorios" || pathname.startsWith("/accesorios/");
+    const isCatalogActive = pathname === "/catalogo" || pathname.startsWith("/catalogo/") || pathname === "/accesorios" || pathname.startsWith("/accesorios/");
 
     const d = {
         es: {
@@ -126,9 +126,9 @@ function NavbarContent() {
     };
 
     const menuItems = [
-        { title: d.machines, desc: d.machines_desc, href: "/planchas?type=planchas", icon: Zap, color: "text-[#FF6600]" },
-        { title: d.accs, desc: d.accs_desc, href: "/planchas?type=accessories", icon: Settings, color: "text-blue-500" },
-        { title: d.cons, desc: d.cons_desc, href: "/planchas?type=consumables", icon: Package, color: "text-emerald-500" },
+        { title: d.machines, desc: d.machines_desc, href: "/catalogo?type=planchas", icon: Zap, color: "text-[#FF6600]" },
+        { title: d.accs, desc: d.accs_desc, href: "/catalogo?type=accessories", icon: Settings, color: "text-blue-500" },
+        { title: d.cons, desc: d.cons_desc, href: "/catalogo?type=consumables", icon: Package, color: "text-emerald-500" },
     ];
 
     return (
@@ -208,7 +208,7 @@ function NavbarContent() {
                                             
                                             <div className="mt-6 pt-6 border-t border-border/40 text-center">
                                                 <Link 
-                                                    href="/planchas"
+                                                    href="/catalogo"
                                                     onClick={() => setIsMegaMenuOpen(false)}
                                                     className="text-[10px] font-black uppercase tracking-[0.3em] text-[#FF6600] hover:scale-105 transition-transform inline-block"
                                                 >

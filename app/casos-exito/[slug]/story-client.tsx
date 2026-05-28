@@ -140,7 +140,7 @@ export default function StoryDetailClient({ story }: { story: CaseStudy }) {
                             <div className="p-8 rounded-[2rem] bg-muted/30 border border-border/40 space-y-6 sticky top-32">
                                 <div className="text-xs font-black uppercase tracking-widest text-muted-foreground">{d.relatedMachine}</div>
                                 <Link
-                                    href={`/planchas/${story.relatedMachineId}`}
+                                    href={`/catalogo/${story.relatedMachineId}`}
                                     className="flex items-center justify-between gap-4 px-6 py-4 bg-[#FF6600] text-white rounded-2xl font-black uppercase tracking-widest text-xs hover:scale-105 transition-all"
                                 >
                                     {d.viewMachine} <ArrowRight size={16} />
