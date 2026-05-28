@@ -469,6 +469,7 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                                             </div>
                                             <Link
                                                 href={`/casos-exito/${story.slug}`}
+                                                aria-label={`Ver detalle: ${getLocalized(story.title, locale)}`}
                                                 className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-white/70 hover:text-[#FF6600] transition-colors pt-6"
                                             >
                                                 Ver detalle <ArrowRight size={12} />

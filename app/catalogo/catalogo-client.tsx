@@ -126,7 +126,7 @@ function SectionHeader({ icon: Icon, title, count, total }: { icon: any; title: 
                 <h2 className="text-lg font-black uppercase tracking-[0.3em]">{title}</h2>
             </div>
             <div className="h-px flex-1 bg-border/40" />
-            <span className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground/60">
+            <span className="text-xs font-black uppercase tracking-[0.2em] text-muted-foreground/80">
                 {count} / {total}
             </span>
         </div>
@@ -497,6 +497,8 @@ function CatalogoContent() {
                         </div>
                         <button
                             onClick={() => setIsFilterOpen(!isFilterOpen)}
+                            aria-label={d.filters}
+                            aria-expanded={isFilterOpen}
                             className={`p-3 rounded-2xl border transition-all ${isFilterOpen ? "bg-[#FF6600] text-white border-[#FF6600]" : "bg-muted/50 text-muted-foreground border-border/60 hover:text-foreground"}`}
                         >
                             <Filter size={20} />

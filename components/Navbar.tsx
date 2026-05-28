@@ -270,6 +270,8 @@ function NavbarContent() {
                         <LanguageSelector />
                         <button
                             onClick={() => setIsOpen(!isOpen)}
+                            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+                            aria-expanded={isOpen}
                             className={`p-3 rounded-xl transition-all ${isOpen ? 'bg-[#FF6600] text-white' : 'text-muted-foreground hover:text-foreground'}`}
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -297,7 +299,7 @@ function NavbarContent() {
                             </Link>
 
                             <div className="bg-muted/30 rounded-[2rem] p-4 flex flex-col gap-2">
-                                <span className="px-6 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/60">{d.catalogo}</span>
+                                <span className="px-6 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/80">{d.catalogo}</span>
                                 {menuItems.map((item, i) => (
                                     <Link
                                         key={i}
