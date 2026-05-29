@@ -65,7 +65,7 @@ export default function AccesibilidadPage() {
                         Si encuentras un problema de accesibilidad en el sitio, o quieres solicitar un contenido en un formato accesible alternativo, puedes contactarnos por cualquiera de estas vías:
                     </p>
                     <ul className="space-y-2 text-sm text-muted-foreground pl-4">
-                        <li>· Correo electrónico: <a href="mailto:accesibilidad@beinsen.com" className="text-[#FF6600] hover:underline font-semibold">accesibilidad@beinsen.com</a></li>
+                        <li>· Correo electrónico: <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline font-semibold">info@beinsen.com</a></li>
                         <li>· Teléfono: <a href="tel:+34968902300" className="text-[#FF6600] hover:underline">+34 968 902 300</a></li>
                         <li>· Correo postal: Av. Alto de las Atalayas, 18 – 30110 Cabezo de Torres (Murcia), España.</li>
                     </ul>
@@ -147,7 +147,7 @@ export default function AccesibilidadPage() {
                         If you find an accessibility problem on the site, or wish to request content in an alternative accessible format, you can contact us through any of the following channels:
                     </p>
                     <ul className="space-y-2 text-sm text-muted-foreground pl-4">
-                        <li>· Email: <a href="mailto:accesibilidad@beinsen.com" className="text-[#FF6600] hover:underline font-semibold">accesibilidad@beinsen.com</a></li>
+                        <li>· Email: <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline font-semibold">info@beinsen.com</a></li>
                         <li>· Telephone: <a href="tel:+34968902300" className="text-[#FF6600] hover:underline">+34 968 902 300</a></li>
                         <li>· Postal address: Av. Alto de las Atalayas, 18 – 30110 Cabezo de Torres (Murcia), Spain.</li>
                     </ul>
@@ -229,7 +229,7 @@ export default function AccesibilidadPage() {
                         Se encontrar um problema de acessibilidade no sítio, ou pretender solicitar um conteúdo num formato acessível alternativo, pode contactar-nos por qualquer das seguintes vias:
                     </p>
                     <ul className="space-y-2 text-sm text-muted-foreground pl-4">
-                        <li>· Correio eletrónico: <a href="mailto:accesibilidad@beinsen.com" className="text-[#FF6600] hover:underline font-semibold">accesibilidad@beinsen.com</a></li>
+                        <li>· Correio eletrónico: <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline font-semibold">info@beinsen.com</a></li>
                         <li>· Telefone: <a href="tel:+34968902300" className="text-[#FF6600] hover:underline">+34 968 902 300</a></li>
                         <li>· Correio postal: Av. Alto de las Atalayas, 18 – 30110 Cabezo de Torres (Murcia), Espanha.</li>
                     </ul>
@@ -311,7 +311,7 @@ export default function AccesibilidadPage() {
                         Se riscontri un problema di accessibilità sul sito, o desideri richiedere un contenuto in un formato accessibile alternativo, puoi contattarci attraverso uno dei seguenti canali:
                     </p>
                     <ul className="space-y-2 text-sm text-muted-foreground pl-4">
-                        <li>· Posta elettronica: <a href="mailto:accesibilidad@beinsen.com" className="text-[#FF6600] hover:underline font-semibold">accesibilidad@beinsen.com</a></li>
+                        <li>· Posta elettronica: <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline font-semibold">info@beinsen.com</a></li>
                         <li>· Telefono: <a href="tel:+34968902300" className="text-[#FF6600] hover:underline">+34 968 902 300</a></li>
                         <li>· Indirizzo postale: Av. Alto de las Atalayas, 18 – 30110 Cabezo de Torres (Murcia), Spagna.</li>
                     </ul>
