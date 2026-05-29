@@ -15,7 +15,7 @@ export default function PrivacyPage() {
             <p><span className="font-semibold text-foreground">CIF:</span> B30507743.</p>
             <p><span className="font-semibold text-foreground">Domicilio:</span> Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), España.</p>
             <p><span className="font-semibold text-foreground">Teléfono:</span> +34 968 902 300.</p>
-            <p><span className="font-semibold text-foreground">Email de privacidad:</span> <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a> (alternativamente <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
+            <p><span className="font-semibold text-foreground">Email de privacidad:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a> (alternativamente <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
             <p><span className="font-semibold text-foreground">Registro Mercantil:</span> Murcia, Tomo MU-1135, Folio 47, Hoja MU-20685, inscripción primera.</p>
           </div>
         </section>
@@ -126,7 +126,7 @@ export default function PrivacyPage() {
             <li>· <span className="font-semibold text-foreground">Cláusulas Contractuales Tipo</span> (CCT) aprobadas por la Comisión Europea (Decisión (UE) 2021/914) como garantía complementaria.</li>
           </ul>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Puedes solicitar copia de las garantías aplicables escribiendo a <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.
+            Puedes solicitar copia de las garantías aplicables escribiendo a <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.
           </p>
         </section>
 
@@ -167,7 +167,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="space-y-2 text-sm text-muted-foreground pl-4">
             <li>· Por correo postal a Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), España.</li>
-            <li>· Por correo electrónico a <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.</li>
+            <li>· Por correo electrónico a <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.</li>
           </ul>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Atenderemos tu solicitud en el plazo máximo de un mes desde su recepción, prorrogable a dos meses adicionales por la complejidad o el número de solicitudes (te informaremos en ese caso).
@@ -185,7 +185,7 @@ export default function PrivacyPage() {
         <section className="mb-12 space-y-4">
           <h2 className="text-2xl font-bold">11.- DELEGADO DE PROTECCIÓN DE DATOS</h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Futura Teck no está sujeta a la obligación legal de designar un Delegado de Protección de Datos en los términos del art. 37 RGPD. No obstante, ha habilitado un canal específico para cuestiones de privacidad: <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.
+            Futura Teck no está sujeta a la obligación legal de designar un Delegado de Protección de Datos en los términos del art. 37 RGPD. No obstante, ha habilitado un canal específico para cuestiones de privacidad: <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.
           </p>
         </section>
 
@@ -212,7 +212,7 @@ export default function PrivacyPage() {
             <p><span className="font-semibold text-foreground">VAT:</span> B30507743.</p>
             <p><span className="font-semibold text-foreground">Registered office:</span> Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), Spain.</p>
             <p><span className="font-semibold text-foreground">Phone:</span> +34 968 902 300.</p>
-            <p><span className="font-semibold text-foreground">Privacy email:</span> <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a> (alternatively <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
+            <p><span className="font-semibold text-foreground">Privacy email:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a> (alternatively <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
             <p><span className="font-semibold text-foreground">Commercial Registry:</span> Murcia, Volume MU-1135, Folio 47, Sheet MU-20685, first entry.</p>
           </div>
         </section>
@@ -323,7 +323,7 @@ export default function PrivacyPage() {
             <li>· <span className="font-semibold text-foreground">Standard Contractual Clauses</span> (SCC) approved by the European Commission (Decisión (UE) 2021/914) as a supplementary safeguard.</li>
           </ul>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            You may request a copy of the applicable safeguards by writing to <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.
+            You may request a copy of the applicable safeguards by writing to <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.
           </p>
         </section>
 
@@ -364,7 +364,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="space-y-2 text-sm text-muted-foreground pl-4">
             <li>· By post to Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), Spain.</li>
-            <li>· By email to <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.</li>
+            <li>· By email to <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.</li>
           </ul>
           <p className="text-sm text-muted-foreground leading-relaxed">
             We will respond to your request within a maximum period of one month from receipt, extendable by two additional months due to the complexity or number of requests (we will inform you in that case).
@@ -382,7 +382,7 @@ export default function PrivacyPage() {
         <section className="mb-12 space-y-4">
           <h2 className="text-2xl font-bold">11.- DATA PROTECTION OFFICER</h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Futura Teck is not subject to the legal obligation to designate a Data Protection Officer under the terms of art. 37 RGPD. Nevertheless, it has enabled a specific channel for privacy matters: <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.
+            Futura Teck is not subject to the legal obligation to designate a Data Protection Officer under the terms of art. 37 RGPD. Nevertheless, it has enabled a specific channel for privacy matters: <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.
           </p>
         </section>
 
@@ -409,7 +409,7 @@ export default function PrivacyPage() {
             <p><span className="font-semibold text-foreground">NIF:</span> B30507743.</p>
             <p><span className="font-semibold text-foreground">Sede social:</span> Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), Espanha.</p>
             <p><span className="font-semibold text-foreground">Telefone:</span> +34 968 902 300.</p>
-            <p><span className="font-semibold text-foreground">Email de privacidade:</span> <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a> (em alternativa <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
+            <p><span className="font-semibold text-foreground">Email de privacidade:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a> (em alternativa <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
             <p><span className="font-semibold text-foreground">Registo Comercial:</span> Murcia, Tomo MU-1135, Fólio 47, Folha MU-20685, primeira inscrição.</p>
           </div>
         </section>
@@ -520,7 +520,7 @@ export default function PrivacyPage() {
             <li>· <span className="font-semibold text-foreground">Cláusulas Contratuais-Tipo</span> (CCT) aprovadas pela Comissão Europeia (Decisión (UE) 2021/914) como garantia complementar.</li>
           </ul>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Pode solicitar cópia das garantias aplicáveis escrevendo para <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.
+            Pode solicitar cópia das garantias aplicáveis escrevendo para <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.
           </p>
         </section>
 
@@ -561,7 +561,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="space-y-2 text-sm text-muted-foreground pl-4">
             <li>· Por correio postal para Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), Espanha.</li>
-            <li>· Por correio eletrónico para <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.</li>
+            <li>· Por correio eletrónico para <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.</li>
           </ul>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Atenderemos o seu pedido no prazo máximo de um mês a contar da sua receção, prorrogável por dois meses adicionais devido à complexidade ou ao número de pedidos (informá-lo-emos nesse caso).
@@ -579,7 +579,7 @@ export default function PrivacyPage() {
         <section className="mb-12 space-y-4">
           <h2 className="text-2xl font-bold">11.- ENCARREGADO DA PROTEÇÃO DE DADOS</h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            A Futura Teck não está sujeita à obrigação legal de designar um Encarregado da Proteção de Dados nos termos do art. 37 RGPD. Não obstante, disponibilizou um canal específico para questões de privacidade: <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.
+            A Futura Teck não está sujeita à obrigação legal de designar um Encarregado da Proteção de Dados nos termos do art. 37 RGPD. Não obstante, disponibilizou um canal específico para questões de privacidade: <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.
           </p>
         </section>
 
@@ -606,7 +606,7 @@ export default function PrivacyPage() {
             <p><span className="font-semibold text-foreground">P.IVA:</span> B30507743.</p>
             <p><span className="font-semibold text-foreground">Sede:</span> Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), Spagna.</p>
             <p><span className="font-semibold text-foreground">Telefono:</span> +34 968 902 300.</p>
-            <p><span className="font-semibold text-foreground">Email per la privacy:</span> <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a> (in alternativa <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
+            <p><span className="font-semibold text-foreground">Email per la privacy:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a> (in alternativa <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
             <p><span className="font-semibold text-foreground">Registro delle Imprese:</span> Murcia, Tomo MU-1135, Foglio 47, Scheda MU-20685, prima iscrizione.</p>
           </div>
         </section>
@@ -717,7 +717,7 @@ export default function PrivacyPage() {
             <li>· <span className="font-semibold text-foreground">Clausole Contrattuali Tipo</span> (CCT) approvate dalla Commissione Europea (Decisión (UE) 2021/914) come garanzia complementare.</li>
           </ul>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Può richiedere copia delle garanzie applicabili scrivendo a <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.
+            Può richiedere copia delle garanzie applicabili scrivendo a <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.
           </p>
         </section>
 
@@ -758,7 +758,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="space-y-2 text-sm text-muted-foreground pl-4">
             <li>· Per posta a Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), Spagna.</li>
-            <li>· Per posta elettronica a <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.</li>
+            <li>· Per posta elettronica a <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.</li>
           </ul>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Risponderemo alla sua richiesta entro un massimo di un mese dalla ricezione, prorogabile di due mesi aggiuntivi a causa della complessità o del numero di richieste (in tal caso la informeremo).
@@ -776,7 +776,7 @@ export default function PrivacyPage() {
         <section className="mb-12 space-y-4">
           <h2 className="text-2xl font-bold">11.- RESPONSABILE DELLA PROTEZIONE DEI DATI</h2>
           <p className="text-sm text-muted-foreground leading-relaxed">
-            Futura Teck non è soggetta all&apos;obbligo legale di designare un Responsabile della Protezione dei Dati ai sensi dell&apos;art. 37 RGPD. Tuttavia, ha attivato un canale specifico per le questioni relative alla privacy: <a href="mailto:privacidad@beinsen.com" className="text-[#FF6600] hover:underline">privacidad@beinsen.com</a>.
+            Futura Teck non è soggetta all&apos;obbligo legale di designare un Responsabile della Protezione dei Dati ai sensi dell&apos;art. 37 RGPD. Tuttavia, ha attivato un canale specifico per le questioni relative alla privacy: <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.
           </p>
         </section>
 
