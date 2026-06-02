@@ -109,10 +109,12 @@ export default function AccesoriosClient() {
                             <p className="text-sm text-muted-foreground leading-relaxed mb-6 font-light">
                                 {d.infoText}
                             </p>
+                            {/* Hidden: distributors — uncomment to restore
                             <div className="pt-6 border-t border-white/5">
                                 <h4 className="font-bold text-sm mb-2">{d.distribution}</h4>
                                 <p className="text-xs text-muted-foreground italic">{d.distributionDesc}</p>
                             </div>
+                            */}
                         </div>
 
                         <div className="relative group">

@@ -49,7 +49,7 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                 desc: "Desde Barcelona para el mundo. Exportamos tecnología de vanguardia a más de 50 países.",
                 stats: [
                     { label: "Países", value: "50+", icon: Globe2 },
-                    { label: "Distribuidores", value: "120+", icon: Building2 },
+                    // { label: "Distribuidores", value: "120+", icon: Building2 },
                     { label: "Clientes", value: "5000+", icon: Users2 }
                 ]
             },
@@ -95,7 +95,7 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                 desc: "From Barcelona to the world. We export cutting-edge technology to more than 50 countries.",
                 stats: [
                     { label: "Countries", value: "50+", icon: Globe2 },
-                    { label: "Distributors", value: "120+", icon: Building2 },
+                    // { label: "Distributors", value: "120+", icon: Building2 },
                     { label: "Clients", value: "5000+", icon: Users2 }
                 ]
             },
@@ -141,7 +141,7 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                 desc: "De Barcelona para o mundo. Exportamos tecnologia de vanguarda para mais de 50 países.",
                 stats: [
                     { label: "Países", value: "50+", icon: Globe2 },
-                    { label: "Distribuidores", value: "120+", icon: Building2 },
+                    // { label: "Distribuidores", value: "120+", icon: Building2 },
                     { label: "Clientes", value: "5000+", icon: Users2 }
                 ]
             },
@@ -187,7 +187,7 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                 desc: "Da Barcellona al mondo. Esportiamo tecnologia all'avanguardia in oltre 50 paesi.",
                 stats: [
                     { label: "Paesi", value: "50+", icon: Globe2 },
-                    { label: "Distributori", value: "120+", icon: Building2 },
+                    // { label: "Distributori", value: "120+", icon: Building2 },
                     { label: "Clienti", value: "5000+", icon: Users2 }
                 ]
             },
