@@ -83,7 +83,7 @@ export function ContactSpecialistButton({
                     name,
                     phone: `+34 ${phone}`,
                     product: productName,
-                    recipient: "web@futura.es"
+                    recipientKey: "web"
                 }),
             });
 
