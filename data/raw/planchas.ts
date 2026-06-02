@@ -143,12 +143,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo do ecrã",
-          "it": "Modello del display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de ecrã",
+          "it": "Tipo di display"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -589,12 +589,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo do ecrã",
-          "it": "Modello del display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de ecrã",
+          "it": "Tipo di display"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -953,7 +953,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -1117,10 +1117,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 32.2,
         "y": 85.7,
         "title": {
-          "es": "Controlador digital GY-04",
-          "en": "GY-04 digital controller",
-          "pt": "Controlador digital GY-04",
-          "it": "Controller digitale GY-04"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "Permite programar con precisión la temperatura y el tiempo de cada sublimación para obtener resultados profesionales y consistentes.",
@@ -1182,10 +1182,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Versatile e Robusta"
         },
         "description": {
-          "es": "Fácil de montar y desmontar, con controlador digital GY-04 para ajustar tiempo y temperatura con precisión. Su estructura de acero sólido y acabado naranja Beinsen aportan durabilidad y estilo.",
-          "en": "Easy to assemble and disassemble, with GY-04 digital controller for precise time and temperature settings. Solid steel structure and Beinsen orange finish provide durability and style.",
-          "pt": "Fácil de montar e desmontar, com controlador digital GY-04 para ajustar tempo e temperatura com precisão. A sua estrutura de aço sólido e acabamento laranja Beinsen conferem durabilidade e estilo.",
-          "it": "Facile da montare e smontare, con controller digitale GY-04 per regolare tempo e temperatura con precisione. La sua struttura in acciaio massiccio e la finitura arancione Beinsen offrono durabilità e stile."
+          "es": "Fácil de montar y desmontar, con controlador digital para ajustar tiempo y temperatura con precisión. Su estructura de acero sólido y acabado naranja Beinsen aportan durabilidad y estilo.",
+          "en": "Easy to assemble and disassemble, with digital controller for precise time and temperature settings. Solid steel structure and Beinsen orange finish provide durability and style.",
+          "pt": "Fácil de montar e desmontar, com controlador digital para ajustar tempo e temperatura com precisão. A sua estrutura de aço sólido e acabamento laranja Beinsen conferem durabilidade e estilo.",
+          "it": "Facile da montare e smontare, con controller digitale per regolare tempo e temperatura con precisione. La sua struttura in acciaio massiccio e la finitura arancione Beinsen offrono durabilità e stile."
         },
         "icon": "Settings",
         "image": "/products/maquinas/dorian-plancha-termica-platos/fotoB2.png",
@@ -1422,7 +1422,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -1705,22 +1705,22 @@ export const rawPlanchasData: Plancha[] = [
       "es": [
         "4 resistencias intercambiables (6-10oz, 11-15oz, 12oz cónica, 17oz cónica)",
         "Estructura soldada de acero sólido con acabado naranja Beinsen",
-        "Controlador digital GY-04 con ajuste de tiempo y temperatura"
+        "Controlador digital con ajuste de tiempo y temperatura"
       ],
       "en": [
         "4 interchangeable elements (6-10oz, 11-15oz, 12oz conical, 17oz conical)",
         "Welded solid steel structure with Beinsen orange finish",
-        "GY-04 digital controller with time and temperature adjustment"
+        "digital controller with time and temperature adjustment"
       ],
       "pt": [
         "4 resistências intercambiáveis (6-10oz, 11-15oz, 12oz cónica, 17oz cónica)",
         "Estrutura soldada de aço sólido com acabamento laranja Beinsen",
-        "Controlador digital GY-04 com ajuste de tempo e temperatura"
+        "Controlador digital com ajuste de tempo e temperatura"
       ],
       "it": [
         "4 elementi intercambiabili (6-10oz, 11-15oz, 12oz conico, 17oz conico)",
         "Struttura in acciaio saldato con finitura arancione Beinsen",
-        "Controller digitale GY-04 con regolazione di tempo e temperatura"
+        "Controller digitale con regolazione di tempo e temperatura"
       ]
     },
     "accessories": [
@@ -1810,7 +1810,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -1967,10 +1967,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Controllo digitale preciso"
         },
         "description": {
-          "es": "El controlador GY-04 permite programar tiempo y temperatura con precisión, garantizando resultados homogéneos en cada ciclo.",
-          "en": "The GY-04 controller lets you program time and temperature precisely, ensuring consistent results every cycle.",
-          "pt": "O controlador GY-04 permite programar tempo e temperatura com precisão, garantindo resultados homogéneos em cada ciclo.",
-          "it": "Il controller GY-04 permette di programmare tempo e temperatura con precisione, garantendo risultati omogenei in ogni ciclo."
+          "es": "El controlador permite programar tiempo y temperatura con precisión, garantizando resultados homogéneos en cada ciclo.",
+          "en": "The controller lets you program time and temperature precisely, ensuring consistent results every cycle.",
+          "pt": "O controlador permite programar tempo e temperatura com precisão, garantindo resultados homogéneos em cada ciclo.",
+          "it": "Il controller permette di programmare tempo e temperatura con precisione, garantendo risultati omogenei in ogni ciclo."
         },
         "icon": "Cpu"
       },
@@ -2073,10 +2073,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 73.1,
         "y": 55.3,
         "title": {
-          "es": "Controlador digital GY-04",
-          "en": "GY-04 digital controller",
-          "pt": "Controlador digital GY-04",
-          "it": "Controller digitale GY-04"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "Programa la temperatura y el tiempo con precisión para cada trabajo.",
@@ -2515,12 +2515,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo do ecrã",
-          "it": "Modello del display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de ecrã",
+          "it": "Tipo di display"
         },
-        "value": "GY-05N"
+        "value": "Digital"
       },
       {
         "label": {
@@ -2762,10 +2762,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 49.5,
         "y": 37.4,
         "title": {
-          "es": "Controlador digital GY05N",
-          "en": "GY05N digital controller",
-          "pt": "Controlador digital GY05N",
-          "it": "Controller digitale GY05N"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "",
@@ -2939,12 +2939,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo do ecrã",
-          "it": "Modello del display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de ecrã",
+          "it": "Tipo di display"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -3123,10 +3123,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dettagli che fanno la differenza"
         },
         "description": {
-          "es": "Cuenta con dos bandejas laterales para organizar mejor el flujo de trabajo y un display digital GY-06 fácil e intuitivo. Además, el control de presión neumática en el frontal te ayuda a trabajar sin distracciones.",
-          "en": "It features two side trays for better workflow, an intuitive GY-06 digital display, and front pneumatic pressure control for distraction-free operation.",
-          "pt": "Conta com dois tabuleiros laterais para organizar melhor o fluxo de trabalho e um ecrã digital GY-06 fácil e intuitivo. Além disso, o controlo de pressão pneumática no frontal ajuda-o a trabalhar sem distrações.",
-          "it": "Dispone di due vassoi laterali per organizzare meglio il flusso di lavoro e di un display digitale GY-06 facile e intuitivo. Inoltre, il controllo della pressione pneumatica sul frontale ti aiuta a lavorare senza distrazioni."
+          "es": "Cuenta con dos bandejas laterales para organizar mejor el flujo de trabajo y un display digital fácil e intuitivo. Además, el control de presión neumática en el frontal te ayuda a trabajar sin distracciones.",
+          "en": "It features two side trays for better workflow, an intuitive digital display, and front pneumatic pressure control for distraction-free operation.",
+          "pt": "Conta com dois tabuleiros laterais para organizar melhor o fluxo de trabalho e um ecrã digital fácil e intuitivo. Além disso, o controlo de pressão pneumática no frontal ajuda-o a trabalhar sem distrações.",
+          "it": "Dispone di due vassoi laterali per organizzare meglio il flusso di lavoro e di un display digitale facile e intuitivo. Inoltre, il controllo della pressione pneumatica sul frontale ti aiuta a lavorare senza distrazioni."
         },
         "icon": "Settings",
         "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB3.png"
@@ -3514,7 +3514,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -3889,12 +3889,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo do ecrã",
-          "it": "Modello del display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de ecrã",
+          "it": "Tipo di display"
         },
-        "value": "GY-04 Digital"
+        "value": "Digital"
       },
       {
         "label": {
@@ -4431,7 +4431,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -4623,10 +4623,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 70,
         "y": 30,
         "title": {
-          "es": "Controlador digital GY-04",
-          "en": "GY-04 Digital Controller",
-          "pt": "Controlador digital GY-04",
-          "it": "Controller digitale GY-04"
+          "es": "Controlador digital",
+          "en": "Digital Controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "Panel digital con temporizador 0-999 seg., rango de temperatura 0-225°C y precisión ±0,5%. Permite programar y repetir configuraciones con exactitud para trabajos en serie.",
@@ -4896,12 +4896,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo do ecrã",
-          "it": "Modello del display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de ecrã",
+          "it": "Tipo di display"
         },
-        "value": "GY-13"
+        "value": "Táctil"
       },
       {
         "label": {
@@ -5136,10 +5136,10 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "title": {
-          "es": "Controlador digital GY-08",
-          "en": "GY-08 digital controller",
-          "pt": "Controlador digital GY-08",
-          "it": "Controller digitale GY-08"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "El nuevo controlador digital te lo pone fácil: configura temperatura y tiempos para tener todo bajo control.",
@@ -5170,10 +5170,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 33.2,
         "y": 18.7,
         "title": {
-          "es": "Controlador digital GY-08",
-          "en": "GY-08 digital controller",
-          "pt": "Controlador digital GY-08",
-          "it": "Controller digitale GY-08"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "",
@@ -5472,7 +5472,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -5511,10 +5511,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Vuoi personalizzare le tue tazze in modo facile e veloce?"
         },
         "description": {
-          "es": "La plancha térmica Barein es la herramienta que necesitas. Con su resistencia intercambiable para tazas de 11oz y controlador digital GY-10, podrás ajustar la temperatura y el tiempo de forma precisa para cada trabajo.",
-          "en": "Barein is the tool you need. With its interchangeable 11oz mug element and GY-10 digital controller, you can set temperature and time precisely for each job.",
-          "pt": "A prensa térmica Barein é a ferramenta que precisa. Com a sua resistência intercambiável para canecas de 11oz e controlador digital GY-10, poderá ajustar a temperatura e o tempo de forma precisa para cada trabalho.",
-          "it": "La pressa termica Barein è lo strumento di cui hai bisogno. Con la sua resistenza intercambiabile per tazze da 11oz e controller digitale GY-10, potrai regolare temperatura e tempo in modo preciso per ogni lavoro."
+          "es": "La plancha térmica Barein es la herramienta que necesitas. Con su resistencia intercambiable para tazas de 11oz y controlador digital, podrás ajustar la temperatura y el tiempo de forma precisa para cada trabajo.",
+          "en": "Barein is the tool you need. With its interchangeable 11oz mug element and digital controller, you can set temperature and time precisely for each job.",
+          "pt": "A prensa térmica Barein é a ferramenta que precisa. Com a sua resistência intercambiável para canecas de 11oz e controlador digital, poderá ajustar a temperatura e o tempo de forma precisa para cada trabalho.",
+          "it": "La pressa termica Barein è lo strumento di cui hai bisogno. Con la sua resistenza intercambiabile per tazze da 11oz e controller digitale, potrai regolare temperatura e tempo in modo preciso per ogni lavoro."
         },
         "icon": "CupSoda",
         "image": "/products/maquinas/barein-plancha-termica/fotoB1.png"
@@ -5911,10 +5911,10 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo do ecrã",
-          "it": "Modello del display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de ecrã",
+          "it": "Tipo di display"
         },
         "value": "NTTH-2000"
       },
@@ -6436,7 +6436,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -6758,22 +6758,22 @@ export const rawPlanchasData: Plancha[] = [
       "es": [
         "8 resistencias intercambiables: 1.5oz, 2.5oz, 6-9oz, 11-15oz, 12oz cónica, 17oz cónica, 20-30oz",
         "4 perillas de ajuste de presión para impresión de alta calidad",
-        "Controlador digital GY-04 con modo eco y precalentamiento"
+        "Controlador digital con modo eco y precalentamiento"
       ],
       "en": [
         "8 interchangeable elements: 1.5oz, 2.5oz, 6-9oz, 11-15oz, 12oz conical, 17oz conical, 20-30oz",
         "4 pressure adjustment knobs for high-quality printing",
-        "GY-04 digital controller with eco mode and preheating"
+        "digital controller with eco mode and preheating"
       ],
       "pt": [
         "8 resistências intercambiáveis: 1.5oz, 2.5oz, 6-9oz, 11-15oz, 12oz cónica, 17oz cónica, 20-30oz",
         "4 manípulos de ajuste de pressão para impressão de alta qualidade",
-        "Controlador digital GY-04 com modo eco e pré-aquecimento"
+        "Controlador digital com modo eco e pré-aquecimento"
       ],
       "it": [
         "8 elementi intercambiabili: 1.5oz, 2.5oz, 6-9oz, 11-15oz, 12oz conico, 17oz conico, 20-30oz",
         "4 manopole di regolazione pressione per stampa di alta qualità",
-        "Controller digitale GY-04 con modalità eco e preriscaldamento"
+        "Controller digitale con modalità eco e preriscaldamento"
       ]
     },
     "accessories": [
@@ -6905,7 +6905,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -7038,10 +7038,10 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "title": {
-          "es": "Controlador digital GY-04",
-          "en": "GY-04 digital controller",
-          "pt": "Controlador digital GY-04",
-          "it": "Controller digitale GY-04"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "Programa temperatura y tiempo con precisión milimétrica. Incluye modo eco para ahorro energético y precalentamiento para reducir el tiempo de espera al inicio de la jornada.",
@@ -7119,10 +7119,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 27.2,
         "y": 56.8,
         "title": {
-          "es": "Controlador digital GY-04",
-          "en": "GY-04 Digital Controller",
-          "pt": "Controlador digital GY-04",
-          "it": "Controller digitale GY-04"
+          "es": "Controlador digital",
+          "en": "Digital Controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "Panel digital con temporizador 0-999 seg., temperatura máxima 225°C, precisión ±0,5%, modo eco y precalentamiento. Programa y repite configuraciones con exactitud para trabajos en serie.",
@@ -7295,12 +7295,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -7484,10 +7484,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 58.9,
         "y": 40.6,
         "title": {
-          "es": "Controlador digital GY-04",
-          "en": "GY-04 digital controller",
-          "pt": "Controlador digital GY-04",
-          "it": "Controller digitale GY-04"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "",
@@ -7676,12 +7676,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -7817,10 +7817,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Controller digitale"
         },
         "description": {
-          "es": "Configura tiempo y temperatura de forma sencilla con su controlador digital GY-04.",
-          "en": "Set time and temperature easily with its GY-04 digital controller.",
-          "pt": "Configure tempo e temperatura de forma simples com o seu controlador digital GY-04.",
-          "it": "Imposta tempo e temperatura in modo semplice con il suo controller digitale GY-04."
+          "es": "Configura tiempo y temperatura de forma sencilla con su controlador digital.",
+          "en": "Set time and temperature easily with its digital controller.",
+          "pt": "Configure tempo e temperatura de forma simples com o seu controlador digital.",
+          "it": "Imposta tempo e temperatura in modo semplice con il suo controller digitale."
         },
         "icon": "Cpu",
         "image": "/products/maquinas/gante-plancha-manual-gorras/fotoB2.png"
@@ -7909,10 +7909,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 73.9,
         "y": 43.5,
         "title": {
-          "es": "Controlador digital GY04",
-          "en": "GY04 digital controller",
-          "pt": "Controlador digital GY04",
-          "it": "Controller digitale GY04"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "",
@@ -8349,12 +8349,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-13"
+        "value": "Táctil"
       },
       {
         "label": {
@@ -8571,22 +8571,22 @@ export const rawPlanchasData: Plancha[] = [
       "es": [
         "100% eléctrica — sin compresor, sin ruido",
         "Doble plato 40x50cm con cambio rápido y funcionamiento autónomo",
-        "Pantalla táctil GY-13 con 3 memorias y láseres de posicionamiento dobles"
+        "Pantalla táctil con 3 memorias y láseres de posicionamiento dobles"
       ],
       "en": [
         "100% electric — no compressor, no noise",
         "Double 40x50cm plate with quick-change and autonomous operation",
-        "GY-13 touch display with 3 memories and dual positioning lasers"
+        "touch display with 3 memories and dual positioning lasers"
       ],
       "pt": [
         "100% elétrica — sem compressor, sem ruído",
         "Duplo prato 40x50cm com troca rápida e funcionamento autónomo",
-        "Ecrã táctil GY-13 com 3 memórias e dois lasers de posicionamento"
+        "Ecrã táctil com 3 memórias e dois lasers de posicionamento"
       ],
       "it": [
         "100% elettrica — senza compressore, senza rumore",
         "Doppia piastra 40x50cm con cambio rapido e funzionamento autonomo",
-        "Schermo tattile GY-13 con 3 memorie e doppi laser di posizionamento"
+        "Schermo tattile con 3 memorie e doppi laser di posizionamento"
       ]
     },
     "accessories": [
@@ -8692,12 +8692,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-13"
+        "value": "Táctil"
       },
       {
         "label": {
@@ -8875,10 +8875,10 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "title": {
-          "es": "Pantalla táctil GY-13 con 3 memorias",
-          "en": "GY-13 touch display with 3 memories",
-          "pt": "Ecrã tátil GY-13 com 3 memórias",
-          "it": "Display touch GY-13 con 3 memorie"
+          "es": "Pantalla táctil con 3 memorias",
+          "en": "touch display with 3 memories",
+          "pt": "Ecrã tátil com 3 memórias",
+          "it": "Display touch con 3 memorie"
         },
         "description": {
           "es": "Configura tiempo y temperatura con un toque. Guarda hasta 3 perfiles de producción en memoria para cambiar de trabajo en segundos. Sin botones, sin complicaciones.",
@@ -8955,10 +8955,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 26.5,
         "y": 18.3,
         "title": {
-          "es": "Controlador táctil GY-13",
-          "en": "GY-13 Touch Controller",
-          "pt": "Controlador tátil GY-13",
-          "it": "Controller touch GY-13"
+          "es": "Controlador táctil",
+          "en": "Touch Controller",
+          "pt": "Controlador tátil",
+          "it": "Controller touch"
         },
         "description": {
           "es": "Control táctil con 3 memorias de producción, ajuste de velocidad de transición y modos automático, semiautomático y manual.",
@@ -9131,22 +9131,22 @@ export const rawPlanchasData: Plancha[] = [
       "es": [
         "Apertura y cierre automático neumático",
         "Placa fija de 40x50cm con grosor imprimible hasta 35mm",
-        "Controlador digital GY-06 con modo eco y precalentamiento"
+        "Controlador digital con modo eco y precalentamiento"
       ],
       "en": [
         "Pneumatic automatic opening and closing",
         "Fixed 40x50cm plate with up to 35mm printable thickness",
-        "GY-06 digital controller with eco mode and preheating"
+        "digital controller with eco mode and preheating"
       ],
       "pt": [
         "Abertura e fecho automático pneumático",
         "Placa fixa de 40x50cm com espessura imprimível até 35mm",
-        "Controlador digital GY-06 com modo eco e pré-aquecimento"
+        "Controlador digital com modo eco e pré-aquecimento"
       ],
       "it": [
         "Apertura e chiusura automatica pneumatica",
         "Piastra fissa 40x50cm con spessore stampabile fino a 35mm",
-        "Controller digitale GY-06 con modalità eco e preriscaldamento"
+        "Controller digitale con modalità eco e preriscaldamento"
       ]
     },
     "accessories": [
@@ -9288,7 +9288,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -9445,16 +9445,16 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "title": {
-          "es": "Controlador GY-06 de última generación",
-          "en": "Next-generation GY-06 controller",
-          "pt": "Controlador GY-06 de última geração",
-          "it": "Controller GY-06 di ultima generazione"
+          "es": "Controlador de última generación",
+          "en": "Next-generation controller",
+          "pt": "Controlador de última geração",
+          "it": "Controller di ultima generazione"
         },
         "description": {
-          "es": "Gestiona toda la plancha desde el controlador GY-06: temperatura, tiempo, modo eco, precalentamiento y pantalla digital, todo en una interfaz fácil e intuitiva.",
-          "en": "Manage the entire press from the GY-06 controller: temperature, time, eco mode, preheating, and digital display, all in an easy and intuitive interface.",
-          "pt": "Gere toda a prensa a partir do controlador GY-06: temperatura, tempo, modo eco, pré-aquecimento e ecrã digital, tudo numa interface fácil e intuitiva.",
-          "it": "Gestisci l'intera pressa dal controller GY-06: temperatura, tempo, modalità eco, preriscaldamento e display digitale, tutto in un'interfaccia facile e intuitiva."
+          "es": "Gestiona toda la plancha desde el controlador: temperatura, tiempo, modo eco, precalentamiento y pantalla digital, todo en una interfaz fácil e intuitiva.",
+          "en": "Manage the entire press from the controller: temperature, time, eco mode, preheating, and digital display, all in an easy and intuitive interface.",
+          "pt": "Gere toda a prensa a partir do controlador: temperatura, tempo, modo eco, pré-aquecimento e ecrã digital, tudo numa interface fácil e intuitiva.",
+          "it": "Gestisci l'intera pressa dal controller: temperatura, tempo, modalità eco, preriscaldamento e display digitale, tutto in un'interfaccia facile e intuitiva."
         },
         "icon": "Cpu"
       },
@@ -9494,10 +9494,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 40.5,
         "y": 11.4,
         "title": {
-          "es": "Controlador digital GY-06",
-          "en": "GY-06 digital controller",
-          "pt": "Controlador digital GY-06",
-          "it": "Controller digitale GY-06"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "Pantalla digital con control de tiempo, temperatura, modo eco y precalentamiento para una producción precisa y eficiente.",
@@ -9597,22 +9597,22 @@ export const rawPlanchasData: Plancha[] = [
       "es": [
         "Apertura y cierre automático neumático con ángulo de 25°",
         "Placa fija de 40x50cm con grosor imprimible hasta 68mm",
-        "Controlador digital GY-06 con modo eco, precalentamiento y base deslizante"
+        "Controlador digital con modo eco, precalentamiento y base deslizante"
       ],
       "en": [
         "Pneumatic automatic opening and closing at 25° angle",
         "Fixed 40x50cm plate with up to 68mm printable thickness",
-        "GY-06 digital controller with eco mode, preheating and sliding base"
+        "digital controller with eco mode, preheating and sliding base"
       ],
       "pt": [
         "Abertura e fecho automático pneumático com ângulo de 25°",
         "Placa fixa de 40x50cm com espessura imprimível até 68mm",
-        "Controlador digital GY-06 com modo eco, pré-aquecimento e base deslizante"
+        "Controlador digital com modo eco, pré-aquecimento e base deslizante"
       ],
       "it": [
         "Apertura e chiusura automatica pneumatica con angolo di 25°",
         "Piastra fissa 40x50cm con spessore stampabile fino a 68mm",
-        "Controller digitale GY-06 con modalità eco, preriscaldamento e base scorrevole"
+        "Controller digitale con modalità eco, preriscaldamento e base scorrevole"
       ]
     },
     "accessories": [
@@ -9732,7 +9732,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -9889,10 +9889,10 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "title": {
-          "es": "Controlador GY-06 con modo eco y precalentamiento",
-          "en": "GY-06 controller with eco mode and preheating",
-          "pt": "Controlador GY-06 com modo eco e pré-aquecimento",
-          "it": "Controller GY-06 con modalità eco e preriscaldamento"
+          "es": "Controlador con modo eco y precalentamiento",
+          "en": "controller with eco mode and preheating",
+          "pt": "Controlador com modo eco e pré-aquecimento",
+          "it": "Controller con modalità eco e preriscaldamento"
         },
         "description": {
           "es": "Gestiona temperatura, tiempo, modo eco y precalentamiento desde una interfaz fácil e intuitiva. Ahorra energía y reduce tiempos de espera entre ciclos.",
@@ -9938,10 +9938,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 40,
         "y": 14,
         "title": {
-          "es": "Controlador digital GY-06",
-          "en": "GY-06 Digital Controller",
-          "pt": "Controlador digital GY-06",
-          "it": "Controller digitale GY-06"
+          "es": "Controlador digital",
+          "en": "Digital Controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "Panel digital con temporizador 0-99 seg., temperatura máxima 225°C, precisión ±0,5%, modo eco y función de precalentamiento. Gestión intuitiva de todos los parámetros de producción.",
@@ -10250,12 +10250,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -10450,10 +10450,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 26.1,
         "y": 51.5,
         "title": {
-          "es": "Controlador digital avanzado GY-06",
-          "en": "Advanced digital controller GY-06",
-          "pt": "Controlador digital avançado GY-06",
-          "it": "Controller digitale avanzato GY-06"
+          "es": "Controlador digital avanzado",
+          "en": "Advanced digital controller",
+          "pt": "Controlador digital avançado",
+          "it": "Controller digitale avanzato"
         },
         "description": {
           "es": "",
@@ -10714,12 +10714,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -11053,10 +11053,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 33.2,
         "y": 52.6,
         "title": {
-          "es": "Controlador digital avanzado GY-06",
-          "en": "Advanced GY-06 digital controller",
-          "pt": "Controlador digital avançado GY-06",
-          "it": "Controller digitale avanzato GY-06"
+          "es": "Controlador digital avanzado",
+          "en": "Advanced digital controller",
+          "pt": "Controlador digital avançado",
+          "it": "Controller digitale avanzato"
         },
         "description": {
           "es": "",
@@ -11251,12 +11251,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-13"
+        "value": "Táctil"
       },
       {
         "label": {
@@ -11764,12 +11764,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-13"
+        "value": "Táctil"
       },
       {
         "label": {
@@ -11948,10 +11948,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Display touch"
         },
         "description": {
-          "es": "El controlador táctil GY-13 permite ajustar y supervisar todos los parámetros con rapidez y precisión.",
-          "en": "The GY-13 touch controller lets you adjust and monitor all parameters quickly and precisely.",
-          "pt": "O controlador tátil GY-13 permite ajustar e supervisionar todos os parâmetros com rapidez e precisão.",
-          "it": "Il controller touch GY-13 consente di regolare e monitorare tutti i parametri con rapidità e precisione."
+          "es": "El controlador táctil permite ajustar y supervisar todos los parámetros con rapidez y precisión.",
+          "en": "The touch controller lets you adjust and monitor all parameters quickly and precisely.",
+          "pt": "O controlador tátil permite ajustar e supervisionar todos os parâmetros com rapidez e precisão.",
+          "it": "Il controller touch consente di regolare e monitorare tutti i parametri con rapidità e precisione."
         },
         "icon": "MousePointer2",
         "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoB3.png"
@@ -12354,12 +12354,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -12633,10 +12633,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 41.5,
         "y": 41.1,
         "title": {
-          "es": "Controlador digital avanzado GY-06",
-          "en": "Advanced GY-06 digital controller",
-          "pt": "Controlador digital avançado GY-06",
-          "it": "Controller digitale avanzato GY-06"
+          "es": "Controlador digital avanzado",
+          "en": "Advanced digital controller",
+          "pt": "Controlador digital avançado",
+          "it": "Controller digitale avanzato"
         },
         "description": {
           "es": "",
@@ -12891,7 +12891,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -13351,10 +13351,10 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
         "value": "Control digital móvil REX-C400"
       },
@@ -13818,12 +13818,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -14002,10 +14002,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Controller digitale"
         },
         "description": {
-          "es": "Controla tiempos y temperatura de forma fácil e intuitiva con su display GY-06.",
-          "en": "Control timing and temperature easily and intuitively with its GY-06 display.",
-          "pt": "Controla tempos e temperatura de forma fácil e intuitiva com o seu display GY-06.",
-          "it": "Controlla tempi e temperatura in modo facile e intuitivo con il suo display GY-06."
+          "es": "Controla tiempos y temperatura de forma fácil e intuitiva con su display.",
+          "en": "Control timing and temperature easily and intuitively with its display.",
+          "pt": "Controla tempos e temperatura de forma fácil e intuitiva com o seu display.",
+          "it": "Controlla tempi e temperatura in modo facile e intuitivo con il suo display."
         },
         "icon": "Cpu",
         "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoB3.png"
@@ -14125,10 +14125,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 51.1,
         "y": 27.6,
         "title": {
-          "es": "Controlador digital GY-06",
-          "en": "GY-06 digital controller",
-          "pt": "Controlador digital GY-06",
-          "it": "Controller digitale GY-06"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "",
@@ -14453,7 +14453,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -14978,7 +14978,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-06"
+        "value": "Digital"
       },
       {
         "label": {
@@ -15327,22 +15327,22 @@ export const rawPlanchasData: Plancha[] = [
       "es": [
         "3 platos intercambiables: 205×171×218 mm / 114×132×179 mm / 97×115×115 mm",
         "Diseño compacto, robusto y fácil de usar",
-        "Controlador digital GY-04 con sistema de intercambio rápido"
+        "Controlador digital con sistema de intercambio rápido"
       ],
       "en": [
         "3 interchangeable plates: 205×171×218 mm / 114×132×179 mm / 97×115×115 mm",
         "Compact, robust and easy-to-use design",
-        "GY-04 digital controller with quick-change system"
+        "digital controller with quick-change system"
       ],
       "pt": [
         "3 pratos intercambiáveis: 205×171×218 mm / 114×132×179 mm / 97×115×115 mm",
         "Design compacto, robusto e fácil de usar",
-        "Controlador digital GY-04 com sistema de troca rápida"
+        "Controlador digital com sistema de troca rápida"
       ],
       "it": [
         "3 piastre intercambiabili: 205×171×218 mm / 114×132×179 mm / 97×115×115 mm",
         "Design compatto, robusto e facile da usare",
-        "Controller digitale GY-04 con sistema di cambio rapido"
+        "Controller digitale con sistema di cambio rapido"
       ]
     },
     "accessories": [
@@ -15400,12 +15400,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Modelo de display",
-          "en": "Display Model",
-          "pt": "Modelo de display",
-          "it": "Modello di display"
+          "es": "Tipo de display",
+          "en": "Display Type",
+          "pt": "Tipo de display",
+          "it": "Tipo di display"
         },
-        "value": "GY-04"
+        "value": "Digital"
       },
       {
         "label": {
@@ -15611,10 +15611,10 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "title": {
-          "es": "Controlador digital GY-04",
-          "en": "GY-04 digital controller",
-          "pt": "Controlador digital GY-04",
-          "it": "Controller digitale GY-04"
+          "es": "Controlador digital",
+          "en": "digital controller",
+          "pt": "Controlador digital",
+          "it": "Controller digitale"
         },
         "description": {
           "es": "Programa temperatura y tiempo con precisión. Con un rango de 0-999 segundos y temperatura máxima de 225°C, tienes el control total sobre cada personalización.",
@@ -15791,10 +15791,10 @@ export const rawPlanchasData: Plancha[] = [
       "it": "Felina Pressa Swing-Away Elettrica"
     },
     "description": {
-      "es": "Felina es una prensa de calor eléctrica de apertura giratoria (swing-away) de nivel profesional con pantalla táctil GY-13. Su sistema de apertura giratoria a 180° maximiza el espacio de trabajo y facilita la carga y descarga de materiales, mientras que sus avanzados sistemas de seguridad —protección anti-pellizco, operación de doble mano y programación en dos etapas— la convierten en una máquina tan potente como segura.",
-      "en": "Felina is a professional electric swing-away heat press with a GY-13 touch screen. Its 180° swing-away opening maximizes workspace and simplifies material loading and unloading, while advanced safety systems — pinch protection, two-hand operation, and two-stage programming — make it as powerful as it is safe.",
-      "pt": "Felina é uma prensa de calor elétrica de abertura giratória (swing-away) de nível profissional com ecrã tátil GY-13. A sua abertura giratória a 180° maximiza o espaço de trabalho e facilita o carregamento e descarregamento de materiais, enquanto os sistemas avançados de segurança a tornam tão potente quanto segura.",
-      "it": "Felina è una pressa termica elettrica swing-away di livello professionale con touch screen GY-13. L'apertura girevole a 180° massimizza lo spazio di lavoro e semplifica il carico e scarico dei materiali, mentre i sistemi avanzati di sicurezza la rendono potente quanto sicura."
+      "es": "Felina es una prensa de calor eléctrica de apertura giratoria (swing-away) de nivel profesional con pantalla táctil. Su sistema de apertura giratoria a 180° maximiza el espacio de trabajo y facilita la carga y descarga de materiales, mientras que sus avanzados sistemas de seguridad —protección anti-pellizco, operación de doble mano y programación en dos etapas— la convierten en una máquina tan potente como segura.",
+      "en": "Felina is a professional electric swing-away heat press with a touch screen. Its 180° swing-away opening maximizes workspace and simplifies material loading and unloading, while advanced safety systems — pinch protection, two-hand operation, and two-stage programming — make it as powerful as it is safe.",
+      "pt": "Felina é uma prensa de calor elétrica de abertura giratória (swing-away) de nível profissional com ecrã tátil. A sua abertura giratória a 180° maximiza o espaço de trabalho e facilita o carregamento e descarregamento de materiais, enquanto os sistemas avançados de segurança a tornam tão potente quanto segura.",
+      "it": "Felina è una pressa termica elettrica swing-away di livello professionale con touch screen. L'apertura girevole a 180° massimizza lo spazio di lavoro e semplifica il carico e scarico dei materiali, mentre i sistemi avanzati di sicurezza la rendono potente quanto sicura."
     },
     "image": "/products/maquinas/felina-prensa-swing-away-electrica/fotoPrincipal.png",
     "price": "Consultar PVP",
@@ -15807,22 +15807,22 @@ export const rawPlanchasData: Plancha[] = [
     "features": {
       "es": [
         "Apertura giratoria swing-away 180° con base de cambio rápido y deslizamiento",
-        "Controlador táctil GY-13 con 3 memorias, contador de producción y ajuste de presión 0-8",
+        "Controlador táctil con 3 memorias, contador de producción y ajuste de presión 0-8",
         "Protección anti-pellizco, operación de doble mano y parada de emergencia"
       ],
       "en": [
         "180° swing-away opening with quick-change sliding base",
-        "GY-13 touch screen controller with 3 memories, production counter and 0-8 pressure adjustment",
+        "touch screen controller with 3 memories, production counter and 0-8 pressure adjustment",
         "Pinch protection, two-hand operation and emergency stop"
       ],
       "pt": [
         "Abertura giratória swing-away 180° com base de mudança rápida e deslizamento",
-        "Controlador tátil GY-13 com 3 memórias, contador de produção e ajuste de pressão 0-8",
+        "Controlador tátil com 3 memórias, contador de produção e ajuste de pressão 0-8",
         "Proteção anti-aperto, operação de duas mãos e paragem de emergência"
       ],
       "it": [
         "Apertura girevole swing-away 180° con base a cambio rapido e scorrimento",
-        "Controller touch GY-13 con 3 memorie, contatore di produzione e regolazione pressione 0-8",
+        "Controller touch con 3 memorie, contatore di produzione e regolazione pressione 0-8",
         "Protezione anti-pizzico, operazione a due mani e arresto di emergenza"
       ]
     },
@@ -15917,7 +15917,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Controlador digital",
           "it": "Controller digitale"
         },
-        "value": "GY-13 (pantalla táctil)"
+        "value": "Táctil"
       },
       {
         "label": {
@@ -16120,16 +16120,16 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "title": {
-          "es": "Controlador táctil GY-13 avanzado",
-          "en": "Advanced GY-13 touch screen controller",
-          "pt": "Controlador tátil GY-13 avançado",
-          "it": "Controller touch GY-13 avanzato"
+          "es": "Controlador táctil avanzado",
+          "en": "Advanced touch screen controller",
+          "pt": "Controlador tátil avançado",
+          "it": "Controller touch avanzato"
         },
         "description": {
-          "es": "Gestiona todos los parámetros desde el panel táctil GY-13: guarda hasta 3 configuraciones, ajusta la presión de 0 a 8 y controla el contador de producción automático.",
-          "en": "Manage all parameters from the GY-13 touch panel: save up to 3 settings, adjust pressure from 0 to 8, and control the automatic production counter.",
-          "pt": "Gere todos os parâmetros a partir do painel tátil GY-13: guarda até 3 configurações, ajusta a pressão de 0 a 8 e controla o contador de produção automático.",
-          "it": "Gestisce tutti i parametri dal pannello touch GY-13: salva fino a 3 configurazioni, regola la pressione da 0 a 8 e controlla il contatore di produzione automatico."
+          "es": "Gestiona todos los parámetros desde el panel táctil: guarda hasta 3 configuraciones, ajusta la presión de 0 a 8 y controla el contador de producción automático.",
+          "en": "Manage all parameters from the touch panel: save up to 3 settings, adjust pressure from 0 to 8, and control the automatic production counter.",
+          "pt": "Gere todos os parâmetros a partir do painel tátil: guarda até 3 configurações, ajusta a pressão de 0 a 8 e controla o contador de produção automático.",
+          "it": "Gestisce tutti i parametri dal pannello touch: salva fino a 3 configurazioni, regola la pressione da 0 a 8 e controlla il contatore di produzione automatico."
         },
         "icon": "Cpu"
       },
@@ -16169,10 +16169,10 @@ export const rawPlanchasData: Plancha[] = [
         "x": 79,
         "y": 24,
         "title": {
-          "es": "Controlador táctil GY-13",
-          "en": "GY-13 Touch Controller",
-          "pt": "Controlador tátil GY-13",
-          "it": "Controller touch GY-13"
+          "es": "Controlador táctil",
+          "en": "Touch Controller",
+          "pt": "Controlador tátil",
+          "it": "Controller touch"
         },
         "description": {
           "es": "Panel táctil con 3 memorias de configuración, contador de producción automático y ajuste de presión 0-8. Temporizador 0-999 seg. y temperatura máxima de 225°C.",
