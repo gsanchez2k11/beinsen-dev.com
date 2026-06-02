@@ -44,3 +44,12 @@ next-env.d.ts
 
 # Backup carpetas de renombrado
 public/products/_backup-renombrado-*/
+
+# Backup automatico antes de procesar imagenes con Gemini
+public/products/maquinas-original/
+
+# Perfil aislado y artefactos del script Gemini (no commitear, pesado/sensible)
+scripts/_gemini-session/
+scripts/_gemini-downloads/
+scripts/_style-manifest.json
+scripts/_gemini-debug.mjs

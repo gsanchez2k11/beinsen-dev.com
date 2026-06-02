@@ -76,7 +76,7 @@ export default function LegalPage() {
 
         <footer className="pt-8 border-t border-border mt-12">
           <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
-            Versión 1.1 — Última actualización: 28 de mayo de 2026
+            Versión 1.0 — Última actualización: 2 de junio de 2026
           </p>
         </footer>
       </>
@@ -151,7 +151,7 @@ export default function LegalPage() {
 
         <footer className="pt-8 border-t border-border mt-12">
           <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
-            Version 1.1 — Last updated: 28 May 2026
+            Version 1.0 — Last updated: 2 June 2026
           </p>
         </footer>
       </>
@@ -226,7 +226,7 @@ export default function LegalPage() {
 
         <footer className="pt-8 border-t border-border mt-12">
           <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
-            Versão 1.1 — Última actualização: 28 de maio de 2026
+            Versão 1.0 — Última actualização: 2 de junho de 2026
           </p>
         </footer>
       </>
@@ -301,7 +301,7 @@ export default function LegalPage() {
 
         <footer className="pt-8 border-t border-border mt-12">
           <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
-            Versione 1.1 — Ultimo aggiornamento: 28 maggio 2026
+            Versione 1.0 — Ultimo aggiornamento: 2 giugno 2026
           </p>
         </footer>
       </>

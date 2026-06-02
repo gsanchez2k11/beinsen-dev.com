@@ -15,7 +15,7 @@ export default function PrivacyPage() {
             <p><span className="font-semibold text-foreground">CIF:</span> B30507743.</p>
             <p><span className="font-semibold text-foreground">Domicilio:</span> Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), España.</p>
             <p><span className="font-semibold text-foreground">Teléfono:</span> +34 968 902 300.</p>
-            <p><span className="font-semibold text-foreground">Email de privacidad:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a> (alternativamente <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
+            <p><span className="font-semibold text-foreground">Email de privacidad:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.</p>
             <p><span className="font-semibold text-foreground">Registro Mercantil:</span> Murcia, Tomo MU-1135, Folio 47, Hoja MU-20685, inscripción primera.</p>
           </div>
         </section>
@@ -198,7 +198,7 @@ export default function PrivacyPage() {
 
         <footer className="pt-8 border-t border-border">
           <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
-            Versión 2.0 — Última actualización: 28 de mayo de 2026
+            Versión 1.0 — Última actualización: 2 de junio de 2026
           </p>
         </footer>
       </>
@@ -212,7 +212,7 @@ export default function PrivacyPage() {
             <p><span className="font-semibold text-foreground">VAT:</span> B30507743.</p>
             <p><span className="font-semibold text-foreground">Registered office:</span> Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), Spain.</p>
             <p><span className="font-semibold text-foreground">Phone:</span> +34 968 902 300.</p>
-            <p><span className="font-semibold text-foreground">Privacy email:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a> (alternatively <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
+            <p><span className="font-semibold text-foreground">Privacy email:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.</p>
             <p><span className="font-semibold text-foreground">Commercial Registry:</span> Murcia, Volume MU-1135, Folio 47, Sheet MU-20685, first entry.</p>
           </div>
         </section>
@@ -395,7 +395,7 @@ export default function PrivacyPage() {
 
         <footer className="pt-8 border-t border-border">
           <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
-            Version 2.0 — Last updated: 28 May 2026
+            Version 1.0 — Last updated: 2 June 2026
           </p>
         </footer>
       </>
@@ -409,7 +409,7 @@ export default function PrivacyPage() {
             <p><span className="font-semibold text-foreground">NIF:</span> B30507743.</p>
             <p><span className="font-semibold text-foreground">Sede social:</span> Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), Espanha.</p>
             <p><span className="font-semibold text-foreground">Telefone:</span> +34 968 902 300.</p>
-            <p><span className="font-semibold text-foreground">Email de privacidade:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a> (em alternativa <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
+            <p><span className="font-semibold text-foreground">Email de privacidade:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.</p>
             <p><span className="font-semibold text-foreground">Registo Comercial:</span> Murcia, Tomo MU-1135, Fólio 47, Folha MU-20685, primeira inscrição.</p>
           </div>
         </section>
@@ -592,7 +592,7 @@ export default function PrivacyPage() {
 
         <footer className="pt-8 border-t border-border">
           <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
-            Versão 2.0 — Última atualização: 28 de maio de 2026
+            Versão 1.0 — Última atualização: 2 de junho de 2026
           </p>
         </footer>
       </>
@@ -606,7 +606,7 @@ export default function PrivacyPage() {
             <p><span className="font-semibold text-foreground">P.IVA:</span> B30507743.</p>
             <p><span className="font-semibold text-foreground">Sede:</span> Av. Alto de las Atalayas, 18, 30110 – Cabezo de Torres (Murcia), Spagna.</p>
             <p><span className="font-semibold text-foreground">Telefono:</span> +34 968 902 300.</p>
-            <p><span className="font-semibold text-foreground">Email per la privacy:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a> (in alternativa <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>).</p>
+            <p><span className="font-semibold text-foreground">Email per la privacy:</span> <a href="mailto:info@beinsen.com" className="text-[#FF6600] hover:underline">info@beinsen.com</a>.</p>
             <p><span className="font-semibold text-foreground">Registro delle Imprese:</span> Murcia, Tomo MU-1135, Foglio 47, Scheda MU-20685, prima iscrizione.</p>
           </div>
         </section>
@@ -789,7 +789,7 @@ export default function PrivacyPage() {
 
         <footer className="pt-8 border-t border-border">
           <p className="text-[10px] text-muted-foreground uppercase tracking-widest text-center">
-            Versione 2.0 — Ultimo aggiornamento: 28 maggio 2026
+            Versione 1.0 — Ultimo aggiornamento: 2 giugno 2026
           </p>
         </footer>
       </>
