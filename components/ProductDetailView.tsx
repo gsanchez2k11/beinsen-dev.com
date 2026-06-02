@@ -4,7 +4,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Euro, Maximize, FileText, Download, PlayCircle, Wrench, Store, ExternalLink, Globe, Package, Zap, BadgeCheck, ShoppingBag } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, ChevronRight, Euro, Maximize, FileText, Download, PlayCircle, Wrench, Store, ExternalLink, Globe, Package, Zap, BadgeCheck, ShoppingBag, MapPin } from "lucide-react";
 import { ContactSpecialistButton } from "@/components/ContactSpecialistButton";
 import { TiltImage } from "@/components/TiltImage";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -106,7 +106,10 @@ export function ProductDetailView({
             certified: "Componente industrial certificado",
             essential: "Consumible esencial Beinsen",
             compatibleMachines: "Máquinas Compatibles",
-            compatibleMachinesDesc: "Este componente es compatible con los siguientes equipos industriales de alto rendimiento."
+            compatibleMachinesDesc: "Este componente es compatible con los siguientes equipos industriales de alto rendimiento.",
+            findDistributorTitle: "¿Dónde adquirir esta máquina?",
+            findDistributorDesc: "Disponemos de una amplia red de distribuidores autorizados. Contáctanos y te indicamos el más cercano a tu ubicación.",
+            findDistributorCta: "Consultar distribuidor",
         },
         en: {
             inicio: "Home",
@@ -146,7 +149,10 @@ export function ProductDetailView({
             certified: "Certified industrial component",
             essential: "Essential Beinsen consumable",
             compatibleMachines: "Compatible Machines",
-            compatibleMachinesDesc: "This component is compatible with the following high-performance industrial equipment."
+            compatibleMachinesDesc: "This component is compatible with the following high-performance industrial equipment.",
+            findDistributorTitle: "Where to get this machine?",
+            findDistributorDesc: "We have an extensive network of authorized distributors. Contact us and we'll point you to the nearest one.",
+            findDistributorCta: "Find a distributor",
         },
         pt: {
             inicio: "Início",
@@ -186,7 +192,10 @@ export function ProductDetailView({
             certified: "Componente industrial certificado",
             essential: "Consumível essencial Beinsen",
             compatibleMachines: "Máquinas Compatíveis",
-            compatibleMachinesDesc: "Este componente é compatível com os seguintes equipamentos industriais."
+            compatibleMachinesDesc: "Este componente é compatível com os seguintes equipamentos industriais.",
+            findDistributorTitle: "Onde adquirir esta máquina?",
+            findDistributorDesc: "Dispomos de uma ampla rede de distribuidores autorizados. Contacte-nos e indicamos o mais próximo.",
+            findDistributorCta: "Consultar distribuidor",
         },
         it: {
             inicio: "Inizio",
@@ -226,7 +235,10 @@ export function ProductDetailView({
             certified: "Componente industriale certificato",
             essential: "Consumabile essenziale Beinsen",
             compatibleMachines: "Macchine Compatibili",
-            compatibleMachinesDesc: "Questo componente è compatibile con le seguenti attrezzature industriali."
+            compatibleMachinesDesc: "Questo componente è compatibile con le seguenti attrezzature industriali.",
+            findDistributorTitle: "Dove acquistare questa macchina?",
+            findDistributorDesc: "Disponiamo di un'ampia rete di distributori autorizzati. Contattaci e ti indicheremo il più vicino.",
+            findDistributorCta: "Trova un distributore",
         }
     };
     const d = dictionary[locale] || dictionary.es;
@@ -474,6 +486,30 @@ export function ProductDetailView({
                             </div>
                         </ScrollReveal>
                     )}
+
+                    {/* Find Distributor CTA */}
+                    <ScrollReveal className="w-full py-12">
+                        <div className="max-w-4xl mx-auto">
+                            <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-card via-card to-muted/40 border border-border/50 p-8 md:p-12 text-center">
+                                <div className="absolute -top-32 -left-32 w-72 h-72 rounded-full bg-[#FF6600]/5 blur-[100px] pointer-events-none" />
+                                <div className="absolute -bottom-32 -right-32 w-72 h-72 rounded-full bg-[#FF6600]/5 blur-[100px] pointer-events-none" />
+                                <div className="relative">
+                                    <div className="w-16 h-16 rounded-2xl bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] mx-auto mb-6">
+                                        <MapPin size={32} />
+                                    </div>
+                                    <h3 className="text-3xl md:text-4xl font-black mb-4 tracking-tight">{d.findDistributorTitle}</h3>
+                                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 font-light">{d.findDistributorDesc}</p>
+                                    <Link
+                                        href="/contacto"
+                                        className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF6600] text-white font-black uppercase tracking-widest text-[11px] shadow-lg shadow-[#FF6600]/30 hover:bg-[#cc5200] hover:shadow-xl hover:shadow-[#FF6600]/40 hover:scale-[1.03] transition-all duration-300"
+                                    >
+                                        {d.findDistributorCta}
+                                        <ArrowRight size={14} />
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </ScrollReveal>
 
                     {/* Video / Action Section */}
                     {plancha.videoUrl && (
