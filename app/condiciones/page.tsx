@@ -77,7 +77,7 @@ export default function ConditionsPage() {
           <div className="bg-[#FF6600]/5 border-l-4 border-[#FF6600] p-6 rounded-r-2xl space-y-2">
             <h4 className="font-bold">Periodos por modelo</h4>
             <p className="text-sm text-muted-foreground">
-              La mayoría de los modelos Beinsen disponen de garantía de <span className="font-bold text-foreground">3 años</span>. Los modelos <span className="font-semibold text-foreground">Andra, Tobago, Miranda y Felina</span> disponen de garantía de <span className="font-bold text-foreground">1 año</span>. La activación de la cobertura extendida requiere el registro del equipo en <a href="https://soporte.beinsen.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline">soporte.beinsen.com</a> en los 90 días posteriores a la compra.
+              La mayoría de los modelos Beinsen disponen de garantía de <span className="font-bold text-foreground">3 años</span>. Los modelos <span className="font-semibold text-foreground">Alaska, Andra, Tobago, Miranda y Felina</span> disponen de garantía de <span className="font-bold text-foreground">1 año</span>. La activación de la cobertura extendida requiere el registro del equipo en <a href="https://soporte.beinsen.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline">soporte.beinsen.com</a> en los 90 días posteriores a la compra.
             </p>
           </div>
           <p className="text-muted-foreground text-sm leading-relaxed">
@@ -173,7 +173,7 @@ export default function ConditionsPage() {
           <div className="bg-[#FF6600]/5 border-l-4 border-[#FF6600] p-6 rounded-r-2xl space-y-2">
             <h4 className="font-bold">Periods by model</h4>
             <p className="text-sm text-muted-foreground">
-              Most Beinsen models come with a <span className="font-bold text-foreground">3-year</span> warranty. The <span className="font-semibold text-foreground">Andra, Tobago, Miranda and Felina</span> models come with a <span className="font-bold text-foreground">1-year</span> warranty. Activation of extended cover requires registration of the device at <a href="https://soporte.beinsen.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline">soporte.beinsen.com</a> within 90 days of purchase.
+              Most Beinsen models come with a <span className="font-bold text-foreground">3-year</span> warranty. The <span className="font-semibold text-foreground">Alaska, Andra, Tobago, Miranda and Felina</span> models come with a <span className="font-bold text-foreground">1-year</span> warranty. Activation of extended cover requires registration of the device at <a href="https://soporte.beinsen.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline">soporte.beinsen.com</a> within 90 days of purchase.
             </p>
           </div>
           <p className="text-muted-foreground text-sm leading-relaxed">
@@ -269,7 +269,7 @@ export default function ConditionsPage() {
           <div className="bg-[#FF6600]/5 border-l-4 border-[#FF6600] p-6 rounded-r-2xl space-y-2">
             <h4 className="font-bold">Períodos por modelo</h4>
             <p className="text-sm text-muted-foreground">
-              A maioria dos modelos Beinsen dispõe de garantia de <span className="font-bold text-foreground">3 anos</span>. Os modelos <span className="font-semibold text-foreground">Andra, Tobago, Miranda e Felina</span> dispõem de garantia de <span className="font-bold text-foreground">1 ano</span>. A ativação da cobertura alargada requer o registo do equipamento em <a href="https://soporte.beinsen.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline">soporte.beinsen.com</a> nos 90 dias posteriores à compra.
+              A maioria dos modelos Beinsen dispõe de garantia de <span className="font-bold text-foreground">3 anos</span>. Os modelos <span className="font-semibold text-foreground">Alaska, Andra, Tobago, Miranda e Felina</span> dispõem de garantia de <span className="font-bold text-foreground">1 ano</span>. A ativação da cobertura alargada requer o registo do equipamento em <a href="https://soporte.beinsen.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline">soporte.beinsen.com</a> nos 90 dias posteriores à compra.
             </p>
           </div>
           <p className="text-muted-foreground text-sm leading-relaxed">
@@ -365,7 +365,7 @@ export default function ConditionsPage() {
           <div className="bg-[#FF6600]/5 border-l-4 border-[#FF6600] p-6 rounded-r-2xl space-y-2">
             <h4 className="font-bold">Periodi per modello</h4>
             <p className="text-sm text-muted-foreground">
-              La maggior parte dei modelli Beinsen dispone di garanzia di <span className="font-bold text-foreground">3 anni</span>. I modelli <span className="font-semibold text-foreground">Andra, Tobago, Miranda e Felina</span> dispongono di garanzia di <span className="font-bold text-foreground">1 anno</span>. L'attivazione della copertura estesa richiede la registrazione del dispositivo su <a href="https://soporte.beinsen.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline">soporte.beinsen.com</a> entro 90 giorni dall'acquisto.
+              La maggior parte dei modelli Beinsen dispone di garanzia di <span className="font-bold text-foreground">3 anni</span>. I modelli <span className="font-semibold text-foreground">Alaska, Andra, Tobago, Miranda e Felina</span> dispongono di garanzia di <span className="font-bold text-foreground">1 anno</span>. L'attivazione della copertura estesa richiede la registrazione del dispositivo su <a href="https://soporte.beinsen.com" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline">soporte.beinsen.com</a> entro 90 giorni dall'acquisto.
             </p>
           </div>
           <p className="text-muted-foreground text-sm leading-relaxed">
