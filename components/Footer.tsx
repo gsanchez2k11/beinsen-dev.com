@@ -21,7 +21,10 @@ export function Footer() {
             rights: "Todos los derechos reservados.",
             privacy: "Privacidad",
             legal: "Aviso Legal",
-            conditions: "Condiciones Generales"
+            conditions: "Condiciones Generales",
+            cookies: "Cookies",
+            accessibility: "Accesibilidad",
+            subprocessors: "Subprocesadores"
         },
         en: {
             desc: "Manufacturer of heat press machines for garment personalization. Quality, robustness, and precision for demanding professionals.",
@@ -35,7 +38,10 @@ export function Footer() {
             rights: "All rights reserved.",
             privacy: "Privacy Policy",
             legal: "Legal Notice",
-            conditions: "General Conditions"
+            conditions: "General Conditions",
+            cookies: "Cookies",
+            accessibility: "Accessibility",
+            subprocessors: "Subprocessors"
         },
         pt: {
             desc: "Fabricante de prensas térmicas para personalização de vestuário. Qualidade, robustez e precisão para profissionais exigentes.",
@@ -49,7 +55,10 @@ export function Footer() {
             rights: "Todos os direitos reservados.",
             privacy: "Privacidade",
             legal: "Aviso Legal",
-            conditions: "Condições Gerais"
+            conditions: "Condições Gerais",
+            cookies: "Cookies",
+            accessibility: "Acessibilidade",
+            subprocessors: "Subprocessadores"
         },
         it: {
             desc: "Produttore di presse a caldo per la personalizzazione dei capi. Qualità, robustezza e precisione per professionisti esigenti.",
@@ -63,7 +72,10 @@ export function Footer() {
             rights: "Tutti i diritti riservati.",
             privacy: "Privacy",
             legal: "Note Legali",
-            conditions: "Condizioni Generali"
+            conditions: "Condizioni Generali",
+            cookies: "Cookie",
+            accessibility: "Accessibilità",
+            subprocessors: "Subprocessori"
         }
     }[locale] || { es: {} }.es;
 
@@ -92,12 +104,12 @@ export function Footer() {
                         <h3 className="font-semibold text-lg">{d.quickLinks}</h3>
                         <ul className="space-y-2">
                             <li>
-                                <Link href="/planchas?type=planchas" className="text-sm text-muted-foreground hover:text-[#FF6600] transition-colors">
+                                <Link href="/catalogo?type=planchas" className="text-sm text-muted-foreground hover:text-[#FF6600] transition-colors">
                                     {d.planchas}
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/planchas?type=accessories" className="text-sm text-muted-foreground hover:text-[#FF6600] transition-colors">
+                                <Link href="/catalogo?type=accessories" className="text-sm text-muted-foreground hover:text-[#FF6600] transition-colors">
                                     {d.accesorios}
                                 </Link>
                             </li>
@@ -145,11 +157,20 @@ export function Footer() {
                         <Link href="/privacidad" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
                             {d.privacy}
                         </Link>
+                        <Link href="/cookies" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
+                            {d.cookies}
+                        </Link>
                         <Link href="/condiciones" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
                             {d.conditions}
                         </Link>
                         <Link href="/legal" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
                             {d.legal}
+                        </Link>
+                        <Link href="/subprocesadores" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
+                            {d.subprocessors}
+                        </Link>
+                        <Link href="/accesibilidad" className="text-xs text-muted-foreground hover:text-[#FF6600] transition-colors">
+                            {d.accessibility}
                         </Link>
                     </div>
                 </div>

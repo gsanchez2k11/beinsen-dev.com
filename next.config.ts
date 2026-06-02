@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { productAliases } from "./lib/productAliases";
 
 // Cabeceras de seguridad aplicadas a todas las rutas. Si más adelante
 // se añade un proveedor externo (chat, mapa, etc.) habrá que ampliar
@@ -52,6 +53,29 @@ const nextConfig: NextConfig = {
                 source: "/(.*)",
                 headers: securityHeaders,
             },
+        ];
+    },
+    async redirects() {
+        return [
+            // Compatibilidad con la URL antigua del catálogo (rename /planchas → /catalogo).
+            // Cubre tanto /planchas como /planchas/<slug>. El querystring (?type=...) se conserva.
+            {
+                source: "/planchas",
+                destination: "/catalogo",
+                permanent: true,
+            },
+            {
+                source: "/planchas/:slug*",
+                destination: "/catalogo/:slug*",
+                permanent: true,
+            },
+            // URLs cortas de marketing: /esparta → /catalogo/esparta-prensa-termica-neumatica
+            // 308 permanente; la URL larga sigue siendo la canónica (bueno para SEO).
+            ...productAliases.map(({ alias, slug }) => ({
+                source: `/${alias}`,
+                destination: `/catalogo/${slug}`,
+                permanent: true,
+            })),
         ];
     },
 };

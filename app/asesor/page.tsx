@@ -443,7 +443,7 @@ export default function AsesorPage() {
                                             <CatalogProductCard item={r.product as any} locale={locale} index={index} />
                                             {r.reasons.length > 0 && (
                                                 <div className="px-4">
-                                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/60 block mb-2">{d.whyMatch}</span>
+                                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/80 block mb-2">{d.whyMatch}</span>
                                                     <ul className="space-y-1">
                                                         {r.reasons.map((reason, i) => (
                                                             <li key={i} className="text-xs text-muted-foreground flex items-start gap-2">

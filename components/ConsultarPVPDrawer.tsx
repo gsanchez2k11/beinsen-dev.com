@@ -63,6 +63,7 @@ export function ConsultarPVPDrawer({ isOpen, onClose, productName }: ConsultarPV
                                 </div>
                                 <button
                                     onClick={onClose}
+                                    aria-label="Cerrar"
                                     className="w-10 h-10 rounded-full bg-muted/50 hover:bg-muted flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
                                 >
                                     <X size={20} />

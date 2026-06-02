@@ -16,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 1,
         },
         {
-            url: `${BASE_URL}/planchas`,
+            url: `${BASE_URL}/catalogo`,
             lastModified: new Date('2025-05-01'),
             changeFrequency: 'weekly',
             priority: 0.9,
@@ -60,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Páginas legales se sirven con robots:noindex (ver layout) y se omiten del sitemap
     ]
 
-    // Product detail pages (planchas + accessories + consumables all use /planchas/[slug])
+    // Product detail pages (planchas + accessories + consumables all use /catalogo/[slug])
     const allProducts = [
         ...planchasData,
         ...allAccessoriesData,
@@ -68,7 +68,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ]
 
     const productRoutes: MetadataRoute.Sitemap = allProducts.map((product) => ({
-        url: `${BASE_URL}/planchas/${product.slug}`,
+        url: `${BASE_URL}/catalogo/${product.slug}`,
         lastModified: new Date('2025-05-01'),
         changeFrequency: 'weekly' as const,
         priority: 0.8,

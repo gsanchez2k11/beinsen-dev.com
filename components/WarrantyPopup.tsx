@@ -36,8 +36,11 @@ export function WarrantyPopup() {
             upTo: "HASTA",
             yearsBig: "3",
             yearsLabel: "AÑOS",
-            sub: "de garantía gratis",
-            desc: "Registra tu máquina en soporte.beinsen.com",
+            sub: "de garantía",
+            desc: "Registra tu máquina en soporte.beinsen.com en los 90 días posteriores a la compra.",
+            disclaimerPrefix: "Plazo según modelo (",
+            disclaimerLink: "ver condiciones",
+            disclaimerSuffix: "). Modelos Alaska, Andra, Tobago, Miranda y Felina: 1 año.",
             cta: "Activar ahora",
             dismiss: "Cerrar aviso",
             reopen: "Ver oferta de garantía",
@@ -47,8 +50,11 @@ export function WarrantyPopup() {
             upTo: "UP TO",
             yearsBig: "3",
             yearsLabel: "YEARS",
-            sub: "of free warranty",
-            desc: "Register your machine at soporte.beinsen.com",
+            sub: "warranty",
+            desc: "Register your machine at soporte.beinsen.com within 90 days of purchase.",
+            disclaimerPrefix: "Period varies by model (",
+            disclaimerLink: "see terms",
+            disclaimerSuffix: "). Alaska, Andra, Tobago, Miranda and Felina: 1 year.",
             cta: "Activate now",
             dismiss: "Close notice",
             reopen: "See warranty offer",
@@ -58,8 +64,11 @@ export function WarrantyPopup() {
             upTo: "ATÉ",
             yearsBig: "3",
             yearsLabel: "ANOS",
-            sub: "de garantia grátis",
-            desc: "Registe a sua máquina em soporte.beinsen.com",
+            sub: "de garantia",
+            desc: "Registe a sua máquina em soporte.beinsen.com nos 90 dias seguintes à compra.",
+            disclaimerPrefix: "Prazo conforme o modelo (",
+            disclaimerLink: "ver condições",
+            disclaimerSuffix: "). Modelos Alaska, Andra, Tobago, Miranda e Felina: 1 ano.",
             cta: "Ativar agora",
             dismiss: "Fechar aviso",
             reopen: "Ver oferta de garantia",
@@ -69,8 +78,11 @@ export function WarrantyPopup() {
             upTo: "FINO A",
             yearsBig: "3",
             yearsLabel: "ANNI",
-            sub: "di garanzia gratuita",
-            desc: "Registra la tua macchina su soporte.beinsen.com",
+            sub: "di garanzia",
+            desc: "Registra la tua macchina su soporte.beinsen.com entro 90 giorni dall'acquisto.",
+            disclaimerPrefix: "Durata in base al modello (",
+            disclaimerLink: "vedi condizioni",
+            disclaimerSuffix: "). Modelli Alaska, Andra, Tobago, Miranda e Felina: 1 anno.",
             cta: "Attiva ora",
             dismiss: "Chiudi avviso",
             reopen: "Vedi offerta di garanzia",
@@ -176,7 +188,13 @@ export function WarrantyPopup() {
 
                                 <div className="h-px bg-gradient-to-r from-transparent via-white/15 to-transparent my-4" />
 
-                                <p className="text-[12px] text-white/70 font-light leading-relaxed mb-5">{d.desc}</p>
+                                <p className="text-[12px] text-white/70 font-light leading-relaxed mb-2">{d.desc}</p>
+
+                                <p className="text-[10px] text-white/50 font-light leading-relaxed mb-5 italic">
+                                    {d.disclaimerPrefix}
+                                    <a href="/condiciones" className="text-[#FF9900] hover:text-white underline transition-colors">{d.disclaimerLink}</a>
+                                    {d.disclaimerSuffix}
+                                </p>
 
                                 <a
                                     href="https://soporte.beinsen.com/"

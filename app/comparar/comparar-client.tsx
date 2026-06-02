@@ -11,6 +11,7 @@ import { getLocalized } from "@/lib/i18n";
 import { SupportContactCTA } from "@/components/SupportContactCTA";
 import { enrichWithLocalImages } from "@/lib/productImages";
 import { useLanguage } from "@/context/LanguageContext";
+import { PRICES_VISIBLE } from "@/lib/pricing";
 
 const MAX_SLOTS = 3;
 
@@ -177,6 +178,7 @@ function CompareContent() {
     };
 
     const formatPrice = (p: any) => {
+        if (!PRICES_VISIBLE) return d.specPrice_fallback;
         const shown = p.pvp ?? p.price;
         if (shown === undefined || shown === "Consultar PVP") return d.specPrice_fallback;
         return typeof shown === "number" ? `${shown.toLocaleString(locale === "en" ? "en-GB" : "es-ES")} €` : shown;
@@ -291,7 +293,7 @@ function CompareContent() {
                                 {selectedProducts.map((p) => (
                                     <Link
                                         key={p.id}
-                                        href={`/planchas/${p.slug}`}
+                                        href={`/catalogo/${p.slug}`}
                                         className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#FF6600]/10 hover:bg-[#FF6600] text-[#FF6600] hover:text-white text-xs font-black uppercase tracking-widest transition-all"
                                     >
                                         {getLocalized(p.name, locale)} <ArrowRight size={12} />

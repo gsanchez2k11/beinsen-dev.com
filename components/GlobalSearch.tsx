@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { planchasData, allAccessoriesData, allConsumablesData, Locale } from "@/data/products";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
+import { PRICES_VISIBLE } from "@/lib/pricing";
 
 export function GlobalSearch() {
     const { locale } = useLanguage();
@@ -131,7 +132,7 @@ export function GlobalSearch() {
                     .map((p) => ({
                         id: p.id,
                         name: getLocalized(p.name, locale),
-                        href: `/planchas/${p.slug}`,
+                        href: `/catalogo/${p.slug}`,
                         icon: <MonitorPlay size={16} className="text-[#FF6600]" />,
                         price: (p as any).pvp ?? p.price
                     }))
@@ -146,7 +147,7 @@ export function GlobalSearch() {
                     .map((a) => ({
                         id: a.id,
                         name: getLocalized(a.name as any, locale),
-                        href: a.slug ? `/planchas/${a.slug}` : "/planchas?type=accessories", 
+                        href: a.slug ? `/catalogo/${a.slug}` : "/catalogo?type=accessories", 
                         icon: <Settings2 size={16} className="text-[#FF6600]" />,
                         price: (a as any).pvp ?? a.price
                     }))
@@ -158,7 +159,7 @@ export function GlobalSearch() {
             const consumableItems = matchedConsumables.map((c) => ({
                 id: c.id,
                 name: getLocalized(c.name as any, locale),
-                href: c.slug ? `/planchas/${c.slug}` : "/planchas?type=consumables",
+                href: c.slug ? `/catalogo/${c.slug}` : "/catalogo?type=consumables",
                 icon: <MonitorPlay size={16} className="text-[#FF6600]/80" />,
                 price: (c as any).pvp ?? c.price
             }));
@@ -269,7 +270,7 @@ export function GlobalSearch() {
                                                                         {item.name}
                                                                     </p>
                                                                     <p className="text-xs text-muted-foreground">
-                                                                        {item.price === 'Consultar PVP' ? d.checkPrice : `${item.price} €`}
+                                                                        {!PRICES_VISIBLE || item.price === 'Consultar PVP' ? d.checkPrice : `${item.price} €`}
                                                                     </p>
                                                                 </div>
                                                             </div>

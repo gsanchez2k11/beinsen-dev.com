@@ -110,7 +110,7 @@ Los campos opcionales pueden dejarse vacíos hasta que el PIM los rellene.
 
 ---
 
-## Filtros del catálogo (`/planchas`)
+## Filtros del catálogo (`/catalogo`)
 
 - **Tipo**: Todo / Máquinas / Accesorios / Consumibles
 - **Especialidad**: Textil, Tazas y Botellas, Gorras, Especializadas, Multifunción
@@ -207,7 +207,7 @@ Párrafos, listas, `código`, [enlaces](https://…), **negrita**, *cursiva*, ta
 ### Cross-linking bidireccional
 
 - En `/aprende/<slug>`: muestra los productos referenciados en `products[]`
-- En `/planchas/<slug>`: muestra artículos que citan ese slug en su `products[]` (hasta 3)
+- En `/catalogo/<slug>`: muestra artículos que citan ese slug en su `products[]` (hasta 3)
 
 ### Categorías disponibles
 
@@ -240,7 +240,7 @@ Ejecuta, dentro de `beinsen-dev-as/` (branch `as`):
 
 ```
 app/                           # App Router (páginas y layouts)
-├── icon.png                   # Favicon (logo Beinsen 512x512)
+├── favicon.ico                # Favicon (logo Beinsen)
 ├── aprende/                   # Centro de aprendizaje (MDX)
 │   ├── page.tsx               # Índice
 │   └── [slug]/page.tsx        # Artículo

@@ -49,7 +49,7 @@ function NavbarContent() {
         if (href === "/") return pathname === "/";
         return pathname === href || pathname.startsWith(`${href}/`);
     };
-    const isCatalogActive = pathname === "/planchas" || pathname.startsWith("/planchas/") || pathname === "/accesorios" || pathname.startsWith("/accesorios/");
+    const isCatalogActive = pathname === "/catalogo" || pathname.startsWith("/catalogo/") || pathname === "/accesorios" || pathname.startsWith("/accesorios/");
 
     const d = {
         es: {
@@ -59,9 +59,9 @@ function NavbarContent() {
             comparar: "Comparar",
             aprende: "Aprende",
             soporte: "Soporte Técnico",
-            machines: "Máquinas Transfer",
+            machines: "Prensas Transfer",
             machines_desc: "Soluciones industriales de alta producción.",
-            accs: "Accesorios Pro",
+            accs: "Accesorios",
             accs_desc: "Complementos para optimizar tu flujo.",
             cons: "Consumibles",
             cons_desc: "Vinilos, teflón y repuestos originales.",
@@ -76,7 +76,7 @@ function NavbarContent() {
             soporte: "Technical Support",
             machines: "Heat Presses",
             machines_desc: "High production industrial solutions.",
-            accs: "Pro Accessories",
+            accs: "Accessories",
             accs_desc: "Add-ons to optimize your workflow.",
             cons: "Consumables",
             cons_desc: "Vinyls, teflon and original parts.",
@@ -91,7 +91,7 @@ function NavbarContent() {
             soporte: "Suporte Técnico",
             machines: "Prensas Térmicas",
             machines_desc: "Soluções industriais de alta produção.",
-            accs: "Acessórios Pro",
+            accs: "Acessórios",
             accs_desc: "Complementos para otimizar o seu fluxo.",
             cons: "Consumíveis",
             cons_desc: "Vinis, teflon e peças originais.",
@@ -106,7 +106,7 @@ function NavbarContent() {
             soporte: "Supporto Tecnico",
             machines: "Presse a Caldo",
             machines_desc: "Soluzioni industriali ad alta produzione.",
-            accs: "Accessori Pro",
+            accs: "Accessori",
             accs_desc: "Complementi per ottimizzare il tuo flusso.",
             cons: "Consumabili",
             cons_desc: "Vinili, teflon e ricambi originali.",
@@ -126,9 +126,9 @@ function NavbarContent() {
     };
 
     const menuItems = [
-        { title: d.machines, desc: d.machines_desc, href: "/planchas?type=planchas", icon: Zap, color: "text-[#FF6600]" },
-        { title: d.accs, desc: d.accs_desc, href: "/planchas?type=accessories", icon: Settings, color: "text-blue-500" },
-        { title: d.cons, desc: d.cons_desc, href: "/planchas?type=consumables", icon: Package, color: "text-emerald-500" },
+        { title: d.machines, desc: d.machines_desc, href: "/catalogo?type=planchas", icon: Zap, color: "text-[#FF6600]" },
+        { title: d.accs, desc: d.accs_desc, href: "/catalogo?type=accessories", icon: Settings, color: "text-blue-500" },
+        { title: d.cons, desc: d.cons_desc, href: "/catalogo?type=consumables", icon: Package, color: "text-emerald-500" },
     ];
 
     return (
@@ -208,7 +208,7 @@ function NavbarContent() {
                                             
                                             <div className="mt-6 pt-6 border-t border-border/40 text-center">
                                                 <Link 
-                                                    href="/planchas"
+                                                    href="/catalogo"
                                                     onClick={() => setIsMegaMenuOpen(false)}
                                                     className="text-[10px] font-black uppercase tracking-[0.3em] text-[#FF6600] hover:scale-105 transition-transform inline-block"
                                                 >
@@ -270,6 +270,8 @@ function NavbarContent() {
                         <LanguageSelector />
                         <button
                             onClick={() => setIsOpen(!isOpen)}
+                            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+                            aria-expanded={isOpen}
                             className={`p-3 rounded-xl transition-all ${isOpen ? 'bg-[#FF6600] text-white' : 'text-muted-foreground hover:text-foreground'}`}
                         >
                             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -297,7 +299,7 @@ function NavbarContent() {
                             </Link>
 
                             <div className="bg-muted/30 rounded-[2rem] p-4 flex flex-col gap-2">
-                                <span className="px-6 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/60">{d.catalogo}</span>
+                                <span className="px-6 py-2 text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground/80">{d.catalogo}</span>
                                 {menuItems.map((item, i) => (
                                     <Link
                                         key={i}

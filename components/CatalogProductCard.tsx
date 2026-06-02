@@ -7,6 +7,7 @@ import Link from "next/link";
 import { ArrowUpRight, Tag, Maximize2, Target, Box, Sparkles } from "lucide-react";
 import { getLocalized } from "@/lib/i18n";
 import { enrichWithLocalImages } from "@/lib/productImages";
+import { PRICES_VISIBLE } from "@/lib/pricing";
 import type { Locale } from "@/data/products";
 
 interface CatalogProductCardProps {
@@ -34,7 +35,7 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
 
     const isIndustrial = item.openingType === "Automática" || item.openingType === "Neumática";
     const isNew = !!item.isNew;
-    const href = item.slug ? `/planchas/${item.slug}` : "#";
+    const href = item.slug ? `/catalogo/${item.slug}` : "#";
 
     return (
         <motion.div
@@ -47,6 +48,7 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
         >
             <Link
                 href={href}
+                aria-label={`${dictionary.details}: ${name}`}
                 className={`flex flex-col h-full bg-card rounded-[2.5rem] overflow-hidden border shadow-sm transition-all duration-500 relative ring-1 ${
                     isNew
                         ? "border-[#FF6600] ring-[#FF6600]/30 shadow-xl shadow-[#FF6600]/20 hover:shadow-2xl hover:shadow-[#FF6600]/40"
@@ -99,6 +101,7 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
                     <div className="absolute bottom-6 right-6 bg-background/90 backdrop-blur-xl px-4 py-2 rounded-2xl text-sm font-black flex items-center gap-2 shadow-xl border border-border/20 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                         <Tag size={16} className="text-[#FF6600]" />
                         {(() => {
+                            if (!PRICES_VISIBLE) return dictionary.consultPvP;
                             const shown = item.pvp ?? item.price;
                             if (shown === undefined || shown === "Consultar PVP") return dictionary.consultPvP;
                             return typeof shown === 'number' ? `${shown.toLocaleString(locale === 'en' ? 'en-GB' : 'es-ES')} €` : shown;
