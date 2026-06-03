@@ -349,7 +349,7 @@
       "url": "/manuales/esparta-prensa-termica-neumatica/Libro_Mantenimiento_Esparta_prensa_térmica_neumática_Beinsen.pdf"
     }
   ],
-  "felina-prensa-swing-away-electrica": [
+  "estambul-prensa-swing-away-electrica": [
     {
       "label": {
         "es": "Manual de Usuario",
@@ -358,10 +358,10 @@
         "it": "Manuale Utente"
       },
       "languages": {
-        "en": "/manuales/felina-prensa-swing-away-electrica/manual-en.pdf",
-        "es": "/manuales/felina-prensa-swing-away-electrica/manual-es.pdf",
-        "it": "/manuales/felina-prensa-swing-away-electrica/manual-it.pdf",
-        "pt": "/manuales/felina-prensa-swing-away-electrica/manual-pt.pdf"
+        "en": "/manuales/estambul-prensa-swing-away-electrica/manual-en.pdf",
+        "es": "/manuales/estambul-prensa-swing-away-electrica/manual-es.pdf",
+        "it": "/manuales/estambul-prensa-swing-away-electrica/manual-it.pdf",
+        "pt": "/manuales/estambul-prensa-swing-away-electrica/manual-pt.pdf"
       }
     },
     {
@@ -371,7 +371,7 @@
         "pt": "Livro de Manutenção",
         "it": "Libretto di Manutenzione"
       },
-      "url": "/manuales/felina-prensa-swing-away-electrica/Libro_Mantenimiento_Felina_Prensa_Swing-Away_Eléctrica_Beinsen.pdf"
+      "url": "/manuales/estambul-prensa-swing-away-electrica/Libro_Mantenimiento_Estambul_Prensa_Swing-Away_Eléctrica_Beinsen.pdf"
     }
   ],
   "gante-plancha-manual-gorras": [

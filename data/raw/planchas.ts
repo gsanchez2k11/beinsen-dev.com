@@ -15278,8 +15278,8 @@ export const rawPlanchasData: Plancha[] = [
     }
   },
   {
-    "id": "estambul-prensa-termica-para-espinilleras",
-    "slug": "estambul-prensa-termica-para-espinilleras",
+    "id": "felina-prensa-termica-para-espinilleras",
+    "slug": "felina-prensa-termica-para-espinilleras",
     "isNew": true,
     "storyHeadline": {
       "es": "Personalización deportiva especializada",
@@ -15296,26 +15296,26 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Specifica per parastinchi"
         },
         "description": {
-          "es": "Estambul resuelve un formato que ninguna plancha estándar cubre. Su plato curvo se adapta a la forma de la espinillera para que el transfer quede perfectamente fijado sin arrugas ni zonas frías.",
-          "en": "Estambul handles a format no standard press covers. Its curved platen fits the shin guard's shape so the transfer sticks perfectly—no wrinkles, no cold spots.",
-          "pt": "A Estambul resolve um formato que nenhuma prensa padrão cobre. O seu prato curvo adapta-se à forma da caneleira para que o transfer fique perfeitamente fixado sem rugas nem zonas frias.",
-          "it": "Estambul risolve un formato che nessuna pressa standard copre. Il suo piano curvo si adatta alla forma del parastinchi affinché il transfer rimanga perfettamente fissato senza pieghe né zone fredde."
+          "es": "Felina resuelve un formato que ninguna plancha estándar cubre. Su plato curvo se adapta a la forma de la espinillera para que el transfer quede perfectamente fijado sin arrugas ni zonas frías.",
+          "en": "Felina handles a format no standard press covers. Its curved platen fits the shin guard's shape so the transfer sticks perfectly—no wrinkles, no cold spots.",
+          "pt": "A Felina resolve um formato que nenhuma prensa padrão cobre. O seu prato curvo adapta-se à forma da caneleira para que o transfer fique perfeitamente fixado sem rugas nem zonas frias.",
+          "it": "Felina risolve un formato che nessuna pressa standard copre. Il suo piano curvo si adatta alla forma del parastinchi affinché il transfer rimanga perfettamente fissato senza pieghe né zone fredde."
         }
       }
     ],
     "name": {
-      "es": "Estambul prensa térmica para espinilleras",
-      "en": "Estambul shin guard heat press",
-      "pt": "Estambul prensa para caneleiras",
-      "it": "Estambul pressa per parastinchi"
+      "es": "Felina prensa térmica para espinilleras",
+      "en": "Felina shin guard heat press",
+      "pt": "Felina prensa para caneleiras",
+      "it": "Felina pressa per parastinchi"
     },
     "description": {
-      "es": "Con tu nueva prensa térmica para espinilleras Beinsen Estambul podrás sublimar sobre este material tan específico y especial. Tu nueva compañera incluye 3 platos base con sistema de intercambio rápido para que sea cual sea el tamaño de la espinillera puedas personalizarla.",
-      "en": "With the Beinsen Estambul shin guard heat press you can sublimate on this specific and special material. It includes 3 base plates with a quick-change system so you can customize any shin guard regardless of its size.",
-      "pt": "Com a tua nova prensa térmica para caneleiras Beinsen Estambul poderás sublimar neste material tão específico e especial. Inclui 3 pratos base com sistema de troca rápida para personalizar caneleiras de qualquer tamanho.",
-      "it": "Con la tua nuova pressa termica per parastinchi Beinsen Estambul potrai sublimare su questo materiale così specifico e speciale. Include 3 piastre base con sistema di cambio rapido per personalizzare qualsiasi parastinchi."
+      "es": "Con tu nueva prensa térmica para espinilleras Beinsen Felina podrás sublimar sobre este material tan específico y especial. Tu nueva compañera incluye 3 platos base con sistema de intercambio rápido para que sea cual sea el tamaño de la espinillera puedas personalizarla.",
+      "en": "With the Beinsen Felina shin guard heat press you can sublimate on this specific and special material. It includes 3 base plates with a quick-change system so you can customize any shin guard regardless of its size.",
+      "pt": "Com a tua nova prensa térmica para caneleiras Beinsen Felina poderás sublimar neste material tão específico e especial. Inclui 3 pratos base com sistema de troca rápida para personalizar caneleiras de qualquer tamanho.",
+      "it": "Con la tua nuova pressa termica per parastinchi Beinsen Felina potrai sublimare su questo materiale così specifico e speciale. Include 3 piastre base con sistema di cambio rapido per personalizzare qualsiasi parastinchi."
     },
-    "image": "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoPrincipal.png",
+    "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoPrincipal.png",
     "price": "Consultar PVP",
     "size": {
       "es": "Compacta",
@@ -15540,7 +15540,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Con i suoi 3 piani di diverse dimensioni (205×171×218 mm / 114×132×179 mm / 97×115×115 mm) puoi personalizzare qualsiasi parastinchi sul mercato, indipendentemente da dimensione o forma."
         },
         "icon": "Target",
-        "image": "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoB1.png",
+        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB1.png",
         "objectFit": "contain"
       },
       {
@@ -15551,13 +15551,13 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Compatta: portala ovunque"
         },
         "description": {
-          "es": "Su diseño compacto hace de Estambul la compañera ideal para talleres con poco espacio o para llevarla a eventos y competiciones deportivas donde personalizas en el momento.",
-          "en": "Its compact design makes Estambul the ideal companion for small workshops or for taking to sports events and competitions where you personalize on the spot.",
-          "pt": "O seu design compacto faz da Estambul a companheira ideal para oficinas com pouco espaço ou para levar a eventos e competições desportivas onde personaliza no momento.",
-          "it": "Il suo design compatto rende Estambul la compagna ideale per laboratori con poco spazio o da portare a eventi e competizioni sportive dove personalizzi sul momento."
+          "es": "Su diseño compacto hace de Felina la compañera ideal para talleres con poco espacio o para llevarla a eventos y competiciones deportivas donde personalizas en el momento.",
+          "en": "Its compact design makes Felina the ideal companion for small workshops or for taking to sports events and competitions where you personalize on the spot.",
+          "pt": "O seu design compacto faz da Felina a companheira ideal para oficinas com pouco espaço ou para levar a eventos e competições desportivas onde personaliza no momento.",
+          "it": "Il suo design compatto rende Felina la compagna ideale per laboratori con poco spazio o da portare a eventi e competizioni sportive dove personalizzi sul momento."
         },
         "icon": "Move",
-        "image": "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoB2.png",
+        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB2.png",
         "objectFit": "contain"
       },
       {
@@ -15574,7 +15574,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Costruita per sopportare giornate continue di produzione. La sua struttura solida garantisce risultati affidabili sessione dopo sessione."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoB3.png",
+        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB3.png",
         "objectFit": "contain"
       },
       {
@@ -15585,13 +15585,13 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Semplice fin dal primo utilizzo"
         },
         "description": {
-          "es": "Utilizar Estambul te resultará tan fácil como el resto de la gama Beinsen. La placa calefactora y los platos permiten una colocación cómoda y una transferencia del diseño profesional desde el minuto uno.",
-          "en": "Using Estambul is as easy as the rest of the Beinsen range. The heating plate and platens allow comfortable placement and professional design transfer from minute one.",
-          "pt": "Utilizar a Estambul será tão fácil como o resto da gama Beinsen. A placa aquecedora e os pratos permitem uma colocação cómoda e uma transferência do design profissional desde o minuto um.",
-          "it": "Utilizzare Estambul ti risulterà tanto facile quanto il resto della gamma Beinsen. La piastra riscaldante e i piani consentono un posizionamento comodo e un trasferimento del design professionale fin dal primo minuto."
+          "es": "Utilizar Felina te resultará tan fácil como el resto de la gama Beinsen. La placa calefactora y los platos permiten una colocación cómoda y una transferencia del diseño profesional desde el minuto uno.",
+          "en": "Using Felina is as easy as the rest of the Beinsen range. The heating plate and platens allow comfortable placement and professional design transfer from minute one.",
+          "pt": "Utilizar a Felina será tão fácil como o resto da gama Beinsen. A placa aquecedora e os pratos permitem uma colocação cómoda e uma transferência do design profissional desde o minuto um.",
+          "it": "Utilizzare Felina ti risulterà tanto facile quanto il resto della gamma Beinsen. La piastra riscaldante e i piani consentono un posizionamento comodo e un trasferimento del design professionale fin dal primo minuto."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/estambul-prensa-termica-para-espinilleras/fotoB4.png",
+        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB4.png",
         "objectFit": "contain"
       },
       {
@@ -15759,8 +15759,8 @@ export const rawPlanchasData: Plancha[] = [
     }
   },
   {
-    "id": "felina-prensa-swing-away-electrica",
-    "slug": "felina-prensa-swing-away-electrica",
+    "id": "estambul-prensa-swing-away-electrica",
+    "slug": "estambul-prensa-swing-away-electrica",
     "isNew": true,
     "storyHeadline": {
       "es": "Swing-away eléctrica, acceso total",
@@ -15777,26 +15777,26 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Piano girevole senza compressore"
         },
         "description": {
-          "es": "Felina aparta el plato superior hacia un lado, dejándote acceso total a la zona de trabajo sin riesgo de quemaduras. Y todo eléctrico: sin compresor, sin ruido, sin mantenimiento neumático.",
-          "en": "Felina swings the upper platen aside, giving you full access to the work area with no burn risk. All-electric: no compressor, no noise, no pneumatic maintenance.",
-          "pt": "A Felina afasta o prato superior para o lado, dando-lhe acesso total à zona de trabalho sem risco de queimaduras. E tudo elétrico: sem compressor, sem ruído, sem manutenção pneumática.",
-          "it": "Felina sposta il piano superiore di lato, dandoti accesso totale alla zona di lavoro senza rischio di ustioni. E tutto elettrico: senza compressore, senza rumore, senza manutenzione pneumatica."
+          "es": "Estambul aparta el plato superior hacia un lado, dejándote acceso total a la zona de trabajo sin riesgo de quemaduras. Y todo eléctrico: sin compresor, sin ruido, sin mantenimiento neumático.",
+          "en": "Estambul swings the upper platen aside, giving you full access to the work area with no burn risk. All-electric: no compressor, no noise, no pneumatic maintenance.",
+          "pt": "A Estambul afasta o prato superior para o lado, dando-lhe acesso total à zona de trabalho sem risco de queimaduras. E tudo elétrico: sem compressor, sem ruído, sem manutenção pneumática.",
+          "it": "Estambul sposta il piano superiore di lato, dandoti accesso totale alla zona di lavoro senza rischio di ustioni. E tutto elettrico: senza compressore, senza rumore, senza manutenzione pneumatica."
         }
       }
     ],
     "name": {
-      "es": "Felina Prensa Swing-Away Eléctrica",
-      "en": "Felina Electric Swing-Away Heat Press",
-      "pt": "Felina Prensa Swing-Away Elétrica",
-      "it": "Felina Pressa Swing-Away Elettrica"
+      "es": "Estambul Prensa Swing-Away Eléctrica",
+      "en": "Estambul Electric Swing-Away Heat Press",
+      "pt": "Estambul Prensa Swing-Away Elétrica",
+      "it": "Estambul Pressa Swing-Away Elettrica"
     },
     "description": {
-      "es": "Felina es una prensa de calor eléctrica de apertura giratoria (swing-away) de nivel profesional con pantalla táctil. Su sistema de apertura giratoria a 180° maximiza el espacio de trabajo y facilita la carga y descarga de materiales, mientras que sus avanzados sistemas de seguridad —protección anti-pellizco, operación de doble mano y programación en dos etapas— la convierten en una máquina tan potente como segura.",
-      "en": "Felina is a professional electric swing-away heat press with a touch screen. Its 180° swing-away opening maximizes workspace and simplifies material loading and unloading, while advanced safety systems — pinch protection, two-hand operation, and two-stage programming — make it as powerful as it is safe.",
-      "pt": "Felina é uma prensa de calor elétrica de abertura giratória (swing-away) de nível profissional com ecrã tátil. A sua abertura giratória a 180° maximiza o espaço de trabalho e facilita o carregamento e descarregamento de materiais, enquanto os sistemas avançados de segurança a tornam tão potente quanto segura.",
-      "it": "Felina è una pressa termica elettrica swing-away di livello professionale con touch screen. L'apertura girevole a 180° massimizza lo spazio di lavoro e semplifica il carico e scarico dei materiali, mentre i sistemi avanzati di sicurezza la rendono potente quanto sicura."
+      "es": "Estambul es una prensa de calor eléctrica de apertura giratoria (swing-away) de nivel profesional con pantalla táctil. Su sistema de apertura giratoria a 180° maximiza el espacio de trabajo y facilita la carga y descarga de materiales, mientras que sus avanzados sistemas de seguridad —protección anti-pellizco, operación de doble mano y programación en dos etapas— la convierten en una máquina tan potente como segura.",
+      "en": "Estambul is a professional electric swing-away heat press with a touch screen. Its 180° swing-away opening maximizes workspace and simplifies material loading and unloading, while advanced safety systems — pinch protection, two-hand operation, and two-stage programming — make it as powerful as it is safe.",
+      "pt": "Estambul é uma prensa de calor elétrica de abertura giratória (swing-away) de nível profissional com ecrã tátil. A sua abertura giratória a 180° maximiza o espaço de trabalho e facilita o carregamento e descarregamento de materiais, enquanto os sistemas avançados de segurança a tornam tão potente quanto segura.",
+      "it": "Estambul è una pressa termica elettrica swing-away di livello professionale con touch screen. L'apertura girevole a 180° massimizza lo spazio di lavoro e semplifica il carico e scarico dei materiali, mentre i sistemi avanzati di sicurezza la rendono potente quanto sicura."
     },
-    "image": "/products/maquinas/felina-prensa-swing-away-electrica/fotoPrincipal.png",
+    "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoPrincipal.png",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -15871,7 +15871,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Modelo de prensa",
           "it": "Modello di pressa"
         },
-        "value": "Felina"
+        "value": "Estambul"
       },
       {
         "label": {
@@ -16053,7 +16053,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La platina superiore girevole a 180° massimizza lo spazio di lavoro, consentendo di caricare e scaricare materiali con totale facilità ed efficienza, riducendo l'affaticamento nelle lunghe sessioni."
         },
         "icon": "RotateCcw",
-        "image": "/products/maquinas/felina-prensa-swing-away-electrica/fotoB1.png"
+        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB1.png"
       },
       {
         "title": {
@@ -16069,7 +16069,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "I sensori intelligenti rilevano ostruzioni e immediatamente fermano e sollevano la piastra di riscaldamento, proteggendo l'operatore e il materiale in ogni momento."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/felina-prensa-swing-away-electrica/fotoB2.png"
+        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB2.png"
       },
       {
         "title": {
@@ -16085,7 +16085,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il design ergonomico richiede pressioni simultanee su entrambi i comandi per attivare la pressa, eliminando la possibilità di attivazione accidentale e garantendo un ambiente di lavoro sicuro."
         },
         "icon": "Hand",
-        "image": "/products/maquinas/felina-prensa-swing-away-electrica/fotoB3.png"
+        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB3.png"
       },
       {
         "title": {
@@ -16101,7 +16101,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include cicli di preriscaldamento e trasferimento preprogrammati per eliminare l'umidità e fissare i design alla perfezione. Puoi anche saltare il preriscaldamento per velocizzare il processo con materiali asciutti."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/felina-prensa-swing-away-electrica/fotoB4.png"
+        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB4.png"
       },
       {
         "title": {

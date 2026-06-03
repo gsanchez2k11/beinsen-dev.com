@@ -14,8 +14,8 @@
     "width": 1080,
     "height": 720
   },
-  "felina-prensa-swing-away-electrica": {
-    "src": "/detalles-maquinas/felina-prensa-swing-away-electrica.png",
+  "estambul-prensa-swing-away-electrica": {
+    "src": "/detalles-maquinas/estambul-prensa-swing-away-electrica.png",
     "width": 1137,
     "height": 720
   },
@@ -54,8 +54,8 @@
     "width": 480,
     "height": 720
   },
-  "estambul-prensa-termica-para-espinilleras": {
-    "src": "/detalles-maquinas/estambul-prensa-termica-para-espinilleras.png",
+  "felina-prensa-termica-para-espinilleras": {
+    "src": "/detalles-maquinas/felina-prensa-termica-para-espinilleras.png",
     "width": 720,
     "height": 720
   },
