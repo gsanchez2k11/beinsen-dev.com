@@ -331,15 +331,15 @@
     },
     {
       "type": "plancha",
-      "slug": "estambul-prensa-termica-para-espinilleras",
-      "beinsenName": "Estambul prensa térmica para espinilleras",
+      "slug": "felina-prensa-termica-para-espinilleras",
+      "beinsenName": "Felina prensa térmica para espinilleras",
       "matches": [],
       "best": null
     },
     {
       "type": "plancha",
-      "slug": "felina-prensa-swing-away-electrica",
-      "beinsenName": "Felina Prensa Swing-Away Eléctrica",
+      "slug": "estambul-prensa-swing-away-electrica",
+      "beinsenName": "Estambul Prensa Swing-Away Eléctrica",
       "matches": [],
       "best": null
     }
