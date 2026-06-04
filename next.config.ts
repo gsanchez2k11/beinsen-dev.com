@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { productAliases } from "./lib/productAliases";
+import { legacyRedirects } from "./lib/legacyRedirects";
 
 // Cabeceras de seguridad aplicadas a todas las rutas. Si más adelante
 // se añade un proveedor externo (chat, mapa, etc.) habrá que ampliar
@@ -75,6 +76,13 @@ const nextConfig: NextConfig = {
             ...productAliases.map(({ alias, slug }) => ({
                 source: `/${alias}`,
                 destination: `/catalogo/${slug}`,
+                permanent: true,
+            })),
+            // URLs heredadas del antiguo Wordpress: redirigen directo al slug canónico
+            // sin pasar por el alias corto (un solo salto, mejor para SEO).
+            ...legacyRedirects.map(({ from, to }) => ({
+                source: `/${from}`,
+                destination: to,
                 permanent: true,
             })),
         ];
