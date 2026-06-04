@@ -70,6 +70,18 @@ const nextConfig: NextConfig = {
                 destination: "/catalogo/:slug*",
                 permanent: true,
             },
+            // Atajo de marketing al portal de soporte (vive en subdominio).
+            // /soporte → https://soporte.beinsen.com/   /soporte/garantia → https://soporte.beinsen.com/garantia
+            {
+                source: "/soporte",
+                destination: "https://soporte.beinsen.com/",
+                permanent: true,
+            },
+            {
+                source: "/soporte/:path*",
+                destination: "https://soporte.beinsen.com/:path*",
+                permanent: true,
+            },
             // URLs cortas de marketing: /esparta → /catalogo/esparta-prensa-termica-neumatica
             // 308 permanente; la URL larga sigue siendo la canónica (bueno para SEO).
             ...productAliases.map(({ alias, slug }) => ({
