@@ -264,6 +264,11 @@ export function ProductDetailView({
             </div>
 
             <div className="w-full">
+                {/* QuickFacts: cards con datos clave (apertura, tamaño, categoría, garantía).
+                    Se renderizan ANTES del hero para que se vean junto a la imagen principal
+                    al entrar a la ficha. Solo para planchas. */}
+                {kind === "planchas" && <ProductQuickFacts plancha={plancha} />}
+
                 {/* 1. Cinematic Full-Screen Hero */}
                 <div className="relative w-full min-h-[95vh] flex flex-col items-center justify-start overflow-hidden bg-gradient-to-b from-background via-background to-muted/20 pb-20 pt-10">
                     {/* Halo principal: glow naranja pulsante centrado tras la imagen */}
@@ -357,9 +362,6 @@ export function ProductDetailView({
 
                 {/* Credenciales: banda premium oscura con 4 garantias comerciales */}
                 <ProductCredentialBar />
-
-                {/* QuickFacts: cards con datos clave (apertura, tamaño, categoría, garantía) — solo planchas */}
-                {kind === "planchas" && <ProductQuickFacts plancha={plancha} />}
 
                 {/* Image Gallery (for accessories/consumables without benefits section) */}
                 {plancha.gallery && plancha.gallery.length > 1 && (!plancha.benefits || plancha.benefits.length === 0) && (
