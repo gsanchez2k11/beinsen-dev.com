@@ -1,33 +1,29 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, MapPin, Headphones, CreditCard } from "lucide-react";
+import { MapPin, Headphones, Wrench } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const dictionary = {
     es: {
-        warranty: { title: "Hasta 3 años", sub: "de garantía oficial" },
         stock: { title: "Stock en España", sub: "envío en 24-72 h" },
-        support: { title: "Soporte técnico", sub: "español incluido" },
-        financing: { title: "Financiación", sub: "hasta 12 meses sin interés" },
+        support: { title: "Soporte técnico", sub: "en español incluido" },
+        advice: { title: "Asesoramiento", sub: "gratuito antes y después" },
     },
     en: {
-        warranty: { title: "Up to 3 years", sub: "official warranty" },
         stock: { title: "Stocked in Spain", sub: "ships in 24-72 h" },
         support: { title: "Technical support", sub: "Spanish included" },
-        financing: { title: "Financing available", sub: "up to 12 months interest-free" },
+        advice: { title: "Free guidance", sub: "before and after purchase" },
     },
     pt: {
-        warranty: { title: "Até 3 anos", sub: "de garantia oficial" },
         stock: { title: "Stock em Espanha", sub: "envio em 24-72 h" },
         support: { title: "Apoio técnico", sub: "em espanhol incluído" },
-        financing: { title: "Financiamento", sub: "até 12 meses sem juros" },
+        advice: { title: "Aconselhamento", sub: "gratuito antes e depois" },
     },
     it: {
-        warranty: { title: "Fino a 3 anni", sub: "di garanzia ufficiale" },
         stock: { title: "Disponibile in Spagna", sub: "spedizione in 24-72 h" },
         support: { title: "Supporto tecnico", sub: "in spagnolo incluso" },
-        financing: { title: "Finanziamento", sub: "fino a 12 mesi senza interessi" },
+        advice: { title: "Consulenza", sub: "gratuita prima e dopo" },
     },
 };
 
@@ -36,10 +32,9 @@ export function ProductCredentialBar() {
     const d = dictionary[locale] || dictionary.es;
 
     const items = [
-        { Icon: ShieldCheck, ...d.warranty },
         { Icon: MapPin, ...d.stock },
         { Icon: Headphones, ...d.support },
-        { Icon: CreditCard, ...d.financing },
+        { Icon: Wrench, ...d.advice },
     ];
 
     return (
@@ -49,7 +44,7 @@ export function ProductCredentialBar() {
                 <div className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full bg-[#FF6600]/10 blur-[100px] pointer-events-none" />
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF9900] to-transparent" />
 
-                <div className="relative grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/5">
+                <div className="relative grid grid-cols-1 sm:grid-cols-3 gap-px bg-white/5">
                     {items.map((item, i) => (
                         <motion.div
                             key={i}

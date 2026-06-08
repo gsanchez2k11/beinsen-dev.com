@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, useScroll, AnimatePresence } from "framer-motion";
-import { Euro, ChevronRight } from "lucide-react";
+import { Euro, ChevronRight, ArrowLeft } from "lucide-react";
 import { ContactSpecialistButton } from "./ContactSpecialistButton";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
@@ -25,12 +25,12 @@ export function StickyProductNav({ productName, price, kindLabel, kindHref }: St
     const { scrollY } = useScroll();
 
     const d = ({
-        es: { inicio: "Inicio", checkPrice: "Consultar PVP" },
-        en: { inicio: "Home", checkPrice: "Check Price" },
-        pt: { inicio: "Início", checkPrice: "Consultar PVP" },
-        it: { inicio: "Inizio", checkPrice: "Consultare PVP" },
-    } as Record<string, { inicio: string; checkPrice: string }>)[locale]
-        || { inicio: "Inicio", checkPrice: "Consultar PVP" };
+        es: { inicio: "Inicio", checkPrice: "Consultar PVP", back: "Volver al catálogo" },
+        en: { inicio: "Home", checkPrice: "Check Price", back: "Back to catalog" },
+        pt: { inicio: "Início", checkPrice: "Consultar PVP", back: "Voltar ao catálogo" },
+        it: { inicio: "Inizio", checkPrice: "Consultare PVP", back: "Torna al catalogo" },
+    } as Record<string, { inicio: string; checkPrice: string; back: string }>)[locale]
+        || { inicio: "Inicio", checkPrice: "Consultar PVP", back: "Volver al catálogo" };
 
     // Aparece en cuanto el breadcrumb natural sale de viewport (~200 px),
     // para que el usuario siempre tenga contexto de navegación.
@@ -53,6 +53,14 @@ export function StickyProductNav({ productName, price, kindLabel, kindHref }: St
                     className="fixed top-0 left-0 right-0 z-[100] bg-background/80 backdrop-blur-xl border-b border-border shadow-sm py-4 px-4 sm:px-6 lg:px-8"
                 >
                     <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+                        {/* Volver al catalogo */}
+                        <Link
+                            href="/catalogo"
+                            className="hidden md:inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-[#FF6600] transition-colors shrink-0 mr-2"
+                        >
+                            <ArrowLeft size={15} /> {d.back}
+                        </Link>
+
                         {/* Breadcrumb (siempre visible) */}
                         <nav
                             aria-label="Breadcrumb"

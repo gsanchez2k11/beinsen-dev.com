@@ -253,7 +253,7 @@ export function ProductDetailView({
             <ScrollToTopButton />
 
             {/* Dynamic Breadcrumbs */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
                 <nav className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
                     <Link href="/" className="hover:text-[#FF6600] transition-colors">{d.inicio}</Link>
                     <ChevronRight size={14} className="text-border" />
@@ -261,16 +261,6 @@ export function ProductDetailView({
                     <ChevronRight size={14} className="text-border" />
                     <span className="text-foreground">{name}</span>
                 </nav>
-            </div>
-
-            {/* Volver al catalogo: justo bajo breadcrumb */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-                <Link
-                    href="/catalogo"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-[#FF6600] transition-colors"
-                >
-                    <ArrowLeft size={16} /> {d.back}
-                </Link>
             </div>
 
             <div className="w-full">
@@ -311,24 +301,49 @@ export function ProductDetailView({
                     </div>
 
                     <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center mt-20">
-                        <ScrollReveal delay={0.15}>
-                            {/* Eyebrow: categoria en mayusculas con linea decorativa naranja */}
-                            <div className="inline-flex items-center gap-3 mb-6">
-                                <span className="w-10 h-0.5 bg-[#FF6600] rounded-full" />
-                                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#FF6600]">
+                        <ScrollReveal delay={0.1}>
+                            {/* Eyebrow: badge premium con icono + categoria */}
+                            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#FF6600]/10 border border-[#FF6600]/30 backdrop-blur-sm mb-8">
+                                {(plancha as any).isNew && (
+                                    <>
+                                        <span className="text-[10px] font-black uppercase tracking-widest text-[#FF6600]">
+                                            {locale === 'en' ? 'New' : locale === 'pt' ? 'Novidade' : locale === 'it' ? 'Novità' : 'Novedad'}
+                                        </span>
+                                        <span className="w-1 h-1 rounded-full bg-[#FF6600]/50" />
+                                    </>
+                                )}
+                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#FF6600]">
                                     {category}
                                 </span>
-                                <span className="w-10 h-0.5 bg-[#FF6600] rounded-full" />
                             </div>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.2}>
-                            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground tracking-tighter leading-[0.9] mb-6 max-w-6xl mx-auto drop-shadow-sm">
-                                {name}
+                            {/* Titulo con primera palabra (modelo) en gradiente naranja */}
+                            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] mb-6 max-w-6xl mx-auto drop-shadow-sm">
+                                {(() => {
+                                    const parts = (name || "").split(" ");
+                                    const first = parts[0];
+                                    const rest = parts.slice(1).join(" ");
+                                    return (
+                                        <>
+                                            <span className="bg-gradient-to-br from-[#FF6600] via-[#FF8533] to-[#FF9900] bg-clip-text text-transparent">
+                                                {first}
+                                            </span>
+                                            {rest && (
+                                                <span className="text-foreground"> {rest}</span>
+                                            )}
+                                        </>
+                                    );
+                                })()}
                             </h1>
                             {/* Acento decorativo bajo el titulo */}
-                            <div className="flex justify-center mb-8">
-                                <div className="h-1.5 w-24 rounded-full bg-gradient-to-r from-[#FF6600] to-[#FF9900] shadow-lg shadow-[#FF6600]/30" />
+                            <div className="flex items-center justify-center gap-3 mb-10">
+                                <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#FF6600]" />
+                                <div className="w-2 h-2 rounded-full bg-[#FF6600] shadow-lg shadow-[#FF6600]/50" />
+                                <div className="h-1 w-24 rounded-full bg-gradient-to-r from-[#FF6600] to-[#FF9900] shadow-lg shadow-[#FF6600]/30" />
+                                <div className="w-2 h-2 rounded-full bg-[#FF9900] shadow-lg shadow-[#FF9900]/50" />
+                                <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#FF9900]" />
                             </div>
                             {kind !== "planchas" && (plancha as any).reference && (
                                 <div className="mb-6">
@@ -340,11 +355,11 @@ export function ProductDetailView({
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.3} className="mb-14 w-full max-w-4xl">
-                            {/* Descripcion con borde lateral naranja */}
-                            <div className="relative px-6 md:px-10 py-2">
-                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-3/4 rounded-full bg-gradient-to-b from-[#FF6600]/0 via-[#FF6600] to-[#FF6600]/0 hidden md:block" />
-                                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-3/4 rounded-full bg-gradient-to-b from-[#FF6600]/0 via-[#FF6600] to-[#FF6600]/0 hidden md:block" />
-                                <p className="text-lg md:text-2xl text-muted-foreground font-light leading-relaxed">
+                            {/* Descripcion con marco cinematico y comilla decorativa */}
+                            <div className="relative px-6 md:px-12 py-6">
+                                <span className="absolute top-0 left-0 text-7xl md:text-9xl font-black text-[#FF6600]/15 leading-none select-none pointer-events-none">"</span>
+                                <span className="absolute bottom-0 right-0 text-7xl md:text-9xl font-black text-[#FF6600]/15 leading-none select-none pointer-events-none rotate-180">"</span>
+                                <p className="relative text-lg md:text-2xl text-muted-foreground font-light leading-relaxed italic">
                                     {description}
                                 </p>
                             </div>
