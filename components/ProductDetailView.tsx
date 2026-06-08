@@ -14,6 +14,10 @@ import { TechSpecs } from "@/components/TechSpecs";
 import { ProductBenefits } from "@/components/ProductBenefits";
 import { StickyProductNav } from "@/components/StickyProductNav";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
+import { ProductCredentialBar } from "@/components/ProductCredentialBar";
+import { ProductQuickFacts } from "@/components/ProductQuickFacts";
+import { StickyQuoteCTA } from "@/components/StickyQuoteCTA";
+import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import { PRICES_VISIBLE } from "@/lib/pricing";
@@ -245,6 +249,7 @@ export function ProductDetailView({
     return (
         <div className="bg-background min-h-screen pt-24 pb-24 overflow-x-hidden selection:bg-[#FF6600] selection:text-white">
             <StickyProductNav productName={plancha.name} price={plancha.price} kindLabel={kindLabel} kindHref={kindHref} />
+            <StickyQuoteCTA />
             <ScrollToTopButton />
 
             {/* Dynamic Breadcrumbs */}
@@ -261,7 +266,16 @@ export function ProductDetailView({
             <div className="w-full">
                 {/* 1. Cinematic Full-Screen Hero */}
                 <div className="relative w-full min-h-[95vh] flex flex-col items-center justify-start overflow-hidden bg-gradient-to-b from-background via-background to-muted/20 pb-20 pt-10">
-                    <div className="absolute top-1/2 left-1/2 w-[80vw] h-[80vw] rounded-full bg-[#FF6600]/5 blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+                    {/* Halo principal: glow naranja pulsante centrado tras la imagen */}
+                    <motion.div
+                        animate={{ scale: [1, 1.08, 1], opacity: [0.35, 0.55, 0.35] }}
+                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute top-1/2 left-1/2 w-[55vw] h-[55vw] max-w-[900px] max-h-[900px] rounded-full bg-[#FF6600]/15 blur-[110px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    />
+                    {/* Halo secundario mas extenso para tinte ambiental */}
+                    <div className="absolute top-1/2 left-1/2 w-[90vw] h-[90vw] rounded-full bg-[#FF6600]/5 blur-[140px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+                    {/* Spotlight superior */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70vw] h-[30vh] bg-gradient-to-b from-[#FF9900]/8 to-transparent blur-3xl pointer-events-none" />
                     <div className="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
 
                     <div className="relative z-20 container mx-auto px-4 w-full">
@@ -340,6 +354,12 @@ export function ProductDetailView({
                         </ScrollReveal>
                     </div>
                 </div>
+
+                {/* Credenciales: banda premium oscura con 4 garantias comerciales */}
+                <ProductCredentialBar />
+
+                {/* QuickFacts: cards con datos clave (apertura, tamaño, categoría, garantía) — solo planchas */}
+                {kind === "planchas" && <ProductQuickFacts plancha={plancha} />}
 
                 {/* Image Gallery (for accessories/consumables without benefits section) */}
                 {plancha.gallery && plancha.gallery.length > 1 && (!plancha.benefits || plancha.benefits.length === 0) && (
