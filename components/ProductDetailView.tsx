@@ -355,14 +355,9 @@ export function ProductDetailView({
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.3} className="mb-14 w-full max-w-4xl">
-                            {/* Descripcion con marco cinematico y comilla decorativa */}
-                            <div className="relative px-6 md:px-12 py-6">
-                                <span className="absolute top-0 left-0 text-7xl md:text-9xl font-black text-[#FF6600]/15 leading-none select-none pointer-events-none">"</span>
-                                <span className="absolute bottom-0 right-0 text-7xl md:text-9xl font-black text-[#FF6600]/15 leading-none select-none pointer-events-none rotate-180">"</span>
-                                <p className="relative text-lg md:text-2xl text-muted-foreground font-light leading-relaxed italic">
-                                    {description}
-                                </p>
-                            </div>
+                            <p className="text-lg md:text-2xl text-muted-foreground font-light leading-relaxed">
+                                {description}
+                            </p>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.4}>

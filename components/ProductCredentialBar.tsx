@@ -8,22 +8,22 @@ const dictionary = {
     es: {
         stock: { title: "Stock en España", sub: "envío en 24-72 h" },
         support: { title: "Soporte técnico", sub: "en español incluido" },
-        advice: { title: "Asesoramiento", sub: "gratuito antes y después" },
+        parts: { title: "Recambios originales", sub: "stock permanente" },
     },
     en: {
         stock: { title: "Stocked in Spain", sub: "ships in 24-72 h" },
         support: { title: "Technical support", sub: "Spanish included" },
-        advice: { title: "Free guidance", sub: "before and after purchase" },
+        parts: { title: "Original spare parts", sub: "always in stock" },
     },
     pt: {
         stock: { title: "Stock em Espanha", sub: "envio em 24-72 h" },
         support: { title: "Apoio técnico", sub: "em espanhol incluído" },
-        advice: { title: "Aconselhamento", sub: "gratuito antes e depois" },
+        parts: { title: "Peças originais", sub: "stock permanente" },
     },
     it: {
         stock: { title: "Disponibile in Spagna", sub: "spedizione in 24-72 h" },
         support: { title: "Supporto tecnico", sub: "in spagnolo incluso" },
-        advice: { title: "Consulenza", sub: "gratuita prima e dopo" },
+        parts: { title: "Ricambi originali", sub: "stock permanente" },
     },
 };
 
@@ -34,7 +34,7 @@ export function ProductCredentialBar() {
     const items = [
         { Icon: MapPin, ...d.stock },
         { Icon: Headphones, ...d.support },
-        { Icon: Wrench, ...d.advice },
+        { Icon: Wrench, ...d.parts },
     ];
 
     return (
