@@ -17,6 +17,10 @@ import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { ProductCredentialBar } from "@/components/ProductCredentialBar";
 import { ProductQuickFacts } from "@/components/ProductQuickFacts";
 import { StickyQuoteCTA } from "@/components/StickyQuoteCTA";
+import { ProductHighlightStats } from "@/components/ProductHighlightStats";
+import { ProductTechBadges } from "@/components/ProductTechBadges";
+import { ProductUseCases } from "@/components/ProductUseCases";
+import { ProductComparisonTable } from "@/components/ProductComparisonTable";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
@@ -43,6 +47,7 @@ interface ProductDetailViewProps {
     fullAccessories?: CompatibleItem[];
     fullConsumables?: CompatibleItem[];
     compatiblePlanchas?: Plancha[];
+    similar?: Plancha[];
     kind?: "planchas" | "accessories" | "consumables";
 }
 
@@ -53,12 +58,13 @@ const MANUAL_LANGUAGES: { code: "es" | "en" | "pt" | "it"; label: string; flag: 
     { code: "it", label: "Italiano", flag: "🇮🇹" },
 ];
 
-export function ProductDetailView({ 
-    plancha, 
-    fullAccessories = [], 
-    fullConsumables = [], 
+export function ProductDetailView({
+    plancha,
+    fullAccessories = [],
+    fullConsumables = [],
     compatiblePlanchas = [],
-    kind = "planchas" 
+    similar = [],
+    kind = "planchas"
 }: ProductDetailViewProps) {
     const { locale } = useLanguage();
     const [activeTab, setActiveTab] = useState<"accessories" | "consumables">("accessories");
@@ -443,6 +449,18 @@ export function ProductDetailView({
                         </ScrollReveal>
                     )}
 
+                    {/* Sección visuales que enriquecen la ficha cuando hay pocas fotos:
+                        - HighlightStats: data clave con iconos grandes (de technicalSpecs)
+                        - TechBadges: tecnologías que incluye (de features)
+                        - UseCases: para quién es la máquina (por categoría) */}
+                    {kind === "planchas" && (
+                        <>
+                            <ProductHighlightStats plancha={plancha} />
+                            <ProductTechBadges plancha={plancha} />
+                            <ProductUseCases plancha={plancha} />
+                        </>
+                    )}
+
                     {/* Maintenance Section */}
                     {maintenanceTips.length > 0 && (
                         <ScrollReveal className="max-w-5xl mx-auto w-full bg-muted/20 border border-border/50 rounded-[3.5rem] p-12 lg:p-20 relative overflow-hidden">
@@ -626,6 +644,11 @@ export function ProductDetailView({
                         <ScrollReveal className="w-full py-20">
                             <RoiCalculator machineName={name || ""} machinePrice={plancha.price} />
                         </ScrollReveal>
+                    )}
+
+                    {/* Tabla comparativa con modelos similares (solo planchas) */}
+                    {kind === "planchas" && similar.length > 0 && (
+                        <ProductComparisonTable plancha={plancha} similar={similar} />
                     )}
 
                     {/* Compatible Machines for Accessories/Consumables */}
