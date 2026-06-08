@@ -40,12 +40,15 @@ export function ProductBenefits({ benefits, gallery }: ProductBenefitsProps) {
                 const title = getLocalized(benefit.title, locale);
                 const description = getLocalized(benefit.description, locale);
 
-                // Use explicit benefit image if set, otherwise pick from gallery by index
-                const blockImage = benefit.image
+                // Use explicit benefit image if set AND it still exists in the
+                // gallery; otherwise pick from gallery by index. This blinds us
+                // against future image cleanups: a benefit whose declared
+                // image was deleted falls back to a rotating gallery photo
+                // instead of showing a broken placeholder.
+                const fallback = gallery && gallery.length > 0 ? gallery[index % gallery.length] : null;
+                const blockImage = benefit.image && gallery?.includes(benefit.image)
                     ? benefit.image
-                    : gallery && gallery[index % gallery.length]
-                    ? gallery[index % gallery.length]
-                    : null;
+                    : fallback;
 
                 return (
                     <div
