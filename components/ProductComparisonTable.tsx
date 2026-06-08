@@ -6,8 +6,7 @@ import Link from "next/link";
 import { Check, ArrowRight, Star } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
-import { PRICES_VISIBLE } from "@/lib/pricing";
-import type { Plancha } from "@/data/products";
+import type { Plancha, Locale } from "@/data/products";
 
 interface ProductComparisonTableProps {
     plancha: Plancha;
@@ -21,8 +20,8 @@ const dictionary = {
         current: "Este modelo",
         opening: "Apertura",
         size: "Tamaño",
-        price: "PVP",
-        consult: "Consultar",
+        highlight: "Destacado",
+        notSpec: "—",
         view: "Ver",
     },
     en: {
@@ -31,8 +30,8 @@ const dictionary = {
         current: "This model",
         opening: "Opening",
         size: "Size",
-        price: "Price",
-        consult: "Check price",
+        highlight: "Highlight",
+        notSpec: "—",
         view: "View",
     },
     pt: {
@@ -41,8 +40,8 @@ const dictionary = {
         current: "Este modelo",
         opening: "Abertura",
         size: "Tamanho",
-        price: "PVP",
-        consult: "Consultar",
+        highlight: "Destaque",
+        notSpec: "—",
         view: "Ver",
     },
     it: {
@@ -51,18 +50,27 @@ const dictionary = {
         current: "Questo modello",
         opening: "Apertura",
         size: "Dimensione",
-        price: "PVP",
-        consult: "Consultare",
+        highlight: "In evidenza",
+        notSpec: "—",
         view: "Vedi",
     },
 };
 
-function priceLabel(p: any, lang: string, consultLabel: string): string {
-    const shown = p?.pvp ?? p?.price;
-    if (!PRICES_VISIBLE) return consultLabel;
-    if (shown === undefined || shown === "Consultar PVP") return consultLabel;
-    if (typeof shown === "number") return `${shown.toLocaleString(lang === "en" ? "en-GB" : "es-ES")} €`;
-    return String(shown);
+// Saca un highlight corto: primer technicalSpec con value corto, o primera
+// feature truncada a las primeras 7 palabras.
+function highlight(p: Plancha, locale: Locale, fallback: string): string {
+    const specs = p.technicalSpecs || [];
+    for (const s of specs) {
+        const v = String(s.value || "").trim();
+        if (v && v !== "✓" && v !== "✗" && v.length <= 28) return v;
+    }
+    const feats = getLocalized(p.features as any, locale) || [];
+    if (Array.isArray(feats) && feats.length > 0) {
+        const text = String(feats[0]);
+        const parts = text.split(/\s+/).slice(0, 7).join(" ");
+        return parts.length < text.length ? parts + "…" : parts;
+    }
+    return fallback;
 }
 
 export function ProductComparisonTable({ plancha, similar }: ProductComparisonTableProps) {
@@ -88,9 +96,9 @@ export function ProductComparisonTable({ plancha, similar }: ProductComparisonTa
             <div className={`grid gap-5 ${all.length === 2 ? "grid-cols-1 md:grid-cols-2" : all.length === 3 ? "grid-cols-1 md:grid-cols-3" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"}`}>
                 {all.map(({ p, isCurrent }, i) => {
                     const name = getLocalized(p.name, locale) || "";
-                    const opening = getLocalized(p.openingType, locale) || "—";
-                    const size = getLocalized(p.size, locale) || "—";
-                    const price = priceLabel(p as any, locale, d.consult);
+                    const opening = getLocalized(p.openingType, locale) || d.notSpec;
+                    const size = getLocalized(p.size, locale) || d.notSpec;
+                    const hl = highlight(p, locale, d.notSpec);
 
                     return (
                         <motion.div
@@ -134,9 +142,9 @@ export function ProductComparisonTable({ plancha, similar }: ProductComparisonTa
                                     <dt className="text-muted-foreground font-semibold uppercase tracking-wider text-[10px]">{d.size}</dt>
                                     <dd className="font-bold text-foreground text-right">{size}</dd>
                                 </div>
-                                <div className="flex justify-between gap-2 pt-2 border-t border-border/40">
-                                    <dt className="text-muted-foreground font-semibold uppercase tracking-wider text-[10px]">{d.price}</dt>
-                                    <dd className={`font-black text-right ${isCurrent ? "text-[#FF6600]" : "text-foreground"}`}>{price}</dd>
+                                <div className="flex flex-col gap-1.5 pt-3 border-t border-border/40">
+                                    <dt className="text-muted-foreground font-semibold uppercase tracking-wider text-[10px]">{d.highlight}</dt>
+                                    <dd className={`font-bold text-right text-sm leading-tight ${isCurrent ? "text-[#FF6600]" : "text-foreground"}`}>{hl}</dd>
                                 </div>
                             </dl>
 

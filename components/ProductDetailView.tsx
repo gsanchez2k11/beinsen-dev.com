@@ -437,18 +437,6 @@ export function ProductDetailView({
                         </ScrollReveal>
                     )}
 
-                    {/* Rich Key Benefits Grid */}
-                    {plancha.benefits && plancha.benefits.length > 0 && (
-                        <ScrollReveal className="w-full">
-                            <div className="text-center mb-32">
-                                <h3 className="text-4xl md:text-5xl font-black flex flex-col items-center gap-8">
-                                    {d.benefitsTitle} <span className="w-24 h-2 bg-[#FF6600] rounded-full" />
-                                </h3>
-                            </div>
-                            <ProductBenefits benefits={plancha.benefits} gallery={plancha.gallery} />
-                        </ScrollReveal>
-                    )}
-
                     {/* Sección visuales que enriquecen la ficha cuando hay pocas fotos:
                         - HighlightStats: data clave con iconos grandes (de technicalSpecs)
                         - TechBadges: tecnologías que incluye (de features)
