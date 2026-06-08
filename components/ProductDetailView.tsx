@@ -253,7 +253,7 @@ export function ProductDetailView({
             <ScrollToTopButton />
 
             {/* Dynamic Breadcrumbs */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
                 <nav className="flex items-center gap-2 text-sm text-muted-foreground font-medium">
                     <Link href="/" className="hover:text-[#FF6600] transition-colors">{d.inicio}</Link>
                     <ChevronRight size={14} className="text-border" />
@@ -261,6 +261,16 @@ export function ProductDetailView({
                     <ChevronRight size={14} className="text-border" />
                     <span className="text-foreground">{name}</span>
                 </nav>
+            </div>
+
+            {/* Volver al catalogo: justo bajo breadcrumb */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+                <Link
+                    href="/catalogo"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-[#FF6600] transition-colors"
+                >
+                    <ArrowLeft size={16} /> {d.back}
+                </Link>
             </div>
 
             <div className="w-full">
@@ -283,17 +293,6 @@ export function ProductDetailView({
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70vw] h-[30vh] bg-gradient-to-b from-[#FF9900]/8 to-transparent blur-3xl pointer-events-none" />
                     <div className="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
 
-                    <div className="relative z-20 container mx-auto px-4 w-full">
-                        <ScrollReveal delay={0}>
-                            <Link
-                                href="/catalogo"
-                                className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-[#FF6600] transition-colors mb-8"
-                            >
-                                <ArrowLeft size={16} /> {d.back}
-                            </Link>
-                        </ScrollReveal>
-                    </div>
-
                     <div className="relative z-10 w-full max-w-[85rem] mx-auto h-[60vh] lg:h-[80vh] perspective-[2500px]">
                         {plancha.heroVideo ? (
                             <video
@@ -312,10 +311,25 @@ export function ProductDetailView({
                     </div>
 
                     <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center mt-20">
+                        <ScrollReveal delay={0.15}>
+                            {/* Eyebrow: categoria en mayusculas con linea decorativa naranja */}
+                            <div className="inline-flex items-center gap-3 mb-6">
+                                <span className="w-10 h-0.5 bg-[#FF6600] rounded-full" />
+                                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.4em] text-[#FF6600]">
+                                    {category}
+                                </span>
+                                <span className="w-10 h-0.5 bg-[#FF6600] rounded-full" />
+                            </div>
+                        </ScrollReveal>
+
                         <ScrollReveal delay={0.2}>
-                            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground tracking-tighter leading-[0.9] mb-8 max-w-6xl mx-auto drop-shadow-sm">
+                            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground tracking-tighter leading-[0.9] mb-6 max-w-6xl mx-auto drop-shadow-sm">
                                 {name}
                             </h1>
+                            {/* Acento decorativo bajo el titulo */}
+                            <div className="flex justify-center mb-8">
+                                <div className="h-1.5 w-24 rounded-full bg-gradient-to-r from-[#FF6600] to-[#FF9900] shadow-lg shadow-[#FF6600]/30" />
+                            </div>
                             {kind !== "planchas" && (plancha as any).reference && (
                                 <div className="mb-6">
                                     <span className="inline-block text-xs font-mono font-bold tracking-[0.2em] text-muted-foreground bg-muted px-4 py-2 rounded-xl border border-border/40">
@@ -325,10 +339,15 @@ export function ProductDetailView({
                             )}
                         </ScrollReveal>
 
-                        <ScrollReveal delay={0.3} className="mb-14">
-                            <p className="text-xl md:text-3xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
-                                {description}
-                            </p>
+                        <ScrollReveal delay={0.3} className="mb-14 w-full max-w-4xl">
+                            {/* Descripcion con borde lateral naranja */}
+                            <div className="relative px-6 md:px-10 py-2">
+                                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-3/4 rounded-full bg-gradient-to-b from-[#FF6600]/0 via-[#FF6600] to-[#FF6600]/0 hidden md:block" />
+                                <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-3/4 rounded-full bg-gradient-to-b from-[#FF6600]/0 via-[#FF6600] to-[#FF6600]/0 hidden md:block" />
+                                <p className="text-lg md:text-2xl text-muted-foreground font-light leading-relaxed">
+                                    {description}
+                                </p>
+                            </div>
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.4}>
