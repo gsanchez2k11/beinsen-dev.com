@@ -16280,7 +16280,7 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "Limpieza regular de la placa calefactora y la platina inferior tras cada jornada.",
+        "Limpieza regular de la placa calefactora y el plato inferior tras cada jornada.",
         "Reemplazo de láminas protectoras o revestimientos cuando presenten desgaste.",
         "Verificación y calibración de la temperatura con termómetro externo periódicamente.",
         "Comprobación de los sensores de protección anti-pellizco y del sistema de doble mano.",
