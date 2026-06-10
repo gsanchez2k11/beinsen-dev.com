@@ -14,14 +14,6 @@ import { TechSpecs } from "@/components/TechSpecs";
 import { ProductBenefits } from "@/components/ProductBenefits";
 import { StickyProductNav } from "@/components/StickyProductNav";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
-import { ProductCredentialBar } from "@/components/ProductCredentialBar";
-import { ProductQuickFacts } from "@/components/ProductQuickFacts";
-import { StickyQuoteCTA } from "@/components/StickyQuoteCTA";
-import { ProductHighlightStats } from "@/components/ProductHighlightStats";
-import { ProductTechBadges } from "@/components/ProductTechBadges";
-import { ProductUseCases } from "@/components/ProductUseCases";
-import { ProductComparisonTable } from "@/components/ProductComparisonTable";
-import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import { PRICES_VISIBLE } from "@/lib/pricing";
@@ -47,7 +39,6 @@ interface ProductDetailViewProps {
     fullAccessories?: CompatibleItem[];
     fullConsumables?: CompatibleItem[];
     compatiblePlanchas?: Plancha[];
-    similar?: Plancha[];
     kind?: "planchas" | "accessories" | "consumables";
 }
 
@@ -58,13 +49,12 @@ const MANUAL_LANGUAGES: { code: "es" | "en" | "pt" | "it"; label: string; flag: 
     { code: "it", label: "Italiano", flag: "🇮🇹" },
 ];
 
-export function ProductDetailView({
-    plancha,
-    fullAccessories = [],
-    fullConsumables = [],
+export function ProductDetailView({ 
+    plancha, 
+    fullAccessories = [], 
+    fullConsumables = [], 
     compatiblePlanchas = [],
-    similar = [],
-    kind = "planchas"
+    kind = "planchas" 
 }: ProductDetailViewProps) {
     const { locale } = useLanguage();
     const [activeTab, setActiveTab] = useState<"accessories" | "consumables">("accessories");
@@ -255,7 +245,6 @@ export function ProductDetailView({
     return (
         <div className="bg-background min-h-screen pt-24 pb-24 overflow-x-hidden selection:bg-[#FF6600] selection:text-white">
             <StickyProductNav productName={plancha.name} price={plancha.price} kindLabel={kindLabel} kindHref={kindHref} />
-            <StickyQuoteCTA />
             <ScrollToTopButton />
 
             {/* Dynamic Breadcrumbs */}
@@ -270,24 +259,21 @@ export function ProductDetailView({
             </div>
 
             <div className="w-full">
-                {/* QuickFacts: cards con datos clave (apertura, tamaño, categoría, garantía).
-                    Se renderizan ANTES del hero para que se vean junto a la imagen principal
-                    al entrar a la ficha. Solo para planchas. */}
-                {kind === "planchas" && <ProductQuickFacts plancha={plancha} />}
-
                 {/* 1. Cinematic Full-Screen Hero */}
                 <div className="relative w-full min-h-[95vh] flex flex-col items-center justify-start overflow-hidden bg-gradient-to-b from-background via-background to-muted/20 pb-20 pt-10">
-                    {/* Halo principal: glow naranja pulsante centrado tras la imagen */}
-                    <motion.div
-                        animate={{ scale: [1, 1.08, 1], opacity: [0.35, 0.55, 0.35] }}
-                        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute top-1/2 left-1/2 w-[55vw] h-[55vw] max-w-[900px] max-h-[900px] rounded-full bg-[#FF6600]/15 blur-[110px] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-                    />
-                    {/* Halo secundario mas extenso para tinte ambiental */}
-                    <div className="absolute top-1/2 left-1/2 w-[90vw] h-[90vw] rounded-full bg-[#FF6600]/5 blur-[140px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-                    {/* Spotlight superior */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[70vw] h-[30vh] bg-gradient-to-b from-[#FF9900]/8 to-transparent blur-3xl pointer-events-none" />
+                    <div className="absolute top-1/2 left-1/2 w-[80vw] h-[80vw] rounded-full bg-[#FF6600]/5 blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
                     <div className="absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-background to-transparent z-10 pointer-events-none" />
+
+                    <div className="relative z-20 container mx-auto px-4 w-full">
+                        <ScrollReveal delay={0}>
+                            <Link
+                                href="/catalogo"
+                                className="inline-flex items-center gap-2 text-sm font-semibold text-muted-foreground hover:text-[#FF6600] transition-colors mb-8"
+                            >
+                                <ArrowLeft size={16} /> {d.back}
+                            </Link>
+                        </ScrollReveal>
+                    </div>
 
                     <div className="relative z-10 w-full max-w-[85rem] mx-auto h-[60vh] lg:h-[80vh] perspective-[2500px]">
                         {plancha.heroVideo ? (
@@ -307,50 +293,10 @@ export function ProductDetailView({
                     </div>
 
                     <div className="relative z-20 container mx-auto px-4 flex flex-col items-center text-center mt-20">
-                        <ScrollReveal delay={0.1}>
-                            {/* Eyebrow: badge premium con icono + categoria */}
-                            <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#FF6600]/10 border border-[#FF6600]/30 backdrop-blur-sm mb-8">
-                                {(plancha as any).isNew && (
-                                    <>
-                                        <span className="text-[10px] font-black uppercase tracking-widest text-[#FF6600]">
-                                            {locale === 'en' ? 'New' : locale === 'pt' ? 'Novidade' : locale === 'it' ? 'Novità' : 'Novedad'}
-                                        </span>
-                                        <span className="w-1 h-1 rounded-full bg-[#FF6600]/50" />
-                                    </>
-                                )}
-                                <span className="text-[10px] font-black uppercase tracking-[0.3em] text-[#FF6600]">
-                                    {category}
-                                </span>
-                            </div>
-                        </ScrollReveal>
-
                         <ScrollReveal delay={0.2}>
-                            {/* Titulo con primera palabra (modelo) en gradiente naranja */}
-                            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] mb-6 max-w-6xl mx-auto drop-shadow-sm">
-                                {(() => {
-                                    const parts = (name || "").split(" ");
-                                    const first = parts[0];
-                                    const rest = parts.slice(1).join(" ");
-                                    return (
-                                        <>
-                                            <span className="bg-gradient-to-br from-[#FF6600] via-[#FF8533] to-[#FF9900] bg-clip-text text-transparent">
-                                                {first}
-                                            </span>
-                                            {rest && (
-                                                <span className="text-foreground"> {rest}</span>
-                                            )}
-                                        </>
-                                    );
-                                })()}
+                            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground tracking-tighter leading-[0.9] mb-8 max-w-6xl mx-auto drop-shadow-sm">
+                                {name}
                             </h1>
-                            {/* Acento decorativo bajo el titulo */}
-                            <div className="flex items-center justify-center gap-3 mb-10">
-                                <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#FF6600]" />
-                                <div className="w-2 h-2 rounded-full bg-[#FF6600] shadow-lg shadow-[#FF6600]/50" />
-                                <div className="h-1 w-24 rounded-full bg-gradient-to-r from-[#FF6600] to-[#FF9900] shadow-lg shadow-[#FF6600]/30" />
-                                <div className="w-2 h-2 rounded-full bg-[#FF9900] shadow-lg shadow-[#FF9900]/50" />
-                                <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#FF9900]" />
-                            </div>
                             {kind !== "planchas" && (plancha as any).reference && (
                                 <div className="mb-6">
                                     <span className="inline-block text-xs font-mono font-bold tracking-[0.2em] text-muted-foreground bg-muted px-4 py-2 rounded-xl border border-border/40">
@@ -360,8 +306,8 @@ export function ProductDetailView({
                             )}
                         </ScrollReveal>
 
-                        <ScrollReveal delay={0.3} className="mb-14 w-full max-w-4xl">
-                            <p className="text-lg md:text-2xl text-muted-foreground font-light leading-relaxed">
+                        <ScrollReveal delay={0.3} className="mb-14">
+                            <p className="text-xl md:text-3xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
                                 {description}
                             </p>
                         </ScrollReveal>
@@ -394,9 +340,6 @@ export function ProductDetailView({
                         </ScrollReveal>
                     </div>
                 </div>
-
-                {/* Credenciales: banda premium oscura con 4 garantias comerciales */}
-                <ProductCredentialBar />
 
                 {/* Image Gallery (for accessories/consumables without benefits section) */}
                 {plancha.gallery && plancha.gallery.length > 1 && (!plancha.benefits || plancha.benefits.length === 0) && (
@@ -437,16 +380,16 @@ export function ProductDetailView({
                         </ScrollReveal>
                     )}
 
-                    {/* Sección visuales que enriquecen la ficha cuando hay pocas fotos:
-                        - HighlightStats: data clave con iconos grandes (de technicalSpecs)
-                        - TechBadges: tecnologías que incluye (de features)
-                        - UseCases: para quién es la máquina (por categoría) */}
-                    {kind === "planchas" && (
-                        <>
-                            <ProductHighlightStats plancha={plancha} />
-                            <ProductTechBadges plancha={plancha} />
-                            <ProductUseCases plancha={plancha} />
-                        </>
+                    {/* Rich Key Benefits Grid */}
+                    {plancha.benefits && plancha.benefits.length > 0 && (
+                        <ScrollReveal className="w-full">
+                            <div className="text-center mb-32">
+                                <h3 className="text-4xl md:text-5xl font-black flex flex-col items-center gap-8">
+                                    {d.benefitsTitle} <span className="w-24 h-2 bg-[#FF6600] rounded-full" />
+                                </h3>
+                            </div>
+                            <ProductBenefits benefits={plancha.benefits} gallery={plancha.gallery} />
+                        </ScrollReveal>
                     )}
 
                     {/* Maintenance Section */}
@@ -632,11 +575,6 @@ export function ProductDetailView({
                         <ScrollReveal className="w-full py-20">
                             <RoiCalculator machineName={name || ""} machinePrice={plancha.price} />
                         </ScrollReveal>
-                    )}
-
-                    {/* Tabla comparativa con modelos similares (solo planchas) */}
-                    {kind === "planchas" && similar.length > 0 && (
-                        <ProductComparisonTable plancha={plancha} similar={similar} />
                     )}
 
                     {/* Compatible Machines for Accessories/Consumables */}

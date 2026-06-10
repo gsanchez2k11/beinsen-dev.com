@@ -181,7 +181,6 @@ export default async function PlanchaDetail({ params }: { params: Promise<{ slug
                 fullAccessories={fullAccessories}
                 fullConsumables={fullConsumables}
                 compatiblePlanchas={compatiblePlanchas}
-                similar={similarMachines}
                 kind={kind}
             />
 
