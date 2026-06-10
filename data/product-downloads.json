@@ -374,6 +374,31 @@
       "url": "/manuales/estambul-prensa-swing-away-electrica/Libro_Mantenimiento_Estambul_Prensa_Swing-Away_Eléctrica_Beinsen.pdf"
     }
   ],
+  "felina-prensa-termica-para-espinilleras": [
+    {
+      "label": {
+        "es": "Manual de Usuario",
+        "en": "User Manual",
+        "pt": "Manual do Utilizador",
+        "it": "Manuale Utente"
+      },
+      "languages": {
+        "en": "/manuales/felina-prensa-termica-para-espinilleras/manual-en.pdf",
+        "es": "/manuales/felina-prensa-termica-para-espinilleras/manual-es.pdf",
+        "it": "/manuales/felina-prensa-termica-para-espinilleras/manual-it.pdf",
+        "pt": "/manuales/felina-prensa-termica-para-espinilleras/manual-pt.pdf"
+      }
+    },
+    {
+      "label": {
+        "es": "Libro de Mantenimiento",
+        "en": "Maintenance Book",
+        "pt": "Livro de Manutenção",
+        "it": "Libretto di Manutenzione"
+      },
+      "url": "/manuales/felina-prensa-termica-para-espinilleras/Libro_Mantenimiento_Felina_Prensa_Térmica_Para_Espinilleras_Beinsen.pdf"
+    }
+  ],
   "gante-plancha-manual-gorras": [
     {
       "label": {
