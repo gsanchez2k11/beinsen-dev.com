@@ -4661,7 +4661,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Sistema di apertura girevole"
         },
         "description": {
-          "es": "Mecanismo de apertura giratoria manual que desplaza la platina superior hacia un lado, dejando la superficie de trabajo completamente libre para colocar y retirar objetos con comodidad.",
+          "es": "Mecanismo de apertura giratoria manual que desplaza el plato superior hacia un lado, dejando la superficie de trabajo completamente libre para colocar y retirar objetos con comodidad.",
           "en": "Manual rotary opening mechanism that swings the upper platen to the side, leaving the work surface completely free for comfortable object placement and removal.",
           "pt": "Mecanismo de abertura giratória manual que desloca a platina superior para um lado, deixando a superfície de trabalho completamente livre para colocar e retirar objetos com comodidade.",
           "it": "Meccanismo di apertura girevole manuale che sposta la platina superiore di lato, lasciando la superficie di lavoro completamente libera per posizionare e rimuovere oggetti con comodità."
@@ -15889,7 +15889,7 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Tamaño de platina",
+          "es": "Tamaño de plato",
           "en": "Platen Size",
           "pt": "Tamanho da platina",
           "it": "Dimensioni della platina"
@@ -15898,7 +15898,7 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Apertura de platina inferior",
+          "es": "Apertura de plato inferior",
           "en": "Lower platen opening",
           "pt": "Abertura de platina inferior",
           "it": "Apertura della platina inferiore"
@@ -16047,7 +16047,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Apertura girevole a 180° per maggiore comodità"
         },
         "description": {
-          "es": "La platina superior giratoria de 180° maximiza el espacio de trabajo, lo que permite cargar y descargar materiales con total facilidad y eficiencia, reduciendo la fatiga en jornadas largas.",
+          "es": "El plato superior giratoria de 180° maximiza el espacio de trabajo, lo que permite cargar y descargar materiales con total facilidad y eficiencia, reduciendo la fatiga en jornadas largas.",
           "en": "The 180° swing-away upper platen maximizes workspace, making it easy to load and unload materials with total efficiency, reducing fatigue during long sessions.",
           "pt": "A platina superior giratória de 180° maximiza o espaço de trabalho, permitindo carregar e descarregar materiais com total facilidade e eficiência, reduzindo a fadiga em jornadas longas.",
           "it": "La platina superiore girevole a 180° massimizza lo spazio di lavoro, consentendo di caricare e scaricare materiali con totale facilità ed efficienza, riducendo l'affaticamento nelle lunghe sessioni."
@@ -16141,7 +16141,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Arresto di emergenza con riavvio istantaneo"
         },
         "description": {
-          "es": "En caso de emergencia, el sistema detiene y levanta la platina al instante. La función de reinicio con un toque permite reanudar rápidamente el flujo de trabajo sin pérdida de configuración.",
+          "es": "En caso de emergencia, el sistema detiene y levanta el plato al instante. La función de reinicio con un toque permite reanudar rápidamente el flujo de trabajo sin pérdida de configuración.",
           "en": "In an emergency, the system stops and lifts the platen instantly. The one-touch restart function lets you quickly resume workflow without losing settings.",
           "pt": "Em caso de emergência, o sistema para e levanta a platina ao instante. A função de reinício com um toque permite retomar rapidamente o fluxo de trabalho sem perda de configuração.",
           "it": "In caso di emergenza, il sistema ferma e solleva la platina all'istante. La funzione di riavvio con un tocco consente di riprendere rapidamente il flusso di lavoro senza perdita di configurazione."
@@ -16156,7 +16156,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Base a cambio rapido e scorrevole"
         },
         "description": {
-          "es": "La platina inferior con sistema de cambio rápido y deslizamiento facilita la colocación precisa de prendas y materiales, aumentando la eficiencia y reduciendo errores de posicionamiento.",
+          "es": "El plato inferior con sistema de cambio rápido y deslizamiento facilita la colocación precisa de prendas y materiales, aumentando la eficiencia y reduciendo errores de posicionamiento.",
           "en": "The lower platen with quick-change and sliding system makes precise garment and material placement easy, boosting efficiency and reducing positioning errors.",
           "pt": "A platina inferior com sistema de troca rápida e deslizamento facilita a colocação precisa de peças e materiais, aumentando a eficiência e reduzindo erros de posicionamento.",
           "it": "La platina inferiore con sistema di cambio rapido e scorrimento facilita il posizionamento preciso di capi e materiali, aumentando l'efficienza e riducendo errori di posizionamento."
@@ -16207,7 +16207,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Braccio swing-away 180°"
         },
         "description": {
-          "es": "El brazo giratorio desplaza la platina superior 180° hacia un lado, dejando el área de trabajo completamente libre para colocar y retirar materiales con total comodidad.",
+          "es": "El brazo giratorio desplaza el plato superior 180° hacia un lado, dejando el área de trabajo completamente libre para colocar y retirar materiales con total comodidad.",
           "en": "The swing arm moves the upper platen 180° to the side, leaving the work area completely free to place and remove materials with ease.",
           "pt": "O braço giratório desloca a platina superior 180° para o lado, deixando a área de trabalho completamente livre para colocar e retirar materiais com total conforto.",
           "it": "Il braccio girevole sposta la platina superiore di 180° verso un lato, lasciando l'area di lavoro completamente libera per posizionare e rimuovere materiali con totale comodità."
@@ -16223,7 +16223,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Pulsante di emergenza"
         },
         "description": {
-          "es": "Detiene y levanta la platina al instante en caso de emergencia. La función de reinicio con un toque permite reanudar el flujo de trabajo rápidamente sin pérdida de configuración.",
+          "es": "Detiene y levanta el plato al instante en caso de emergencia. La función de reinicio con un toque permite reanudar el flujo de trabajo rápidamente sin pérdida de configuración.",
           "en": "Instantly stops and lifts the platen in an emergency. The one-touch restart function lets you quickly resume workflow without losing settings.",
           "pt": "Para e levanta a platina ao instante em caso de emergência. A função de reinício com um toque permite retomar o fluxo de trabalho rapidamente sem perda de configuração.",
           "it": "Ferma e solleva la platina all'istante in caso di emergenza. La funzione di riavvio con un tocco consente di riprendere rapidamente il flusso di lavoro senza perdita di configurazione."
