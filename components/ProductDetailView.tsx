@@ -14,6 +14,7 @@ import { TechSpecs } from "@/components/TechSpecs";
 import { ProductBenefits } from "@/components/ProductBenefits";
 import { StickyProductNav } from "@/components/StickyProductNav";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
+import { ProductWarningBanner } from "@/components/ProductWarningBanner";
 import { useLanguage } from "@/context/LanguageContext";
 import { getLocalized } from "@/lib/i18n";
 import { PRICES_VISIBLE } from "@/lib/pricing";
@@ -257,6 +258,9 @@ export function ProductDetailView({
                     <span className="text-foreground">{name}</span>
                 </nav>
             </div>
+
+            {/* Aviso/warning del fabricante (si aplica al slug) */}
+            <ProductWarningBanner slug={plancha.slug} />
 
             <div className="w-full">
                 {/* 1. Cinematic Full-Screen Hero */}
