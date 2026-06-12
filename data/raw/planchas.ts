@@ -688,12 +688,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Resistencia – Total sublimable",
-          "en": "Heating element – sublimable area",
-          "pt": "Resistência – área sublimável",
-          "it": "Resistenza – area sublimabile"
+          "es": "Resistencia – Margen sin sublimar",
+          "en": "Heating element – non-sublimating margin",
+          "pt": "Resistência – margem sem sublimar",
+          "it": "Resistenza – margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ],
     "benefits": [
@@ -1462,12 +1462,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Resistencia – Total sublimable",
-          "en": "Heating element – sublimable area",
-          "pt": "Resistência – área sublimável",
-          "it": "Resistenza – area sublimabile"
+          "es": "Resistencia – Margen sin sublimar",
+          "en": "Heating element – non-sublimating margin",
+          "pt": "Resistência – margem sem sublimar",
+          "it": "Resistenza – margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ],
     "benefits": [
@@ -1913,12 +1913,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Resistencia – Total sublimable",
-          "en": "Heating element – sublimable area",
-          "pt": "Resistência – área sublimável",
-          "it": "Resistenza – area sublimabile"
+          "es": "Resistencia – Margen sin sublimar",
+          "en": "Heating element – non-sublimating margin",
+          "pt": "Resistência – margem sem sublimar",
+          "it": "Resistenza – margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ],
     "benefits": [
@@ -2659,12 +2659,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Resistencia – Total sublimable",
-          "en": "Heating element – sublimable area",
-          "pt": "Resistência – área sublimável",
-          "it": "Resistenza – area sublimabile"
+          "es": "Resistencia – Margen sin sublimar",
+          "en": "Heating element – non-sublimating margin",
+          "pt": "Resistência – margem sem sublimar",
+          "it": "Resistenza – margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ],
     "benefits": [
@@ -5539,12 +5539,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Resistencia – Total sublimable",
-          "en": "Heating element – sublimable area",
-          "pt": "Resistência – área sublimável",
-          "it": "Resistenza – area sublimabile"
+          "es": "Resistencia – Margen sin sublimar",
+          "en": "Heating element – non-sublimating margin",
+          "pt": "Resistência – margem sem sublimar",
+          "it": "Resistenza – margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ],
     "benefits": [
@@ -6109,12 +6109,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Resistencia – Total sublimable",
-          "en": "Heating element – sublimable area",
-          "pt": "Resistência – área sublimável",
-          "it": "Resistenza – area sublimabile"
+          "es": "Resistencia – Margen sin sublimar",
+          "en": "Heating element – non-sublimating margin",
+          "pt": "Resistência – margem sem sublimar",
+          "it": "Resistenza – margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ],
     "benefits": [
@@ -6521,12 +6521,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Resistencia – Total sublimable",
-          "en": "Heating element – sublimable area",
-          "pt": "Resistência – área sublimável",
-          "it": "Resistenza – area sublimabile"
+          "es": "Resistencia – Margen sin sublimar",
+          "en": "Heating element – non-sublimating margin",
+          "pt": "Resistência – margem sem sublimar",
+          "it": "Resistenza – margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ],
     "benefits": [
@@ -7035,12 +7035,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "label": {
-          "es": "Resistencia – Total sublimable",
-          "en": "Heating element – sublimable area",
-          "pt": "Resistência – área sublimável",
-          "it": "Resistenza – area sublimabile"
+          "es": "Resistencia – Margen sin sublimar",
+          "en": "Heating element – non-sublimating margin",
+          "pt": "Resistência – margem sem sublimar",
+          "it": "Resistenza – margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ],
     "benefits": [

@@ -460,12 +460,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }    ]
   },
   {
@@ -685,12 +685,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }    ]
   },
   {
@@ -733,12 +733,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }    ]
   },
   {
@@ -781,12 +781,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }    ]
   },
   {
@@ -829,12 +829,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }    ]
   },
   {
@@ -886,12 +886,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }    ]
   },
   {
@@ -1223,12 +1223,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ]
   },
@@ -1271,12 +1271,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ]
   },
@@ -1329,12 +1329,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ]
   },
@@ -1378,12 +1378,12 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Total sublimable",
-          "en": "Sublimable area",
-          "pt": "Área sublimável",
-          "it": "Area sublimabile"
+          "es": "Margen sin sublimar",
+          "en": "Non-sublimating margin",
+          "pt": "Margem sem sublimar",
+          "it": "Margine non sublimabile"
         },
-        "value": "≈ 80%"
+        "value": "15 mm en los bordes / 15 mm at the edges"
       }
     ]
   },
