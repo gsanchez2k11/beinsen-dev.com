@@ -457,6 +457,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Andra, Sore (A)"
+      },
+      {
+        "label": {
+          "es": "Margen sin calentamiento",
+          "en": "Non-heating edge",
+          "pt": "Margem sem aquecimento",
+          "it": "Bordo non riscaldante"
+        },
+        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
       }
     ]
   },
@@ -674,6 +683,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Alina, Aruba, Barein, Sicilia, Maine, Clara, Sore, Barahona"
+      },
+      {
+        "label": {
+          "es": "Margen sin calentamiento",
+          "en": "Non-heating edge",
+          "pt": "Margem sem aquecimento",
+          "it": "Bordo non riscaldante"
+        },
+        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
       }
     ]
   },
@@ -714,6 +732,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Alina, Aruba, Barahona, Barein, Sore, Maine"
+      },
+      {
+        "label": {
+          "es": "Margen sin calentamiento",
+          "en": "Non-heating edge",
+          "pt": "Margem sem aquecimento",
+          "it": "Bordo non riscaldante"
+        },
+        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
       }
     ]
   },
@@ -754,6 +781,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Sore, Andra"
+      },
+      {
+        "label": {
+          "es": "Margen sin calentamiento",
+          "en": "Non-heating edge",
+          "pt": "Margem sem aquecimento",
+          "it": "Bordo non riscaldante"
+        },
+        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
       }
     ]
   },
@@ -794,6 +830,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Alina, Sicilia, Aruba, Maine"
+      },
+      {
+        "label": {
+          "es": "Margen sin calentamiento",
+          "en": "Non-heating edge",
+          "pt": "Margem sem aquecimento",
+          "it": "Bordo non riscaldante"
+        },
+        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
       }
     ]
   },
@@ -843,6 +888,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Alina, Sicilia, Maine, Barahona"
+      },
+      {
+        "label": {
+          "es": "Margen sin calentamiento",
+          "en": "Non-heating edge",
+          "pt": "Margem sem aquecimento",
+          "it": "Bordo non riscaldante"
+        },
+        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
       }
     ]
   },
