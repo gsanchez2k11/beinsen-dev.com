@@ -685,6 +685,15 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dimensione dell'imballaggio"
         },
         "value": "93 x 49 x 39 cm"
+      },
+      {
+        "label": {
+          "es": "Resistencia – Total sublimable",
+          "en": "Heating element – sublimable area",
+          "pt": "Resistência – área sublimável",
+          "it": "Resistenza – area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ],
     "benefits": [
@@ -1450,6 +1459,15 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Intervallo di temperatura"
         },
         "value": "0º-225º"
+      },
+      {
+        "label": {
+          "es": "Resistencia – Total sublimable",
+          "en": "Heating element – sublimable area",
+          "pt": "Resistência – área sublimável",
+          "it": "Resistenza – area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ],
     "benefits": [
@@ -1892,6 +1910,15 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dimensioni"
         },
         "value": "60,4 x 42,6 x 29,7 cm"
+      },
+      {
+        "label": {
+          "es": "Resistencia – Total sublimable",
+          "en": "Heating element – sublimable area",
+          "pt": "Resistência – área sublimável",
+          "it": "Resistenza – area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ],
     "benefits": [
@@ -2629,6 +2656,15 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dimensione dell'imballaggio"
         },
         "value": "38 x 27 x 25 cm"
+      },
+      {
+        "label": {
+          "es": "Resistencia – Total sublimable",
+          "en": "Heating element – sublimable area",
+          "pt": "Resistência – área sublimável",
+          "it": "Resistenza – area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ],
     "benefits": [
@@ -5500,6 +5536,15 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Intervallo di temperatura"
         },
         "value": "0º-225º"
+      },
+      {
+        "label": {
+          "es": "Resistencia – Total sublimable",
+          "en": "Heating element – sublimable area",
+          "pt": "Resistência – área sublimável",
+          "it": "Resistenza – area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ],
     "benefits": [
@@ -6061,6 +6106,15 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Sicurezza"
         },
         "value": "Cubierta anti quemaduras"
+      },
+      {
+        "label": {
+          "es": "Resistencia – Total sublimable",
+          "en": "Heating element – sublimable area",
+          "pt": "Resistência – área sublimável",
+          "it": "Resistenza – area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ],
     "benefits": [
@@ -6464,6 +6518,15 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Intervallo di temperatura"
         },
         "value": "0º-225º"
+      },
+      {
+        "label": {
+          "es": "Resistencia – Total sublimable",
+          "en": "Heating element – sublimable area",
+          "pt": "Resistência – área sublimável",
+          "it": "Resistenza – area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ],
     "benefits": [
@@ -6969,6 +7032,15 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dimensioni"
         },
         "value": "51 x 50 x 37 cm"
+      },
+      {
+        "label": {
+          "es": "Resistencia – Total sublimable",
+          "en": "Heating element – sublimable area",
+          "pt": "Resistência – área sublimável",
+          "it": "Resistenza – area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ],
     "benefits": [

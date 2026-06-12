@@ -460,14 +460,13 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Margen sin calentamiento",
-          "en": "Non-heating edge",
-          "pt": "Margem sem aquecimento",
-          "it": "Bordo non riscaldante"
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
         },
-        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
-      }
-    ]
+        "value": "≈ 80%"
+      }    ]
   },
   {
     "reference": "CONSUBCIN10M",
@@ -686,14 +685,13 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Margen sin calentamiento",
-          "en": "Non-heating edge",
-          "pt": "Margem sem aquecimento",
-          "it": "Bordo non riscaldante"
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
         },
-        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
-      }
-    ]
+        "value": "≈ 80%"
+      }    ]
   },
   {
     "reference": "PLAACCRBE",
@@ -735,14 +733,13 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Margen sin calentamiento",
-          "en": "Non-heating edge",
-          "pt": "Margem sem aquecimento",
-          "it": "Bordo non riscaldante"
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
         },
-        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
-      }
-    ]
+        "value": "≈ 80%"
+      }    ]
   },
   {
     "reference": "REPBEIRES11A",
@@ -784,14 +781,13 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Margen sin calentamiento",
-          "en": "Non-heating edge",
-          "pt": "Margem sem aquecimento",
-          "it": "Bordo non riscaldante"
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
         },
-        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
-      }
-    ]
+        "value": "≈ 80%"
+      }    ]
   },
   {
     "reference": "REPBEIRES17C",
@@ -833,14 +829,13 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Margen sin calentamiento",
-          "en": "Non-heating edge",
-          "pt": "Margem sem aquecimento",
-          "it": "Bordo non riscaldante"
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
         },
-        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
-      }
-    ]
+        "value": "≈ 80%"
+      }    ]
   },
   {
     "reference": "REPBEIRSBMHB",
@@ -891,14 +886,13 @@ export const rawConsumablesData: Consumable[] = [
       },
       {
         "label": {
-          "es": "Margen sin calentamiento",
-          "en": "Non-heating edge",
-          "pt": "Margem sem aquecimento",
-          "it": "Bordo non riscaldante"
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
         },
-        "value": "≈ 15 mm desde el borde / ≈ 15 mm from edge"
-      }
-    ]
+        "value": "≈ 80%"
+      }    ]
   },
   {
     "reference": "90005119",
@@ -1226,6 +1220,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Sicilia, Maine"
+      },
+      {
+        "label": {
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ]
   },
@@ -1265,6 +1268,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Sicilia, Maine"
+      },
+      {
+        "label": {
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ]
   },
@@ -1314,6 +1326,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Maine"
+      },
+      {
+        "label": {
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ]
   },
@@ -1354,6 +1375,15 @@ export const rawConsumablesData: Consumable[] = [
           "it": "Compatibilità"
         },
         "value": "Alina, Aruba, Sicilia, Maine"
+      },
+      {
+        "label": {
+          "es": "Total sublimable",
+          "en": "Sublimable area",
+          "pt": "Área sublimável",
+          "it": "Area sublimabile"
+        },
+        "value": "≈ 80%"
       }
     ]
   },
