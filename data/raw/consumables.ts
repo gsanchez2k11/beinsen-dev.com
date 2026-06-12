@@ -465,7 +465,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }    ]
   },
   {
@@ -690,7 +695,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }    ]
   },
   {
@@ -738,7 +748,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }    ]
   },
   {
@@ -786,7 +801,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }    ]
   },
   {
@@ -834,7 +854,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }    ]
   },
   {
@@ -891,7 +916,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }    ]
   },
   {
@@ -1228,7 +1258,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ]
   },
@@ -1276,7 +1311,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ]
   },
@@ -1334,7 +1374,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ]
   },
@@ -1383,7 +1428,12 @@ export const rawConsumablesData: Consumable[] = [
           "pt": "Margem sem sublimar",
           "it": "Margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ]
   },

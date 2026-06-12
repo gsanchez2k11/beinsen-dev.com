@@ -693,7 +693,12 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Resistência – margem sem sublimar",
           "it": "Resistenza – margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ],
     "benefits": [
@@ -1467,7 +1472,12 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Resistência – margem sem sublimar",
           "it": "Resistenza – margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ],
     "benefits": [
@@ -1918,7 +1928,12 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Resistência – margem sem sublimar",
           "it": "Resistenza – margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ],
     "benefits": [
@@ -2664,7 +2679,12 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Resistência – margem sem sublimar",
           "it": "Resistenza – margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ],
     "benefits": [
@@ -5544,7 +5564,12 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Resistência – margem sem sublimar",
           "it": "Resistenza – margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ],
     "benefits": [
@@ -6114,7 +6139,12 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Resistência – margem sem sublimar",
           "it": "Resistenza – margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ],
     "benefits": [
@@ -6526,7 +6556,12 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Resistência – margem sem sublimar",
           "it": "Resistenza – margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ],
     "benefits": [
@@ -7040,7 +7075,12 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Resistência – margem sem sublimar",
           "it": "Resistenza – margine non sublimabile"
         },
-        "value": "15 mm en los bordes / 15 mm at the edges"
+        "value": {
+          "es": "15 mm en los bordes",
+          "en": "15 mm at the edges",
+          "pt": "15 mm nas bordas",
+          "it": "15 mm sui bordi"
+        }
       }
     ],
     "benefits": [
