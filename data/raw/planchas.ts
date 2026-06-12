@@ -694,10 +694,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Resistenza – margine non sublimabile"
         },
         "value": {
-          "es": "15 mm en los bordes",
-          "en": "15 mm at the edges",
-          "pt": "15 mm nas bordas",
-          "it": "15 mm sui bordi"
+          "es": "15 mm en cada borde (arriba, abajo, izquierda y derecha)",
+          "en": "15 mm on each edge (top, bottom, left and right)",
+          "pt": "15 mm em cada borda (em cima, em baixo, esquerda e direita)",
+          "it": "15 mm su ogni bordo (sopra, sotto, sinistra e destra)"
         }
       }
     ],
@@ -1473,10 +1473,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Resistenza – margine non sublimabile"
         },
         "value": {
-          "es": "15 mm en los bordes",
-          "en": "15 mm at the edges",
-          "pt": "15 mm nas bordas",
-          "it": "15 mm sui bordi"
+          "es": "15 mm en cada borde (arriba, abajo, izquierda y derecha)",
+          "en": "15 mm on each edge (top, bottom, left and right)",
+          "pt": "15 mm em cada borda (em cima, em baixo, esquerda e direita)",
+          "it": "15 mm su ogni bordo (sopra, sotto, sinistra e destra)"
         }
       }
     ],
@@ -1929,10 +1929,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Resistenza – margine non sublimabile"
         },
         "value": {
-          "es": "15 mm en los bordes",
-          "en": "15 mm at the edges",
-          "pt": "15 mm nas bordas",
-          "it": "15 mm sui bordi"
+          "es": "15 mm en cada borde (arriba, abajo, izquierda y derecha)",
+          "en": "15 mm on each edge (top, bottom, left and right)",
+          "pt": "15 mm em cada borda (em cima, em baixo, esquerda e direita)",
+          "it": "15 mm su ogni bordo (sopra, sotto, sinistra e destra)"
         }
       }
     ],
@@ -2680,10 +2680,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Resistenza – margine non sublimabile"
         },
         "value": {
-          "es": "15 mm en los bordes",
-          "en": "15 mm at the edges",
-          "pt": "15 mm nas bordas",
-          "it": "15 mm sui bordi"
+          "es": "15 mm en cada borde (arriba, abajo, izquierda y derecha)",
+          "en": "15 mm on each edge (top, bottom, left and right)",
+          "pt": "15 mm em cada borda (em cima, em baixo, esquerda e direita)",
+          "it": "15 mm su ogni bordo (sopra, sotto, sinistra e destra)"
         }
       }
     ],
@@ -5565,10 +5565,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Resistenza – margine non sublimabile"
         },
         "value": {
-          "es": "15 mm en los bordes",
-          "en": "15 mm at the edges",
-          "pt": "15 mm nas bordas",
-          "it": "15 mm sui bordi"
+          "es": "15 mm en cada borde (arriba, abajo, izquierda y derecha)",
+          "en": "15 mm on each edge (top, bottom, left and right)",
+          "pt": "15 mm em cada borda (em cima, em baixo, esquerda e direita)",
+          "it": "15 mm su ogni bordo (sopra, sotto, sinistra e destra)"
         }
       }
     ],
@@ -6140,10 +6140,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Resistenza – margine non sublimabile"
         },
         "value": {
-          "es": "15 mm en los bordes",
-          "en": "15 mm at the edges",
-          "pt": "15 mm nas bordas",
-          "it": "15 mm sui bordi"
+          "es": "15 mm en cada borde (arriba, abajo, izquierda y derecha)",
+          "en": "15 mm on each edge (top, bottom, left and right)",
+          "pt": "15 mm em cada borda (em cima, em baixo, esquerda e direita)",
+          "it": "15 mm su ogni bordo (sopra, sotto, sinistra e destra)"
         }
       }
     ],
@@ -6557,10 +6557,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Resistenza – margine non sublimabile"
         },
         "value": {
-          "es": "15 mm en los bordes",
-          "en": "15 mm at the edges",
-          "pt": "15 mm nas bordas",
-          "it": "15 mm sui bordi"
+          "es": "15 mm en cada borde (arriba, abajo, izquierda y derecha)",
+          "en": "15 mm on each edge (top, bottom, left and right)",
+          "pt": "15 mm em cada borda (em cima, em baixo, esquerda e direita)",
+          "it": "15 mm su ogni bordo (sopra, sotto, sinistra e destra)"
         }
       }
     ],
@@ -7076,10 +7076,10 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Resistenza – margine non sublimabile"
         },
         "value": {
-          "es": "15 mm en los bordes",
-          "en": "15 mm at the edges",
-          "pt": "15 mm nas bordas",
-          "it": "15 mm sui bordi"
+          "es": "15 mm en cada borde (arriba, abajo, izquierda y derecha)",
+          "en": "15 mm on each edge (top, bottom, left and right)",
+          "pt": "15 mm em cada borda (em cima, em baixo, esquerda e direita)",
+          "it": "15 mm su ogni bordo (sopra, sotto, sinistra e destra)"
         }
       }
     ],
