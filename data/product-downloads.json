@@ -21,6 +21,15 @@
         "pt": "Livro de Manutenção",
         "it": "Libretto di Manutenzione"
       },
+      "url": "/manuales/alaska-plancha-termica-textil/Libro_Mantenimiento_Alaska_Plancha_Trmica_Textil_Beinsen.pdf"
+    },
+    {
+      "label": {
+        "es": "Libro de Mantenimiento",
+        "en": "Maintenance Book",
+        "pt": "Livro de Manutenção",
+        "it": "Libretto di Manutenzione"
+      },
       "url": "/manuales/alaska-plancha-termica-textil/Libro_Mantenimiento_Alaska_Plancha_Térmica_Textil_Beinsen.pdf"
     }
   ],
@@ -346,6 +355,15 @@
         "pt": "Livro de Manutenção",
         "it": "Libretto di Manutenzione"
       },
+      "url": "/manuales/esparta-prensa-termica-neumatica/Libro_Mantenimiento_Esparta_prensa_trmica_neumtica_Beinsen.pdf"
+    },
+    {
+      "label": {
+        "es": "Libro de Mantenimiento",
+        "en": "Maintenance Book",
+        "pt": "Livro de Manutenção",
+        "it": "Libretto di Manutenzione"
+      },
       "url": "/manuales/esparta-prensa-termica-neumatica/Libro_Mantenimiento_Esparta_prensa_térmica_neumática_Beinsen.pdf"
     }
   ],
@@ -372,6 +390,31 @@
         "it": "Libretto di Manutenzione"
       },
       "url": "/manuales/estambul-prensa-swing-away-electrica/Libro_Mantenimiento_Estambul_Prensa_Swing-Away_Eléctrica_Beinsen.pdf"
+    }
+  ],
+  "felina-prensa-swing-away-electrica": [
+    {
+      "label": {
+        "es": "Manual de Usuario",
+        "en": "User Manual",
+        "pt": "Manual do Utilizador",
+        "it": "Manuale Utente"
+      },
+      "languages": {
+        "en": "/manuales/felina-prensa-swing-away-electrica/manual-en.pdf",
+        "es": "/manuales/felina-prensa-swing-away-electrica/manual-es.pdf",
+        "it": "/manuales/felina-prensa-swing-away-electrica/manual-it.pdf",
+        "pt": "/manuales/felina-prensa-swing-away-electrica/manual-pt.pdf"
+      }
+    },
+    {
+      "label": {
+        "es": "Libro de Mantenimiento",
+        "en": "Maintenance Book",
+        "pt": "Livro de Manutenção",
+        "it": "Libretto di Manutenzione"
+      },
+      "url": "/manuales/felina-prensa-swing-away-electrica/Libro_Mantenimiento_Felina_Prensa_Swing-Away_Eléctrica_Beinsen.pdf"
     }
   ],
   "felina-prensa-termica-para-espinilleras": [
@@ -621,6 +664,15 @@
         "pt": "Livro de Manutenção",
         "it": "Libretto di Manutenzione"
       },
+      "url": "/manuales/normandia-i-plancha-termica-textil/Libro_Mantenimiento_Normanda_I_Plancha_Trmica_Textil_Beinsen.pdf"
+    },
+    {
+      "label": {
+        "es": "Libro de Mantenimiento",
+        "en": "Maintenance Book",
+        "pt": "Livro de Manutenção",
+        "it": "Libretto di Manutenzione"
+      },
       "url": "/manuales/normandia-i-plancha-termica-textil/Libro_Mantenimiento_Normandía_I_Plancha_Térmica_Textil_Beinsen.pdf"
     }
   ],
@@ -804,6 +856,15 @@
         "it": "/manuales/trinidad-prensa-termica-automatica/manual-it.pdf",
         "pt": "/manuales/trinidad-prensa-termica-automatica/manual-pt.pdf"
       }
+    },
+    {
+      "label": {
+        "es": "Libro de Mantenimiento",
+        "en": "Maintenance Book",
+        "pt": "Livro de Manutenção",
+        "it": "Libretto di Manutenzione"
+      },
+      "url": "/manuales/trinidad-prensa-termica-automatica/Libro_Mantenimiento_Trinidad_prensa_trmica_automtica_Beinsen.pdf"
     },
     {
       "label": {
