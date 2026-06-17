@@ -3831,7 +3831,7 @@ export const rawPlanchasData: Plancha[] = [
       "it": "Presse termiche ad apertura pneumatica"
     },
     "description": {
-      "es": "Personaliza a lo grande con la plancha transfer de gran formato Beinsen Doha. Gracias al plato de 80x50cm podrás llevar doónde no lo hace el resto y ofrecer a tus clientes personalizaciones más espectaculares, y sin renunciar a la precisión, comodidad y robustez de una plancha sandwich tradicional.",
+      "es": "Personaliza a lo grande con la plancha transfer de gran formato Beinsen Doha. Gracias al plato de 50x80 cm podrás llegar donde no lo hace el resto y ofrecer a tus clientes personalizaciones más espectaculares, y sin renunciar a la precisión, comodidad y robustez de una plancha sandwich tradicional.",
       "en": "Industrial sublimation machines with pneumatic closure and opening for high production.",
       "pt": "Máquinas industriais pneumáticas de alta produção.",
       "it": "Macchine industriali pneumatiche ad alta produzione."
@@ -4094,16 +4094,16 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "title": {
-          "es": "Plato de 80 x 50 cm",
-          "en": "80 x 50 cm platen",
-          "pt": "Prato de 80 x 50 cm",
-          "it": "Piano da 80 x 50 cm"
+          "es": "Plato de 50 x 80 cm",
+          "en": "50 x 80 cm platen",
+          "pt": "Prato de 50 x 80 cm",
+          "it": "Piano da 50 x 80 cm"
         },
         "description": {
-          "es": "Su plato de 80 x 50 cm te permite trabajar piezas de mayor tamaño en una sola planchada con acabado profesional.",
-          "en": "Its 80 x 50 cm platen lets you handle larger pieces in a single press with professional finish.",
-          "pt": "O seu prato de 80 x 50 cm permite-lhe trabalhar peças de maior tamanho numa só prensagem com acabamento profissional.",
-          "it": "Il suo piano da 80 x 50 cm ti permette di lavorare pezzi di dimensioni maggiori in una sola pressata con finitura professionale."
+          "es": "Su plato de 50 x 80 cm te permite trabajar piezas de mayor tamaño en una sola planchada con acabado profesional.",
+          "en": "Its 50 x 80 cm platen lets you handle larger pieces in a single press with professional finish.",
+          "pt": "O seu prato de 50 x 80 cm permite-lhe trabalhar peças de maior tamanho numa só prensagem com acabamento profissional.",
+          "it": "Il suo piano da 50 x 80 cm ti permette di lavorare pezzi di dimensioni maggiori in una sola pressata con finitura professionale."
         },
         "icon": "Ruler",
         "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB2.webp"
