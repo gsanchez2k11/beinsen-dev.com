@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
+import bundleAnalyzer from "@next/bundle-analyzer";
 import { productAliases } from "./lib/productAliases";
 import { legacyRedirects } from "./lib/legacyRedirects";
+
+const withBundleAnalyzer = bundleAnalyzer({
+    enabled: process.env.ANALYZE === "true",
+});
 
 // Cabeceras de seguridad aplicadas a todas las rutas. Si más adelante
 // se añade un proveedor externo (chat, mapa, etc.) habrá que ampliar
@@ -128,4 +133,4 @@ const nextConfig: NextConfig = {
     },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

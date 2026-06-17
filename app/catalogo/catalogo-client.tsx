@@ -444,8 +444,10 @@ function CatalogoContent() {
     return (
         <div className="bg-background pb-32 selection:bg-[#FF6600] selection:text-white">
 
-            {/* Enhanced Control Bar */}
-            <div className="sticky top-20 z-40 bg-background/80 backdrop-blur-xl border-b border-border/40 py-6">
+            {/* Enhanced Control Bar — sticky para que filtros y busqueda esten
+                siempre visibles al scrollear. bg opaco + shadow para clara
+                separacion visual del contenido del catalogo que va por debajo. */}
+            <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-border/40 shadow-md shadow-black/5 py-6">
                 <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-8 justify-between">
 
                     <div className="flex bg-muted p-1 rounded-2xl w-full lg:w-auto overflow-x-auto no-scrollbar">

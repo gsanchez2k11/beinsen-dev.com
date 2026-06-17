@@ -13,7 +13,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Foglio di teflon 38x38 cm"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/lamina-teflon-38x38/01.png",
+    "image": "/products/consumibles/lamina-teflon-38x38/01.webp",
     "description": {
       "es": "Lámina de teflón para proteger las planchas térmicas. Esta delgada lámina de material aislante influye más de lo que imaginamos tanto en los resultados como en la calidad de los productos sublimados y en la vida útil de las planchas térmicas.",
       "en": "Teflon sheet to protect heat plates. This thin insulating material has more impact than we imagine on results, quality of sublimated products and lifespan of heat plates.",
@@ -80,7 +80,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Foglio di teflon 40x50 cm"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/lamina-teflon-40x50/01.png",
+    "image": "/products/consumibles/lamina-teflon-40x50/01.webp",
     "description": {
       "es": "Lámina de teflón para proteger las planchas térmicas. Esta delgada lámina de material aislante influye más de lo que imaginamos tanto en los resultados como en la calidad de los productos sublimados y en la vida útil de las planchas térmicas.",
       "en": "Teflon sheet to protect heat plates. This thin insulating material has more impact than we imagine on results, quality of sublimated products and lifespan of heat plates.",
@@ -147,7 +147,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Cuscinetto in cotone riciclato 80 x 110 cm"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/almohadilla-algodon-80x110/01.png",
+    "image": "/products/consumibles/almohadilla-algodon-80x110/01.webp",
     "description": {
       "es": "Alfombrilla de 80x110cm para planchas transfer de gran tamaño. Aseguran una presión uniforme durante el planchado.",
       "en": "80x110cm pad for large format heat presses. Ensures uniform pressure during pressing.",
@@ -205,7 +205,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Cuscinetto in silicone 80 x 100 cm per piastra base"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/almohadilla-silicona-80x100/01.png",
+    "image": "/products/consumibles/almohadilla-silicona-80x100/01.webp",
     "description": {
       "es": "Almohadilla de silicona de 80 x 100cm para plato base. Resistente al calor hasta 220ºC y con un espesor de 10mm, asegura una impresión uniforme y perfecta en cualquier prensa de calor.",
       "en": "80 x 100cm silicone pad for base plate. Heat resistant up to 220ºC with 10mm thickness, ensures uniform and perfect printing on any heat press.",
@@ -263,7 +263,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Cuscinetto in teflon termoresistente nero 40 x 50 cm. tp-20-bk"
     },
     "price": 30,
-    "image": "/products/consumibles/almohadilla-teflon-termorresistente-40x50/01.png",
+    "image": "/products/consumibles/almohadilla-teflon-termorresistente-40x50/01.webp",
     "description": {
       "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
       "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
@@ -312,7 +312,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Cuscinetto in teflon termoresistente 38x38 cm."
     },
     "price": 25,
-    "image": "/products/consumibles/almohadilla-teflon-termorresistente-38x38/01.png",
+    "image": "/products/consumibles/almohadilla-teflon-termorresistente-38x38/01.webp",
     "description": {
       "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
       "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
@@ -352,7 +352,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Cuscinetto in teflon termoresistente 25x25 cm."
     },
     "price": 15,
-    "image": "/products/consumibles/almohadilla-teflon-termorresistente-25x25/01.png",
+    "image": "/products/consumibles/almohadilla-teflon-termorresistente-25x25/01.webp",
     "description": {
       "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
       "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
@@ -392,7 +392,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Cuscinetto in teflon termoresistente 15x15 cm."
     },
     "price": 10.7,
-    "image": "/products/consumibles/almohadilla-teflon-termorresistente-15x15/01.png",
+    "image": "/products/consumibles/almohadilla-teflon-termorresistente-15x15/01.webp",
     "description": {
       "es": "Ideal para salvar los salientes de los botones, dobladillos, cremalleras, etc. Evita las rayas en la placa metálica superior de la plancha. Antiadherente. Fácil de limpiar.",
       "en": "Ideal for protecting buttons, hems, zippers, etc. Prevents scratches on the upper metal plate of the heat press. Non-stick. Easy to clean.",
@@ -609,7 +609,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza cilindrica per tazze da 11oz tipo B"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-tazas-11oz-b/01.png",
+    "image": "/products/consumibles/resistencia-tazas-11oz-b/01.webp",
     "description": {
       "es": "Para planchas de tazas Beinsen , ya sea como repuesto o accesorio, podrás personalizar tazas de 11 onzas con nuestra resistencia. Solo necesitas apretar unos tornillos y enchufar el conector a la plancha, ¡Listo, ya tienes conectada tu resistencia para empezar a funcionar con ella!. Recuerda dejarla unos minutos calentando en el primer uso.",
       "en": "For Beinsen mug presses, whether as a spare part or accessory, you can personalize 11-ounce mugs with our heating element. Just tighten some screws and plug the connector into the press. Remember to let it heat up for a few minutes on first use.",
@@ -662,7 +662,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza cilindrica per tazze da 6-10oz"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-tazas-6-10oz/13cm._2.png",
+    "image": "/products/consumibles/resistencia-tazas-6-10oz/13cm._2.webp",
     "description": {
       "es": "Para planchas de tazas Beinsen , ya sea como repuesto o accesorio, podrás personalizar tazas de 6 a 10 onzas con nuestra resistencia. Solo necesitas apretar unos tornillos y enchufar el conector a la plancha, ¡Listo, ya tienes conectada tu resistencia para empezar a funcionar con ella!. Recuerda dejarla unos minutos calentando en el primer uso.",
       "en": "For Beinsen mug presses, whether as a spare part or accessory, you can personalize 6 to 10-ounce mugs with our heating element. Just tighten some screws and plug the connector into the press. Remember to let it heat up for a few minutes on first use.",
@@ -715,7 +715,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza cilindrica per tazze da 11oz tipo A"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-tazas-11oz-a/01.png",
+    "image": "/products/consumibles/resistencia-tazas-11oz-a/01.webp",
     "description": {
       "es": "Para planchas de tazas Beinsen , ya sea como repuesto o accesorio, podrás personalizar tazas de 11 onzas con nuestra resistencia. Solo necesitas apretar unos tornillos y enchufar el conector a la plancha, ¡Listo, ya tienes conectada tu resistencia para empezar a funcionar con ella!. Recuerda dejarla unos minutos calentando en el primer uso.",
       "en": "For Beinsen mug presses, whether as a spare part or accessory, you can personalize 11-ounce mugs with our heating element. Just tighten some screws and plug the connector into the press. Remember to let it heat up for a few minutes on first use.",
@@ -768,7 +768,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza per tazze coniche da 17oz"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-tazas-conicas-17oz/01.png",
+    "image": "/products/consumibles/resistencia-tazas-conicas-17oz/01.webp",
     "description": {
       "es": "Para planchas de tazas Beinsen , ya sea como repuesto o accesorio, podrás personalizar tazas cónicas de 17 onzas con nuestra resistencia. Solo necesitas apretar unos tornillos y enchufar el conector a la plancha, ¡Listo, ya tienes conectada tu resistencia para empezar a funcionar con ella!. Recuerda dejarla unos minutos calentando en el primer uso.",
       "en": "For Beinsen mug presses, whether as a spare part or accessory, you can personalize 17-ounce conical mugs with our heating element. Just tighten some screws and plug the connector into the press. Remember to let it heat up for a few minutes on first use.",
@@ -821,7 +821,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza cilindrica per 2 tazze 11oz-15oz"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-doble-taza-11-15oz/01.png",
+    "image": "/products/consumibles/resistencia-doble-taza-11-15oz/01.webp",
     "description": {
       "es": "Amplía tus capacidades de personalización en esta resistencia para tazas para planchas transfer Beinsen. Este modelo está especialmente ideado para sublimar a la vez dos tazas de 11 onzas de capacidad, aunque seguro que le encuentras múltiples utilidades gracias a su tamaño.",
       "en": "Expand your personalization capabilities with this mug heating element for Beinsen transfer presses. This model is specially designed to sublimate two 11 ounce mugs at the same time, although surely you will find multiple uses thanks to its size.",
@@ -883,7 +883,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza 15x20cm per pressa Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-15x20-beinsen-riad/01.png",
+    "image": "/products/consumibles/resistencia-15x20-beinsen-riad/01.webp",
     "description": {
       "es": "Resistencia de 15x20cm. para prensa térmica de etiquetas y gorras Beinsen Riad. Permite cambiar el módulo de gorras a un plato plano pequeño ideal para etiquetas o diseños en bolsillos.",
       "en": "15x20cm heating element for Beinsen Riad label and cap heat press. Allows changing the cap module to a small flat plate ideal for labels or pocket designs.",
@@ -923,7 +923,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza per cappellini per Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-gorras-beinsen-riad/01.png",
+    "image": "/products/consumibles/resistencia-gorras-beinsen-riad/01.webp",
     "description": {
       "es": "Resistencia para sublimar gorras para prensa térmica Beinsen Riad.",
       "en": "Cap sublimation heating element for Beinsen Riad heat press.",
@@ -954,7 +954,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza per cappellini per pressa combo Beinsen"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-gorras-combo-beinsen/01.png",
+    "image": "/products/consumibles/resistencia-gorras-combo-beinsen/01.webp",
     "description": {
       "es": "Resistencia de calor para gorras para plancha Combo de 1ª generación. Pieza de repuesto de metal. Superficie aproximada de planchado: 120 x 70 mm. Medidas del cable de conexión: 310 mm de largo.",
       "en": "Cap heating element for 1st generation Combo heat press. Metal replacement part. Approximate ironing surface: 120 x 70 mm. Connection cable measurements: 310 mm long.",
@@ -1003,7 +1003,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza per cappellini per pressa Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-gorras-beinsen-obrei/02.png",
+    "image": "/products/consumibles/resistencia-gorras-beinsen-obrei/02.webp",
     "description": {
       "es": "Resistencia de calor para gorras para plancha Beinsen Obrei. Pieza de repuesto compuesta de metal. Superficie aproximada de planchado: 120 x 70 mm.",
       "en": "Cap heating element for Beinsen Obrei heat press. Metal replacement part. Approximate ironing surface: 120 x 70 mm.",
@@ -1052,7 +1052,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza 15x15cm per pressa Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-15x15-beinsen-obrei/01.png",
+    "image": "/products/consumibles/resistencia-15x15-beinsen-obrei/01.webp",
     "description": {
       "es": "Resistencia de 15x15cm. para prensa térmica Beinsen Obrei.",
       "en": "15x15cm heating element for Beinsen Obrei heat press.",
@@ -1092,7 +1092,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza per piatti 6\" - 1ª Generazione"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-platos-6-1-gen/01.png",
+    "image": "/products/consumibles/resistencia-platos-6-1-gen/01.webp",
     "description": {
       "es": "Resistencia de calor para planchas de platos. Este plato es el que aplica el calor sobre el objeto a planchar. Resistencia para platos de 6\".",
       "en": "Heating element for plate presses. This plate applies heat to the object to be pressed. 6\" plate heating element.",
@@ -1132,7 +1132,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza per piatti da 5\" Dorian"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-platos-5-dorian/01.png",
+    "image": "/products/consumibles/resistencia-platos-5-dorian/01.webp",
     "description": {
       "es": "Resistencia de calor para plancha de Platos Beinsen de 5\"(12.6cm).",
       "en": "Heat heating element for Beinsen 5\"(12.6cm) Plate press.",
@@ -1172,7 +1172,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza cilindrica da 2.5oz per mini tazze"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-tazas-2-5oz/01.png",
+    "image": "/products/consumibles/resistencia-tazas-2-5oz/01.webp",
     "description": {
       "es": "Resistencia de 18 x 8.5 cm compatible con planchas transfer para tazas. Ideal para personalizar tazas pequeñas con resultados precisos y profesionales.",
       "en": "18 x 8.5 cm heating element compatible with transfer presses for mugs. Ideal for personalizing small mugs with precise and professional results.",
@@ -1225,7 +1225,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza conica da 1.5oz per bicchierini da shot"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-chupitos-1-5oz/01.png",
+    "image": "/products/consumibles/resistencia-chupitos-1-5oz/01.webp",
     "description": {
       "es": "Resistencia de 12 x 8 cm compatible con planchas transfer para tazas. Ideal para personalizar tazas de café espresso y vasos de chupito de 1.5 oz con resultados precisos y profesionales.",
       "en": "12 x 8 cm heating element compatible with heat presses for mugs. Ideal for personalizing espresso coffee cups and 1.5 oz shot glasses with precise and professional results.",
@@ -1279,7 +1279,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza cilindrica da 20 a 30 once"
     },
     "price": "Consultar PVP",
-    "image": "/products/consumibles/resistencia-cilindrica-20-30oz/01.png",
+    "image": "/products/consumibles/resistencia-cilindrica-20-30oz/01.webp",
     "description": {
       "es": "Resistencia cilíndrica de 20 a 30 onzas – Compatible con plancha Maine. Da un salto de calidad en tus diseños cilíndricos con esta resistencia especializada para sublimar botellas, termos u otros recipientes de gran tamaño. Distribución uniforme del calor gracias a su construcción robusta.",
       "en": "20 to 30 ounce cylindrical heating element - Compatible with Maine press. Take a leap in quality in your cylindrical designs with this specialized heating element for sublimating large bottles, thermoses or other large containers. Uniform heat distribution due to its robust construction.",
@@ -1342,7 +1342,7 @@ export const rawConsumablesData: Consumable[] = [
       "it": "Resistenza conica per tazze da 12oz"
     },
     "price": 52,
-    "image": "/products/consumibles/resistencia-conica-tazas-12oz/01.png",
+    "image": "/products/consumibles/resistencia-conica-tazas-12oz/01.webp",
     "description": {
       "es": "Diseñada para tazas cónicas de 12 onzas. Fácil instalación mediante tornillos y conector rápido. Ideal como repuesto o accesorio para ampliar las capacidades de tu plancha Beinsen.",
       "en": "Designed for 12oz conical mugs. Easy installation via screws and quick connector. Ideal as a replacement or accessory to expand the capabilities of your Beinsen press.",

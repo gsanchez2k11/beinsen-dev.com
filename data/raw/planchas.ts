@@ -15,7 +15,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "A prensa térmica para sapatilhas Beinsen Chinela é a especialização levada ao mundo da sublimação. Poderá personalizar confortavelmente até 2 pares de sapatilhas em cada prensagem.",
       "it": "La pressa termica per scarpe da ginnastica Beinsen Chinela è la specializzazione portata nel mondo della sublimazione. Potrai personalizzare comodamente fino a 2 paia di scarpe."
     },
-    "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoPrincipal.png",
+    "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "slug": "chinela-plancha-transfer-zapatillas",
     "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-beinsen-para-zapatillas-chinela.html",
@@ -407,7 +407,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Piatti progettati specificamente per l'ergonomia delle calzature."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB1.png"
+        "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB1.webp"
       },
       {
         "title": {
@@ -423,7 +423,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Nella pressa di trasferimento Beinsen Chinela tutto è pensato con un unico scopo: le scarpe. Un piatto speciale con design ergonomico su una pressa girevole per avere tutto lo spazio necessario per lavorare."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB2.png"
+        "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB2.webp"
       },
       {
         "title": {
@@ -439,7 +439,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il sistema girevole permette di passare rapidamente alla pressatura successiva, migliorando i tempi di produzione senza perdere il controllo."
         },
         "icon": "Clock",
-        "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB3.png"
+        "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB3.webp"
       },
       {
         "title": {
@@ -455,7 +455,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Progettata per lavorare con comodità e precisione sulle calzature, anche in tirature continue."
         },
         "icon": "Ruler",
-        "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB4.png"
+        "image": "/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB4.webp"
       }
     ]
   },
@@ -475,7 +475,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Acabe com as canecas aborrecidas com a personalização. A prensa profissional Beinsen Sore é a nossa especialista em canecas.",
       "it": "Basta con le tazze noiose grazie alla personalizzazione. La pressa professionale Beinsen Sore è la nostra specialista per le tazze."
     },
-    "image": "/products/maquinas/sore-plancha-profesional-tazas/fotoPrincipal.png",
+    "image": "/products/maquinas/sore-plancha-profesional-tazas/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -716,7 +716,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Moltiplica per 5 la tua capacità di consegna giornaliera con un'unica stazione di lavoro."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/sore-plancha-profesional-tazas/fotoB1.jpg"
+        "image": "/products/maquinas/sore-plancha-profesional-tazas/fotoB1.webp"
       },
       {
         "title": {
@@ -732,7 +732,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Ogni resistenza dispone del proprio controller digitale per la massima versatilità."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/sore-plancha-profesional-tazas/fotoB2.jpg"
+        "image": "/products/maquinas/sore-plancha-profesional-tazas/fotoB2.webp"
       },
       {
         "title": {
@@ -748,7 +748,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Struttura ottimizzata per un cambio rapido delle resistenze e facile posizionamento."
         },
         "icon": "MousePointer2",
-        "image": "/products/maquinas/sore-plancha-profesional-tazas/fotoB3.png"
+        "image": "/products/maquinas/sore-plancha-profesional-tazas/fotoB3.webp"
       }
     ],
     "hotspots": [
@@ -901,7 +901,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Para mais informações, contacte-nos durante o horário de atendimento ao cliente.",
       "it": "Per richiedere maggiori informazioni, puoi contattarci durante l'orario di assistenza clienti."
     },
-    "image": "/products/maquinas/dorian-plancha-termica-platos/fotoPrincipal.png",
+    "image": "/products/maquinas/dorian-plancha-termica-platos/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -1185,7 +1185,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Pressione uniforme per evitare rotture sui supporti rigidi."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/dorian-plancha-termica-platos/fotoB1.png",
+        "image": "/products/maquinas/dorian-plancha-termica-platos/fotoB1.webp",
         "objectFit": "contain"
       },
       {
@@ -1202,7 +1202,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Facile da montare e smontare, con controller digitale per regolare tempo e temperatura con precisione. La sua struttura in acciaio massiccio e la finitura arancione Beinsen offrono durabilità e stile."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/dorian-plancha-termica-platos/fotoB2.png",
+        "image": "/products/maquinas/dorian-plancha-termica-platos/fotoB2.webp",
         "objectFit": "contain"
       },
       {
@@ -1235,7 +1235,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Perfetta per sublimare piatti fino a 15,2 cm, ottenendo finiture professionali con risultati costanti."
         },
         "icon": "Target",
-        "image": "/products/maquinas/dorian-plancha-termica-platos/fotoB4.png",
+        "image": "/products/maquinas/dorian-plancha-termica-platos/fotoB4.webp",
         "objectFit": "contain"
       }
     ]
@@ -1255,7 +1255,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Versatilidade na palma da sua mão. Com a prensa Alina poderá personalizar canecas de diferentes tamanhos.",
       "it": "Versatilità nel palmo della tua mano. Con la pressa Alina potrai personalizzare tazze di diverse dimensioni."
     },
-    "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoPrincipal.png",
+    "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -1495,7 +1495,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Con le sue 6 resistenze intercambiabili, potrai personalizzare qualsiasi tipo di tazza con facilità. Non dovrai più preoccuparti per dimensioni diverse dallo standard."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB1.png"
+        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB1.webp"
       },
       {
         "title": {
@@ -1511,7 +1511,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo design ergonomico e facile da usare ti permetterà di cambiare le resistenze a mano facilmente, senza bisogno di strumenti aggiuntivi."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB2.png"
+        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB2.webp"
       },
       {
         "title": {
@@ -1527,7 +1527,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "È la soluzione perfetta per gli amanti della personalizzazione di tazze. Non perdere più tempo con soluzioni obsolete e scopri tutto ciò che questo strumento può offrirti."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB3.png"
+        "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB3.webp"
       },
       {
         "title": {
@@ -1721,7 +1721,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Alina é a companheira ideal para personalizar canecas. Com 4 resistências intercambiáveis para canecas cilíndricas de 6-10oz e 11-15oz, e cónicas de 12oz e 17oz.",
       "it": "Alina è la compagna ideale per personalizzare tazze. Con 4 elementi riscaldanti intercambiabili per tazze cilindriche 6-10oz e 11-15oz, e coniche 12oz e 17oz."
     },
-    "image": "/products/maquinas/alina-plancha-para-tazas/fotoPrincipal.png",
+    "image": "/products/maquinas/alina-plancha-para-tazas/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -1951,7 +1951,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Alina è progettata da zero per la personalizzazione di tazze. Con essa potrai affrontare ordini di qualsiasi formato senza dover cambiare macchina."
         },
         "icon": "CupSoda",
-        "image": "/products/maquinas/alina-plancha-para-tazas/fotoB1.png"
+        "image": "/products/maquinas/alina-plancha-para-tazas/fotoB1.webp"
       },
       {
         "title": {
@@ -1967,7 +1967,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include resistenze per tazze cilindriche da 6 a 10oz e da 11 a 15oz, più coniche da 12oz e 17oz. Potrai personalizzare praticamente qualsiasi tazza del mercato."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/alina-plancha-para-tazas/fotoB2.png"
+        "image": "/products/maquinas/alina-plancha-para-tazas/fotoB2.webp"
       },
       {
         "title": {
@@ -1983,7 +1983,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Con Alina potrai realizzare flock, flex, sublimazione e qualsiasi altro metodo comune di trasferimento a caldo su tazze."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/alina-plancha-para-tazas/fotoB3.png"
+        "image": "/products/maquinas/alina-plancha-para-tazas/fotoB3.webp"
       },
       {
         "title": {
@@ -1999,7 +1999,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Le resistenze si cambiano a mano senza strumenti aggiuntivi, riducendo il tempo tra ordini di dimensioni diverse."
         },
         "icon": "Wrench",
-        "image": "/products/maquinas/alina-plancha-para-tazas/fotoB4.png"
+        "image": "/products/maquinas/alina-plancha-para-tazas/fotoB4.webp"
       },
       {
         "title": {
@@ -2454,7 +2454,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Personalizar canecas nunca foi tão simples como com a prensa automática Beinsen Andra.",
       "it": "Personalizzare le tazze non è mai stato così simple come con la pressa automatica Beinsen Andra."
     },
-    "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoPrincipal.png",
+    "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoPrincipal.webp",
     "heroVideo": "https://beinsen.com/wp-content/uploads/2025/04/andra.webm",
     "hotspotImage": "https://beinsen.com/wp-content/uploads/2024/01/description_barein.png",
     "price": "Consultar PVP",
@@ -2702,7 +2702,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il sistema automatico garantisce una pressione perfetta senza intervento manuale."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoB1.png",
+        "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoB1.webp",
         "objectFit": "contain"
       },
       {
@@ -2719,7 +2719,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Tu, che conosci meglio di chiunque altro la pressione del quotidiano, meriti che personalizzare le tue tazze sia qualcosa di divertente. Devi solo impostare il tempo e la temperatura e dimenticartene anche solo per qualche secondo."
         },
         "icon": "Clock",
-        "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoB2.png",
+        "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoB2.webp",
         "objectFit": "contain"
       },
       {
@@ -2736,7 +2736,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Questa nuova generazione di Beinsen Andra incorpora miglioramenti in componenti chiave come il motore, la resistenza e il pulsante di reset per offrire maggiore affidabilità."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoB3.jpg"
+        "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoB3.webp"
       }
     ],
     "maintenanceTips": {
@@ -2885,7 +2885,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Descubra a nova era da transferência de calor e sublimação com Caén!",
       "it": "Scopri la nuova era del trasferimento di calore e della sublimazione con Caén!"
     },
-    "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoPrincipal.png",
+    "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -3153,7 +3153,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Grazie alla sua doppia stazione e al meccanismo a navetta, puoi lavorare su due articoli contemporaneamente, raddoppiando la produzione. Il suo funzionamento pneumatico distribuisce la pressione in modo uniforme e assicura risultati impeccabili in ogni pressatura."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB1.png"
+        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB1.webp"
       },
       {
         "title": {
@@ -3169,7 +3169,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Incorpora un dispositivo di posizionamento a infrarossi per allineare ogni disegno al millimetro e un sistema digitale per controllare tempo e temperatura con totale precisione."
         },
         "icon": "Target",
-        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB2.png"
+        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB2.webp"
       },
       {
         "title": {
@@ -3185,7 +3185,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dispone di due vassoi laterali per organizzare meglio il flusso di lavoro e di un display digitale facile e intuitivo. Inoltre, il controllo della pressione pneumatica sul frontale ti aiuta a lavorare senza distrazioni."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB3.png"
+        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB3.webp"
       },
       {
         "title": {
@@ -3201,7 +3201,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Beinsen Caén è costruita con materiali di alta qualità per un uso intensivo e include un supporto con ruote per una stazione di lavoro stabile e pratica."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB4.png"
+        "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB4.webp"
       },
       {
         "title": {
@@ -3392,7 +3392,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Precisão e conforto unem-se na Beinsen Obrei. Concebida especificamente para bonés.",
       "it": "Precisione e comfort si incontrano nella Beinsen Obrei. Progettata specificamente per i cappelli."
     },
-    "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoPrincipal.png",
+    "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -3615,7 +3615,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Grazie al suo formato 2 in 1 potrai intercambiare i piani e lavorare sia cappellini che articoli piccoli con il piano piatto da 15 x 15."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB1.png"
+        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB1.webp"
       },
       {
         "title": {
@@ -3631,7 +3631,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La termofissatrice Obrei è pensata per laboratori con poco spazio, permettendo di sublimare diversi prodotti senza sacrificare la comodità."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB2.png"
+        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB2.webp"
       },
       {
         "title": {
@@ -3647,7 +3647,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Niente ti resisterà: permette di realizzare metodi comuni di trasferimento a caldo (flock, flex, sublimazione), oltre a supportare lavori con strass, vinile e transfer."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB3.jpg"
+        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB3.webp"
       },
       {
         "title": {
@@ -3663,7 +3663,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La sua apertura e chiusura automatica ti permette di lavorare su un altro piano mentre si sublima un pezzo. Include allarme a fine pressatura per mantenere la catena di produzione senza pause."
         },
         "icon": "Clock",
-        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB4.png"
+        "image": "/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB4.webp"
       }
     ],
     "hotspots": [
@@ -3836,7 +3836,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Máquinas industriais pneumáticas de alta produção.",
       "it": "Macchine industriali pneumatiche ad alta produzione."
     },
-    "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoPrincipal.png",
+    "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "40x50 / 50x80 cm",
@@ -4090,7 +4090,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La Doha integra chiusura elettromagnetica, controller digitale e vassoio estraibile per un'operazione fluida, precisa e comoda in lavori continui."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB1.jpg"
+        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB1.webp"
       },
       {
         "title": {
@@ -4106,7 +4106,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo piano da 80 x 50 cm ti permette di lavorare pezzi di dimensioni maggiori in una sola pressata con finitura professionale."
         },
         "icon": "Ruler",
-        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB2.jpg"
+        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB2.webp"
       },
       {
         "title": {
@@ -4122,7 +4122,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Includi nel tuo catalogo t-shirt XXL, felpe, borse, bandiere o pannelli tessili in una sola pressata, con risultati puliti e consistenti."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB3.jpg"
+        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB3.webp"
       },
       {
         "title": {
@@ -4138,7 +4138,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il vassoio estraibile, la chiusura elettromagnetica e l'impugnatura ergonomica sono pensati per rendere la pressatura più comoda durante tutta la giornata."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB4.png"
+        "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoB4.webp"
       }
     ],
     "hotspots": [
@@ -4304,7 +4304,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "A solução versátil para a sua oficina.",
       "it": "La soluzione versatile per il tuo laboratorio."
     },
-    "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoPrincipal.png",
+    "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -4532,7 +4532,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La pressa termica Jamaica 8 in 1 di Beinsen ti offre l'opportunità di espandere i tuoi orizzonti nella personalizzazione. Con resistenze specializzate per piatti, cappellini e tazze, potrai personalizzare una varietà di oggetti, dai tessili agli articoli di stoviglie."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB1.png"
+        "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB1.webp"
       },
       {
         "title": {
@@ -4548,7 +4548,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dispone di un sistema di riscaldamento rapido che ti permette di iniziare i tuoi progetti di personalizzazione in poco tempo, risparmiando tempo e aumentando l'efficienza."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB2.png"
+        "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB2.webp"
       },
       {
         "title": {
@@ -4564,7 +4564,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La pressa termica Jamaica si distingue per la sua qualità e prestazioni superiori. Con una superficie di lavoro di 40 cm x 50 cm nel suo piano base, garantisce risultati professionali in ogni applicazione."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB3.png"
+        "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB3.webp"
       },
       {
         "title": {
@@ -4580,7 +4580,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include modalità eco e funzione di preriscaldamento per ottimizzare il consumo e velocizzare il flusso di lavoro."
         },
         "icon": "Leaf",
-        "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB4.png"
+        "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB4.webp"
       },
       {
         "title": {
@@ -4806,7 +4806,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Novo nível de conforto sem perder eficiência.",
       "it": "Nuovo livello di comfort senza perdere efficienza."
     },
-    "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoPrincipal.png",
+    "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -5110,7 +5110,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il sistema pneumatico fornisce pressione uniforme e costante per personalizzazioni più precise e comode in tirature continue."
         },
         "icon": "Wind",
-        "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoB1.jpg"
+        "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoB1.webp"
       },
       {
         "title": {
@@ -5126,7 +5126,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Facilita il posizionamento dei capi e migliora il flusso di lavoro per un'operazione più rapida e sicura."
         },
         "icon": "PanelBottom",
-        "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoB2.jpg"
+        "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoB2.webp"
       },
       {
         "title": {
@@ -5142,7 +5142,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Tutto sotto controllo: configura temperatura e timer in modo intuitivo con il suo nuovo controller digitale."
         },
         "icon": "MousePointer2",
-        "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoB3.png"
+        "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoB3.webp"
       },
       {
         "title": {
@@ -5158,7 +5158,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include sistema di cambio rapido del piano inferiore per adattarsi al ritmo della tua produzione e ridurre i tempi di inattività."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoB4.png"
+        "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoB4.webp"
       },
       {
         "title": {
@@ -5362,7 +5362,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Consulte os nossos modelos anteriores.",
       "it": "Consulta i nostri modelli precedenti."
     },
-    "image": "/products/maquinas/barein-plancha-termica/fotoPrincipal.png",
+    "image": "/products/maquinas/barein-plancha-termica/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -5587,7 +5587,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La pressa termica Barein è lo strumento di cui hai bisogno. Con la sua resistenza intercambiabile per tazze da 11oz e controller digitale, potrai regolare temperatura e tempo in modo preciso per ogni lavoro."
         },
         "icon": "CupSoda",
-        "image": "/products/maquinas/barein-plancha-termica/fotoB1.png"
+        "image": "/products/maquinas/barein-plancha-termica/fotoB1.webp"
       },
       {
         "title": {
@@ -5603,7 +5603,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Potrai cambiare la resistenza a mano senza bisogno di strumenti aggiuntivi, e la sua struttura saldata in acciaio solido garantisce una lunga durabilità."
         },
         "icon": "Wrench",
-        "image": "/products/maquinas/barein-plancha-termica/fotoB2.png"
+        "image": "/products/maquinas/barein-plancha-termica/fotoB2.webp"
       },
       {
         "title": {
@@ -5619,7 +5619,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Potrai realizzare tutti i metodi comuni di trasferimento a caldo, come flock, flex e sublimazione. Dovrai solo aspettare 5 minuti perché sia pronta e iniziare a lavorare."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/barein-plancha-termica/fotoB3.png"
+        "image": "/products/maquinas/barein-plancha-termica/fotoB3.webp"
       },
       {
         "title": {
@@ -5635,7 +5635,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include modalità eco e funzione di preriscaldamento per ottimizzare l'uso energetico e velocizzare ogni ciclo di lavoro."
         },
         "icon": "Leaf",
-        "image": "/products/maquinas/barein-plancha-termica/fotoB4.png"
+        "image": "/products/maquinas/barein-plancha-termica/fotoB4.webp"
       },
       {
         "title": {
@@ -5861,7 +5861,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica para canecas focada em personalização ágil e resultados consistentes.",
       "it": "Pressa termica per tazze orientata a personalizzazione agile e risultati consistenti."
     },
-    "image": "/products/maquinas/maine-plancha-para-tazas/fotoPrincipal.png",
+    "image": "/products/maquinas/maine-plancha-para-tazas/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -6162,7 +6162,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Gestisci ogni ciclo di personalizzazione con precisione e controllo totale in un'operazione manuale affidabile."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/maine-plancha-para-tazas/fotoB1.png",
+        "image": "/products/maquinas/maine-plancha-para-tazas/fotoB1.webp",
         "objectFit": "contain"
       },
       {
@@ -6179,7 +6179,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La pressa di trasferimento Beinsen Maine incorpora un doppio controller digitale per offrirti il massimo controllo nel personalizzare. Grazie a questo sistema puoi raddoppiare la produzione o utilizzare solo la parte che ti serve, risparmiando tempo e denaro."
         },
         "icon": "Cpu",
-        "image": "/products/maquinas/maine-plancha-para-tazas/fotoB2.png"
+        "image": "/products/maquinas/maine-plancha-para-tazas/fotoB2.webp"
       },
       {
         "title": {
@@ -6196,7 +6196,7 @@ export const rawPlanchasData: Plancha[] = [
         },
         "icon": "Layers",
         "objectFit": "contain",
-        "image": "/products/maquinas/maine-plancha-para-tazas/fotoB3.png"
+        "image": "/products/maquinas/maine-plancha-para-tazas/fotoB3.webp"
       },
       {
         "title": {
@@ -6212,7 +6212,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Le sue 6 resistenze incluse ti permetteranno di personalizzare ogni tipo di tazza e bicchiere, dai piccoli bicchierini da shot fino alle tazze grandi. E con la resistenza opzionale da 20 a 30oz potrai aggiungere thermos e bottiglie al tuo portfolio."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/maine-plancha-para-tazas/fotoB4.png"
+        "image": "/products/maquinas/maine-plancha-para-tazas/fotoB4.webp"
       },
       {
         "title": {
@@ -6355,7 +6355,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica para canecas pensada para oficinas que exigem velocidade e estabilidade.",
       "it": "Pressa termica per tazze pensata per laboratori che richiedono velocità e stabilità."
     },
-    "image": "/products/maquinas/aruba-plancha-para-tazas/fotoPrincipal.png",
+    "image": "/products/maquinas/aruba-plancha-para-tazas/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -6579,7 +6579,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dispone di resistenze per tazze cilindriche da 6 a 10 oz e da 11 a 15 oz, e coniche da 12 oz e 17 oz. Inoltre, potrai utilizzare metodi comuni di trasferimento a caldo come flock, flex e sublimazione."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/aruba-plancha-para-tazas/fotoB1.png"
+        "image": "/products/maquinas/aruba-plancha-para-tazas/fotoB1.webp"
       },
       {
         "title": {
@@ -6595,7 +6595,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Con 2 stazioni di lavoro indipendenti, potrai regolare la pressa alle dimensioni e forma di ogni tazza e sublimare una tazza e un thermos contemporaneamente senza preoccupazioni."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/aruba-plancha-para-tazas/fotoB2.png"
+        "image": "/products/maquinas/aruba-plancha-para-tazas/fotoB2.webp"
       },
       {
         "title": {
@@ -6611,7 +6611,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Non solo aumenterà la quantità di tazze personalizzate che potrai fare, ma eleverà anche la qualità dei tuoi design sublimati grazie ai suoi alti standard di costruzione."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/aruba-plancha-para-tazas/fotoB3.png"
+        "image": "/products/maquinas/aruba-plancha-para-tazas/fotoB3.webp"
       },
       {
         "title": {
@@ -6627,7 +6627,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Integra resistenza duratura, display digitale e funzioni programmabili per mantenere stabilità e ripetibilità durante tutta la produzione."
         },
         "icon": "Gauge",
-        "image": "/products/maquinas/aruba-plancha-para-tazas/fotoB4.png"
+        "image": "/products/maquinas/aruba-plancha-para-tazas/fotoB4.webp"
       },
       {
         "title": {
@@ -6844,7 +6844,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Com a prensa térmica Sicilia poderás personalizar qualquer tipo de caneca com facilidade. As suas 8 resistências intercambiáveis cobrem todos os formatos do mercado: desde copos de 1.5oz até termos de 20-30oz.",
       "it": "Con la pressa termica Sicilia potrai personalizzare qualsiasi tipo di tazza con facilità. I suoi 8 elementi intercambiabili coprono tutti i formati del mercato: dai bicchierini da 1.5oz ai tumbler da 20-30oz."
     },
-    "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoPrincipal.png",
+    "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -7098,7 +7098,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Con le sue 8 resistenze intercambiabili, Sicilia copre tutti i formati del mercato: bicchierini, mini tazze, cilindriche di varie dimensioni, coniche e thermos grandi. Senza eccezioni."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoB1.png"
+        "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoB1.webp"
       },
       {
         "title": {
@@ -7114,7 +7114,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo design ergonomico permette di cambiare le resistenze a mano in pochi secondi, senza bisogno di cacciaviti o attrezzi aggiuntivi. Più tempo per produrre, meno tempo per configurare."
         },
         "icon": "Wrench",
-        "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoB2.jpg"
+        "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoB2.webp"
       },
       {
         "title": {
@@ -7130,7 +7130,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dai bicchierini da 1.5oz fino a thermos e bottiglie da 20-30oz, passando per tazze cilindriche da 6-9oz e 11-15oz, e coniche da 12oz e 17oz. Una sola macchina per tutto il tuo catalogo."
         },
         "icon": "Ruler",
-        "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoB3.jpg"
+        "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoB3.webp"
       },
       {
         "title": {
@@ -7146,7 +7146,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Le quattro manopole di regolazione permettono di regolare la pressione con precisione per ogni formato, garantendo una stampa di alta qualità indipendentemente dalle dimensioni o dalla forma della tazza."
         },
         "icon": "Target",
-        "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoB4.jpg"
+        "image": "/products/maquinas/sicilia-plancha-para-tazas/fotoB4.webp"
       },
       {
         "title": {
@@ -7303,7 +7303,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Simples, compacta e económica.",
       "it": "Semplice, compatta ed economica."
     },
-    "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoPrincipal.png",
+    "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Compacta",
@@ -7538,7 +7538,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Progettata per offrire un'esperienza d'uso agile e comoda nelle attività di personalizzazione di piccolo formato."
         },
         "icon": "Feather",
-        "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoB1.png",
+        "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoB1.webp",
         "objectFit": "contain"
       },
       {
@@ -7555,7 +7555,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo sistema di piatti intercambiabili amplia le tue possibilità di personalizzare diversi tipi di articoli con una sola macchina."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoPrincipal.png",
+        "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoPrincipal.webp",
         "objectFit": "contain"
       }
     ],
@@ -7684,7 +7684,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "A ferramenta perfeita para começar a personalizar bonés.",
       "it": "Lo strumento perfetto per iniziare la personalizzazione dei cappelli."
     },
-    "image": "/products/maquinas/gante-plancha-manual-gorras/fotoPrincipal.png",
+    "image": "/products/maquinas/gante-plancha-manual-gorras/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Compacta",
@@ -7919,7 +7919,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo design leggero facilita il lavoro quotidiano e il trasporto in produzioni piccole o eventi."
         },
         "icon": "Feather",
-        "image": "/products/maquinas/gante-plancha-manual-gorras/fotoB1.png"
+        "image": "/products/maquinas/gante-plancha-manual-gorras/fotoB1.webp"
       },
       {
         "title": {
@@ -7935,7 +7935,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Imposta tempo e temperatura in modo semplice con il suo controller digitale."
         },
         "icon": "Cpu",
-        "image": "/products/maquinas/gante-plancha-manual-gorras/fotoB2.png"
+        "image": "/products/maquinas/gante-plancha-manual-gorras/fotoB2.webp"
       },
       {
         "title": {
@@ -7951,7 +7951,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Grazie ai suoi piatti intercambiabili potrai adattare la pressa a diverse applicazioni a seconda delle tue esigenze."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/gante-plancha-manual-gorras/fotoB3.png"
+        "image": "/products/maquinas/gante-plancha-manual-gorras/fotoB3.webp"
       },
       {
         "title": {
@@ -7967,7 +7967,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Abbiamo eliminato il superfluo per ottenere uno strumento semplice, compatto ed economico ma in grado di dare grandi risultati. Il piatto speciale per cappellini, insieme al supporto per fissarli, ti offre lo strumento perfetto per iniziare in questo settore."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/gante-plancha-manual-gorras/fotoB4.png"
+        "image": "/products/maquinas/gante-plancha-manual-gorras/fotoB4.webp"
       },
       {
         "title": {
@@ -8131,7 +8131,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Eleve os seus projetos com esta prensa automática de prato duplo.",
       "it": "Eleva i tuoi progetti con questa pressa automatica a doppio piatto."
     },
-    "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoPrincipal.png",
+    "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoPrincipal.webp",
     "price": 5490,
     "size": {
       "es": "Industrial",
@@ -8250,7 +8250,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Sistema di spostamento elettrico a doppio piatto che elimina l'affaticamento dell'operatore e raddoppia la capacità produttiva."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoB1.png"
+        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoB1.webp"
       },
       {
         "title": {
@@ -8266,7 +8266,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Doppio proiettore laser a croce regolabile per un posizionamento millimetrico di loghi e disegni su ogni capo."
         },
         "icon": "Target",
-        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoB2.png"
+        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoB2.webp"
       },
       {
         "title": {
@@ -8282,7 +8282,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Cervello elettronico avanzato che gestisce pressione, tempo e temperatura con una stabilità ineguagliabile."
         },
         "icon": "Cpu",
-        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoB3.png"
+        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoB3.webp"
       },
       {
         "title": {
@@ -8298,7 +8298,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Sensori di prossimità e doppi pulsanti di emergenza per garantire la protezione totale dell'operatore."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoB4.png"
+        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoB4.webp"
       }
     ],
     "hotspots": [
@@ -8618,7 +8618,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "O sistema de duplo prato permite um carregamento contínuo. Enquanto um está a prensar, prepara o seguinte sem pausas.",
           "it": "Il sistema a doppio piatto consente un carico continuo. Mentre uno è in pressatura, prepari il successivo senza pause."
         },
-        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoExp.png"
+        "image": "/products/maquinas/trinidad-prensa-termica-automatica/fotoExp.webp"
       }
     ],
     "maintenanceTips": {
@@ -8671,7 +8671,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "A tua nova prensa térmica automática elétrica é tudo o que precisas numa única estação de trabalho. Incorpora as últimas novidades do sector, dispensa o compressor e trabalha de forma totalmente autónoma.",
       "it": "La tua nuova pressa termica automatica elettrica è tutto ciò di cui hai bisogno in un'unica stazione di lavoro. Incorpora le ultime novità del settore, elimina il compressore e lavora in modo completamente autonomo."
     },
-    "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoPrincipal.png",
+    "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estación de trabajo",
@@ -8935,7 +8935,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Miranda non ha bisogno di compressore d'aria. Funziona completamente con l'elettricità, il che significa meno rumore, meno manutenzione e totale libertà di installazione in qualsiasi spazio."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB1.png"
+        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB1.webp"
       },
       {
         "title": {
@@ -8951,7 +8951,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Miranda fa il lavoro duro da sola. Si sposta da un piatto all'altro e completa il processo di pressatura senza intervento. Tu posizioni solo il capo successivo, con l'aiuto dei laser, e il gioco è fatto."
         },
         "icon": "Bot",
-        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB2.jpg"
+        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB2.webp"
       },
       {
         "title": {
@@ -8967,7 +8967,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Mentre un piatto è in pressatura, prepari il successivo. Il sistema di cambio rapido ti permette di sostituire il piatto inferiore alla velocità richiesta dalla tua produzione, senza tempi di inattività."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB3.png"
+        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB3.webp"
       },
       {
         "title": {
@@ -8983,7 +8983,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Due laser a croce, uno accanto a ciascun piatto, per una registrazione millimetrica di ogni disegno. Dimentica le stampe fuori posto e lavora con la precisione di un esperto."
         },
         "icon": "Target",
-        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB4.png"
+        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB4.webp"
       },
       {
         "title": {
@@ -9174,7 +9174,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "A Miranda faz o trabalho duro. Move-se sozinha de prato em prato, prensa sem intervenção e deixa-o livre para colocar a peça seguinte. Com os lasers fá-lo-á com precisão absoluta.",
           "it": "Miranda fa il lavoro duro. Si sposta da sola da un piatto all'altro, pressa senza intervento e ti lascia libero di posizionare il capo successivo. Con i laser lo farai con precisione assoluta."
         },
-        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoExp.png"
+        "image": "/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoExp.webp"
       }
     ],
     "maintenanceTips": {
@@ -9231,7 +9231,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Chicago é uma prensa térmica automática profissional com tamanho ideal: compacta para que o espaço não seja um problema, com características premium que a tornam uma aliada poderosa e precisa.",
       "it": "Chicago è una pressa termica automatica professionale di dimensioni ideali: compatta per non avere problemi di spazio, con caratteristiche premium che la rendono un'alleata potente e precisa."
     },
-    "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoPrincipal.png",
+    "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Compacta",
@@ -9490,7 +9490,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Chicago combina dimensioni ridotte con prestazioni di livello professionale. Ideale per officine dove lo spazio è limitato ma le esigenze di qualità non lo sono."
         },
         "icon": "Maximize",
-        "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoB1.png"
+        "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoB1.webp"
       },
       {
         "title": {
@@ -9506,7 +9506,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo sistema pneumatico di apertura e chiusura automatiche elimina gli errori dell'operatore e mantiene una pressione perfettamente uniforme in ogni ciclo."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoB2.png"
+        "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoB2.webp"
       },
       {
         "title": {
@@ -9522,7 +9522,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Grazie alla sua piastra a corsa estesa, Chicago può lavorare con praticamente qualsiasi materiale: magliette, felpe, zaini, articoli rigidi e molto altro."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoB3.png"
+        "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoB3.webp"
       },
       {
         "title": {
@@ -9538,7 +9538,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La base scorrevole permette di caricare e scaricare capi senza sforzo e con totale comodità, riducendo l'affaticamento durante le lunghe giornate di produzione."
         },
         "icon": "ArrowRight",
-        "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoB4.png"
+        "image": "/products/maquinas/chicago-plancha-termica-automatica/fotoB4.webp"
       },
       {
         "title": {
@@ -9697,7 +9697,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Luanda é uma prensa térmica automática profissional com tamanho ideal: compacta para que o espaço não seja um problema, com características premium que a tornam uma aliada poderosa e precisa.",
       "it": "Luanda è una pressa termica automatica professionale di dimensioni ideali: compatta per non avere problemi di spazio, con caratteristiche premium che la rendono un'alleata potente e precisa."
     },
-    "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoPrincipal.png",
+    "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Compacta",
@@ -9934,7 +9934,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Luanda combina dimensioni ridotte con prestazioni di livello professionale. Ideale per officine dove lo spazio è limitato ma le esigenze di qualità non lo sono."
         },
         "icon": "Maximize",
-        "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoB1.png"
+        "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoB1.webp"
       },
       {
         "title": {
@@ -9950,7 +9950,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo sistema pneumatico di apertura e chiusura automatiche elimina gli errori dell'operatore e mantiene una pressione perfettamente uniforme in ogni ciclo di produzione."
         },
         "icon": "Wind",
-        "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoB2.png"
+        "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoB2.webp"
       },
       {
         "title": {
@@ -9966,7 +9966,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Grazie alla sua ampia corsa della piastra, Luanda può personalizzare praticamente qualsiasi materiale: magliette, felpe, zaini, articoli rigidi e oggetti voluminosi."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoB3.png"
+        "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoB3.webp"
       },
       {
         "title": {
@@ -9982,7 +9982,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La base scorrevole permette di caricare e scaricare capi senza sforzo, riducendo l'affaticamento durante le lunghe giornate di produzione continua."
         },
         "icon": "ArrowRight",
-        "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoB4.png"
+        "image": "/products/maquinas/luanda-plancha-termica-automatica/fotoB4.webp"
       },
       {
         "title": {
@@ -10228,7 +10228,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Belice desenhada para trabalhos diários com resultados consistentes.",
       "it": "Pressa termica tessile Belice progettata per lavori quotidiani con risultati costanti."
     },
-    "image": "/products/maquinas/belice-plancha-termica-textil/fotoPrincipal.png",
+    "image": "/products/maquinas/belice-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "38x38 / 40x50 cm",
@@ -10520,7 +10520,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La semplicità non significa fragilità, anzi il contrario. Con la sua nuova pressa di trasferimento Beinsen Belice non vorrà smettere di pressare tutto ciò che le capita a tiro e, grazie alla sua costruzione robusta, non dovrà nemmeno farlo."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/belice-plancha-termica-textil/fotoB1.png",
+        "image": "/products/maquinas/belice-plancha-termica-textil/fotoB1.webp",
         "objectFit": "contain"
       },
       {
@@ -10538,7 +10538,7 @@ export const rawPlanchasData: Plancha[] = [
         },
         "icon": "Settings",
         "objectFit": "contain",
-        "image": "/products/maquinas/belice-plancha-termica-textil/fotoB2.png"
+        "image": "/products/maquinas/belice-plancha-termica-textil/fotoB2.webp"
       }
     ],
     "hotspots": [
@@ -10682,7 +10682,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Barbados para oficinas que procuram estabilidade e desempenho.",
       "it": "Pressa termica tessile Barbados pensata per laboratori che cercano stabilità e rendimento."
     },
-    "image": "/products/maquinas/barbados-plancha-termica-textil/fotoPrincipal.png",
+    "image": "/products/maquinas/barbados-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "38x38 / 40x50 cm",
@@ -10781,7 +10781,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Beinsen Barbados combina fecho manual com abertura eletromagnética automática no final do ciclo. O contador de pressão calibrado permite repetir cada estampagem com o mesmo ajuste. Prato intercambiável 38x38 ou 40x50 cm e tabuleiro extraível para colocar a peça sem esforço.",
           "it": "Beinsen Barbados combina chiusura manuale con apertura elettromagnetica automatica al termine del ciclo. Il contatore di pressione calibrato permette di ripetere ogni stampa con la stessa regolazione. Piastra intercambiabile 38x38 o 40x50 cm e vassoio estraibile per posizionare il capo senza sforzo."
         },
-        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoExp.png"
+        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoExp.webp"
       }
     ],
     "category": {
@@ -10975,7 +10975,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo sistema elettromagnetico semplifica l'apertura al termine del ciclo e migliora l'esperienza d'uso nella produzione continua."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoB1.png"
+        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoB1.webp"
       },
       {
         "title": {
@@ -10991,7 +10991,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Applica la pressione con maggiore precisione grazie al contatore manuale per ripetere le configurazioni in modo affidabile."
         },
         "icon": "Gauge",
-        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoB2.png"
+        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoB2.webp"
       },
       {
         "title": {
@@ -11007,7 +11007,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Faccia scorrere il vassoio inferiore verso di lei e guadagni spazio per posizionare i capi in pochi secondi con maggiore comodità."
         },
         "icon": "PanelBottom",
-        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoB3.png",
+        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoB3.webp",
         "objectFit": "contain"
       },
       {
@@ -11024,7 +11024,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include un sistema di cambio rapido per la piastra inferiore, riducendo i tempi morti e aumentando la produttività."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoB4.png"
+        "image": "/products/maquinas/barbados-plancha-termica-textil/fotoB4.webp"
       },
       {
         "title": {
@@ -11243,7 +11243,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Alaska pronta para produção personalizada com fluxo ágil.",
       "it": "Pressa termica tessile Alaska pronta per produzioni personalizzate con flusso agile."
     },
-    "image": "/products/maquinas/alaska-plancha-termica-textil/fotoPrincipal.png",
+    "image": "/products/maquinas/alaska-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "38x38 / 40x50 cm",
@@ -11318,7 +11318,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Beinsen Alaska substitui a alavanca clássica por um sistema eletromagnético elétrico que abre a prensa no final do ciclo, sem compressor nem ruído. Disponível em prato 38x38 ou 40x50 cm com resistência melhorada e tapete de última geração para uma distribuição de calor mais uniforme.",
           "it": "Beinsen Alaska sostituisce la classica leva con un sistema elettromagnetico elettrico che apre la pressa al termine del ciclo, senza compressore né rumore. Disponibile con piastra 38x38 o 40x50 cm con resistenza migliorata e tappetino di ultima generazione per una distribuzione del calore più uniforme."
         },
-        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoExp.png"
+        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoExp.webp"
       }
     ],
     "category": {
@@ -11512,7 +11512,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Abbiamo migliorato la piastra riscaldante con una nuova resistenza più avanzata, spessa e pesante che migliora la distribuzione di pressione e calore. Questa innovazione, insieme al tappetino di ultima generazione, rende la sua Beinsen Alaska più efficiente ed economica che mai."
         },
         "icon": "Target",
-        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoB1.png"
+        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoB1.webp"
       },
       {
         "title": {
@@ -11528,7 +11528,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Tutto pensato per la sua comodità. Sfrutti il vassoio inferiore scorrevole per posizionare il capo con facilità grazie all'ampio spazio di manovra e poi… niente leve… prema i pulsanti laterali e la sua nuova Beinsen Alaska farà il suo lavoro. Come avere una pressa pneumatica ma senza compressore."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoB2.png"
+        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoB2.webp"
       },
       {
         "title": {
@@ -11544,7 +11544,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il nuovo controller touch semplifica la configurazione e il controllo di ogni lavoro."
         },
         "icon": "MousePointer2",
-        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoB3.png",
+        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoB3.webp",
         "objectFit": "contain",
         "bgClass": "bg-black"
       },
@@ -11562,7 +11562,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Goda di un funzionamento automatico elettrico con un'esperienza d'uso comoda e senza complicazioni."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoB4.png"
+        "image": "/products/maquinas/alaska-plancha-termica-textil/fotoB4.webp"
       }
     ],
     "maintenanceTips": {
@@ -11706,7 +11706,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Malvinas focada na precisão e fiabilidade de uso.",
       "it": "Pressa termica tessile Malvinas focalizzata su precisione di pressatura e affidabilità."
     },
-    "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoPrincipal.png",
+    "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -12034,7 +12034,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo sistema elettromagnetico migliora l'ergonomia di apertura e chiusura per un flusso di lavoro più efficiente."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoB1.png"
+        "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoB1.webp"
       },
       {
         "title": {
@@ -12050,7 +12050,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Alterna tra modalità automatica e manuale per adattarsi a diversi tipi di produzione e finiture."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoB2.png"
+        "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoB2.webp"
       },
       {
         "title": {
@@ -12066,7 +12066,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il controller touch consente di regolare e monitorare tutti i parametri con rapidità e precisione."
         },
         "icon": "MousePointer2",
-        "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoB3.png"
+        "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoB3.webp"
       },
       {
         "title": {
@@ -12082,7 +12082,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include sistema di cambio rapido della piastra inferiore per ridurre al minimo i tempi di inattività e aumentare la produttività."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoB4.png"
+        "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoB4.webp"
       },
       {
         "title": {
@@ -12365,7 +12365,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Guyana com foco em produtividade e consistência.",
       "it": "Pressa termica tessile Guyana con focus su produttività e costanza."
     },
-    "image": "/products/maquinas/guyana-plancha-termica-textil/fotoPrincipal.png",
+    "image": "/products/maquinas/guyana-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -12597,7 +12597,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Integra un sistema elettromagnetico per facilitare l'operazione e mantenere un ritmo di lavoro costante."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/guyana-plancha-termica-textil/fotoB1.png"
+        "image": "/products/maquinas/guyana-plancha-termica-textil/fotoB1.webp"
       },
       {
         "title": {
@@ -12613,7 +12613,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Consente di alternare tra funzionamento manuale e automatico in base al tipo di produzione."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/guyana-plancha-termica-textil/fotoB2.jpg"
+        "image": "/products/maquinas/guyana-plancha-termica-textil/fotoB2.webp"
       },
       {
         "title": {
@@ -12629,7 +12629,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Controlla tempo e temperatura con precisione per ripetere i risultati in modo affidabile."
         },
         "icon": "Cpu",
-        "image": "/products/maquinas/guyana-plancha-termica-textil/fotoB3.png"
+        "image": "/products/maquinas/guyana-plancha-termica-textil/fotoB3.webp"
       },
       {
         "title": {
@@ -12645,7 +12645,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il sistema di cambio rapido per la piastra inferiore riduce i tempi di inattività e accelera i cambi di lavoro."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/guyana-plancha-termica-textil/fotoB4.png"
+        "image": "/products/maquinas/guyana-plancha-termica-textil/fotoB4.webp"
       },
       {
         "title": {
@@ -12849,7 +12849,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Kenia desenvolvida para personalização profissional.",
       "it": "Pressa termica tessile Kenia sviluppata per personalizzazione professionale."
     },
-    "image": "/products/maquinas/kenia-plancha-termica-textil/fotoPrincipal.png",
+    "image": "/products/maquinas/kenia-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "100 x 25 cm",
@@ -13121,7 +13121,7 @@ export const rawPlanchasData: Plancha[] = [
         },
         "icon": "Layers",
         "objectFit": "contain",
-        "image": "/products/maquinas/kenia-plancha-termica-textil/fotoB1.png"
+        "image": "/products/maquinas/kenia-plancha-termica-textil/fotoB1.webp"
       },
       {
         "title": {
@@ -13137,7 +13137,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Con una base speciale di 100 x 25 cm, la pressa Kenia le permette di lavorare portachiavi, targhe, nastri, braccialetti, fasce, cravatte e altri prodotti."
         },
         "icon": "Ruler",
-        "image": "/products/maquinas/kenia-plancha-termica-textil/fotoB2.png"
+        "image": "/products/maquinas/kenia-plancha-termica-textil/fotoB2.webp"
       },
       {
         "title": {
@@ -13153,7 +13153,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Abbiamo sviluppato un rullo specializzato per nastri che facilita la realizzazione di lanyard in modo quasi automatico, più rapido e uniforme."
         },
         "icon": "RotateCw",
-        "image": "/products/maquinas/kenia-plancha-termica-textil/fotoB3.png"
+        "image": "/products/maquinas/kenia-plancha-termica-textil/fotoB3.webp"
       },
       {
         "title": {
@@ -13169,7 +13169,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include modalità eco e preriscaldamento per ottimizzare tempi e consumi nella produzione quotidiana."
         },
         "icon": "Leaf",
-        "image": "/products/maquinas/kenia-plancha-termica-textil/fotoB4.png"
+        "image": "/products/maquinas/kenia-plancha-termica-textil/fotoB4.webp"
       },
       {
         "title": {
@@ -13394,7 +13394,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "A nova estação de prensagem contínua Beinsen Tobago é uma revolução na personalização de camisetas.",
       "it": "La nuova stazione di pressatura continua Beinsen Tobago è una rivoluzione nella personalizzazione delle magliette."
     },
-    "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoPrincipal.png",
+    "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Industrial",
@@ -13585,7 +13585,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Integra soluzioni elettromagnetiche per un funzionamento continuo più stabile e sicuro."
         },
         "icon": "Zap",
-        "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoB1.png"
+        "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoB1.webp"
       },
       {
         "title": {
@@ -13601,7 +13601,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Alterna tra modalità manuale e automatica per adattare il ritmo di produzione a ogni esigenza."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoB2.png"
+        "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoB2.webp"
       },
       {
         "title": {
@@ -13617,7 +13617,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Controlla temperature, velocità e pressioni direttamente dal suo controller digitale."
         },
         "icon": "Cpu",
-        "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoB3.jpg"
+        "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoB3.webp"
       },
       {
         "title": {
@@ -13633,7 +13633,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il sistema modulare facilita l'adattamento della stazione a diversi formati di lavoro."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoB4.jpg"
+        "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoB4.webp"
       },
       {
         "title": {
@@ -13827,7 +13827,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Precisa multiplicar a produção sem perder precisão? A prensa pneumática dupla Beinsen Normandia I é a melhor opção.",
       "it": "Hai bisogno di aumentare la produzione senza perdere precisione? La pressa pneumatica doppia Beinsen Normandia I è la scelta migliore."
     },
-    "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoPrincipal.png",
+    "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -14088,7 +14088,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Fornisce una pressione costante e uniforme per personalizzazioni precise in serie continue."
         },
         "icon": "Wind",
-        "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoB1.png"
+        "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoB1.webp"
       },
       {
         "title": {
@@ -14104,7 +14104,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo doppio piano di grandi dimensioni moltiplica il ritmo di produzione senza perdere precisione."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoB2.png"
+        "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoB2.webp"
       },
       {
         "title": {
@@ -14120,7 +14120,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Controlla tempi e temperatura in modo facile e intuitivo con il suo display."
         },
         "icon": "Cpu",
-        "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoB3.png"
+        "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoB3.webp"
       },
       {
         "title": {
@@ -14136,7 +14136,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Regola il mirino laser al millimetro ed evita stampe fuori posizione."
         },
         "icon": "Target",
-        "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoB4.png"
+        "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoB4.webp"
       },
       {
         "title": {
@@ -14363,7 +14363,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Normandia III criada para personalização avançada em produção exigente.",
       "it": "Pressa termica tessile Normandia III pensata per personalizzazione avanzata in produzioni impegnative."
     },
-    "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoPrincipal.png",
+    "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -14610,7 +14610,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Con la sua superficie di lavoro di 80 x 110 cm e potenza di 5100W, potrai sublimare dai capi e asciugamani fino a borse, custodie e prodotti di grande formato."
         },
         "icon": "Ruler",
-        "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB1.png"
+        "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB1.webp"
       },
       {
         "title": {
@@ -14626,7 +14626,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include regolatore di pressione per risultati costanti, due pulsanti di sicurezza e capacità di sublimare oggetti fino a 65 mm di spessore."
         },
         "icon": "Target",
-        "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB2.png"
+        "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB2.webp"
       },
       {
         "title": {
@@ -14642,7 +14642,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dai capi di abbigliamento ai pannelli di alluminio, non c'è nulla che resista a questa pressa termica per uso professionale."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB3.png"
+        "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB3.webp"
       },
       {
         "title": {
@@ -14658,7 +14658,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Ottimizza i tempi di lavoro e il consumo energetico con le sue funzioni di modalità eco e preriscaldamento."
         },
         "icon": "Leaf",
-        "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB4.png"
+        "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoB4.webp"
       },
       {
         "title": {
@@ -14879,7 +14879,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Prensa térmica têxtil Normandia II pensada para personalização estável e resultados consistentes.",
       "it": "Pressa termica tessile Normandia II pensata per personalizzazione stabile e risultati costanti."
     },
-    "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoPrincipal.png",
+    "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -15135,7 +15135,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Con la sua generosa superficie di lavoro di 80 x 100 cm potrai sublimare dalle t-shirt e capi sportivi fino ad asciugamani, borse e custodie senza difficoltà."
         },
         "icon": "Ruler",
-        "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB1.png"
+        "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB1.webp"
       },
       {
         "title": {
@@ -15151,7 +15151,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include regolatore di pressione e due pulsanti laterali di sicurezza per una sublimazione precisa e sicura, anche su oggetti fino a 65 mm di spessore."
         },
         "icon": "Target",
-        "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB2.png"
+        "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB2.webp"
       },
       {
         "title": {
@@ -15167,7 +15167,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Dai capi di abbigliamento ai pannelli di alluminio, questa pressa è pronta per un'ampia gamma di applicazioni con uso professionale."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB3.png"
+        "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB3.webp"
       },
       {
         "title": {
@@ -15183,7 +15183,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Ottimizza tempi e consumi nei lavori continui grazie alla modalità eco e alla funzione di preriscaldamento."
         },
         "icon": "Leaf",
-        "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB4.png"
+        "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoB4.webp"
       },
       {
         "title": {
@@ -15427,7 +15427,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Com a tua nova prensa térmica para caneleiras Beinsen Felina poderás sublimar neste material tão específico e especial. Inclui 3 pratos base com sistema de troca rápida para personalizar caneleiras de qualquer tamanho.",
       "it": "Con la tua nuova pressa termica per parastinchi Beinsen Felina potrai sublimare su questo materiale così specifico e speciale. Include 3 piastre base con sistema di cambio rapido per personalizzare qualsiasi parastinchi."
     },
-    "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoPrincipal.png",
+    "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Compacta",
@@ -15652,7 +15652,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Con i suoi 3 piani di diverse dimensioni (205×171×218 mm / 114×132×179 mm / 97×115×115 mm) puoi personalizzare qualsiasi parastinchi sul mercato, indipendentemente da dimensione o forma."
         },
         "icon": "Target",
-        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB1.png",
+        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB1.webp",
         "objectFit": "contain"
       },
       {
@@ -15669,7 +15669,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il suo design compatto rende Felina la compagna ideale per laboratori con poco spazio o da portare a eventi e competizioni sportive dove personalizzi sul momento."
         },
         "icon": "Move",
-        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB2.png",
+        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB2.webp",
         "objectFit": "contain"
       },
       {
@@ -15686,7 +15686,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Costruita per sopportare giornate continue di produzione. La sua struttura solida garantisce risultati affidabili sessione dopo sessione."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB3.png",
+        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB3.webp",
         "objectFit": "contain"
       },
       {
@@ -15703,7 +15703,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Utilizzare Felina ti risulterà tanto facile quanto il resto della gamma Beinsen. La piastra riscaldante e i piani consentono un posizionamento comodo e un trasferimento del design professionale fin dal primo minuto."
         },
         "icon": "Settings",
-        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB4.png",
+        "image": "/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB4.webp",
         "objectFit": "contain"
       },
       {
@@ -15908,7 +15908,7 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Estambul é uma prensa de calor elétrica de abertura giratória (swing-away) de nível profissional com ecrã tátil. A sua abertura giratória a 180° maximiza o espaço de trabalho e facilita o carregamento e descarregamento de materiais, enquanto os sistemas avançados de segurança a tornam tão potente quanto segura.",
       "it": "Estambul è una pressa termica elettrica swing-away di livello professionale con touch screen. L'apertura girevole a 180° massimizza lo spazio di lavoro e semplifica il carico e scarico dei materiali, mentre i sistemi avanzati di sicurezza la rendono potente quanto sicura."
     },
-    "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoPrincipal.png",
+    "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoPrincipal.webp",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -16165,7 +16165,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "La platina superiore girevole a 180° massimizza lo spazio di lavoro, consentendo di caricare e scaricare materiali con totale facilità ed efficienza, riducendo l'affaticamento nelle lunghe sessioni."
         },
         "icon": "RotateCcw",
-        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB1.png"
+        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB1.webp"
       },
       {
         "title": {
@@ -16181,7 +16181,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "I sensori intelligenti rilevano ostruzioni e immediatamente fermano e sollevano la piastra di riscaldamento, proteggendo l'operatore e il materiale in ogni momento."
         },
         "icon": "ShieldCheck",
-        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB2.png"
+        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB2.webp"
       },
       {
         "title": {
@@ -16197,7 +16197,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Il design ergonomico richiede pressioni simultanee su entrambi i comandi per attivare la pressa, eliminando la possibilità di attivazione accidentale e garantendo un ambiente di lavoro sicuro."
         },
         "icon": "Hand",
-        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB3.png"
+        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB3.webp"
       },
       {
         "title": {
@@ -16213,7 +16213,7 @@ export const rawPlanchasData: Plancha[] = [
           "it": "Include cicli di preriscaldamento e trasferimento preprogrammati per eliminare l'umidità e fissare i design alla perfezione. Puoi anche saltare il preriscaldamento per velocizzare il processo con materiali asciutti."
         },
         "icon": "Layers",
-        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB4.png"
+        "image": "/products/maquinas/estambul-prensa-swing-away-electrica/fotoB4.webp"
       },
       {
         "title": {

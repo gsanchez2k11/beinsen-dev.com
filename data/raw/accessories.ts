@@ -13,7 +13,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra per cappellini per Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-gorras-beinsen-riad/01.png",
+    "image": "/products/accesorios/plato-gorras-beinsen-riad/01.webp",
     "description": {
       "es": "Optimiza tu prensa térmica modelo Beinsen Riad con nuestro plato inferior para gorras. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Riad. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
       "en": "Optimize your Beinsen Riad heat press with our lower cap plate. Specifically designed for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes. Manufactured with high quality materials, it guarantees uniform heat distribution and precise sublimation results.",
@@ -44,7 +44,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra per cappellini per Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-gorras-beinsen-obrei/01.png",
+    "image": "/products/accesorios/plato-gorras-beinsen-obrei/01.webp",
     "description": {
       "es": "Optimiza tu prensa térmica modelo Beinsen Obrei con nuestro plato inferior para gorras. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Obrei. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
       "en": "Optimize your Beinsen Obrei heat press with our lower cap plate. Specifically designed for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes. Manufactured with high quality materials, it guarantees uniform heat distribution and precise sublimation results.",
@@ -75,7 +75,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra 15x20cm per Beinsen Riad"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-15x20-beinsen-riad/01.png",
+    "image": "/products/accesorios/plato-15x20-beinsen-riad/01.webp",
     "description": {
       "es": "Optimiza tu prensa térmica modelo Beinsen Riad con nuestro plato inferior de 15x20cm. Diseñado específicamente para este modelo, nuestro plato inferior intercambiable te permite adaptar tu prensa térmica a diferentes tamaños de productos. Sea cual sea el tamaño que necesitas, nuestro plato inferior intercambiable te ofrece versatilidad y facilidad de uso. Fabricado con materiales de alta calidad, garantiza una distribución uniforme del calor y resultados de sublimación precisos. Mejora tu experiencia de personalización con nuestro plato inferior intercambiable para la prensa térmica Beinsen Riad. ¡Aprovecha al máximo tu equipo y crea productos personalizados de calidad excepcional!",
       "en": "Optimize your Beinsen Riad heat press with our 15x20cm lower plate. Specifically designed for this model, our interchangeable lower plate allows you to adapt your heat press to different product sizes.",
@@ -115,7 +115,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15x15cm per pressa Beinsen Obrei"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-15x15-beinsen-obrei/01.png",
+    "image": "/products/accesorios/plato-base-15x15-beinsen-obrei/01.webp",
     "description": {
       "es": "Plato base de 15x15 cm. para prensa térmica Beinsen Obrei. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa.",
       "en": "15x15 cm base plate for Beinsen Obrei heat press. Made of tough, high-quality materials to ensure uniform and precise application.",
@@ -155,7 +155,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile 18x18cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-intercambiable-18x18-barbados/01.png",
+    "image": "/products/accesorios/plato-intercambiable-18x18-barbados/01.webp",
     "description": {
       "es": "Plato base intercambiable de 18 x 18 cm para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para logos y pequeños diseños.",
       "en": "Interchangeable 18 x 18 cm base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for logos and small designs.",
@@ -195,7 +195,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile tonda 24cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-intercambiable-redondo-24-barbados/01.png",
+    "image": "/products/accesorios/plato-intercambiable-redondo-24-barbados/01.webp",
     "description": {
       "es": "Plato base redondo de 24cm de diámetro para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para platos, cojines y diseños circulares.",
       "en": "24cm diameter round base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for plates, cushions and circular designs.",
@@ -235,7 +235,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile per scarpe per Barbados"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-intercambiable-zapatillas-barbados/01.png",
+    "image": "/products/accesorios/plato-intercambiable-zapatillas-barbados/01.webp",
     "description": {
       "es": "Plato base para zapatillas para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Si te dedicas a la personalización de productos, un plato para zapatillas puede ser una excelente inversión para ampliar tu catálogo y atraer más clientes.",
       "en": "Shoe base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. If you personalize products, a shoe plate can be an excellent investment to expand your catalog and attract more customers.",
@@ -266,7 +266,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile 18x38cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-intercambiable-18x38-barbados/01.png",
+    "image": "/products/accesorios/plato-intercambiable-18x38-barbados/01.webp",
     "description": {
       "es": "Plato base de 18 x 38 cm para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para camisetas infantiles y de tallas pequeñas.",
       "en": "18 x 38 cm base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for children's and small size t-shirts.",
@@ -306,7 +306,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile 18x45cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-intercambiable-18x45-barbados/01.png",
+    "image": "/products/accesorios/plato-intercambiable-18x45-barbados/01.webp",
     "description": {
       "es": "Plato base de 18 x 45 cm para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para prendas y textiles estrechos de gran longitud.",
       "en": "18 x 45 cm base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for narrow and long textiles or garments.",
@@ -346,7 +346,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra intercambiabile 30x35cm per Beinsen Barbados"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-intercambiable-30x35-barbados/01.png",
+    "image": "/products/accesorios/plato-intercambiable-30x35-barbados/01.webp",
     "description": {
       "es": "Plato base de 30 x 35 cm para tu plancha transfer Beinsen Barbados. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para materiales de tamaño mediano que requieren tensión.",
       "en": "30 x 35 cm base plate for your Beinsen Barbados transfer press. Made of tough, high-quality materials to ensure uniform and precise application. Perfect for medium-sized materials that require tension.",
@@ -386,7 +386,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 18x18cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-18x18-cambio-rapido/01.png",
+    "image": "/products/accesorios/plato-base-18x18-cambio-rapido/01.webp",
     "description": {
       "es": "Plato base de 18 x 18 centímetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de pequeños objetos de manera sencilla.",
       "en": "18 x 18 cm base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing small objects.",
@@ -426,7 +426,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 18x38cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-18x38-cambio-rapido/01.png",
+    "image": "/products/accesorios/plato-base-18x38-cambio-rapido/01.webp",
     "description": {
       "es": "Plato base de 18 x 38 centímetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Ideal para la personalización de mangas de manera sencilla.",
       "en": "18 x 38 cm base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing sleeves easily.",
@@ -466,7 +466,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 18x45cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-18x45-cambio-rapido/01.png",
+    "image": "/products/accesorios/plato-base-18x45-cambio-rapido/01.webp",
     "description": {
       "es": "Plato base de 18 x 45 centímetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de pantalones de manera sencilla.",
       "en": "18 x 45 cm base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing pants easily.",
@@ -506,7 +506,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 30x35cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-30x35-cambio-rapido/01.png",
+    "image": "/products/accesorios/plato-base-30x35-cambio-rapido/01.webp",
     "description": {
       "es": "Plato base 30 x 35 centimetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de prendas infantiles u objetos de tamaño mediano de manera sencilla.",
       "en": "30 x 35 cm base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing children's garments or medium-sized objects easily.",
@@ -546,7 +546,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 18x38cm speciale scarpe per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-zapatillas-cambio-rapido/02.png",
+    "image": "/products/accesorios/plato-base-zapatillas-cambio-rapido/02.webp",
     "description": {
       "es": "Plato base especial para zapatillas de 18 x 38 centímetros compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Ideal para la personalización de zapatillas de manera sencilla.",
       "en": "Special 18 x 38 cm shoe base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing sneakers easily.",
@@ -586,7 +586,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base tonda 24cm per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-redondo-24-cambio-rapido/02.png",
+    "image": "/products/accesorios/plato-base-redondo-24-cambio-rapido/02.webp",
     "description": {
       "es": "Plato base redondo de 24 centimetros de diámetro compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de objetos redondo o sin bordes.",
       "en": "24cm diameter round base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing round or borderless objects.",
@@ -626,7 +626,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale cappellini per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-gorras-cambio-rapido/02.png",
+    "image": "/products/accesorios/plato-base-gorras-cambio-rapido/02.webp",
     "description": {
       "es": "Plato base especial para gorras compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de hasta 4 gorras de manera simultánea.",
       "en": "Special cap base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing up to 4 caps simultaneously.",
@@ -657,7 +657,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base speciale magliette per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-camisetas-cambio-rapido/02.png",
+    "image": "/products/accesorios/plato-base-camisetas-cambio-rapido/02.webp",
     "description": {
       "es": "Plato base especial para camisetas compatible con el sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de camisetas con su etiqueta interior.",
       "en": "Special t-shirt base plate compatible with the quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Ideal for personalizing t-shirts with their inner label.",
@@ -687,7 +687,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 40x50cm per 2 maniche per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-40x50-2mangas-cambio-rapido/02.png",
+    "image": "/products/accesorios/plato-base-40x50-2mangas-cambio-rapido/02.webp",
     "description": {
       "es": "Plato base de 40 x 50 cm. especial para mangas con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de 2 mangas a la vez.",
       "en": "40 x 50 cm base plate special for sleeves with quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. This size is ideal for customizing 2 sleeves at once.",
@@ -727,7 +727,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 12 x 45cm speciale maniche per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-12x45-mangas-cambio-rapido/01.png",
+    "image": "/products/accesorios/plato-base-12x45-mangas-cambio-rapido/01.webp",
     "description": {
       "es": "Plato base de 12 x 45 cm. con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de mangas.",
       "en": "12 x 45 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials to ensure precise and even application. This size is ideal for personalizing sleeves.",
@@ -767,7 +767,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15 x 50cm speciale pantaloni per cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-15x50-pantalones-cambio-rapido/01.png",
+    "image": "/products/accesorios/plato-base-15x50-pantalones-cambio-rapido/01.webp",
     "description": {
       "es": "Plato base de 15 x 50 cm. con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Este tamaño resulta ideal para la personalización de pantalones.",
       "en": "15 x 50 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials to ensure precise and even application. This size is ideal for personalizing pants.",
@@ -807,7 +807,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15,5x25,5cm per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-15-5x25-5-cambio-rapido/01.png",
+    "image": "/products/accesorios/plato-base-15-5x25-5-cambio-rapido/01.webp",
     "description": {
       "es": "Plato base de 15,5 x 25,5 cm. con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para mangas, pantalones, bufandas, bolsos y fundas.",
       "en": "15.5 x 25.5 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials for precise and even application. Perfect for sleeves, pants, scarves, bags and cases.",
@@ -847,7 +847,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15x25cm per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-15x25-cambio-rapido/01.png",
+    "image": "/products/accesorios/plato-base-15x25-cambio-rapido/01.webp",
     "description": {
       "es": "Plato base de 15 x 25 cm. con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para mangas, pantalones, bufandas, bolsos y fundas.",
       "en": "15 x 25 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Perfect for sleeves, pants, scarves, bags and cases.",
@@ -927,7 +927,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Piastra base 15x15cm per sistema di cambio rapido"
     },
     "price": "Consultar PVP",
-    "image": "/products/accesorios/plato-base-15x15-cambio-rapido/01.png",
+    "image": "/products/accesorios/plato-base-15x15-cambio-rapido/01.webp",
     "description": {
       "es": "Plato base de 15 x 15 cm con sistema de intercambio rápido para tu plancha transfer Beinsen. Fabricado con materiales resistentes y de alta calidad para garantizar una aplicación uniforme y precisa. Perfecto para parches, logos, posavasos y otros materiales pequeños.",
       "en": "15 x 15 cm base plate with quick change system for your Beinsen transfer press. Made of tough, high-quality materials for uniform and precise application. Perfect for patches, logos, coasters and other small items.",
@@ -967,7 +967,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Termometro digitale a infrarossi IT-122"
     },
     "price": 24.9,
-    "image": "/products/accesorios/termometro-digital-infrarrojos-it122/01.png",
+    "image": "/products/accesorios/termometro-digital-infrarrojos-it122/01.webp",
     "description": {
       "es": "Termómetro infrarrojo digital portátil sin contacto. Permite medir la temperatura de una habitación o de una taza al momento mientras se presiona el botón de modo de objeto. Ideal para controlar la temperatura con rapidez y precisión desde una distancia de seguridad.",
       "en": "Portable non-contact digital infrared thermometer. Allows measuring room or object temperature instantly. Ideal for monitoring temperature quickly and accurately from a safety distance.",
@@ -1016,7 +1016,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Guanti protettivi in cotone"
     },
     "price": 8.65,
-    "image": "/products/accesorios/guantes-protectores-algodon/01.png",
+    "image": "/products/accesorios/guantes-protectores-algodon/01.webp",
     "description": {
       "es": "Guantes protectores de algodón para trabajar con total seguridad. Permiten manipular sin peligro planchas transfer y soportes impresos. Con textura de nitrilo para mejor adherencia y resistencia térmica hasta 250ºC.",
       "en": "Protective cotton gloves for working with total safety. They allow handling transfer presses and printed supports without danger. Featuring nitrile texture for better grip and heat resistance up to 250ºC.",
@@ -1065,7 +1065,7 @@ export const rawAccessoriesData: Accessory[] = [
       "it": "Carrello universale grande con ruote per pressa termica"
     },
     "price": 265,
-    "image": "/products/accesorios/mesa-universal-grande-ruedas/01.png",
+    "image": "/products/accesorios/mesa-universal-grande-ruedas/01.webp",
     "description": {
       "es": "Soporte Móvil Universal para planchas transfer Beinsen. Con una superficie de 98x88 cm y una altura de 71 cm, aguanta prensas de todo tipo. Sus cuatro ruedas giratorias con freno permiten moverlo con facilidad. Incluye un estante inferior para organizar herramientas y materiales.",
       "en": "Universal Mobile Stand for Beinsen transfer presses. With a surface of 98x88 cm and a height of 71 cm, it supports all types of presses. Its four rotating wheels with brakes allow for easy movement. Includes a bottom shelf to organize tools and materials.",
