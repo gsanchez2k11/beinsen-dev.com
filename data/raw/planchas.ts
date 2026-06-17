@@ -471,9 +471,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Acaba con las tazas aburridas a golpe de personalización. La plancha transfer profesional para tazas Beinsen Sore es nuestra especialista en tazas. Puedes incrementar la producción x5 o bien utilizar cada resistencia como si fuera una plancha individual.",
-      "en": "End boring mugs with personalization. The Beinsen Sore professional mug press is our specialist for mugs. You can increase production x5 or use each element as if it were an individual press.",
-      "pt": "Acabe com as canecas aborrecidas com a personalização. A prensa profissional Beinsen Sore é a nossa especialista em canecas.",
-      "it": "Basta con le tazze noiose grazie alla personalizzazione. La pressa professionale Beinsen Sore è la nostra specialista per le tazze."
+      "en": "End boring mugs with personalization. The Beinsen Sore professional mug heat press is our mug specialist. You can multiply your production by 5 or use each heating element as if it were a single press.",
+      "pt": "Acabe com as canecas aborrecidas à custa de personalização. A prensa térmica profissional para canecas Beinsen Sore é a nossa especialista em canecas. Pode multiplicar a sua produção por 5 ou usar cada resistência como se fosse uma prensa individual.",
+      "it": "Basta con le tazze noiose grazie alla personalizzazione. La pressa professionale per tazze Beinsen Sore è la nostra specialista. Puoi moltiplicare la produzione per 5 o usare ogni resistenza come se fosse una pressa singola."
     },
     "image": "/products/maquinas/sore-plancha-profesional-tazas/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -897,9 +897,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Con la plancha para platos se pueden realizar todos los métodos comunes de transferencia en caliente (flock, flex, sublimación, etc.). Funciona con una resistencia de 155 mm intercambiable, de acero sólido resistente a los arañazos, con temperatura, tiempo ajustable y alarma.",
-      "en": "To request more information, you can contact us during our customer service hours. Check which is the nearest technical service to your address.",
-      "pt": "Para mais informações, contacte-nos durante o horário de atendimento ao cliente.",
-      "it": "Per richiedere maggiori informazioni, puoi contattarci durante l'orario di assistenza clienti."
+      "en": "With the heat press for plates you can perform all the common heat-transfer methods (flock, flex, sublimation, etc.). It works with an interchangeable 155 mm scratch-resistant solid-steel heating element, with adjustable temperature, time and alarm.",
+      "pt": "Com a prensa térmica para pratos pode realizar todos os métodos comuns de transferência por calor (flock, flex, sublimação, etc.). Funciona com uma resistência intercambiável de 155 mm em aço sólido resistente a riscos, com temperatura e tempo ajustáveis e alarme.",
+      "it": "Con la pressa termica per piatti puoi realizzare tutti i metodi comuni di trasferimento a caldo (flock, flex, sublimazione, ecc.). Funziona con una resistenza intercambiabile da 155 mm in acciaio solido resistente ai graffi, con temperatura e tempo regolabili e allarme."
     },
     "image": "/products/maquinas/dorian-plancha-termica-platos/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -1251,9 +1251,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Imagina poder crear tus propias tazas personalizadas con resultados profesionales, ¿no sería genial? Con la plancha térmica Barahona, eso es posible. Esta plancha es perfecta para aquellos que buscan una solución eficiente y práctica para personalizar tazas.",
-      "en": "Versatility in the palm of your hand. With the Alina press you can customize mugs of different sizes thanks to its interchangeable elements.",
-      "pt": "Versatilidade na palma da sua mão. Com a prensa Alina poderá personalizar canecas de diferentes tamanhos.",
-      "it": "Versatilità nel palmo della tua mano. Con la pressa Alina potrai personalizzare tazze di diverse dimensioni."
+      "en": "Imagine being able to create your own personalized mugs with professional results — wouldn't that be great? With the Barahona heat press, that's possible. This press is perfect for those looking for an efficient, practical solution to personalize mugs.",
+      "pt": "Imagine poder criar as suas próprias canecas personalizadas com resultados profissionais — não seria fantástico? Com a prensa térmica Barahona, isso é possível. Esta prensa é perfeita para quem procura uma solução eficiente e prática para personalizar canecas.",
+      "it": "Immagina di poter creare le tue tazze personalizzate con risultati professionali — non sarebbe fantastico? Con la pressa termica Barahona, è possibile. Questa pressa è perfetta per chi cerca una soluzione efficiente e pratica per personalizzare le tazze."
     },
     "image": "/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -2450,9 +2450,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Personalizar tazas nunca resultó tan sencillo como con la prensa automática Beinsen Andra. El sistema de envoltura automática hara que plasmar tus diseños sea un auténtico juego de niños.",
-      "en": "Personalizing mugs has never been so easy as with the Beinsen Andra automatic press. The automatic wrapping system makes printing your designs child's play.",
-      "pt": "Personalizar canecas nunca foi tão simples como com a prensa automática Beinsen Andra.",
-      "it": "Personalizzare le tazze non è mai stato così simple come con la pressa automatica Beinsen Andra."
+      "en": "Personalizing mugs has never been so easy as with the Beinsen Andra automatic press. The automatic wrapping system turns transferring your designs into child's play.",
+      "pt": "Personalizar canecas nunca foi tão simples como com a prensa automática Beinsen Andra. O sistema de envolvimento automático torna a aplicação dos seus desenhos numa autêntica brincadeira de crianças.",
+      "it": "Personalizzare le tazze non è mai stato così semplice come con la pressa automatica Beinsen Andra. Il sistema di avvolgimento automatico rende il trasferimento dei tuoi disegni un vero gioco da ragazzi."
     },
     "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoPrincipal.webp",
     "heroVideo": "https://beinsen.com/wp-content/uploads/2025/04/andra.webm",
@@ -2881,9 +2881,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "¡Descubre la nueva era de la transferencia de calor y sublimación con Caén! La plancha térmica de doble estación neumática que revolucionará tu experiencia de impresión.",
-      "en": "Discover the new era of heat transfer and sublimation with Caén! The double station pneumatic heat press that will revolutionize your printing experience.",
-      "pt": "Descubra a nova era da transferência de calor e sublimação com Caén!",
-      "it": "Scopri la nuova era del trasferimento di calore e della sublimazione con Caén!"
+      "en": "Discover the new era of heat transfer and sublimation with Caén! The double-station pneumatic heat press that will revolutionize your printing experience.",
+      "pt": "Descubra a nova era da transferência de calor e da sublimação com a Caén! A prensa térmica pneumática de estação dupla que vai revolucionar a sua experiência de impressão.",
+      "it": "Scopri la nuova era del trasferimento di calore e della sublimazione con Caén! La pressa termica pneumatica a doppia stazione che rivoluzionerà la tua esperienza di stampa."
     },
     "image": "/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -3832,9 +3832,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Personaliza a lo grande con la plancha transfer de gran formato Beinsen Doha. Gracias al plato de 50x80 cm podrás llegar donde no lo hace el resto y ofrecer a tus clientes personalizaciones más espectaculares, y sin renunciar a la precisión, comodidad y robustez de una plancha sandwich tradicional.",
-      "en": "Industrial sublimation machines with pneumatic closure and opening for high production.",
-      "pt": "Máquinas industriais pneumáticas de alta produção.",
-      "it": "Macchine industriali pneumatiche ad alta produzione."
+      "en": "Personalize on a grand scale with the Beinsen Doha large-format heat transfer press. Thanks to its 50x80 cm platen you can reach where the others can't and offer your customers more spectacular personalizations, without sacrificing the precision, comfort and robustness of a traditional sandwich press.",
+      "pt": "Personalize em grande escala com a prensa transfer de grande formato Beinsen Doha. Graças ao prato de 50x80 cm, poderá chegar onde os outros não chegam e oferecer aos seus clientes personalizações mais espetaculares, sem abdicar da precisão, conforto e robustez de uma prensa sandwich tradicional.",
+      "it": "Personalizza in grande con la pressa transfer di grande formato Beinsen Doha. Grazie al suo piano da 50x80 cm potrai arrivare dove gli altri non arrivano e offrire ai tuoi clienti personalizzazioni più spettacolari, senza rinunciare alla precisione, comodità e robustezza di una pressa sandwich tradizionale."
     },
     "image": "/products/maquinas/doha-plancha-transfer-gran-formato/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -4300,9 +4300,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Descubre la plancha térmica Jamaica de Beinsen, una herramienta de personalización versátil y de alta calidad. Con sus accesorios intercambiables y su amplia superficie de trabajo, podrás sublimar una amplia gama de objetos y dar rienda suelta a tu creatividad.",
-      "en": "The versatile solution for your workshop. Personalize mugs, caps, plates, and textiles with a single machine.",
-      "pt": "A solução versátil para a sua oficina.",
-      "it": "La soluzione versatile per il tuo laboratorio."
+      "en": "Discover the Beinsen Jamaica heat press, a versatile, high-quality personalization tool. With its interchangeable accessories and ample work surface, you can sublimate a wide range of objects and give free rein to your creativity.",
+      "pt": "Descubra a prensa térmica Jamaica da Beinsen, uma ferramenta de personalização versátil e de alta qualidade. Com os seus acessórios intercambiáveis e ampla superfície de trabalho, poderá sublimar uma vasta gama de objetos e dar largas à sua criatividade.",
+      "it": "Scopri la pressa termica Jamaica di Beinsen, uno strumento di personalizzazione versatile e di alta qualità. Con i suoi accessori intercambiabili e l'ampia superficie di lavoro, potrai sublimare una vasta gamma di oggetti e dare libero sfogo alla tua creatività."
     },
     "image": "/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -4802,9 +4802,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Con tu nueva prensa térmica neumática Beinsen Esparta no podrás parar de personalizar. Porque este nuevo modelo incorpora un montón de novedades que la hacen más cómoda, más sencilla, más precisa e incluso más bonita. Podrás tener en tus manos el modelo más cómodo y avanzado que hemos lanzado hasta la fecha. Y todo esto aumentando aún más tu producción para hacerla también más rentable.",
-      "en": "New level of comfort without losing efficiency. Advanced touch control and memory for your best settings.",
-      "pt": "Novo nível de conforto sem perder eficiência.",
-      "it": "Nuovo livello di comfort senza perdere efficienza."
+      "en": "With your new Beinsen Esparta pneumatic heat press you won't be able to stop personalizing. Because this new model packs a lot of upgrades that make it more comfortable, simpler, more precise and even more beautiful. You'll have in your hands the most comfortable and advanced model we've launched to date. And all of this while further boosting your production to make it more profitable too.",
+      "pt": "Com a sua nova prensa térmica pneumática Beinsen Esparta não vai conseguir parar de personalizar. Porque este novo modelo incorpora um conjunto de novidades que o tornam mais cómodo, mais simples, mais preciso e até mais bonito. Vai ter nas mãos o modelo mais cómodo e avançado que lançámos até à data. E tudo isto aumentando ainda mais a sua produção para a tornar também mais rentável.",
+      "it": "Con la tua nuova pressa termica pneumatica Beinsen Esparta non potrai smettere di personalizzare. Perché questo nuovo modello incorpora numerose novità che lo rendono più comodo, più semplice, più preciso e persino più bello. Potrai avere tra le mani il modello più comodo e avanzato che abbiamo lanciato fino a oggi. E tutto questo aumentando ulteriormente la tua produzione per renderla anche più redditizia."
     },
     "image": "/products/maquinas/esparta-prensa-termica-neumatica/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -5358,9 +5358,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "¡Personaliza tus tazas con la plancha térmica Barein! Con resistencias intercambiables para tazas de 6-9oz y controlador digital preciso, obtén resultados increíbles en solo 5 minutos.",
-      "en": "Check our previous mug and plate press models.",
-      "pt": "Consulte os nossos modelos anteriores.",
-      "it": "Consulta i nostri modelli precedenti."
+      "en": "Personalize your mugs with the Barein heat press! With interchangeable heating elements for 6-9oz mugs and a precise digital controller, get amazing results in just 5 minutes.",
+      "pt": "Personalize as suas canecas com a prensa térmica Barein! Com resistências intercambiáveis para canecas de 6-9oz e controlador digital preciso, obtenha resultados incríveis em apenas 5 minutos.",
+      "it": "Personalizza le tue tazze con la pressa termica Barein! Con resistenze intercambiabili per tazze da 6-9oz e controllore digitale preciso, ottieni risultati incredibili in soli 5 minuti."
     },
     "image": "/products/maquinas/barein-plancha-termica/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -5857,9 +5857,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Imagina poder crear tus propias tazas personalizadas con resultados profesionales, ¿no sería genial? Con la plancha térmica Maine, eso es posible. Esta plancha es perfecta para aquellos que buscan una solución eficiente y práctica para personalizar tazas.",
-      "en": "Mug heat press focused on agile personalization and consistent results.",
-      "pt": "Prensa térmica para canecas focada em personalização ágil e resultados consistentes.",
-      "it": "Pressa termica per tazze orientata a personalizzazione agile e risultati consistenti."
+      "en": "Imagine being able to create your own personalized mugs with professional results — wouldn't that be great? With the Maine heat press, that's possible. This press is perfect for those looking for an efficient, practical solution to personalize mugs.",
+      "pt": "Imagine poder criar as suas próprias canecas personalizadas com resultados profissionais — não seria fantástico? Com a prensa térmica Maine, isso é possível. Esta prensa é perfeita para quem procura uma solução eficiente e prática para personalizar canecas.",
+      "it": "Immagina di poter creare le tue tazze personalizzate con risultati professionali — non sarebbe fantastico? Con la pressa termica Maine, è possibile. Questa pressa è perfetta per chi cerca una soluzione efficiente e pratica per personalizzare le tazze."
     },
     "image": "/products/maquinas/maine-plancha-para-tazas/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -6351,9 +6351,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "La plancha térmica para la personalización de tazas puede ser un trabajo laborioso y limitado en cantidad si se usa el método manual. Pero con la plancha térmica Aruba, todo eso se convierte en cosa del pasado. ¡Personaliza dos tazas a la vez de diferentes formas y capacidades!",
-      "en": "Mug heat press designed for workshops needing speed and stability.",
-      "pt": "Prensa térmica para canecas pensada para oficinas que exigem velocidade e estabilidade.",
-      "it": "Pressa termica per tazze pensata per laboratori che richiedono velocità e stabilità."
+      "en": "Heat presses for mug personalization can be a laborious, low-volume job when done by hand. But with the Aruba heat press, all that becomes a thing of the past. Personalize two mugs at the same time of different shapes and capacities!",
+      "pt": "Personalizar canecas com prensa pode ser um trabalho moroso e limitado em quantidade quando feito à mão. Mas com a prensa térmica Aruba, tudo isso fica no passado. Personalize duas canecas ao mesmo tempo de diferentes formatos e capacidades!",
+      "it": "Personalizzare tazze con la pressa termica può essere un lavoro laborioso e limitato in quantità se fatto a mano. Ma con la pressa termica Aruba, tutto questo è acqua passata. Personalizza due tazze contemporaneamente di forme e capacità diverse!"
     },
     "image": "/products/maquinas/aruba-plancha-para-tazas/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -7299,9 +7299,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "La plancha transfer compacta Beinsen Pocola con plato de 15 x 20 cm está diseñada especialmente para trabajos de sublimación en formato pequeño. Perfecta para personalizar artículos como bodies, camisetas infantiles, parches o detalles en prendas, combina tamaño reducido con alto rendimiento.",
-      "en": "Simple, compact, and economical. 15 x 20 cm plate ideal for keychains and cases.",
-      "pt": "Simples, compacta e económica.",
-      "it": "Semplice, compatta ed economica."
+      "en": "The Beinsen Pocola compact heat transfer press with 15 x 20 cm platen is specially designed for small-format sublimation work. Perfect for personalizing items such as bodysuits, kids' t-shirts, patches or garment details, it combines a reduced footprint with high performance.",
+      "pt": "A prensa transfer compacta Beinsen Pocola com prato de 15 x 20 cm foi especialmente desenhada para trabalhos de sublimação em formato pequeno. Perfeita para personalizar artigos como bodies, t-shirts infantis, emblemas ou detalhes em peças, combina tamanho reduzido com alto desempenho.",
+      "it": "La pressa transfer compatta Beinsen Pocola con piano da 15 x 20 cm è progettata specificamente per lavori di sublimazione in piccolo formato. Perfetta per personalizzare articoli come body, t-shirt per bambini, toppe o dettagli sui capi, combina dimensioni ridotte con alte prestazioni."
     },
     "image": "/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -7680,9 +7680,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "La plancha transfer compacta Beinsen Gante con plato para gorras está diseñada especialmente para la iniciación en el mercado de las gorras personalizadas, o para pequeñas producciones o eventos ocasionales.",
-      "en": "The perfect tool to get started in cap personalization. Includes attachment support.",
-      "pt": "A ferramenta perfeita para começar a personalizar bonés.",
-      "it": "Lo strumento perfetto per iniziare la personalizzazione dei cappelli."
+      "en": "The Beinsen Gante compact heat transfer press with cap platen is specially designed for getting started in the personalized cap market, or for small production runs and occasional events.",
+      "pt": "A prensa transfer compacta Beinsen Gante com prato para bonés foi especialmente desenhada para a iniciação no mercado dos bonés personalizados, ou para pequenas produções e eventos ocasionais.",
+      "it": "La pressa transfer compatta Beinsen Gante con piano per cappellini è progettata specificamente per l'avvio nel mercato dei cappellini personalizzati, o per piccole produzioni ed eventi occasionali."
     },
     "image": "/products/maquinas/gante-plancha-manual-gorras/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -10224,9 +10224,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Adéntrate en el mundo de la personalización con nuestra plancha transfer manual Beinsen Belice. Encuentra la belleza de la simplicidad y la satisfacción de las cosas que hacen exactamente lo que tienen que hacer. Cortita y al pie, para todos los públicos y todos los bolsillos. Y en versión de 38×38 y de 40x50cm.",
-      "en": "Belice textile heat press designed for daily jobs with consistent results and simple operation.",
-      "pt": "Prensa térmica têxtil Belice desenhada para trabalhos diários com resultados consistentes.",
-      "it": "Pressa termica tessile Belice progettata per lavori quotidiani con risultati costanti."
+      "en": "Step into the world of personalization with our Beinsen Belice manual heat transfer press. Find the beauty of simplicity and the satisfaction of things that do exactly what they're meant to do. Short and to the point, for every audience and every budget. Available in 38x38 and 40x50 cm versions.",
+      "pt": "Entre no mundo da personalização com a nossa prensa transfer manual Beinsen Belice. Encontre a beleza da simplicidade e a satisfação de coisas que fazem exatamente o que devem fazer. Direta ao assunto, para todos os públicos e todos os orçamentos. E em versão de 38x38 e 40x50 cm.",
+      "it": "Entra nel mondo della personalizzazione con la nostra pressa transfer manuale Beinsen Belice. Scopri la bellezza della semplicità e la soddisfazione delle cose che fanno esattamente quello che devono fare. Diretta al punto, per tutti i pubblici e tutte le tasche. E in versione 38x38 e 40x50 cm."
     },
     "image": "/products/maquinas/belice-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -10678,9 +10678,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "La plancha transfer para camisetas Beinsen Barbados es la amiga que nunca falla. Desarrollada desde la experiencia y con el objetivo de ofrecer un producto robusto, duradero, fiable y equilibrado, esta prensa térmica disponible con platos de 38×38 y de 40x50cm. extraibles e intercambiables te permite hacer de todo y para todos los públicos.",
-      "en": "Barbados textile heat press aimed at workshops seeking stability and performance.",
-      "pt": "Prensa térmica têxtil Barbados para oficinas que procuram estabilidade e desempenho.",
-      "it": "Pressa termica tessile Barbados pensata per laboratori che cercano stabilità e rendimento."
+      "en": "The Beinsen Barbados heat transfer press for t-shirts is the friend that never fails. Developed from experience and with the goal of offering a robust, durable, reliable and balanced product, this heat press — available with 38x38 and 40x50 cm removable, interchangeable platens — lets you do everything for everyone.",
+      "pt": "A prensa transfer para t-shirts Beinsen Barbados é a amiga que nunca falha. Desenvolvida com base na experiência e com o objetivo de oferecer um produto robusto, durável, fiável e equilibrado, esta prensa térmica — disponível com pratos de 38x38 e 40x50 cm extraíveis e intercambiáveis — permite-lhe fazer de tudo e para todos os públicos.",
+      "it": "La pressa transfer per t-shirt Beinsen Barbados è l'amica che non delude mai. Sviluppata partendo dall'esperienza e con l'obiettivo di offrire un prodotto robusto, durevole, affidabile ed equilibrato, questa pressa termica — disponibile con piani da 38x38 e 40x50 cm estraibili e intercambiabili — ti permette di fare di tutto e per ogni pubblico."
     },
     "image": "/products/maquinas/barbados-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -11239,9 +11239,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Olvídate de palancas, olvídate de girar roscas, olvídate de hacer raros escorzos para colocar una prenda, y olvídate también de que tu prensa térmica ocupe un espacio innecesario, tu nueva plancha transfer Beinsen Alaska está pensada para ofrecerte versatilidad de la manera más cómoda. Y ahora disponible en tamaño 38×38 y 40x50cm.",
-      "en": "Alaska textile heat press ready for custom production with agile workflow.",
-      "pt": "Prensa térmica têxtil Alaska pronta para produção personalizada com fluxo ágil.",
-      "it": "Pressa termica tessile Alaska pronta per produzioni personalizzate con flusso agile."
+      "en": "Forget about levers, forget about turning thread screws, forget about awkward postures to place a garment, and forget too about your heat press taking up unnecessary space. Your new Beinsen Alaska transfer press is designed to give you versatility in the most comfortable way. Now available in 38x38 and 40x50 cm sizes.",
+      "pt": "Esqueça alavancas, esqueça rodar roscas, esqueça posturas estranhas para colocar uma peça, e esqueça também que a sua prensa térmica ocupe um espaço desnecessário. A sua nova prensa transfer Beinsen Alaska foi pensada para lhe oferecer versatilidade da forma mais cómoda. E agora disponível em tamanho 38x38 e 40x50 cm.",
+      "it": "Dimentica le leve, dimentica di girare viti, dimentica di assumere posizioni scomode per posizionare un capo, e dimentica anche che la tua pressa termica occupi spazio inutile, la tua nuova pressa transfer Beinsen Alaska è pensata per offrirti versatilità nel modo più comodo. E ora disponibile nelle dimensioni 38x38 e 40x50 cm."
     },
     "image": "/products/maquinas/alaska-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -11702,9 +11702,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Descubre la evolución natural de las prensas térmicas con nuestra nueva plancha transfer profesional Beinsen Malvinas. Su diseño plagado de novedades hará el proceso de planchado más ágil, preciso y seguro para que tú te puedas preocupar de lo realmente importante.",
-      "en": "Malvinas textile heat press focused on pressing precision and reliable operation.",
-      "pt": "Prensa térmica têxtil Malvinas focada na precisão e fiabilidade de uso.",
-      "it": "Pressa termica tessile Malvinas focalizzata su precisione di pressatura e affidabilità."
+      "en": "Discover the natural evolution of heat presses with our new Beinsen Malvinas professional transfer press. Its design — packed with innovations — will make the pressing process more agile, precise and safe so you can focus on what really matters.",
+      "pt": "Descubra a evolução natural das prensas térmicas com a nossa nova prensa transfer profissional Beinsen Malvinas. O seu design repleto de novidades tornará o processo de prensagem mais ágil, preciso e seguro para que se possa preocupar com o que é realmente importante.",
+      "it": "Scopri l'evoluzione naturale delle presse termiche con la nostra nuova pressa transfer professionale Beinsen Malvinas. Il suo design ricco di novità renderà il processo di pressatura più agile, preciso e sicuro affinché tu possa occuparti di ciò che è davvero importante."
     },
     "image": "/products/maquinas/malvinas-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -12361,9 +12361,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Reinventa tu forma de trabajar con la plancha transfer de doble plato Beinsen Guyana. Tan robusta y fiable como el modelo Barbados pero con el doble de diversión.",
-      "en": "Guyana textile heat press focused on productivity and consistency in production runs.",
-      "pt": "Prensa térmica têxtil Guyana com foco em produtividade e consistência.",
-      "it": "Pressa termica tessile Guyana con focus su produttività e costanza."
+      "en": "Reinvent the way you work with the Beinsen Guyana double-platen transfer press. As robust and reliable as the Barbados model, but with twice the fun.",
+      "pt": "Reinvente a sua forma de trabalhar com a prensa transfer de prato duplo Beinsen Guyana. Tão robusta e fiável como o modelo Barbados, mas com o dobro da diversão.",
+      "it": "Reinventa il tuo modo di lavorare con la pressa transfer a doppio piano Beinsen Guyana. Robusta e affidabile come il modello Barbados, ma con il doppio del divertimento."
     },
     "image": "/products/maquinas/guyana-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -13390,9 +13390,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "La nueva estación de planchado contínuo Beinsen Tobago es toda una revolución en la personalización de camisetas. Cómo si de un eficiente ayudante se tratara, sólo tienes que alimentarlo de camisetas y ver como se apilan en la salida.",
-      "en": "The new Beinsen Tobago continuous pressing station is a revolution in T-shirt personalization. Just feed garments and watch them stack on output.",
-      "pt": "A nova estação de prensagem contínua Beinsen Tobago é uma revolução na personalização de camisetas.",
-      "it": "La nuova stazione di pressatura continua Beinsen Tobago è una rivoluzione nella personalizzazione delle magliette."
+      "en": "The new Beinsen Tobago continuous pressing station is a real revolution in t-shirt personalization. Like an efficient assistant, you just have to feed it t-shirts and watch them stack up at the output.",
+      "pt": "A nova estação de prensagem contínua Beinsen Tobago é toda uma revolução na personalização de t-shirts. Como se de um eficiente ajudante se tratasse, basta alimentá-la com t-shirts e ver como se empilham na saída.",
+      "it": "La nuova stazione di pressatura continua Beinsen Tobago è una vera rivoluzione nella personalizzazione di t-shirt. Come un assistente efficiente, basta che la alimenti con t-shirt e vedi come si impilano in uscita."
     },
     "image": "/products/maquinas/tobago-estacion-planchado-continuo/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -13823,9 +13823,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "¿Necesitas multiplicar tu producción sin perder un ápice de precisión? Entonces la prensa neumático doble Beinsen Normandia I es tu mejor opción. Su sistema de apertura y cierre neumáticos, su doble plato de gran tamaño y tu destreza formarán un tridente capaz de superar cualquier reto.",
-      "en": "Need to multiply production without losing precision? Beinsen Normandia I double pneumatic press is your best option.",
-      "pt": "Precisa multiplicar a produção sem perder precisão? A prensa pneumática dupla Beinsen Normandia I é a melhor opção.",
-      "it": "Hai bisogno di aumentare la produzione senza perdere precisione? La pressa pneumatica doppia Beinsen Normandia I è la scelta migliore."
+      "en": "Do you need to multiply your production without losing an ounce of precision? Then the Beinsen Normandía I pneumatic double press is your best option. Its pneumatic opening and closing system, its large double platen and your skill will form a trident capable of overcoming any challenge.",
+      "pt": "Precisa de multiplicar a sua produção sem perder um pingo de precisão? Então a prensa pneumática dupla Beinsen Normandía I é a sua melhor opção. O seu sistema de abertura e fecho pneumáticos, o seu duplo prato de grande dimensão e a sua destreza formarão um tridente capaz de superar qualquer desafio.",
+      "it": "Hai bisogno di moltiplicare la tua produzione senza perdere un'oncia di precisione? Allora la pressa pneumatica doppia Beinsen Normandía I è la tua scelta migliore. Il suo sistema di apertura e chiusura pneumatici, il suo doppio piano di grandi dimensioni e la tua abilità formeranno un tridente capace di superare qualsiasi sfida."
     },
     "image": "/products/maquinas/normandia-i-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -14359,9 +14359,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Si eres un profesional de la sublimación, entonces sabes lo importante que es tener una plancha térmica de alta calidad que pueda sublimar una gran cantidad de productos y que se fácil de usar. Ahí es donde entra nuestra plancha Normandia III, la herramienta perfecta para tus necesidades de sublimación.",
-      "en": "Normandia III textile heat press built for advanced personalization in demanding production runs.",
-      "pt": "Prensa térmica têxtil Normandia III criada para personalização avançada em produção exigente.",
-      "it": "Pressa termica tessile Normandia III pensata per personalizzazione avanzata in produzioni impegnative."
+      "en": "If you're a sublimation professional, you know how important it is to have a high-quality heat press that can sublimate a large quantity of products and is easy to use. That's where our Normandía III press comes in, the perfect tool for your sublimation needs.",
+      "pt": "Se é um profissional da sublimação, sabe como é importante ter uma prensa térmica de alta qualidade capaz de sublimar uma grande quantidade de produtos e fácil de usar. É aí que entra a nossa prensa Normandía III, a ferramenta perfeita para as suas necessidades de sublimação.",
+      "it": "Se sei un professionista della sublimazione, sai quanto sia importante avere una pressa termica di alta qualità in grado di sublimare una grande quantità di prodotti e che sia facile da usare. È qui che entra in gioco la nostra pressa Normandía III, lo strumento perfetto per le tue esigenze di sublimazione."
     },
     "image": "/products/maquinas/normandia-iii-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
@@ -14875,9 +14875,9 @@ export const rawPlanchasData: Plancha[] = [
     },
     "description": {
       "es": "Si eres un profesional de la sublimación, sabes lo crucial que es contar con una plancha neumática profesional de calidad superior, que pueda sublimar una amplia gama de productos de manera sencilla. Ahí es donde entra en juego nuestra plancha Normadia II, la herramienta perfecta para todas tus necesidades de sublimación.",
-      "en": "Normandia II textile heat press designed for stable personalization and consistent results.",
-      "pt": "Prensa térmica têxtil Normandia II pensada para personalização estável e resultados consistentes.",
-      "it": "Pressa termica tessile Normandia II pensata per personalizzazione stabile e risultati costanti."
+      "en": "If you're a sublimation professional, you know how crucial it is to have a professional pneumatic press of superior quality that can sublimate a wide range of products simply. That's where our Normandía II press comes into play, the perfect tool for all your sublimation needs.",
+      "pt": "Se é um profissional da sublimação, sabe como é crucial contar com uma prensa pneumática profissional de qualidade superior, capaz de sublimar uma vasta gama de produtos de forma simples. É aí que entra em jogo a nossa prensa Normandía II, a ferramenta perfeita para todas as suas necessidades de sublimação.",
+      "it": "Se sei un professionista della sublimazione, sai quanto sia cruciale poter contare su una pressa pneumatica professionale di qualità superiore, in grado di sublimare un'ampia gamma di prodotti in modo semplice. È qui che entra in gioco la nostra pressa Normandía II, lo strumento perfetto per tutte le tue esigenze di sublimazione."
     },
     "image": "/products/maquinas/normandia-ii-plancha-termica-textil/fotoPrincipal.webp",
     "price": "Consultar PVP",
