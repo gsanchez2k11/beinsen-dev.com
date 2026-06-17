@@ -287,21 +287,21 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                             {
                                 title: d.categories.machines,
                                 link: "/catalogo?type=planchas",
-                                img: "/categories/cat-maquinas.png",
+                                img: "/categories/cat-maquinas.webp",
                                 icon: Settings,
                                 tag: "High Production"
                             },
                             {
                                 title: d.categories.accs,
                                 link: "/catalogo?type=accessories",
-                                img: "/categories/cat-accesorios.png",
+                                img: "/categories/cat-accesorios.webp",
                                 icon: Box,
                                 tag: "Pro Hardware"
                             },
                             {
                                 title: d.categories.cons,
                                 link: "/catalogo?type=consumables",
-                                img: "/categories/cat-consumibles-v2.png",
+                                img: "/categories/cat-consumibles-v2.webp",
                                 icon: Package,
                                 tag: "Original Supplies"
                             }

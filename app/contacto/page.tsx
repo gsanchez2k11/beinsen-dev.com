@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContactoClient from "./contacto-client";
 import { SITE_URL } from "@/lib/site";
+import { faqData } from "@/data/faq";
 
 export const metadata: Metadata = {
     title: "Contacto y Presupuesto | Beinsen — Planchas Transfer Profesionales",
@@ -18,6 +19,30 @@ export const metadata: Metadata = {
     },
 };
 
+// FAQPage schema para Google Rich Results: cada par P/R del faqData se
+// expone como QAEntry en ES. Permite que las preguntas aparezcan
+// directamente en SERPs de Google.
+const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqData.map((item) => ({
+        "@type": "Question",
+        name: item.question.es,
+        acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer.es,
+        },
+    })),
+};
+
 export default function ContactoPage() {
-    return <ContactoClient />;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <ContactoClient />
+        </>
+    );
 }
