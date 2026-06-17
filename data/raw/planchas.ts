@@ -531,7 +531,7 @@ export const rawPlanchasData: Plancha[] = [
         "id": "cinta-termica-10mm"
       },
       {
-        "id": "resistencia-cilindrica-tazas-11oz-tipo-a"
+        "id": "resistencia-tazas-11oz-a"
       }
     ],
     "storyHeadline": {
@@ -2496,7 +2496,7 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "consumables": [
       {
-        "id": "resistencia-cilindrica-tazas-11oz-tipo-a"
+        "id": "resistencia-tazas-11oz-a"
       },
       {
         "id": "cinta-termica-10mm"
@@ -6908,7 +6908,7 @@ export const rawPlanchasData: Plancha[] = [
         "id": "cinta-termica-10mm"
       },
       {
-        "id": "resistencia-cilindrica-tazas-11oz-tipo-a"
+        "id": "resistencia-tazas-11oz-a"
       }
     ],
     "category": {
