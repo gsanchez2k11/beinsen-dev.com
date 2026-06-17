@@ -631,15 +631,6 @@
         "it": "Libretto di Manutenzione"
       },
       "url": "/manuales/normandia-i-plancha-termica-textil/Libro_Mantenimiento_Normandía_I_Plancha_Térmica_Textil_Beinsen.pdf"
-    },
-    {
-      "label": {
-        "es": "Libro de Mantenimiento",
-        "en": "Maintenance Book",
-        "pt": "Livro de Manutenção",
-        "it": "Libretto di Manutenzione"
-      },
-      "url": "/manuales/normandia-i-plancha-termica-textil/Libro_Mantenimiento_Normandía_I_Plancha_Térmica_Textil_Beinsen.pdf"
     }
   ],
   "normandia-ii-plancha-termica-textil": [
@@ -822,15 +813,6 @@
         "it": "/manuales/trinidad-prensa-termica-automatica/manual-it.pdf",
         "pt": "/manuales/trinidad-prensa-termica-automatica/manual-pt.pdf"
       }
-    },
-    {
-      "label": {
-        "es": "Libro de Mantenimiento",
-        "en": "Maintenance Book",
-        "pt": "Livro de Manutenção",
-        "it": "Libretto di Manutenzione"
-      },
-      "url": "/manuales/trinidad-prensa-termica-automatica/Libro_Mantenimiento_Trinidad_prensa_térmica_automática_Beinsen.pdf"
     },
     {
       "label": {
