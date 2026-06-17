@@ -31,7 +31,9 @@ export function enrichWithLocalImages<T extends { slug?: string; image?: string;
     hotspotImageHeight: detail?.height,
     storySegments: product.storySegments?.map((seg: any, i: number) => ({
       ...seg,
-      image: seg.image?.startsWith('/') ? seg.image : g[i % g.length],
+      // Si la image declarada esta en la galeria actual, usarla; si no
+      // (porque fue borrada), caer al fallback rotativo para evitar 404.
+      image: seg.image && g.includes(seg.image) ? seg.image : g[i % g.length],
     })),
   };
 }

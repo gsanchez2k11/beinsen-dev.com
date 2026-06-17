@@ -444,8 +444,11 @@ function CatalogoContent() {
     return (
         <div className="bg-background pb-32 selection:bg-[#FF6600] selection:text-white">
 
-            {/* Enhanced Control Bar */}
-            <div className="sticky top-20 z-40 bg-background/80 backdrop-blur-xl border-b border-border/40 py-6">
+            {/* Enhanced Control Bar — solo la barra superior (tabs + search +
+                boton de filtros) es sticky. El panel de filtros expandido va
+                fuera para no romper el sticky (motion.div con animacion de
+                altura interfiere con position:sticky). */}
+            <div className="sticky top-20 z-40 bg-background/95 backdrop-blur-xl border-b border-border/40 shadow-md shadow-black/5 py-6">
                 <div className="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-8 justify-between">
 
                     <div className="flex bg-muted p-1 rounded-2xl w-full lg:w-auto overflow-x-auto no-scrollbar">
@@ -495,123 +498,137 @@ function CatalogoContent() {
                                 className="w-full bg-muted/50 border border-border/60 rounded-2xl py-3 pl-12 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-medium"
                             />
                         </div>
-                        <button
-                            onClick={() => setIsFilterOpen(!isFilterOpen)}
-                            aria-label={d.filters}
-                            aria-expanded={isFilterOpen}
-                            className={`p-3 rounded-2xl border transition-all ${isFilterOpen ? "bg-[#FF6600] text-white border-[#FF6600]" : "bg-muted/50 text-muted-foreground border-border/60 hover:text-foreground"}`}
-                        >
-                            <Filter size={20} />
-                        </button>
+                        {/* Boton de filtros: oculto en 'Todo el catalogo' porque
+                            ahi no hay filtros aplicables (no se mezclan planchas,
+                            accesorios y consumibles bajo un mismo criterio). */}
+                        {activeType !== "all" && (
+                            <button
+                                onClick={() => setIsFilterOpen(!isFilterOpen)}
+                                aria-label={d.filters}
+                                aria-expanded={isFilterOpen}
+                                className={`p-3 rounded-2xl border transition-all ${isFilterOpen ? "bg-[#FF6600] text-white border-[#FF6600]" : "bg-muted/50 text-muted-foreground border-border/60 hover:text-foreground"}`}
+                            >
+                                <Filter size={20} />
+                            </button>
+                        )}
                     </div>
                 </div>
+            </div>
 
-                <AnimatePresence>
-                    {isFilterOpen && (
-                        <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            className="overflow-hidden bg-muted/30 border-t border-border/20"
-                        >
-                            {(activeType === "accessories" || activeType === "consumables") ? (
-                                <div className="max-w-7xl mx-auto px-4 py-8 space-y-4">
+            {/* Panel de filtros expandido — fuera del sticky para no romperlo.
+                En 'Todo el catalogo' no se renderiza ningun panel. */}
+            <AnimatePresence>
+                {isFilterOpen && activeType !== "all" && (
+                    <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden bg-muted/30 border-b border-border/20"
+                    >
+                        {(activeType === "accessories" || activeType === "consumables") ? (
+                            <div className="max-w-7xl mx-auto px-4 py-8 space-y-4">
+                                <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                    <Zap size={12} /> {d.compatibleWith}
+                                </label>
+                                <div className="flex flex-wrap gap-2">
+                                    <button
+                                        onClick={() => setSelectedMachine("")}
+                                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${selectedMachine === "" ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                    >
+                                        {d.allMachines}
+                                    </button>
+                                    {machineModelNames.map(name => (
+                                        <button
+                                            key={name}
+                                            onClick={() => setSelectedMachine(selectedMachine === name ? "" : name)}
+                                            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${selectedMachine === name ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                        >
+                                            {name}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        ) : (
+                            <div className={`max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 gap-x-12 gap-y-8 ${activeType === "planchas" ? "md:grid-cols-2" : "md:grid-cols-1"}`}>
+                                <div className="space-y-4">
                                     <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
-                                        <Zap size={12} /> {d.compatibleWith}
+                                        <Package size={12} /> {d.catLabel}
                                     </label>
                                     <div className="flex flex-wrap gap-2">
-                                        <button
-                                            onClick={() => setSelectedMachine("")}
-                                            className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${selectedMachine === "" ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
-                                        >
-                                            {d.allMachines}
-                                        </button>
-                                        {machineModelNames.map(name => (
+                                        {categoryLabels.map((cat, idx) => (
                                             <button
-                                                key={name}
-                                                onClick={() => setSelectedMachine(selectedMachine === name ? "" : name)}
-                                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${selectedMachine === name ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                key={cat}
+                                                onClick={() => setActiveCategoryIndex(idx)}
+                                                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeCategoryIndex === idx ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
                                             >
-                                                {name}
+                                                {cat}
                                             </button>
                                         ))}
                                     </div>
                                 </div>
-                            ) : (
-                                <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-                                    <div className="space-y-4">
-                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
-                                            <Package size={12} /> {d.catLabel}
-                                        </label>
-                                        <div className="flex flex-wrap gap-2">
-                                            {categoryLabels.map((cat, idx) => (
-                                                <button
-                                                    key={cat}
-                                                    onClick={() => setActiveCategoryIndex(idx)}
-                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeCategoryIndex === idx ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
-                                                >
-                                                    {cat}
-                                                </button>
-                                            ))}
-                                        </div>
-                                    </div>
 
-                                    <div className="space-y-4">
-                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
-                                            <Zap size={12} /> {d.openLabel}
-                                        </label>
-                                        <div className="flex flex-wrap gap-2">
-                                            {openingLabels.map((type, idx) => (
-                                                <button
-                                                    key={type}
-                                                    onClick={() => setActiveOpeningIndex(idx)}
-                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeOpeningIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
-                                                >
-                                                    {type}
-                                                </button>
-                                            ))}
+                                {/* Sistema, Formato y Plato son propios de planchas;
+                                    no aplican a "Todo el catalogo" donde aparecen
+                                    tambien accesorios y consumibles. */}
+                                {activeType === "planchas" && (
+                                    <>
+                                        <div className="space-y-4">
+                                            <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                                <Zap size={12} /> {d.openLabel}
+                                            </label>
+                                            <div className="flex flex-wrap gap-2">
+                                                {openingLabels.map((type, idx) => (
+                                                    <button
+                                                        key={type}
+                                                        onClick={() => setActiveOpeningIndex(idx)}
+                                                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeOpeningIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                    >
+                                                        {type}
+                                                    </button>
+                                                ))}
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div className="space-y-4">
-                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
-                                            <SlidersHorizontal size={12} /> {d.formatLabel}
-                                        </label>
-                                        <div className="flex flex-wrap gap-2">
-                                            {formatLabels.map((fmt, idx) => (
-                                                <button
-                                                    key={fmt}
-                                                    onClick={() => setActiveFormatIndex(idx)}
-                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeFormatIndex === idx ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
-                                                >
-                                                    {fmt}
-                                                </button>
-                                            ))}
+                                        <div className="space-y-4">
+                                            <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                                <SlidersHorizontal size={12} /> {d.formatLabel}
+                                            </label>
+                                            <div className="flex flex-wrap gap-2">
+                                                {formatLabels.map((fmt, idx) => (
+                                                    <button
+                                                        key={fmt}
+                                                        onClick={() => setActiveFormatIndex(idx)}
+                                                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activeFormatIndex === idx ? "bg-[#FF6600] text-white" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                    >
+                                                        {fmt}
+                                                    </button>
+                                                ))}
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div className="space-y-4">
-                                        <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
-                                            <Tag size={12} /> {d.plateLabel}
-                                        </label>
-                                        <div className="flex flex-wrap gap-2">
-                                            {plateLabels.map((pl, idx) => (
-                                                <button
-                                                    key={pl}
-                                                    onClick={() => setActivePlateIndex(idx)}
-                                                    className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activePlateIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
-                                                >
-                                                    {pl}
-                                                </button>
-                                            ))}
+                                        <div className="space-y-4">
+                                            <label className="text-[10px] font-black uppercase tracking-[0.3em] text-muted-foreground flex items-center gap-2">
+                                                <Tag size={12} /> {d.plateLabel}
+                                            </label>
+                                            <div className="flex flex-wrap gap-2">
+                                                {plateLabels.map((pl, idx) => (
+                                                    <button
+                                                        key={pl}
+                                                        onClick={() => setActivePlateIndex(idx)}
+                                                        className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${activePlateIndex === idx ? "bg-foreground text-background" : "bg-background border border-border/40 text-muted-foreground hover:border-[#FF6600]/40"}`}
+                                                    >
+                                                        {pl}
+                                                    </button>
+                                                ))}
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            )}
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-            </div>
+                                    </>
+                                )}
+                            </div>
+                        )}
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Grid Container */}
             <main className="max-w-7xl mx-auto px-4 mt-16">

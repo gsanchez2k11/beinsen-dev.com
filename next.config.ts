@@ -1,10 +1,38 @@
 import type { NextConfig } from "next";
+import bundleAnalyzer from "@next/bundle-analyzer";
 import { productAliases } from "./lib/productAliases";
 import { legacyRedirects } from "./lib/legacyRedirects";
 
+const withBundleAnalyzer = bundleAnalyzer({
+    enabled: process.env.ANALYZE === "true",
+});
+
 // Cabeceras de seguridad aplicadas a todas las rutas. Si más adelante
 // se añade un proveedor externo (chat, mapa, etc.) habrá que ampliar
-// `script-src` / `connect-src` en la CSP.
+// `script-src` / `connect-src` / `frame-src` en la CSP.
+const cspDirectives = [
+    "default-src 'self'",
+    // 'unsafe-inline' y 'unsafe-eval' son necesarios para Next.js (hidratación
+    // y algunos scripts inline de Image/Script). Si en el futuro Next ofrece
+    // una alternativa con nonce, sustituir aqui.
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+    // Inline styles de Tailwind/JSX requieren 'unsafe-inline'.
+    "style-src 'self' 'unsafe-inline'",
+    // Imagenes propias + las externas que ya whitelistamos en images.remotePatterns.
+    "img-src 'self' data: blob: https://beinsen.com https://dev.beinsen.com https://tiendasublimacion.com https://images.unsplash.com",
+    "font-src 'self' data:",
+    // El formulario de contacto golpea nuestra propia /api/contact.
+    "connect-src 'self'",
+    // Videos en fichas se cargan via iframe a YouTube/Vimeo.
+    "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com",
+    // Evita que beinsen.com pueda incrustrarse en otra web (clickjacking).
+    "frame-ancestors 'self'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    // Forzar HTTPS para cualquier recurso cargado por la pagina.
+    "upgrade-insecure-requests",
+].join("; ");
+
 const securityHeaders = [
     {
         key: "Strict-Transport-Security",
@@ -29,6 +57,10 @@ const securityHeaders = [
     {
         key: "X-DNS-Prefetch-Control",
         value: "on",
+    },
+    {
+        key: "Content-Security-Policy",
+        value: cspDirectives,
     },
 ];
 
@@ -100,4 +132,4 @@ const nextConfig: NextConfig = {
     },
 };
 
-export default nextConfig;
+export default withBundleAnalyzer(nextConfig);

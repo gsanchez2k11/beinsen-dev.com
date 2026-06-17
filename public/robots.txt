@@ -1,0 +1,22 @@
+# Robots.txt para beinsen.com
+# Politica: indexar el catalogo y contenido publico, no indexar paginas legales
+# (estas ya estan en noindex via metadata) y rutas tecnicas/dinamicas.
+
+User-agent: *
+Allow: /
+
+# Bloqueo defensivo de rutas tecnicas
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+
+# Las paginas legales/RGPD ya marcan noindex en su metadata, pero por
+# si acaso impedimos crawl para ahorrar crawl budget.
+Disallow: /privacidad
+Disallow: /cookies
+Disallow: /legal
+Disallow: /subprocesadores
+Disallow: /accesibilidad
+
+# Sitemap principal (Google lo descubre solo, pero ayuda declararlo)
+Sitemap: https://beinsen.com/sitemap.xml

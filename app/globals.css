@@ -108,3 +108,24 @@
     @apply bg-gradient-to-br from-primary via-[#ff8533] to-[#e65c00];
   }
 }
+
+/*
+ * Accesibilidad: respetar prefers-reduced-motion.
+ * El usuario tiene activada la preferencia de "reducir movimiento" en su
+ * SO/navegador (por trastornos vestibulares, epilepsia, etc.). Aplastamos
+ * todas las animaciones y transiciones a casi-instantaneas. Tambien
+ * desactivamos smooth-scroll y los efectos parallax/scroll-driven mas
+ * agresivos. Framer Motion respeta esto automaticamente para sus
+ * `motion` components cuando se anade reduceMotion: 'user', pero las
+ * transiciones CSS y animaciones de Tailwind hay que cubrirlas aqui.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

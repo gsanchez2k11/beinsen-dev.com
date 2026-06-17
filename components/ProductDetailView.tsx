@@ -270,6 +270,7 @@ export function ProductDetailView({
                 </nav>
             </div>
 
+
             <div className="w-full">
                 {/* 1. Cinematic Full-Screen Hero */}
                 <div className="relative w-full min-h-[95vh] flex flex-col items-center justify-start overflow-hidden bg-gradient-to-b from-background via-background to-muted/20 pb-20 pt-10">

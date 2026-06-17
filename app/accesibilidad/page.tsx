@@ -35,9 +35,6 @@ export default function AccesibilidadPage() {
                     </p>
                     <ol className="space-y-4 text-sm text-muted-foreground list-decimal pl-6">
                         <li>
-                            <span className="text-foreground font-semibold">Animaciones de interfaz</span>: algunas transiciones (Framer Motion) pueden generar movimiento que no respeta la preferencia <code className="text-xs bg-muted px-1.5 py-0.5 rounded">prefers-reduced-motion</code> en todos los componentes. Carga desproporcionada (no afectan al uso, solo a la experiencia visual).
-                        </li>
-                        <li>
                             <span className="text-foreground font-semibold">Galerías de imagen de producto</span>: el texto alternativo describe el producto pero no las variantes visuales concretas (ángulos, detalles).
                         </li>
                         <li>
@@ -116,9 +113,6 @@ export default function AccesibilidadPage() {
                         The content listed below is not accessible for the reasons set out:
                     </p>
                     <ol className="space-y-4 text-sm text-muted-foreground list-decimal pl-6">
-                        <li>
-                            <span className="text-foreground font-semibold">Interface animations</span>: some transitions (Framer Motion) may generate motion that does not respect the <code className="text-xs bg-muted px-1.5 py-0.5 rounded">prefers-reduced-motion</code> preference in all components. Disproportionate burden (does not affect use, only the visual experience).
-                        </li>
                         <li>
                             <span className="text-foreground font-semibold">Product image galleries</span>: the alternative text describes the product but not the specific visual variants (angles, details).
                         </li>
@@ -199,9 +193,6 @@ export default function AccesibilidadPage() {
                     </p>
                     <ol className="space-y-4 text-sm text-muted-foreground list-decimal pl-6">
                         <li>
-                            <span className="text-foreground font-semibold">Animações de interface</span>: algumas transições (Framer Motion) podem gerar movimento que não respeita a preferência <code className="text-xs bg-muted px-1.5 py-0.5 rounded">prefers-reduced-motion</code> em todos os componentes. Encargo desproporcionado (não afeta a utilização, apenas a experiência visual).
-                        </li>
-                        <li>
                             <span className="text-foreground font-semibold">Galerias de imagens de produto</span>: o texto alternativo descreve o produto mas não as variantes visuais concretas (ângulos, pormenores).
                         </li>
                         <li>
@@ -280,9 +271,6 @@ export default function AccesibilidadPage() {
                         I contenuti indicati di seguito non sono accessibili per i motivi esposti:
                     </p>
                     <ol className="space-y-4 text-sm text-muted-foreground list-decimal pl-6">
-                        <li>
-                            <span className="text-foreground font-semibold">Animazioni dell'interfaccia</span>: alcune transizioni (Framer Motion) possono generare movimento che non rispetta la preferenza <code className="text-xs bg-muted px-1.5 py-0.5 rounded">prefers-reduced-motion</code> in tutti i componenti. Onere sproporzionato (non incide sull'uso, solo sull'esperienza visiva).
-                        </li>
                         <li>
                             <span className="text-foreground font-semibold">Gallerie di immagini di prodotto</span>: il testo alternativo descrive il prodotto ma non le specifiche varianti visive (angolazioni, dettagli).
                         </li>

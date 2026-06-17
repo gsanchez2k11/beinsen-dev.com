@@ -16,7 +16,16 @@ const WarrantyPopup = dynamic(
   () => import("@/components/WarrantyPopup").then(m => ({ default: m.WarrantyPopup }))
 );
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+// display: 'swap' muestra una fuente fallback mientras Inter carga (evita
+// FOIT y reduce CLS). Adjust-font-fallback hace que el cambio sea
+// imperceptible visualmente.
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
+  adjustFontFallback: true,
+});
 
 export const metadata: Metadata = {
   title: {
