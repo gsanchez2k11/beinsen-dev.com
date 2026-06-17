@@ -925,10 +925,10 @@ export const rawConsumablesData: Consumable[] = [
     "price": "Consultar PVP",
     "image": "/products/consumibles/resistencia-gorras-beinsen-riad/01.webp",
     "description": {
-      "es": "Resistencia para sublimar gorras para prensa térmica Beinsen Riad.",
-      "en": "Cap sublimation heating element for Beinsen Riad heat press.",
-      "pt": "Resistência para sublimar bonés para prensa térmica Beinsen Riad.",
-      "it": "Resistenza per sublimare cappellini per pressa termica Beinsen Riad."
+      "es": "Resistencia de repuesto para sublimar gorras en la prensa térmica Beinsen Riad. Diseñada con la curvatura específica del visor de la gorra para garantizar contacto y temperatura uniformes durante toda la transferencia.",
+      "en": "Replacement heating element for cap sublimation on the Beinsen Riad heat press. Designed with the specific curvature of the cap brim to ensure uniform contact and temperature throughout the entire transfer.",
+      "pt": "Resistência de substituição para sublimar bonés na prensa térmica Beinsen Riad. Desenhada com a curvatura específica da pala do boné para garantir contacto e temperatura uniformes durante toda a transferência.",
+      "it": "Resistenza di ricambio per sublimare cappellini sulla pressa termica Beinsen Riad. Progettata con la curvatura specifica della visiera per garantire contatto e temperatura uniformi per l'intero trasferimento."
     },
     "technicalSpecs": [
       {
@@ -1054,10 +1054,10 @@ export const rawConsumablesData: Consumable[] = [
     "price": "Consultar PVP",
     "image": "/products/consumibles/resistencia-15x15-beinsen-obrei/01.webp",
     "description": {
-      "es": "Resistencia de 15x15cm. para prensa térmica Beinsen Obrei.",
-      "en": "15x15cm heating element for Beinsen Obrei heat press.",
-      "pt": "Resistência de 15x15cm. para prensa térmica Beinsen Obrei.",
-      "it": "Resistenza 15x15cm. per pressa termica Beinsen Obrei."
+      "es": "Resistencia de repuesto de 15×15 cm para la prensa térmica Beinsen Obrei. Ideal para sublimaciones en parches, bolsos pequeños, gorras planas y formatos compactos donde la precisión y la presión uniforme son críticas.",
+      "en": "15×15 cm replacement heating element for the Beinsen Obrei heat press. Ideal for sublimations on patches, small bags, flat caps and compact formats where precision and uniform pressure are critical.",
+      "pt": "Resistência de substituição de 15×15 cm para a prensa térmica Beinsen Obrei. Ideal para sublimações em emblemas, sacos pequenos, bonés planos e formatos compactos onde a precisão e a pressão uniforme são críticas.",
+      "it": "Resistenza di ricambio da 15×15 cm per la pressa termica Beinsen Obrei. Ideale per sublimazioni su toppe, piccole borse, cappellini piatti e formati compatti dove la precisione e la pressione uniforme sono critiche."
     },
     "technicalSpecs": [
       {
@@ -1134,10 +1134,10 @@ export const rawConsumablesData: Consumable[] = [
     "price": "Consultar PVP",
     "image": "/products/consumibles/resistencia-platos-5-dorian/01.webp",
     "description": {
-      "es": "Resistencia de calor para plancha de Platos Beinsen de 5\"(12.6cm).",
-      "en": "Heat heating element for Beinsen 5\"(12.6cm) Plate press.",
-      "pt": "Resistência de calor para prensa de Pratos Beinsen de 5\"(12.6cm).",
-      "it": "Resistenza di calore per pressa per Piatti Beinsen da 5\"(12.6cm)."
+      "es": "Resistencia térmica de 5\" (12,6 cm) para la prensa Beinsen Dorian. Compatible con platos cerámicos de diámetro estándar, reparte el calor de manera uniforme sobre toda la superficie para una sublimación profesional sin zonas frías.",
+      "en": "5\" (12.6 cm) heating element for the Beinsen Dorian plate press. Compatible with standard-diameter ceramic plates, it distributes heat evenly across the surface for professional sublimation with no cold spots.",
+      "pt": "Resistência térmica de 5\" (12,6 cm) para a prensa Beinsen Dorian. Compatível com pratos cerâmicos de diâmetro padrão, distribui o calor de forma uniforme em toda a superfície para uma sublimação profissional sem zonas frias.",
+      "it": "Resistenza termica da 5\" (12,6 cm) per la pressa Beinsen Dorian. Compatibile con piatti in ceramica di diametro standard, distribuisce il calore in modo uniforme su tutta la superficie per una sublimazione professionale senza zone fredde."
     },
     "technicalSpecs": [
       {
