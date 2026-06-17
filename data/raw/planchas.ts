@@ -4478,7 +4478,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Dimensões",
           "it": "Dimensioni"
         },
-        "value": "89 x 543 x 61 cm"
+        "value": "89 x 54 x 61 cm"
       },
       {
         "label": {
