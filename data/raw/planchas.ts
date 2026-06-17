@@ -529,9 +529,6 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
-      },
-      {
-        "id": "resistencia-tazas-11oz-a"
       }
     ],
     "storyHeadline": {
