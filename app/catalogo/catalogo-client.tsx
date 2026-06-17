@@ -498,21 +498,27 @@ function CatalogoContent() {
                                 className="w-full bg-muted/50 border border-border/60 rounded-2xl py-3 pl-12 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-[#FF6600]/20 transition-all font-medium"
                             />
                         </div>
-                        <button
-                            onClick={() => setIsFilterOpen(!isFilterOpen)}
-                            aria-label={d.filters}
-                            aria-expanded={isFilterOpen}
-                            className={`p-3 rounded-2xl border transition-all ${isFilterOpen ? "bg-[#FF6600] text-white border-[#FF6600]" : "bg-muted/50 text-muted-foreground border-border/60 hover:text-foreground"}`}
-                        >
-                            <Filter size={20} />
-                        </button>
+                        {/* Boton de filtros: oculto en 'Todo el catalogo' porque
+                            ahi no hay filtros aplicables (no se mezclan planchas,
+                            accesorios y consumibles bajo un mismo criterio). */}
+                        {activeType !== "all" && (
+                            <button
+                                onClick={() => setIsFilterOpen(!isFilterOpen)}
+                                aria-label={d.filters}
+                                aria-expanded={isFilterOpen}
+                                className={`p-3 rounded-2xl border transition-all ${isFilterOpen ? "bg-[#FF6600] text-white border-[#FF6600]" : "bg-muted/50 text-muted-foreground border-border/60 hover:text-foreground"}`}
+                            >
+                                <Filter size={20} />
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>
 
-            {/* Panel de filtros expandido — fuera del sticky para no romperlo */}
+            {/* Panel de filtros expandido — fuera del sticky para no romperlo.
+                En 'Todo el catalogo' no se renderiza ningun panel. */}
             <AnimatePresence>
-                {isFilterOpen && (
+                {isFilterOpen && activeType !== "all" && (
                     <motion.div
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
