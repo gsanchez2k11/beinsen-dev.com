@@ -1,18 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Menu, X, ChevronDown, Zap, Box, Package, ArrowRight, Settings } from "lucide-react";
 import { useState, useRef, useEffect, Suspense } from "react";
-import { Inter } from "next/font/google";
 import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
-import { GlobalSearch } from "./GlobalSearch";
 import { LanguageSelector } from "./LanguageSelector";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 
-const inter = Inter({ subsets: ["latin"] });
+// GlobalSearch incluye fuse.js + UI completa del buscador. Como solo se
+// activa al hacer click en la lupa, vale la pena diferir su carga.
+const GlobalSearch = dynamic(() => import("./GlobalSearch").then(m => ({ default: m.GlobalSearch })), {
+    ssr: false,
+    loading: () => null,
+});
 
 function NavbarContent() {
     const [isOpen, setIsOpen] = useState(false);
@@ -132,7 +136,7 @@ function NavbarContent() {
     ];
 
     return (
-        <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${inter.className} border-b border-border/40`}>
+        <nav className="fixed top-0 w-full z-[100] transition-all duration-300 border-b border-border/40">
             {/* Glossy Backdrop */}
             <div className="absolute inset-0 bg-background/60 backdrop-blur-2xl -z-10" />
             

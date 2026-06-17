@@ -1,14 +1,20 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { ArrowRight, Shield, Zap, Target, Settings, Box, Package, Globe2, Users2, Building2, Trophy, BookOpen } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { TrustedBrands } from "@/components/TrustedBrands";
 import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 import { storiesData } from "@/data/stories";
 import { getLocalized } from "@/lib/i18n";
 import type { Article } from "@/lib/articles";
+
+// TrustedBrands: barra de logos animada, no critica above-the-fold.
+// La cargamos diferida para reducir el JS inicial del home.
+const TrustedBrands = dynamic(() => import("@/components/TrustedBrands").then(m => ({ default: m.TrustedBrands })), {
+    loading: () => <div className="h-32" />, // reserva altura para evitar CLS
+});
 
 export default function HomeClient({ articles }: { articles: Article[] }) {
     const { locale } = useLanguage();
