@@ -7,53 +7,57 @@ import { SITE_URL } from '@/lib/site'
 const BASE_URL = SITE_URL
 
 export default function sitemap(): MetadataRoute.Sitemap {
+    // lastModified dinamico: usa la fecha del build/deploy. Asi Google ve la
+    // web siempre fresca en cada deploy en vez de un '2025-05-01' rancio.
+    const now = new Date()
+
     // Static routes
     const staticRoutes: MetadataRoute.Sitemap = [
         {
             url: BASE_URL,
-            lastModified: new Date('2025-05-01'),
+            lastModified: now,
             changeFrequency: 'monthly',
             priority: 1,
         },
         {
             url: `${BASE_URL}/catalogo`,
-            lastModified: new Date('2025-05-01'),
+            lastModified: now,
             changeFrequency: 'weekly',
             priority: 0.9,
         },
         {
             url: `${BASE_URL}/accesorios`,
-            lastModified: new Date('2025-05-01'),
+            lastModified: now,
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
             url: `${BASE_URL}/aprende`,
-            lastModified: new Date('2025-05-01'),
+            lastModified: now,
             changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
             url: `${BASE_URL}/contacto`,
-            lastModified: new Date('2025-05-01'),
+            lastModified: now,
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
             url: `${BASE_URL}/casos-exito`,
-            lastModified: new Date('2025-05-01'),
+            lastModified: now,
             changeFrequency: 'monthly',
             priority: 0.7,
         },
         {
             url: `${BASE_URL}/comparar`,
-            lastModified: new Date('2025-05-01'),
+            lastModified: now,
             changeFrequency: 'monthly',
             priority: 0.6,
         },
         {
             url: `${BASE_URL}/asesor`,
-            lastModified: new Date('2025-05-01'),
+            lastModified: now,
             changeFrequency: 'monthly',
             priority: 0.6,
         },
@@ -69,24 +73,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     const productRoutes: MetadataRoute.Sitemap = allProducts.map((product) => ({
         url: `${BASE_URL}/catalogo/${product.slug}`,
-        lastModified: new Date('2025-05-01'),
+        lastModified: now,
         changeFrequency: 'weekly' as const,
         priority: 0.8,
     }))
 
-    // Blog articles
+    // Blog articles: si tienen publishedAt usamos esa fecha (es la verdadera);
+    // si no, fallback a la fecha del deploy
     const articleSlugs = getArticleSlugs()
     const articleRoutes: MetadataRoute.Sitemap = articleSlugs.map((slug) => {
         const article = getArticle(slug)
         return {
             url: `${BASE_URL}/aprende/${slug}`,
-            lastModified: article?.publishedAt ? new Date(article.publishedAt) : new Date('2025-05-01'),
+            lastModified: article?.publishedAt ? new Date(article.publishedAt) : now,
             changeFrequency: 'monthly' as const,
             priority: 0.7,
         }
     })
 
-    // Case study individual pages
+    // Case study individual pages: fecha del propio caso (año)
     const storyRoutes: MetadataRoute.Sitemap = storiesData.map((story) => ({
         url: `${BASE_URL}/casos-exito/${story.slug}`,
         lastModified: new Date(`${story.year}-12-31`),
