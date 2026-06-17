@@ -2224,10 +2224,10 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [],
     "consumables": [],
     "category": {
-      "es": "Textil",
-      "en": "Textile",
-      "pt": "Têxtil",
-      "it": "Tessile"
+      "es": "Especializadas",
+      "en": "Specialized",
+      "pt": "Especializadas",
+      "it": "Specializzate"
     },
     "openingType": {
       "es": "Manual",
@@ -5986,7 +5986,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Tipo de ecrã",
           "it": "Tipo di display"
         },
-        "value": "NTTH-2000"
+        "value": "Digital"
       },
       {
         "label": {
@@ -9337,7 +9337,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Tipo de prensa",
           "it": "Tipo di pressa"
         },
-        "value": "Eléctrico"
+        "value": "Sandwich"
       },
       {
         "label": {
@@ -10762,10 +10762,10 @@ export const rawPlanchasData: Plancha[] = [
       }
     ],
     "storyHeadline": {
-      "es": "Manual con precisión repetible",
-      "en": "Manual with repeatable precision",
-      "pt": "Manual com precisão repetível",
-      "it": "Manuale con precisione ripetibile"
+      "es": "Electromagnética con precisión repetible",
+      "en": "Electromagnetic with repeatable precision",
+      "pt": "Eletromagnética com precisão repetível",
+      "it": "Elettromagnetica con precisione ripetibile"
     },
     "storySegments": [
       {
