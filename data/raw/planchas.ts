@@ -16003,7 +16003,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Tamanho da platina",
           "it": "Dimensioni della platina"
         },
-        "value": "40×50 cm / 40×60 cm (16\"×20\" / 16\"×24\")"
+        "value": "40×50 cm (16\"×20\")"
       },
       {
         "label": {
@@ -16135,7 +16135,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Peso líquido",
           "it": "Peso netto"
         },
-        "value": "95 kg (40×50) / 99 kg (40×60)"
+        "value": "95 kg"
       },
       {
         "label": {
@@ -16144,7 +16144,7 @@ export const rawPlanchasData: Plancha[] = [
           "pt": "Peso bruto",
           "it": "Peso lordo"
         },
-        "value": "132.5 kg (40×50) / 136.5 kg (40×60)"
+        "value": "132.5 kg"
       }
     ],
     "benefits": [
@@ -16374,16 +16374,16 @@ export const rawPlanchasData: Plancha[] = [
         "x": 16,
         "y": 79,
         "title": {
-          "es": "Placa calefactora 40×50 / 40×60 cm",
-          "en": "40×50 / 40×60 cm heating plate",
-          "pt": "Placa aquecedora 40×50 / 40×60 cm",
-          "it": "Piastra riscaldante 40×50 / 40×60 cm"
+          "es": "Placa calefactora 40×50 cm",
+          "en": "40×50 cm heating plate",
+          "pt": "Placa aquecedora 40×50 cm",
+          "it": "Piastra riscaldante 40×50 cm"
         },
         "description": {
-          "es": "Distribución de calor uniforme para sublimar materiales de hasta 35 mm de grosor. Disponible en dos tamaños para adaptarse a tus necesidades de producción.",
-          "en": "Uniform heat distribution for sublimating materials up to 35 mm thick. Available in two sizes to suit your production needs.",
-          "pt": "Distribuição de calor uniforme para sublimar materiais com até 35 mm de espessura. Disponível em dois tamanhos para se adaptar às suas necessidades de produção.",
-          "it": "Distribuzione del calore uniforme per sublimare materiali fino a 35 mm di spessore. Disponibile in due dimensioni per adattarsi alle tue esigenze di produzione."
+          "es": "Distribución de calor uniforme para sublimar materiales de hasta 35 mm de grosor en formato 40×50 cm.",
+          "en": "Uniform heat distribution for sublimating materials up to 35 mm thick in 40×50 cm format.",
+          "pt": "Distribuição de calor uniforme para sublimar materiais com até 35 mm de espessura em formato 40×50 cm.",
+          "it": "Distribuzione del calore uniforme per sublimare materiali fino a 35 mm di spessore in formato 40×50 cm."
         }
       }
     ],
