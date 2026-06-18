@@ -902,7 +902,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
+        "value": "Malvinas, Esparta, Trinidad, Estambul"
       },
       {
         "label": {
@@ -942,7 +942,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
+        "value": "Malvinas, Esparta, Trinidad, Estambul"
       },
       {
         "label": {
