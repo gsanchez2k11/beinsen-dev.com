@@ -401,7 +401,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -441,7 +441,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -481,7 +481,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -521,7 +521,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -561,7 +561,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -601,7 +601,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -641,7 +641,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       }
     ]
   },
@@ -672,7 +672,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       }
     ]
   },
@@ -702,7 +702,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -742,7 +742,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -782,7 +782,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -822,7 +822,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -862,7 +862,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -902,7 +902,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
@@ -942,7 +942,7 @@ export const rawAccessoriesData: Accessory[] = [
           "pt": "Compatibilidade",
           "it": "Compatibilità"
         },
-        "value": "Malvinas, Esparta, Trinidad, Miranda"
+        "value": "Malvinas, Esparta, Trinidad, Miranda, Estambul"
       },
       {
         "label": {
