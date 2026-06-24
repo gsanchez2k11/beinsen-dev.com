@@ -77,6 +77,24 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-38x38"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "lamina-teflon-38x38"
       }
     ],
     "storyHeadline": {
@@ -515,6 +533,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -529,6 +550,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -931,6 +967,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -942,6 +981,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -1285,11 +1339,35 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "mesa-universal-grande"
+      },
+      {
+        "id": "guantes-protectores-algodon"
+      },
+      {
+        "id": "termometro-digital-infrarrojos-it122"
       }
     ],
     "consumables": [
       {
         "id": "lamina-teflon-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -1754,6 +1832,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "mesa-universal-grande"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -1777,6 +1858,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -2497,6 +2593,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -2948,6 +3059,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-38x38"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -3432,6 +3558,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "plato-base-15x15-beinsen-obrei"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -3446,6 +3575,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -3889,6 +4033,27 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "category": {
@@ -4337,6 +4502,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -4363,6 +4531,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -4905,6 +5088,30 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "category": {
@@ -5392,6 +5599,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -5403,6 +5613,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -5891,6 +6116,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -5920,6 +6148,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -6385,6 +6628,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -6405,6 +6651,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -6877,6 +7138,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "mesa-universal-grande"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -6906,6 +7170,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "resistencia-tazas-11oz-a"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -7347,6 +7626,24 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -7728,6 +8025,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -8203,6 +8515,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "plato-base-15x15-cambio-rapido"
+      },
+      {
+        "id": "guantes-protectores-algodon"
+      },
+      {
+        "id": "termometro-digital-infrarrojos-it122"
       }
     ],
     "consumables": [
@@ -8217,6 +8535,30 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "category": {
@@ -8766,6 +9108,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -9281,6 +9638,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -9747,6 +10119,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -10293,6 +10680,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -10730,6 +11132,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "plato-intercambiable-30x35-barbados"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -10756,6 +11161,24 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-teflon-termorresistente-40x50"
       }
     ],
     "storyHeadline": {
@@ -11293,6 +11716,36 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-38x38"
+      },
+      {
+        "id": "lamina-teflon-38x38"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "storyHeadline": {
@@ -11784,6 +12237,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -11798,6 +12254,30 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "storyHeadline": {
@@ -12406,6 +12886,30 @@ export const rawPlanchasData: Plancha[] = [
     "consumables": [
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-teflon-termorresistente-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "storyHeadline": {
@@ -12902,6 +13406,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -13424,9 +13943,31 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
-    "consumables": [],
+    "consumables": [
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      }
+    ],
     "category": {
       "es": "Especializadas",
       "en": "Specialized",
@@ -13883,6 +14424,24 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "category": {
@@ -14419,6 +14978,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-80x100"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -14935,6 +15509,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-80x100"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -15465,6 +16054,21 @@ export const rawPlanchasData: Plancha[] = [
     "consumables": [
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -15958,6 +16562,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -16423,7 +17042,3 @@ export const rawPlanchasData: Plancha[] = [
     }
   }
 ];
-
-function uniqueStrings(values: string[]): string[] {
-  return Array.from(new Set(values.filter(Boolean)));
-}
