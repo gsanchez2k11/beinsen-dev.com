@@ -116,11 +116,6 @@ export const CatalogProductCard = memo(function CatalogProductCard({ item: rawIt
                              <div className="flex items-center gap-2 flex-wrap">
                                 <span className="w-8 h-0.5 bg-[#FF6600]/40 rounded-full group-hover:w-12 transition-all duration-500" />
                                 <span className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground/70">{category || "General"}</span>
-                                {item._type !== 'planchas' && item.reference && (
-                                    <span className="text-[10px] font-mono font-bold tracking-wider text-muted-foreground/60 bg-muted px-2 py-0.5 rounded">
-                                        Ref. {item.reference}
-                                    </span>
-                                )}
                              </div>
                              <h2 className={`font-black text-foreground group-hover:text-[#FF6600] transition-colors leading-[1.1] tracking-tight ${isFeatureCard ? 'text-3xl md:text-5xl' : 'text-2xl lg:text-3xl'}`}>
                                 {name}

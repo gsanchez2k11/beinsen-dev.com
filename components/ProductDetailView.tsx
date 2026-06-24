@@ -298,13 +298,6 @@ export function ProductDetailView({
                             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground tracking-tighter leading-[0.9] mb-8 max-w-6xl mx-auto drop-shadow-sm">
                                 {name}
                             </h1>
-                            {kind !== "planchas" && (plancha as any).reference && (
-                                <div className="mb-6">
-                                    <span className="inline-block text-xs font-mono font-bold tracking-[0.2em] text-muted-foreground bg-muted px-4 py-2 rounded-xl border border-border/40">
-                                        Ref. {(plancha as any).reference}
-                                    </span>
-                                </div>
-                            )}
                         </ScrollReveal>
 
                         <ScrollReveal delay={0.3} className="mb-14">
@@ -678,11 +671,6 @@ export function ProductDetailView({
                                                     <h4 className="font-black text-xl tracking-tight leading-tight group-hover:text-[#FF6600] transition-colors">
                                                         {getLocalized(item.name, locale)}
                                                     </h4>
-                                                    {item.reference && (
-                                                        <span className="text-[10px] font-mono font-bold tracking-wider text-muted-foreground/70">
-                                                            Ref. {item.reference}
-                                                        </span>
-                                                    )}
                                                 </div>
                                                 <div className="text-right shrink-0">
                                                     {(() => {
