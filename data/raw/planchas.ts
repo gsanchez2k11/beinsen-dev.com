@@ -3940,14 +3940,14 @@ export const rawPlanchasData: Plancha[] = [
     }
   },
   {
-    "id": "planchas-transfer-con-apertura-neumatica",
+    "id": "doha-plancha-transfer-gran-formato",
     "slug": "doha-plancha-transfer-gran-formato",
     "tiendaSublimacionUrl": "https://tiendasublimacion.com/doha-plancha-transfer-gran-formato.html",
     "storyHeadline": {
-      "es": "Gran formato, presión neumática",
-      "en": "Large format, pneumatic precision",
-      "pt": "Grande formato, pressão pneumática",
-      "it": "Grande formato, pressione pneumatica"
+      "es": "Gran formato, apertura electromagnética",
+      "en": "Large format, electromagnetic opening",
+      "pt": "Grande formato, abertura eletromagnética",
+      "it": "Grande formato, apertura elettromagnetica"
     },
     "storySegments": [
       {
@@ -3967,9 +3967,9 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "name": {
       "es": "Doha Plancha transfer de gran formato",
-      "en": "Pneumatic opening heat presses",
-      "pt": "Prensas térmicas de abertura pneumática",
-      "it": "Presse termiche ad apertura pneumatica"
+      "en": "Doha Large-Format Heat Transfer Press",
+      "pt": "Doha Prensa Transfer de Grande Formato",
+      "it": "Doha Pressa Transfer di Grande Formato"
     },
     "description": {
       "es": "Personaliza a lo grande con la plancha transfer de gran formato Beinsen Doha. Gracias al plato de 50x80 cm podrás llegar donde no lo hace el resto y ofrecer a tus clientes personalizaciones más espectaculares, y sin renunciar a la precisión, comodidad y robustez de una plancha sandwich tradicional.",
@@ -3987,22 +3987,22 @@ export const rawPlanchasData: Plancha[] = [
     },
     "features": {
       "es": [
-        "Sistema neumático de alto rendimiento",
+        "Sistema electromagnético de alto rendimiento",
         "Control preciso de presión y temperatura",
         "Ideal para entornos de producción industrial"
       ],
       "en": [
-        "High-performance pneumatic system",
+        "High-performance electromagnetic system",
         "Precise pressure and temperature control",
         "Ideal for industrial production environments"
       ],
       "pt": [
-        "Sistema pneumático de alto desempenho",
+        "Sistema eletromagnético de alto desempenho",
         "Controlo preciso de pressão e temperatura",
         "Ideal para ambientes de produção industrial"
       ],
       "it": [
-        "Sistema pneumatico ad alte prestazioni",
+        "Sistema elettromagnetico ad alte prestazioni",
         "Controllo preciso di pressione e temperatura",
         "Ideale per ambienti di produzione industriale"
       ]
@@ -4063,10 +4063,10 @@ export const rawPlanchasData: Plancha[] = [
       "it": "Tessile"
     },
     "openingType": {
-      "es": "Neumática",
-      "en": "Pneumatic",
-      "pt": "Pneumática",
-      "it": "Pneumatica"
+      "es": "Electromagnética",
+      "en": "Electromagnetic",
+      "pt": "Eletromagnética",
+      "it": "Elettromagnetica"
     },
     "technicalSpecs": [
       {
