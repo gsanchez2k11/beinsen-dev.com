@@ -1289,7 +1289,8 @@ export const rawPlanchasData: Plancha[] = [
         "image": "/products/maquinas/dorian-plancha-termica-platos/fotoB4.webp",
         "objectFit": "contain"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "id": "barahona-plancha-para-tazas-6-en-1",
@@ -1757,7 +1758,8 @@ export const rawPlanchasData: Plancha[] = [
         "Ispezione e pulizia dei componenti interni.",
         "Verifica e calibrazione della temperatura."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "alina-plancha-para-tazas",
@@ -2266,7 +2268,8 @@ export const rawPlanchasData: Plancha[] = [
         "Verifica e calibrazione della temperatura con termometro.",
         "Conservare in luogo asciutto e privo di polvere quando non è in uso."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "horno-para-sublimacion",
@@ -3497,7 +3500,8 @@ export const rawPlanchasData: Plancha[] = [
         "Ispezione e pulizia dei componenti interni.",
         "Verifica e calibrazione della temperatura."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "obrei-plancha-gorras-apertura-automatica",
@@ -7561,7 +7565,8 @@ export const rawPlanchasData: Plancha[] = [
         "Ispezione e pulizia dei componenti interni.",
         "Verifica e calibrazione della temperatura."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "pocola-plancha-transfer-manual-pequena",
@@ -10049,7 +10054,8 @@ export const rawPlanchasData: Plancha[] = [
         "Verifica e calibrazione della temperatura con termometro esterno.",
         "Revisione periodica del sistema pneumatico e dei suoi collegamenti."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "luanda-plancha-termica-automatica",
@@ -10594,7 +10600,8 @@ export const rawPlanchasData: Plancha[] = [
         "Verifica e calibrazione della temperatura.",
         "Revisione periodica del sistema pneumatico e dei suoi collegamenti."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "belice-plancha-termica-textil",
@@ -15973,7 +15980,8 @@ export const rawPlanchasData: Plancha[] = [
         "Ispezione e pulizia dei componenti interni.",
         "Verifica e calibrazione della temperatura."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "felina-prensa-termica-para-espinilleras",
