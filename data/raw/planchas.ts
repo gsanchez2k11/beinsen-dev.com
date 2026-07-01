@@ -2551,8 +2551,6 @@ export const rawPlanchasData: Plancha[] = [
       "it": "Personalizzare le tazze non è mai stato così semplice come con la pressa automatica elettrica Beinsen Andra. Il sistema di avvolgimento automatico rende il trasferimento dei tuoi disegni un vero gioco da ragazzi."
     },
     "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoPrincipal.webp",
-    "heroVideo": "https://beinsen.com/wp-content/uploads/2025/04/andra.webm",
-    "hotspotImage": "https://beinsen.com/wp-content/uploads/2024/01/description_barein.png",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
