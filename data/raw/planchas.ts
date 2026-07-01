@@ -2539,16 +2539,16 @@ export const rawPlanchasData: Plancha[] = [
     "slug": "andra-prensa-automatica-tazas",
     "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-beinsen-para-tazas-automatica-andra.html",
     "name": {
-      "es": "Andra prensa automática para tazas",
-      "en": "Andra automatic mug press",
-      "pt": "Andra prensa automática para canecas",
-      "it": "Andra pressa automatica per tazze"
+      "es": "Andra prensa automática eléctrica para tazas",
+      "en": "Andra automatic electric mug press",
+      "pt": "Andra prensa automática elétrica para canecas",
+      "it": "Andra pressa automatica elettrica per tazze"
     },
     "description": {
-      "es": "Personalizar tazas nunca resultó tan sencillo como con la prensa automática Beinsen Andra. El sistema de envoltura automática hara que plasmar tus diseños sea un auténtico juego de niños.",
-      "en": "Personalizing mugs has never been so easy as with the Beinsen Andra automatic press. The automatic wrapping system turns transferring your designs into child's play.",
-      "pt": "Personalizar canecas nunca foi tão simples como com a prensa automática Beinsen Andra. O sistema de envolvimento automático torna a aplicação dos seus desenhos numa autêntica brincadeira de crianças.",
-      "it": "Personalizzare le tazze non è mai stato così semplice come con la pressa automatica Beinsen Andra. Il sistema di avvolgimento automatico rende il trasferimento dei tuoi disegni un vero gioco da ragazzi."
+      "es": "Personalizar tazas nunca resultó tan sencillo como con la prensa automática eléctrica Beinsen Andra. El sistema de envoltura automática hara que plasmar tus diseños sea un auténtico juego de niños.",
+      "en": "Personalizing mugs has never been so easy as with the Beinsen Andra automatic electric press. The automatic wrapping system turns transferring your designs into child's play.",
+      "pt": "Personalizar canecas nunca foi tão simples como com a prensa automática elétrica Beinsen Andra. O sistema de envolvimento automático torna a aplicação dos seus desenhos numa autêntica brincadeira de crianças.",
+      "it": "Personalizzare le tazze non è mai stato così semplice come con la pressa automatica elettrica Beinsen Andra. Il sistema di avvolgimento automatico rende il trasferimento dei tuoi disegni un vero gioco da ragazzi."
     },
     "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoPrincipal.webp",
     "heroVideo": "https://beinsen.com/wp-content/uploads/2025/04/andra.webm",
@@ -2562,22 +2562,22 @@ export const rawPlanchasData: Plancha[] = [
     },
     "features": {
       "es": [
-        "Personalizar tazas nunca resultó tan sencillo como con la prensa automática Beinsen Andra",
+        "Personalizar tazas nunca resultó tan sencillo como con la prensa automática eléctrica Beinsen Andra",
         "El sistema de envoltura automática y el preciso controlador digital hará que plasmar tus diseños sea un auténtico juego de niños",
         "Puedes cambiar facilmente la presión para personalizar tazas tanto de 11 como de 15 onzas"
       ],
       "en": [
-        "Personalizing mugs has never been so easy as with the Beinsen Andra automatic press",
+        "Personalizing mugs has never been so easy as with the Beinsen Andra automatic electric press",
         "The automatic wrapping system and precise digital controller make printing your designs child's play",
         "You can easily change the pressure to customize both 11 and 15 oz mugs"
       ],
       "pt": [
-        "Personalizar canecas nunca foi tão simples como com a prensa automática Beinsen Andra",
+        "Personalizar canecas nunca foi tão simples como com a prensa automática elétrica Beinsen Andra",
         "O sistema de envolvimento automático e o preciso controlador digital farão com que plasmar os seus desenhos seja uma autêntica brincadeira de crianças",
         "Pode mudar facilmente a pressão para personalizar canecas tanto de 11 como de 15 onças"
       ],
       "it": [
-        "Personalizzare tazze non è mai stato così semplice come con la pressa automatica Beinsen Andra",
+        "Personalizzare tazze non è mai stato così semplice come con la pressa automatica elettrica Beinsen Andra",
         "Il sistema di avvolgimento automatico e il preciso controller digitale faranno sì che imprimere i tuoi disegni sia un autentico gioco da ragazzi",
         "Puoi cambiare facilmente la pressione per personalizzare tazze sia da 11 che da 15 once"
       ]
