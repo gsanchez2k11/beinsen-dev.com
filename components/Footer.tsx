@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
     const { locale } = useLanguage();
@@ -97,6 +98,7 @@ export function Footer() {
                         <p className="text-muted-foreground mt-4 text-sm leading-relaxed max-w-xs">
                             {d.desc}
                         </p>
+                        <SocialLinks size={22} className="pt-2 gap-4" />
                     </div>
 
                     {/* Quick Links */}
