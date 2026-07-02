@@ -77,6 +77,24 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-38x38"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "lamina-teflon-38x38"
       }
     ],
     "storyHeadline": {
@@ -515,6 +533,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -529,6 +550,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -931,6 +967,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -942,6 +981,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -1235,7 +1289,8 @@ export const rawPlanchasData: Plancha[] = [
         "image": "/products/maquinas/dorian-plancha-termica-platos/fotoB4.webp",
         "objectFit": "contain"
       }
-    ]
+    ],
+    "hidden": true
   },
   {
     "id": "barahona-plancha-para-tazas-6-en-1",
@@ -1285,11 +1340,35 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "mesa-universal-grande"
+      },
+      {
+        "id": "guantes-protectores-algodon"
+      },
+      {
+        "id": "termometro-digital-infrarrojos-it122"
       }
     ],
     "consumables": [
       {
         "id": "lamina-teflon-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -1679,7 +1758,8 @@ export const rawPlanchasData: Plancha[] = [
         "Ispezione e pulizia dei componenti interni.",
         "Verifica e calibrazione della temperatura."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "alina-plancha-para-tazas",
@@ -1754,6 +1834,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "mesa-universal-grande"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -1777,6 +1860,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -2170,290 +2268,26 @@ export const rawPlanchasData: Plancha[] = [
         "Verifica e calibrazione della temperatura con termometro.",
         "Conservare in luogo asciutto e privo di polvere quando non è in uso."
       ]
-    }
-  },
-  {
-    "id": "horno-para-sublimacion",
-    "slug": "horno-para-sublimacion",
-    "hidden": true,
-    "name": {
-      "es": "Horno sublimación 3D",
-      "en": "3D Sublimation Oven",
-      "pt": "Forno de sublimação 3D",
-      "it": "Forno per sublimazione 3D"
     },
-    "description": {
-      "es": "El Horno 3D es la solución perfecta para personalizar varios objetos pequeños a la vez. Es el compañero perfecto para iniciarse en el arte de la personalización.",
-      "en": "The 3D Oven is the perfect solution for customizing several small objects at once. It is the perfect companion to start in the art of personalization.",
-      "pt": "O Forno 3D é a solução perfeita para personalizar vários objetos pequenos ao mesmo tempo.",
-      "it": "Il Forno 3D è la soluzione perfetta per personalizzare diversi piccoli oggetti contemporaneamente."
-    },
-    "image": "https://beinsen.com/wp-content/uploads/2019/11/horn3d.png",
-    "price": "Consultar PVP",
-    "size": {
-      "es": "Estándar",
-      "en": "Standard",
-      "pt": "Padrão",
-      "it": "Standard"
-    },
-    "features": {
-      "es": [
-        "El Horno 3D es la solución perfecta para personalizar varios objetos pequeños a la vez",
-        "Es el compañero perfecto para iniciarse en el arte de la personalización",
-        "Puedes utilizarla para sublimar pequeños objetos como llaveros, placas, colgantes, cristal etc"
-      ],
-      "en": [
-        "The 3D Oven is the perfect solution for customizing several small objects at once",
-        "It is the perfect companion to start in the art of personalization",
-        "You can use it to sublimate small objects like keychains, plates, pendants, glass etc"
-      ],
-      "pt": [
-        "O Forno 3D é a solução perfeita para personalizar vários objetos pequenos ao mesmo tempo",
-        "É o companheiro perfeito para se iniciar na arte da personalização",
-        "Pode utilizá-lo para sublimar pequenos objetos como porta-chaves, placas, pendentes, vidro etc"
-      ],
-      "it": [
-        "Il Forno 3D è la soluzione perfetta per personalizzare diversi piccoli oggetti contemporaneamente",
-        "È il compagno perfetto per iniziare nell'arte della personalizzazione",
-        "Puoi utilizzarlo per sublimare piccoli oggetti come portachiavi, targhette, ciondoli, vetro ecc."
-      ]
-    },
-    "accessories": [],
-    "consumables": [],
-    "category": {
-      "es": "Especializadas",
-      "en": "Specialized",
-      "pt": "Especializadas",
-      "it": "Specializzate"
-    },
-    "openingType": {
-      "es": "Manual",
-      "en": "Manual",
-      "pt": "Manual",
-      "it": "Manuale"
-    },
-    "technicalSpecs": [
-      {
-        "label": {
-          "es": "Tipo de apertura",
-          "en": "Opening Type",
-          "pt": "Tipo de abertura",
-          "it": "Tipo di apertura"
-        },
-        "value": "Manual"
-      },
-      {
-        "label": {
-          "es": "Transferencia",
-          "en": "Transfer",
-          "pt": "Transferência",
-          "it": "Trasferimento"
-        },
-        "value": "Presión de vacio"
-      },
-      {
-        "label": {
-          "es": "Filtro de aire",
-          "en": "Air Filter",
-          "pt": "Filtro de ar",
-          "it": "Filtro dell'aria"
-        },
-        "value": "Sí"
-      },
-      {
-        "label": {
-          "es": "Controlador digital",
-          "en": "Digital Controller",
-          "pt": "Controlador digital",
-          "it": "Controller digitale"
-        },
-        "value": "Sí"
-      },
-      {
-        "label": {
-          "es": "Rango del temporizador",
-          "en": "Timer Range",
-          "pt": "Intervalo do temporizador",
-          "it": "Intervallo del timer"
-        },
-        "value": "0-999 seg."
-      },
-      {
-        "label": {
-          "es": "Área de trabajo",
-          "en": "Working Area",
-          "pt": "Área de trabalho",
-          "it": "Area di lavoro"
-        },
-        "value": "300 x 420 x 110 cm"
-      },
-      {
-        "label": {
-          "es": "Temperatura máxima",
-          "en": "Maximum Temperature",
-          "pt": "Temperatura máxima",
-          "it": "Temperatura massima"
-        },
-        "value": "280 ºC"
-      },
-      {
-        "label": {
-          "es": "Precisión de la temperatura",
-          "en": "Temperature Precision",
-          "pt": "Precisão da temperatura",
-          "it": "Precisione della temperatura"
-        },
-        "value": "±0.5%"
-      },
-      {
-        "label": {
-          "es": "Voltaje",
-          "en": "Voltage",
-          "pt": "Voltagem",
-          "it": "Voltaggio"
-        },
-        "value": "120 V / 220 V"
-      },
-      {
-        "label": {
-          "es": "Potencia",
-          "en": "Power",
-          "pt": "Potência",
-          "it": "Potenza"
-        },
-        "value": "2800 W"
-      },
-      {
-        "label": {
-          "es": "Peso Bruto",
-          "en": "Gross Weight",
-          "pt": "Peso Bruto",
-          "it": "Peso Lordo"
-        },
-        "value": "25 kg"
-      },
-      {
-        "label": {
-          "es": "Dimensiones",
-          "en": "Dimensions",
-          "pt": "Dimensões",
-          "it": "Dimensioni"
-        },
-        "value": "590 x 470 x 320 mm"
-      }
-    ],
-    "benefits": [
-      {
-        "title": {
-          "es": "Kit completo para empezar",
-          "en": "Complete starter kit",
-          "pt": "Kit completo para começar",
-          "it": "Kit completo per iniziare"
-        },
-        "description": {
-          "es": "Incluye 2 abrazaderas de 11oz, 1 abrazadera de 15oz, 1 lámina de silicona para platos y guantes de algodón para trabajar con seguridad.",
-          "en": "Includes 2 clamps for 11oz, 1 clamp for 15oz, 1 silicone sheet for plates, and cotton gloves for safer handling.",
-          "pt": "Inclui 2 abraçadeiras de 11oz, 1 abraçadeira de 15oz, 1 lâmina de silicone para pratos e luvas de algodão para trabalhar em segurança.",
-          "it": "Include 2 fascette da 11oz, 1 fascetta da 15oz, 1 foglio di silicone per piatti e guanti di cotone per lavorare in sicurezza."
-        },
-        "icon": "Layers"
-      },
-      {
-        "title": {
-          "es": "Impresión tridimensional",
-          "en": "Three-dimensional printing",
-          "pt": "Impressão tridimensional",
-          "it": "Stampa tridimensionale"
-        },
-        "description": {
-          "es": "Diseñado para sublimación 3D con resultados uniformes en piezas de distintas formas.",
-          "en": "Built for 3D sublimation with uniform results across differently shaped items.",
-          "pt": "Concebido para sublimação 3D com resultados uniformes em peças de diferentes formas.",
-          "it": "Progettato per la sublimazione 3D con risultati uniformi su pezzi di forme diverse."
-        },
-        "icon": "Target"
-      },
-      {
-        "title": {
-          "es": "Control digital preciso",
-          "en": "Precise digital control",
-          "pt": "Controlo digital preciso",
-          "it": "Controllo digitale preciso"
-        },
-        "description": {
-          "es": "Controlador digital con ajuste de tiempo y temperatura, además de alarma automática para mayor control en cada ciclo.",
-          "en": "Digital controller with time and temperature adjustment, plus automatic alarm for better cycle control.",
-          "pt": "Controlador digital com ajuste de tempo e temperatura, além de alarme automático para maior controlo em cada ciclo.",
-          "it": "Controller digitale con regolazione di tempo e temperatura, oltre ad allarme automatico per un maggiore controllo in ogni ciclo."
-        },
-        "icon": "Cpu"
-      },
-      {
-        "title": {
-          "es": "Estructura sólida y eficiente",
-          "en": "Solid and efficient structure",
-          "pt": "Estrutura sólida e eficiente",
-          "it": "Struttura solida ed efficiente"
-        },
-        "description": {
-          "es": "Estructura robusta, filtro de aire y bajo consumo de energía para un uso más estable y eficiente.",
-          "en": "Robust structure, air filter, and low energy consumption for more stable and efficient operation.",
-          "pt": "Estrutura robusta, filtro de ar e baixo consumo de energia para um uso mais estável e eficiente.",
-          "it": "Struttura robusta, filtro dell'aria e basso consumo energetico per un utilizzo più stabile ed efficiente."
-        },
-        "icon": "ShieldCheck"
-      },
-      {
-        "title": {
-          "es": "Diseño práctico y profesional",
-          "en": "Practical professional design",
-          "pt": "Design prático e profissional",
-          "it": "Design pratico e professionale"
-        },
-        "description": {
-          "es": "Acabado en color negro, fácil de montar y desmontar para adaptarse a tu ritmo de trabajo.",
-          "en": "Black finish and easy assembly/disassembly to match your workflow.",
-          "pt": "Acabamento em cor preta, fácil de montar e desmontar para se adaptar ao seu ritmo de trabalho.",
-          "it": "Finitura in colore nero, facile da montare e smontare per adattarsi al tuo ritmo di lavoro."
-        },
-        "icon": "Settings"
-      },
-      {
-        "title": {
-          "es": "Compatible con más moldes",
-          "en": "Compatible with more molds",
-          "pt": "Compatível com mais moldes",
-          "it": "Compatibile con più stampi"
-        },
-        "description": {
-          "es": "Podrás adquirir diferentes moldes para tazas, jarras, platos y más aplicaciones de personalización.",
-          "en": "You can add different molds for mugs, jugs, plates, and more personalization applications.",
-          "pt": "Poderá adquirir diferentes moldes para canecas, jarros, pratos e mais aplicações de personalização.",
-          "it": "Potrai acquistare diversi stampi per tazze, brocche, piatti e altre applicazioni di personalizzazione."
-        },
-        "icon": "Zap"
-      }
-    ]
+    "hidden": true
   },
   {
     "id": "plancha-para-tazas",
     "slug": "andra-prensa-automatica-tazas",
     "tiendaSublimacionUrl": "https://tiendasublimacion.com/plancha-beinsen-para-tazas-automatica-andra.html",
     "name": {
-      "es": "Andra prensa automática para tazas",
-      "en": "Andra automatic mug press",
-      "pt": "Andra prensa automática para canecas",
-      "it": "Andra pressa automatica per tazze"
+      "es": "Andra prensa automática eléctrica para tazas",
+      "en": "Andra automatic electric mug press",
+      "pt": "Andra prensa automática elétrica para canecas",
+      "it": "Andra pressa automatica elettrica per tazze"
     },
     "description": {
-      "es": "Personalizar tazas nunca resultó tan sencillo como con la prensa automática Beinsen Andra. El sistema de envoltura automática hara que plasmar tus diseños sea un auténtico juego de niños.",
-      "en": "Personalizing mugs has never been so easy as with the Beinsen Andra automatic press. The automatic wrapping system turns transferring your designs into child's play.",
-      "pt": "Personalizar canecas nunca foi tão simples como com a prensa automática Beinsen Andra. O sistema de envolvimento automático torna a aplicação dos seus desenhos numa autêntica brincadeira de crianças.",
-      "it": "Personalizzare le tazze non è mai stato così semplice come con la pressa automatica Beinsen Andra. Il sistema di avvolgimento automatico rende il trasferimento dei tuoi disegni un vero gioco da ragazzi."
+      "es": "Personalizar tazas nunca resultó tan sencillo como con la prensa automática eléctrica Beinsen Andra. El sistema de envoltura automática hara que plasmar tus diseños sea un auténtico juego de niños.",
+      "en": "Personalizing mugs has never been so easy as with the Beinsen Andra automatic electric press. The automatic wrapping system turns transferring your designs into child's play.",
+      "pt": "Personalizar canecas nunca foi tão simples como com a prensa automática elétrica Beinsen Andra. O sistema de envolvimento automático torna a aplicação dos seus desenhos numa autêntica brincadeira de crianças.",
+      "it": "Personalizzare le tazze non è mai stato così semplice come con la pressa automatica elettrica Beinsen Andra. Il sistema di avvolgimento automatico rende il trasferimento dei tuoi disegni un vero gioco da ragazzi."
     },
     "image": "/products/maquinas/andra-prensa-automatica-tazas/fotoPrincipal.webp",
-    "heroVideo": "https://beinsen.com/wp-content/uploads/2025/04/andra.webm",
-    "hotspotImage": "https://beinsen.com/wp-content/uploads/2024/01/description_barein.png",
     "price": "Consultar PVP",
     "size": {
       "es": "Estándar",
@@ -2463,22 +2297,22 @@ export const rawPlanchasData: Plancha[] = [
     },
     "features": {
       "es": [
-        "Personalizar tazas nunca resultó tan sencillo como con la prensa automática Beinsen Andra",
+        "Personalizar tazas nunca resultó tan sencillo como con la prensa automática eléctrica Beinsen Andra",
         "El sistema de envoltura automática y el preciso controlador digital hará que plasmar tus diseños sea un auténtico juego de niños",
         "Puedes cambiar facilmente la presión para personalizar tazas tanto de 11 como de 15 onzas"
       ],
       "en": [
-        "Personalizing mugs has never been so easy as with the Beinsen Andra automatic press",
+        "Personalizing mugs has never been so easy as with the Beinsen Andra automatic electric press",
         "The automatic wrapping system and precise digital controller make printing your designs child's play",
         "You can easily change the pressure to customize both 11 and 15 oz mugs"
       ],
       "pt": [
-        "Personalizar canecas nunca foi tão simples como com a prensa automática Beinsen Andra",
+        "Personalizar canecas nunca foi tão simples como com a prensa automática elétrica Beinsen Andra",
         "O sistema de envolvimento automático e o preciso controlador digital farão com que plasmar os seus desenhos seja uma autêntica brincadeira de crianças",
         "Pode mudar facilmente a pressão para personalizar canecas tanto de 11 como de 15 onças"
       ],
       "it": [
-        "Personalizzare tazze non è mai stato così semplice come con la pressa automatica Beinsen Andra",
+        "Personalizzare tazze non è mai stato così semplice come con la pressa automatica elettrica Beinsen Andra",
         "Il sistema di avvolgimento automatico e il preciso controller digitale faranno sì che imprimere i tuoi disegni sia un autentico gioco da ragazzi",
         "Puoi cambiare facilmente la pressione per personalizzare tazze sia da 11 che da 15 once"
       ]
@@ -2497,6 +2331,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -2948,6 +2797,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-38x38"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -3371,7 +3235,8 @@ export const rawPlanchasData: Plancha[] = [
         "Ispezione e pulizia dei componenti interni.",
         "Verifica e calibrazione della temperatura."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "obrei-plancha-gorras-apertura-automatica",
@@ -3432,6 +3297,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "plato-base-15x15-beinsen-obrei"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -3446,6 +3314,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -3796,14 +3679,14 @@ export const rawPlanchasData: Plancha[] = [
     }
   },
   {
-    "id": "planchas-transfer-con-apertura-neumatica",
+    "id": "doha-plancha-transfer-gran-formato",
     "slug": "doha-plancha-transfer-gran-formato",
     "tiendaSublimacionUrl": "https://tiendasublimacion.com/doha-plancha-transfer-gran-formato.html",
     "storyHeadline": {
-      "es": "Gran formato, presión neumática",
-      "en": "Large format, pneumatic precision",
-      "pt": "Grande formato, pressão pneumática",
-      "it": "Grande formato, pressione pneumatica"
+      "es": "Gran formato, apertura electromagnética",
+      "en": "Large format, electromagnetic opening",
+      "pt": "Grande formato, abertura eletromagnética",
+      "it": "Grande formato, apertura elettromagnetica"
     },
     "storySegments": [
       {
@@ -3823,9 +3706,9 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "name": {
       "es": "Doha Plancha transfer de gran formato",
-      "en": "Pneumatic opening heat presses",
-      "pt": "Prensas térmicas de abertura pneumática",
-      "it": "Presse termiche ad apertura pneumatica"
+      "en": "Doha Large-Format Heat Transfer Press",
+      "pt": "Doha Prensa Transfer de Grande Formato",
+      "it": "Doha Pressa Transfer di Grande Formato"
     },
     "description": {
       "es": "Personaliza a lo grande con la plancha transfer de gran formato Beinsen Doha. Gracias al plato de 50x80 cm podrás llegar donde no lo hace el resto y ofrecer a tus clientes personalizaciones más espectaculares, y sin renunciar a la precisión, comodidad y robustez de una plancha sandwich tradicional.",
@@ -3843,22 +3726,22 @@ export const rawPlanchasData: Plancha[] = [
     },
     "features": {
       "es": [
-        "Sistema neumático de alto rendimiento",
+        "Sistema electromagnético de alto rendimiento",
         "Control preciso de presión y temperatura",
         "Ideal para entornos de producción industrial"
       ],
       "en": [
-        "High-performance pneumatic system",
+        "High-performance electromagnetic system",
         "Precise pressure and temperature control",
         "Ideal for industrial production environments"
       ],
       "pt": [
-        "Sistema pneumático de alto desempenho",
+        "Sistema eletromagnético de alto desempenho",
         "Controlo preciso de pressão e temperatura",
         "Ideal para ambientes de produção industrial"
       ],
       "it": [
-        "Sistema pneumatico ad alte prestazioni",
+        "Sistema elettromagnetico ad alte prestazioni",
         "Controllo preciso di pressione e temperatura",
         "Ideale per ambienti di produzione industriale"
       ]
@@ -3889,6 +3772,27 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "category": {
@@ -3898,10 +3802,10 @@ export const rawPlanchasData: Plancha[] = [
       "it": "Tessile"
     },
     "openingType": {
-      "es": "Neumática",
-      "en": "Pneumatic",
-      "pt": "Pneumática",
-      "it": "Pneumatica"
+      "es": "Electromagnética",
+      "en": "Electromagnetic",
+      "pt": "Eletromagnética",
+      "it": "Elettromagnetica"
     },
     "technicalSpecs": [
       {
@@ -4337,6 +4241,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -4363,6 +4270,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -4905,6 +4827,30 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "category": {
@@ -5392,6 +5338,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -5403,6 +5352,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -5417,7 +5381,6 @@ export const rawPlanchasData: Plancha[] = [
       "pt": "Manual",
       "it": "Manuale"
     },
-    "hotspotImage": "https://beinsen.com/wp-content/uploads/2024/01/description_barein.png",
     "technicalSpecs": [
       {
         "label": {
@@ -5891,6 +5854,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -5920,6 +5886,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -6385,6 +6366,9 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -6405,6 +6389,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -6877,6 +6876,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "mesa-universal-grande"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -6906,6 +6908,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "resistencia-tazas-11oz-a"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -7282,7 +7299,8 @@ export const rawPlanchasData: Plancha[] = [
         "Ispezione e pulizia dei componenti interni.",
         "Verifica e calibrazione della temperatura."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "pocola-plancha-transfer-manual-pequena",
@@ -7347,6 +7365,24 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -7728,6 +7764,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -8203,6 +8254,12 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "plato-base-15x15-cambio-rapido"
+      },
+      {
+        "id": "guantes-protectores-algodon"
+      },
+      {
+        "id": "termometro-digital-infrarrojos-it122"
       }
     ],
     "consumables": [
@@ -8217,6 +8274,30 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "category": {
@@ -8766,6 +8847,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -9281,6 +9377,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -9677,7 +9788,8 @@ export const rawPlanchasData: Plancha[] = [
         "Verifica e calibrazione della temperatura con termometro esterno.",
         "Revisione periodica del sistema pneumatico e dei suoi collegamenti."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "luanda-plancha-termica-automatica",
@@ -9747,6 +9859,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -10207,7 +10334,8 @@ export const rawPlanchasData: Plancha[] = [
         "Verifica e calibrazione della temperatura.",
         "Revisione periodica del sistema pneumatico e dei suoi collegamenti."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "belice-plancha-termica-textil",
@@ -10293,6 +10421,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -10730,6 +10873,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "plato-intercambiable-30x35-barbados"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -10756,6 +10902,24 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-teflon-termorresistente-40x50"
       }
     ],
     "storyHeadline": {
@@ -11293,6 +11457,36 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-38x38"
+      },
+      {
+        "id": "lamina-teflon-38x38"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "storyHeadline": {
@@ -11784,6 +11978,9 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
     "consumables": [
@@ -11798,6 +11995,30 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-15x15"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "storyHeadline": {
@@ -12406,6 +12627,30 @@ export const rawPlanchasData: Plancha[] = [
     "consumables": [
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-teflon-termorresistente-40x50"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "storyHeadline": {
@@ -12902,6 +13147,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-teflon-termorresistente-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -13424,9 +13684,31 @@ export const rawPlanchasData: Plancha[] = [
     "accessories": [
       {
         "id": "termometro-digital-infrarrojos-it122"
+      },
+      {
+        "id": "guantes-protectores-algodon"
       }
     ],
-    "consumables": [],
+    "consumables": [
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      }
+    ],
     "category": {
       "es": "Especializadas",
       "en": "Specialized",
@@ -13883,6 +14165,24 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
+      },
+      {
+        "id": "lamina-teflon-40x50"
       }
     ],
     "category": {
@@ -14419,6 +14719,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-80x100"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -14935,6 +15250,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-80x100"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "storyHeadline": {
@@ -15384,7 +15714,8 @@ export const rawPlanchasData: Plancha[] = [
         "Ispezione e pulizia dei componenti interni.",
         "Verifica e calibrazione della temperatura."
       ]
-    }
+    },
+    "hidden": true
   },
   {
     "id": "felina-prensa-termica-para-espinilleras",
@@ -15465,6 +15796,21 @@ export const rawPlanchasData: Plancha[] = [
     "consumables": [
       {
         "id": "cinta-termica-10mm"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -15958,6 +16304,21 @@ export const rawPlanchasData: Plancha[] = [
       },
       {
         "id": "almohadilla-silicona-40x50"
+      },
+      {
+        "id": "almohadilla-espuma-24mm"
+      },
+      {
+        "id": "papel-protector-siliconado"
+      },
+      {
+        "id": "funda-aislante-prensa"
+      },
+      {
+        "id": "funda-protectora-prensa"
+      },
+      {
+        "id": "almohadilla-algodon-80x110"
       }
     ],
     "category": {
@@ -16423,7 +16784,3 @@ export const rawPlanchasData: Plancha[] = [
     }
   }
 ];
-
-function uniqueStrings(values: string[]): string[] {
-  return Array.from(new Set(values.filter(Boolean)));
-}

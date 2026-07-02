@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown, Zap, Box, Package, ArrowRight, Settings } from "l
 import { useState, useRef, useEffect, Suspense } from "react";
 import Image from "next/image";
 import { ThemeToggle } from "./ThemeToggle";
+import { SocialLinks } from "./SocialLinks";
 import { LanguageSelector } from "./LanguageSelector";
 import { useLanguage } from "@/context/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
@@ -266,6 +267,7 @@ function NavbarContent() {
                             <LanguageSelector />
                             <GlobalSearch />
                             <ThemeToggle />
+                            <SocialLinks size={18} className="ml-2 gap-2" />
                         </div>
                     </div>
 
@@ -365,6 +367,9 @@ function NavbarContent() {
                             <div className="flex justify-between items-center pt-8 mt-4 border-t border-border/40 px-6">
                                 <ThemeToggle />
                                 <GlobalSearch />
+                            </div>
+                            <div className="flex justify-center pt-4 px-6">
+                                <SocialLinks size={22} className="gap-4" />
                             </div>
                         </div>
                     </motion.div>

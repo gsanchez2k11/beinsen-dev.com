@@ -1442,5 +1442,109 @@ export const rawConsumablesData: Consumable[] = [
         "value": "Plato + resistencia + cableado + adaptador"
       }
     ]
+  },
+  {
+    "id": "almohadilla-espuma-24mm",
+    "slug": "almohadilla-espuma-24mm",
+    "name": {
+      "es": "Almohadilla de espuma de 2,4 mm",
+      "en": "2.4 mm foam pad",
+      "pt": "Almofada de espuma de 2,4 mm",
+      "it": "Tappetino in schiuma da 2,4 mm"
+    },
+    "price": "Consultar PVP",
+    "description": {
+      "es": "Almohadilla de espuma técnica de 2,4 mm de grosor para uniformar la presión sobre prendas con costuras o relieves. Compatible con cualquier prensa térmica Beinsen.",
+      "en": "Technical foam pad, 2.4 mm thick, evens out pressure across garments with seams or reliefs. Compatible with any Beinsen heat press.",
+      "pt": "Almofada de espuma técnica de 2,4 mm de espessura para uniformizar a pressão sobre peças com costuras ou relevos. Compatível com qualquer prensa térmica Beinsen.",
+      "it": "Tappetino in schiuma tecnica da 2,4 mm di spessore per uniformare la pressione su capi con cuciture o rilievi. Compatibile con qualsiasi pressa termica Beinsen."
+    },
+    "technicalSpecs": [
+      {
+        "label": { "es": "Grosor", "en": "Thickness", "pt": "Espessura", "it": "Spessore" },
+        "value": "2,4 mm"
+      },
+      {
+        "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" },
+        "value": "Espuma técnica termorresistente"
+      }
+    ]
+  },
+  {
+    "id": "papel-protector-siliconado",
+    "slug": "papel-protector-siliconado",
+    "name": {
+      "es": "Papel protector siliconado",
+      "en": "Siliconised release paper",
+      "pt": "Papel protetor siliconizado",
+      "it": "Carta protettiva siliconata"
+    },
+    "price": "Consultar PVP",
+    "description": {
+      "es": "Papel siliconado antiadherente para proteger el plato superior y la prenda durante el planchado. Evita marcas, residuos y trasvases de tinta no deseados. Reutilizable.",
+      "en": "Non-stick siliconised paper that protects the top platen and the garment during pressing. Prevents marks, residue and unwanted ink transfer. Reusable.",
+      "pt": "Papel siliconizado antiaderente para proteger o prato superior e a peça durante a prensagem. Evita marcas, resíduos e transferências de tinta indesejadas. Reutilizável.",
+      "it": "Carta siliconata antiaderente per proteggere la piastra superiore e il capo durante la pressatura. Evita segni, residui e trasferimenti di inchiostro indesiderati. Riutilizzabile."
+    },
+    "technicalSpecs": [
+      {
+        "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" },
+        "value": "Papel kraft siliconado por ambas caras"
+      },
+      {
+        "label": { "es": "Uso", "en": "Use", "pt": "Uso", "it": "Uso" },
+        "value": "Sublimación, vinilo textil, DTF"
+      }
+    ]
+  },
+  {
+    "id": "funda-aislante-prensa",
+    "slug": "funda-aislante-prensa",
+    "name": {
+      "es": "Funda aislante para prensa térmica",
+      "en": "Insulating cover for heat press",
+      "pt": "Capa isolante para prensa térmica",
+      "it": "Copertura isolante per pressa termica"
+    },
+    "price": "Consultar PVP",
+    "description": {
+      "es": "Funda aislante térmica que reduce las pérdidas de calor del plato superior, acortando los tiempos de calentamiento y mejorando la eficiencia energética. Disponible en distintas medidas — indícanos el modelo de tu prensa al hacer el pedido.",
+      "en": "Thermal insulating cover that reduces heat loss from the upper platen, shortening warm-up times and improving energy efficiency. Available in various sizes — tell us your press model when ordering.",
+      "pt": "Capa isolante térmica que reduz a perda de calor do prato superior, encurtando os tempos de aquecimento e melhorando a eficiência energética. Disponível em várias medidas — indique o modelo da sua prensa ao encomendar.",
+      "it": "Copertura isolante termica che riduce le perdite di calore dalla piastra superiore, accorciando i tempi di riscaldamento e migliorando l'efficienza energetica. Disponibile in diverse misure — indica il modello della tua pressa al momento dell'ordine."
+    },
+    "technicalSpecs": [
+      {
+        "label": { "es": "Medidas", "en": "Sizes", "pt": "Medidas", "it": "Misure" },
+        "value": "A medida según modelo de prensa"
+      },
+      {
+        "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" },
+        "value": "Fibra cerámica aluminizada"
+      }
+    ]
+  },
+  {
+    "id": "funda-protectora-prensa",
+    "slug": "funda-protectora-prensa",
+    "name": {
+      "es": "Funda protectora para prensa térmica",
+      "en": "Protective cover for heat press",
+      "pt": "Capa protetora para prensa térmica",
+      "it": "Copertura protettiva per pressa termica"
+    },
+    "price": "Consultar PVP",
+    "description": {
+      "es": "Funda protectora para guardar la prensa fuera de uso, evitando polvo, salpicaduras y arañazos. Indicada para almacenamiento y transporte entre puestos de trabajo.",
+      "en": "Protective cover for storing the press when not in use, preventing dust, splashes and scratches. Suitable for storage and transport between workstations.",
+      "pt": "Capa protetora para guardar a prensa fora de uso, evitando poeira, salpicos e arranhões. Indicada para armazenamento e transporte entre postos de trabalho.",
+      "it": "Copertura protettiva per riporre la pressa fuori uso, evitando polvere, schizzi e graffi. Adatta a stoccaggio e trasporto tra postazioni di lavoro."
+    },
+    "technicalSpecs": [
+      {
+        "label": { "es": "Material", "en": "Material", "pt": "Material", "it": "Materiale" },
+        "value": "Tejido técnico impermeable"
+      }
+    ]
   }
 ];
