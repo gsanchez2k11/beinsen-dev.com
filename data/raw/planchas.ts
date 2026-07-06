@@ -370,9 +370,6 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después para dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -380,9 +377,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately; the heating plate is still too hot.",
-        "If you turn off the compressor, the hot plate may close and press against the lower plate, which could burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -390,9 +384,6 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de calor está demasiado quente.",
-        "Se desligar o compressor, a placa de calor quente fechar-se-á e pressionará a placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor a funcionar durante alguns minutos para arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição de películas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -400,9 +391,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere il compressore immediatamente, la piastra di calore è troppo calda.",
-        "Se spegni il compressore, la piastra calda si chiuderà e premerà contro la piastra inferiore, bruciando il tampone di cotone.",
-        "Mantieni il compressore in funzione per alcuni minuti per farlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione di pellicole protettive o rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -855,9 +843,6 @@ export const rawPlanchasData: Plancha[] = [
         "Limpiar las resistencias después de cada jornada",
         "Revisar el estado de los cables térmicos mensualmente",
         "Evitar el contacto directo de las placas sin taza",
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después para dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -873,9 +858,6 @@ export const rawPlanchasData: Plancha[] = [
         "Limpar as resistências após cada jornada",
         "Verificar o estado dos cabos térmicos mensalmente",
         "Evitar o contacto direto das placas sem caneca",
-        "Não desligue o compressor imediatamente, a placa de calor está demasiado quente.",
-        "Se desligar o compressor, a placa de calor quente fechar-se-á e pressionará a placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor a funcionar durante alguns minutos para arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição de películas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -886,9 +868,6 @@ export const rawPlanchasData: Plancha[] = [
         "Pulire le resistenze dopo ogni giornata di lavoro",
         "Controllare lo stato dei cavi termici mensilmente",
         "Evitare il contatto diretto delle piastre senza tazza",
-        "Non spegnere il compressore immediatamente, la piastra di calore è troppo calda.",
-        "Se spegni il compressore, la piastra calda si chiuderà e premerà contro la piastra inferiore, bruciando il tampone di cotone.",
-        "Mantieni il compressore in funzione per alcuni minuti per farlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione di pellicole protettive o rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -2587,9 +2566,6 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -2597,9 +2573,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately; the heating plate is too hot.",
-        "If you turn off the compressor, the hot plate may close and press down onto the lower plate, which could burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -2607,9 +2580,6 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de calor está demasiado quente.",
-        "Se desligar o compressor, a placa de calor quente fechar-se-á e pressionará a placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor durante alguns minutos depois para deixar arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição de películas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -2617,9 +2587,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere il compressore immediatamente, la piastra di calore è troppo calda.",
-        "Se spegni il compressore, la piastra calda si chiuderà e premerà contro la piastra inferiore, bruciando il tampone di cotone.",
-        "Mantieni il compressore in funzione per alcuni minuti per farlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione di pellicole protettive o rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -4126,9 +4093,7 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
+        "Tras el ciclo, deja que la apertura automática complete su recorrido antes de retirar la pieza.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -4136,9 +4101,7 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately; the heating plate is still too hot.",
-        "If you turn off the compressor, the hot plate may close and press against the lower plate, which could burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
+        "After each cycle, let the automatic opening complete its travel before removing the piece.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -4146,9 +4109,7 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de calor está demasiado quente.",
-        "Se desligar o compressor, a placa de calor quente fechará e pressionará até à placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor durante alguns minutos para o deixar arrefecer.",
+        "Após o ciclo, deixe que a abertura automática complete o seu percurso antes de retirar a peça.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição de folhas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -4156,9 +4117,7 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere il compressore immediatamente, la piastra di calore è ancora troppo calda.",
-        "Se spegni il compressore, la piastra di calore calda si chiuderà e premerà fino alla piastra inferiore, il che brucerebbe il tappetino di cotone.",
-        "Mantieni il compressore per alcuni minuti per lasciarlo raffreddare.",
+        "Al termine del ciclo, lascia che l'apertura automatica completi la sua corsa prima di rimuovere il pezzo.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione di fogli protettivi o rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -6276,9 +6235,6 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -6286,9 +6242,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately, the heating plate is too hot.",
-        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -6296,9 +6249,6 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de calor está demasiado quente.",
-        "Se desligar o compressor, a placa de calor quente fechará e pressionará até à placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor durante alguns minutos para o deixar arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição de folhas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -6306,9 +6256,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere il compressore immediatamente, la piastra di calore è troppo calda.",
-        "Se spegni il compressore, la piastra di calore calda si chiuderà e premerà fino alla piastra inferiore, il che potrebbe bruciare il tappetino di cotone.",
-        "Mantieni il compressore per alcuni minuti per lasciarlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione di fogli protettivi o rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -7660,9 +7607,6 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -7670,9 +7614,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately, the heating plate is too hot.",
-        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -7680,9 +7621,6 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de aquecimento está demasiado quente.",
-        "Se desligar o compressor, a placa de aquecimento quente fechar-se-á e pressionará a placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor durante alguns minutos para deixar arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição das películas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -7690,9 +7628,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere immediatamente il compressore, la piastra riscaldante è troppo calda.",
-        "Se spegni il compressore, la piastra riscaldante calda si chiuderà e premerà contro la piastra inferiore, bruciando il cuscinetto di cotone.",
-        "Mantieni il compressore in funzione per alcuni minuti per farlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione dei fogli protettivi o rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -8116,9 +8051,6 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -8126,9 +8058,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately, the heating plate is too hot.",
-        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -8136,9 +8065,6 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de aquecimento está demasiado quente.",
-        "Se desligar o compressor, a placa de aquecimento quente fechar-se-á e pressionará a placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor durante alguns minutos para deixar arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição das películas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -8146,9 +8072,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere immediatamente il compressore, la piastra riscaldante è troppo calda.",
-        "Se spegni il compressore, la piastra riscaldante calda si chiuderà e premerà contro la piastra inferiore, bruciando il cuscinetto di cotone.",
-        "Mantieni il compressore in funzione per alcuni minuti per farlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione dei fogli protettivi o rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -10765,9 +10688,6 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -10775,9 +10695,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately, the heating plate is too hot.",
-        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -10785,9 +10702,6 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de aquecimento está demasiado quente.",
-        "Se desligar o compressor, a placa de aquecimento quente fechará e pressionará a placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor ligado durante alguns minutos para deixar arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição de folhas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -10795,9 +10709,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere immediatamente il compressore, la piastra riscaldante è troppo calda.",
-        "Se spegne il compressore, la piastra riscaldante calda si chiuderà e premerà sulla piastra inferiore, bruciando il tampone di cotone.",
-        "Mantenga il compressore acceso per alcuni minuti per farlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione delle pellicole protettive o dei rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -11758,9 +11669,6 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -11768,9 +11676,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately, the heating plate is too hot.",
-        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -11778,9 +11683,6 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de aquecimento está demasiado quente.",
-        "Se desligar o compressor, a placa de aquecimento quente fechará e pressionará a placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor ligado durante alguns minutos para deixar arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição de folhas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -11788,9 +11690,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere immediatamente il compressore, la piastra riscaldante è troppo calda.",
-        "Se spegne il compressore, la piastra riscaldante calda si chiuderà e premerà sulla piastra inferiore, bruciando il tampone di cotone.",
-        "Mantenga il compressore acceso per alcuni minuti per farlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione delle pellicole protettive o dei rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -12380,9 +12279,6 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -12390,9 +12286,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately, the heating plate is too hot.",
-        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -12400,9 +12293,6 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de aquecimento está demasiado quente.",
-        "Se desligar o compressor, a placa de aquecimento quente fechará e pressionará a placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor ligado durante alguns minutos para deixar arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição de folhas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -12410,9 +12300,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere immediatamente il compressore, la piastra riscaldante è troppo calda.",
-        "Se spegne il compressore, la piastra riscaldante calda si chiuderà e premerà sulla piastra inferiore, bruciando il tampone di cotone.",
-        "Mantenga il compressore acceso per alcuni minuti per farlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione delle pellicole protettive o dei rivestimenti.",
         "Verifica e regolazione della pressione.",
@@ -13034,9 +12921,6 @@ export const rawPlanchasData: Plancha[] = [
     ],
     "maintenanceTips": {
       "es": [
-        "No apagues el compresor inmediatamente, la placa de calor está demasiado caliente.",
-        "Si apagas el compresor, la placa de calor caliente se cerrará y presionará hasta la placa inferior, lo que quemaría la almohadilla de algodón.",
-        "Mantén el compresor durante unos minutos después dejar enfriar.",
         "Limpieza regular de las placas o superficies de sublimación.",
         "Reemplazo de láminas protectoras o revestimientos.",
         "Verificación y ajuste de la presión.",
@@ -13044,9 +12928,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificación y calibración de la temperatura."
       ],
       "en": [
-        "Do not turn off the compressor immediately, the heating plate is too hot.",
-        "If you turn off the compressor, the hot heating plate may close and press against the lower plate, which can burn the cotton pad.",
-        "Keep the compressor running for a few minutes to let it cool down.",
         "Regular cleaning of plates or sublimation surfaces.",
         "Replacement of protective sheets or coatings.",
         "Pressure verification and adjustment.",
@@ -13054,9 +12935,6 @@ export const rawPlanchasData: Plancha[] = [
         "Temperature verification and calibration."
       ],
       "pt": [
-        "Não desligue o compressor imediatamente, a placa de aquecimento está demasiado quente.",
-        "Se desligar o compressor, a placa de aquecimento quente fechará e pressionará a placa inferior, o que queimaria a almofada de algodão.",
-        "Mantenha o compressor ligado durante alguns minutos para deixar arrefecer.",
         "Limpeza regular das placas ou superfícies de sublimação.",
         "Substituição de folhas protetoras ou revestimentos.",
         "Verificação e ajuste da pressão.",
@@ -13064,9 +12942,6 @@ export const rawPlanchasData: Plancha[] = [
         "Verificação e calibração da temperatura."
       ],
       "it": [
-        "Non spegnere immediatamente il compressore, la piastra riscaldante è troppo calda.",
-        "Se spegne il compressore, la piastra riscaldante calda si chiuderà e premerà sulla piastra inferiore, bruciando il tampone di cotone.",
-        "Mantenga il compressore acceso per alcuni minuti per farlo raffreddare.",
         "Pulizia regolare delle piastre o superfici di sublimazione.",
         "Sostituzione delle pellicole protettive o dei rivestimenti.",
         "Verifica e regolazione della pressione.",
