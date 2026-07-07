@@ -271,11 +271,10 @@ export default function HomeClient({ articles }: { articles: Article[] }) {
                 </div>
             </section>
 
-            {/* Trusted Brands — hidden, uncomment to restore
+            {/* Trusted Brands */}
             <div className="bg-background py-12">
                 <TrustedBrands />
             </div>
-            */}
 
             {/* Visual Category Entry Points */}
             <section className="py-32 px-4 bg-muted/30">

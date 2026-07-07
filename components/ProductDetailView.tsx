@@ -428,8 +428,8 @@ export function ProductDetailView({
                         </ScrollReveal>
                     )}
 
-                    {/* Where to Buy Section — set false → true to restore */}
-                    {false && (plancha as any).tiendaSublimacionUrl && (
+                    {/* Where to Buy Section */}
+                    {(plancha as any).tiendaSublimacionUrl && (
                         <ScrollReveal className="w-full py-12">
                             <div className="text-center mb-12">
                                 <h3 className="text-4xl font-black mb-4 tracking-tight">{d.distributorsTitle}</h3>
