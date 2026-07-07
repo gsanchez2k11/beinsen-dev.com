@@ -481,29 +481,31 @@ export function ProductDetailView({
                         </ScrollReveal>
                     )}
 
-                    {/* Find Distributor CTA */}
-                    <ScrollReveal className="w-full py-12">
-                        <div className="max-w-4xl mx-auto">
-                            <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-card via-card to-muted/40 border border-border/50 p-8 md:p-12 text-center">
-                                <div className="absolute -top-32 -left-32 w-72 h-72 rounded-full bg-[#FF6600]/5 blur-[100px] pointer-events-none" />
-                                <div className="absolute -bottom-32 -right-32 w-72 h-72 rounded-full bg-[#FF6600]/5 blur-[100px] pointer-events-none" />
-                                <div className="relative">
-                                    <div className="w-16 h-16 rounded-2xl bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] mx-auto mb-6">
-                                        <MapPin size={32} />
+                    {/* Find Distributor CTA — sólo cuando NO hay enlace directo a TiendaSublimacion */}
+                    {!(plancha as any).tiendaSublimacionUrl && (
+                        <ScrollReveal className="w-full py-12">
+                            <div className="max-w-4xl mx-auto">
+                                <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-card via-card to-muted/40 border border-border/50 p-8 md:p-12 text-center">
+                                    <div className="absolute -top-32 -left-32 w-72 h-72 rounded-full bg-[#FF6600]/5 blur-[100px] pointer-events-none" />
+                                    <div className="absolute -bottom-32 -right-32 w-72 h-72 rounded-full bg-[#FF6600]/5 blur-[100px] pointer-events-none" />
+                                    <div className="relative">
+                                        <div className="w-16 h-16 rounded-2xl bg-[#FF6600]/10 flex items-center justify-center text-[#FF6600] mx-auto mb-6">
+                                            <MapPin size={32} />
+                                        </div>
+                                        <h3 className="text-3xl md:text-4xl font-black mb-4 tracking-tight">{d.findDistributorTitle}</h3>
+                                        <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 font-light">{d.findDistributorDesc}</p>
+                                        <Link
+                                            href="/contacto"
+                                            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF6600] text-white font-black uppercase tracking-widest text-[11px] shadow-lg shadow-[#FF6600]/30 hover:bg-[#cc5200] hover:shadow-xl hover:shadow-[#FF6600]/40 hover:scale-[1.03] transition-all duration-300"
+                                        >
+                                            {d.findDistributorCta}
+                                            <ArrowRight size={14} />
+                                        </Link>
                                     </div>
-                                    <h3 className="text-3xl md:text-4xl font-black mb-4 tracking-tight">{d.findDistributorTitle}</h3>
-                                    <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-8 font-light">{d.findDistributorDesc}</p>
-                                    <Link
-                                        href="/contacto"
-                                        className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[#FF6600] text-white font-black uppercase tracking-widest text-[11px] shadow-lg shadow-[#FF6600]/30 hover:bg-[#cc5200] hover:shadow-xl hover:shadow-[#FF6600]/40 hover:scale-[1.03] transition-all duration-300"
-                                    >
-                                        {d.findDistributorCta}
-                                        <ArrowRight size={14} />
-                                    </Link>
                                 </div>
                             </div>
-                        </div>
-                    </ScrollReveal>
+                        </ScrollReveal>
+                    )}
 
                     {/* Video / Action Section */}
                     {plancha.videoUrl && (
