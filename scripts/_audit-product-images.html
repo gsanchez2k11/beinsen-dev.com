@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Auditoria imagenes - Beinsen</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 1400px; margin: 0 auto; padding: 20px; background: #fafafa; }
+  h1 { margin: 0 0 4px; }
+  .meta { color: #666; font-size: 14px; margin-bottom: 24px; }
+  .plancha { background: white; border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin-bottom: 18px; }
+  .plancha h2 { margin: 0 0 12px; font-size: 16px; font-family: 'Consolas', monospace; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+  .img-card { border: 2px solid #e5e5e5; border-radius: 8px; padding: 8px; background: #fff; text-align: center; }
+  .img-card.dup { border-color: #e53935; background: #ffebee; }
+  .img-card.huerfano { border-color: #ff9800; background: #fff3e0; }
+  .img-card img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #f5f5f5; border-radius: 4px; }
+  .img-card .name { font-family: 'Consolas', monospace; font-size: 11px; margin-top: 6px; word-break: break-all; }
+  .img-card .size { font-size: 10px; color: #888; }
+  .tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: bold; margin-top: 3px; }
+  .tag.dup { background: #e53935; color: white; }
+  .tag.huerfano { background: #ff9800; color: white; }
+  .clean { color: #4caf50; font-size: 13px; }
+  .summary { background: white; border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin-bottom: 18px; }
+  .filter { display: flex; gap: 8px; margin-bottom: 16px; }
+  .filter button { padding: 6px 12px; border: 1px solid #ccc; background: white; border-radius: 6px; cursor: pointer; font-size: 13px; }
+  .filter button.active { background: #FF6600; color: white; border-color: #FF6600; }
+</style></head>
+<body>
+<h1>Auditoria de imagenes - Beinsen</h1>
+<div class="meta">33 planchas - 0 duplicados - 0 huerfanos</div>
+<div class="filter">
+  <button class="active" onclick="filt('all')">Todas</button>
+  <button onclick="filt('dup')">Solo con duplicados</button>
+  <button onclick="filt('huerfano')">Solo con huerfanos</button>
+  <button onclick="filt('issue')">Con cualquier problema</button>
+</div>
+<div class="plancha" data-status="clean">
+      <h2>alaska-plancha-termica-textil <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">80 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">380 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">124 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">136 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoExp.png" alt="fotoExp.png">
+            <div class="name">fotoExp.png</div>
+            <div class="size">240 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoExtra3.png" alt="fotoExtra3.png">
+            <div class="name">fotoExtra3.png</div>
+            <div class="size">136 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">137 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>alina-plancha-para-tazas <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">404 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">404 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">388 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">402 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">465 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>andra-prensa-automatica-tazas <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/andra-prensa-automatica-tazas/fotoB3.jpg" alt="fotoB3.jpg">
+            <div class="name">fotoB3.jpg</div>
+            <div class="size">137 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/andra-prensa-automatica-tazas/fotoExtra2.png" alt="fotoExtra2.png">
+            <div class="name">fotoExtra2.png</div>
+            <div class="size">620 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/andra-prensa-automatica-tazas/fotoExtra3.png" alt="fotoExtra3.png">
+            <div class="name">fotoExtra3.png</div>
+            <div class="size">799 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/andra-prensa-automatica-tazas/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">827 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>aruba-plancha-para-tazas <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/aruba-plancha-para-tazas/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">315 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/aruba-plancha-para-tazas/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">295 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/aruba-plancha-para-tazas/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">318 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>barahona-plancha-para-tazas-6-en-1 <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">600 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">390 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">491 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>barbados-plancha-termica-textil <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">372 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">266 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">62 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">407 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoExtra2.png" alt="fotoExtra2.png">
+            <div class="name">fotoExtra2.png</div>
+            <div class="size">238 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">277 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>barein-plancha-termica <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barein-plancha-termica/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">508 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barein-plancha-termica/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">39 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barein-plancha-termica/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">283 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barein-plancha-termica/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">529 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barein-plancha-termica/fotoExtra3.png" alt="fotoExtra3.png">
+            <div class="name">fotoExtra3.png</div>
+            <div class="size">505 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/barein-plancha-termica/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">608 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>belice-plancha-termica-textil <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">309 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoB3.jpg" alt="fotoB3.jpg">
+            <div class="name">fotoB3.jpg</div>
+            <div class="size">135 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">304 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoExtra3.png" alt="fotoExtra3.png">
+            <div class="name">fotoExtra3.png</div>
+            <div class="size">139 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">184 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>caen-plancha-neumatica-doble-estacion <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">544 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">221 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">156 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">178 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">337 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>chicago-plancha-termica-automatica <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">423 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">359 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">601 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">315 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">177 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoExtra2.png" alt="fotoExtra2.png">
+            <div class="name">fotoExtra2.png</div>
+            <div class="size">810 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">338 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>chinela-plancha-transfer-zapatillas <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">164 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">247 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">237 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">337 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">125 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>doha-plancha-transfer-gran-formato <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoB1.jpg" alt="fotoB1.jpg">
+            <div class="name">fotoB1.jpg</div>
+            <div class="size">47 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoB2.jpg" alt="fotoB2.jpg">
+            <div class="name">fotoB2.jpg</div>
+            <div class="size">36 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoB3.jpg" alt="fotoB3.jpg">
+            <div class="name">fotoB3.jpg</div>
+            <div class="size">270 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">184 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra1.jpg" alt="fotoExtra1.jpg">
+            <div class="name">fotoExtra1.jpg</div>
+            <div class="size">324 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra2.jpg" alt="fotoExtra2.jpg">
+            <div class="name">fotoExtra2.jpg</div>
+            <div class="size">220 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra3.png" alt="fotoExtra3.png">
+            <div class="name">fotoExtra3.png</div>
+            <div class="size">238 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra5.jpg" alt="fotoExtra5.jpg">
+            <div class="name">fotoExtra5.jpg</div>
+            <div class="size">261 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">770 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>dorian-plancha-termica-platos <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/dorian-plancha-termica-platos/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">101 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/dorian-plancha-termica-platos/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">341 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/dorian-plancha-termica-platos/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">91 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/dorian-plancha-termica-platos/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">176 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>esparta-prensa-termica-neumatica <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoB1.jpg" alt="fotoB1.jpg">
+            <div class="name">fotoB1.jpg</div>
+            <div class="size">302 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoB2.jpg" alt="fotoB2.jpg">
+            <div class="name">fotoB2.jpg</div>
+            <div class="size">119 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">240 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">143 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoExtra1.jpg" alt="fotoExtra1.jpg">
+            <div class="name">fotoExtra1.jpg</div>
+            <div class="size">276 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoExtra2.jpg" alt="fotoExtra2.jpg">
+            <div class="name">fotoExtra2.jpg</div>
+            <div class="size">273 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoExtra3.jpg" alt="fotoExtra3.jpg">
+            <div class="name">fotoExtra3.jpg</div>
+            <div class="size">144 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">209 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>estambul-prensa-swing-away-electrica <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">433 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">1184 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">546 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">277 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">479 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>felina-prensa-termica-para-espinilleras <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">318 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">145 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">124 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">222 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">216 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">163 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>gante-plancha-manual-gorras <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">470 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">691 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">101 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">555 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">519 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">352 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>guyana-plancha-termica-textil <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">313 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoB2.jpg" alt="fotoB2.jpg">
+            <div class="name">fotoB2.jpg</div>
+            <div class="size">174 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">785 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">462 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">232 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>jamaica-planchas-transfer-multifuncion-para-sublimacion <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">504 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">173 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">515 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">546 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">503 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">318 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>kenia-plancha-termica-textil <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">1181 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">711 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">626 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">874 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">462 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>luanda-plancha-termica-automatica <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">219 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">222 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">255 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">343 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">235 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>maine-plancha-para-tazas <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">386 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">374 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">250 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">237 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoExtra2.png" alt="fotoExtra2.png">
+            <div class="name">fotoExtra2.png</div>
+            <div class="size">334 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">826 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>malvinas-plancha-termica-textil <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">264 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">52 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">23 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">265 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">91 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>miranda-prensa-termica-automatica-electrica <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">126 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">127 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">158 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>normandia-i-plancha-termica-textil <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">721 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">342 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">104 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">129 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">75 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">207 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>normandia-ii-plancha-termica-textil <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">552 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">555 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">480 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoExtra2.png" alt="fotoExtra2.png">
+            <div class="name">fotoExtra2.png</div>
+            <div class="size">186 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoExtra3.png" alt="fotoExtra3.png">
+            <div class="name">fotoExtra3.png</div>
+            <div class="size">576 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">308 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>normandia-iii-plancha-termica-textil <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">552 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">555 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png">
+            <div class="name">fotoExtra1.png</div>
+            <div class="size">480 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoExtra2.png" alt="fotoExtra2.png">
+            <div class="name">fotoExtra2.png</div>
+            <div class="size">186 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoExtra3.png" alt="fotoExtra3.png">
+            <div class="name">fotoExtra3.png</div>
+            <div class="size">576 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">308 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>obrei-plancha-gorras-apertura-automatica <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">726 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">349 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB3.jpg" alt="fotoB3.jpg">
+            <div class="name">fotoB3.jpg</div>
+            <div class="size">262 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB4.png" alt="fotoB4.png">
+            <div class="name">fotoB4.png</div>
+            <div class="size">109 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra3.png" alt="fotoExtra3.png">
+            <div class="name">fotoExtra3.png</div>
+            <div class="size">334 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra4.png" alt="fotoExtra4.png">
+            <div class="name">fotoExtra4.png</div>
+            <div class="size">264 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra5.png" alt="fotoExtra5.png">
+            <div class="name">fotoExtra5.png</div>
+            <div class="size">492 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra6.png" alt="fotoExtra6.png">
+            <div class="name">fotoExtra6.png</div>
+            <div class="size">315 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra7.png" alt="fotoExtra7.png">
+            <div class="name">fotoExtra7.png</div>
+            <div class="size">633 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra8.png" alt="fotoExtra8.png">
+            <div class="name">fotoExtra8.png</div>
+            <div class="size">748 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">146 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>pocola-plancha-transfer-manual-pequena <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">430 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">647 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>sicilia-plancha-para-tazas <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">240 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoB2.jpg" alt="fotoB2.jpg">
+            <div class="name">fotoB2.jpg</div>
+            <div class="size">205 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoB3.jpg" alt="fotoB3.jpg">
+            <div class="name">fotoB3.jpg</div>
+            <div class="size">149 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoB4.jpg" alt="fotoB4.jpg">
+            <div class="name">fotoB4.jpg</div>
+            <div class="size">221 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">221 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>sore-plancha-profesional-tazas <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoB1.jpg" alt="fotoB1.jpg">
+            <div class="name">fotoB1.jpg</div>
+            <div class="size">143 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoB2.jpg" alt="fotoB2.jpg">
+            <div class="name">fotoB2.jpg</div>
+            <div class="size">148 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">844 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoB4.jpg" alt="fotoB4.jpg">
+            <div class="name">fotoB4.jpg</div>
+            <div class="size">28 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoExtra1.jpg" alt="fotoExtra1.jpg">
+            <div class="name">fotoExtra1.jpg</div>
+            <div class="size">182 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoExtra2.jpg" alt="fotoExtra2.jpg">
+            <div class="name">fotoExtra2.jpg</div>
+            <div class="size">30 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">226 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>tobago-estacion-planchado-continuo <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">292 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">97 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoB3.jpg" alt="fotoB3.jpg">
+            <div class="name">fotoB3.jpg</div>
+            <div class="size">55 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoB4.jpg" alt="fotoB4.jpg">
+            <div class="name">fotoB4.jpg</div>
+            <div class="size">119 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">222 KB</div>
+            
+            
+          </div>
+      </div>
+    </div><div class="plancha" data-status="clean">
+      <h2>trinidad-prensa-termica-automatica <span class="clean">OK</span></h2>
+      <div class="grid">
+        
+          <div class="img-card ">
+            <img src="../public/products/maquinas/trinidad-prensa-termica-automatica/fotoB1.png" alt="fotoB1.png">
+            <div class="name">fotoB1.png</div>
+            <div class="size">737 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/trinidad-prensa-termica-automatica/fotoB2.png" alt="fotoB2.png">
+            <div class="name">fotoB2.png</div>
+            <div class="size">694 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/trinidad-prensa-termica-automatica/fotoB3.png" alt="fotoB3.png">
+            <div class="name">fotoB3.png</div>
+            <div class="size">771 KB</div>
+            
+            
+          </div>
+          <div class="img-card ">
+            <img src="../public/products/maquinas/trinidad-prensa-termica-automatica/fotoPrincipal.png" alt="fotoPrincipal.png">
+            <div class="name">fotoPrincipal.png</div>
+            <div class="size">624 KB</div>
+            
+            
+          </div>
+      </div>
+    </div>
+<script>
+function filt(mode) {
+  document.querySelectorAll('.filter button').forEach(b => b.classList.toggle('active', b.textContent.includes(mode === 'all' ? 'Todas' : mode === 'dup' ? 'duplicados' : mode === 'huerfano' ? 'huerfanos' : 'problema')));
+  document.querySelectorAll('.plancha').forEach(p => {
+    const s = p.dataset.status;
+    const show = mode === 'all' || (mode === 'dup' && s === 'dup') || (mode === 'huerfano' && s === 'huerfano') || (mode === 'issue' && s !== 'clean');
+    p.style.display = show ? '' : 'none';
+  });
+}
+</script>
+</body></html>

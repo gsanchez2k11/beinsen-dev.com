@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><title>Review imagenes - Beinsen</title>
+<style>
+  :root { --orange: #FF6600; --red: #e53935; }
+  * { box-sizing: border-box; }
+  body { font-family: system-ui, sans-serif; max-width: 1600px; margin: 0 auto; padding: 0 24px 80px; background: #fafafa; color: #222; }
+  header { position: sticky; top: 0; background: #fafafa; padding: 16px 0; border-bottom: 2px solid #ddd; z-index: 100; }
+  h1 { margin: 0 0 6px; font-size: 22px; }
+  .meta { color: #666; font-size: 14px; }
+  .actions { margin-top: 12px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .actions button { padding: 8px 14px; border: 1px solid #ccc; background: white; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: bold; }
+  .actions button.primary { background: var(--orange); color: white; border-color: var(--orange); }
+  .actions button.danger { background: var(--red); color: white; border-color: var(--red); }
+  .actions button:hover { filter: brightness(0.95); }
+  .summary { background: #fff3e0; border-left: 4px solid var(--orange); padding: 10px 14px; margin-top: 12px; border-radius: 4px; font-size: 14px; }
+  .summary strong { color: var(--red); }
+  details.help { margin-top: 12px; font-size: 13px; }
+  details.help summary { cursor: pointer; color: #555; }
+  details.help ul { margin: 6px 0 0; padding-left: 20px; }
+  .plancha { background: white; border: 1px solid #ddd; border-radius: 12px; padding: 18px; margin-top: 18px; }
+  .plancha h2 { margin: 0 0 14px; font-size: 17px; font-family: 'Consolas', monospace; display: flex; justify-content: space-between; align-items: center; }
+  .plancha h2 .count { font-size: 12px; color: #888; font-family: system-ui; font-weight: normal; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .img-card { border: 3px solid #e5e5e5; border-radius: 10px; padding: 10px; background: #fff; text-align: center; cursor: pointer; transition: all 0.15s; user-select: none; }
+  .img-card:hover { border-color: #FF9966; }
+  .img-card.delete { border-color: var(--red); background: #ffebee; opacity: 0.75; }
+  .img-card.delete img { filter: grayscale(60%); }
+  .img-card img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #f5f5f5; border-radius: 6px; }
+  .img-card .name { font-family: 'Consolas', monospace; font-size: 12px; margin-top: 8px; word-break: break-all; font-weight: bold; }
+  .img-card .size { font-size: 10px; color: #888; margin-top: 2px; }
+  .img-card .badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 10px; font-weight: bold; margin-top: 4px; background: var(--red); color: white; }
+  .img-card:not(.delete) .badge { display: none; }
+</style></head>
+<body>
+<header>
+  <h1>Review de imagenes - Beinsen</h1>
+  <div class="meta">33 planchas - <strong id="totalFotos">181</strong> fotos totales - <strong style="color: var(--red);" id="totalBorrar">0</strong> marcadas para borrar</div>
+  <div class="actions">
+    <button class="primary" onclick="exportJSON()">Exportar JSON (descargar)</button>
+    <button onclick="clearAll()">Limpiar seleccion</button>
+    <button onclick="document.querySelectorAll('.plancha').forEach(p => p.open = true)">Expandir todo</button>
+  </div>
+  <div class="summary">
+    Click sobre una foto para marcarla como "borrar". Click otra vez para deseleccionar. El progreso se guarda automaticamente. Cuando termines, pulsa <strong>Exportar JSON</strong> y mandaselo a Claude.
+  </div>
+  <details class="help">
+    <summary>Criterio sugerido (puedes ajustar a ojo)</summary>
+    <ul>
+      <li><strong>Borrar:</strong> vista lateral pura, vista trasera/de espaldas, fondo sucio (taller/oficina), desenfocada/movida.</li>
+      <li><strong>Mantener:</strong> 3/4 frontal, frontal, cenital, detalle con fondo limpio (controlador, resistencias, etc.).</li>
+      <li>Si una plancha queda con menos de 3 fotos, Claude te avisa y mantiene todas.</li>
+    </ul>
+  </details>
+</header>
+
+<div class="plancha">
+  <h2>alaska-plancha-termica-textil <span class="count">7 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="alaska-plancha-termica-textil/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">80 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alaska-plancha-termica-textil/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">380 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alaska-plancha-termica-textil/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">124 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alaska-plancha-termica-textil/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">136 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alaska-plancha-termica-textil/fotoExp.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoExp.png" alt="fotoExp.png" loading="lazy">
+          <div class="name">fotoExp.png</div>
+          <div class="size">240 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alaska-plancha-termica-textil/fotoExtra3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoExtra3.png" alt="fotoExtra3.png" loading="lazy">
+          <div class="name">fotoExtra3.png</div>
+          <div class="size">136 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alaska-plancha-termica-textil/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alaska-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">137 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>alina-plancha-para-tazas <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="alina-plancha-para-tazas/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">404 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alina-plancha-para-tazas/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">404 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alina-plancha-para-tazas/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">388 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alina-plancha-para-tazas/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">402 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="alina-plancha-para-tazas/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/alina-plancha-para-tazas/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">465 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>andra-prensa-automatica-tazas <span class="count">4 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="andra-prensa-automatica-tazas/fotoB3.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/andra-prensa-automatica-tazas/fotoB3.jpg" alt="fotoB3.jpg" loading="lazy">
+          <div class="name">fotoB3.jpg</div>
+          <div class="size">137 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="andra-prensa-automatica-tazas/fotoExtra2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/andra-prensa-automatica-tazas/fotoExtra2.png" alt="fotoExtra2.png" loading="lazy">
+          <div class="name">fotoExtra2.png</div>
+          <div class="size">620 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="andra-prensa-automatica-tazas/fotoExtra3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/andra-prensa-automatica-tazas/fotoExtra3.png" alt="fotoExtra3.png" loading="lazy">
+          <div class="name">fotoExtra3.png</div>
+          <div class="size">799 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="andra-prensa-automatica-tazas/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/andra-prensa-automatica-tazas/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">827 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>aruba-plancha-para-tazas <span class="count">3 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="aruba-plancha-para-tazas/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/aruba-plancha-para-tazas/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">315 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="aruba-plancha-para-tazas/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/aruba-plancha-para-tazas/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">295 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="aruba-plancha-para-tazas/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/aruba-plancha-para-tazas/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">318 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>barahona-plancha-para-tazas-6-en-1 <span class="count">3 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="barahona-plancha-para-tazas-6-en-1/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">600 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barahona-plancha-para-tazas-6-en-1/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">390 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barahona-plancha-para-tazas-6-en-1/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barahona-plancha-para-tazas-6-en-1/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">491 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>barbados-plancha-termica-textil <span class="count">6 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="barbados-plancha-termica-textil/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">372 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barbados-plancha-termica-textil/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">266 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barbados-plancha-termica-textil/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">62 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barbados-plancha-termica-textil/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">407 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barbados-plancha-termica-textil/fotoExtra2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoExtra2.png" alt="fotoExtra2.png" loading="lazy">
+          <div class="name">fotoExtra2.png</div>
+          <div class="size">238 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barbados-plancha-termica-textil/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barbados-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">277 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>barein-plancha-termica <span class="count">6 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="barein-plancha-termica/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barein-plancha-termica/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">508 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barein-plancha-termica/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barein-plancha-termica/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">39 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barein-plancha-termica/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barein-plancha-termica/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">283 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barein-plancha-termica/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barein-plancha-termica/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">529 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barein-plancha-termica/fotoExtra3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barein-plancha-termica/fotoExtra3.png" alt="fotoExtra3.png" loading="lazy">
+          <div class="name">fotoExtra3.png</div>
+          <div class="size">505 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="barein-plancha-termica/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/barein-plancha-termica/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">608 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>belice-plancha-termica-textil <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="belice-plancha-termica-textil/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">309 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="belice-plancha-termica-textil/fotoB3.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoB3.jpg" alt="fotoB3.jpg" loading="lazy">
+          <div class="name">fotoB3.jpg</div>
+          <div class="size">135 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="belice-plancha-termica-textil/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">304 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="belice-plancha-termica-textil/fotoExtra3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoExtra3.png" alt="fotoExtra3.png" loading="lazy">
+          <div class="name">fotoExtra3.png</div>
+          <div class="size">139 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="belice-plancha-termica-textil/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/belice-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">184 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>caen-plancha-neumatica-doble-estacion <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="caen-plancha-neumatica-doble-estacion/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">544 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="caen-plancha-neumatica-doble-estacion/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">221 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="caen-plancha-neumatica-doble-estacion/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">156 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="caen-plancha-neumatica-doble-estacion/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">178 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="caen-plancha-neumatica-doble-estacion/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/caen-plancha-neumatica-doble-estacion/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">337 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>chicago-plancha-termica-automatica <span class="count">7 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="chicago-plancha-termica-automatica/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">423 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chicago-plancha-termica-automatica/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">359 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chicago-plancha-termica-automatica/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">601 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chicago-plancha-termica-automatica/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">315 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chicago-plancha-termica-automatica/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">177 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chicago-plancha-termica-automatica/fotoExtra2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoExtra2.png" alt="fotoExtra2.png" loading="lazy">
+          <div class="name">fotoExtra2.png</div>
+          <div class="size">810 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chicago-plancha-termica-automatica/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chicago-plancha-termica-automatica/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">338 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>chinela-plancha-transfer-zapatillas <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="chinela-plancha-transfer-zapatillas/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">164 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chinela-plancha-transfer-zapatillas/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">247 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chinela-plancha-transfer-zapatillas/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">237 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chinela-plancha-transfer-zapatillas/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">337 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="chinela-plancha-transfer-zapatillas/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/chinela-plancha-transfer-zapatillas/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">125 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>doha-plancha-transfer-gran-formato <span class="count">9 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="doha-plancha-transfer-gran-formato/fotoB1.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoB1.jpg" alt="fotoB1.jpg" loading="lazy">
+          <div class="name">fotoB1.jpg</div>
+          <div class="size">47 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="doha-plancha-transfer-gran-formato/fotoB2.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoB2.jpg" alt="fotoB2.jpg" loading="lazy">
+          <div class="name">fotoB2.jpg</div>
+          <div class="size">36 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="doha-plancha-transfer-gran-formato/fotoB3.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoB3.jpg" alt="fotoB3.jpg" loading="lazy">
+          <div class="name">fotoB3.jpg</div>
+          <div class="size">270 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="doha-plancha-transfer-gran-formato/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">184 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="doha-plancha-transfer-gran-formato/fotoExtra1.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra1.jpg" alt="fotoExtra1.jpg" loading="lazy">
+          <div class="name">fotoExtra1.jpg</div>
+          <div class="size">324 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="doha-plancha-transfer-gran-formato/fotoExtra2.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra2.jpg" alt="fotoExtra2.jpg" loading="lazy">
+          <div class="name">fotoExtra2.jpg</div>
+          <div class="size">220 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="doha-plancha-transfer-gran-formato/fotoExtra3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra3.png" alt="fotoExtra3.png" loading="lazy">
+          <div class="name">fotoExtra3.png</div>
+          <div class="size">238 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="doha-plancha-transfer-gran-formato/fotoExtra5.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoExtra5.jpg" alt="fotoExtra5.jpg" loading="lazy">
+          <div class="name">fotoExtra5.jpg</div>
+          <div class="size">261 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="doha-plancha-transfer-gran-formato/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/doha-plancha-transfer-gran-formato/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">770 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>dorian-plancha-termica-platos <span class="count">4 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="dorian-plancha-termica-platos/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/dorian-plancha-termica-platos/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">101 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="dorian-plancha-termica-platos/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/dorian-plancha-termica-platos/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">341 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="dorian-plancha-termica-platos/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/dorian-plancha-termica-platos/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">91 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="dorian-plancha-termica-platos/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/dorian-plancha-termica-platos/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">176 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>esparta-prensa-termica-neumatica <span class="count">8 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="esparta-prensa-termica-neumatica/fotoB1.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoB1.jpg" alt="fotoB1.jpg" loading="lazy">
+          <div class="name">fotoB1.jpg</div>
+          <div class="size">302 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="esparta-prensa-termica-neumatica/fotoB2.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoB2.jpg" alt="fotoB2.jpg" loading="lazy">
+          <div class="name">fotoB2.jpg</div>
+          <div class="size">119 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="esparta-prensa-termica-neumatica/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">240 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="esparta-prensa-termica-neumatica/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">143 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="esparta-prensa-termica-neumatica/fotoExtra1.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoExtra1.jpg" alt="fotoExtra1.jpg" loading="lazy">
+          <div class="name">fotoExtra1.jpg</div>
+          <div class="size">276 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="esparta-prensa-termica-neumatica/fotoExtra2.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoExtra2.jpg" alt="fotoExtra2.jpg" loading="lazy">
+          <div class="name">fotoExtra2.jpg</div>
+          <div class="size">273 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="esparta-prensa-termica-neumatica/fotoExtra3.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoExtra3.jpg" alt="fotoExtra3.jpg" loading="lazy">
+          <div class="name">fotoExtra3.jpg</div>
+          <div class="size">144 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="esparta-prensa-termica-neumatica/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/esparta-prensa-termica-neumatica/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">209 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>estambul-prensa-swing-away-electrica <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="estambul-prensa-swing-away-electrica/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">433 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="estambul-prensa-swing-away-electrica/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">1184 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="estambul-prensa-swing-away-electrica/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">546 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="estambul-prensa-swing-away-electrica/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">277 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="estambul-prensa-swing-away-electrica/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/estambul-prensa-swing-away-electrica/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">479 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>felina-prensa-termica-para-espinilleras <span class="count">6 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="felina-prensa-termica-para-espinilleras/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">318 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="felina-prensa-termica-para-espinilleras/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">145 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="felina-prensa-termica-para-espinilleras/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">124 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="felina-prensa-termica-para-espinilleras/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">222 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="felina-prensa-termica-para-espinilleras/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">216 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="felina-prensa-termica-para-espinilleras/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/felina-prensa-termica-para-espinilleras/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">163 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>gante-plancha-manual-gorras <span class="count">6 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="gante-plancha-manual-gorras/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">470 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="gante-plancha-manual-gorras/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">691 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="gante-plancha-manual-gorras/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">101 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="gante-plancha-manual-gorras/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">555 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="gante-plancha-manual-gorras/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">519 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="gante-plancha-manual-gorras/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/gante-plancha-manual-gorras/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">352 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>guyana-plancha-termica-textil <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="guyana-plancha-termica-textil/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">313 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="guyana-plancha-termica-textil/fotoB2.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoB2.jpg" alt="fotoB2.jpg" loading="lazy">
+          <div class="name">fotoB2.jpg</div>
+          <div class="size">174 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="guyana-plancha-termica-textil/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">785 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="guyana-plancha-termica-textil/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">462 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="guyana-plancha-termica-textil/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/guyana-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">232 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>jamaica-planchas-transfer-multifuncion-para-sublimacion <span class="count">6 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">504 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">173 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">515 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">546 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">503 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/jamaica-planchas-transfer-multifuncion-para-sublimacion/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">318 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>kenia-plancha-termica-textil <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="kenia-plancha-termica-textil/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">1181 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="kenia-plancha-termica-textil/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">711 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="kenia-plancha-termica-textil/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">626 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="kenia-plancha-termica-textil/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">874 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="kenia-plancha-termica-textil/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/kenia-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">462 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>luanda-plancha-termica-automatica <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="luanda-plancha-termica-automatica/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">219 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="luanda-plancha-termica-automatica/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">222 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="luanda-plancha-termica-automatica/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">255 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="luanda-plancha-termica-automatica/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">343 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="luanda-plancha-termica-automatica/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/luanda-plancha-termica-automatica/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">235 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>maine-plancha-para-tazas <span class="count">6 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="maine-plancha-para-tazas/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">386 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="maine-plancha-para-tazas/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">374 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="maine-plancha-para-tazas/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">250 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="maine-plancha-para-tazas/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">237 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="maine-plancha-para-tazas/fotoExtra2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoExtra2.png" alt="fotoExtra2.png" loading="lazy">
+          <div class="name">fotoExtra2.png</div>
+          <div class="size">334 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="maine-plancha-para-tazas/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/maine-plancha-para-tazas/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">826 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>malvinas-plancha-termica-textil <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="malvinas-plancha-termica-textil/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">264 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="malvinas-plancha-termica-textil/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">52 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="malvinas-plancha-termica-textil/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">23 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="malvinas-plancha-termica-textil/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">265 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="malvinas-plancha-termica-textil/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/malvinas-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">91 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>miranda-prensa-termica-automatica-electrica <span class="count">3 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="miranda-prensa-termica-automatica-electrica/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">126 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="miranda-prensa-termica-automatica-electrica/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">127 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="miranda-prensa-termica-automatica-electrica/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/miranda-prensa-termica-automatica-electrica/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">158 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>normandia-i-plancha-termica-textil <span class="count">6 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="normandia-i-plancha-termica-textil/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">721 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-i-plancha-termica-textil/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">342 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-i-plancha-termica-textil/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">104 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-i-plancha-termica-textil/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">129 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-i-plancha-termica-textil/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">75 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-i-plancha-termica-textil/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-i-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">207 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>normandia-ii-plancha-termica-textil <span class="count">6 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="normandia-ii-plancha-termica-textil/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">552 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-ii-plancha-termica-textil/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">555 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-ii-plancha-termica-textil/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">480 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-ii-plancha-termica-textil/fotoExtra2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoExtra2.png" alt="fotoExtra2.png" loading="lazy">
+          <div class="name">fotoExtra2.png</div>
+          <div class="size">186 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-ii-plancha-termica-textil/fotoExtra3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoExtra3.png" alt="fotoExtra3.png" loading="lazy">
+          <div class="name">fotoExtra3.png</div>
+          <div class="size">576 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-ii-plancha-termica-textil/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-ii-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">308 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>normandia-iii-plancha-termica-textil <span class="count">6 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="normandia-iii-plancha-termica-textil/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">552 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-iii-plancha-termica-textil/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">555 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-iii-plancha-termica-textil/fotoExtra1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoExtra1.png" alt="fotoExtra1.png" loading="lazy">
+          <div class="name">fotoExtra1.png</div>
+          <div class="size">480 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-iii-plancha-termica-textil/fotoExtra2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoExtra2.png" alt="fotoExtra2.png" loading="lazy">
+          <div class="name">fotoExtra2.png</div>
+          <div class="size">186 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-iii-plancha-termica-textil/fotoExtra3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoExtra3.png" alt="fotoExtra3.png" loading="lazy">
+          <div class="name">fotoExtra3.png</div>
+          <div class="size">576 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="normandia-iii-plancha-termica-textil/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/normandia-iii-plancha-termica-textil/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">308 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>obrei-plancha-gorras-apertura-automatica <span class="count">11 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">726 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">349 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoB3.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB3.jpg" alt="fotoB3.jpg" loading="lazy">
+          <div class="name">fotoB3.jpg</div>
+          <div class="size">262 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoB4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoB4.png" alt="fotoB4.png" loading="lazy">
+          <div class="name">fotoB4.png</div>
+          <div class="size">109 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoExtra3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra3.png" alt="fotoExtra3.png" loading="lazy">
+          <div class="name">fotoExtra3.png</div>
+          <div class="size">334 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoExtra4.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra4.png" alt="fotoExtra4.png" loading="lazy">
+          <div class="name">fotoExtra4.png</div>
+          <div class="size">264 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoExtra5.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra5.png" alt="fotoExtra5.png" loading="lazy">
+          <div class="name">fotoExtra5.png</div>
+          <div class="size">492 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoExtra6.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra6.png" alt="fotoExtra6.png" loading="lazy">
+          <div class="name">fotoExtra6.png</div>
+          <div class="size">315 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoExtra7.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra7.png" alt="fotoExtra7.png" loading="lazy">
+          <div class="name">fotoExtra7.png</div>
+          <div class="size">633 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoExtra8.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoExtra8.png" alt="fotoExtra8.png" loading="lazy">
+          <div class="name">fotoExtra8.png</div>
+          <div class="size">748 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="obrei-plancha-gorras-apertura-automatica/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/obrei-plancha-gorras-apertura-automatica/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">146 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>pocola-plancha-transfer-manual-pequena <span class="count">2 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="pocola-plancha-transfer-manual-pequena/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">430 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="pocola-plancha-transfer-manual-pequena/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/pocola-plancha-transfer-manual-pequena/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">647 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>sicilia-plancha-para-tazas <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="sicilia-plancha-para-tazas/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">240 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sicilia-plancha-para-tazas/fotoB2.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoB2.jpg" alt="fotoB2.jpg" loading="lazy">
+          <div class="name">fotoB2.jpg</div>
+          <div class="size">205 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sicilia-plancha-para-tazas/fotoB3.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoB3.jpg" alt="fotoB3.jpg" loading="lazy">
+          <div class="name">fotoB3.jpg</div>
+          <div class="size">149 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sicilia-plancha-para-tazas/fotoB4.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoB4.jpg" alt="fotoB4.jpg" loading="lazy">
+          <div class="name">fotoB4.jpg</div>
+          <div class="size">221 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sicilia-plancha-para-tazas/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sicilia-plancha-para-tazas/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">221 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>sore-plancha-profesional-tazas <span class="count">7 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="sore-plancha-profesional-tazas/fotoB1.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoB1.jpg" alt="fotoB1.jpg" loading="lazy">
+          <div class="name">fotoB1.jpg</div>
+          <div class="size">143 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sore-plancha-profesional-tazas/fotoB2.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoB2.jpg" alt="fotoB2.jpg" loading="lazy">
+          <div class="name">fotoB2.jpg</div>
+          <div class="size">148 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sore-plancha-profesional-tazas/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">844 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sore-plancha-profesional-tazas/fotoB4.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoB4.jpg" alt="fotoB4.jpg" loading="lazy">
+          <div class="name">fotoB4.jpg</div>
+          <div class="size">28 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sore-plancha-profesional-tazas/fotoExtra1.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoExtra1.jpg" alt="fotoExtra1.jpg" loading="lazy">
+          <div class="name">fotoExtra1.jpg</div>
+          <div class="size">182 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sore-plancha-profesional-tazas/fotoExtra2.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoExtra2.jpg" alt="fotoExtra2.jpg" loading="lazy">
+          <div class="name">fotoExtra2.jpg</div>
+          <div class="size">30 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="sore-plancha-profesional-tazas/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/sore-plancha-profesional-tazas/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">226 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>tobago-estacion-planchado-continuo <span class="count">5 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="tobago-estacion-planchado-continuo/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">292 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="tobago-estacion-planchado-continuo/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">97 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="tobago-estacion-planchado-continuo/fotoB3.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoB3.jpg" alt="fotoB3.jpg" loading="lazy">
+          <div class="name">fotoB3.jpg</div>
+          <div class="size">55 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="tobago-estacion-planchado-continuo/fotoB4.jpg" onclick="toggle(this)">
+          <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoB4.jpg" alt="fotoB4.jpg" loading="lazy">
+          <div class="name">fotoB4.jpg</div>
+          <div class="size">119 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="tobago-estacion-planchado-continuo/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/tobago-estacion-planchado-continuo/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">222 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+<div class="plancha">
+  <h2>trinidad-prensa-termica-automatica <span class="count">4 fotos</span></h2>
+  <div class="grid">
+    <div class="img-card" data-id="trinidad-prensa-termica-automatica/fotoB1.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/trinidad-prensa-termica-automatica/fotoB1.png" alt="fotoB1.png" loading="lazy">
+          <div class="name">fotoB1.png</div>
+          <div class="size">737 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="trinidad-prensa-termica-automatica/fotoB2.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/trinidad-prensa-termica-automatica/fotoB2.png" alt="fotoB2.png" loading="lazy">
+          <div class="name">fotoB2.png</div>
+          <div class="size">694 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="trinidad-prensa-termica-automatica/fotoB3.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/trinidad-prensa-termica-automatica/fotoB3.png" alt="fotoB3.png" loading="lazy">
+          <div class="name">fotoB3.png</div>
+          <div class="size">771 KB</div>
+          <span class="badge">BORRAR</span>
+        </div><div class="img-card" data-id="trinidad-prensa-termica-automatica/fotoPrincipal.png" onclick="toggle(this)">
+          <img src="../public/products/maquinas/trinidad-prensa-termica-automatica/fotoPrincipal.png" alt="fotoPrincipal.png" loading="lazy">
+          <div class="name">fotoPrincipal.png</div>
+          <div class="size">624 KB</div>
+          <span class="badge">BORRAR</span>
+        </div>
+  </div>
+</div>
+
+<script>
+const STORAGE_KEY = "beinsen_review_delete";
+const toDelete = new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"));
+
+function refresh() {
+  document.querySelectorAll(".img-card").forEach(c => {
+    c.classList.toggle("delete", toDelete.has(c.dataset.id));
+  });
+  document.getElementById("totalBorrar").textContent = toDelete.size;
+}
+
+function toggle(card) {
+  const id = card.dataset.id;
+  if (toDelete.has(id)) toDelete.delete(id);
+  else toDelete.add(id);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify([...toDelete]));
+  refresh();
+}
+
+function clearAll() {
+  if (!confirm("Limpiar TODAS las marcas?")) return;
+  toDelete.clear();
+  localStorage.setItem(STORAGE_KEY, "[]");
+  refresh();
+}
+
+function exportJSON() {
+  const payload = { generated: new Date().toISOString(), delete: [...toDelete].sort() };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "delete-list.json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  alert(toDelete.size + " fotos exportadas a delete-list.json. Pasale ese archivo a Claude.");
+}
+
+refresh();
+</script>
+</body></html>
